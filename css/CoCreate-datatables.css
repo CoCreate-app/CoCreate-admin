@@ -1,0 +1,51 @@
+/*Datatables*/
+.dt-buttons{
+  display:none;
+}
+
+table.dataTable thead th{
+  text-align: left;
+  padding-left: 10px!important;
+}
+table.dataTable tfoot th {
+    text-align: left;
+    padding-left: 10px!important;
+}
+.dataTables_info{
+  padding-top: 0px!important;
+}
+.icon-wrapper{
+    float: left;
+    margin-right: 10px;
+    width: 25px;
+    text-align: center;
+}
+.noMargins{
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
+}
+
+/*Datatables End*/
+
+.cocreate-dt-menu {
+    position: absolute;
+    /*top: 100%;*/
+    left: 0;
+    z-index: 1000;
+    /*display: none;*/
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+.tr-selected {
+  background-color: #B0BED9!important;
+}

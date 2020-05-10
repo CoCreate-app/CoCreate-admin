@@ -1,0 +1,111 @@
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #E3E6E5;
+}
+
+.post {
+  cursor: pointer;
+}
+
+div.flex-container {
+  -webkit-columns: 20em;
+  columns: 20em;
+  -webkit-column-gap: 1em;
+  column-gap: 1em;
+  padding: 1em;
+}
+
+div.flex-container .flex-item {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid;
+}
+
+div.flex-container .flex-item {
+  margin: 1em 0;
+}
+
+div.flex-container .flex-item:first-child {
+  margin-top: 0;
+}
+
+.flex-item .header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.flex-item .header .user, .flex-item .header .logo, .flex-item .header .name, .flex-item .header .time {
+  padding: 0;
+  margin: 0;
+}
+.flex-item .header .user {
+  align-items: left;
+  display: flex;
+}
+.flex-item .header .logo, .flex-item .header .name {
+  font-weight: 600;
+  align-items: left;
+}
+.flex-item .header .logo img, .flex-item .header .name img {
+  width: 2em;
+  height: 2em;
+  margin: 0 1em 0 0;
+  padding: 0;
+}
+.flex-item .header .name, .flex-item .header .time {
+  margin-top: .5em;
+}
+.flex-item .header .time {
+  align-items: right;
+}
+.flex-item .image img {
+  width: 100%;
+}
+.flex-item .text {
+  line-height: 150%;
+  padding: 10px;
+  display: flex;
+  text-align: justify;
+}
+.flex-item .footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.flex-item .footer .interact {
+  align-items: left;
+}
+.flex-item .footer .interact .comments, .flex-item .footer .interact .likes {
+  float: left;
+  padding-right: 10px;
+}
+.flex-item .footer .source {
+  font-size: 12px;
+  align-items: right;
+}
+.flex-item .logo, .flex-item .name, .flex-item .time, .flex-item .text {
+  font-size: 10px;
+}
+.flex-item .logo a, .flex-item .name a, .flex-item .time a, .flex-item .text a {
+  font-size: 10px;
+}
+.flex-item .comments a, .flex-item .likes a {
+  font-size: 12px;
+}
+.flex-item .source a .svg-inline--fa {
+  font-size: 16px;
+}
+.flex-item .logo a, .flex-item .name a, .flex-item .time a, .flex-item .text a, .flex-item .comments a, .flex-item .likes a, .flex-item .source a {
+  text-decoration: none;
+  color: #444444;
+  transition: ease all 0.3s;
+}
+.flex-item .logo a:hover, .flex-item .name a:hover, .flex-item .time a:hover, .flex-item .text a:hover, .flex-item .comments a:hover, .flex-item .likes a:hover, .flex-item .source a:hover {
+  color: #4E9A92;
+  
+}

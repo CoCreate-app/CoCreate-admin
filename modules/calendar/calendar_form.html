@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact Form</title>
+
+<!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<!-- Bootstrap-->
+    <script src="https://cdnjs.cloudflare.com/ajax/js/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- Select2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/js/select2/4.0.6/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/js/select2/4.0.6/js/select2.min.js"></script>
+ 
+<!-- SortableJS -->
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+<!-- DHTMLX Window -->
+  <link rel="stylesheet" href="https://cdn.dhtmlx.com/edge/dhtmlx.css" type="text/css"> 
+  <script src="https://cdn.dhtmlx.com/edge/dhtmlx.js" type="text/javascript"></script>
+  
+<!-- Floating Labels -->
+  <link rel="stylesheet" type="text/css" href="../../js/float-labels.js/float-labels.css">
+  <script src="../../js/float-labels.js/float-labels.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12" style="margin-top:15px;">
+        <form data-collection='module_activity' data-form_id="contact_form" class="float-labels">
+            <label for="first_name"></label>
+            <input type="text" name='first_name' id="first_name" placeholder="First Name" data-module_id='5d1f81812fa3066a5ef2b213' data-pass_id="me1234">
+            
+            <label for="last_name"></label>
+            <input type="text" name='last_name' id="last_name" placeholder="Last Name" data-module_id='5d1f81812fa3066a5ef2b213' data-pass_id="me1234">
+            
+            <label for="email"></label>
+            <input type="text" name='email' id="email" placeholder="Email" data-module_id='5d1f81812fa3066a5ef2b213' data-pass_id="me1234">
+      
+            <button class="btn btn-success submitBtn" style="margin-top:10px;"><i class="far fa-save"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+    <div id="customVPhere" ></div>
+      
+      <style>
+        .data-unique-success{
+          border-color: green!important;
+        }
+        .data-unique-error{
+          border-color: red!important;
+        }
+      </style>
+
+    <script src="../../js/float-labels.js/config-labels.js"></script>
+
+    <script>
+      var config = {
+        apiKey: '123456abcdeee',
+        securityKey: 'ekjlferkjflkejrlfkejlkdjfwlrir9530',
+        organization_Id: '5d076e8235984e16ce031474'
+      }
+    </script>
+      
+    <script src="../../js/socket.io.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/CoCreate-window.js"></script>
+    <script src="../../js/CoCreate-datatables.js"></script>
+</body>
+</html>

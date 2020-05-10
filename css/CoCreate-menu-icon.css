@@ -1,0 +1,69 @@
+/* Menu Toggles */
+.menu_icon--hamburger {
+  display: block;
+  border-radius: 5px;
+  background-color: transparent;
+  float: left;
+  height: 50px;
+  width: 38px;
+  min-width: 38px;
+  cursor: pointer;
+  padding: 14px 8px;
+  margin: 0px 6px;
+
+}
+.menu_icon--hamburger span {
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin-top: 4px;
+  background-color: #000;
+  transition: all .25s;
+}	  
+.nav-toggle.open.menu_icon--hamburger span:first-child {
+  transform: rotate(45deg) translate(4.4px, 4.4px);
+}
+.nav-toggle.open.menu_icon--hamburger span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+.nav-toggle.open.menu_icon--hamburger span:last-child {
+  transform: rotate(-45deg) translate(4.4px, -4.4px);
+}
+
+.circle {
+  width: 4px;
+  height: 4px;
+  margin: 4px;
+  background: black;
+  border-radius: 50%;
+  display: block;
+}
+.menu_icon--Vdots {
+  display: inline-block;
+  flex-direction: column;
+  position: relative;
+  transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 10px 8px;
+  margin: 0px 10px;
+}
+.menu_icon--Vdots .circle:nth-child(4),
+.menu_icon--Vdots .circle:nth-child(5) {
+  position: absolute;
+  opacity: 0;
+  bottom: 20px;
+}
+.menu_icon--Vdots .circle:nth-child(4) {
+  left: 0px;
+}
+.menu_icon--Vdots .circle:nth-child(5) {
+  left: 16px;
+}
+.nav-toggle.open.menu_icon--Vdots {
+  transform: rotate(45deg);
+}
+.nav-toggle.open.menu_icon--Vdots .circle, .menu_icon--Vdots:focus .circle {
+  opacity: 1;
+}
+/* Menu Toggles End */

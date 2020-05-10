@@ -1,0 +1,117 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+#gjs{
+  height:0px;
+  overflow:hidden;
+  margin-top:50px;
+}
+.gjs-cv-canvas{
+  height :100%;
+  top : 0;
+  width:100%;
+}
+.gjs-mdl-container{
+  z-index:1030;
+}
+.gjs-mdl-dialog{
+  width:100%;
+  max-width:100%;
+  height:100%;
+}
+
+.gjs-label-wrp{
+  width:40%;
+  min-width:40%;
+}
+.gjs-radio-items {
+  height: 22px;
+}
+.icon-add-comp::before, .icon-comp100::before,.icon-comp50::before,.icon-comp30::before,.icon-rm::before{ content: '';}
+.icon-add-comp {
+  background: url("./img/icon-sq-a.png") no-repeat center;
+}
+.icon-comp100 {
+  background: url("./img/icon-sq-1.png") no-repeat center;
+}
+.icon-comp50 {
+  background: url("./img/icon-sq-2.png") no-repeat center;
+}
+.icon-comp30 {
+  background: url("./img/icon-sq-3.png") no-repeat center;
+}
+.icon-rm {
+  background: url("./img/icon-sq-r.png") no-repeat center;
+}
+.icons-flex {
+  background-size: 70% 65% !important;
+  height: 15px;
+  width: 17px;
+  opacity: 0.9;
+}
+.icon-dir-row {
+  background: url("https://grapesjs.com/img/flex-dir-row.png") no-repeat center;
+}
+.icon-dir-row-rev {
+  background: url("https://grapesjs.com/img/flex-dir-row-rev.png") no-repeat center;
+}
+.icon-dir-col {
+  background: url("https://grapesjs.com/img/flex-dir-col.png") no-repeat center;
+}
+.icon-dir-col-rev {
+  background: url("https://grapesjs.com/img/flex-dir-col-rev.png") no-repeat center;
+}
+.icon-just-start{
+  background: url("https://grapesjs.com/img/flex-just-start.png") no-repeat center;
+}
+.icon-just-end{
+  background: url("https://grapesjs.com/img/flex-just-end.png") no-repeat center;
+}
+.icon-just-sp-bet{
+  background: url("https://grapesjs.com/img/flex-just-sp-bet.png") no-repeat center;
+}
+.icon-just-sp-ar{
+  background: url("https://grapesjs.com/img/flex-just-sp-ar.png") no-repeat center;
+}
+.icon-just-sp-cent{
+  background: url("https://grapesjs.com/img/flex-just-sp-cent.png") no-repeat center;
+}
+.icon-al-start{
+  background: url("https://grapesjs.com/img/flex-al-start.png") no-repeat center;
+}
+.icon-al-end{
+  background: url("https://grapesjs.com/img/flex-al-end.png") no-repeat center;
+}
+.icon-al-str{
+  background: url("https://grapesjs.com/img/flex-al-str.png") no-repeat center;
+}
+.icon-al-center{
+  background: url("https://grapesjs.com/img/flex-al-center.png") no-repeat center;
+}
+
+.tabButtonWrapper {
+  margin-bottom: 10px;
+}
+
+.actionButtonWrapper {
+  margin-top: 10px;
+}
+.gjs-one-bg {
+  background-color: #283747;
+}
+.text_color{
+  color: white; 
+}
+
+.floating-label_label {
+  /*color: white;*/
+  top: 8px;
+}
+.CodeMirror{
+  height: calc(100vh - 135px);
+}
+/*.cocreate-sidenav[data-main_content="canvas"]{*/
+/*  margin-top:50px;*/
+/*}*/

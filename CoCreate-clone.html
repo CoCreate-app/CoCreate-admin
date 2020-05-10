@@ -1,0 +1,123 @@
+<html>
+<head>
+   <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+  
+  <link href="https://cdn.cocreate.app/CoCreate.min.css" rel="stylesheet">
+
+<!-- Select2 -->
+  <!--<link href="https://cdnjs.cloudflare.com/ajax/js/select2/4.0.10/css/select2.min.css" rel="stylesheet" />-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/js/select2/4.0.10/js/select2.min.js"></script>-->
+
+  <!-- SortableJS -->
+  <!--<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>-->
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/99ba925095.js"></script> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<style>
+  .stage{
+    background-color:gray;
+    margin:15px;
+    padding-top:10px;
+  }
+  .card{
+    background-color:beige;
+        margin:15px;
+        min-height:100px;
+
+  }
+  .tasklist{
+    background-color:lightgray;
+        margin:15px;
+
+  }
+
+span {
+    display: inline-block;
+
+}
+</style>
+</head>
+<body>
+  <!--<h1 name="name"></h1>-->
+  <!--<div id="stage-1" class="sortable clonable"><!-- this div an all its elements clonable -->
+    
+  <!--  <div class="clonable"><!-- this div an all its elements clonable -->
+  <!--    <h3 name ="stage"></h3>-->
+  <!--    <div id="tasklists-1" class="sortable"> -->
+        
+  <!--      <div class="clonable" style="margin: 15px"><!-- this div an all its elements clonable -->
+  <!--        <h4 name="tasklist"></h4>-->
+  <!--        <ul id="task-items-1" class="sortable" data_group="list1" data-group_put="list3">-->
+            
+  <!--          <li class="clonable">red</li><!-- this div an all its elements clonable -->
+          
+  <!--        </ul>-->
+  <!--      </div>-->
+        
+  <!--    </div>-->
+  <!--  </div>-->
+    
+  <!--</div>-->
+   
+    <a data-clone_id="stage" class="cloneBtn">New Stage</a>
+    <div id="saveFetch1" class="saveFetch" name='clonehtml7' data-collection="module_activity" data-module_activity_id="" data-module_id="newclone" data-pass_id="me1234">
+     
+        <div class="Sortable">
+        
+            <div id="stage" class="Sortable stage template" style="" class="">
+              <span class="noDrag">Stage</span>
+              <span style="float:right;"><a data-clone_id="stage" class="deleteBtn noDrag"><i class="fas fa-times"></i></a></span>
+
+              <div class="Sortable" data-group_name="card">
+                <div id="card" class="card template"  style="">
+                  <span class="noDrag">Card</span>
+                  <span style="float:right;"><a data-clone_id="card" class="deleteBtn noDrag"><i class="fas fa-times"></i></a></span>
+                  
+                  <div class="Sortable" data-group_name="tasklist">
+                      <div id="tasklist" class="tasklist template" style="">
+                        <span class="noDrag">Tasklist</span>
+                        <span style="float:right;"><a data-clone_id="tasklist" class="deleteBtn noDrag"><i class="fas fa-times"></i></a></span>
+
+                        <form data-collection="module_activity" class="Sortable" data-group_name="task-items" id="testForm">
+                          <div id="task-item" style="" class="template">
+                            <div style="display:inline-block;width: calc(100% - 20px);">
+                            <input class="floating-label_field" data-module_activity_id="5d8c79e7e4be424681b5e48d" name="taskname"  placeholder="Task Name"></div>
+                            <span style="float:right;"><a data-clone_id="task-item" class="deleteBtn noDrag"><i class="fas fa-times"></i></a></span>
+                          </div>
+                        </form>
+                        <a data-clone_id="task-item" class="cloneBtn noDrag" style="display: block">Add Task</a>  
+                      </div><!-- Cloneable Tasklist element -->
+                  </div><!-- Sortable Tasklist Container -->   
+                    
+                    <div style=width="100%" class="noDrag">
+                      <input id="tasklist-name"><a data-clone_id="tasklist" class="cloneBtn noDrag" style="display: block" data-clone_name="tasklist-name">New Tasklist</a>  
+              
+                      
+                    </div>
+                    
+                </div><!-- Cloneable Card element -->
+              </div><!-- Sortable Card Container --> 
+                
+                <a data-clone_id="card" class="cloneBtn noDrag" data-clone_name="card-name">New Card</a><input id="card-name">
+                
+            </div><!-- sortable and clonable stage -->
+        
+        </div><!-- sortable project -->
+      
+    </div><!-- saveFetch -->
+  
+  <script>
+    var config = {
+    	isParent: true,
+      apiKey: '123456abcdeee',
+      securityKey: 'ekjlferkjflkejrlfkejlkdjfwlrir9530',
+      organization_Id: '5d076e8235984e16ce031474'
+    }
+  </script>
+  
+  <!--CoCreateJS-->
+  <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
+
+</body>
+</html>

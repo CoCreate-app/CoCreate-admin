@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CoCreate UI -->
+  <!--<link rel="stylesheet" href="https://cdn.cocreate.app/CoCreateUI.min.css" type="text/css" />-->
+  <link rel="stylesheet" href="https://cocreate.app/css/CoCreateUI.min.css" type="text/css" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/99ba925095.js"></script> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  
+  <!-- DHTMLX Window -->
+  <link rel="stylesheet" href="https://cdn.dhtmlx.com/edge/dhtmlx.css" type="text/css"> 
+  <script src="https://cdn.dhtmlx.com/edge/dhtmlx.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+  <div id="customVPhere" class="hidden"></div>
+    <div data-main_content_id="content" class="nav">
+      <!--<a href="#" class="logo">Navbar</a>-->
+      <!--<a class="nav-toggle menu_icon--Vdots" data-toggle_sidenav="menuL">-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--</a>-->
+      <ul class="h-scroll">
+  			<li><a class="btn-wnd-close"><i class="fas fa-times">
+  			  </i></a></li>
+  			<li><a class="btn-wnd-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize">
+  			  </i></a></li>
+  			<li><a class="btn-wnd-minimize"><i class="far fa-window-minimize">
+  			  </i></a></li>
+  			<li><a class="fs-toggle"><i data-transform_to="fas fa-compress" class="fas fa-expand">
+  			  </i></a></li>
+  			<li>
+  			    <a data-window_url="render.html"
+            	 data-pass_collection="modules"
+            	 data-pass_module_id="" 
+            	 data-pass_prefix="form_" 
+            	 data-pass_to="builder" 
+               data-window_width="100%"
+               data-pass_id="render">
+            		<i class="fas fa-palette"></i>
+          		 <div data-pass_collection="modules"
+					   data-pass_module_id=""
+				       data-pass_prefix=""
+					   data-pass_to="render"
+					   class="sessionBuilderUI_Id">
+	  			 </div>
+            </a>
+        </li>
+
+  			<li><a data-collection="module_activity" data-module-activity_id="" data-pass_id="form-fields" class="delete-document btn-wnd-close"><i class="far fa-trash-alt"></i></a></li>
+			 </ul>
+    </div>
+		<div class="cocreate-container" data-main_content_id="content">
+      <form data-real_time="true" data-collection="module_activity" data-form_id="module-form" class="mbottom-75">
+        <input type="text" data-module_id="" name="name" id="name" placeholder="Name" data-pass_id="form-fields" class="floating-label_field"/>
+        <input type="text" data-module_id="" name="description" id="description" placeholder="Description" data-pass_id="form-fields" class="floating-label_field"/>
+
+
+        	<a class="floating-btn submitBtn"><i class="far fa-save"></i></a>
+
+      </form>
+ 		</div>
+  
+  <script>
+    var config = {
+      apiKey: '',
+      securityKey: '',
+      organization_Id: ''
+    }
+  </script>
+
+  <!--CoCreateJS-->
+  <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
+
+  <!--CoCreate Plugins-->
+  <script src="https://cdn.cocreate.app/CoCreate-window.js"></script>
+
+</body>
+</html>

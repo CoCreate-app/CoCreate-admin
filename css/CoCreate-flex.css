@@ -1,0 +1,58 @@
+ /*flex css */ 
+.flex-container {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /*justify-content:center;*/
+  /*-webkit-align-items: flex-end; */
+  /*align-items: flex-end;*/
+  height:fit-content;
+
+}
+  
+.vcenter { 
+  -webkit-align-items: center; 
+  align-items: center; 
+}  
+.hcenter { 
+  justify-content:center;
+}
+.vflex-end { 
+  -webkit-align-items: flex-end; 
+  align-items: flex-end;
+}
+.hflex-end { 
+  -webkit-align-items: flex-end; 
+  align-items: flex-end;
+}
+/* overlays content with new content */
+  .overlay-content {
+    padding: 24px;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    overflow-y: auto;
+    left: 0;
+    /*top:0px;*/
+    top: 100%;
+    height: 100%;
+    z-index: 6;
+    display: none;
+    transition: all .3s ease-out;
+    transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.overlay-hover:hover > .overlay-content{
+  top: 0;
+  display:block;
+}
+.full-width{
+  width: -webkit-fill-available;
+}

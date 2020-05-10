@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoCreate Static</title>
+    
+  <!-- CoCreate UI -->
+  <link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/99ba925095.js"></script> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  
+  <!-- DHTMLX Window -->
+  <link rel="stylesheet" href="https://cdn.dhtmlx.com/edge/dhtmlx.css" type="text/css"> 
+  <script src="https://cdn.dhtmlx.com/edge/dhtmlx.js" type="text/javascript"></script>
+</head>
+
+ <style type="text/css">
+
+.org-changer {
+    border: 0px solid #ddd;
+    border-radius: 0px;
+    padding:0px;
+}
+
+.org-changer .selectable{
+    height:50px;
+    border-bottom: 1px solid #737373;
+}
+.avatar-wrapper span[name="profile_image"]{
+  position:absolute;
+  top:5px;
+  right:5px;
+  border-radius:50%;
+}
+.avatar-wrapper span[name="profile_image"] img{
+  border-radius:50%;
+}
+ul.cocreate-menu > :nth-last-child(2) {
+  margin-top: auto;
+  /*border-top: 1px solid #ddd!important;}*/
+  min-height:40px;
+}
+ul.cocreate-menu > :nth-last-child(1) {
+  min-height:40px;
+}
+.cocreate-search .floating-label{
+  margin-top:0px;
+}
+.cocreate-search .floating-label_field{
+  color:#f5f5f5;
+}
+.cocreate-search .input-icon{
+  font-size:18px;
+}
+/*.cocreate-search > .cocreate-menu{*/
+/*  bottom:10px;*/
+/*}*/
+.bottom-10{
+  bottom:10px;
+}
+/*Sidenav Search Field */
+.cocreate-search .floating-label_leading, .cocreate-search .floating-label_notch, .cocreate-search .floating-label_trailing {
+    border-color: rgba(245, 245, 245, 0.24);
+}
+.cocreate-search .floating-label_label{
+  color:#f5f5f5;
+  top:8px;
+}
+.cocreate-search{
+  padding: 5px 5px 5px 5px;
+  border-bottom: 1px solid #ddd;
+  height: 51px;
+
+}
+
+ </style> 
+
+
+<body>
+    <!-- Navbar  -->
+    <div data-main_content_id="content" class="nav">
+      <!--<a href="#" class="logo">Navbar</a>-->
+      
+        <!-- Menu Icon Animations -->
+        <a aria-label="mobile menu" class="nav-toggle menu_icon--hamburger" data-toggle_sidenav="menuL">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        
+        <!-- Horizontal Scroll Nav/Tabs -->
+        <ul class="h-scroll">
+        			
+        	<!-- Fullscreen toogle and icon transform -->
+        	<li>
+        		<a class="fs-toggle"><i class="fas fa-expand" data-transform_to="fas fa-compress"></i></a>
+        	</li>
+        		
+        	<!-- Render Builder -->
+        	<li>
+        	   <a data-window_url="render.html"
+              	 data-pass_collection="modules"
+              	 data-pass_module_id="" 
+              	 data-pass_prefix="" 
+              	 data-pass_to="builder" 
+                 data-window_width="100%"
+                 class="sessionAdminUI_Id">
+              		<i class="fas fa-palette"></i>
+        		 <div data-pass_collection="modules"
+          		   data-pass_module_id=""
+          	     data-pass_prefix=""
+          		   data-pass_to="render"
+          		   class="sessionBuilderUI_Id">
+        		 </div>
+               </a>
+            </li>
+        	<li>
+				<a data-window_url="render.html" data-pass_collection="modules" data-pass_prefix="datatable_" data-pass_module_id="" data-pass_to="render" data-window_width="100%" data-window_height="100%" data-window_color="#229954">
+                   <i class="fas fa-history"></i>
+				</a>
+        		<span class="cocreate-badge badge-danger">4</span>	
+        	</li>							     
+            <li>
+				<a data-window_url="render.html" data-pass_collection="modules" data-pass_prefix="" data-pass_module_id="5dc846ebcddd6b0de2c40b80" data-pass_to="render" data-window_width="100%" data-window_height="100%" data-window_color="#229954">
+        	        <i class="fa fa-calendar" aria-hidden="true"></i>
+				</a>
+        		 <span class="cocreate-badge badge-warning">9</span>
+        	</li>
+            			      
+        </ul>
+				<div class="avatar-wrapper">
+				  <a data-window_url="render.html" data-pass_collection="modules" data-pass_prefix="" data-pass_module_id="5dd010bccbc25f0cdb1a4d9f" data-pass_to="render" data-window_width="300px" data-window_height="375px" data-window_color="#229954">
+
+    				<span data-collection="users" data-module_id="" name="name" class="sessionUser_Id first-letter"></span>
+    				<span data-collection="users" data-module_id="" name="profile_image" class="sessionUser_Id"></span>
+    			</a>
+				</div>
+    </div>
+
+	<div class="cocreate-container" id="customVPhere" data-main_content_id="content"></div>
+  	
+  	<div id="menuL" class="cocreate-sidenav" data-main_content="content" sidenav_default_desktop="expanded" sidenav_default_tablet="collapsed">
+        
+        
+        <div class="select--field remove-none org-changer sessionUser_Id" name="current_org" data-collection="users" data-module_id="">
+          <input placeholder="Search" data-engine-id="idEngine1" style="height:0px">
+          <ul data-fetch_collection="users" data-fetch_name="connected_orgs" data-template_id="fetcharray1" data-pass_to="me1234" id="idEngine1" class="template-wrapper-array selectable--list cocreate-menu cocreate-scroll sessionUser_Id">
+      			<li class="template selectable" id="fetcharray1" data-pass_id="me1234" data-collection="organizations">
+              <span class="logo-icon"><img data-collection="organizations" data-module_id="" name="logo" data-pass_id="me1234" src="https://cocreate.app/images/cocreate.png" height="40px"alt="..."></span>
+              <span data-collection="organizations" data-module_id="" name="name" data-pass_id="me1234" class="logo-name">Organization Name</span>
+      			</li>
+      			<li class="menuItem">
+      			  <a href="new-org.html">
+                <span><i class="fas fa-plus"></i></span>
+                <span>New Orginaztion</span>
+              </a>
+      			</li>
+          </ul>
+        </div>
+        <!--</div>-->
+      
+        <div class="cocreate-search"> 
+        	<form id='menu-search'>
+        <input type="text" class="searchInput floating-label_field browser-default" data-pass_value_to="me1234">
+          <span class="passValueBtn">
+            <a  data-window_url="template-engine.html"
+    			   data-pass_to="me1234" 
+    			   data-window_ajax="false" 
+    			   data-window_width="900px" 
+    			   data-window_height="100%" 
+    			   data-window_color="#229954"
+    			   data-window_x="" 
+    			   data-window_y=""
+    			   class="input-icon">
+          <i class="fas fa-search"></i>
+          </a>
+          </span>
+              <!--  <div class="icondiv">-->
+              <!--    <input type="text" class="searchInput withicon browser-default" data-pass_value_to="me1234">-->
+              <!--    <span class="passValueBtn">  -->
+              <!--      <a data-window_url="template-engine.html"-->
+        			   <!--data-pass_to="me1234" -->
+        			   <!--data-window_ajax="false" -->
+        			   <!--data-window_width="900px" -->
+        			   <!--data-window_height="100%" -->
+        			   <!--data-window_color="#229954"-->
+        			   <!--data-window_x="" -->
+        			   <!--data-window_y="">-->
+              <!--      </a>-->
+              <!--        <i class="fa fa-search"></i>-->
+              <!--    </span>-->
+              <!--  </div>-->
+        	</form>
+        </div>
+			
+			<ul class="cocreate-menu cocreate-scroll vh-120 bottom-10">
+			  <div data-fetch_collection="modules" 
+			       data-order_by="menu-position" 
+             data-order_type="asc"
+			       data-exclusion_name="menu-position"
+			       data-exclusion_type="number"
+			       data-exclusion_value="0"
+			       data-template_id="template1"
+			       data-pass_to="me1234" 
+			       id="admin-menu" 
+			       class="template-wrapper">
+
+  			  <li class="template menuItem" id="template1">
+  				  <a data-window_url="render.html"
+  				     data-pass_collection="modules"
+  				     data-pass_module_id=""
+  				     data-pass_module_activity_id=""
+  				     data-pass_prefix=""
+  				     data-pass_to="render"
+  				     data-window_ajax="false"
+  				     data-window_width="900px"
+  				     data-window_height="100%"
+  				     data-window_color="#229954"
+  				     data-window_x=""
+  				     data-window_y="">
+  				    <span data-module_id="" name="icon" data-pass_id="me1234"></span><span data-module_id="" name="name" data-pass_id="me1234" ></span>
+		         </a>
+    				  <div class="float-right">
+    				    <a data-window_url="render.html" data-pass_collection="modules" data-pass_module_id="" data-pass_module_activity_id="" data-pass_prefix="form_" data-pass_to="render" data-window_ajax="false" data-window_width="320px" data-window_height="100%" data-window_color="#229954" data-window_x="" data-window_y=""><i class="fas fa-plus"></i>
+    				    </a>
+    				  </div>
+  				  </li>
+  			  </div>
+      	  <li class="menuItem">
+      			<a data-window_url="settings.html" data-pass_collection="modules" data-pass_module_id="" data-pass_module_activity_id="" data-pass_prefix="form_" data-pass_to="render" data-window_ajax="false" data-window_width="250px" data-window_height="100%" data-window_color="#229954" data-window_x="0" data-window_y="0">
+        		  <span><i class="fas fa-cogs"></i></span>
+        		  <span>Settings</span>
+  					<span class="cocreate-badge badge-danger">4</span>
+        		</a>
+      	  </li>
+      	  <li class="menuItem">
+        		<a href="signin.html" class="logoutBtn">
+        		  <span><i class="fas fa-sign-out-alt"></i></span>
+        		  <span>Logout</span>
+        		</a>
+      	  </li>
+      </ul>
+		    <div class="resizeHandler"></div>
+    </div>
+
+  <script>
+    var config = {
+      isParent: true,
+      apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+      securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+      organization_Id: '5de0387b12e200ea63204d6c'
+    }
+  </script>-->
+  
+  <!--CoCreateJS-->
+  <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
+
+  <!--CoCreate Plugins-->
+  <script src="https://cdn.cocreate.app/CoCreate-window.js"></script>
+  <!--<script src="https://cdn.cocreate.app/CoCreate-builder.js"></script>-->
+  <!--<script src="https://cdn.cocreate.app/CoCreate-datatables.js"></script>-->
+  <!--<script src="https://cdn.cocreate.app/CoCreate-calendar.js"></script>-->
+
+
+  <script>
+	  updateFirstLetter();
+	  
+  	socket.on('updateDocument', function (data) {
+	    updateFirstLetter();
+	  });
+	  
+	  socket.on('getDocument', function(data) {
+	    updateFirstLetter();
+	  })
+	  
+	  function updateFirstLetter() {
+	  	var firstLetters = document.querySelectorAll('.first-letter');
+	  		
+  		for (var i=0; i<firstLetters.length; i++) {
+  			var firstLetter = firstLetters[i];
+  			
+  			var value = firstLetter.innerHTML;
+  			firstLetter.innerHTML = value.substr(0, 1).toUpperCase();
+  		}
+	  }
+  </script>
+
+</body>
+</html>

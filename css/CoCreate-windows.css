@@ -1,0 +1,30 @@
+/*Windows*/
+#customVPhere {
+	position: relative;
+	height: 100%;
+}
+
+	.dhxwin_inactive{
+	background-color: rgba(0, 0, 0, 0)!important;
+	}
+	.dhxwin_active{
+	background-color: rgba(0, 0, 0, 0)!important;
+	}
+	.dhxwin_hdr{
+	z-index: 3!important;
+	background-color: rgba(0, 0, 0, 0)!important;
+	height: 15px!important;
+	}
+	.dhxwin_brd{
+	top: 0px!important;
+	border-width:2px 2px 2px 2px!important;
+	height:100%!important;
+	}
+	.dhx_cell_wins{
+	top: 2px!important;
+	}
+	.dhxwin_fr_cover{
+		top:0px!important;
+		opacity:0!important;
+	}
+

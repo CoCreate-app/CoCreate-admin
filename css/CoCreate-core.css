@@ -1,0 +1,254 @@
+/* 
+CoCreateUI CSS
+   1. General
+   2. Badges
+   3. Sidenav
+   4. Sidenav search field
+   5. Navbar
+   6. Horizontal Scroll Nav
+   7. Menu Toggles
+   8. Dropdown/Accordian
+   9. Windows
+  10. Datatables
+*/
+
+
+*, *:before, *:after {
+  -webkit-border-sizing: border-box;
+  -moz-border-sizing: border-box;
+  border-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+  font-weight: 100;
+  margin:0px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  height: 100vh;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.04);
+  
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+body.scroll::-webkit-scrollbar-thumb {
+  background: #f13b48;
+}
+
+a {
+  text-decoration: none;
+  /*color: rgba(34, 34, 34, 0.8);*/
+  cursor: pointer;
+}
+a:hover, a :focus {
+  color: black;
+}
+
+.cocreate-container{
+	padding:5px;
+	margin-top:50px;
+}
+
+/*floating btn*/
+.float{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom: 15px;
+	right:15px;
+	background-color:#229954;
+	opacity: .7;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+a.float i{
+	margin-top:18px;
+	font-size:18px;
+}
+.floating-btn{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom: 15px;
+	right:15px;
+	background-color:#229954;
+	opacity: .7;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+a.floating-btn i{
+	margin-top:18px;
+	font-size:18px;
+}
+
+
+/* Disables the selection */
+.disableselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge*/
+   user-select: none;          /* Non-prefixed version, currently 
+                                  not supported by any browser */
+}
+
+/* Disables the drag event 
+(mostly used for images) */
+.disabledrag{
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+   user-drag: none;
+}
+
+/* height helpers*/
+.vh-120{
+  height:calc(100vh - 120px)!important;
+}
+.vh-100{
+  height:calc(100vh - 100px)!important;
+}
+.vh-90{
+  height:calc(100vh - 90px)!important;
+}
+.height100{height:100%;}
+
+/*width helpers*/
+.minwidth-200{
+  min-width: 200px;
+}
+.hidden {
+  display:none!important;
+}
+.template{
+  display:none!important;
+}
+.blue-n-white{
+  background:#283747!important;
+  color:#f5f5f5;
+  opacity:0.9;
+}
+.white-n-black{
+  background: rgba(245, 245, 245, 0.92)!important;
+  color: rgba(34, 34, 34, 0.8);
+}
+
+.margin-top-50{margin-top: 50px;}
+
+.mtop-50{
+  margin-top: 50px;
+}
+
+.mbottom-75{
+  margin-bottom: 75px;
+}
+.padding-5{
+  padding:5px;
+  }
+.float-right{
+  float:right;
+}
+.float-left{
+  float:left;
+}
+
+/* Avatar Wrapper */
+
+.avatar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin:5px;
+  /*box-shadow: 0px 0px 6px rgba(20, 20, 20, 0.6);*/
+}
+avatar-wrapper.round{
+  border-radius: 50%;
+}
+
+.avatar-wrapper img {
+	width: 40px;
+	height: 40px;
+}
+
+.logo {
+  display: block;
+  height:50px;
+  overflow: hidden;
+  background:#D0D3D4;
+}
+
+.logo-icon {
+    display: inline-block;
+    height:50px;
+    width:50px;
+    padding:5px;
+}
+
+.logo-name {
+    display: inline-block;
+    height:50px;
+    /*width:50px;*/
+    vertical-align:top;
+    font-size:22px;
+    color:#17202A;
+    font-weight:900;
+    padding:8px 0px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* class for changing color of field if data not unique*/	
+.data-unique-success{
+		border-color: green!important;
+		}
+.data-unique-error{
+		border-color: red!important;
+		}
+
+ /*input with nested icon float left or right*/
+.input_field {
+  padding: 8px 14px 8px 14px;
+  border: none !important;
+  outline: none !important;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.87);
+  z-index: 1;
+}
+.input-icon{
+  position: relative;
+  float: right;
+  bottom: 32px;
+  font-size: 25px;
+  margin-right: 9px;}
+
+
+

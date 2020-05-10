@@ -1,0 +1,252 @@
+
+.floating-label {
+  position: relative;
+  margin-top:10px;
+}
+
+.floating-label_field {
+  display: flex;
+  width:100%!important;
+  padding: 8px 14px 8px 14px;
+  border: none !important;
+  outline: none !important;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.87);
+  z-index: 1;
+}
+
+input.floating-label_field[type="date"],input.floating-label_field[type="time"],input.floating-label_field[type="datetime-local"],input.floating-label_field[type="week"],input.floating-label_field[type="month"],select.floating-label_field{
+    color: transparent;
+}
+input.floating-label_field.text_color[type="date"],input.floating-label_field.text_color[type="time"],input.floating-label_field.text_color[type="datetime-local"],input.floating-label_field.text_color[type="week"],input.floating-label_field.text_color[type="month"],select.floating-label_field.text_color{
+ color: rgba(0, 0, 0, 0.87); 
+}
+
+/*.text_color{*/
+/*}*/
+
+input[type='color'] {
+  height: 39px;
+}
+
+.floating-label_outline {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  text-align: left;
+  pointer-events: none;
+}
+
+.floating-label_leading,
+.floating-label_notch,
+.floating-label_trailing {
+  border-color: rgba(0, 0, 0, 0.24);
+  border-width: 1px;
+  border-style: solid;
+  transition: border 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-label_leading {
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+  width: 12px;
+}
+
+.floating-label_notch {
+  flex: 0 1 auto;
+  border-right: none;
+  border-left: none;
+}
+
+.floating-label_trailing {
+  flex-grow: 1;
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+}
+
+.floating-label_label {
+  display: inline-block;
+  position: relative;
+  top: 9px;
+  bottom: auto;
+  margin-bottom: 0px!important;
+  left: 4px;
+  max-width: 100%;
+  color: rgba(0, 0, 0, 0.6);
+  transform-origin: left top;
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.floating-label_field:hover ~ .floating-label_outline .floating-label_leading,
+.floating-label_field:hover ~ .floating-label_outline .floating-label_notch,
+.floating-label_field:hover ~ .floating-label_outline .floating-label_trailing {
+  border-color: rgba(0, 0, 0, 0.87);
+}
+
+.floating-label.active .floating-label_leading,
+.floating-label.active .floating-label_notch,
+.floating-label.active .floating-label_trailing,
+.floating-label_field:not(:placeholder-shown) .floating-label_leading,
+.floating-label_field:not(:placeholder-shown) .floating-label_notch,
+.floating-label_field:not(:placeholder-shown) .floating-label_trailing,
+.floating-label_field:valid ~ .floating-label_outline .floating-label_leading,
+.floating-label_field:valid ~ .floating-label_outline .floating-label_notch,
+.floating-label_field:valid ~ .floating-label_outline .floating-label_trailing,
+.floating-label_field:focus ~ .floating-label_outline .floating-label_leading,
+.floating-label_field:focus ~ .floating-label_outline .floating-label_notch,
+.floating-label_field:focus ~ .floating-label_outline .floating-label_trailing,
+input:-webkit-autofill + .floating-label_outline .floating-label_leading,
+input:-webkit-autofill + .floating-label_outline .floating-label_notch,
+input:-webkit-autofill + .floating-label_outline .floating-label_trailing {
+  border-color: #2E86C1;
+  border-width: 2px;
+}
+
+.floating-label.active .floating-label_notch,
+.floating-label_field:not(:placeholder-shown) .floating-label_notch,
+.floating-label_field:valid ~ .floating-label_outline .floating-label_notch,
+.floating-label_field:focus ~ .floating-label_outline .floating-label_notch,
+input:-webkit-autofill + .floating-label_outline .floating-label_notch {
+  border-top: none;
+}
+.floating-label.active .floating-label_label,
+.floating-label_field:not(:placeholder-shown) .floating-label_label,
+.floating-label_field:valid ~ .floating-label_outline .floating-label_label,
+.floating-label_field:focus ~ .floating-label_outline .floating-label_label,
+input:-webkit-autofill + .floating-label_outline .floating-label_label {
+  color: #2E86C1;
+  transform: translateY(-17px) scale(0.75);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: rgba(0, 0, 0, 0) !important;
+  -webkit-transition-delay: 99999s;
+}
+
+@-webkit-keyframes autofill {
+  to {
+    background: transparent;
+  }
+}
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+.input--error .floating-label_label {
+  color: #FF8484 !important;
+  animation: shake 0.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  33.33% {
+    transform: translate3d(8px, -21px, 0) scale(0.75);
+  }
+  66.33% {
+    transform: translate3d(-2px, -21px, 0) scale(0.75);
+  }
+  100% {
+    transform: translate3d(0, -21px, 0) scale(0.75);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.select2-container--default .select2-selection--multiple,.select2-container--default .select2-selection--single {
+     background-color: transparent!important; 
+     border: none; 
+     padding-top: 7px;
+     padding-bottom: 8px;
+
+}
+
+.select2-container {
+       width: 100%!important;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border: none !important;
+  
+}
+
+.select2-container--default .select2-selection--single {
+    border: 0px solid #aaa!important;
+}
+
+.select2-container--default .select2-selection--multiple {
+    border: 0px solid #aaa!important;
+}
+
+.select2-search__field{
+  margin-top: none!important
+}
+
+.select2-selection--single{
+  height:100%!important;
+}
+
+.select2-selection--single:focus{
+  outline: -webkit-focus-ring-color auto 0px!important;
+}
+
+.select2-selection{
+ min-height:39px!important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+  margin-top:4px!important;
+}
+textarea.floating-label_field::-webkit-scrollbar {
+  width: 10px;
+}
+
+textarea.floating-label_field::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.04);
+  
+}
+
+textarea.floating-label_field::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+}
+textarea.floating-label_field.scroll::-webkit-scrollbar-thumb {
+  background: #f13b48;
+}  
+
+/*body {
+  font-family: "Roboto", 'Helvetica Neue, Helvetica, Arial';
+  font-size: 16px;
+}
+
+.input-group {
+  position: relative;
+  max-width: 300px;
+}
+
+form {
+  display: flex;
+  flex: 100%;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}*/

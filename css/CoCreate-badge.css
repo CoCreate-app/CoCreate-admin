@@ -1,0 +1,37 @@
+/* CoCreate Badges */
+.cocreate-badge{
+    display:inline-block;
+    background-color: #777;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    height:fit-content;
+    min-width: fit-content;
+    opacity: 0.8;
+    padding: 2px 6px;
+    text-align: center;
+    bottom: 2px;
+    transition: opacity 0.3s linear 0s;
+    -webkit-transition: opacity 0.3s linear 0s;
+    -ms-transition: opacity 0.3s linear 0s;
+    -moz-transition: opacity 0.3s linear 0s;
+    -o-transition: opacity 0.3s linear 0s;
+    vertical-align: middle;
+    visibility: visible;
+    white-space: nowrap;
+}  
+
+.cocreate-badge.badge-success {
+  background-color: #70ca63;
+  color: #fff;
+}
+.cocreate-badge.badge-warning {
+  background-color: #fecd33;
+  color: #fff;
+}
+.cocreate-badge.badge-danger {
+  background-color: #f13b48;
+  color: #fff;
+}

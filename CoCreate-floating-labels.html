@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My float Labels</title>
+  <link rel="stylesheet" href="https://cocreate.app/css/CoCreate-select.css" type="text/css" />
+  <link href="https://cocreate.app/css/CoCreate-floating-label.css" rel="stylesheet">
+
+<!-- Select2 -->
+  <!--<link href="https://cdnjs.cloudflare.com/ajax/js/select2/4.0.10/css/select2.min.css" rel="stylesheet" />-->
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/js/select2/4.0.10/js/select2.min.js"></script>-->
+</head>
+<body>
+
+
+  <form data-realtime="true" data-collection="module_activity" data-form_id="test_form">
+    
+    <div class="select--field floating-label_field sortable" placeholder="cocreate select" data-limit_selectable="3" data-get_value="text">
+      <input class="search-input template-search" data-engine-id="idEngine1">
+        <ul data-fetch_collection="users" data-template_id="selectable1" data-pass_to="me1234" data-order_by="connected_orgs" data-order_type="asc" id="idEngine1" class="template-wrapper selectable--list  cocreate-scroll">
+    				<li class="selectable template" id="selectable1"><div style="display:block">
+    				  <h3 data-module_id="" name="name" passed_id="me1234" ></h3><h5 data-module_id="" name="name" passed_id="me1234" ></h5></div>
+    				</li>
+    		</ul>					      
+    </div>
+    
+    <input type="text" class="floating-label_field" placeholder="Text" name="name" id="text"  data-module_id="" data-module_activity_id="5d63d70e888e7a536209dbae">
+    <input type="color" class="floating-label_field" placeholder="color" name="color" id="color"  data-module_id="" data-module_activity_id="5d63d70e888e7a536209dbae">
+
+    <input type="search" class="floating-label_field" placeholder="Search" name="search" id="search"  data-module_id="" data-module_activity_id="5d63d70e888e7a536209dbae" data-get_value="text">
+    <input type="date" class="floating-label_field" placeholder="Date" name="date" id="date"  data-module_id="" data-module_activity_id="5d63d70e888e7a536209dbae">
+    <input type="time" class="floating-label_field" placeholder="Time" name="time" id="time"  data-module_id="" data-module_activity_id="5d63d70e888e7a536209dbae">
+    <input type="datetime-local" class="floating-label_field" placeholder="Date Time" name="date-time" id="date-time"  data-module_id="" data-module_activity_id="5d63d70e888e7a536209dbae">
+    <textarea class="floating-label_field" placeholder="Text Area" name='text_area' id="text_area"  data-module_id="" data-module_activity_id="5d63d70e888e7a536209dbae" data-get_value="text"></textarea>
+    
+    ------------ Multiple Documents ------------
+
+    <div class="select--field sortable" name="selectField" data-collection="test" data-module_id="5dc048ef7211840b00700519" data-module_activity_id="" data-limit_selectable="3" multiple>
+      <input class="search-input template-search" placeholder="Search" data-engine-id="idEngine1">
+        <ul data-fetch_collection="users" data-template_id="selectable1" data-pass_to="me1234" id="idEngine1" class="template-wrapper selectable--list  cocreate-scroll">
+  				<li class="selectable template" id="selectable1" passed_id="me1234">
+  				  <h3 data-module_id="" name="_id" passed_id="me1234" >First name</h3><h5 data-module_id="" name="name" passed_id="me1234" ></h5>
+  				</li>
+      </ul>
+    </div>
+
+------------ Multiple Options ------------
+    <div class="select--field sortable" name="selectField1" data-collection="test" data-module_id="5dc048ef7211840b00700519" data-module_activity_id="" data-limit_selectable="3" multiple>
+      <input class="search-input" placeholder="Search">
+      <ul class="selectable--list  cocreate-scroll">
+				<li class="selectable"  data-value="value 1">
+				  <h3 >value 1</h3>
+				</li>
+				<li class="selectable"  data-value="value 2">
+				  <h3 >value 2</h3>
+				</li>
+				<li class="selectable"  data-value="value 3">
+				  <h3 >value 3</h3>
+				</li>
+      </ul>
+    </div>
+
+------------ Single  Document ------------
+    <div class="select--field documents sortable" name="selectField2" data-collection="test" data-module_id="5dc048ef7211840b00700519" data-module_activity_id="" data-limit_selectable="1">
+      <input class="search-input template-search" placeholder="Search" data-engine-id="idEngine3">
+      <ul data-fetch_collection="users" data-template_id="selectable3" data-pass_to="me1234" id="idEngine3" class="template-wrapper selectable--list  cocreate-scroll">
+				<li class="selectable template" id="selectable3" data-value="" passed_id="me1234">
+				  <h3 data-module_id="" name="name" passed_id="me1234" >First name</h3><h5 data-module_id="" name="name" passed_id="me1234" ></h5>
+				</li>
+      </ul>
+    </div>
+------------ Single  Options ------------
+    <div class="select--field sortable" name="selectField4" data-collection="test" data-module_id="5dc048ef7211840b00700519" data-module_activity_id="" data-limit_selectable="1">
+      <input class="search-input template-search" placeholder="Search" data-engine-id="idEngine14">
+      <ul class="selectable--list  cocreate-scroll">
+				<li class="selectable"  data-value="value 1">
+				  <h3 >value 1</h3>
+				</li>
+				<li class="selectable"  data-value="value 2">
+				  <h3 >value 2</h3>
+				</li>
+				<li class="selectable"  data-value="value 3">
+				  <h3 >value 3</h3>
+				</li>
+      </ul>
+    </div>
+
+    
+    <!--<select class="floating-label_field select2options" placeholder="Single" name="single" data-module_id="" data-module_activity_id="5d63d70e888e7a536209dbae" id="single" data-allow-clear"true">-->
+    <!--  <option value="Product Information">Product Information</option>-->
+    <!--  <option value="Order Status">Order Status</option>-->
+    <!--  <option value="Business Sales">Business Sales</option>-->
+    <!--  <option value="General Customer Service">General Customer Service</option>-->
+    <!--  <option value="Marketing">Marketing</option>-->
+    <!--  <option value="Website Feedback">Website Feedback</option>-->
+    <!--</select>-->
+    
+    <!--<select class="floating-label_field select2options" placeholder="Multiple" name="multiple" data-module_id="" data-module_activity_id="5d63d70e888e7a536209dbae" id="multiple" data-tags="true" multiple>-->
+    <!--  <option value="Product Information">Product Information</option>-->
+    <!--  <option value="Order Status">Order Status</option>-->
+    <!--  <option value="Business Sales">Business Sales</option>-->
+    <!--  <option value="General Customer Service">General Customer Service</option>-->
+    <!--  <option value="Marketing">Marketing</option>-->
+    <!--  <option value="Website Feedback">Website Feedback</option>-->
+    <!--</select>-->
+        
+        <!-- select2document collection -->
+    <!--    <select class="select2documents floating-label_field" multiple data-tags="true" -->
+    <!--      data-collection_fetch="module_activity" -->
+    <!--      data-module_fetch="test" -->
+    <!--      data-module_id="" -->
+    <!--      data_fetch-name=""-->
+    <!--      data-module_activity_id="5d63d70e888e7a536209dbae" -->
+    <!--      name="related_to"  -->
+    <!--      data-template_id="dropdown1" -->
+    <!--      data-selected_template_id="selectedTemplate1" -->
+    <!--      placeholder="select2collection">-->
+    <!--    </select>-->
+        
+    <!--    <div id="dropdown1" style="display: none">-->
+    <!--        <img id="icon_profile" src="" height="40px" width="40px" class="img img-responsive" style="position:absolute; left:0px; top: 0; border-radius:50%" data-module_activity_id="5d36e80ab1f19e46661bbbe5" name="">-->
+    <!--        <h5 data-module_activity_id='' name='name'></h5>-->
+    <!--        <span data-module_activity_id='' name='email'></span>-->
+    <!--    </div>-->
+        
+    <!--    <div id="selectedTemplate1" style="display: none">-->
+    <!--        <img id="icon_profile" src="" height="40px" width="40px" class="img img-responsive" style="position:absolute; left:0px; top: 0; border-radius:50%" data-module_activity_id="5d36e80ab1f19e46661bbbe5" name="">-->
+    <!--        <span style="margin:0px 0px 0px 0px;" data-module_activity_id='' name='name'></span><br>-->
+    <!--        <span data-module_activity_id='' name='email'></span>-->
+    <!--    </div>-->
+
+        <!-- select2document array-->
+    <!--    <select class="select2documents floating-label_field" multiple-->
+    <!--      data-collection_fetch="module_activity" -->
+    <!--      data-module_fetch="test" -->
+    <!--      data-fetch_module_id="" -->
+    <!--      data-fetch_module_activity_id="test" -->
+    <!--      data_fetch-name=""-->
+    <!--      data-module_id="" -->
+    <!--      data-module_activity_id="5d63d70e888e7a536209dbae" -->
+    <!--      name="types"-->
+    <!--      date-template_collection=""-->
+    <!--      data-template_id="dropdown1" -->
+    <!--      data-selected_template_id="selectedTemplate1" -->
+    <!--      placeholder="select2array">-->
+    <!--    </select>-->
+        
+    <!--    <div id="dropdown1" style="display: none">-->
+    <!--        <img id="icon_profile" src="" height="40px" width="40px" class="img img-responsive" style="position:absolute; left:0px; top: 0; border-radius:50%" data-module_activity_id="5d36e80ab1f19e46661bbbe5" name="">-->
+    <!--        <h5 name='name'></h5>-->
+    <!--        <span name='email'></span>-->
+    <!--    </div>-->
+        
+    <!--    <div id="selectedTemplate1" style="display: none">-->
+    <!--        <img id="icon_profile" src="" height="40px" width="40px" class="img img-responsive" style="position:absolute; left:0px; top: 0; border-radius:50%" data-module_activity_id="5d36e80ab1f19e46661bbbe5" name="">-->
+    <!--        <span style="margin:0px 0px 0px 0px;" name='name'></span><br>-->
+    <!--        <span name='email'></span>-->
+    <!--    </div>-->
+      
+
+  </form>
+
+<script type="text/javascript">
+
+</script>
+
+  <script>
+    var config = {
+      apiKey: '123456abcdeee',
+      securityKey: 'ekjlferkjflkejrlfkejlkdjfwlrir9530',
+      organization_Id: '5d076e8235984e16ce031474'
+    }
+    
+  </script>
+  <script src="https://cdn.cocreate.app/CoCreateJS.min.js"></script>
+  <script src="https://cdn.cocreate.app/CoCreateUI.min.js"></script>
+
+  <!--<script src="./js/socket.io.js"></script>-->
+  <!--<script src="https://cdn.cocreate.app/CoCreate.js"></script>-->
+  <!--<script src="https://cdn.cocreate.app/CoCreate-select2.js"></script>-->
+  <!--<script src="https://cdn.cocreate.app/CoCreate-floating-label.js"></script>-->
+  <!--<script src="https://cdn.cocreate.app/CoCreate-templating.js"></script>-->
+  <!--<script src="https://cdn.cocreate.app/CoCreate-select.js"></script>-->
+  <!--<script src="https://cdn.cocreate.app/CoCreate-sort.js"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop Items</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />
+
+	<style>
+	   .template {
+	     display: none;
+	   }
+	</style>        
+</head>
+
+<body>
+  
+  <div class="controll-wrapper"></div>
+  
+  <div class="card">
+    <div>
+      <input class="template-search floating-label_field" placeholder="Search" data-engine-id="example" placeholder="Search">
+    </div>
+  </div>
+
+    <form data-engine-id="example">
+      <h3>Filters</h3>
+      <div class="flex-container">
+        <div class="card">
+         	<input type="range" 
+         	  data-filter_name="price" 
+         	  data-filter_type="range"
+         	  placeholder="price range" class="floating-label_field"><br>
+         
+        	<input data-filter_name="price" data-filter_type="range" data-range_type="min" placeholder="Min" class="floating-label_field"><br>
+        	<input data-filter_name="price" data-filter_type="range" data-range_type="max" placeholder="Max" class="floating-label_field">
+        </div>
+  
+  	    <div class="card">
+          <label for="select-1"></label>
+          
+        	<select data-filter_name="category" placeholder="Select" id="select-1" data-filter_type="array">
+        	    <option value="Footware">Footware</option>
+        	    <option value="Electronics">Electronics</option>
+        	</select>
+
+          <div>
+      	    <label for="checkbox-1">Red</label>
+      	    <input type="checkbox" id="checkbox-1" data-filter_name="color" value="Red" data-filter_type="array"/>
+        	</div>
+      	  <div>
+      		  <label for="checkbox-2">Blue</label>
+      		  <input type="checkbox" id="checkbox-2" data-filter_name="color" value="Blue" data-filter_type="array"/>
+      	  </div>
+      	  
+      	  <div>
+      		  <label for="checkbox-2">Green</label>
+      		  <input type="checkbox" id="checkbox-3" data-filter_name="color" value="Green" data-filter_type="array"/>
+      	  </div>
+      	 </div>
+
+
+      	 <div class="card">
+      	   <h3>Order</h3>
+      	   <input type="radio" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><label for="category_order_asc">Order by Category: ASC</label><br>
+      	   <input type="radio" name="category_order" data-order_by="category" value="desc" id="category_order_desc"><label for="category_order_desc">Order by Category: DESC</label><br>
+      	  
+      	   <input type="radio" name="name_order" data-order_by="name" value="asc" id="name_order_asc"><label for="name_order_asc">Order by Name: ASC</label><br>
+      	   <input type="radio" name="name_order" data-order_by="name" value="desc" id="name_order_desc"><label for="name_order_desc">Order by Name: DESC</label><br>
+
+      	   <select data-order_by="category" placeholder="Select" id="select-1">
+        	    <option value="asc">ASC</option>
+        	    <option value="desc">DESC</option>
+        	</select>
+      	 </div>
+      	</div>
+
+
+	</form>
+	</div>
+	
+    <div id="example" class="template-wrapper flex-container" data-template_id="template1"
+      data-fetch_collection="module_activity"
+      data-fetch_module="5deb167e189f212c8ebd0137"
+      data-pass_to="me1234" 
+      data-fetch_name="" 
+      data-fetch_value="" 
+      data-order_by="name" 
+      data-order_type="asc"
+      
+      >
+      
+        <div class="card template" id="template1">
+          <img src="http://via.placeholder.com/250x250/BF00FF/ffffff/" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title" data-module_id="" name="name" data-pass_id="me1234">Item Name</h5>
+            <p class="card-text" data-module_id="" name="price">Color</p>
+            <p class="card-text" data-module_id="" name="price" data-pass_id="me1234">$0</p>
+
+            <a href="#" class="btn btn-primary">More details</a>
+          </div>
+        </div>
+      </div>
+
+    <button class="loadMore" data-engine_id="example">Load More</button>
+  
+  
+  <script>
+    var config = {
+      apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+      securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+      organization_Id: '5de0387b12e200ea63204d6c'
+    }
+  </script>
+
+  <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
+  <script src="https://cdn.cocreate.app/CoCreate-templating.js"></script>
+
+</body>
