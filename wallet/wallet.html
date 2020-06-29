@@ -1,0 +1,309 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+    <title>Wallet</title>
+	  
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+	
+	<!-- Jquery -->
+	  <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	
+	<!-- datatables -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/cr-1.5.0/fc-3.2.5/sc-2.0.0/sl-1.3.0/datatables.min.css" />
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/cr-1.5.0/fc-3.2.5/sc-2.0.0/sl-1.3.0/datatables.min.js"></script>
+
+	<!-- Bootstrap-->
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/js/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		
+	<!-- Select2 -->
+	  <link href="https://cdnjs.cloudflare.com/ajax/js/select2/4.0.6/css/select2.min.css" rel="stylesheet" />
+	  <script src="https://cdnjs.cloudflare.com/ajax/js/select2/4.0.6/js/select2.min.js"></script>
+	 
+	<!-- SortableJS -->
+	  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+	
+	<!-- DHTMLX Window -->
+	  <link rel="stylesheet" href="https://cdn.dhtmlx.com/edge/dhtmlx.css" type="text/css"> 
+	  <script src="https://cdn.dhtmlx.com/edge/dhtmlx.js" type="text/javascript"></script>
+	  
+	<!-- Floating Labels -->
+	  <link rel="stylesheet" type="text/css" href="../../js/float-labels.js/float-labels.css">
+	  <script src="../../js/float-labels.js/float-labels.min.js"></script>
+	
+	<!-- Font Awesome -->
+	  <script src="https://kit.fontawesome.com/99ba925095.js"></script> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+	<!-- Admin UI -->    
+	  <link href="../../adminUI/assets/css/adminUI.css" rel="stylesheet">
+	  <link href="../../adminUI/assets/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+	  <link href="../../adminUI/assets/hamburgers/hamburgers.css" rel="stylesheet">
+	
+	  <script src="../../adminUI/assets/js/adminUI.js"></script>
+	  <script src="../../adminUI/assets/js/menuUI.js"></script> 	 
+	
+	  <script src="../../adminUI/assets/js/jquery.mCustomScrollbar.concat.min.js"></script> 
+	  <script src="../../adminUI/assets/js/jquery.mousewheel.min.js"></script> 
+	
+	<!-- GrapeJS-->
+	  <link rel="stylesheet" href="//unpkg.com/grapesjs/dist/css/grapes.min.css">
+	  <script src="//unpkg.com/grapesjs"></script>
+  
+  <!-- Wallet -->  
+    <script src="wallet.js"></script>
+    <script src="wallet.css"></script>
+    
+
+  <style>
+  .balance_input_box{
+    width: calc(100% - 138px) !important; 
+    display: inline-block !important; 
+    vertical-align: top;
+}
+
+.balance_buttons{
+    width:133px; 
+    display: inline-block !important; 
+    vertical-align: top;
+}
+
+  </style>
+
+	</head>
+	<body  onload="doOnLoad();" onunload="doOnUnload();">
+		<!--<a href="login.html" target="" data-pass_module_activity_id="" data-pass_to="me1234" class="redirectLink"></a>-->
+		<div id="adminUI" class="adminUI">
+			<div class="adminUI-overlay-box"></div>
+			<div class="adminUI-container">  
+				<header class="adminUI-header">
+					<div class="adminUI-wrapper"> 
+						<div class="adminUI-left-header"> 
+							<div class="adminUI-logo">
+							</div> 
+						</div>
+						<div class="adminUI-right-header"> 
+							<div class="sidebar_toggle">
+									<a>
+										<div class="hamburger hamburger--spin">
+    									<div class="hamburger-box">
+      									<div class="hamburger-inner"></div>
+    									</div>
+										</div>
+									</a>
+							</div> 
+							<div class="adminUI-rl-header"> 
+								
+							</div>
+
+							
+							<div class="adminUI-rr-header" >
+							</div>
+						
+							<div class="horizontal-scroll">
+								<span class="nav-item">
+									<a class="btn-wnd-close"><i class="fas fa-times"></i></a>
+								</span>							     
+							    <span class="nav-item">
+								    <a class="btn-wnd-maximize"><i class="far fa-window-maximize" data-transform_to="far fa-window-restore"></i></a>
+								</span>
+							    <span class="nav-item">
+								    <a class="btn-wnd-minimize"><i class="far fa-window-minimize"></i></a>
+								</span>
+								<span class="nav-item">
+									<a class="fs-toggle"><i class="fas fa-expand" data-transform_to="fas fa-compress"></i>
+									</a>
+								</span>
+								<span class="nav-item selector-toggle">
+									<a class="selector-toggle icons"><i class="fas fa-cog"></i></a>
+								</span>
+
+
+
+							</div>							
+						</div>
+					</div>
+				</header>
+				<div class="adminUI-main-container">
+					<div class="adminUI-wrapper">
+						<nav class="adminUI-navbar">  
+							<div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+							<div class="adminUI-inner-navbar" style="overflow-y: auto; overflow-x: hidden;"> 
+								<div class="adminUI-search"> 
+									<span class="searchbar-toggle">  </span>
+									<div class="adminUI-search-box "> 
+										<input type="text" placeholder="Search">
+										<span class="search-icon"><i class="fas fa-search" aria-hidden="true"></i></span>
+									</div> 
+								</div>
+								 <ul class="adminUI-item adminUI-brand">
+									<li class="active">
+										<a href="javascript:void(0)">
+											<span><i class="fas fa-tachometer-alt"></i></span>
+											<span >DashBoard</span>
+											<span class="adminUI-mcaret"></span>
+										</a>
+									</li>
+									<li class="adminUI-hasmenu">
+										<a href="javascript:void(0)">
+											<span><i class="far fa-eye"></i></span>
+											<span >Views</span>
+											<span class="adminUI-mcaret"></span>
+										</a>
+										<ul class="adminUI-submenu">
+											<li class=" ">
+												<a href="javascript:void(0)">
+													<span><i class="icon-mustache"></i></span>
+													<span >Color Library</span>
+													<span class="adminUI-mcaret"></span>
+												</a> 
+											</li>
+											<li class="  ">
+												<a href="javascript:void(0)">
+													<span><i class="far fa-eye"></i></span>
+													<span >Grid System</span>
+													<span class="adminUI-mcaret"></span>
+												</a> 	
+											</li>
+										</ul>
+									</li> 
+									<li class=" ">
+										<a href="javascript:void(0)">
+											<span><i class="fa fa-cogs"></i></span>
+											<span >Settings</span>
+											<!--<span class="cocreate-badge badge-danger">2</span>-->
+										</a>
+									</li>
+								</ul>  
+							</div> 
+						</nav> 
+						<div class="cocreate-container">
+							<div style="position: relative;" id="modal-viewport">
+							<div class="adminUI-inner-content">
+                            <div class=" balance_input_box">  
+                                <form data-collection='module_activity' data-form_id="wallet_form" class="float-labels">
+                                <label for="balance"> </label>
+                                <input type="text" name="balance" id="balance"  placeholder="Balance" readonly>
+                            	</form>
+                            </div>
+                            <div class="btn-group balance_buttons">
+                                <!-- <div class="col-xs-2 col-sm-1 col-md-2"> -->
+                                    <a href="#" class="btn btn-success" id="add_funds"><i class="fa fa-plus" data-transform_to="fa fa-ban"></i></a> 
+                                <!-- </div> -->
+                                <!-- <div class="col-xs-2 col-sm-1 col-md-2"> -->
+                                    <a href="#" class="btn btn-warning" id="wd_funds"><i class="fa fa-minus" data-transform_to="fa fa-ban"></i></a>
+                                <!-- </div> -->
+                                <!-- <div class="col-xs-2 col-sm-1 col-md-2"> -->
+                                    <a href="#" class="btn btn-primary show_hide" data-show-id='#funding_box'  id="exchange_funds"><i class="fa fa-exchange" data-transform_to="fa fa-ban"></i></a>
+                                <!-- </div> -->
+                            </div>
+            <div id="funding_box" class="row" style="display:none;">
+                <div class="col-sm-12">    
+                    <div class="spacer-b30">
+                        <div class="tagline"><span class="org_name_balance">CoCreate Funds </span></div><!-- .tagline -->
+                    </div>
+                </div>
+                <!-- input for amount -->
+                <div class="col-xs-6">
+                    <label for="funds" class="operation_field">Deposit</label>
+                    <input type="text" name="funds" id="funds" class="gui-input just_real_numbers" placeholder="0.00" onkeyup="update_new_balance(this)" data-type="">
+                </div>
+
+                <!-- input readonly for new balance-->
+                <div class="col-xs-6">
+                    <label for="new_balance" >New balance</label>
+                    <input type="text" name="new_balance" id="new_balance" class="gui-input" placeholder="" readonly>
+                </div>
+
+                <!-- select for credit cards -->
+                <div class="col-xs-12">
+
+                    <!-- Here is where magic happens -->
+
+
+                    <a href="#" class="billing_methods"> <small>Add/Edit cards</small> </a> 
+                    <div class="dropdown">
+                        <a id="default_card_box" class="btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <div class="select_card">
+                                
+                            </div>
+                        </a>
+
+                        <ul class="dropdown-menu" id="credit_cards_dropdown">
+                        </ul>
+                    </div>
+                    <!-- /magic ends -->
+                </div>
+
+                <div class="col-xs-12">
+                    <div class="form-footer">
+                        <button type="button" class="button btn-primary" id="btn_operation">Add Funds</button>
+                        <p id="add_funds_message"></p>
+                    </div><!-- end .form-footer section -->
+                </div>
+            </div>
+
+
+        <!--<label for="tag"></label>
+        <select type="text" data-module_id='' data-module_activity_id="" name="tag" placeholder="Tag" id="tag">
+          <option value="tag3">Tag3</option>
+          <option value="tag4">Tag4</option>
+        </select>
+            
+            <label for="optionTag"></label>
+        <select class="optionSelect2" style="width: 100%" multiple name="Type" data-module_id='' data-module_activity_id="" id="optionTag">
+          <option value="Lead">Lead</option>
+          <option value="Customer">Customer</option>
+          <option value="Vendor">Vendor</option>
+        </select>-->
+
+        </form>
+
+							</div><!-- inner content -->
+							</div><!-- modal-viewport-->
+						</div>
+					</div> 
+				</div>
+			</div>
+		</div>
+   
+   <!-- float labels config -->
+  <script src="../../js/float-labels.js/config-labels.js"></script>
+  
+  <!-- CoCreate Hamburger -->
+  <script src="../../js/hamburger.js"></script>
+		
+  <!-- CoCreate Conditional Logic -->
+  <script src="../../js/CoCreate-conditional-logic.js"></script>
+		
+  
+  <!-- CoCreate Icon Transform -->
+  <script src="../../js/CoCreate-icon-transform.js"></script>
+
+  <!-- CoCreate Fullscreen -->
+  <script src="../../js/CoCreate-fullscreen.js"></script>
+  
+  <script>
+    var config = {
+      apiKey: '123456abcdeee',
+      securityKey: 'ekjlferkjflkejrlfkejlkdjfwlrir9530',
+      organization_Id: '5d076e8235984e16ce031474'
+    }
+  </script>
+  
+
+  <script src="../../js/socket.io.js"></script>
+  <script src="../../js/script.js"></script>
+  <script src="../../js/CoCreate-window.js"></script>
+  <script src="../../js/CoCreate-datatables.js"></script>  
+  <script src="../../js/CoCreate-builder.js"></script>
+  
+	</body>
+</html>

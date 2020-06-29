@@ -1,0 +1,234 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+  
+  <!-- CoCreate UI -->
+  <link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+  
+  <!-- DHTMLX Window -->
+  <link rel="stylesheet" href="https://cdn.dhtmlx.com/edge/dhtmlx.css" type="text/css"> 
+  <script src="https://cdn.dhtmlx.com/edge/dhtmlx.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="modal-viewport" class="hidden"></div>
+    <div data-main_content_id="content" class="nav">
+      <!--<a href="#" class="logo">Navbar</a>-->
+      <!--<a class="nav-toggle menu_icon--Vdots" data-toggle_sidenav="menuL">-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--</a>-->
+        <ul class="cocreate-scroll display-inline-flex direction-rtl font-size-20px align-items-center">
+
+  			<li><a class="btn-wnd-close"><i class="fas fa-times">
+  			  </i></a></li>
+  			<li><a class="btn-wnd-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize">
+  			  </i></a></li>
+  			<li><a class="btn-wnd-minimize"><i class="far fa-window-minimize">
+  			  </i></a></li>
+  			<li><a class="fs-toggle"><i data-transform_to="fas fa-compress" class="fas fa-expand">
+  			  </i></a></li>
+  			<li>
+  			    <a data-window_url="render.html"
+            	 data-pass_collection="modules"
+            	 data-pass_module_id="" 
+            	 data-pass_prefix="form_" 
+            	 data-pass_to="builder" 
+               data-window_width="100%"
+               data-pass_id="render">
+            		<i class="fas fa-palette"></i>
+          		 <div data-pass_collection="modules"
+					   data-pass_module_id=""
+				       data-pass_prefix=""
+					   data-pass_to="render"
+					   class="sessionBuilderUI_Id">
+	  			 </div>
+            </a>
+        </li>
+
+  			<li><a data-collection="module_activity" data-module-activity_id="" data-pass_id="form-fields" class="delete-document btn-wnd-close"><i class="far fa-trash-alt"></i></a></li>
+			 </ul>
+    </div>
+		<div class="cocreate-container" data-main_content_id="content">
+
+        <form data-real_time="true" data-collection="module_activity" data-form_id="module-form" class="mbottom-75">
+    
+          <input data-module_id="" type="text" name="name" placeholder="Choice Type" class="floating-label">
+          
+          
+          
+          <select data-module_id="" name="Digital goods types" placeholder="Digital goods types" class="floating-label">
+              <option label="Upload Digital Goods" value="Upload Digital Goods">Upload Digital Goods</option>
+              <option label="Audio" value="Audio">Audio</option>
+              <option label="Video" value="Video">Video</option>
+              <option label="Software" value="Software">Software</option>
+          </select>
+          
+          
+          
+          <div class="category my-ct">
+           <select data-module_id="" name="Category" placeholder="Category" class="floating-label">
+              <option label="Example" value="Example">Example</option>
+              <option label="Option 1" value="Option 1">Option 1</option>
+              <option label="Option 2" value="Option 2">Option 2</option>
+              <option label="Option 3" value="Option 3">Option 3</option>
+          </select>
+          </div>
+          
+          <div class="Groups">
+           <select data-module_id="" name="Groups" placeholder="Groups" class="floating-label">
+              <option label="Example" value="Example">Example</option>
+              <option label="Option 1" value="Option 1">Option 1</option>
+              <option label="Option 2" value="Option 2">Option 2</option>
+              <option label="Option 3" value="Option 3">Option 3</option>
+          </select>
+          </div>
+          
+           <!-- CoCreate Select field multiple documents -->     
+          <div class="select--field sortable floating-label" name="related_items" data-collection="module_activity" data-module_id="5e07c2a43145e2497e494bf0" multiple placeholder="Related Items:">
+            <input class="search-input template-search" placeholder="Search" data-engine-id="idEngine1">
+             <!-- Fetches and displays results using template -->
+              <ul data-fetch_collection="users" data-template_id="selectable1" data-pass_to="me1234" id="idEngine1" class="template-wrapper selectable--list  cocreate-scroll">
+        				<!-- template -->
+        				<li class="selectable template" id="selectable1" data-pass_id="me1234">
+        				  <h3 data-collection="users" data-module_id="" name="name" data-pass_id="me1234" >user name</h3>
+        				  <h5 data-collection="users" data-module_id="" name="email" data-pass_id="me1234" ></h5>
+        				</li>
+        				
+            </ul>
+            
+          </div>
+          
+          
+          
+          <input data-module_id="" type="text" name="name" placeholder="Name" class="floating-label">
+           
+          <textarea data-module_id="" name="short_description" placeholder="Short Description" class="floating-label"></textarea>
+          
+          <input data-module_id="" type="text" name="SKU" placeholder="SKU" class="floating-label">
+          
+          
+          
+            <div class="category my-ct">
+<input data-module_id="" type="text" name="Status" placeholder="Status" class="floating-label">
+          </div>
+          
+          <div class="Groups">
+<input data-module_id="" type="text" name="Weight" placeholder="Weight" class="floating-label">
+          </div>
+          
+          <div class="category my-ct">
+<input data-module_id="" type="text" name="Unit Price" placeholder="Unit Price" class="floating-label">
+          </div>
+          
+          <div class="Groups">
+<input data-module_id="" type="text" name="Sales Price" placeholder="Sales Price" class="floating-label">
+          </div>
+          
+          
+          <div class="category my-ct">
+<input data-module_id="" type="text" name="Tax" placeholder="0%" class="floating-label">
+          </div>
+          
+          <div class="Groups">
+           <select data-module_id="" name="Usage Unit" placeholder="Usage Unit" class="floating-label">
+              <option label="Example" value="Example">Example</option>
+              <option label="Option 1" value="Option 1">Option 1</option>
+              <option label="Option 2" value="Option 2">Option 2</option>
+              <option label="Option 3" value="Option 3">Option 3</option>
+          </select>
+          </div>
+          
+          
+          <div class="ful-d">
+          <textarea data-module_id="" name="short_description" placeholder="Full Description..." class="floating-label"></textarea>
+          </div>
+          
+          
+          <input data-module_id="" type="file" name="upload[]" placeholder="File Upload" >
+          
+          
+          <input data-module_id="" type="text" name="Video Url" placeholder="Video Url" class="floating-label">
+          
+          
+          <input data-module_id="" type="text" name="Product Tag" placeholder="Product Tag(comma seprated)" class="floating-label">
+          
+          
+          <input data-module_id="" type="text" name="Meta Title" placeholder="Meta Title" class="floating-label">
+          
+          
+          
+          <textarea data-module_id="" name="Meta_description" placeholder="Meta Description" class="floating-label"></textarea>
+          
+          <textarea data-module_id="" name="Meta_keywords" placeholder="Meta keywords" class="floating-label"></textarea>
+
+        </form>
+    </div>
+</body>
+
+<style>
+input.floating-label {
+    -webkit-appearance: menulist-button !important;
+    height: 45px !important;
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+
+.cocreate-container input {
+    -webkit-appearance: menulist-button !important;
+    height: 45px !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    margin-bottom: 30px;
+}
+.cocreate-container select {
+    -webkit-appearance: menulist-button !important;
+    height: 45px !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    margin-bottom: 30px;
+}
+.cocreate-container textarea.floating-label {
+    background-color: #fff !important;
+    color: #000 !important;
+    margin-bottom: 30px;
+}
+
+.category.my-ct .floating-label {
+    margin: 0px;
+}
+.category {
+    width: 48%;
+    float: right;
+}
+.Groups {
+    width: 48%;
+}
+
+.ful-d textarea.floating-label {
+    height: 150px;
+}
+</style>
+
+<script>
+    var config = {
+      apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+      securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+      organization_Id: '5de0387b12e200ea63204d6c'
+    }
+    
+  </script>
+
+
+  <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
+</html>

@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+  
+  <!-- CoCreate UI -->
+  <link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+  
+</head>
+
+<body>
+    <div id="modal-viewport" class="hidden"></div>
+    <div data-main_content_id="content" class="nav">
+      <!--<a href="#" class="logo">Navbar</a>-->
+      <!--<a class="nav-toggle menu_icon--Vdots" data-toggle_sidenav="menuL">-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--</a>-->
+        <ul class="cocreate-scroll display-inline-flex direction-rtl font-size-20px align-items-center">
+
+  			<li><a class="btn-wnd-close"><i class="fas fa-times">
+  			  </i></a></li>
+  			<li><a class="btn-wnd-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize">
+  			  </i></a></li>
+  			<li><a class="btn-wnd-minimize"><i class="far fa-window-minimize">
+  			  </i></a></li>
+  			<li><a class="fs-toggle"><i data-transform_to="fas fa-compress" class="fas fa-expand">
+  			  </i></a></li>
+  			<li>
+  			    <a data-window_url="render.html"
+            	 data-pass_collection="modules"
+            	 data-pass_module_id="" 
+            	 data-pass_prefix="form_" 
+            	 data-pass_to="builder" 
+               data-window_width="100%"
+               data-pass_id="render">
+            		<i class="fas fa-palette"></i>
+          		 <div data-pass_collection="modules"
+					   data-pass_module_id=""
+				       data-pass_prefix=""
+					   data-pass_to="render"
+					   class="sessionBuilderUI_Id">
+	  			 </div>
+            </a>
+        </li>
+
+  			<li><a data-collection="module_activity" data-module-activity_id="" data-pass_id="form-fields" class="delete-document btn-wnd-close"><i class="far fa-trash-alt"></i></a></li>
+			 </ul>
+    </div>
+		<div class="cocreate-container" data-main_content_id="content">
+
+        <form data-real_time="true" data-collection="module_activity" data-form_id="module-form" class="mbottom-75">
+                
+            <select data-module_id="" name="status" placeholder="Status" class="floating-label">
+                <option label="Draft" value="draft">Draft</option>
+                <option label="Sent" value="sent">Sent</option>
+                <option label="Approved" value="approved">Approved</option>
+                <option label="Invoiced" value="invoiced">Invoiced</option>
+                <option label="Closed" value="closed">Closed</option>
+            </select>
+            
+            <input data-module_id="" type="date" name="estimate_date" placeholder="Estimate Date" class="floating-label">
+            
+        		<!-- CoCreate Select field multiple documents -->     
+                <div class="select--field sortable floating-label" name="contact" data-collection="module_activity" data-module_id="5e07c2a43145e2497e494bf0" multiple placeholder="Contact">
+                    <input class="search-input template-search" placeholder="Search" data-engine-id="idEngine1">
+                    <!-- Fetches and displays results using template -->
+                    <ul data-fetch_collection="users" data-template_id="selectable1" data-pass_to="me1234" id="idEngine1" class="template-wrapper selectable--list  cocreate-scroll">
+                		<!-- template -->
+                		<li class="selectable template" id="selectable1" data-pass_id="me1234">
+                			<h3 data-collection="users" data-module_id="" name="name" data-pass_id="me1234" >user name</h3>
+                			<h5 data-collection="users" data-module_id="" name="email" data-pass_id="me1234" ></h5>
+                		</li>
+                	</ul>
+                </div>
+            
+                <!-- CoCreate Select field multiple documents -->     
+                <div class="select--field sortable floating-label" name="company" data-collection="module_activity" data-module_id="5e07c2a43145e2497e494bf0" multiple placeholder="Company">
+                    <input class="search-input template-search" placeholder="Search" data-engine-id="idEngine1">
+                    <!-- Fetches and displays results using template -->
+                    <ul data-fetch_collection="users" data-template_id="selectable1" data-pass_to="me1234" id="idEngine1" class="template-wrapper selectable--list  cocreate-scroll">
+                		<!-- template -->
+                		<li class="selectable template" id="selectable1" data-pass_id="me1234">
+                			<h3 data-collection="users" data-module_id="" name="name" data-pass_id="me1234" >user name</h3>
+                			<h5 data-collection="users" data-module_id="" name="email" data-pass_id="me1234" ></h5>
+                		</li>
+                	</ul>
+                </div>
+            
+            <input data-module_id="" type="date" name="expiry_date" placeholder="expiry date" class="floating-label">
+            
+            <a class="submitBtn position-fixed bottom-15px right-15px bg-blue grow-hover round"><i class="far fa-save"></i></a>
+
+        </form>
+    </div>
+</body>
+<script>
+    var config = {
+      apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+      securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+      organization_Id: '5de0387b12e200ea63204d6c'
+    }
+    
+  </script>
+
+
+  <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
+</html>

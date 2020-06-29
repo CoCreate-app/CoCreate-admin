@@ -1,0 +1,125 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoCreate Static</title>
+    
+  <!-- CoCreate UI -->
+  <link rel="stylesheet" href="../../css/CoCreate.min.css" type="text/css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+  
+  <!-- DHTMLX Window -->
+  <link rel="stylesheet" href="https://cdn.dhtmlx.com/edge/dhtmlx.css" type="text/css"> 
+  <script src="https://cdn.dhtmlx.com/edge/dhtmlx.js" type="text/javascript"></script>
+
+  <!-- Call Center -->  
+    <link href="call-center.css" rel="stylesheet">
+    <script src="call-center.js"></script>
+
+	</head>
+	
+	<body  onload="doOnLoad();" onunload="doOnUnload();">
+						<div class="cocreate-container">
+							<div style="position: relative;" id="modal-viewport">
+							<!--<div class="adminUI-inner-content">-->
+
+
+        <div class="chat">
+          <div class="chat-container">
+            <div class="user-bar">
+              <div class="back">
+                <i class="zmdi zmdi-arrow-left"></i>
+              </div>
+              <div class="">
+                <span class="named-avatar" data-module_activity_id="" name="first-name">F<img id="icon_profile" data-fetch_src="profile_photo1" src="../../adminUI/assets/images/transparent.png" height="40px" width="40px" class="img img-responsive" style="position:absolute; left:5px; border-radius:50%">
+								</span>
+              </div>
+              <div class="name">
+                <span>Frank</span>
+                <span class="status">online</span>
+              </div>
+              <div class="actions more">
+                <i class="fas fa-ellipsis-v"></i>
+              </div>
+              <div class="actions attachment">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="actions">
+                <i class="fas fa-video"></i>             
+              </div>
+            </div>
+            <div class="conversation">
+              <div class="conversation-container">
+				<!--<div class="message received">
+                  Здравствуйте, чем Wazzup может помочь?
+                  <span class="metadata"><span class="time"></span></span>
+                </div>-->
+                <!--<div class="message sent">
+                  What happened last night swaibu?
+                  <span class="metadata">
+                      <span class="time"></span><span class="tick"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg></span>
+                  </span>
+                </div>
+                <div class="message received">
+                  You were drunk.
+                  <span class="metadata"><span class="time"></span></span>
+                </div>
+                <div class="message sent">
+                  No I wasn't.
+                  <span class="metadata">
+                      <span class="time"></span><span class="tick"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg></span>
+                  </span>
+                </div>
+                <div class="message received">
+                  <span id="random">You were hugging an old man with a beard screaming "DUMBLEDORE YOU'RE ALIVE!"</span>
+                  <span class="metadata"><span class="time"></span></span>
+                </div>-->
+              </div>
+              <form class="conversation-compose">
+                <div class="emoji">
+                  <i class="far fa-grin-alt"></i>
+                </div>
+                <input class="input-msg" name="input" placeholder="Type a message.." autocomplete="off" autofocus>
+                <div class="attachment">
+                  <i class="fas fa-paperclip"></i>
+                </div>
+                <div class="photo">
+                  <i class="fas fa-camera"></i>
+                </div>
+
+                <button class="send">
+                    <div class="circle">
+                      <i class="fas fa-microphone-alt"></i>
+                    </div>
+                  </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+							<!--</div><!-- inner content -->
+						</div>
+
+  <script>
+    var config = {
+      isParent: true,
+      apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+      securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+      organization_Id: '5de0387b12e200ea63204d6c'
+    }
+  </script>
+
+  <!--CoCreateJS-->
+  <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
+
+
+  <!--CoCreate Plugins-->
+  <script src="https://cdn.cocreate.app/CoCreate-window.js"></script>
+  
+	</body>
+</html>

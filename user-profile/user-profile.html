@@ -1,0 +1,291 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+    <title>user profile</title>
+  <!-- CoCreate UI -->
+  <!--<link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />-->
+  <link rel="stylesheet" href="https://server.cocreate.app/CoCreateCSS/dist/CoCreate.min.css" type="text/css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+  
+  
+  
+  <!-- image cropper -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.4/croppie.min.css" type="text/css"> 
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.4/croppie.min.js"></script>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.576.0.min.js"></script>
+
+</head>
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,200,700,500);
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: work sans;
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-wrapper {
+  background: #fff;
+  height: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  width: 100%;
+  position: relative;
+  /*z-index: 20;*/
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+span.user-image img{
+  /*background: url('https://dl.dropboxusercontent.com/s/qxmegzcf52nv2mt/person-woman-coffee-cup.jpg');*/
+  /*background-size: cover;*/
+  width: 100%;
+  /*background-position: right;*/
+  /*background-repeat: no-repeat;*/
+  /*position: absolute;*/
+}
+
+.username {
+  position: relative;
+  bottom: 80px;
+  width: 100%;
+  color: #fff;
+  font-size: 27px;
+  font-size: 1.7rem;
+  font-weight: 200;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-right: 35px;
+  padding-left: 80px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.4);
+  height: 40px;
+  z-index: 1;
+}
+
+.add-button {
+  height: 40px;
+  width: 40px;
+  background: #EC407A;
+  border-radius: 50%;
+  position: relative;
+  left: 20px;
+  bottom: 20px;
+  color: #fff;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  z-index: 5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  cursor: pointer;
+}
+
+.add-button.green {
+  background: #9CCC65;
+}
+
+.add-button.green:hover {
+  background: #AED581;
+}
+
+.add-button.blue {
+  background: #42A5F5;
+}
+
+.add-button.blue:hover {
+  background: #64B5F6;
+}
+
+.add-button:hover {
+  background: #F06292;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+
+.quote {
+  padding-left: 25px;
+  padding-right: 25px;
+  box-sizing: border-box;
+  font-weight: 300;
+  position: relative;
+  bottom: 35px;
+  text-align: center;
+}
+
+.social-info {
+  width: 100%;
+  height: 13%;
+  padding-bottom: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.lg {
+  font-size: 28px;
+  font-size: 1.8rem;
+}
+
+.social-info-elm {
+  color: #999;
+  border-right: 1px solid #eee;
+  width: 33.3333%;
+  text-align: center;
+  font-weight: 300;
+}
+
+.social-info-elm:last-child {
+  border-right: none;
+}
+
+.nav{
+   background:rgba(127,127,127,0.2);
+}
+
+
+</style>
+	<style>
+	  .croppie-container {
+	    width: auto;
+	    height: auto;
+	    display: inline-block;
+	  }
+	</style>
+
+<body>
+    <div id="modal-viewport" class="hidden"></div>
+    <div data-main_content_id="content" class="nav display-flex align-items-center bg-light-gray">
+      <!--<a class="nav-toggle menu_icon--Vdots" data-toggle_sidenav="menuL">-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--</a>-->
+        <ul class="cocreate-scroll display-inline-flex direction-rtl font-size-20px align-items-center list-style-type-none width-100-percent height-50px">
+    			<li class="margin-right-15px">
+    			  <a class="btn-wnd-close"><i class="fas fa-times"></i></a>
+    			</li>
+    			<li class="margin-right-15px">
+    			  <a class="btn-wnd-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize"></i></a>
+    			</li>
+    			<li class="margin-right-15px">
+    			  <a class="btn-wnd-minimize"><i class="far fa-window-minimize"></i></a>
+    			</li>
+    			<li class="margin-right-15px">
+    			  <a class="fs-toggle"><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
+    			</li>
+    			<li class="margin-right-15px">
+              <a target="modal" href="render.html"
+             data-pass_collection="modules"
+             data-pass_document_id="" 
+             data-pass_prefix="form_" 
+             data-pass_to="builder"
+             data-pass_id="render"
+            data-modal_width="100%">
+            	<i class="fas fa-palette"></i>
+               <div data-pass_collection="modules"
+            			   data-pass_document_id=""
+            		       data-pass_prefix=""
+            			   data-pass_to="render"
+            			   class="sessionBuilderUI_Id">
+              		 </div>
+                </a>
+            </li>
+	    </ul>
+    </div>
+
+    <div class="card cocreate-scroll">
+        <div>
+          <span class="user-image">
+            <img src="https://dl.dropboxusercontent.com/s/qxmegzcf52nv2mt/person-woman-coffee-cup.jpg" id="profile-image"></img>
+              <div class="image-uploader" id="image" style="display:none">           
+                <div class="croppie"></div>
+               
+                <input type="file" data-uploader_id="image" class="hidden">
+              </div>
+          </span>
+          
+            <!--<a class="add-button blue show_hide" id="upload" data-show_id='#save' data-hide_id='#upload'><i class="fas fa-images"></i></a>-->
+            <div class="add-button blue show_hide imageUpload" data-uploader_id="image" id="upload" data-show_id='#save,#image' data-hide_id='#upload,#profile-image'><i class="fas fa-images"></i></div>
+            <div class="add-button green show_hide imageSave" data-uploader_id="image" id="save" data-show_id='#uploaad' data-hide_id='#save' style="display:none"><i class="far fa-save"></i></div>
+            <div class="username"><span class="sessionUser_Id" data-collection="users" name="name" data-document_id=""></span></div>
+        </div>
+        <div class="user-info">
+            <div class="quote">"Where there is coffee, there is life. Loves to read, paint and sleep."</div>
+        </div>
+        <div class="social-info">
+            <div class="social-info-elm">FOLLOWERS<br><span class="lg">1293</span></div>
+            <div class="social-info-elm">FOLLOWING<br><span class="lg">219</span></div>
+            <div class="social-info-elm">STORIES<br><span class="lg">92</span></div>
+        </div>
+    </div>
+          <a class="submitBtn position-fixed bottom-15px right-15px bg-blue grow-hover round"><i class="fas fa-pencil-alt"></i></a>
+
+
+  <form  style="display:none">
+    <input id="image" name="profile_image" data-uploader_id="image" class="imageInput">
+  </form>
+  
+
+  
+    <script>
+      var config = {
+        apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+        securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+        organization_Id: '5de0387b12e200ea63204d6c'
+      }
+      
+    </script>
+
+  <!--CoCreateJS-->
+  <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.min.js"></script>
+
+  <!--CoCreate Plugins-->
+  <!--<script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-modal/src/CoCreate-modal.js"></script>-->
+  <script src="https://server.cocreate.app/js/CoCreate-image.js"></script>
+
+
+</body>
+</html>

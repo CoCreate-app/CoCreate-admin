@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+    <title>Module Form | CoCreate</title>
+
+    <!-- CoCreateCSS -->
+    <link rel="stylesheet" href="https://server.cocreate.app/CoCreateCSS/dist/CoCreate.min.css" type="text/css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+  </head>
+  
+  <body>
+  <div id="modal-viewport" class="hidden"></div>
+    <div class="nav display-flex align-items-center bg-light-gray"
+      data-main_content_id="content" 
+      data-nav_effect="sticky-nav" 
+      data-nav_scroll="200">
+      
+      <ul class="cocreate-scroll display-inline-flex direction-rtl font-size-20px align-items-center list-style-type-none width-100-percent height-50px">
+  			<li class="margin-right-15px">
+  			  <a class="btn-wnd-close"><i class="fas fa-times"></i></a>
+  			</li>
+  			<li class="margin-right-15px">
+  			  <a class="btn-wnd-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize"></i></a>
+  			</li>
+  			<li class="margin-right-15px">
+  			  <a class="btn-wnd-minimize"><i class="far fa-window-minimize"></i></a>
+  			</li>
+  			<li class="margin-right-15px">
+  			  <a class="fs-toggle"><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
+  			</li>
+  			<li class="margin-right-15px">
+			    <a target="modal" href="render.html"
+          	 data-pass_collection="modules"
+          	 data-pass_document_id="" 
+          	 data-pass_prefix="form_" 
+          	 data-pass_to="builder" 
+             data-modal_width="100%"
+             data-pass_id="render">
+          		<i class="fas fa-palette"></i>
+        		 <div data-pass_collection="modules"
+  						   data-pass_document_id=""
+					       data-pass_prefix=""
+  						   data-pass_to="render"
+  						   class="sessionBuilderUI_Id">
+						 </div>
+          </a>
+        </li>
+  			<li class="margin-right-15px">
+  			  <a data-collection="modules" 
+  			    data-document_id="" 
+  			    data-pass_id="form-fields" 
+  			    class="delete-document btn-wnd-close">
+  			     <i class="far fa-trash-alt"></i>
+		      </a>
+  			</li>
+			</ul>
+    </div>
+    
+		<div class="cocreate-container padding-10px" data-main_content_id="content">
+      <form data-collection="modules" class="margin-bottom-75px" id="form">
+        <input type="text" data-document_id="" name="name" id="name" placeholder="Name" data-pass_id="form-fields" class="floating-label"/>
+        <input type="text" data-document_id="" name="description" id="description" placeholder="Description" data-pass_id="form-fields" class="floating-label"/>
+        <input type="text" data-document_id="" name="icon" id="icon" placeholder="Icon" data-pass_id="form-fields" class="floating-label"/>
+        <input type="number" data-document_id="" name="menu-position" id="menu-position" placeholder="Menu Position" data-pass_id="form-fields" class="floating-label"/>
+        <textarea type="textarea" name='html' data-collection="modules" data-document_id="" data-pass_id="form-fields" placeholder="Html" class="floating-label"></textarea>
+ 
+        <div id="saveFetchhtml" class="domEditor" name='html-page' data-collection="modules" data-document_id="" data-pass_id="form-fields" data-broadcast="false">
+          <div class="Sortable" data-group_name="html-page">
+            <div id="html-page" class="card padding-5px template">
+              
+              <input data-pass_id="form-fields" data-document_id="" name="clone-name" id="clone-name" placeholder="View Name" class="input_field" placeholder="View Name" data-pass_value_id="view-name">
+              <a data-clone_id="html-page" class="deleteBtn noDrag card-deleteBtn"><i class="fas fa-times"></i></a>
+              
+              <!--<textarea data-pass_id="form-fields" data-document_id="" name="head" id="temlateHead" placeholder="Head" class="floating-label" data-pass_value_id="templateHead"></textarea>-->
+              <textarea realtime="false"
+                data-document_id="" 
+                name="html" 
+                data-pass_value_id="templateHtml"
+                placeholder="Html" 
+                class="floating-label" 
+                data-pass_value_id="templateHtml" 
+                data-pass_id="form-fields">
+              </textarea>
+              <textarea data-document_id="" name="css" id="templateCss" placeholder="CSS" class="floating-label" data-pass_value_id="templateCss"></textarea>
+              <textarea data-document_id="" name="js" id="templateJs" placeholder="JS" class="floating-label" data-pass_value_id="templateJs"></textarea>
+            
+            </div>
+          </div>
+        </div>
+      
+        <input type="text" id="prefix" placeholder="View Name"  data-pass_value_to="view-name" class="floating-label">
+        <a class="passValueBtn position-relative bottom-28px right-12px float-right z-index-5" data-show_id="#module-templates" data-hide_id='#form'><i class="far fa-plus-square"></i></a>
+          
+        	<a class="submitBtn position-fixed bottom-15px right-15px bg-blue grow-hover round padding-15px"><i class="far fa-save"></i></a>
+
+      </form>
+                  
+
+      <!-- Module form templates to pass value and create clone -->
+      <div class="hidden"  id="module-templates">
+        <div class="height-20px"><i class="fas fa-times float-right"  data-show_id="#form" data-hide_id='#module-templates'></i></div>
+          <div id="example" class="template-wrapper display-flex flex-wrap-wrap" data-template_id="template1"
+            data-fetch_collection="module_activity"
+            data-fetch_module="5de2e051969d586107043fd8"
+            data-pass_to="me1234" 
+            data-fetch_name="" 
+            data-fetch_value=""  
+            data-order_by="name" 
+            data-order_type="asc">
+                
+              <div class="card template min-width-250px flex-grow-1 margin-10px-lr margin-10px-tb box-shadow-hover" data-template_id="template1">
+                <div class="position-relative">
+                  <!--<span data-collection="module_activity" name="image" data-document_id="" passed_id="me1234"></span>-->
+                  <img data-collection="module_activity" data-document_id="" name="image" data-pass_id="me1234" src="https://via.placeholder.com/150" width="100%"></img>
+               
+                <form data-collection="module_activity">
+                  <!--<textarea data-document_id="" name="head" placeholder="Head" id="templateHead" data-pass_id="me1234" data-pass_value_to="templateHead" hidden></textarea>-->
+                  <textarea
+                    data-document_id="" 
+                    name="html" 
+                    placeholder="html" 
+                    id="templateHtml" 
+                    data-pass_id="me1234" 
+                    data-collection="module_activity"
+                    data-pass_value_to="templateHtml">
+                  </textarea>
+                  
+                  <!--<span class="passValueBtn cardButton right blue"><a class="show_hide" data-show_id="#form" data-hide_id='#module-templates'><i class="fas fa-plus"></i></a></span>-->
+                  <span class="passValueBtn font-size-20px position-absolute bg-blue round float-right bottom-minus-15px right-20px grow-hover">
+                    <a data-clone_id="html-page" 
+                    data-clone_name="prefix" 
+                    data-show_id="#form" 
+                    data-hide_id='#module-templates' 
+                    class="cloneBtn show_hide">
+                      <i class="fas fa-plus"></i></a>
+                  </span>
+                  
+                </form>
+                  <div class="position-absolute bottom-5px width-100-percent padding-10px-lr font-size-25px color-white bg-black opacity-04">
+                    <span data-collection="module_activity" data-document_id="" name="name" data-pass_id="me1234">Template Name</span>
+                  </div>
+                </div>
+                <div class="padding-10px">
+                    <h4 data-collection="module_activity" data-document_id="" name="description" data-pass_id="me1234">Description</h4>
+                </div>
+              </div>
+              
+          </div>
+      </div>
+ 	
+ 		</div>
+  
+    <script>
+      var config = {
+        apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+        securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+        organization_Id: '5de0387b12e200ea63204d6c'
+      }
+    </script>
+
+    <!-- CoCreateJS --> 
+    <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.min.js"></script>
+    
+  </body>
+</html>
