@@ -1,7 +1,7 @@
 # Realtime Admin CRM and CMS
-HTML Admin dashboard UI that can be used as a CRM and CMS. This html template is powered by [CoCreatejs](https://cocreate.app/documentation) to provide Realtime CRUD functionality and  convert this admin template into a realtime web application. CoCreatejs is a  makes use of data-attributes to Create, Read, Update and Delete in realtime. Can be used with any Html template to convert it in to a realtime website / web application. 
+HTML Admin dashboard UI that can be used as a CRM and CMS. This html template is powered by [CoCreateJS](https://cocreate.app/documentation) to provide Realtime CRUD functionality and  convert this admin template into a realtime web application. CoCreateJS is a  makes use of data-attributes to Create, Read, Update and Delete in realtime. Can be used with any Html template to convert it in to a realtime website / web application. 
 
-![CoCreate](https://github.com/CoCreate-app/Realtime_Admin_CRM_and_CMS/blob/master/adminUI/assets/images/cocreate.png)
+![CoCreate](https://cdn.cocreate.app/favicon.ico)
 
 [CoCreate Docs](https://cocreate.app/documentation)
 
@@ -31,7 +31,7 @@ This library is broken up into several packages as a monorepo so that you only n
 <a name="announcements"></a>
 # Announcements
 
-All updates to this library are documented in our [CHANGELOG](https://github.com/cocreate/cocreatejs/blob/master/CHANGELOG.md) and [releases](https://github.com/cocreate/cocreatejs/releases). You may also subscribe to email [release notifications](https://cocreate.com/newsletter/nodejs) for releases and breaking changes. 
+All updates to this library are documented in our [CHANGELOG](https://github.com/CoCreate-app/CoCreateJS/blob/master/CHANGELOG.md) and [releases](https://github.com/CoCreate-app/CoCreateJS/releases). You may also subscribe to email [release notifications](https://cocreate.com/newsletter/nodejs) for releases and breaking changes. 
 
 <a name="modules"></a>
 # Modules and Plugins
@@ -49,32 +49,32 @@ All updates to this library are documented in our [CHANGELOG](https://github.com
 <a name="roadmap"></a>
 # Roadmap
 
-If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/CoCreate-app/Realtime_Admin_CRM_and_CMS/issues) and [pull requests](https://github.com/cocreate/cocreate/pulls). We would love to hear your feedback.
+If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/CoCreate-app/Realtime_Admin_CRM_and_CMS/issues) and [pull requests](https://github.com/CoCreate-app/cocreate/pulls). We would love to hear your feedback.
 
 <a name="contribute"></a>
 # How to Contribute
 
-We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/cocreate/cocreatejs/blob/master/CONTRIBUTING.md) guide for details.
+We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/CoCreate-app/CoCreateJS/blob/master/CONTRIBUTING.md) guide for details.
 
-* [Feature Request](https://github.com/cocreate/tree/master/CONTRIBUTING.md#feature_request)
-* [Bug Reports](https://github.com/cocreate/tree/master/CONTRIBUTING.md#submit_a_bug_report)
-* [Improvements to the Codebase](https://github.com/cocreate/tree/master/CONTRIBUTING.md#improvements_to_the_codebase)
-* [Review Pull Requests](https://github.com/cocreate/blob/master/CONTRIBUTING.md#code-reviews)
+* [Feature Request](https://github.com/CoCreate-app/tree/master/CONTRIBUTING.md#feature_request)
+* [Bug Reports](https://github.com/CoCreate-app/tree/master/CONTRIBUTING.md#submit_a_bug_report)
+* [Improvements to the Codebase](https://github.com/CoCreate-app/tree/master/CONTRIBUTING.md#improvements_to_the_codebase)
+* [Review Pull Requests](https://github.com/CoCreate-app/blob/master/CONTRIBUTING.md#code-reviews)
 
-<a name="troubleshooting"></a>
-# Troubleshooting
-
-Please see our [troubleshooting guide](https://github.com/cocreate/blob/master/TROUBLESHOOTING.md) for common library issues.
 
 <a name="about"></a>
 # About
 
-CoCreate.js is guided and supported by the CoCreate Developer Experience Team.
+CoCreateJS is guided and supported by the CoCreate Developer Experience Team.
 
 Please Email the Developer Experience Team [here](mailto:develop@cocreate.app) in case of any queries.
 
-CoCreate.js is maintained and funded by CoCreate. The names and logos for CoCreate are trademarks of CoCreate, LLC.
+CoCreateJS is maintained and funded by CoCreate. The names and logos for CoCreate are trademarks of CoCreate, LLC.
 
-<a name="license"></a>
+
+# Contributing to CocreateJS
+
+See [CONTRIBUTING](https://github.com/CoCreate-app/CoCreate-adminUI/blob/master/CONTRIBUTING.md).
+
 # License
 [The MIT License (MIT)](https://github.com/CoCreate-app/CoCreate-adminUI/blob/master/LICENSE)
