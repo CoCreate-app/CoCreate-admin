@@ -19,7 +19,6 @@ We appreciate your continued support, thank you!
 - [Modules and Plugins](#announcements)
 - [Roadmap](#roadmap)
 - [How to Contribute](#how-to-contribute)
-- [Troubleshooting](#troubleshooting)
 - [About](#about)
 - [License](#license)
 
@@ -31,7 +30,7 @@ This library is broken up into several packages as a monorepo so that you only n
 <a name="announcements"></a>
 # Announcements
 
-All updates to this library are documented in our [CHANGELOG](https://github.com/CoCreate-app/CoCreateJS/blob/master/CHANGELOG.md) and [releases](https://github.com/CoCreate-app/CoCreateJS/releases). You may also subscribe to email [release notifications](https://cocreate.com/newsletter/nodejs) for releases and breaking changes. 
+All updates to this library are documented in our [CHANGELOG](https://github.com/CoCreate-app/CoCreate-adminUI/blob/master/CHANGELOG.md) and [releases](https://github.com/CoCreate-app/CoCreateJS/releases). You may also subscribe to email for releases and breaking changes. 
 
 <a name="modules"></a>
 # Modules and Plugins
@@ -49,17 +48,12 @@ All updates to this library are documented in our [CHANGELOG](https://github.com
 <a name="roadmap"></a>
 # Roadmap
 
-If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/CoCreate-app/Realtime_Admin_CRM_and_CMS/issues) and [pull requests](https://github.com/CoCreate-app/cocreate/pulls). We would love to hear your feedback.
+If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/CoCreate-app/CoCreate-adminUI/issues) and [pull requests](https://github.com/CoCreate-app/CoCreate-adminUI/pulls). We would love to hear your feedback.
 
 <a name="contribute"></a>
 # How to Contribute
 
-We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/CoCreate-app/CoCreateJS/blob/master/CONTRIBUTING.md) guide for details.
-
-* [Feature Request](https://github.com/CoCreate-app/tree/master/CONTRIBUTING.md#feature_request)
-* [Bug Reports](https://github.com/CoCreate-app/tree/master/CONTRIBUTING.md#submit_a_bug_report)
-* [Improvements to the Codebase](https://github.com/CoCreate-app/tree/master/CONTRIBUTING.md#improvements_to_the_codebase)
-* [Review Pull Requests](https://github.com/CoCreate-app/blob/master/CONTRIBUTING.md#code-reviews)
+We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/CoCreate-app/CoCreate-adminUI/CONTRIBUTING.md) guide for details.
 
 
 <a name="about"></a>
@@ -72,9 +66,9 @@ Please Email the Developer Experience Team [here](mailto:develop@cocreate.app) i
 CoCreateJS is maintained and funded by CoCreate. The names and logos for CoCreate are trademarks of CoCreate, LLC.
 
 
-# Contributing to CocreateJS
+# How to Contribute
 
-See [CONTRIBUTING](https://github.com/CoCreate-app/CoCreate-adminUI/blob/master/CONTRIBUTING.md).
+We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/CoCreate-app/CoCreate-adminUI/blob/master/CONTRIBUTING.md).
 
 # License
 [The MIT License (MIT)](https://github.com/CoCreate-app/CoCreate-adminUI/blob/master/LICENSE)
