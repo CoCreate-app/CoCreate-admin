@@ -77,4 +77,4 @@ CoCreate.js is maintained and funded by CoCreate. The names and logos for CoCrea
 
 <a name="license"></a>
 # License
-[The MIT License (MIT)](https://github.com/cocreate/blob/master/LICENSE.md)
+[The MIT License (MIT)](https://github.com/CoCreate-app/CoCreate-adminUI/blob/master/LICENSE)
