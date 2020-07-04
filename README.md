@@ -49,11 +49,6 @@ All updates to this library are documented in our [CHANGELOG](https://github.com
 
 If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/CoCreate-app/CoCreate-adminUI/issues) and [pull requests](https://github.com/CoCreate-app/CoCreate-adminUI/pulls). We would love to hear your feedback.
 
-<a name="contribute"></a>
-# How to Contribute
-
-We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/CoCreate-app/CoCreate-adminUI/CONTRIBUTING.md) guide for details.
-
 
 <a name="about"></a>
 # About
@@ -64,10 +59,10 @@ Please Email the Developer Experience Team [here](mailto:develop@cocreate.app) i
 
 CoCreateJS is maintained and funded by CoCreate. The names and logos for CoCreate are trademarks of CoCreate, LLC.
 
-
+<a name="contribute"></a>
 # How to Contribute
 
-We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/CoCreate-app/CoCreate-adminUI/blob/master/CONTRIBUTING.md).
+We encourage contribution to our libraries (you might even score some nifty swag), please see our [CONTRIBUTING](https://github.com/CoCreate-app/CoCreate-adminUI/blob/master/CONTRIBUTING.md) guide for details.
 
 # License
 [The MIT License (MIT)](https://github.com/CoCreate-app/CoCreate-adminUI/blob/master/LICENSE)
