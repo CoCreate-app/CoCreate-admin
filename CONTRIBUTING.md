@@ -79,7 +79,7 @@ git push origin my-feature-branch
 
 ## Make a Pull Request
 
-Go to https://github.com/contributor/CoCreateJS and select your feature branch.
+Go to [https://github.com/CoCreate-app/CoCreate-adminUI](https://github.com/CoCreate-app/CoCreate-adminUI) and select your feature branch.
 Click the 'Pull Request' button and fill out the form. Pull requests are usually reviewed within a few days.
 
 ## Rebase
