@@ -1,7 +1,7 @@
 # Realtime Admin CRM and CMS
 HTML Admin dashboard UI that can be used as a CRM and CMS. This html template is powered by [CoCreateJS](https://cocreate.app/documentation) to provide Realtime CRUD functionality and  convert this admin template into a realtime web application. CoCreateJS is a  makes use of data-attributes to Create, Read, Update and Delete in realtime. Can be used with any Html template to convert it in to a realtime website / web application. 
 
-![CoCreate](https://cdn.cocreate.app/favicon.ico)
+![CoCreate](https://cdn.cocreate.app/logo.png)
 
 [CoCreate Docs](https://cocreate.app/documentation)
 
@@ -35,15 +35,14 @@ All updates to this library are documented in our [CHANGELOG](https://github.com
 <a name="modules"></a>
 # Modules and Plugins
 
-* [Realtime Datatable - Datatables.net](https://github.com/CoCreate-app/Realtime-Datatables)
-* [Realtime Web Builder - Grapesjs](https://github.com/CoCreate-app/Realtime-Website-Builder)
-* [Conditional Logic](https://github.com/CoCreate-app/Conditional_Logic)
-* [Login and Register](https://github.com/CoCreate-app)
-* [Template Engine](https://github.com/CoCreate-app)
-* [Cloning Elements](https://github.com/CoCreate-app)
-* [Icon Transform](https://github.com/CoCreate-app/Icon_Transform)
-* [Fullscreen Toggle](https://github.com/CoCreate-app/Fullscreen_Toggle)
-* [Movable Resizable Window/Modals - DHTLMX Windows](https://github.com/CoCreate-app/Movable-Modal-and-Windows)
+* [Realtime Datatable](https://github.com/CoCreate-app/CoCreate-dataTable)
+* [Realtime Web Builder](https://github.com/CoCreate-app/CoCreate-builder)
+* [Conditional Logic](https://github.com/CoCreate-app/CoCreate-conditional-logic)
+* [Login and Register](https://github.com/CoCreate-app/CoCreate-users)
+* [Template Engine](https://github.com/CoCreate-app/CoCreate-templating)
+* [Cloning Elements](https://github.com/CoCreate-app//CoCreate-clone)
+* [Fullscreen Toggle](https://github.com/CoCreate-app/CoCreate-fullscreen)
+* [Movable Resizable Modals](https://github.com/CoCreate-app/CoCreate-modal)
 
 <a name="roadmap"></a>
 # Roadmap
