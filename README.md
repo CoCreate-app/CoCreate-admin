@@ -1,9 +1,9 @@
-# Realtime Admin CRM and CMS
+# # Realtime Admin CRM and CMS
 HTML Admin dashboard UI that can be used as a CRM and CMS. This html template is powered by [CoCreateJS](https://cocreate.app/documentation) to provide Realtime CRUD functionality and  convert this admin template into a realtime web application. CoCreateJS is a  makes use of data-attributes to Create, Read, Update and Delete in realtime. Can be used with any Html template to convert it in to a realtime website / web application. 
 
 ![CoCreate](https://cdn.cocreate.app/logo.png)
 
-[CoCreate Docs](https://cocreate.app/documentation)
+[CoCreate Docs](https://cocreate.app/documentation/CoCreateJS)
 
 **This repository shows an example of CoCreteJS being used to power this crm, cms admin panel**
 
@@ -17,20 +17,19 @@ We appreciate your continued support, thank you!
 - [Introduction - Please Read First](#introduction---please-read-first)
 - [Announcements](#announcements)
 - [Modules and Plugins](#announcements)
-- [Roadmap](#roadmap)
-- [How to Contribute](#how-to-contribute)
+- [Roadmap](#roadmap)- [How to Contribute](#how-to-contribute)
 - [About](#about)
 - [License](#license)
-
-<a name="introduction"></a>
-# Introduction - Please Read First
-
-This library is broken up into several packages as a monorepo so that you only need to install the packages necessary for your use case. This README contains information about all packages. For examples on how to get started quickly, head over to the READMEs of each package (linked and described below), which includes detailed examples.
 
 <a name="announcements"></a>
 # Announcements
 
 All updates to this library are documented in our [CHANGELOG](https://github.com/CoCreate-app/CoCreate-adminUI/blob/master/CHANGELOG.md) and [releases](https://github.com/CoCreate-app/CoCreateJS/releases). You may also subscribe to email for releases and breaking changes. 
+
+<a name="roadmap"></a>
+# Roadmap
+
+If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/CoCreate-app/CoCreate-adminUI/issues) and [pull requests](https://github.com/CoCreate-app/CoCreate-adminUI/pulls). We would love to hear your feedback.
 
 <a name="modules"></a>
 # Modules and Plugins
@@ -43,11 +42,6 @@ All updates to this library are documented in our [CHANGELOG](https://github.com
 * [Cloning Elements](https://github.com/CoCreate-app//CoCreate-clone)
 * [Fullscreen Toggle](https://github.com/CoCreate-app/CoCreate-fullscreen)
 * [Movable Resizable Modals](https://github.com/CoCreate-app/CoCreate-modal)
-
-<a name="roadmap"></a>
-# Roadmap
-
-If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/CoCreate-app/CoCreate-adminUI/issues) and [pull requests](https://github.com/CoCreate-app/CoCreate-adminUI/pulls). We would love to hear your feedback.
 
 
 <a name="about"></a>

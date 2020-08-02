@@ -27,7 +27,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <div class="nav width-100-percernt display-flex align-items-center bg-light-gray" 
+    <div class="nav width-100-percernt display:flex align-items:center bg:light-gray" 
       data-main_content_id="content" 
       data-scroll_effect="hide-nav" 
       data-scroll_position="50">
@@ -42,26 +42,26 @@
       </a>
         
       <!-- Horizontal Scroll Nav/Tabs -->
-      <ul class="cocreate-scroll display-inline-flex direction-rtl font-size-20px align-items-center list-style-type-none width-100-percent height-48px">
+      <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height-48px">
   			
   			<!-- Modal Controls -->
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a class="btn-modal-close"><i class="fas fa-times"></i></a>
   			</li>
-  			<li class="margin-right-15px"><a class="btn-modal-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize">
+  			<li class="margin-right:15px"><a class="btn-modal-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize">
   			  </i></a>
   			</li>
-  			<li class="margin-right-15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize">
+  			<li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize">
   			  </i></a>
   			</li>
   			
   			<!-- fullscreen toogle and icon transform-->
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a class="fs-toggle"><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
   			</li>
   			
   			<!-- Render Builder -->
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			    <a target="modal" href="render.html"
             	 data-pass_collection="modules"
             	 data-pass_document_id="" 
@@ -80,7 +80,7 @@
         </li>
         
         <!-- Render Module Form -->
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a target="modal" href="module_form.html" 
   			    data-pass_collection="modules" 
   			    data-pass_prefix="form_" 
@@ -98,28 +98,28 @@
   			</li>
   			
   			<!-- Datatable Controls -->  
-        <li class="margin-right-15px">
+        <li class="margin-right:15px">
           <a data-btn_type="delete-rows" data-table_id="example1" class="btn-table"><i class="far fa-trash-alt"></i></a>
         </li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a data-btn_type="column-visibility" data-table_id="example1" class="btn-table"><i class="far fa-eye"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a data-btn_type="pdf" data-table_id="example1" class="btn-table"><i class="far fa-file-pdf"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a data-btn_type="excel" data-table_id="example1" class="btn-table"><i class="far fa-file-excel"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a data-btn_type="csv" data-table_id="example1" class="btn-table"><i class="fas fa-file-csv"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a data-btn_type="column-visibility" data-table_id="example1" class="btn-table"><i class="fas fa-eye"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a data-btn_type="copy" data-table_id="example1" class="btn-table"><i class="far fa-copy"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a data-btn_type="print" data-table_id="example1" class="btn-table"><i class="fas fa-print"></i></a>
   			</li>
 			
@@ -127,7 +127,7 @@
     </div>
       
       <!-- Main Content with Viewport/Boundaries for windows -->  
-		  <div class="cocreate-container padding-5px" id="modal-viewport" data-main_content_id="content">
+		  <div class="cocreate-container padding:5px" id="modal-viewport" data-main_content_id="content">
   			  <div class="btn-group">
     				<ul data-table_id="example1" class="colvis-menu cocreate-dt-menu"></ul>
 			    </div>
@@ -149,14 +149,14 @@
                  	  data-filter_name="name" 
                  	  data-value_type="string"
                  	  data-filter_operator=""
-                 	  placeholder="Name" class="width-100-percent">
+                 	  placeholder="Name" class="width:100%">
                 </th>
       					<th>
       					  <input type="text" class="floating-label"
                  	  data-filter_name="_id" 
                  	  data-value_type="string"
                  	  data-filter_operator=""
-                 	  placeholder="ID" class="width-100-percent">
+                 	  placeholder="ID" class="width:100%">
       					</th>
     				  </tr>
     			 	</thead>
@@ -236,7 +236,7 @@
        data-modal_header="true"
        data-modal_x=""
        data-modal_y=""
-       class="position-fixed bottom-15px right-15px padding-15px bg-blue grow-hover round">
+       class="position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover round">
           <i class="fas fa-plus"></i>
   	   <div data-pass_collection="modules"
   		   data-pass_document_id=""
@@ -255,13 +255,12 @@
       }
     </script>
    
-    <!--<script src="https://cdn.cocreate.app/CoCreate.min.js"></script>-->
+    <!--<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>-->
   
     <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
-    <script src="https://server.cocreate.app/js/CoCreateUI.min.js"></script>
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-select.js"></script>
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-modal/src/CoCreate-modal.js"></script> 
-    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-datatables/src/CoCreate-datatables.js"></script> 
+    <script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-datatables.net/src/CoCreate-datatables.js"></script> 
   
   </body>
 </html>

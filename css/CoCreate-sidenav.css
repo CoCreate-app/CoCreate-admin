@@ -6,7 +6,7 @@
 	color: white;
 	display:block;
   z-index: 999;
-  overflow-y: hidden;
+  overflow:y: hidden;
   will-change: transform;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;

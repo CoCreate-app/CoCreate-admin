@@ -1,0 +1,256 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+    <title>CoCreate</title>
+
+  <!-- CoCreate UI -->
+  <!--<link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />-->
+  <link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />
+
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+  
+  <!-- DHTMLX Window -->
+  <link rel="stylesheet" href="https://cdn.dhtmlx.com/edge/dhtmlx.css" type="text/css"> 
+  <script src="https://cdn.dhtmlx.com/edge/dhtmlx.js" type="text/javascript"></script>
+  
+
+  <!-- Datatables -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/cr-1.5.0/fc-3.2.5/fh-3.1.4/rr-1.2.4/sc-2.0.0/sl-1.3.0/datatables.min.css"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/cr-1.5.0/fc-3.2.5/fh-3.1.4/rr-1.2.4/sc-2.0.0/sl-1.3.0/datatables.min.js"></script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <div data-main_content_id="content" class="nav">
+
+      <!-- Menu Icon Animations -->
+      <a class="nav-toggle menu_icon--Vdots" data-toggle_sidenav="menuL">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </a>
+        
+        <!-- Horizontal Scroll Nav/Tabs -->
+        <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center">
+
+    			
+    			<!-- Window Controls -->
+    			<li><a class="btn-modal-close"><i class="fas fa-times">
+    			  </i></a></li>
+    			<li><a class="btn-modal-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize">
+    			  </i></a></li>
+    			<li><a class="btn-modal-minimize"><i class="far fa-window-minimize">
+    			  </i></a></li>
+    			
+    			<!-- fullscreen toogle and icon transform-->
+    			<li><a class="fs-toggle"><i data-transform_to="fas fa-compress" class="fas fa-expand">
+    			  </i></a></li>
+    			
+    			<!-- Render Builder -->
+    			<li>
+    			    <a data-window_url="render.html"
+              	 data-pass_collection="module_activity"
+              	 data-pass_module_id="" 
+              	 data-pass_prefix="" 
+              	 data-pass_to="builder" 
+              	 data-pass_id="render"
+                 data-window_width="100%">
+              		<i class="fas fa-palette"></i>
+            		 <div data-pass_collection="modules"
+      						   data-pass_module_id=""
+  						       data-pass_prefix=""
+      						   data-pass_to="render"
+      						   class="sessionBuilderUI_Id">
+    						 </div>
+               </a>
+          </li>
+          
+          <!-- Render item Form -->
+    			<li>
+    						<a data-window_url="render.html" 
+    						   data-pass_collection="module_activity"
+    						   data-pass_module_id="5de15f3aa64fe051cffc7eb2"
+    						   data-pass_prefix="form_"
+    						   data-pass_to="form-fields" 
+    						   data-window_ajax="false" 
+    						   data-window_width="320px" 
+    						   data-window_height="100%" 
+    						   data-window_color="#229954" 
+    						   data-window_x="" 
+    						   data-window_y="">
+    						  <i class="fas fa-plus"></i>
+    						  <div data-pass_collection="modules"
+        						   data-pass_module_id=""
+    						       data-pass_prefix="form_"
+        						   data-pass_to="render"
+        						   data-pass_id="render">
+    						  </div>
+    						</a>
+	        </li>
+    			
+    			<!-- Datatable Controls -->  
+    			<li>
+    			  <a data-btn_type="column-visibility" data-table_id="example1" class="btn-table"><i class="far fa-eye"></i></a>
+          </li>
+    			<li><a data-btn_type="pdf" data-table_id="example1" class="btn-table"><i class="far fa-file-pdf">
+    			  </i></a></li>
+    			<li><a data-btn_type="excel" data-table_id="example1" class="btn-table"><i class="far fa-file-excel">
+    			  </i></a></li>
+    			<li><a data-btn_type="csv" data-table_id="example1" class="btn-table"><i class="fas fa-file-csv">
+    			  </i></a></li>
+    			<li><a data-btn_type="column-visibility" data-table_id="example1" class="btn-table"><i class="fas fa-file-pdf">
+    			  </i></a></li>
+    			<li><a data-btn_type="copy" data-table_id="example1" class="btn-table"><i class="far fa-copy">
+    			  </i></a></li>
+    			<li><a data-btn_type="print" data-table_id="example1" class="btn-table"><i class="fas fa-print">
+    			  </i></a></li>
+				 </ul>
+      </div>
+      
+      <!-- Main Content with Viewport/Boundaries for windows -->  
+		  <div class="cocreate-container" id="modal-viewport" data-main_content_id="content">
+  			  <div class="btn-group">
+    				<ul data-table_id="example1" class="colvis-menu cocreate-dt-menu"></ul>
+			    </div>
+			    
+			    <!-- Datatable Fetch using data-attributes -->  
+			    <table id="example1" width="100%" data-collection="module_activity" data-document_id="5de15f3aa64fe051cffc7eb2" data-template_id="exampleTemplate" class="table row-border hover">
+    				<thead>
+    				  <tr>
+      					<th>Item Name</th>
+      					<th>Description</th>
+      					<th>Id</th>
+    				  </tr>
+    			 	</thead>
+				    
+				    <tbody>
+  				  <!-- Datatable Template -->  
+  				  <tr class="template">
+    					<td>
+    					  <div class="min-width-200px">
+      					  <div class="icon-wrapper">
+      						  <span data-document_id="" name="icon"></span>
+      					  </div>
+      					  <div>
+        						<a data-window_url="render.html" 
+        						   data-pass_collection="module_activity"
+        						   data-pass_module_id=""
+        						   data-pass_prefix="form_"
+        						   data-pass_to="form-fields" 
+        						   data-window_ajax="false" 
+        						   data-window_width="320px" 
+        						   data-window_height="100%" 
+        						   data-window_color="#229954" 
+        						   data-window_x="" 
+        						   data-window_y="">
+        						  <h4 name="name">Item Name</h4>
+        						  <div data-pass_collection="modules"
+            						   data-pass_module_id=""
+        						       data-pass_prefix="form_"
+            						   data-pass_to="render">
+        						  </div>
+        						</a>
+        						  <h5 name="description"></h5>
+      					  </div>
+    					  </div>
+    					</td>
+    					<td>
+        			  <h5 name="description"></h5>
+    					</td>
+    					<td>
+    					  <a data-window_url="render.html"
+    					     data-pass_module_id=""
+    					     data-pass_prefix="form_"
+    					     data-pass_collection="module_activity"
+    					     data-pass_to="form-fields"
+    					     data-window_ajax="false"
+    					     data-window_width="320px"
+    					     data-window_height="100%"
+    					     data-window_color="#229954"
+    					     data-window_x=""
+    					     data-window_y="">
+    					     <b name="document_id">Module Id</b>
+    						    <div data-pass_collection="module"
+        						   data-pass_module_id=""
+    						       data-pass_prefix="form_"
+        						   data-pass_to="render">
+      						  </div>
+    						</a>
+    					</td>
+  				  </tr>
+  				</tbody>
+  				
+  				<tfoot>
+  				  <tr>
+    					<th>Item Name</th>
+    					<th>Description</th>
+    					<th>Id</th>
+  				  </tr>
+  				</tfoot>
+			  </table>
+
+		  </div>
+  	<!--<div id="menuL" class="cocreate-sidenav" data-main_content="content">-->
+   <!-- 					<ul class="adminUI-menu">-->
+			<!--					<li class="">-->
+			<!--						<a data-window_url="modules/dashboards/dashboard.html" data-pass_collection="module_activity" data-pass_module_id="5cc0efdb1c5c581c14a0fcaf" data-pass_to="me1234" data-window_ajax="false" data-window_width="100%" data-window_height="100%" data-window_color="#008B8B">-->
+			<!--							<i class="fas fa-tachometer-alt"></i>-->
+			<!--							<span >DashBoard</span>-->
+			<!--						</a>-->
+			<!--						<span class="cocreate-badge badge-danger">4</span>-->
+			<!--					</li>-->
+			<!--				</ul>-->
+   <!--     		  <div class="resizeHandler"></div>-->
+   <!--     	  </div>-->
+            	
+    					  <a data-window_url="render.html"
+    					     data-pass_module_id="5de15f3aa64fe051cffc7eb2"
+    					     data-pass_prefix="form_"
+    					     data-pass_collection="module_activity"
+    					     data-pass_to="form-fields"
+    					     data-window_ajax="false"
+    					     data-window_width="320px"
+    					     data-window_height="100%"
+    					     data-window_color="#229954"
+    					     data-window_x=""
+    					     data-window_y=""
+    					     class="position:fixed bottom:15px right:15px bg:blue grow-hover round">
+    					    <i class="fas fa-plus"></i>
+    						    <div data-pass_collection="module"
+        						   data-pass_module_id=""
+    						       data-pass_prefix="form_"
+        						   data-pass_to="render"
+        						   data-pass_id="render">
+      						  </div>
+    						</a>
+
+  
+  <script>
+    var config = {
+      apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+      securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+      organization_Id: '5de0387b12e200ea63204d6c'
+    }
+  </script>
+
+  <!--CoCreateJS-->
+  <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+  <!--CoCreate Plugins-->
+  <script src="https://cdn.cocreate.app/CoCreate-window.js"></script>
+  <!--<script src="https://cdn.cocreate.app/CoCreate-builder.js"></script>-->
+  <script src="https://cdn.cocreate.app/CoCreate-datatables.js"></script>
+
+</body>
+</html>

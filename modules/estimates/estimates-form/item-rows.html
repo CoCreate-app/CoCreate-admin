@@ -1,0 +1,57 @@
+<html>
+<head>
+
+  <link href="../../css/CoCreate.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+
+<style>
+
+
+
+</style>
+</head>
+<body>
+
+    <div id="saveFetch1" class="saveFetch" name='clonehtml7' data-collection="module_activity" data-module_activity_id="" data-document_id="newclone" data-pass_id="me1234">
+     
+
+    <form class="Sortable" data-group_name="item-row" data-collection="module_activity" id="testForm">
+     
+      <div id="item-row" style="" class="template margin:15px display:flex flex-wrap:wrap-wrap bg:light-gray">
+        <!--<div style="float:right;"><a data-clone_id="item-row" class="deleteBtn noDrag"><i class="fas fa-times"></i></a></div>-->
+        <div class="min-width:300px flex-grow:1"> 
+          <div class="min-width-100px">
+            <input class="floating-label" data-module_activity_id="" name="name" placeholder="Item Name">
+          </div> 
+        </div>
+        <div class="display:flex min-width:300px">
+          <div class="flex-grow:1 max-width-100px"><input class="floating-label" data-module_activity_id="" name="usage_unit" placeholder="Usage Unit"></div>
+          <div class="flex-grow:1 max-width-100px"><input class="floating-label" data-module_activity_id="" name="qty" placeholder="Qty"></div>
+          <div class="flex-grow:1 max-width-100px"><input class="floating-label" data-module_activity_id="" name="price" placeholder="Price"/></div>
+          <div class="flex-grow:1 max-width-100px"><input class="floating-label" data-module_activity_id="" name="total" placeholder="Total"></div>
+        </div>
+        <!--<div>-->
+        <!--<input class="item-description floating-label" data-module_activity_id="" name="description"  placeholder="Description"/>-->
+        <!--</div>-->
+      </div>
+   
+    </form>
+    <a data-clone_id="item-row" class="cloneBtn noDrag" style="display: block">Add item</a>  
+
+    </div><!-- saveFetch -->
+  
+  <script>
+    var config = {
+      apiKey:'',
+      securityKey:'',
+      organization_Id:''
+    }
+  </script>
+  
+  <!--CoCreateJS-->
+  <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+
+</body>
+</html>

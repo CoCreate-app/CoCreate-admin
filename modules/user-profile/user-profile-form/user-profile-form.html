@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+    <title>My Profile | CoCreate</title>
+
+    <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+    <!--<link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />-->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+  </head>
+
+  <body>
+    <div id="modal-viewport" class="hidden"></div>
+    <div data-main_content_id="content" class="nav display:flex align-items:center bg:light-gray top:0 height-48px" data-scroll_effect="hide-nav" data-scroll_up="5" data-scroll_down="5">
+      <!--<a class="nav-toggle menu_icon--Vdots" data-toggle_sidenav="menuL">-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--  <div class="circle"></div>-->
+      <!--</a>-->
+        <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100%">
+            <li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times">
+            </i></a></li>
+            <li class="margin-right:15px"><a class="btn-modal-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize">
+            </i></a></li>
+            <li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize">
+            </i></a></li>
+            <li class="margin-right:15px"><a class="fs-toggle"><i data-transform_to="fas fa-compress" class="fas fa-expand">
+            </i></a></li>
+            <li class="margin-right:15px">
+              <a target="modal" href="render.html"
+                 data-pass_collection="modules"
+                 data-pass_document_id="" 
+                 data-pass_prefix="" 
+                 data-pass_to="builder"
+                 data-pass_id="render"
+                 data-modal_width="100%">
+                	<i class="fas fa-palette"></i>
+                <div data-pass_collection="modules"
+              			 data-pass_document_id=""
+              		   data-pass_prefix=""
+              			 data-pass_to="render"
+              			 class="sessionBuilderUI_Id">
+                </div>
+              </a>
+            </li>
+            <li class="margin-right:15px">
+      			  <a data-pass_id="form-fields" 
+      			     class="delete-document btn-modal-close">
+      			      <i class="far fa-trash-alt"></i></a>
+      			</li>
+
+	    </ul>
+    </div>
+		<div class="cocreate-container padding-10px" data-main_content_id="content">
+      <form data-collection="users">
+        <input data-pass_id="form-fields" type="text" data-document_id="" name="name" id="name" placeholder="Name" class="floating-label sessionUser_Id"/>
+        <input data-pass_id="form-fields" type="password" data-document_id="" name="password" placeholder="password" class="floating-label sessionUser_Id"/>
+        <input data-pass_id="form-fields" type="text" data-document_id="" name="description" placeholder="Description" class="floating-label sessionUser_Id"/>
+        <input data-pass_id="form-fields" type="text" data-document_id="" name="profile_image" placeholder="Profile Image" class="floating-label sessionUser_Id"/>
+
+        <cocreate-select class="floating-label sessionUser_Id" 
+          name="connected_orgs" 
+          data-collection="users" 
+          data-document_id="" 
+          data-pass_id="form-fields"
+          placeholder="Connected Orgs" multiple>
+            
+            <input  class="search-input" placeholder="Search">
+            
+            <ul class="selectable--list cocreate-scroll">
+        			<li class="selectable"></li>
+            </ul>
+            
+        </cocreate-select>
+         
+        <cocreate-select class="floating-label sessionUser_Id sortable" 
+          name="current_org" 
+          data-collection="users" 
+          data-document_id=""  
+          data-limit_selectable="3"
+          data-pass_id="form-fields"
+          placeholder="Current Org">
+        
+          <input class="search-input" placeholder="Search" data-template_id="connect">
+          
+          <ul data-fetch_collection="users" 
+              data-fetch_name="connectedOrgs" 
+              data-template_id="connect" 
+              data-pass_to="me1234"
+              data-pass_id="form-fields"
+              class="template-wrapper-array selectable--list cocreate-scroll"
+              data-fetch_document_id="5d8bff28e4be424681b5e48c">
+            
+      			<li class="template selectable" data-pass_id="me1234" data-collection="organizations">
+      			  <span class="logo-icon"><img data-collection="organizations" data-document_id="" name="logo" data-pass_id="me1234" src="" height="40px" alt="..."></span>
+      			  <div class="display:block line-height:1 padding:5px-tb " style="width: calc(100% - 15px);">
+        			  <h3 data-collection="organizations" data-document_id="" name="name" data-pass_id="me1234" >Organization Name</h3>
+        			  <h5 data-collection="organizations" data-document_id="" name="_id" data-pass_id="me1234" >id</h5>
+      			  <div>
+      			</li>
+      			
+          </ul>
+      </cocreate-select>
+
+         <!-- current-org -->
+          <input data-pass_id="form-fields" type="text" data-document_id="" name="current_org" class="floating-label sessionUser_Id" data-get_value="org_id" placeholder="Current Org">
+
+        	<a class="submitBtn position:fixed bottom:15px right:15px bg:blue grow-hover round"><i class="far fa-save"></i></a>
+
+      </form>
+ 		</div>
+  
+
+    <script>
+      var config = {
+        apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+        securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+        organization_Id: '5de0387b12e200ea63204d6c'
+      }
+    </script>
+   
+    <!--<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>-->
+  
+    <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-modal/src/CoCreate-modal.js"></script> 
+    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-select.js"></script>
+  </body>
+</html>

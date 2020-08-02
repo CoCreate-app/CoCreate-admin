@@ -153,22 +153,22 @@ a.floating-btn i{
   color: rgba(34, 34, 34, 0.8);
 }
 
-.margin-top-50{margin-top: 50px;}
+.margin-top:50{margin-top: 50px;}
 
 .mtop-50{
   margin-top: 50px;
 }
 
-.mbottom-75{
+.margin-bottom:75px{
   margin-bottom: 75px;
 }
 .padding-5{
   padding:5px;
   }
-.float-right{
+.float:right{
   float:right;
 }
-.float-left{
+.float:left{
   float:left;
 }
 

@@ -19,25 +19,25 @@
 
   <body>
   <div id="modal-viewport" class="hidden"></div>
-    <div class="nav display-flex align-items-center bg-light-gray position-fixed top-0"
+    <div class="nav display:flex align-items:center bg:light-gray position:fixed top:0"
       data-main_content_id="content" 
       data-nav_effect="sticky-nav" 
       data-nav_scroll="200">
 
-      <ul class="cocreate-scroll display-inline-flex direction-rtl font-size-20px align-items-center list-style-type-none width-100-percent height-50px">
-  			<li class="margin-right-15px">
+      <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
+  			<li class="margin-right:15px">
   			  <a class="btn-modal-close"><i class="fas fa-times"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a class="btn-modal-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a class="fs-toggle"><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
 			    <a target="modal" href="render.html"
           	 data-pass_collection="modules"
           	 data-pass_document_id="" 
@@ -54,7 +54,7 @@
 						 </div>
           </a>
         </li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a data-collection="modules" 
   			    data-document_id="" 
   			    data-pass_id="form-fields" 
@@ -66,7 +66,7 @@
     </div>
     
 		<div class="cocreate-container padding-10px" data-main_content_id="content">
-      <form data-realtime="true" data-collection="module_activity" class="margin-bottom-75px">
+      <form data-realtime="true" data-collection="module_activity" class="margin-bottom:75px">
           
         <input type="text" 
           data-pass_id="form-fields" 
@@ -101,12 +101,12 @@
         <textarea data-pass_id="form-fields" data-document_id="" name="css" id="css" placeholder="CSS" class="floating-label" ></textarea>
         <textarea data-pass_id="form-fields" data-document_id="" name="js" id="js" placeholder="JS" class="floating-label"></textarea>
 
-        <!--<div class="codemirror padding-top-10px" data-pass_id="form-fields" data-document_id="" name="html" id="html" placeholder="Html" ></div>-->
-        <!--<div class="codemirror padding-top-10px" data-pass_id="form-fields" data-document_id="" name="css" id="css" placeholder="CSS" ></div>-->
-        <!--<div class="codemirror padding-top-10px" data-pass_id="form-fields" data-document_id="" name="js" id="js" placeholder="JS"></div>-->
+        <!--<div class="codemirror padding-top:10px" data-pass_id="form-fields" data-document_id="" name="html" id="html" placeholder="Html" ></div>-->
+        <!--<div class="codemirror padding-top:10px" data-pass_id="form-fields" data-document_id="" name="css" id="css" placeholder="CSS" ></div>-->
+        <!--<div class="codemirror padding-top:10px" data-pass_id="form-fields" data-document_id="" name="js" id="js" placeholder="JS"></div>-->
 
 
-      	<button class="submitBtn position-fixed bottom-15px right-15px bg-blue grow-hover round"><i class="far fa-save"></i></button>
+      	<button class="submitBtn position:fixed bottom:15px right:15px bg:blue grow-hover round"><i class="far fa-save"></i></button>
 
       </form>
  		</div>
@@ -119,10 +119,9 @@
       }
     </script>
    
-    <!--<script src="https://cdn.cocreate.app/CoCreate.min.js"></script>-->
+    <!--<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>-->
   
     <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
-    <script src="https://server.cocreate.app/js/CoCreateUI.min.js"></script>
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-select.js"></script>
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-modal/src/CoCreate-modal.js"></script>
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-y/codemirror/dist/CoCreate-codemirror.js"></script>

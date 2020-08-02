@@ -43,10 +43,11 @@
 
   <body>
     <!-- Navbar  -->
-    <div class="nav display-flex align-items-center bg-light-gray" 
+    <div class="nav display:flex align-items:center bg:light-gray" 
       data-main_content_id="content"
       data-scroll_effect="hide-nav"
-      data-scroll_up="1" data-scroll_down="1">
+      data-scroll_up="1" 
+      data-scroll_down="1">
       
         <!-- Menu Icon Animations -->
         <a aria-label="mobile menu" class="nav-toggle menu_icon--hamburger" data-toggle_sidenav="menuL">
@@ -56,15 +57,15 @@
         </a>
         
         <!-- Horizontal Scroll Nav/Tabs -->
-        <ul class="cocreate-scroll display-inline-flex direction-rtl font-size-24px align-items-center list-style-type-none width-100-percent height-50px">
+        <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:24px align-items:center list-style-type:none width:100% height:50px">
         			
         	<!-- Fullscreen toogle and icon transform -->
-          <li class="margin-right-15px">
+          <li class="margin-right:15px">
           	<a class="fs-toggle"><i class="fas fa-expand" data-transform_to="fas fa-compress"></i></a>
           </li>
           	
           <!-- Render Builder -->
-          <li class="margin-right-15px">
+          <li class="margin-right:15px">
         	   <a target="modal" href="builder.html"
                 data-pass_collection="modules"
                 data-pass_document_id="" 
@@ -82,14 +83,14 @@
                 </div>
               </a>
             </li>
-        	  <li class="display-flex">
-				      <span class="cocreate-badge position-relative right-7px bottom-7px display-inline-flex border border-width-2px border-radius-4px border-color-white success">4</span>	
+        	  <li class="display:flex">
+				      <span class="cocreate-badge position:relative right:7px bottom:7px display:inline-flex border border-width:2px border-radius:4px border-color:white success">4</span>	
               <a target="modal" href="render.html" data-pass_collection="modules" data-pass_prefix="datatable_" data-pass_document_id="" data-pass_to="render" data-modal_width="100%" data-modal_height="100%" data-modal_x="0px" data-modal_color="#229954">
                 <i class="fas fa-history"></i>
 				      </a>
         	  </li>							     
-            <li class="display-flex">
-				      <span class="cocreate-badge position-relative right-7px bottom-7px display-inline-flex border border-width-2px border-radius-4px border-color-white warning">4</span>	
+            <li class="display:flex">
+				      <span class="cocreate-badge position:relative right:7px bottom:7px display:inline-flex border border-width:2px border-radius:4px border-color:white warning">4</span>	
       				<a target="modal" href="../CoCreate-components/CoCreate-calendar/src/calendar.html" data-pass_collection="module_activity" data-pass_prefix="" data-pass_document_id="" data-pass_to="render" data-modal_width="100%" data-modal_height="100%" data-modal_color="#229954" data-modal_header="false">
               	 <i class="fa fa-calendar" aria-hidden="true"></i>
       				</a>
@@ -98,7 +99,7 @@
         </ul>
         
 			  <!-- Avatar -->
-        <div class="avatar-wrapper margin-5px-tb margin-right-10px">
+        <div class="avatar-wrapper margin:5px-tb margin-right:10px">
   				  <a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile.html" 
   				    data-pass_collection="modules" 
   				    data-pass_prefix="" 
@@ -118,15 +119,15 @@
     </div>
     
     <!-- Modal viewport and main container  -->
-    <div class="position-fixed margin-top-50px" data-main_content_id="content" id="modal-viewport"></div>
+    <div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
 
-  	<div class="cocreate-container height-100vh margin-top-10px" data-main_content_id="content"></div>
+  	<div class="cocreate-container height:100vh margin-top:10px" data-main_content_id="content"></div>
     
     <!-- SideNav  -->
-  	<div id="menuL" class="cocreate-sidenav bg-medium-light-gray" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="collapsed">
+  	<div id="menuL" class="cocreate-sidenav bg:medium-light-gray" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="collapsed">
         
         <!-- Select to change organizations  -->
-        <cocreate-select class="remove-none padding-0 border-none sessionUser_Id" 
+        <cocreate-select class="remove-none padding:0 border:none sessionUser_Id" 
           name="current_org" 
           data-collection="users" 
           data-document_id="">
@@ -139,7 +140,7 @@
             data-template_id="fetcharray1" 
             data-pass_to="me1234" id="idEngine1">
       			
-      			<li class="template selectable height-50px margin-0" id="fetcharray1" data-pass_id="me1234" data-collection="organizations">
+      			<li class="template selectable height:50px margin:0" id="fetcharray1" data-pass_id="me1234" data-collection="organizations">
               <span class="logo-icon"><img data-collection="organizations" data-document_id="" name="logo" data-pass_id="me1234" src="https://server.cocreate.app/images/cocreate.png" height="40px"alt="..."></span>
               <span data-collection="organizations" data-document_id="" name="name" data-pass_id="me1234" class="logo-name">Organization Name</span>
       			</li>
@@ -155,10 +156,10 @@
         </cocreate-select>
 
         <!-- Search field -->
-        <div class="cocreate-search padding-5px height-50px"> 
+        <div class="cocreate-search padding:5px height:50px"> 
         	<form id='menu-search'>
             <input type="text" class="searchInput floating-label browser-default" data-pass_value_to="me1234">
-              <span class="passValueBtn position-relative bottom-28px right-14px float-right font-size-18px">
+              <span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
                 <a  target="modal" href="template-engine.html"
           			   data-pass_to="me1234" 
           			   data-modal_ajax="false" 
@@ -176,11 +177,10 @@
 			
 			<!--<input type="hidden" data-template_id="template1" data-filter_name="menu-position" data-filter_value="3,4" data-value_type="number" data-filter_operator="nin">-->
 			<!--<div data-template_id="template1" data-filter_name="menu-position" data-filter_value="0" data-value_type="number" data-filter_operator="ne"></div>-->
-			<div class="padding-right-5px">
+			<div class="padding-right:5px">
 
-			<ul class="cocreate-menu cocreate-scroll vh-120 bottom-10px  margin-right-5px">
-			  <div class="template-wrapper" 
-			     data-fetch_collection="modules" 
+			<ul class="cocreate-menu cocreate-scroll vh-120 bottom:10px  margin-right:5px">
+			  <div data-fetch_collection="modules" 
 			     data-order_by="menu-position" 
            data-order_type="asc"
 		       data-template_id="template1"
@@ -189,8 +189,7 @@
 		       data-filter_name="menu-position" 
 		       data-filter_value="0" 
 		       data-value_type="number" 
-		       data-filter_operator="ne"
-		       id="admin-menu">
+		       data-filter_operator="ne">
 
   			  <li class="template menuItem" id="template1">
   				  <a target="modal" href="module_activity_datatable.html"
@@ -208,7 +207,7 @@
   				    <span data-document_id="" name="icon" data-pass_id="me1234"></span><span data-document_id="" name="name" data-pass_id="me1234" ></span>
   				    <div data-pass_collection="module_activity" data-pass_document_id="" data-pass_to="datatable"></div>
 		         </a>
-    				  <div class="float-right">
+    				  <div class="float:right">
     				    <a target="modal" href="module_activity_form.html" 
       				    data-pass_collection="modules"
       				    data-pass_document_id=""
@@ -237,7 +236,7 @@
       			data-modal_header="false">
         		  <span><i class="fas fa-cogs"></i></span>
         		  <span>Settings</span>
-  					<span class="cocreate-badge danger line-height-1">4</span>
+  					<span class="cocreate-badge danger line-height:1">4</span>
         		</a>
       	  </li>
       	  <li class="menuItem">
@@ -257,12 +256,8 @@
         securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
         organization_Id: '5de0387b12e200ea63204d6c'
       }
-      
-      // window.localStorage.setItem('organization_Id', config.organization_Id)
-      // window.localStorage.setItem('user_id', '5ee2eade3e956152355a3445');
     </script>
    
-    <!--<script src="https://cdn.cocreate.app/CoCreate.min.js"></script>-->
     <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
 
   </body>

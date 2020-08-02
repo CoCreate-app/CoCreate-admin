@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CoCreate Calendar</title>
-	
-	<!-- CoCreate UI -->
-	<!--<link rel="stylesheet" href="https://cdn.cocreate.app/CoCreateUI.min.css" type="text/css" />-->
-	<link rel="stylesheet" href="https://cocreate.app/css/CoCreateUI.min.css" type="text/css" />
-	<!--<link rel="stylesheet" href="https://cocreate.app/css/CoCreate-calendar.css" type="text/css" />-->
-	
-	<!-- Font Awesome -->
-	<script src="https://kit.fontawesome.com/99ba925095.js"></script> 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	
-	<!-- DHTMLX Window -->
-	<link rel="stylesheet" href="https://cdn.dhtmlx.com/edge/dhtmlx.css" type="text/css"> 
-	<script src="https://cdn.dhtmlx.com/edge/dhtmlx.js" type="text/javascript"></script>
-	 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+    <title>Blog | CoCreate</title>
+    
+    <!-- CoCreateCSS -->
+    <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
 
 	<!-- Full Calendar -->
 	<link href='https://unpkg.com/@fullcalendar/core/main.css' rel='stylesheet' />
@@ -111,7 +104,7 @@
 
 	<div class="cocreate-container" id="customVPhere" data-main_content_id="content">
 		<div id='calendar-container' class="">  
-		  <div id='calendar' class="cal-container" data-collection="module_activity" data-module_id="" data-dispaly_field="name">
+		  <div id='calendar' class="cal-container" data-collection="module_activity" data-document_id="" data-dispaly_field="name">
 			<a class="eventLink"
 			  	data-window_url="render.html" 
 		  		data-pass_collection="modules"
@@ -183,9 +176,9 @@
   				     data-window_color="#229954"
   				     data-window_x=""
   				     data-window_y="">
-  					<span data-module_id="" name="icon" passed_id="me1234"></span><span data-module_id="" name="name" passed_id="me1234" ></span>
+  					<span data-document_id="" name="icon" passed_id="me1234"></span><span data-document_id="" name="name" passed_id="me1234" ></span>
 		         </a>
-    				  <div class="float-right">
+    				  <div class="float:right">
     				    <a data-window_url="render.html" data-pass_collection="modules" data-pass_module_id="" data-pass_module_activity_id="" data-pass_prefix="form_" data-pass_to="render" data-window_ajax="false" data-window_width="900px" data-window_height="100%" data-window_color="#229954" data-window_x="" data-window_y="" data-pass_id="render"><i class="fas fa-plus"></i></a>
     				  </div>
   				</li>
@@ -194,47 +187,16 @@
 		    <div class="resizeHandler"></div>
     </div>
 
-  <script>
-    var config = {
-      apiKey: '',
-      securityKey: '',
-      organization_Id: ''
-    }
-  </script>
-  <!--<script>
-    var config = {
-      apiKey: '123456abcdeee',
-      securityKey: 'ekjlferkjflkejrlfkejlkdjfwlrir9530',
-      organization_Id: '5d076e8235984e16ce031474'
-    }
-  </script>-->
-  
-  <!--CoCreateJS-->
-  <!--<script src="https://cdn.cocreate.app/CoCreateJS.min.js"></script>-->
-  <script src="https://cdn.cocreate.app/CoCreateJS.min.js"></script>
-  <!--<script src="https://cdn.cocreate.app/socket.io.js"></script>-->
-  <!--<script src="https://cdn.cocreate.app/CoCreate.js"></script>-->
-  <!--<script src="https://cdn.cocreate.app/CoCreate-templating.js"></script>-->
-  <!--<script src="https://cdn.cocreate.app/CoCreate-users.js"></script>-->
-  <!--<script src="https://cdn.cocreate.app/CoCreate-sort.js"></script>-->
-  <!--<script src="https://cdn.cocreate.app/CoCreate-clone.js"></script>-->
-  <!--<script src="https://cdn.cocreate.app/CoCreate-conditonal-logic.js"></script>-->
-  <!--<script src="https://cdn.cocreate.app/CoCreate-search.js"></script>-->
-
-  <!--CoCreateUI-->
-  <!--<script src="https://cdn.cocreate.app/CoCreateUI.min.js"></script>-->
-  <script src="https://cdn.cocreate.app/CoCreateUI.min.js"></script>
-  <!--<script src="https://cdn.cocreate.app/CoCreate-UI.js"></script>-->
-  <!--<script src="https://cdn.cocreate.app/CoCreate-floating-label.js"></script>-->
-  <!--<script src="https://cdn.cocreate.app/CoCreate-fullscreen.js"></script>-->
-  <!--<script src="https://cdn.cocreate.app/CoCreate-icon-transform.js"></script>-->
-  
-  <!--CoCreate Plugins-->
-  <script src="https://cdn.cocreate.app/CoCreate-window.js"></script>
-  <!--<script src="https://cdn.cocreate.app/CoCreate-builder.js"></script>-->
-  <!--<script src="https://cdn.cocreate.app/CoCreate-datatables.js"></script>-->
-  <script src="https://cdn.cocreate.app/CoCreate-calendar.js"></script>
-  <!--<script src="https://cdn.cocreate.app/CoCreate-select2.js"></script>-->
-
-</body>
+    <script>
+      var config = {
+        apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+        securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+        organization_Id: '5de0387b12e200ea63204d6c'
+      }
+    </script>
+  	
+  	<!--CoCreateJS-->
+    <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+    
+  </body>
 </html>

@@ -5,33 +5,32 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-        <title>Sign Up | cocreate.app</title>
+	    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="32x32">
+        <title>Sign Up | CoCreate</title>
 
-<link rel="icon" type="image/png" sizes="32x32" href="https://cocreate.app/images/favicon.ico">
-<!-- CoCreateUI -->
-  <link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate-signup.css">
+		<!-- CoCreate CSS -->
+		<link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
 
-<!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
-
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
 
     </head>
+    
+    <style>
+	.speech-bubble:after { content: ''; position: absolute; top: 0; left: 50%; width: 0; height: 0; border: 23px solid transparent; border-bottom-color: #ffffff; border-top: 0; margin-left: -23px; margin-top: -23px;}
+	</style>
 
-    <body>
-    	   <a href="index.html" target="" class="sessionTrue hidden" ></a>
+    <body style='background-image: url("https://cdn.cocreate.app/background.png");'>
+    	<!--<a href="index.html" target="" class="sessionTrue hidden"></a>-->
 
-		<div class="btns_top_right">
-			<a href="signin.html" title="" class='btn-login'>Sign In</a>
-		</div>
+		<a href="signin.html" title="" class="position:relative z-index:1 float:right margin:15px margin-left:auto color:white">Sign In</a>
 
-        <div class="main-container vcenter hcenter cocreate-scroll">
-        	<div class="flex-container wrap flex-end">
-                <div class="dialog-box">
-                	<img src="https://cdn.cocreate.app/Preloader_2.gif" class="icon_ava">
-                	<hgroup class="speech-bubble">
-                        <div class="description">
+        <div class="main-container justify-content:center align-items:center cocreate-scroll display:flex flex-wrap:wrap position:absolute width:100% height:100%">
+        	<div class="display:flex flex-wrap:wrap align-items:flex-end justify-content:center align-items:center">
+                <div class="flex-grow:1 height:fit-content width:55% min-width:300px max-width:600px margin:10px">
+                	<img src="https://cdn.cocreate.app/Preloader_2.gif" class="display:block margin:auto-lr margin:20px-tb">
+                	<hgroup class="speech-bubble position:relative background:white border-radius:4px padding:15px">
+                        <div class="color:blue font-size:24px">
                         	<p id="ava1">
                         		<strong>Hi</strong>, My name is <b>Ava</b>.
                             	Your Artificial Virtual Assistant. Together we will CoCreate your business! Enter your name so I will know what to call my <strong>new boss...</strong>
@@ -57,201 +56,183 @@
 					</hgroup>
                 </div>
                
-                <div class="form-box">
-                	<form  data-realtime="false" id="step1" data-form_id="step-1" data-collection="users">
-                		<div>
-                        	<div class="form-top">
-                        		<div class="form-top-left">
-                        			<h3>Step 1 / 4</h3>
-                        		</div>
-                        		<div class="form-top-right">
-                        			<i class="fa fa-user"></i>
-                        		</div>
-                            </div>
-                            <div class="form-bottom">
-		                    		<input type="text"  id="name" name="name"  placeholder="Full Name" data-document_id="" class="floating-label">
+                <div class="flex-grow:1 height:fit-content width-35-percent min-width:300px max-width:400px margin:10px">
+                	<form  data-realtime="false">
+                		
+	            		<div id="step1">
+	                    	<div class="overflow:hidden padding:25px-lr background:white">
+								<div class="float:left width:75% padding-top:25px">
+	                    			<h3>Step 1 / 4</h3>
+	                    		</div>
+	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+	                    			<i class="fa fa-user"></i>
+	                    		</div>
+	                        </div>
+	                        <div class="padding:25px bg:medium-gray text-align:left">
+	                    		<input type="text" id="name" 
+	                    			data-collection="users" 
+	                    			data-document_id="" 
+	                    			name="name"  
+	                    			placeholder="Full Name"  
+	                    			class="floating-label">
 		                        
-		                        <button type="button" class="outline show_hide registerBtn" data-show_id='#step2,#ava2' data-hide_id='#step1,#ava1'>
-		                        <a data-pass_document_id="" data-pass_to="user-id"></a>
-		                        Next
-		                        </button>
+		                        <button type="button" class="outline" data-show='#step2,#ava2' data-hide='#step1,#ava1'>Next</button>
 		                    </div>
-	                  	 </div>
-		              </form>
-		              
-		              <form data-realtime="false" data-collection="organizations" data-form_id="organization-form" id="organization-form">
-		                    <div id="step2" class="hidden">
-	                        	<div class="form-top">
-	                        		<div class="form-top-left">
-	                        			<h3>Step 2 / 4</h3>
-	                        		</div>
-	                        		<div class="form-top-right">
-	                        			<i class="fas fa-store"></i>
-	                        		</div>
-	                            </div>
-	                            <div class="form-bottom">
-		                        	<input type="text" data-document_id='' id="org-name" name="name" placeholder="Organization Name" class="floating-label">
-		                        	
-		                    		<!-- api keys -->
-		                    		<input type="hidden"  id="apiKey" name="apiKey"  placeholder="API Key" data-document_id="" data-pass_id="organization_id" readonly>
-		                    		<input type="hidden"  id="securityKey" name="securityKey"  placeholder="security Key" data-document_id="" data-pass_id="organization_id" readonly>
-		                        
-		                        <button type="button" class="outline white-blue show_hide" data-show_id='#step1,#ava1' data-hide_id='#step2,#ava2'>Previous</button>
-		                        <button type="button" class="outline show_hide submitBtn" data-show_id='#step3,#ava3' data-hide_id='#step2,#ava2'><a data-pass_document_id="" data-pass_to="organization_id"></a>Next</button>
-			                    </div>
-		                    </div>
-		                 </form>
-		              	
-		              	<form data-collection="organizations" data-form_id="organization-form" id="organization-form">
-		                    <div id="step3"  class="hidden">
-	                        	<div class="form-top">
-	                        		<div class="form-top-left">
-	                        			<h3>Step 3 / 4</h3>
-	                        		</div>
-	                        		<div class="form-top-right">
-	                        			<i class="fas fa-industry"></i>
-	                        		</div>
-	                            </div>
-	                            <div class="form-bottom">
-		                        	
-                               <!-- Industry select -->
-                                <div class="select--field sortable floating-label" name="industry" data-collection="organizations" data-document_id="" data-pass_id="organization_id" placeholder="Industry">
-					  							          <input class="template-search" placeholder="Search" data-engine-id="idEngine1">
-					  							          <ul data-fetch_collection="industries" data-template_id="template1" data-pass_to="me1234" id="idEngine1" class="template-wrapper selectable--list cocreate-scroll">
-					  							      			<li class="template selectable" id="template1" data-pass_id="me1234">
-					  							      				<h5 data-collection="industries" data-document_id="" name="industry_name" data-pass_id="me1234">industry name</h5>
-					  							      			</li>
-					  							          </ul>
-                                </div>
-																
-								<!-- keys, org_id and Industry id to create industry  -->
-				                 <input type="hidden" name="apiKey"  placeholder="API Key" data-document_id=""  data-pass_id="organization_id" readonly>
-				                 <input type="hidden" name="securityKey"  placeholder="security Key" data-document_id=""  data-pass_id="organization_id" readonly>
-	
-						             <input type="hidden" name="_id" id="org_id" data-document_id="" data-pass_id="organization_id">
-			
-						             <!--<input type="hidden" name="industry" data-document_id="" data-pass_id="organization_id">-->
+	                  	</div>
 
-			                        <button type="button" class="outline white-blue show_hide" data-show_id='#step2,#ava2' data-hide_id='#step3,#ava3'>Previous</button>
-			                        <button type="button" class="outline show_hide industryBtn" data-show_id='#step4,#ava4' data-hide_id='#step3,#ava3'><a data-pass_document_id="" data-pass_to="organization-id"></a>Next</button>
-			                    </div>
-		                    </div>
-	                    </form>
-	                    
-		                    <div id="step4" data-form_id="step-4"  class="hidden">
-	                        	<div class="form-top">
-	                        		<div class="form-top-left">
-	                        			<h3>Step 4 / 4</h3>
-	                        		</div>
-	                        		<div class="form-top-right">
-	                        			<i class="fa fa-key"></i>
-	                        		</div>
-	                            </div>
-	                            <div class="form-bottom">
-	                            	<form data-realtime="false" id="step4" data-form_id="step-4" data-collection="users" class="hidden">
+						<div id="step2" class="hidden">
+	                    	<div class="overflow:hidden padding:25px-lr background:white">
+								<div class="float:left width:75% padding-top:25px">
+									<h3>Step 2 / 4</h3>
+								</div>
+	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+									<i class="fas fa-store"></i>
+								</div>
+						    </div>
+						    <div class="padding:25px bg:medium-gray text-align:left">
+						    	<input type="text" id="org-name"
+						    		data-collection="organizations"
+						    		data-document_id=""  
+						    		name="name" 
+						    		placeholder="Organization Name" 
+						    		class="floating-label">
 
-				                        	<input type="email" data-unique="false" data-document_id="" name='email' id="user-email" placeholder="Email" data-pass_id="user-id" class="floating-label">
-				                        	<small id="errorUemail" class="text-danger"></small>
+						        <button type="button" class="outline white-blue" data-show='#step1,#ava1' data-hide='#step2,#ava2'>Previous</button>
+						        <button type="button" class="outline" data-show='#step3,#ava3' data-hide='#step2,#ava2'>Next</button>
+						    </div>
+						</div>
+						
+	                    <div id="step3"  class="hidden">
+	                    	<div class="overflow:hidden padding:25px-lr background:white">
+								<div class="float:left width:75% padding-top:25px">
+	                    			<h3>Step 3 / 4</h3>
+	                    		</div>
+	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+	                    			<i class="fas fa-industry"></i>
+	                    		</div>
+	                        </div>
+	                        <div class="padding:25px bg:medium-gray text-align:left">
 	
-				                        	<input type="password" data-document_id="" id="password" name="password" placeholder="Password" data-pass_id="user-id" class="floating-label">
-				                        	<small id="errorUpassword" class="text-danger"></small>
-	
-				                        	<input type="password" data-validate_equal_to="#password" id="confirmpassword" placeholder="Confirm Password" class="floating-label">
-				                        	<small id="errorUconfirmpassword" class="text-danger"></small>
-											
-					                       <!-- connected_orgs select-->
-					                        <div class="select--field hidden" name="connected_orgs" data-collection="users" data-document_id="" data-pass_id="user-id" multiple>
-					                          <input placeholder="Search" class="searchInput" data-get_value="org_id">
-					                          <ul class="selectable--list cocreate-scroll">
-					                      			<li class="selectable"></li>
-					                          </ul>
-					                        </div>
-					                      
-					                       <!-- current-org -->
-					                        <input type="hidden" data-document_id="" name="current_org" data-get_value="org_id" data-pass_id="user-id">
+	                           <!-- Industry select -->
+	                            <cocreate-select class="sortable floating-label" 
+	                                data-collection="organizations" 
+	                                data-document_id=""
+	                                name="industry" 
+	                                placeholder="Industry">
+	  					          	  <input class="template-search" placeholder="Search" data-template_id="template1">
+									<ul data-fetch_collection="industries" 
+									    data-template_id="template1" 
+									    data-pass_to="me1234" 
+									    class="template-wrapper selectable--list cocreate-scroll">
+										<li class="template selectable" data-pass_id="me1234">
+											<h5 data-collection="industries" data-document_id="" name="name" data-pass_id="me1234">industry name</h5>
+										</li>
+									</ul>
+	                            </cocreate-select>
 																
-																	<button type="button" class="outline white-blue show_hide" data-show_id='#step3,#ava3' data-hide_id='#step4,#ava4'>Previous</button>
+		                        <button type="button" class="outline white-blue" data-show='#step2,#ava2' data-hide='#step3,#ava3'>Previous</button>
+		                        <button type="button" class="outline" data-show='#step4,#ava4' data-hide='#step3,#ava3'>Next</button>
+		                    </div>
+	                    </div>
+
+						<div id="step4" class="hidden">
+	                    	<div class="overflow:hidden padding:25px-lr background:white">
+								<div class="float:left width:75% padding-top:25px">
+									<h3>Step 4 / 4</h3>
+								</div>
+	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+									<i class="fa fa-key"></i>
+								</div>
+							</div>
+							<div class="padding:25px bg:medium-gray text-align:left">
+								<input type="email" id="user-email"
+									data-collection="users"
+									data-unique="false" 
+									data-document_id="" 
+									name='email'  
+									placeholder="Email" 
+									class="floating-label">
+							 		<small id="errorUemail" class="text-danger"></small>
 							
-																	<button type="button" class="outline red-white submitBtn"><a data-pass_document_id="" data-pass_to="me1234" href="index.html">Launch</a></button>
+								<input type="password" id="password"
+									data-collection="users"
+							    	data-document_id=""
+							    	name="password" 
+							    	placeholder="Password" 
+							    	class="floating-label">
+							    	<small id="errorUpassword" class="text-danger"></small>
+							
+								<input type="password"
+							    	data-validate_equal_to="#password" 
+							    	placeholder="Confirm Password" 
+							    	class="floating-label">
+							    	<small id="errorUconfirmpassword" class="text-danger"></small>
+									
+								<!-- Organiztion_id  -->
+								<input type="hidden" id="org_id"
+									data-collection="organizations"
+									data-document_id=""
+									name="_id"
+									placeholder="OrganizationId" readonly>
+								
+								<!-- API key  -->
+								<input type="hidden" id="apiKey"
+									data-collection="organizations"
+									data-document_id=""
+									name="apiKey"
+									placeholder="API Key" 
+									data-uuid="32" readonly>
+								
+								<!-- Security key  -->
+								<input type="hidden" id="securityKey"
+									data-collection="organizations"
+									data-document_id=""  
+									name="securityKey"  
+									placeholder="security Key" 
+									data-uuid="32" readonly>
+									
+								<button type="button" class="outline white-blue" data-show='#step3,#ava3' data-hide='#step4,#ava4'>Previous</button>
+								<button type="button" class="outline red-white registerBtn" data-actions="registerBtn, industryBtn">
+									Register
+									<a href="index.html" data-pass_collection="modules" data-pass_to="render"></a>
+								</button>
+								<!--<button type="button" class="outline blue-white industryBtn"><a href="">Industry</a></button>-->
+
+							</div>
+						</div>
+					</form>
+		              	
+				</div>
+		    </div>
+		</div>
+
+		<script>
+			var config = {
+			  apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+			  securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+			  organization_Id: '5de0387b12e200ea63204d6c'
+			}
+		</script>
+		
+		<!--CoCreateJS-->
+		<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+		<script src="https://server.cocreate.app/CoCreate-components/CoCreate-users/src/CoCreate-users.js"></script>
+		<script src="https://server.cocreate.app/CoCreate-components/CoCreate-industry/src/CoCreate-industry.js"></script>
+		<script src="https://server.cocreate.app/CoCreate-components/CoCreate-action/src/CoCreate-action.js"></script>
+
+		<script>
+		//   localStorage.removeItem('organization_id');
+		//   localStorage.removeItem('apiKey');
+		//   localStorage.removeItem('securityKey');
+		</script>
+		<script type="text/javascript">
+			document.getElementById('apiKey').value = CoCreateUtils.generateKey();
+			document.getElementById('securityKey').value = CoCreateUtils.generateKey();
 			
-						                        <!--<button type="button" class="outline show_hide btnstep4" data-show_id='#step5,#ava5' data-hide_id='#step4,#ava4'><a data-pass_document_id="" data-pass_to="me1234"></a>Next</button>-->
-									           </form>
-
-			                    </div>
-		                    </div>
-
-                		</div>
-                </div>
-            </div>
-
- 
-	<style>
-		.data-unique-success{
-		border-color: green!important;
-		}
-		.data-unique-error{
-		border-color: red!important;
-		}
-	</style>
-  
-  
-<!-- Javascript -->
-	<script type="text/javascript">
-	function generateUUID() {
-    var d = new Date().getTime();
-    var d2 = (performance && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
-    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        var r = Math.random() * 16;
-        if(d > 0){
-            var r = (d + r)%16 | 0;
-            d = Math.floor(d/16);
-        } else {
-            var r = (d2 + r)%16 | 0;
-            d2 = Math.floor(d2/16);
-        }
-        return (c=='x' ? r : (r&0x7|0x8)).toString(16);
-    });
-    return uuid;
-};
-
-function setValue(id,value){
-	var node = document.getElementById(id)
-	node.value = value;
-	var event = new Event('input');
-	node.dispatchEvent(event);
-}
-
-document.getElementById('apiKey').value = generateUUID();
-document.getElementById('securityKey').value = generateUUID();
-
-</script>
-
-   <script>
-  //   localStorage.removeItem('organization_id');
-  //   localStorage.removeItem('apiKey');
-  //   localStorage.removeItem('securityKey');
-   </script>
-  
-  <script>
-    var config = {
-      apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-      securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
-      organization_Id: '5de0387b12e200ea63204d6c'
-    }
-  </script>
-  
-  <!--CoCreateJS-->
-  <!--<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>-->
-  <!--<script src="https://server.cocreate.app/js/CoCreate-industry.js"></script>-->
-	<!--<script src="./js/CoCreate-filter.js"></script>-->
-	<script src="./js/CoCreate.min.js"></script>
-
-	<!--<script src="./js/CoCreate-templating.js"></script>-->
-  <script src="./js/CoCreate-industry.js"></script>
-  
-  
+			CoCreateAction.registerEvent('registerBtn', null, window, 'fetchedUsersCurrentOrg')
+			CoCreateAction.registerEvent('industryBtn', buildIndustryRequest, window, 'buildIndustry')
+		</script>  
 
 
-</body>
-
+	</body>
 </html>

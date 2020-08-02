@@ -1,6 +1,6 @@
 /* Horizontial scroll menu */
 ul.h-scroll {
-  overflow-x: scroll;
+  overflow:x: scroll;
   list-style: none;
   display: flex;
   direction:rtl;

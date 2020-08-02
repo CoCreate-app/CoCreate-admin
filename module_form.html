@@ -17,25 +17,25 @@
   
   <body>
   <div id="modal-viewport" class="hidden"></div>
-    <div class="nav display-flex align-items-center bg-light-gray"
+    <div class="nav display:flex align-items:center bg:light-gray"
       data-main_content_id="content" 
       data-nav_effect="sticky-nav" 
       data-nav_scroll="200">
       
-      <ul class="cocreate-scroll display-inline-flex direction-rtl font-size-20px align-items-center list-style-type-none width-100-percent height-50px">
-  			<li class="margin-right-15px">
+      <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
+  			<li class="margin-right:15px">
   			  <a class="btn-modal-close"><i class="fas fa-times"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a class="btn-modal-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a class="fs-toggle"><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
   			</li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
 			    <a target="modal" href="render.html"
           	 data-pass_collection="modules"
           	 data-pass_document_id="" 
@@ -52,7 +52,7 @@
 						 </div>
           </a>
         </li>
-  			<li class="margin-right-15px">
+  			<li class="margin-right:15px">
   			  <a data-collection="modules" 
   			    data-document_id="" 
   			    data-pass_id="form-fields" 
@@ -64,7 +64,7 @@
     </div>
     
 		<div class="cocreate-container padding-10px" data-main_content_id="content">
-      <form data-collection="modules" class="margin-bottom-75px" id="form">
+      <form data-collection="modules" class="margin-bottom:75px" id="form">
         <input type="text" data-document_id="" name="name" id="name" placeholder="Name" data-pass_id="form-fields" class="floating-label"/>
         <input type="text" data-document_id="" name="description" id="description" placeholder="Description" data-pass_id="form-fields" class="floating-label"/>
         <input type="text" data-document_id="" name="icon" id="icon" placeholder="Icon" data-pass_id="form-fields" class="floating-label"/>
@@ -73,7 +73,7 @@
  
         <div id="saveFetchhtml" class="domEditor" name='html-page' data-collection="modules" data-document_id="" data-pass_id="form-fields" data-broadcast="false">
           <div class="Sortable" data-group_name="html-page">
-            <div id="html-page" class="card padding-5px template">
+            <div id="html-page" class="card padding:5px template">
               
               <input data-pass_id="form-fields" data-document_id="" name="clone-name" id="clone-name" placeholder="View Name" class="input_field" placeholder="View Name" data-pass_value_id="view-name">
               <a data-clone_id="html-page" class="deleteBtn noDrag card-deleteBtn"><i class="fas fa-times"></i></a>
@@ -96,17 +96,17 @@
         </div>
       
         <input type="text" id="prefix" placeholder="View Name"  data-pass_value_to="view-name" class="floating-label">
-        <a class="passValueBtn position-relative bottom-28px right-12px float-right z-index-5" data-show_id="#module-templates" data-hide_id='#form'><i class="far fa-plus-square"></i></a>
+        <a class="passValueBtn position:relative bottom:28px right-12px float:right z-index:5" data-show="#module-templates" data-hide='#form'><i class="far fa-plus-square"></i></a>
           
-        	<a class="submitBtn position-fixed bottom-15px right-15px bg-blue grow-hover round padding-15px"><i class="far fa-save"></i></a>
+        	<a class="submitBtn position:fixed bottom:15px right:15px bg:blue grow-hover round padding:15px"><i class="far fa-save"></i></a>
 
       </form>
                   
 
       <!-- Module form templates to pass value and create clone -->
       <div class="hidden"  id="module-templates">
-        <div class="height-20px"><i class="fas fa-times float-right"  data-show_id="#form" data-hide_id='#module-templates'></i></div>
-          <div id="example" class="template-wrapper display-flex flex-wrap-wrap" data-template_id="template1"
+        <div class="height-20px"><i class="fas fa-times float:right"  data-show="#form" data-hide='#module-templates'></i></div>
+          <div id="example" class="template-wrapper display:flex flex-wrap:wrap" data-template_id="template1"
             data-fetch_collection="module_activity"
             data-fetch_module="5de2e051969d586107043fd8"
             data-pass_to="me1234" 
@@ -115,8 +115,8 @@
             data-order_by="name" 
             data-order_type="asc">
                 
-              <div class="card template min-width-250px flex-grow-1 margin-10px-lr margin-10px-tb box-shadow-hover" data-template_id="template1">
-                <div class="position-relative">
+              <div class="card template min-width-250px flex-grow:1 margin:10px-lr margin:10px-tb box-shadow-hover" data-template_id="template1">
+                <div class="position:relative">
                   <!--<span data-collection="module_activity" name="image" data-document_id="" passed_id="me1234"></span>-->
                   <img data-collection="module_activity" data-document_id="" name="image" data-pass_id="me1234" src="https://via.placeholder.com/150" width="100%"></img>
                
@@ -132,18 +132,18 @@
                     data-pass_value_to="templateHtml">
                   </textarea>
                   
-                  <!--<span class="passValueBtn cardButton right blue"><a class="show_hide" data-show_id="#form" data-hide_id='#module-templates'><i class="fas fa-plus"></i></a></span>-->
-                  <span class="passValueBtn font-size-20px position-absolute bg-blue round float-right bottom-minus-15px right-20px grow-hover">
+                  <!--<span class="passValueBtn cardButton right blue"><a class="show_hide" data-show="#form" data-hide='#module-templates'><i class="fas fa-plus"></i></a></span>-->
+                  <span class="passValueBtn font-size:20px position:absolute bg:blue round float:right bottom-minus-15px right-20px grow-hover">
                     <a data-clone_id="html-page" 
                     data-clone_name="prefix" 
-                    data-show_id="#form" 
-                    data-hide_id='#module-templates' 
+                    data-show="#form" 
+                    data-hide='#module-templates' 
                     class="cloneBtn show_hide">
                       <i class="fas fa-plus"></i></a>
                   </span>
                   
                 </form>
-                  <div class="position-absolute bottom-5px width-100-percent padding-10px-lr font-size-25px color-white bg-black opacity-04">
+                  <div class="position:absolute bottom-5px width:100% padding-10px-lr font-size:25px color:white bg:black opacity:04">
                     <span data-collection="module_activity" data-document_id="" name="name" data-pass_id="me1234">Template Name</span>
                   </div>
                 </div>

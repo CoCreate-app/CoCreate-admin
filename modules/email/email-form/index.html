@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+    <title>Module Views Form | CoCreate</title>
+    
+    <link rel=stylesheet href="https://codemirror.net/lib/codemirror.css"  async defer>
+    <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+    <!--<link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />-->
+    <link rel="stylesheet" href="https://server.cocreate.app/CoCreate-components/CoCreate-flip-item/CoCreate-flip-item.css" type="text/css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+  </head>
+
+
+ <style type="text/css">
+.email-toolbar i {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.maincontent{height: calc(100vh - 70px);}
+</style> 
+
+
+  <body>
+    <!-- Navbar  -->
+    <div data-main_content_id="" class="nav display:flex align-items:center bg:light-gray position:fixed top:0">
+      <!--<a href="#" class="logo">Navbar</a>-->
+      
+        <!-- Menu Icon Animations -->
+        <a aria-label="mobile menu" class="nav-toggle menu_icon--hamburger" data-toggle_sidenav="menuL">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        
+        <!-- Horizontal Scroll Nav/Tabs -->
+        <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center width:100%">
+        			
+        	<!-- Fullscreen toogle and icon transform -->
+        	<li>
+        		<a class="fs-toggle margin-right:15px"><i class="fas fa-expand" data-transform_to="fas fa-compress"></i></a>
+        	</li>
+        		
+
+        </ul>
+			
+  			  <!-- Avatar -->
+          <div class="avatar-wrapper margin:5px-tb margin-right:10px">
+    				  <a class="avatar round" data-window_url="render.html" data-pass_collection="modules" data-pass_prefix="" data-pass_module_id="5dd010bccbc25f0cdb1a4d9f" data-pass_to="render" data-window_width="300px" data-window_height="375px" data-window_color="#229954">
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+    			  <div class="avatar-status off"></div>
+  			  </div>
+				
+    </div>
+  	<!-- CoCreate sidenav resizeable container... With id to open by btn... attributes to configure screensize and container effect-->
+  	<div id="menuL" class="cocreate-sidenav bg:white margin-top:50px" data-main_content="content" sidenav_default_desktop="expanded" sidenav_default_tablet="collapsed" sidenav_default_phone="offCanvas">
+      <ul class="cocreate-menu border-bottom border-color:extra-medium-gray">
+    	  <li class="menuItem font-size:20px">
+    			<a data-window_url="compose.html">
+      		  <span><i class="fas fa-plus"></i></span>
+      		  <span>Compose</span>
+      		</a>
+    	  </li>
+      </ul>
+      <ul class="cocreate-menu cocreate-scroll vh-120 bottom-10 color-medium-gray">
+    	  <li class="menuItem">
+    			<a data-window_url="settings.html">
+      		  <span><i class="fas fa-inbox"></i></span>
+      		  <span>Inbox</span>
+  					<span class="cocreate-badge badge-danger line-height:1">4</span>
+      		</a>
+    	  </li>
+    	  <li class="menuItem">
+      		<a href="signin.html">
+      		  <span><i class="fas fa-paper-plane"></i></span>
+      		  <span>Sent</span>
+      		</a>
+    	  </li>
+      </ul>	
+      <div class="resizeHandler"></div>
+    </div>
+
+  <!-- container -->
+  	<div class="vh-60 border-lr border-color:extra-medium-gray color-dark-gray maincontent" id="modal-viewport" data-main_content_id="content">
+  	  <div class="email-toolbar display:flex align-items:center height-70px font-size:20px  border-bottom border-color:extra-medium-gray">
+        <label class="checkbox padding-right:10px margin-left:20px">
+          <input type="checkbox"><span class="mark"></span>
+        </label>
+        <div class="display:flex cocreate-scroll align-items:center direction:ltr">
+          <a><i class="fas fa-download"></i></a>
+          <a><i class="fas fa-info-circle"></i></a>
+          <a><i class="fas fa-trash"></i></a>
+          <span class="padding-10px-lr"></span>
+          <a><i class="fas fa-envelope-open-text"></i></a>
+          <a><i class="fas fa-clock"></i></a>
+          <span class="padding-10px-lr"></span>
+          <a><i class="fas fa-arrow-alt-circle-right"></i></a>
+          <a><i class="fas fa-bookmark"></i></a>
+        </div>
+  	  </div>
+		  <!--<div class="padding-10px border-bottom border-color:extra-medium-gray">-->
+		  <!--  <input class="floating-label" data-module_activity_id="5d8c79e7e4be424681b5e48d" name="emailname"  placeholder="Search Inbox">-->
+		  <!--</div>-->
+		  
+		  <div class="menu-content cocreate-scroll">
+		    
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+		    <div class="display:flex align-items-flex-start cursor-pointer padding-10px border-bottom border-color:extra-medium-gray">
+        <!-- avatar with flip container for selecting avatar -->
+          <div class="avatar-wrapper">
+            <div class="flip-container">
+              <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+    				  <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules" >
+        				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+        				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+        				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+        				</span>
+        			</a>
+        		</div>
+  			  </div>
+  			  
+  			  <div class="flex-grow:1 padding-left:10px">
+  		      <div class="display:flex justify-content-space-between ">
+  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="no-margin">09:24 AM</p>
+  		      </div>
+  		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+  		      <span class="cocreate-badge badge-danger">4</span>
+  		    </div>
+		    </div>
+
+  	</div>
+  	
+    
+  	<!-- CoCreate sidenav resizeable container... With id to open by btn... attributes to configure screensize and container effect-->
+  	<div id="menuR" class="cocreate-sidenav sidenav-right bg:white margin-top:50px color-dark-gray" expandOnHover="false" data-main_content="content" sidenav_default_desktop="expanded" sidenav_default_tablet="expanded" sidenav_default_phone="ofCanvas">
+      <!--<div class="email-container">-->
+        <div class="email-toolbar display:flex align-items:center height-70px justify-content-flex-end padding-15-tb font-size:14px border-bottom border-color:extra-medium-gray">
+          <a><i class="fas fa-arrows-alt-v"></i></a>
+          <a><i class="fas fa-print"></i></a>
+          <a><i class="fas fa-sign-out-alt"></i></a>
+
+          <div>1 of 189</div>
+          <a><i class="fas fa-chevron-left"></i></a>
+          <a><i class="fas fa-chevron-right"></i></a>
+          <a><i class="fas fa-cog"></i></a>
+        </div>
+        <div class="padding-15px-lr">
+          <div class="display:flex align-items:center justify-content-space-between padding:15px-tb border-bottom border-color:extra-medium-gray">
+            <h2 class="no-margin-tb">New messagees from Brenda Elisa G. <div class="cocreate-badge badge-danger font-size:12px">Inbox<i class="fas fa-times padding-left:10px"></i></div></h2>
+          </div>
+          <div class="display:flex padding:15px-tb">
+            <div class="avatar-wrapper">
+      				  <a class="avatar round" data-window_url="render.html" data-pass_collection="modules" data-pass_prefix="" data-pass_module_id="5dd010bccbc25f0cdb1a4d9f" data-pass_to="render" data-window_width="300px" data-window_height="375px" data-window_color="#229954">
+          				<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+          				<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+          				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+          				</span>
+          			</a>
+    			  </div>
+            <div class="display:flex justify-content-space-between flex-grow:1 padding-left:10px">
+              <div class="">
+                <div class="font-bold">Brenda Elisa G. via Freelancer <span class="font-noBold font-size:12px ">messages@xxx.freelancer.com</span></div>
+                <div class="font-size:12px">to Frank 9:11 AM (3 hours age)</div>
+              </div>
+              <div class="font-size:14px display:flex flex-wrap:wrap-wrap-reverse height:50px">
+                <a><i class="far fa-star padding-10px-lr"></i></a>
+                <a><i class="fas fa-reply padding-10px-lr"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="padding-50px-left">Main Information</div>
+        </div>
+      <!--</div>-->
+
+		  <div class="resizeHandler"></div>
+    </div>
+        
+		          	<a class="submitBtn position:fixed bottom:15px right:15px bg:blue grow-hover round"><i class="fas fa-plus"></i></a>
+
+    <script>
+      var config = {
+        apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+        securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+        organization_Id: '5de0387b12e200ea63204d6c'
+      }
+    </script>
+   
+    <!--<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>-->
+  
+    <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-select.js"></script>
+    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-modal/src/CoCreate-modal.js"></script>
+
+  <!--CoCreate Plugins-->
+  <script src="https://cdn.cocreate.app/CoCreate-modal.js"></script>
+    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-flip-item/CoCreate-flip-item.js"></script>
+
+  <script>
+
+	 // var flipItem = document.getElementsByClassName("avatar-wrapper");
+
+  //   var myFunction = function() {
+  //     //. remove action
+  //     var flipNode = this.querySelector(".flip-container");
+  //     console.log(flipNode);
+  //     if (this.classList.contains("active")) {
+  //       this.classList.remove("active");
+  //       flipNode.classList.remove("active");  
+  //     } else { //. selected action
+  //       this.classList.add("active");
+  //       flipNode.classList.add("active");  
+  //     }
+  //   };
+    
+  //   for (var i = 0; i < flipItem.length; i++) {
+  //       flipItem[i].addEventListener('click', myFunction, false);
+  //   }
+	  
+  </script>
+
+
+  </body>
+</html>

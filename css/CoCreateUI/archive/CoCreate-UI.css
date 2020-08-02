@@ -125,7 +125,7 @@ a:hover, a :focus {
 .vh-100{
   height:calc(100vh - 100px)!important;
 }
-.mbottom-75{
+.margin-bottom:75px{
   margin-bottom: 75px;}
 
 /* CoCreate Badges */
@@ -206,7 +206,7 @@ a:hover, a :focus {
 	color: white;
 	display:block;
   z-index: 999;
-  overflow-y: hidden;
+  overflow:y: hidden;
   will-change: transform;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -342,7 +342,7 @@ a:hover, a :focus {
   display: inline-block;
   /*height: 40px;*/
 }
-.float-right{
+.float:right{
   float:right;
   width:45px;
 }
@@ -468,7 +468,7 @@ CoCreate Navbar: Show/Hide Nav on Scroll
 
 /* Horizontial scroll menu */
 ul.h-scroll {
-  overflow-x: scroll;
+  overflow:x: scroll;
   list-style: none;
   display: flex;
   direction:rtl;

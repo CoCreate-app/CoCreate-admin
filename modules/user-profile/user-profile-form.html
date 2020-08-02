@@ -60,12 +60,12 @@
 			 </ul>
     </div>
 		<div class="cocreate-container" data-main_content_id="content">
-      <form data-real_time="true" data-collection="users" data-form_id="organization-form" class="mbottom-75">
-        <input type="text" data-module_id="" name="name" id="name" placeholder="Name" class="floating-label_field sessionUser_Id"/>
-        <input type="text" data-module_id="" name="description" id="description" placeholder="Description" class="floating-label_field sessionUser_Id"/>
-        <input type="text" data-module_id="" name="profile_image" id="profile_image" placeholder="Profile Image" class="floating-label_field sessionUser_Id"/>
+      <form data-real_time="true" data-collection="users" data-form_id="organization-form" class="margin-bottom:75px">
+        <input type="text" data-document_id="" name="name" id="name" placeholder="Name" class="floating-label_field sessionUser_Id"/>
+        <input type="text" data-document_id="" name="description" id="description" placeholder="Description" class="floating-label_field sessionUser_Id"/>
+        <input type="text" data-document_id="" name="profile_image" id="profile_image" placeholder="Profile Image" class="floating-label_field sessionUser_Id"/>
 
-        <div class="select--field floating-label_field sessionUser_Id" name="connected_orgs" data-collection="users" data-module_id="" placeholder="Connected Orgs" multiple>
+        <div class="select--field floating-label_field sessionUser_Id" name="connected_orgs" data-collection="users" data-document_id="" placeholder="Connected Orgs" multiple>
             <input placeholder="Search">
             <ul class="selectable--list cocreate-scroll">
         			<li class="selectable"></li>
@@ -73,7 +73,7 @@
           </div>
          
          <!-- current-org -->
-          <input type="text" data-module_id="" name="current_org" class="floating-label_field sessionUser_Id" data-get_value="org_id" placeholder="Current Org">
+          <input type="text" data-document_id="" name="current_org" class="floating-label_field sessionUser_Id" data-get_value="org_id" placeholder="Current Org">
 
 
 
@@ -92,7 +92,7 @@
   </script>
 
   <!--CoCreateJS-->
-  <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
+  <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
 
   <!--CoCreate Plugins-->
   <script src="https://cdn.cocreate.app/CoCreate-window.js"></script>

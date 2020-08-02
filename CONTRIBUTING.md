@@ -26,15 +26,6 @@ git pull upstream master
 git checkout -b my-feature-branch
 ```
 
-## Bundle Install and Test
-
-Ensure that you can build the project and run tests.
-
-```
-bundle install
-bundle exec rake
-```
-
 ## Write Tests
 
 Try to write a test that reproduces the problem you're trying to fix or describes a feature that you want to build.

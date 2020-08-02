@@ -37,7 +37,7 @@
     position: absolute;
     background-color: #fff;
     width: 100%;
-    overflow-y: auto;
+    overflow:y: auto;
     left: 0;
     /*top:0px;*/
     top: 100%;
