@@ -18,8 +18,8 @@
  <style type="text/css">
  
     ul.cocreate-menu > :nth-last-child(2) {
-      margin-top: auto;
-      /*border-top: 1px solid #ddd!important;}*/
+      /*margin-top: auto;*/
+      border-top: 1px solid #ddd!important;
       min-height:40px;
     }
     ul.cocreate-menu > :nth-last-child(1) {
@@ -124,7 +124,7 @@
   	<div class="cocreate-container height:100vh margin-top:10px" data-main_content_id="content"></div>
     
     <!-- SideNav  -->
-  	<div id="menuL" class="cocreate-sidenav bg:medium-light-gray" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="collapsed">
+  	<div id="menuL" class="cocreate-sidenav bg:medium-light-gray height:100vh" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="collapsed">
         
         <!-- Select to change organizations  -->
         <cocreate-select class="remove-none padding:0 border:none sessionUser_Id" 
@@ -132,13 +132,13 @@
           data-collection="users" 
           data-document_id="">
           
-          <input placeholder="Search" data-engine-id="idEngine1" style="height:0px">
+          <input placeholder="Search" data-template_id="gine1">
          
           <ul class="template-wrapper-array selectable--list cocreate-menu cocreate-scroll sessionUser_Id"
             data-fetch_collection="users" 
             data-fetch_name="connected_orgs" 
             data-template_id="fetcharray1" 
-            data-pass_to="me1234" id="idEngine1">
+            data-pass_to="me1234">
       			
       			<li class="template selectable height:50px margin:0" id="fetcharray1" data-pass_id="me1234" data-collection="organizations">
               <span class="logo-icon"><img data-collection="organizations" data-document_id="" name="logo" data-pass_id="me1234" src="https://server.cocreate.app/images/cocreate.png" height="40px"alt="..."></span>
@@ -177,75 +177,74 @@
 			
 			<!--<input type="hidden" data-template_id="template1" data-filter_name="menu-position" data-filter_value="3,4" data-value_type="number" data-filter_operator="nin">-->
 			<!--<div data-template_id="template1" data-filter_name="menu-position" data-filter_value="0" data-value_type="number" data-filter_operator="ne"></div>-->
-			<div class="padding-right:5px">
+			<div class="padding-right:5px padding-bottom:5px">
 
-			<ul class="cocreate-menu cocreate-scroll vh-120 bottom:10px  margin-right:5px">
-			  <div data-fetch_collection="modules" 
-			     data-order_by="menu-position" 
-           data-order_type="asc"
-		       data-template_id="template1"
-		       data-pass_to="me1234" 
-		       
-		       data-filter_name="menu-position" 
-		       data-filter_value="0" 
-		       data-value_type="number" 
-		       data-filter_operator="$ne">
-
-  			  <li class="template menuItem" id="template1">
-  				  <a target="modal" href="module_activity_datatable.html"
-  				     data-pass_collection="modules"
-  				     data-pass_document_id=""
-  				     data-pass_fetch_value=""
-  				     data-pass_prefix=""
-  				     data-pass_to="render"
-  				     data-modal_width="600px"
-  				     data-modal_height="100%"
-  				     data-modal_color="#229954"
-  				     data-modal_header="false"
-  				     data-modal_x=""
-  				     data-modal_y="">
-  				    <span data-document_id="" name="icon" data-pass_id="me1234"></span><span data-document_id="" name="name" data-pass_id="me1234" ></span>
-  				    <div data-pass_collection="module_activity" data-pass_document_id="" data-pass_to="datatable"></div>
-		         </a>
-    				  <div class="float:right">
-    				    <a target="modal" href="module_activity_form.html" 
-      				    data-pass_collection="modules"
-      				    data-pass_document_id=""
-      				    data-pass_prefix="form_"
-      				    data-pass_to="render" 
-      				    data-modal_width="320px" 
-      				    data-modal_height="100%"
-      				    data-modal_header="false"
-      				    data-modal_color="#229954"><i class="fas fa-plus"></i>
-    				    </a>
-    				  </div>
-  				  </li>
-  			  </div>
-  			  
-      	  <li class="menuItem">
-      			<a target="modal" href="settings.html" 
-      			data-pass_collection="modules" 
-      			data-pass_document_id="" 
-      			data-pass_prefix="form_" 
-      			data-pass_to="render" 
-      			data-modal_width="250px" 
-      			data-modal_height="100%" 
-      			data-modal_color="#229954" 
-      			data-modal_x="0" 
-      			data-modal_y="0" 
-      			data-modal_header="false">
-        		  <span><i class="fas fa-cogs"></i></span>
-        		  <span>Settings</span>
-  					<span class="cocreate-badge danger line-height:1">4</span>
-        		</a>
-      	  </li>
-      	  <li class="menuItem">
-        		<a href="signin.html" class="logoutBtn">
-        		  <span><i class="fas fa-sign-out-alt"></i></span>
-        		  <span>Logout</span>
-        		</a>
-      	  </li>
-      </ul>
+  			<ul class="cocreate-menu cocreate-scroll height:85vh bottom:10px margin-right:5px">
+  			  <div data-fetch_collection="modules" 
+  			     data-order_by="menu-position" 
+             data-order_type="asc"
+  		       data-filter_name="menu-position" 
+  		       data-filter_value="0" 
+  		       data-filter_value_type="number" 
+  		       data-filter_operator="$ne"
+  		       data-template_id="template1"
+  		       data-pass_to="me1234">
+  
+    			  <li class="template menuItem" id="template1">
+    				  <a target="modal" href="module_activity_datatable.html"
+    				     data-pass_collection="modules"
+    				     data-pass_document_id=""
+    				     data-pass_fetch_value=""
+    				     data-pass_prefix=""
+    				     data-pass_to="render"
+    				     data-modal_width="600px"
+    				     data-modal_height="100%"
+    				     data-modal_color="#229954"
+    				     data-modal_header="false"
+    				     data-modal_x=""
+    				     data-modal_y="">
+    				    <span data-document_id="" name="icon" data-pass_id="me1234"></span><span data-document_id="" name="name" data-pass_id="me1234" ></span>
+    				    <div data-pass_collection="module_activity" data-pass_document_id="" data-pass_to="datatable"></div>
+  		         </a>
+      				  <div class="float:right">
+      				    <a target="modal" href="module_activity_form.html" 
+        				    data-pass_collection="modules"
+        				    data-pass_document_id=""
+        				    data-pass_prefix="form_"
+        				    data-pass_to="render" 
+        				    data-modal_width="320px" 
+        				    data-modal_height="100%"
+        				    data-modal_header="false"
+        				    data-modal_color="#229954"><i class="fas fa-plus"></i>
+      				    </a>
+      				  </div>
+    				  </li>
+    			  </div>
+    			  
+        	  <li class="menuItem">
+        			<a target="modal" href="settings.html" 
+        			data-pass_collection="modules" 
+        			data-pass_document_id="" 
+        			data-pass_prefix="form_" 
+        			data-pass_to="render" 
+        			data-modal_width="250px" 
+        			data-modal_height="100%" 
+        			data-modal_color="#229954" 
+        			data-modal_x="0" 
+        			data-modal_y="0" 
+        			data-modal_header="false">
+          		  <span><i class="fas fa-cogs"></i></span>
+          		  <span>Settings</span>
+    					<span class="cocreate-badge danger line-height:1">4</span>
+          		</a>
+        	  </li>
+        	  <li class="menuItem">
+          		<a href="signin.html" class="logoutBtn">
+          		  <span><i class="fas fa-sign-out-alt"></i></span>
+          		  <span>Logout</span>
+          		</a>
+        	  </li>
+        </ul>
       </div>
 		    <div class="resizeHandler"></div>
     </div>
