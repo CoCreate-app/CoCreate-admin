@@ -1,38 +1,12 @@
 <html>
 <head>
 
-  <link href="https://cocreate.app/css/CoCreateUI.min.css" rel="stylesheet">
+  <link href="https://server.cocreate.app/css/CoCreate.min.css" rel="stylesheet">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/99ba925095.js"></script> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-<style>
-  .stage{
-    background-color:gray;
-    margin:15px;
-    padding-top:10px;
-  }
-  .card{
-    background-color:beige;
-        margin:15px;
-        min-height:100px;
-
-  }
-  .item-row{
-    background-color:lightgray;
-        margin:15px;
-
-  }
-
-span {
-    display: inline-block;
-
-}
-    .flex-item{
-      flex-grow:1;
-    }
-</style>
 </head>
 <body>
 
@@ -41,18 +15,19 @@ span {
 
                         <form class="Sortable" data-group_name="item-row" data-collection="module_activity" id="testForm">
                          
-                          <div id="item-row" style="" class="template item-row flex-container">
+                          <div id="item-row" style="" class="template display:flex flex-wrap:wrap">
                             <!--<div style="float:right;"><a data-clone_id="item-row" class="deleteBtn noDrag"><i class="fas fa-times"></i></a></div>-->
-                            
-                            <input class="max-width:75px flex-item floating-label_field" data-module_activity_id="" name="Item" placeholder="Item#"/>
-                            <input class="item-name flex-item floating-label_field" data-module_activity_id="" name="name" placeholder="Item Name">
-                            <div class="flex-item flex-container">
-                              <input class="max-width:75px flex-item floating-label_field" data-module_activity_id="" name="qty" placeholder="Qty">
-                              <input class="max-width:100px flex-item floating-label_field" data-module_activity_id="" name="price" placeholder="Price"/>
-                              <input class="max-width:100px flex-item floating-label_field" data-module_activity_id="" name="total" placeholder="Total">
+                            <div class="display:flex min-width:50%">
+                              <input class="max-width:75px flex-grow:1 floating-label" data-module_activity_id="" name="Item" placeholder="Item#"/>
+                              <input class="item-name flex-grow:1 floating-label" data-module_activity_id="" name="name" placeholder="Item Name">
+                            </div>
+                            <div class="display:flex min-width:50%">
+                              <input class="min-width:75px flex-grow:1 floating-label" data-module_activity_id="" name="qty" placeholder="Qty">
+                              <input class="min-width:100px flex-grow:1 floating-label" data-module_activity_id="" name="price" placeholder="Price"/>
+                              <input class="min-width:100px flex-grow:1 floating-label" data-module_activity_id="" name="total" placeholder="Total">
                             </div>
                             <div>
-                            <!--<input class="item-description floating-label_field" data-module_activity_id="" name="description"  placeholder="Description"/>-->
+                            <!--<input class="item-description floating-label" data-module_activity_id="" name="description"  placeholder="Description"/>-->
                             </div>
                           </div>
                        

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-    <title>Items Datatable | CoCreate</title>
+    <title>Datatables | CoCreate</title>
   
     <!-- CoCreateCSS -->
     <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
@@ -150,8 +150,8 @@
         </tr>
 
         <tbody
-			    data-fetch_collection="module_activity" 
-			    data-fetch_name="module_id"
+          data-fetch_collection="organizations"
+          data-fetch_name="" 
           data-fetch_value=""
           data-fetch_value_type="or"
           data-fetch_count=""
@@ -211,7 +211,7 @@
   	</div>
 
 	  <button target="modal" href="render.html" 
-       data-pass_collection="module_activity"
+	     data-pass_collection="modules"
 	     data-pass_document_id=""
 	     data-pass_prefix="form_"
 	     data-pass_to="render"
@@ -219,15 +219,10 @@
 	     data-modal_height="100%"
 	     data-modal_color="#229954"
 	     class="position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover border-radius:50% z-index:8" data-pass_id="render">
-	      <i class="fa fa-plus"></i>
-	   <div data-pass_collection="modules"
-		   data-pass_document_id=""
-	     data-pass_prefix="form_"
-		   data-pass_to="render"
-		   data-pass_id="render">
-  	  </div>
+	    <i class="fa fa-plus"></i>
 		</button>
-
+  
+    
     <script>
       var config = {
         apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
