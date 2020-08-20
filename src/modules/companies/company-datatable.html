@@ -6,29 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-    <title>Company Datatable | CoCreate</title>
+    <title>Datatables | CoCreate</title>
   
     <!-- CoCreateCSS -->
     <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />  
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" crossorigin="anonymous" />  
   </head>
-  <style>
-  tbody > tr:hover {
-    background:#fafafa;  
-  }
-  th, td {
-    border-bottom: 1px solid #e0e0e0;
-  }
-  </style>
-  <body class="width:fit-content">
+  
+  <body class="width:fit-content cocreate-scroll">
     <!-- Navbar -->
-    <div class="nav display:flex align-items:center width:100vw bg:light-gray position:sticky left:0" 
-      data-main_content_id="content" 
-      data-scroll_effect="hide-nav" 
-      data-scroll_position="50">
+    <div class="nav display:flex align-items:center bg:light-gray position:sticky left:0 width:100vw" 
+      data-main_content_id="content"
+      data-scroll_effect="hide-nav"
+      data-scroll_up="1" 
+      data-scroll_down="1">
 
       <!-- Menu Icon Animations -->
       <a class="nav-toggle menu_icon--Vdots" data-toggle_sidenav="menuL">
@@ -55,7 +48,7 @@
   			
   			<!-- fullscreen toogle and icon transform-->
   			<li class="margin-right:15px">
-  			  <a class="fs-toggle"><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
+  			  <a data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
   			</li>
   			
   			<!-- Render Builder -->
@@ -103,13 +96,13 @@
   			  <a data-btn_type="column-visibility" data-template_id="datatable"><i class="far fa-eye"></i></a>
   			</li>
   			<li class="margin-right:15px">
-  			  <a data-backup_type="export" data-export_type="csv"  data-template_id="datatable"><i class="fas fa-file-csv"></i></a>
+  			  <a data-export_type="csv" data-template_id="datatable"><i class="fas fa-file-csv"></i></a>
   			</li>
   			<li class="margin-right:15px">
-  			  <a data-backup_type="export" data-export_type="json"><i class="fas fa-eye"></i></a>
+  			  <a data-export_type="json" data-template_id="datatable"><i class="fas fa-file-download"></i></a>
   			</li>
   			<li class="margin-right:15px">
-  			  <a  data-backup_type="import" data-template_id="datatable"><i class="fas fa-eye"></i></a>
+  			  <a data-import="true" data-template_id="datatable"><i class="fas fa-file-upload"></i></a>
   			</li>
   			<li class="margin-right:15px">
   			  <a data-btn_type="copy" data-template_id="datatable"><i class="far fa-copy"></i></a>
@@ -121,42 +114,44 @@
 			 </ul>
     </div>
       
-    <!-- Main Content with Modal Viewport -->  
+    <!-- Modal Viewport -->  
     <div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
-    <div data-main_content_id="content">
-      <table class="width:100%">
-            <tr>
-              <td class="position:relative name min-width:300px position:sticky top:0 bg:white padding:10px padding-top:0">
-        		  <input type="text" class="floating-label"
-               	  data-filter_name="name" 
-               	  data-value_type="string"
-               	  data-filter_operator=""
-       			      data-template_id="datatable" 
-               	  placeholder="Name">
-                  <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6" >
-                    <a data-order_by="name" value="desc" data-template_id="datatable" data-show="#asc1" data-hide="#sort1" id="sort">
-                      <i class="fas fa-sort"></i>
-                    </a>
-                  </span>
-              </td>
-              <td class="position:relative min-width:300px position:sticky top:0 bg:white padding:10px padding-top:0">
-          		  <input type="text" class="floating-label"
-               	  data-filter_name="_id" 
-               	  data-value_type="string"
-               	  data-filter_operator=""
-       			      data-template_id="datatable" 
-               	  placeholder="Document_id"/>
-                  <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6" >
-                    <a data-order_by="name" value="desc" data-template_id="datatable" data-show="#asc" data-hide="#sort" id="sort">
-                      <i class="fas fa-sort"></i>
-                    </a>
-                  </span>
-              </td>
-            </tr>
+   
+    <!-- Main Content -->  
+    <div data-main_content_id="content" class="padding:5px">
+      <table class="width:100% border-collapse:collapse">
+        <tr class="border-bottom:1px_solid_darkgray">
+          <td class="position:sticky top:0 bg:white padding-top:0 padding:10px ">
+    		    <input type="text" class="floating-label"
+           	  data-filter_name="name" 
+           	  data-value_type="string"
+           	  data-filter_operator=""
+   			      data-template_id="datatable" 
+           	  placeholder="Module Name">
+              <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
+                <!-- need a solution to update toggle value="desc|asc" and define and upadte icons... show hide works great but to much html and orderby only has 2 values -->
+                <a data-order_by="name" data-toggle_order data-template_id="datatable">
+                  <i></i>
+                </a>
+              </span>
+          </td>
+          <td class="position:sticky top:0 bg:white padding:10px padding-top:0">
+      		  <input type="text" class="floating-label"
+           	  data-filter_name="_id" 
+           	  data-value_type="string"
+           	  data-filter_operator=""
+   			      data-template_id="datatable" 
+           	  placeholder="Document_id"/>
+              <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6" >
+                <a data-order_by="_id" value="" data-toggle_order="true" data-template_id="datatable">
+                </a>
+              </span>
+          </td>
+        </tr>
 
         <tbody
-          data-fetch_collection="users"
-          data-fetch_name="" 
+			    data-fetch_collection="module_activity" 
+			    data-fetch_name="module_id"
           data-fetch_value=""
           data-fetch_value_type="or"
           data-fetch_count=""
@@ -165,11 +160,11 @@
           data-template_id="datatable"
           data-pass_to="me1234">
           
-          <tr class="template border:bottom">
+          <tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray">
   					<td class="padding:10px">
   					  <div class="min-width:200px">
     					  <div class="icon-wrapper">
-    						  <span data-document_id="" name="icon"></span>
+    						  <span data-pass_id="me1234" name="icon"></span>
     					  </div>
     					  <div>
       						<a data-window_url="render.html" 
@@ -179,7 +174,7 @@
       						   data-pass_to="form-fields" 
       						   data-modal_width="320px" 
       						   data-modal_color="#229954">
-      						  <h4 data-pass_id="me1234" name="name" class="noMargins">Name</h4>
+      						  <h4 data-pass_id="me1234" name="name">Name</h4>
       						  <div data-pass_collection="modules"
           						   data-pass_document_id=""
       						       data-pass_prefix="form_"
@@ -188,7 +183,7 @@
       						    
       						  </div>
       						</a>
-      						  <h5 name="description" class="noMargins"></h5>
+      						  <h5 name="description"></h5>
     					  </div>
   					  </div>
   					</td>
@@ -216,18 +211,23 @@
   	</div>
 
 	  <button target="modal" href="render.html" 
-	     data-pass_collection="modules"
+       data-pass_collection="module_activity"
 	     data-pass_document_id=""
 	     data-pass_prefix="form_"
 	     data-pass_to="render"
 	     data-modal_width="320px" 
 	     data-modal_height="100%"
 	     data-modal_color="#229954"
-	     class="position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover round z-index:8" data-pass_id="render">
-	    <i class="fa fa-plus"></i>
+	     class="position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover border-radius:50% z-index:8" data-pass_id="render">
+	      <i class="fa fa-plus"></i>
+	   <div data-pass_collection="modules"
+		   data-pass_document_id=""
+	     data-pass_prefix="form_"
+		   data-pass_to="render"
+		   data-pass_id="render">
+  	  </div>
 		</button>
-  
-    
+
     <script>
       var config = {
         apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',

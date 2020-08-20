@@ -74,12 +74,39 @@
           placeholder="Name" 
           data-pass_id="form-fields"/>
         
-        <input type="text"  
-          data-document_id="" 
-          name="description"
+			  <input type="text" 
+			    name="email"
           class="floating-label"
-          placeholder="Description" 
-          data-pass_id="form-fields"/>
+			    placeholder="Email" 
+			    data-document_id="" 
+			    data-pass_id="form-fields"/>
+			    
+			  <input type="text" class="floating-label"
+			    name="profile_photo" 
+			    placeholder="Profile Photo" 
+			    data-document_id="" 
+			    data-pass_id="form-fields"/>
+			    
+			  <select type="text" 
+			    data-document_id=""
+			    name="tag"
+          class="floating-label"
+			    placeholder="Status" 
+			    data-pass_id="form-fields">
+			      <option value="tag3">Active</option>
+			      <option value="tag4">InActive</option>
+        </select>
+        
+			  <select multiple
+			    data-document_id=""
+			    name="Type" 
+			    data-pass_id="form-fields" 
+			    class="floating-label">
+			      <option value="Lead">Lead</option>
+			      <option value="Customer">Customer</option>
+			      <option value="Vendor">Vendor</option>
+			   </select>
+
 
         <button class="submitBtn position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover border-radius:50%"><i class="far fa-save"></i></button>
 

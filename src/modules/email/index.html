@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-    <title>Module Views Form | CoCreate</title>
+    <title>Email | CoCreate</title>
     
     <link rel=stylesheet href="https://codemirror.net/lib/codemirror.css"  async defer>
     <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
@@ -22,7 +22,6 @@
   padding-left: 10px;
   padding-right: 10px;
 }
-.maincontent{height: calc(100vh - 70px);}
 </style> 
 
 
@@ -39,11 +38,11 @@
         </a>
         
         <!-- Horizontal Scroll Nav/Tabs -->
-        <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center width:100%">
+        <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center width:100% list-style-type:none">
         			
         	<!-- Fullscreen toogle and icon transform -->
-        	<li>
-        		<a class="fs-toggle margin-right:15px"><i class="fas fa-expand" data-transform_to="fas fa-compress"></i></a>
+        	<li class="margin-right:15px">
+        		<a data-fullscreen><i class="fas fa-expand" data-transform_to="fas fa-compress"></i></a>
         	</li>
         		
 
@@ -62,8 +61,8 @@
 				
     </div>
   	<!-- CoCreate sidenav resizeable container... With id to open by btn... attributes to configure screensize and container effect-->
-  	<div id="menuL" class="cocreate-sidenav bg:white margin-top:50px" data-main_content="content" sidenav_default_desktop="expanded" sidenav_default_tablet="collapsed" sidenav_default_phone="offCanvas">
-      <ul class="cocreate-menu border-bottom border-color:extra-medium-gray">
+  	<div id="menuL" class="cocreate-sidenav bg:white margin-top:50px" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="collapsed" sidenav_default_phone="offCanvas">
+      <ul class="cocreate-menu border-bottom:1px_solid_lightgray">
     	  <li class="menuItem font-size:20px">
     			<a data-window_url="compose.html">
       		  <span><i class="fas fa-plus"></i></span>
@@ -71,7 +70,7 @@
       		</a>
     	  </li>
       </ul>
-      <ul class="cocreate-menu cocreate-scroll vh-120 bottom-10 color-medium-gray">
+      <ul class="cocreate-menu cocreate-scroll vh-120 bottom:10 color:gray">
     	  <li class="menuItem">
     			<a data-window_url="settings.html">
       		  <span><i class="fas fa-inbox"></i></span>
@@ -90,30 +89,30 @@
     </div>
 
   <!-- container -->
-  	<div class="vh-60 border-lr border-color:extra-medium-gray color-dark-gray maincontent" id="modal-viewport" data-main_content_id="content">
-  	  <div class="email-toolbar display:flex align-items:center height:70px font-size:20px  border-bottom border-color:extra-medium-gray">
+  	<div class="border-left:1px_solid_lightgray border-right:1px_solid_lightgray color-dark-gray margin-top:50px height:100vh" data-main_content_id="content">
+  	  <div class="display:flex align-items:center height:70px font-size:20px  border-bottom:1px_solid_lightgray">
         <label class="checkbox padding-right:10px margin-left:20px">
           <input type="checkbox"><span class="mark"></span>
         </label>
         <div class="display:flex cocreate-scroll align-items:center direction:ltr">
-          <a><i class="fas fa-download"></i></a>
-          <a><i class="fas fa-info-circle"></i></a>
-          <a><i class="fas fa-trash"></i></a>
+          <a class="padding:0px_10px"><i class="fas fa-download"></i></a>
+          <a class="padding:0px_10px"><i class="fas fa-info-circle"></i></a>
+          <a class="padding:0px_10px"><i class="fas fa-trash"></i></a>
           <span class="padding:0px_10px"></span>
-          <a><i class="fas fa-envelope-open-text"></i></a>
-          <a><i class="fas fa-clock"></i></a>
+          <a class="padding:0px_10px"><i class="fas fa-envelope-open-text"></i></a>
+          <a class="padding:0px_10px"><i class="fas fa-clock"></i></a>
           <span class="padding:0px_10px"></span>
-          <a><i class="fas fa-arrow-alt-circle-right"></i></a>
-          <a><i class="fas fa-bookmark"></i></a>
+          <a class="padding:0px_10px"><i class="fas fa-arrow-alt-circle-right"></i></a>
+          <a class="padding:0px_10px"><i class="fas fa-bookmark"></i></a>
         </div>
   	  </div>
-		  <!--<div class="padding:10px border-bottom border-color:extra-medium-gray">-->
+		  <!--<div class="padding:10px border-bottom:1px_solid_lightgray">-->
 		  <!--  <input class="floating-label" data-module_activity_id="5d8c79e7e4be424681b5e48d" name="emailname"  placeholder="Search Inbox">-->
 		  <!--</div>-->
 		  
 		  <div class="menu-content cocreate-scroll">
 		    
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -128,15 +127,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -151,15 +150,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -174,15 +173,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -197,15 +196,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -220,15 +219,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -243,15 +242,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -266,15 +265,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -289,15 +288,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -312,15 +311,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -335,15 +334,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -358,15 +357,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -381,15 +380,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -404,15 +403,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -427,15 +426,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -450,15 +449,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -473,15 +472,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -496,15 +495,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -519,15 +518,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -542,15 +541,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -565,15 +564,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -588,15 +587,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -611,15 +610,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -634,15 +633,15 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-		    <div class="display:flex align-items-flex-start cursor-pointer padding:10px border-bottom border-color:extra-medium-gray">
+		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
           <div class="avatar-wrapper">
             <div class="flip-container">
@@ -657,34 +656,40 @@
   			  </div>
   			  
   			  <div class="flex-grow:1 padding-left:10px">
-  		      <div class="display:flex justify-content-space-between ">
-  		        <div class="text-overflow:ellipsis font-weight-600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="no-margin">09:24 AM</p>
+  		      <div class="display:flex justify-content:space-between ">
+  		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+  		        <p class="margin:0px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
   		    </div>
 		    </div>
-
+      </div>
   	</div>
   	
     
   	<!-- CoCreate sidenav resizeable container... With id to open by btn... attributes to configure screensize and container effect-->
-  	<div id="menuR" class="cocreate-sidenav sidenav-right bg:white margin-top:50px color-dark-gray" expandOnHover="false" data-main_content="content" sidenav_default_desktop="expanded" sidenav_default_tablet="expanded" sidenav_default_phone="ofCanvas">
+  	<div id="menuR" class="cocreate-sidenav sidenav-right bg:white margin-top:50px color-dark-gray"
+  	  expandOnHover="false" 
+  	  data-main_content="content" 
+  	  sidenav-default_desktop="expanded" 
+  	  sidenav-default_tablet="expanded" 
+  	  sidenav-default_phone="ofCanvas">
+  	  
       <!--<div class="email-container">-->
-        <div class="email-toolbar display:flex align-items:center height:70px justify-content-flex-end padding-15_0px font-size:14px border-bottom border-color:extra-medium-gray">
-          <a><i class="fas fa-arrows-alt-v"></i></a>
-          <a><i class="fas fa-print"></i></a>
-          <a><i class="fas fa-sign-out-alt"></i></a>
+        <div class="display:flex align-items:center height:70px justify-content:flex-end padding-15_0px font-size:14px border-bottom:1px_solid_lightgray">
+          <a class="padding:0px_10px"><i class="fas fa-arrows-alt-v"></i></a>
+          <a class="padding:0px_10px"><i class="fas fa-print"></i></a>
+          <a class="padding:0px_10px"><i class="fas fa-sign-out-alt"></i></a>
 
           <div>1 of 189</div>
-          <a><i class="fas fa-chevron-left"></i></a>
-          <a><i class="fas fa-chevron-right"></i></a>
-          <a><i class="fas fa-cog"></i></a>
+          <a class="padding:0px_10px"><i class="fas fa-chevron-left"></i></a>
+          <a class="padding:0px_10px"><i class="fas fa-chevron-right"></i></a>
+          <a class="padding:0px_10px"><i class="fas fa-cog"></i></a>
         </div>
         <div class="padding:0px_15px">
-          <div class="display:flex align-items:center justify-content-space-between padding:15px_0px border-bottom border-color:extra-medium-gray">
-            <h2 class="no-margin_0px">New messagees from Brenda Elisa G. <div class="cocreate-badge badge-danger font-size:12px">Inbox<i class="fas fa-times padding-left:10px"></i></div></h2>
+          <div class="display:flex align-items:center justify-content:space-between padding:15px_0px border-bottom:1px_solid_lightgray">
+            <h2 class="margin:0px_0px">New messagees from Brenda Elisa G. <div class="cocreate-badge badge-danger font-size:12px">Inbox<i class="fas fa-times padding-left:10px"></i></div></h2>
           </div>
           <div class="display:flex padding:15px_0px">
             <div class="avatar-wrapper">
@@ -695,7 +700,7 @@
           				</span>
           			</a>
     			  </div>
-            <div class="display:flex justify-content-space-between flex-grow:1 padding-left:10px">
+            <div class="display:flex justify-content:space-between flex-grow:1 padding-left:10px">
               <div class="">
                 <div class="font-bold">Brenda Elisa G. via Freelancer <span class="font-noBold font-size:12px ">messages@xxx.freelancer.com</span></div>
                 <div class="font-size:12px">to Frank 9:11 AM (3 hours age)</div>
@@ -713,7 +718,7 @@
 		  <div class="resizeHandler"></div>
     </div>
         
-		          	<a class="submitBtn position:fixed bottom:15px right:15px bg:blue grow-hover round"><i class="fas fa-plus"></i></a>
+		          	<button class="submitBtn position:fixed bottom:15px right:15px bg:blue grow-hover border-radius:50%"><i class="fas fa-plus"></i></button>
 
     <script>
       var config = {
@@ -729,8 +734,8 @@
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-select.js"></script>
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-modal/src/CoCreate-modal.js"></script>
 
-  <!--CoCreate Plugins-->
-  <script src="https://cdn.cocreate.app/CoCreate-modal.js"></script>
+    <!--CoCreate Plugins-->
+    <script src="https://cdn.cocreate.app/CoCreate-modal.js"></script>
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-flip-item/CoCreate-flip-item.js"></script>
 
   <script>

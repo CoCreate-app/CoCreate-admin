@@ -127,7 +127,7 @@
            	  data-value_type="string"
            	  data-filter_operator=""
    			      data-template_id="datatable" 
-           	  placeholder="Module Name">
+           	  placeholder="Contact Name">
               <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
                 <!-- need a solution to update toggle value="desc|asc" and define and upadte icons... show hide works great but to much html and orderby only has 2 values -->
                 <a data-order_by="name" data-toggle_order data-template_id="datatable">
@@ -150,8 +150,8 @@
         </tr>
 
         <tbody
-          data-fetch_collection="modules"
-          data-fetch_name="" 
+			    data-fetch_collection="module_activity" 
+			    data-fetch_name="module_id"
           data-fetch_value=""
           data-fetch_value_type="or"
           data-fetch_count=""
@@ -211,7 +211,7 @@
   	</div>
 
 	  <button target="modal" href="render.html" 
-	     data-pass_collection="modules"
+       data-pass_collection="module_activity"
 	     data-pass_document_id=""
 	     data-pass_prefix="form_"
 	     data-pass_to="render"
@@ -219,10 +219,15 @@
 	     data-modal_height="100%"
 	     data-modal_color="#229954"
 	     class="position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover border-radius:50% z-index:8" data-pass_id="render">
-	    <i class="fa fa-plus"></i>
+	      <i class="fa fa-plus"></i>
+	   <div data-pass_collection="modules"
+		   data-pass_document_id=""
+	     data-pass_prefix="form_"
+		   data-pass_to="render"
+		   data-pass_id="render">
+  	  </div>
 		</button>
-  
-    
+
     <script>
       var config = {
         apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
