@@ -1,147 +1,139 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-  
-  <!-- CoCreate UI -->
-  <link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />
+    <title>Project Form | CoCreate</title>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
-  
-  <!-- DHTMLX Window -->
-  <link rel="stylesheet" href="https://cdn.dhtmlx.com/edge/dhtmlx.css" type="text/css"> 
-  <script src="https://cdn.dhtmlx.com/edge/dhtmlx.js" type="text/javascript"></script>
-</head>
+    <!-- CoCreateCSS -->
+    <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
 
-<body>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+  </head>
+
+  <body>
     <div id="modal-viewport" class="hidden"></div>
-    <div data-main_content_id="content" class="nav">
-      <!--<a href="#" class="logo">Navbar</a>-->
-      <!--<a class="nav-toggle menu_icon--Vdots" data-toggle_sidenav="menuL">-->
-      <!--  <div class="circle"></div>-->
-      <!--  <div class="circle"></div>-->
-      <!--  <div class="circle"></div>-->
-      <!--  <div class="circle"></div>-->
-      <!--  <div class="circle"></div>-->
-      <!--</a>-->
-        <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center">
-
-  			<li><a class="btn-modal-close"><i class="fas fa-times">
-  			  </i></a></li>
-  			<li><a class="btn-modal-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize">
-  			  </i></a></li>
-  			<li><a class="btn-modal-minimize"><i class="far fa-window-minimize">
-  			  </i></a></li>
-  			<li><a data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand">
-  			  </i></a></li>
-  			<li>
-  			    <a data-window_url="render.html"
-            	 data-pass_collection="modules"
-            	 data-pass_module_id="" 
-            	 data-pass_prefix="form_" 
-            	 data-pass_to="builder" 
-               data-window_width="100%"
-               data-pass_id="render">
-            		<i class="fas fa-palette"></i>
-          		 <div data-pass_collection="modules"
-					   data-pass_module_id=""
-				       data-pass_prefix=""
-					   data-pass_to="render"
-					   class="sessionBuilderUI_Id">
-	  			 </div>
-            </a>
+    <div class="nav display:flex align-items:center bg:light-gray"
+      data-main_content_id="content" 
+      data-nav_effect="sticky-nav" 
+      data-nav_scroll="200">
+      
+      <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
+  			<li class="margin-right:15px">
+  			  <a class="btn-modal-close"><i class="fas fa-times"></i></a>
+  			</li>
+  			<li class="margin-right:15px">
+  			  <a class="btn-modal-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize"></i></a>
+  			</li>
+  			<li class="margin-right:15px">
+  			  <a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a>
+  			</li>
+  			<li class="margin-right:15px">
+  			  <a data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
+  			</li>
+  			<li class="margin-right:15px">
+			    <a target="modal" href="render.html"
+          	 data-pass_collection="modules"
+          	 data-pass_document_id="" 
+          	 data-pass_prefix="form_" 
+          	 data-pass_to="builder" 
+             data-modal_width="100%"
+             data-pass_id="render">
+          		<i class="fas fa-palette"></i>
+        		 <div data-pass_collection="modules"
+  						   data-pass_document_id=""
+					       data-pass_prefix=""
+  						   data-pass_to="render"
+  						   class="sessionBuilderUI_Id">
+						 </div>
+          </a>
         </li>
-
-  			<li><a data-collection="module_activity" data-module-activity_id="" data-pass_id="form-fields" class="delete-document btn-modal-close"><i class="far fa-trash-alt"></i></a></li>
-			 </ul>
+  			<li class="margin-right:15px">
+  			  <a data-collection="modules" 
+  			    data-document_id="" 
+  			    data-pass_id="form-fields" 
+  			    class="delete-document btn-modal-close">
+  			     <i class="far fa-trash-alt"></i>
+		      </a>
+  			</li>
+			</ul>
     </div>
-		<div data-main_content_id="content">
-
-        <form data-real_time="true" data-collection="module_activity" data-form_id="module-form" class="margin-bottom:75px">
     
-            
-            <input data-document_id="" type="text" name="Project Name" placeholder="Project Name" class="floating-label">
+		<div class="padding:10px" data-main_content_id="content">
+      
+      <form data-realtime="true" data-collection="module_activity">
+        
+        <input type="text"
+          data-document_id="" 
+          name="Project Name"
+          class="floating-label"
+          placeholder="Project Name">
 
-            <div class="Description-hite">
-            <textarea data-document_id="" name="Project Description" placeholder="Project Description" class="floating-label"></textarea>
-         </div>
+        <textarea 
+          data-document_id="" 
+          name="Project Description"
+          class="floating-label"
+          placeholder="Project Description">
+        </textarea>
 
-            <select data-document_id="" name="Status" placeholder="Status" class="floating-label">
-                <option label="Draft" value="Draft">Draft</option>
-            </select>
+        <select 
+          data-document_id="" 
+          name="Status" 
+          placeholder="Status" 
+          class="floating-label">
+          <option label="Draft" value="Draft">Draft</option>
+        </select>
             
-            <select data-document_id="" name="Stage" placeholder="Stage" class="floating-label">
-                <option label="Draft" value="Draft">Draft</option>
-            </select>
+        <select data-document_id="" name="Stage" placeholder="Stage" class="floating-label">
+          <option label="Draft" value="Draft">Draft</option>
+        </select>
             
         <!-- CoCreate Select field multiple documents -->     
-          <div class="select--field sortable floating-label" name="company" data-collection="module_activity" data-document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Company">
-            <input class="search-input template-search" placeholder="Search" data-engine-id="idEngine1">
-             <!-- Fetches and displays results using template -->
-              <ul data-fetch_collection="users" data-template_id="selectable1" data-pass_to="me1234" id="idEngine1" class="template-wrapper selectable--list  cocreate-scroll">
-        				<!-- template -->
-        				<li class="selectable template" id="selectable1" data-pass_id="me1234">
-        				  <h3 data-collection="users" data-document_id="" name="name" data-pass_id="me1234" >user name</h3>
-        				  <h5 data-collection="users" data-document_id="" name="email" data-pass_id="me1234" ></h5>
-        				</li>
-        				
-            </ul>
-            
-          </div>
-          
-            <!-- CoCreate Select field multiple documents -->     
-          <div class="select--field sortable floating-label" name="members" data-collection="module_activity" data-document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Related to:">
-            <input class="search-input template-search" placeholder="Search" data-engine-id="idEngine1">
-             <!-- Fetches and displays results using template -->
-              <ul data-fetch_collection="users" data-template_id="selectable1" data-pass_to="me1234" id="idEngine1" class="template-wrapper selectable--list  cocreate-scroll">
-        				<!-- template -->
-        				<li class="selectable template" id="selectable1" data-pass_id="me1234">
-        				  <h3 data-collection="users" data-document_id="" name="name" data-pass_id="me1234" >user name</h3>
-        				  <h5 data-collection="users" data-document_id="" name="email" data-pass_id="me1234" ></h5>
-        				</li>
-        				
-            </ul>
-            
-          </div>
-            
-            
-            <a class="submitBtn position:fixed bottom:15px right:15px bg:blue grow-hover round"><i class="far fa-save"></i></a>
+        <div class="select--field sortable floating-label" name="company" data-collection="module_activity" data-document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Company">
+          <input class="search-input template-search" placeholder="Search" data-engine-id="idEngine1">
+          <!-- Fetches and displays results using template -->
+          <ul data-fetch_collection="users" data-template_id="selectable1" data-pass_to="me1234" id="idEngine1" class="template-wrapper selectable--list  cocreate-scroll">
+    				<!-- template -->
+    			  <li class="selectable template" id="selectable1" data-pass_id="me1234">
+    				  <h3 data-collection="users" data-document_id="" name="name" data-pass_id="me1234" >user name</h3>
+    				  <h5 data-collection="users" data-document_id="" name="email" data-pass_id="me1234" ></h5>
+    				</li>
+          </ul>
+        </div>
+        
+        <!-- CoCreate Select field multiple documents -->     
+        <div class="select--field sortable floating-label" name="members" data-collection="module_activity" data-document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Related to:">
+          <input class="search-input template-search" placeholder="Search" data-engine-id="idEngine1">
+          <!-- Fetches and displays results using template -->
+          <ul data-fetch_collection="users" data-template_id="selectable1" data-pass_to="me1234" id="idEngine1" class="template-wrapper selectable--list  cocreate-scroll">
+    				<!-- template -->
+    				<li class="selectable template" id="selectable1" data-pass_id="me1234">
+    				  <h3 data-collection="users" data-document_id="" name="name" data-pass_id="me1234" >user name</h3>
+    				  <h5 data-collection="users" data-document_id="" name="email" data-pass_id="me1234" ></h5>
+    				</li>
+          </ul>
+        </div>
 
-        </form>
-    </div>
-</body>
+        <button class="submitBtn position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover border-radius:50%"><i class="far fa-save"></i></button>
 
-<style>
+      </form>
+      
+ 		</div>
+  
+    <script>
+      var config = {
+        apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+        securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+        organization_Id: '5de0387b12e200ea63204d6c'
+      }
+    </script>
 
-form.margin-bottom:75px select {
-    margin-bottom: 25px;
-    height: 45px !important;
-}
-form.margin-bottom:75px input.floating-label {
-    margin-bottom: 25px;
-    height: 45px !important;
-}
-
-form.margin-bottom:75px textarea.floating-label {
-    margin-bottom: 25px;
-}
-
-
-</style>
-
-
-  <script>
-    var config = {
-      apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-      securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
-      organization_Id: '5de0387b12e200ea63204d6c'
-    }
+    <!-- CoCreateJS --> 
+    <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
     
-  </script>
-
-
-  <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+  </body>
 </html>

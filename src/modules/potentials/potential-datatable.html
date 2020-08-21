@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+    <title>Potential Datatables | CoCreate</title>
+  
+    <!-- CoCreateCSS -->
+    <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" crossorigin="anonymous" />  
+  </head>
+  
+  <body class="width:fit-content cocreate-scroll">
+    <!-- Navbar -->
+    <div class="nav display:flex align-items:center bg:light-gray position:sticky left:0 width:100vw" 
+      data-main_content_id="content"
+      data-scroll_effect="hide-nav"
+      data-scroll_up="1" 
+      data-scroll_down="1">
+
+      <!-- Menu Icon Animations -->
+      <a class="nav-toggle menu_icon--Vdots" data-toggle_sidenav="menuL">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </a>
+        
+      <!-- Horizontal Scroll Nav/Tabs -->
+      <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
+  			
+  			<!-- Modal Controls -->
+  			<li class="margin-right:15px">
+  			  <a class="btn-modal-close"><i class="fas fa-times"></i></a>
+  			</li>
+  			<li class="margin-right:15px"><a class="btn-modal-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize">
+  			  </i></a>
+  			</li>
+  			<li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize">
+  			  </i></a>
+  			</li>
+  			
+  			<!-- fullscreen toogle and icon transform-->
+  			<li class="margin-right:15px">
+  			  <a data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
+  			</li>
+  			
+  			<!-- Render Builder -->
+  			<li class="margin-right:15px">
+  			    <a target="modal" href="render.html"
+            	 data-pass_collection="modules"
+            	 data-pass_document_id="" 
+            	 data-pass_prefix="" 
+            	 data-pass_to="builder" 
+               data-modal_width="100%"
+               data-pass_id="render">
+            		<i class="fas fa-palette"></i>
+          		 <div data-pass_collection="modules"
+    						   data-pass_document_id=""
+						       data-pass_prefix=""
+    						   data-pass_to="render"
+    						   class="sessionBuilderUI_id">
+  						 </div>
+             </a>
+        </li>
+        
+        <!-- Render Module Form -->
+  			<li class="margin-right:15px">
+  			  <a target="modal" href="module_form.html" 
+  			    data-pass_collection="modules" 
+  			    data-pass_prefix="form_" 
+  			    data-pass_document_id="" 
+  			    data-pass_to="render" 
+  			    data-modal_width="320px" 
+  			    data-modal_height="100%" 
+  			    data-modal_color="#229954" 
+  			    data-modal_header="false" 
+  			    data-modal_x="" 
+  			    data-modal_y="" 
+  			    data-pass_id="render">
+  			   <i class="fas fa-plus"></i>
+  			  </a>
+  			</li>
+  			
+  			<!-- Datatable Controls -->  
+        <li class="margin-right:15px">
+          <a data-btn_type="delete-rows" data-template_id="datatable"><i class="far fa-trash-alt"></i></a>
+        </li>
+  			<li class="margin-right:15px">
+  			  <a data-btn_type="column-visibility" data-template_id="datatable"><i class="far fa-eye"></i></a>
+  			</li>
+  			<li class="margin-right:15px">
+  			  <a data-export_type="csv" data-template_id="datatable"><i class="fas fa-file-csv"></i></a>
+  			</li>
+  			<li class="margin-right:15px">
+  			  <a data-export_type="json" data-template_id="datatable"><i class="fas fa-file-download"></i></a>
+  			</li>
+  			<li class="margin-right:15px">
+  			  <a data-import="true" data-template_id="datatable"><i class="fas fa-file-upload"></i></a>
+  			</li>
+  			<li class="margin-right:15px">
+  			  <a data-btn_type="copy" data-template_id="datatable"><i class="far fa-copy"></i></a>
+  			</li>
+  			<li class="margin-right:15px">
+  			  <a data-btn_type="print" data-template_id="datatable"><i class="fas fa-print"></i></a>
+  			</li>
+			
+			 </ul>
+    </div>
+      
+    <!-- Modal Viewport -->  
+    <div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
+   
+    <!-- Main Content -->  
+    <div data-main_content_id="content" class="padding:5px">
+      <table class="width:100% border-collapse:collapse">
+        <tr class="border-bottom:1px_solid_darkgray">
+          <td class="position:sticky top:0 bg:white padding-top:0 padding:10px ">
+    		    <input type="text" class="floating-label"
+           	  data-filter_name="name" 
+           	  data-value_type="string"
+           	  data-filter_operator=""
+   			      data-template_id="datatable" 
+           	  placeholder="Potential Name">
+              <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
+                <!-- need a solution to update toggle value="desc|asc" and define and upadte icons... show hide works great but to much html and orderby only has 2 values -->
+                <a data-order_by="name" data-toggle_order data-template_id="datatable">
+                  <i></i>
+                </a>
+              </span>
+          </td>
+          <td class="position:sticky top:0 bg:white padding:10px padding-top:0">
+      		  <input type="text" class="floating-label"
+           	  data-filter_name="_id" 
+           	  data-value_type="string"
+           	  data-filter_operator=""
+   			      data-template_id="datatable" 
+           	  placeholder="Document_id"/>
+              <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6" >
+                <a data-order_by="_id" value="" data-toggle_order="true" data-template_id="datatable">
+                </a>
+              </span>
+          </td>
+        </tr>
+
+        <tbody
+			    data-fetch_collection="module_activity" 
+			    data-fetch_name="module_id"
+          data-fetch_value=""
+          data-fetch_value_type="or"
+          data-fetch_count=""
+          data-order_by="name" 
+          data-order_type="asc"
+          data-template_id="datatable"
+          data-pass_to="me1234">
+          
+          <tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray">
+  					<td class="padding:10px">
+  					  <div class="min-width:200px">
+    					  <div class="icon-wrapper">
+    						  <span data-pass_id="me1234" name="icon"></span>
+    					  </div>
+    					  <div>
+      						<a data-window_url="render.html" 
+      						   data-pass_collection="module_activity"
+      						   data-pass_document_id=""
+      						   data-pass_prefix="form_"
+      						   data-pass_to="form-fields" 
+      						   data-modal_width="320px" 
+      						   data-modal_color="#229954">
+      						  <h4 data-pass_id="me1234" name="name">Name</h4>
+      						  <div data-pass_collection="modules"
+          						   data-pass_document_id=""
+      						       data-pass_prefix="form_"
+          						   data-pass_to="render"
+          						   data-pass_id="render">
+      						    
+      						  </div>
+      						</a>
+      						  <h5 name="description"></h5>
+    					  </div>
+  					  </div>
+  					</td>
+  					<td class="padding:10px">
+  					  <a data-window_url="render.html"
+  					     data-pass_document_id=""
+  					     data-pass_prefix="form_"
+  					     data-pass_collection="module_activity"
+  						   data-pass_to="form-fields" 
+  						   data-modal_width="320px" 
+  						   data-modal_color="#229954">
+  					     <b data-pass_id="me1234" name="_id">Module Id</b>
+  						    <div data-pass_collection="module_activity"
+      						   data-pass_document_id=""
+  						       data-pass_prefix="form_"
+      						   data-pass_to="render">
+    						  </div>
+  						</a>
+  					</td>
+          </tr>
+          
+        </tbody>
+      </table>
+  
+  	</div>
+
+	  <button target="modal" href="render.html" 
+       data-pass_collection="module_activity"
+	     data-pass_document_id=""
+	     data-pass_prefix="form_"
+	     data-pass_to="render"
+	     data-modal_width="320px" 
+	     data-modal_height="100%"
+	     data-modal_color="#229954"
+	     class="position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover border-radius:50% z-index:8" data-pass_id="render">
+	      <i class="fa fa-plus"></i>
+	   <div data-pass_collection="modules"
+		   data-pass_document_id=""
+	     data-pass_prefix="form_"
+		   data-pass_to="render"
+		   data-pass_id="render">
+  	  </div>
+		</button>
+
+    <script>
+      var config = {
+        apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+        securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+        organization_Id: '5de0387b12e200ea63204d6c'
+      }
+    </script>
+  
+    <!--CoCreateJS-->
+    <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+    
+  </body>
+</html>

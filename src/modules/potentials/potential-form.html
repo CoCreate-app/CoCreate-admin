@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-    <title>Organization Profile | CoCreate</title>
+    <title>Potential Form | CoCreate</title>
 
+    <!-- CoCreateCSS -->
     <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
 
     <!-- Font Awesome -->
@@ -18,15 +19,9 @@
     <div id="modal-viewport" class="hidden"></div>
     <div class="nav display:flex align-items:center bg:light-gray"
       data-main_content_id="content" 
-      data-scroll_effect="hide-nav"  
-      data-scroll_position="5" data-scroll_up="5" data-scroll_down="5">
-      <!--<a class="nav-toggle menu_icon--Vdots" data-toggle_sidenav="menuL">-->
-      <!--  <div class="circle"></div>-->
-      <!--  <div class="circle"></div>-->
-      <!--  <div class="circle"></div>-->
-      <!--  <div class="circle"></div>-->
-      <!--  <div class="circle"></div>-->
-      <!--</a>-->
+      data-nav_effect="sticky-nav" 
+      data-nav_scroll="200">
+      
       <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
   			<li class="margin-right:15px">
   			  <a class="btn-modal-close"><i class="fas fa-times"></i></a>
@@ -67,70 +62,44 @@
   			</li>
 			</ul>
     </div>
+    
 		<div class="padding:10px" data-main_content_id="content">
-      <form data-realtime="true" data-collection="organizations">
+      
+      <form data-realtime="true" data-collection="module_activity">
         
         <input type="text" 
-          data-document_id="" 
-          name="logo"
-          class="floating-label sessionOrg_Id"
-          placeholder="Logo"
-          data-pass_id="form-fields"/>
-          
+          data-document_id='' 
+          name='name' 
+          id="name"
+          class="floating-label"
+          placeholder="Potential Name" 
+          data-pass_id="me1234">
+            
         <input type="text" 
-          data-document_id="" 
-          name="name" id="name" 
-          class="floating-label sessionOrg_Id"
-          placeholder="Organization Name"/>
-        
-        <input type="text"
-          data-document_id="" 
-          name="description"
+          name='description' 
+          class="floating-label"
           placeholder="Description" 
-          class="floating-label sessionOrg_Id"/>
-          
-        <input type="text"
-          data-document_id="" 
-          name="_id" id="orgid"
-          class="floating-label sessionOrg_Id"
-          placeholder="Organization Id"
-          readonly/>
+          data-document_id='' 
+          data-pass_id="me1234">
+      		
+      	<input type="text" 
+        	data-document_id=""
+        	name="start_date"
+        	class="floating-label"
+        	placeholder="Start Date">
         
         <input type="text" 
-          data-document_id=""
-          name="apiKey" id="apiKey"
-          class="floating-label sessionOrg_Id"
-          placeholder="API Key"
-          readonly/>
-          
-        <input type="text"
-          data-document_id=""
-          name="securityKey" id="securityKey"
-          class="floating-label sessionOrg_Id"
-          placeholder="Security Key"
-          readonly/>
-          
-        <input type="text" 
           data-document_id="" 
-          name="organization_id" 
-          id="organization_id"
-          class="floating-label sessionOrg_Id"
-          placeholder="Platform Id"  readonly/>
-          
-        <input type="text" 
-        data-document_id="" 
-        name="adminUI_id" 
-        id="adminUI_id" 
-        class="floating-label sessionOrg_Id" 
-        placeholder="adminUI Id"  
-        readonly/>
- 
+          name="end_date"
+          class="floating-label"
+          placeholder="End Date">
+            
         <button class="submitBtn position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover border-radius:50%"><i class="far fa-save"></i></button>
 
       </form>
+      
  		</div>
   
-
     <script>
       var config = {
         apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
@@ -138,7 +107,8 @@
         organization_Id: '5de0387b12e200ea63204d6c'
       }
     </script>
-   
+
+    <!-- CoCreateJS --> 
     <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
     
   </body>
