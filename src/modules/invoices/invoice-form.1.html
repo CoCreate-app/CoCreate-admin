@@ -14,11 +14,6 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
   </head>
-  
-  <style>
-  .floating-label_field{margin:5px}
-    </style>
-
 
   <body>
   <div id="modal-viewport" class="hidden"></div>
@@ -67,17 +62,17 @@
   			</li>
 			</ul>
     </div>
-        
+    
 		<div class="padding:10px" data-main_content_id="content">
       
         <form data-realtime="true" data-collection="module_activity"class="padding:20px">
-            <div class="display:flex flex-wrap:wrap justify-content:space-between padding-bottom:20px border-bottom:1px_solid_lightgrey">
+            <div class="display:flex justify-content:space-between padding-bottom:20px border-bottom:1px_solid_lightgrey">
                 <input data-document_id="" type="text" name="invoice" placeholder="Invoice#" class="floating-label">
-                <div class="display:flex flex-wrap:wrap">
-                    <div class="flex-grow:1 margin-right:20px">
-                        <input data-document_id="" type="date" name="date-issue" placeholder="Date Issue" class="floating-label width:75px">
+                <div class="display:flex">
+                    <div class="margin-right:20px">
+                        <input data-document_id="" type="date" name="date-issue" placeholder="Date Issue" class="floating-label">
                     </div>
-                    <div class="flex-grow:1 margin-right:20px">
+                    <div>
                         <input data-document_id="" type="date" name="date-due" placeholder="Date Due" class="floating-label">
                     </div>
                 </div>
@@ -85,7 +80,7 @@
             <div class="padding:20px_0px border-bottom:1px_solid_lightgrey">
                 <input data-document_id="" type="text" name="name" placeholder="Invoice Name" class="floating-label">
             </div>
-            <div class="padding:20px_0px border-bottom:1px_solid_lightgrey max-width:400px">
+            <div class="padding:20px_0px border-bottom:1px_solid_lightgrey">
                 <label class="padding-bottom:10px">Bill To</label>
                 <div class="padding-bottom:10px">
                     <input data-document_id="" type="text" name="house-no" placeholder="House No." class="floating-label">
@@ -103,46 +98,48 @@
             
             <div id="saveFetch1" class="saveFetch padding:20px_0px border-bottom:1px_solid_lightgrey" data-collection="module_activity" data-module_activity_id="" data-document_id="newclone" data-pass_id="me1234">
                 <div class="Sortable" data-group_name="invoice-items" >
-                    <div id="item-row" class="template display:flex border border-color:medium-gray margin-bottom:10px">
+                    <div id="invoice-item" class="template display:flex border border-color:medium-gray margin-bottom:10px">
                         <div class="flex-grow:1 padding:10px border-right:1px_solid_lightgrey">
-                            <div class="display:flex flex-wrap:wrap align-items:center justify-content:space-between padding-bottom:10px">
-                              <!--<div style="float:right;"><a data-clone_id="item-row" class="deleteBtn noDrag"><i class="fas fa-times"></i></a></div>-->
-                              <div class="display:flex flex-grow:1">
-                                <input class="floating-label max-width:70px" data-module_activity_id="" name="Item" placeholder="Item#"/>
-                                <div class="flex-grow:1"> 
-                                  <select data-document_id="" name="name" placeholder="Item Name" class="floating-label">
-                                      <option value="Frest Admin Template">Frest Admin Template</option>
-                                      <option value="Stack Admin Template">Stack Admin Template</option>
-                                      <option value="Robust Admin Template">Robust Admin Template</option>
-                                      <option value="Apex Admin Template">Apex Admin Template</option>
-                                      <option value="Modern Admin Template">Modern Admin Template</option>
-                                  </select>
+                            <div class="display:flex align-items:center justify-content:space-between padding-bottom:10px">
+                                <div class="padding-right:10px">
+                                    <select data-document_id="" name="name" placeholder="Item Name" class="floating-label">
+                                        <option value="Frest Admin Template">Frest Admin Template</option>
+                                        <option value="Stack Admin Template">Stack Admin Template</option>
+                                        <option value="Robust Admin Template">Robust Admin Template</option>
+                                        <option value="Apex Admin Template">Apex Admin Template</option>
+                                        <option value="Modern Admin Template">Modern Admin Template</option>
+                                    </select>
                                 </div>
-                              </div>
-                              <div class="display:flex">
-                                <input class="floating-label max-width:70px" data-module_activity_id="" name="qty" placeholder="Qty">
-                                <input class="floating-label max-width:100px" data-module_activity_id="" name="price" placeholder="Price"/>
-                                <input class="floating-label max-width:130px" data-module_activity_id="" name="total" placeholder="Total">
-                              </div>
-                              <div>
-                              <!--<input class="item-description floating-label" data-module_activity_id="" name="description"  placeholder="Description"/>-->
-                              </div>
-
+                                <div class="padding-right:10px">
+                                    <input data-document_id="" type="text" name="cost" placeholder="Cost" class="floating-label">
+                                </div>
+                                <div class="padding-right:10px">
+                                    <input data-document_id="" type="text" name="qty" placeholder="Qty" class="floating-label">
+                                </div>
+                                <div class="flex-grow:1">$00.00</div>
+                            </div>
+                            <div class="display:flex align-items:center">
+                                <div class="padding-right:10px">
+                                    <input data-document_id="" type="text" name="" placeholder="" class="floating-label">
+                                </div>
+                                <div class="flex-grow:1">
+                                    Discount: 0% 0% 0%
+                                </div> 
                             </div>
                         </div>
                         <div class="padding:10px display:flex justify-content:space-between flex-direction:column">
-                            <a data-clone_id="item-row" class="deleteBtn text-align-center"><i class="fas fa-times"></i></a>
+                            <a data-clone_id="invoice-item" class="deleteBtn text-align-center"><i class="fas fa-times"></i></a>
                             <a><i class="fas fa-cog"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="noDrag padding-top:10px">
-                    <a data-clone_id="item-row" class="cloneBtn noDrag padding:10px bg:medium-gray" data-clone_name="invoiceitem-name"><i class="fas fa-plus"></i> Add Item</a>
+                    <a data-clone_id="invoice-item" class="cloneBtn noDrag padding:10px bg:medium-gray" data-clone_name="invoiceitem-name"><i class="fas fa-plus"></i> Add Item</a>
                 </div>
             </div>
             
-            <div class="padding:20px_0px display:flex flex-wrap:wrap justify-content:space-between">
-                <div class="min-width:400px flex-grow:1">
+            <div class="padding:20px_0px display:flex justify-content:space-between">
+                <div class="min-width:300px">
                     <div class="padding-bottom:10px">
                         <input data-document_id="" type="text" name="payment-terms" placeholder="Add Payment Terms" class="floating-label">
                     </div>
@@ -150,7 +147,7 @@
                         <input data-document_id="" type="text" name="clite-note" placeholder="Add client Note" class="floating-label">
                     </div>
                 </div>
-                <div class="min-width:225px flex-grow:1">
+                <div class="min-width:300px">
                     <div class="padding:20px_0px border-bottom:1px_solid_lightgrey">
                         <div class="display:flex justify-content:space-between">
                             <label class="color-dark-gray">Subtotal</label>

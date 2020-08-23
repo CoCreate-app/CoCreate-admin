@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-    <title>Industry Datatables | CoCreate</title>
+    <title>Datatables | CoCreate</title>
   
     <!-- CoCreateCSS -->
     <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
@@ -127,7 +127,7 @@
            	  data-value_type="string"
            	  data-filter_operator=""
    			      data-template_id="datatable" 
-           	  placeholder="Industry Name">
+           	  placeholder="Module Name">
               <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
                 <!-- need a solution to update toggle value="desc|asc" and define and upadte icons... show hide works great but to much html and orderby only has 2 values -->
                 <a data-order_by="name" data-toggle_order data-template_id="datatable">
@@ -141,7 +141,7 @@
            	  data-value_type="string"
            	  data-filter_operator=""
    			      data-template_id="datatable" 
-           	  placeholder="Industry_id"/>
+           	  placeholder="Document_id"/>
               <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6" >
                 <a data-order_by="_id" value="" data-toggle_order="true" data-template_id="datatable">
                 </a>
@@ -150,7 +150,7 @@
         </tr>
 
         <tbody
-          data-fetch_collection="industries"
+          data-fetch_collection="organizations"
           data-fetch_name="" 
           data-fetch_value=""
           data-fetch_value_type="or"
@@ -174,7 +174,7 @@
       						   data-pass_to="form-fields" 
       						   data-modal_width="320px" 
       						   data-modal_color="#229954">
-      						  <h4 data-pass_id="me1234" name="name">Name</h4>
+      						  <h4 data-pass_id="me1234" name="name">Organization Name</h4>
       						  <div data-pass_collection="modules"
           						   data-pass_document_id=""
       						       data-pass_prefix="form_"
@@ -195,7 +195,7 @@
   						   data-pass_to="form-fields" 
   						   data-modal_width="320px" 
   						   data-modal_color="#229954">
-  					     <b data-pass_id="me1234" name="_id">Industry Id</b>
+  					     <b data-pass_id="me1234" name="_id">Organization Id</b>
   						    <div data-pass_collection="module_activity"
       						   data-pass_document_id=""
   						       data-pass_prefix="form_"
