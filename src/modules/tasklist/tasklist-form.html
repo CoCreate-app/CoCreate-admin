@@ -64,16 +64,19 @@
     </div>
     
     <div data-main_content_id="content" class="padding:10px">
-      <div id="saveFetch1" class="saveFetch main-height" name='tasklists' data-collection="module_activity" data-module_activity_id="" data-document_id="newclone" data-pass_id="me1234" >
+      <div class="domEditor main-height" name='tasklists1' data-collection="test" data-document_id="5f075add24d24a175fca54e4" data-pass_id="me1234" >
+      <!--<div class="domEditor main-height" name='tasklists' data-collection="test" data-pass_id="me1234" >-->
           <!--<div class="Sortable display:flex align-items:flex-start isotope-grid" data-group_name="tasklist" -->
-          <div class="Sortable isotope-grid" data-group_name="tasklist" 
+          <div class="isotope-grid dnd" data-group_name="tasklist" 
             isotope-itemselector="grid-item" 
             isotope-layoutMode="masonry" 
             isotope-columnWidth="grid-item" 
-            isotope-rowHeight="200">
+            isotope-rowHeight="200"
+            data-droppable="true"
+            data-element_id="tasklist_container">
               
               <!-- sortable card -->
-              <div id="tasklist" class="card margin:5px border-radius:2px flex-grow:1 min-width:250px template grid-item" style="width: calc( 20% - 10px )">
+              <div id="tasklist" class="card template margin:5px border-radius:2px grid-item width:48%@xs width:48%@sm width:24%@md" data-draggable="true">
                 <div class="margin:15px font-size:18px color-dark-gray">
                   <span class="display:inline-block">
                     <input data-collection="module_activity" data-pass_id="form-fields" data-module_activity_id="" name="clone-name" id="stage-name" class="input_field" placeholder="Tasklist">
@@ -107,7 +110,7 @@
   
           </div><!-- Sortable Tasklist -->
            	
-           	<a data-clone_id="tasklist" class="position:fixed bottom:15px right:15px bg:blue grow-hover round cloneBtn" id="addTasklistBtn"><i class="fas fa-plus"></i></a>
+           	<a data-clone_id="tasklist" class="position:fixed bottom:15px right:15px bg:blue grow-hover round cloneBtn padding:20px" id="addTasklistBtn"><i class="fas fa-plus"></i></a>
   
       </div><!-- saveFetch -->
     </div> <!-- -->
@@ -122,9 +125,10 @@
 
     <!-- CoCreateJS -->
     <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
-    <script src="https://server.cocreate.app/CoCreate-progressbar.js"></script>
-    <script src="../../js/CoCreate-isotope.js"></script>
-    <script src="../../js/CoCreate-interact.js"></script>
+    <script defer src=" https://server.cocreate.app/CoCreate-components/CoCreate-dnd/dist/CoCreate-dnd.js"></script>
+    <script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-progressbar/src/CoCreate-progressbar.js"></script>
+    <script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-isotope/src/CoCreate-isotope.js"></script>
+    <script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-interact/src/CoCreate-interact.js"></script>
     
   </body>
 </html>

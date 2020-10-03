@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shop Items</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdn.cocreate.app/CoCreate.min.css" type="text/css" />
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+    <title>Ecommerce | CoCreate</title>
 
-	<style>
-	   .template {
-	     display: none;
-	   }
-	</style>        
-</head>
+    <!-- CoCreateCSS -->
+    <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+  </head>
 
 <body>
   
   <div class="controll-wrapper"></div>
   
-  <div class="card">
+  <div class="card flex-grow:1 min-width:300px margin:10px">
     <div>
-      <input class="template-search floating-label" placeholder="Search" data-engine-id="example" placeholder="Search">
+      <input class="template-search floating-label" placeholder="Search" data-template_id="example" placeholder="Search">
     </div>
   </div>
 
-    <form data-engine-id="example">
+    <form data-template_id="example">
       <h3>Filters</h3>
-      <div class="flex-container">
-        <div class="card">
+      <div class="display:flex">
+        <div class="card flex-grow:1 min-width:300px  margin:10px">
          	<input type="range" 
          	  data-filter_name="price" 
          	  data-filter_type="range"
@@ -39,7 +38,7 @@
         	<input data-filter_name="price" data-filter_type="range" data-range_type="max" placeholder="Max" class="floating-label">
         </div>
   
-  	    <div class="card">
+        <div class="card flex-grow:1 min-width:300px margin:10px">
           <label for="select-1"></label>
           
         	<select data-filter_name="category" placeholder="Select" id="select-1" data-filter_type="array">
@@ -63,7 +62,7 @@
       	 </div>
 
 
-      	 <div class="card">
+        <div class="card flex-grow:1 min-width:300px margin:10px">
       	   <h3>Order</h3>
       	   <input type="radio" name="category_order" data-order_by="category" value="asc" id="category_order_asc"><label for="category_order_asc">Order by Category: ASC</label><br>
       	   <input type="radio" name="category_order" data-order_by="category" value="desc" id="category_order_desc"><label for="category_order_desc">Order by Category: DESC</label><br>
@@ -82,31 +81,40 @@
 	</form>
 	</div>
 	
-    <div id="example" class="template-wrapper flex-container" data-template_id="template1"
+    <div class="display:flex flex-wrap:wrap" data-template_id="template1"
       data-fetch_collection="module_activity"
       data-fetch_module="5deb167e189f212c8ebd0137"
       data-pass_to="me1234" 
       data-fetch_name="" 
-      data-fetch_value="" 
+      data-fetch_count="" 
       data-order_by="name" 
-      data-order_type="asc"
-      
-      >
-      
-        <div class="card template" id="template1">
-          <img src="http://via.placeholder.com/250x250/BF00FF/ffffff/" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title" data-document_id="" name="name" data-pass_id="me1234">Item Name</h5>
+      data-order_type="asc">
+
+
+        <div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" data-template_id="template1">
+          <div class="position:relative">
+            <!--<span data-collection="module_activity" name="image" data-document_id="" passed_id="me1234"></span>-->
+            <img data-collection="module_activity" data-document_id="" name="image" data-pass_id="me1234" src="https://via.placeholder.com/150" width="100%"></img>
+         
+            <span class="passValueBtn position:absolute bg:blue float:right bottom:-18px right:10px border-radius:50% padding:10px_12px font-size:20px grow-hover">
+              <a>
+                  <i class="fas fa-plus"></i>
+              </a>
+            </span>
+            
+            <div class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white bg:black opacity:0.4">
+              <span data-collection="module_activity" data-document_id="" name="name" data-pass_id="me1234">Item Name</span>
+            </div>
+          </div>
+          <div class="padding:10px">
             <p class="card-text" data-document_id="" name="price">Color</p>
             <p class="card-text" data-document_id="" name="price" data-pass_id="me1234">$0</p>
 
-            <a href="#" class="btn btn-primary">More details</a>
           </div>
         </div>
-      </div>
 
-    <button class="loadMore" data-engine_id="example">Load More</button>
-  
+    </div>
+    <button class="loadMore" data-template_id="example">Load More</button>
   
   <script>
     var config = {
@@ -116,7 +124,8 @@
     }
   </script>
 
-  <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
-  <script src="https://cdn.cocreate.app/CoCreate-templating.js"></script>
-
-</body>
+    <!-- CoCreateJS --> 
+    <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+    
+  </body>
+</html>
