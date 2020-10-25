@@ -13,14 +13,18 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+    
+    <!-- CodeMirror -->
+    <link rel=stylesheet href="https://codemirror.net/lib/codemirror.css"  async defer>
   </head>
   
   <body>
   <div id="modal-viewport" class="hidden"></div>
-    <div class="nav display:flex align-items:center bg:light-gray"
-      data-main_content_id="content" 
-      data-nav_effect="sticky-nav" 
-      data-nav_scroll="200">
+    <div class="nav display:flex align-items:center bg:light-gray "
+		      data-main_content_id="content"
+		      data-scroll="sticky-nav, hide-nav"
+		      data-scroll_up="5"
+		      data-scroll_down="5">
       
       <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
   			<li class="margin-right:15px">
@@ -36,19 +40,19 @@
   			  <a data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
   			</li>
   			<li class="margin-right:15px">
-			    <a target="modal" href="render.html"
+			    <a target="modal"
           	 data-pass_collection="modules"
           	 data-pass_document_id="" 
-          	 data-pass_prefix="form_" 
-          	 data-pass_to="builder" 
+          	 data-pass_name="html" 
+          	 data-pass_to="render" 
              data-modal_width="100%"
-             data-pass_id="render">
+             class="sessionBuilderUI_Id">
           		<i class="fas fa-palette"></i>
-        		 <div data-pass_collection="modules"
-  						   data-pass_document_id=""
-					       data-pass_prefix=""
-  						   data-pass_to="render"
-  						   class="sessionBuilderUI_Id">
+        		 <div data-pass_id="form-fields"
+        		      data-pass_collection="modules"
+                  data-pass_document_id=""
+                  data-pass_name=""
+                  data-pass_to="builder">
 						 </div>
           </a>
         </li>
@@ -68,9 +72,9 @@
         <input type="text" data-document_id="" name="name" id="name" placeholder="Name" data-pass_id="form-fields" class="floating-label"/>
         <input type="text" data-document_id="" name="description" id="description" placeholder="Description" data-pass_id="form-fields" class="floating-label"/>
         <input type="text" data-document_id="" name="icon" id="icon" placeholder="Icon" data-pass_id="form-fields" class="floating-label"/>
-        <input type="number" data-document_id="" name="menu-position" id="menu-position" placeholder="Menu Position" data-pass_id="form-fields" class="floating-label"/>
-        <textarea type="textarea" name='html' data-collection="modules" data-document_id="" data-pass_id="form-fields" placeholder="Html" class="floating-label"></textarea>
- 
+        <input type="text" data-document_id="" name="menu-position" id="menu-position" placeholder="Menu Position" data-pass_id="form-fields" class="floating-label"/>
+        <div name='html' data-collection="modules" data-document_id="" data-pass_id="form-fields" placeholder="Html" class="codemirror"></div>
+
         <div id="saveFetchhtml" class="domEditor" name='html-page' data-collection="modules" data-document_id="" data-pass_id="form-fields" data-broadcast="false">
           <div class="Sortable" data-group_name="html-page">
             <div id="html-page" class="card padding:5px template margin-top:10px">
@@ -164,6 +168,7 @@
 
     <!-- CoCreateJS --> 
     <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
-    
+    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-y-new/dist/CoCreate-crdt.js"></script>
+    <script type="text/javascript" src="https://server.cocreate.app/CoCreate-plugins/CoCreate-codemirror/dist/CoCreate-codemirror.js" async></script>  </body>
   </body>
 </html>

@@ -63,48 +63,58 @@
 		<div class="padding:10px" data-main_content_id="content">
       <form data-collection="users">
         <input data-pass_id="form-fields" type="text" data-document_id="" name="name" id="name" placeholder="Name" class="floating-label sessionUser_Id"/>
+        <input data-pass_id="form-fields" type="text" data-document_id="" name="email" id="email" placeholder="Email" class="floating-label sessionUser_Id"/>
         <input data-pass_id="form-fields" type="password" data-document_id="" name="password" placeholder="password" class="floating-label sessionUser_Id"/>
         <input data-pass_id="form-fields" type="text" data-document_id="" name="description" placeholder="Description" class="floating-label sessionUser_Id"/>
         <input data-pass_id="form-fields" type="text" data-document_id="" name="profile_image" placeholder="Profile Image" class="floating-label sessionUser_Id"/>
 
-        <cocreate-select class="floating-label sessionUser_Id" 
+        <cocreate-select class="floating-label sessionUser_Id sortable" multiple
           name="connected_orgs" 
           data-collection="users" 
-          data-document_id="" 
+          data-document_id=""  
           data-pass_id="form-fields"
-          placeholder="Connected Orgs" multiple>
+          placeholder="Connected Org">
+        
+          <input class="search-input" placeholder="Search" data-template_id="connect">
+          
+          <ul data-fetch_collection="organizations" 
+              data-template_id="connectn"
+              data-pass_id="form-fields"
+              class="selectable--list cocreate-scroll">
             
-            <input  class="search-input" placeholder="Search">
-            
-            <ul class="selectable--list cocreate-scroll">
-        			<li class="selectable"></li>
-            </ul>
-            
-        </cocreate-select>
+      			<li class="template selectable" data-collection="organizations" data-template_id="connectn">
+      			  <span class="logo-icon"><img data-collection="organizations" data-document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>
+      			  <div class="display:block line-height:1 padding:5px_0px " style="width: calc(100% - 15px);">
+        			  <h3 data-collection="organizations" data-document_id="{{data._id}}" name="name">Organization Name</h3>
+        			  <h5 value="{{data._id}}" >id</h5>
+      			  <div>
+      			</li>
+      			
+          </ul>
+      </cocreate-select>
          
         <cocreate-select class="floating-label sessionUser_Id sortable" 
           name="current_org" 
           data-collection="users" 
-          data-document_id=""  
-          data-limit_selectable="3"
+          data-document_id=""
           data-pass_id="form-fields"
           placeholder="Current Org">
         
           <input class="search-input" placeholder="Search" data-template_id="connect">
           
           <ul data-fetch_collection="users" 
-              data-fetch_name="connectedOrgs" 
+              data-fetch_name="connected_orgs" 
               data-template_id="connect" 
               data-pass_to="me1234"
               data-pass_id="form-fields"
               class="template-wrapper-array selectable--list cocreate-scroll"
               data-fetch_document_id="5d8bff28e4be424681b5e48c">
             
-      			<li class="template selectable" data-pass_id="me1234" data-collection="organizations">
-      			  <span class="logo-icon"><img data-collection="organizations" data-document_id="" name="logo" data-pass_id="me1234" src="" height="40px" alt="..."></span>
+      			<li class="template selectable" data-collection="organizations" data-template_id="connect">
+      			  <span class="logo-icon"><img data-collection="organizations" data-document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>
       			  <div class="display:block line-height:1 padding:5px_0px " style="width: calc(100% - 15px);">
-        			  <h3 data-collection="organizations" data-document_id="" name="name" data-pass_id="me1234" >Organization Name</h3>
-        			  <h5 data-collection="organizations" data-document_id="" name="_id" data-pass_id="me1234" >id</h5>
+        			  <h3 data-collection="organizations" data-document_id="{{data._id}}" name="name">Organization Name</h3>
+        			  <h5 value="{{data._id}}" >id</h5>
       			  <div>
       			</li>
       			
@@ -133,5 +143,7 @@
     <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-modal/src/CoCreate-modal.js"></script> 
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-select.js"></script>
+    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-adapter.js"></script>
+
   </body>
 </html>
