@@ -206,7 +206,8 @@
     				     data-modal_y="">
     				    <span data-document_id="{{data._id}}" data-collection="modules" name="icon" value="icon"></span>
     				    <span data-collection="modules" data-document_id="{{data._id}}" name="name" ></span>
-    				    <div data-pass_collection="module_activity" data-pass_fetch_name="module_id" data-pass_fetch_value="{{data._id}}" data-pass_to="datatable"></div>
+    				    <div data-pass_collection="module_activity" data-pass_filter_name="module_id" data-pass_filter_value="{{data._id}}" data-pass_to="datatable"></div>
+    				    <div data-pass_collection="module_activity" data-document_id="{{data._id}}" data-pass_to="module_id"></div>
   		         </a>
       				  <div class="float:right">
       				    <a target="modal" 

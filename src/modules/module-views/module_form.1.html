@@ -15,12 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
     
     <!-- CodeMirror -->
-    <link rel="stylesheet" href="https://server.cocreate.app/CoCreate-plugins/CoCreate-codemirror/src/CoCreate-codemirror.css" type="text/css" />
     <link rel=stylesheet href="https://codemirror.net/lib/codemirror.css"  async defer>
   </head>
-  <style type="text/css">
-    .collapsed > .code-editor{height:0px; overflow:hidden}
-  </style>
+  
   <body>
   <div id="modal-viewport" class="hidden"></div>
     <div class="nav display:flex align-items:center bg:light-gray "
@@ -71,65 +68,45 @@
     </div>
     
 		<div class="padding:10px" data-main_content_id="content">
-      <form class="margin-bottom:75px" id="form">
-        <input type="text" data-pass_id="form-fields" name="name" id="name" placeholder="Name"  class="floating-label"/>
-        <input type="text" data-pass_id="form-fields" name="description" id="description" placeholder="Description" class="floating-label"/>
-        <input type="text" data-pass_id="form-fields" name="icon" id="icon" placeholder="Icon" class="floating-label"/>
-        <input type="text" data-pass_id="form-fields" name="menu-position" id="menu-position" placeholder="Menu Position" class="floating-label"/>
-        <div name='html' data-pass_id="form-fields" placeholder="Html" class="codemirror"></div>
+      <form data-collection="modules" class="margin-bottom:75px" id="form">
+        <input type="text" data-document_id="" name="name" id="name" placeholder="Name" data-pass_id="form-fields" class="floating-label"/>
+        <input type="text" data-document_id="" name="description" id="description" placeholder="Description" data-pass_id="form-fields" class="floating-label"/>
+        <input type="text" data-document_id="" name="icon" id="icon" placeholder="Icon" data-pass_id="form-fields" class="floating-label"/>
+        <input type="text" data-document_id="" name="menu-position" id="menu-position" placeholder="Menu Position" data-pass_id="form-fields" class="floating-label"/>
+        <div name='html' data-collection="modules" data-document_id="" data-pass_id="form-fields" placeholder="Html" class="codemirror"></div>
 
-        <div id="saveFetchhtml" class="domEditor" data-pass_id="form-fields" name='module-views' data-broadcast="false">
-          <div class="sortable" data-group_name="module-views">
-            
-            <div id="module-view" class="card padding:10px_5px margin-top:10px collapsed">
+        <div id="saveFetchhtml" class="domEditor" name='html-page' data-collection="modules" data-document_id="" data-pass_id="form-fields" data-broadcast="false">
+          <div class="Sortable" data-group_name="html-page">
+            <div id="html-page" class="card padding:5px template margin-top:10px">
               
-              <input data-pass_id="form-fields" data-document_id="" name="view-name" id="view-name" placeholder="View Name" class="input_field" placeholder="View Name" data-pass_value_id="view-name">
-              <a class="float:right padding:5px" data-toggle="collapsed" data-toggle_closest=".card"><i data-transform_to="fas fa-angle-up" class="fas fa-angle-down"></i></a>
-              <a data-clone_id="module-view" class="deleteBtn float:right padding:5px"><i class="fas fa-trash"></i></a>
-              <div class="code-editor">
-                
-                <div class="margin-top:10px display:flex tabs border-bottom:5px_solid_whitesmoke">
-                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab">
-                      <a data-selected="collapsed" data-selected_element=".tabs">HTML</a>
-                    </div>
-
-                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab">
-                      <a data-selected="collapsed" data-selected_element=".tabs">CSS</a>
-                    </div>
-                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab">
-                      <a data-selected="collapsed" data-selected_element=".tabs">JS</a>
-                    </div>
-                </div>
-                    <div  name='html' data-pass_id="form-fields" placeholder="Html" class="codemirror max-height:80vh overflow:auto"></div>
-                <!--    <div name='css' data-pass_id="form-fields" placeholder="CSS" class="codemirror"></div>-->
-                <!--    <div name='js' data-pass_id="form-fields" placeholder="JS" class="codemirror"></div>-->
-                <!--<textarea class="floating-label" -->
-                <!--  data-realtime="false"-->
-                <!--  name="[prefix]" -->
-                <!--  placeholder="HTML" -->
-                <!--  data-pass_value_id="templateHtml" -->
-                <!--  data-pass_id="form-fields">-->
-                <!--</textarea>-->
-                
-                <!--<textarea data-pass_id="form-fields" name="css" id="templateCss" placeholder="CSS" class="floating-label" data-pass_value_id="templateCss"></textarea>-->
-                <!--<textarea data-pass_id="form-fields" name="js" id="templateJs" placeholder="JS" class="floating-label" data-pass_value_id="templateJs"></textarea>-->
-              </div>
-            </div>
+              <input data-pass_id="form-fields" data-document_id="" name="clone-name" id="clone-name" placeholder="View Name" class="input_field" placeholder="View Name" data-pass_value_id="view-name">
+              <a data-clone_id="html-page" class="deleteBtn float:right padding:5px"><i class="fas fa-times"></i></a>
+              
+              <textarea class="floating-label" 
+                data-realtime="false"
+                name="html" 
+                placeholder="Html" 
+                data-pass_value_id="templateHtml" 
+                data-pass_id="form-fields">
+              </textarea>
+              
+              <textarea data-document_id="" name="css" id="templateCss" placeholder="CSS" class="floating-label" data-pass_value_id="templateCss"></textarea>
+              <textarea data-document_id="" name="js" id="templateJs" placeholder="JS" class="floating-label" data-pass_value_id="templateJs"></textarea>
             
+            </div>
           </div>
         </div>
       
         <input type="text" id="prefix" placeholder="View Name"  data-pass_value_to="view-name" class="floating-label">
-        <!--<a class="passValueBtn position:relative bottom:30px right:12px float:right z-index:5 font-size:20px" data-show="#module-templates" data-hide='#form'><i class="far fa-plus-square"></i></a>-->
-        <a class="passValueBtn position:relative bottom:30px right:12px float:right z-index:5 font-size:20px cloneBtn" data-clone_id="module-view" data-clone_name="prefix"><i class="far fa-plus-square"></i></a>
-           
+        <a class="passValueBtn position:relative bottom:30px right:12px float:right z-index:5 font-size:20px" data-show="#module-templates" data-hide='#form'><i class="far fa-plus-square"></i></a>
+          
         	<button class="submitBtn position:fixed bottom:15px right:15px bg:blue grow-hover border-radius:50% padding:15px"><i class="far fa-save"></i></button>
 
       </form>
                   
 
       <!-- Module form templates to pass value and create clone -->
-      <div class="hidden" id="module-templates">
+      <div class="hidden"  id="module-templates">
         <div class="height:20px"><i class="fas fa-times float:right"  data-show="#form" data-hide='#module-templates'></i></div>
           <div class="display:flex flex-wrap:wrap"
 					data-fetch_collection="module_activity"
@@ -137,6 +114,7 @@
 					data-filter_value="5ef69350e0219c2a488dc6c2" 
 					data-order_by="name" 
 					data-order_type="asc"
+					data-pass_id="render"
           data-template_id="module-views">
                 
               <div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" data-template_id="module-views">
@@ -144,12 +122,13 @@
                   <!--<span data-collection="module_activity" name="image" data-document_id="" passed_id="me1234"></span>-->
                   <img data-collection="module_activity" data-document_id="" name="image" data-pass_id="me1234" src="https://via.placeholder.com/150" width="100%"></img>
                
-                <form data-collection="{{collection}}">
+                <form data-collection="module_activity">
                   <textarea hidden
                     data-document_id="{{data._id}}" 
                     name="html" 
                     placeholder="html" 
                     id="templateHtml" 
+                    data-collection="module_activity"
                     data-pass_value_to="templateHtml">
                   </textarea>
                   
@@ -165,11 +144,11 @@
                   
                 </form>
                   <div class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white bg:black opacity:0.4">
-                    <span data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Template Name</span>
+                    <span data-collection="module_activity" data-document_id="{{data._id}}" name="name" data-pass_id="me1234">Template Name</span>
                   </div>
                 </div>
                 <div class="padding:10px">
-                    <h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="description">Description</h4>
+                    <h4 data-collection="module_activity" data-document_id="{{data._id}}" name="description" data-pass_id="me1234">Description</h4>
                 </div>
               </div>
               
@@ -188,6 +167,7 @@
 
     <!-- CoCreateJS --> 
     <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-y-new/dist/CoCreate-crdt.js"></script>
     <script type="text/javascript" src="https://server.cocreate.app/CoCreate-plugins/CoCreate-codemirror/dist/CoCreate-codemirror.js" async></script>  </body>
   </body>
 </html>

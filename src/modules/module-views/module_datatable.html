@@ -64,7 +64,7 @@
 							 <div data-pass_collection="modules"
 								 data-pass_document_id=""
 								 data-pass_to="builder"
-								 data-pass_id="render">
+								 data-pass_id="module_id">
 							 </div>
 						 </a>
 				</li>
@@ -82,7 +82,7 @@
 						data-modal_header="false" 
 						data-modal_x="" 
 						data-modal_y="" 
-						data-pass_id="render">
+						data-pass_id="module_id">
 					 <i class="fas fa-plus"></i>
 					</a>
 				</li>
@@ -162,18 +162,17 @@
 								</div>
 								<div class="margin-left:10px">
 									<a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-views/module_form.html" 
-											data-pass_collection="module_activity"
+											data-pass_collection="modules"
 											data-pass_document_id="{{data._id}}"
-											data-pass_to="form-fields" 
+											data-pass_name="form"
+											data-pass_to="render"
 											data-modal_width="320px" 
 											data-modal_color="#229954"
 											data-modal_header="false">
 										<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Name</h4>
 										<div data-pass_collection="modules"
-											data-pass_document_id=""
-											data-pass_prefix="form_"
-											data-pass_to="render"
-											data-pass_id="render">
+											data-pass_document_id="{{data._id}}"
+											data-pass_to="form-fields">
 										</div>
 									</a>
 									<h5 name="description" value="description"></h5>
@@ -183,16 +182,16 @@
 						<td class="padding:10px">
 							<a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-views/module_form.html"
 									data-pass_document_id="{{data._id}}"
-									data-pass_collection="module_activity"
-									data-pass_to="form-fields" 
+									data-pass_collection="modules"
+									data-pass_name="form"
+									data-pass_to="render" 
 									data-modal_width="320px" 
 									data-modal_color="#229954"
 									data-modal_header="false">
 								<b value="{{data._id}}">Module Id</b>
 								<div data-pass_collection="modules"
-									data-pass_document_id=""
-									data-pass_prefix="form_"
-									data-pass_to="render">
+									data-pass_document_id="{{data._id}}"
+									data-pass_to="form-fields">
 								</div>
 							</a>
 						</td>
@@ -205,16 +204,15 @@
 
 		<a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-views/module_form.html" 
 			 data-pass_collection="modules"
-			 data-pass_document_id=""
-			 data-pass_prefix="form_"
+			 data-pass_name="form-html"
 			 data-pass_to="render"
 			 data-modal_width="320px" 
 			 data-modal_height="100%"
 			 data-modal_color="#229954"
 			 data-modal_header="false"
-			 class="position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover border-radius:50% z-index:8" data-pass_id="render">
+			 class="position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover border-radius:50% z-index:8" data-pass_id="module_id">
 			<i class="fa fa-plus"></i>
-			</a>
+		</a>
 
 		
 		<script>
