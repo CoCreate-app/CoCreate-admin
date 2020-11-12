@@ -61,27 +61,16 @@
 	    </ul>
     </div>
 		<div class="padding:10px" data-main_content_id="content">
-      <form data-collection="users">
-        <input data-pass_id="form-fields" type="text" data-document_id="" name="name" id="name" placeholder="Name" class="floating-label sessionUser_Id"/>
-        <input data-pass_id="form-fields" type="text" data-document_id="" name="email" id="email" placeholder="Email" class="floating-label sessionUser_Id"/>
-        <input data-pass_id="form-fields" type="password" data-document_id="" name="password" placeholder="password" class="floating-label sessionUser_Id"/>
-        <input data-pass_id="form-fields" type="text" data-document_id="" name="description" placeholder="Description" class="floating-label sessionUser_Id"/>
-        <input data-pass_id="form-fields" type="text" data-document_id="" name="profile_image" placeholder="Profile Image" class="floating-label sessionUser_Id"/>
+      <form  data-pass_id="form-fields" data-collection="users" data-document_id="5ee2e3a93e956152355a3443" auto-complete="off">
+        <input type="text" name="name" id="name" placeholder="Name" class="floating-label"/>
+        <input type="text" name="email" id="email" placeholder="Email" class="floating-label" autocomplete="off"/>
+        <input type="password" name="password" placeholder="password" class="floating-label"/>
+        <input type="text" name="description" placeholder="Description" class="floating-label"/>
+        <input type="text" name="profile_image" placeholder="Profile Image" class="floating-label"/>
 
-        <cocreate-select class="floating-label sessionUser_Id sortable" multiple
-          name="connected_orgs" 
-          data-collection="users" 
-          data-document_id=""  
-          data-pass_id="form-fields"
-          placeholder="Connected Org">
-        
+        <cocreate-select class="floating-label sortable" name="connected_orgs" placeholder="Connected Org" multiple>
           <input class="search-input" placeholder="Search" data-template_id="connect">
-          
-          <ul data-fetch_collection="organizations" 
-              data-template_id="connectn"
-              data-pass_id="form-fields"
-              class="selectable--list cocreate-scroll">
-            
+          <ul data-fetch_collection="organizations" data-template_id="connectn" class="selectable--list cocreate-scroll">
       			<li class="template selectable" data-collection="organizations" data-template_id="connectn">
       			  <span class="logo-icon"><img data-collection="organizations" data-document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>
       			  <div class="display:block line-height:1 padding:5px_0px " style="width: calc(100% - 15px);">
@@ -89,26 +78,16 @@
         			  <h5 value="{{data._id}}" >id</h5>
       			  <div>
       			</li>
-      			
           </ul>
-      </cocreate-select>
+        </cocreate-select>
          
-        <cocreate-select class="floating-label sessionUser_Id sortable" 
-          name="current_org" 
-          data-collection="users" 
-          data-document_id=""
-          data-pass_id="form-fields"
-          placeholder="Current Org">
-        
+        <cocreate-select class="floating-label sortable" name="current_org" placeholder="Current Org">
           <input class="search-input" placeholder="Search" data-template_id="connect">
-          
-          <ul data-fetch_collection="users" 
+          <ul data-fetch_collection="users"
+              data-fetch_document=""
               data-fetch_name="connected_orgs" 
               data-template_id="connect" 
-              data-pass_to="me1234"
-              data-pass_id="form-fields"
-              class="template-wrapper-array selectable--list cocreate-scroll"
-              data-fetch_document_id="5d8bff28e4be424681b5e48c">
+              class="selectable--list cocreate-scroll">
             
       			<li class="template selectable" data-collection="organizations" data-template_id="connect">
       			  <span class="logo-icon"><img data-collection="organizations" data-document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>
@@ -122,7 +101,7 @@
       </cocreate-select>
 
          <!-- current-org -->
-          <input data-pass_id="form-fields" type="text" data-document_id="" name="current_org" class="floating-label sessionUser_Id" data-get_value="org_id" placeholder="Current Org">
+          <input type="text" name="current_org" class="floating-label" placeholder="Current Org">
 
         	<a class="submitBtn position:fixed bottom:15px right:15px bg:blue grow-hover round"><i class="far fa-save"></i></a>
 

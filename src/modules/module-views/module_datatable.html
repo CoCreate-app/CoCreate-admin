@@ -14,7 +14,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" crossorigin="anonymous" />  
   </head>
-  
+  <style>
+  	.selected{background:gainsboro;}
+  </style>
 	<body class="width:fit-content cocreate-scroll">
 		<!-- Navbar -->
 		<div class="nav display:flex align-items:center bg:light-gray position:sticky left:0 width:100vw" 
@@ -53,22 +55,22 @@
 				
 				<!-- Render Builder -->
 				<li class="margin-right:15px">
-						<a target="modal"
-							 data-pass_collection="modules"
-							 data-pass_document_id="" 
-							 data-pass_name="html" 
-							 data-pass_to="render" 
-							 data-modal_width="100%"
-							 class="sessionBuilderUI_id">
-								<i class="fas fa-palette"></i>
-							 <div data-pass_collection="modules"
-								 data-pass_document_id=""
-								 data-pass_to="builder"
-								 data-pass_id="module_id">
-							 </div>
-						 </a>
-				</li>
-				
+					<a target="modal"
+						 data-pass_collection="module-views"
+						 data-pass_document_id="5fa86bfd4b4c3e4dea76abec" 
+						 data-pass_name="html" 
+						 data-pass_to="render" 
+						 data-modal_width="100%"
+                       	 data-modal_header="false"
+						 class="sessionBuilderUI_Id">
+							<i class="fas fa-palette"></i>
+						 <div data-pass_collection="module-views"
+							 data-pass_document_id=""
+							 data-pass_to="builder"
+							 data-pass_id="render">
+						 </div>
+					 </a>
+				</li>				
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
 					<a target="modal" href="module_form.html" 
@@ -107,7 +109,10 @@
 					<a data-btn_type="copy" data-template_id="datatable"><i class="far fa-copy"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-btn_type="print" data-template_id="datatable"><i class="fas fa-print"></i></a>
+					<a data-toggle="selected" data-toggle_target="tr" data-template_id="datatable"><i class="fas fa-print"></i></a>
+				</li>
+				<li class="margin-right:15px">
+					<a data-toggle="selected" data-toggle_target="tr" data-template_id="datatable"><i class="far fa-square"></i></a>
 				</li>
 			
 			 </ul>
@@ -150,11 +155,10 @@
 
 				<tbody data-template_id="datatable"
 					data-fetch_collection="modules"
-					data-fetch_count=""
 					data-order_by="name" 
 					data-order_type="asc">
 					
-					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" data-template_id="datatable" data-pass_id="me1234">
+					<tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" data-document_id="{{data._id}}" data-template_id="datatable"  data-toggle="selected">
 						<td class="padding:10px">
 							<div class="display:flex min-width:200px">
 								<div class="display:flex justify-content:center width:25px">
@@ -174,8 +178,8 @@
 											data-pass_document_id="{{data._id}}"
 											data-pass_to="form-fields">
 										</div>
+										<div data-pass_collection="module-views" data-pass_filter_name="module_id" data-pass_filter_value="{{data._id}}" data-pass_to="module_id"></div>
 									</a>
-									<h5 name="description" value="description"></h5>
 								</div>
 							</div>
 						</td>
@@ -202,7 +206,7 @@
 	
 		</div>
 
-		<a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-views/module_form.html" 
+		<button target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-views/module_form.html" 
 			 data-pass_collection="modules"
 			 data-pass_name="form-html"
 			 data-pass_to="render"
@@ -212,9 +216,8 @@
 			 data-modal_header="false"
 			 class="position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover border-radius:50% z-index:8" data-pass_id="module_id">
 			<i class="fa fa-plus"></i>
-		</a>
+		</button>
 
-		
 		<script>
 			var config = {
 				apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',

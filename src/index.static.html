@@ -17,18 +17,18 @@
 
  <style type="text/css">
  
-    ul.cocreate-menu > :nth-last-child(2) {
+    /*ul.cocreate-menu > :nth-last-child(2) {*/
       /*margin-top: auto;*/
-      border-top: 1px solid #ddd!important;
-      min-height:40px;
-    }
-    ul.cocreate-menu > :nth-last-child(1) {
-      min-height:40px;
-    }
+    /*  border-top: 1px solid #ddd!important;*/
+    /*  min-height:40px;*/
+    /*}*/
+    /*ul.cocreate-menu > :nth-last-child(1) {*/
+    /*  min-height:40px;*/
+    /*}*/
     .cocreate-search .floating-label_field{
       margin-top:0px;
     }
-    .org-changer .selected{margin:0px;}
+    .org-changer li[selected]{margin:0px;}
     
 	/*.hide-nav + #modal-viewport{*/
 	/*	margin-top:0px;*/
@@ -40,8 +40,14 @@
 
  </style> 
 <style type="text/css">
-  *[data-user_status="on"] {
-    background-color:#70ca63;
+  div[data-user_status="on"] {
+    background-color:yellowgreen;
+  }
+  div[data-user_status="off"] {
+    background-color:red;
+  }
+  div[data-user_status="idle"] {
+    background-color:orange;
   }
 </style>
   <body>
@@ -53,7 +59,7 @@
 		      data-scroll_down="5">
       
         <!-- Menu Icon Animations -->
-        <a aria-label="mobile menu" class="nav-toggle menu_icon--hamburger" data-toggle_sidenav="menuL">
+        <a aria-label="mobile menu" class="nav-toggle menu_icon" data-toggle_sidenav="menuL">
           <span></span>
           <span></span>
           <span></span>
@@ -66,39 +72,69 @@
           <li class="margin-right:15px">
           	<a data-fullscreen><i class="fas fa-expand" data-transform_to="fas fa-compress"></i></a>
           </li>
-          	
+          
           <!-- Render Builder -->
-          <li class="margin-right:15px">
-        	   <a target="modal" href="https://server.cocreate.app/CoCreate-modules/CoCreate-builder/CoCreate-builder.html"
-                data-pass_collection="modules"
-                data-pass_document_id="" 
-                data-pass_prefix="" 
-                data-pass_to="builder" 
-                data-modal_width="100%"
-                data-modal_header="false"
-                class="sessionAdminUI_Id">
-                <i class="fas fa-palette"></i>
-                <div data-pass_collection="modules"
-                  data-pass_document_id=""
-                  data-pass_prefix=""
-                  data-pass_to="render"
-                  class="sessionBuilderUI_Id">
-                </div>
-              </a>
-            </li>
-        	  <li class="display:flex">
-				      <span class="cocreate-badge position:relative right:7px bottom:7px display:inline-flex border border-width:2px border-radius:4px border-color:white success">4</span>	
-              <a target="modal" href="render.html" data-pass_collection="modules" data-pass_prefix="datatable_" data-pass_document_id="" data-pass_to="render" data-modal_width="100%" data-modal_height="100%" data-modal_x="0px" data-modal_color="#229954">
-                <i class="fas fa-history"></i>
-				      </a>
-        	  </li>							     
-            <li class="display:flex">
-				      <span class="cocreate-badge position:relative right:7px bottom:7px display:inline-flex border border-width:2px border-radius:4px border-color:white warning">4</span>	
-      				<a target="modal" data-pass_collection="modules" data-pass_document_id="5ef8b26e1341e361b8d7b8ee" data-pass_name="html" data-pass_to="render" data-modal_width="100%" data-modal_height="100%" data-modal_color="#229954" data-modal_header="false">
-              	 <i class="fa fa-calendar" aria-hidden="true"></i>
-      				</a>
-        	  </li>
-            			      
+    			<li class="margin-right:15px background:red:hover">
+    				<a target="modal"
+    					 data-pass_collection="module-views"
+    					 data-pass_document_id="5fa86bfd4b4c3e4dea76abec" 
+    					 data-pass_name="html" 
+    					 data-pass_to="render" 
+    					 data-modal_width="100%"
+               data-modal_header="false"
+    					 class="sessionBuilderUI_Id">
+    						<i class="fas fa-palette"></i>
+    					 <div data-pass_collection="module-views"
+    						 data-pass_document_id="5fa85f874b4c3e4dea76abeb"
+    						 data-pass_name="html"
+    						 data-pass_to="builder">
+    					 </div>
+    				 </a>
+    			</li>				
+      	 <!-- <li class="display:flex">-->
+			     <!-- <span class="cocreate-badge position:relative right:7px bottom:7px display:inline-flex border border-width:2px border-radius:4px border-color:white success">4</span>	-->
+        <!--    <a target="modal" href="render.html" data-pass_collection="modules" data-pass_prefix="datatable_" data-pass_document_id="" data-pass_to="render" data-modal_width="100%" data-modal_height="100%" data-modal_x="0px" data-modal_color="#229954">-->
+        <!--      <i class="fas fa-history"></i>-->
+			     <!-- </a>-->
+      	 <!-- </li>							     -->
+        <!--  <li class="display:flex">-->
+			     <!-- <span class="cocreate-badge position:relative right:7px bottom:7px display:inline-flex border border-width:2px border-radius:4px border-color:white warning">4</span>	-->
+    				<!--<a target="modal" data-pass_collection="module-views" data-pass_document_id="5fa8a7227a8fd273184a1924" data-pass_name="html" data-pass_to="render" data-modal_width="100%" data-modal_height="100%" data-modal_color="#229954" data-modal_header="false">-->
+        <!--    	 <i class="fa fa-calendar" aria-hidden="true"></i>-->
+    				<!--</a>-->
+      	 <!-- </li>-->
+        <!--  <li class="margin-right:15px">-->
+        <!--  	<a target="modal" data-pass_collection="module-views" data-pass_document_id="5fa880bc4b4c3e4dea76abef" data-pass_name="html" data-pass_to="render" data-modal_width="100%" data-modal_height="100%" data-modal_color="#229954" data-modal_header="false"><i class="fas fa-phone"></i></a>-->
+        <!--  </li>-->
+        <!--  <li class="margin-right:15px">-->
+        <!--  	<a target="modal" data-pass_collection="module-views" data-pass_document_id="5fab586a7ed19b0466911796" data-pass_name="html" data-pass_to="render" data-modal_width="100%" data-modal_height="100%" data-modal_color="#229954" data-modal_header="false"><i class="far fa-envelope"></i></a>-->
+        <!--  </li>-->
+          <div data-fetch_collection="modules" 
+		        data-order_by="navbar-menu-position" 
+              data-order_type="asc"
+              data-filter_name="navbar-menu-position" 
+              data-filter_value="0" 
+              data-filter_value_type="number"
+              data-filter_operator="$ne"
+              data-template_id="navbar-menu" class="display:inline-flex">
+              
+              <li class="template margin-right:15px" data-template_id="navbar-menu">
+                  <a target="modal" 
+                      data-pass_collection="module-views"
+                      data-pass_document_id="{{data.navbar-menu-primary}}"
+                      data-pass_to="render"
+                      data-pass_name="html"
+                      data-modal_width="600px"
+                      data-modal_height="100%"
+                      data-modal_color="#229954"
+                      data-modal_header="false">
+                      <span data-document_id="{{data._id}}" data-collection="modules" name="icon" value="icon"></span>
+        				    <div data-pass_collection="module_activity" data-pass_filter_name="module_id" data-pass_filter_value="{{data._id}}" data-pass_to="datatable"></div>
+        				    <div data-pass_collection="module_activity" data-document_id="{{data._id}}" data-pass_to="module_id"></div>
+        				    <div data-pass_collection="module-views" data-pass_document_id="{{data.main-menu-secondary}}" data-pass_name="html" data-pass_to="form"></div>
+                  </a>
+                </li>
+              </div>
         </ul>
         
 			  <!-- Avatar -->
@@ -130,7 +166,7 @@
   	<div id="menuL" class="cocreate-sidenav bg:medium-light-gray height:100vh" data-main_content="content" sidenav-default_desktop="collapsed" sidenav-default_tablet="collapsed">
         
         <!-- Select to change organizations  -->
-        <cocreate-select class="remove-none padding:0 border:none sessionUser_Id" 
+        <cocreate-select class="org-changer remove-none padding:0 border:none sessionUser_Id" 
           name="current_org" 
           data-collection="users" 
           data-document_id="">
@@ -138,9 +174,10 @@
           <input placeholder="Search" data-template_id="connected_orgs">
          
           <ul class="selectable--list cocreate-menu cocreate-scroll sessionUser_Id"
-            data-fetch_collection="users" 
+            data-fetch_collection="users"
+            data-fetch_document_id="5ee2e3a93e956152355a3443"
             data-filter_name="_id"
-            data-filter_value="" 
+            data-filter_value=""
             data-filter_operator="$eq"
             data-fetch_name="connected_orgs" 
             data-template_id="connected_orgs">
@@ -148,7 +185,7 @@
               <span class="logo-icon"><img data-collection="organizations" data-document_id="{{connected_orgs.--}}" name="logo" src="https://server.cocreate.app/images/cocreate.png" height="40px"alt="..."></span>
               <span data-collection="organizations" data-document_id="{{connected_orgs.--}}" name="name" class="logo-name">Organization Name</span>
       			</li>
-      			<li class="menuItem">
+      			<li class="line-height:40px height:40px overflow:hidden">
       			  <a href="new-org.html">
                 <span><i class="fas fa-plus"></i></span>
                 <span>New Orginaztion</span>
@@ -183,71 +220,68 @@
 			<!--<div data-template_id="main-menu" data-filter_name="menu-position" data-filter_value="0" data-value_type="number" data-filter_operator="ne"></div>-->
 			<div class="padding-right:5px padding-bottom:5px">
 
-  			<ul class="cocreate-menu cocreate-scroll height:85vh bottom:10px margin-right:5px">
+  			<ul class="cocreate-scroll display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
   			  <div data-fetch_collection="modules" 
-  			     data-order_by="menu-position" 
+  			     data-order_by="main-menu-position" 
              data-order_type="asc"
-  		       data-filter_name="menu-position" 
-  		       data-filter_value="0" 
+  		       data-filter_name="main-menu-position" 
+  		       data-filter_value="0"
+  		       data-filter_value_type="number"
   		       data-filter_operator="$ne"
   		       data-template_id="main-menu">
   
-    			  <li class="template menuItem height:40px" data-template_id="main-menu">
+    			  <li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" data-template_id="main-menu">
     				  <a target="modal" 
-    				     data-pass_collection="modules"
-    				     data-pass_document_id="{{data._id}}"
+    				     data-pass_collection="module-views"
+    				     data-pass_document_id="{{data.main-menu-primary}}"
     				     data-pass_to="render"
     				     data-pass_name="html"
     				     data-modal_width="600px"
     				     data-modal_height="100%"
     				     data-modal_color="#229954"
     				     data-modal_header="false"
-    				     data-modal_x=""
-    				     data-modal_y="">
-    				    <span data-document_id="{{data._id}}" data-collection="modules" name="icon" value="icon"></span>
+    				     class="display:inline-block">
+    				    <span class="display:inline-block width:50px text-align:center" data-document_id="{{data._id}}" data-collection="modules" name="icon" value="icon"></span>
     				    <span data-collection="modules" data-document_id="{{data._id}}" name="name" ></span>
     				    <div data-pass_collection="module_activity" data-pass_filter_name="module_id" data-pass_filter_value="{{data._id}}" data-pass_to="datatable"></div>
     				    <div data-pass_collection="module_activity" data-document_id="{{data._id}}" data-pass_to="module_id"></div>
+    				    <div data-pass_collection="module-views" data-pass_document_id="{{data.main-menu-secondary}}" data-pass_name="html" data-pass_to="form"></div>
   		         </a>
-      				  <div class="float:right">
+      				  <div class="float:right width:50px text-align:center">
       				    <a target="modal" 
-        				    data-pass_collection="modules"
-        				    data-pass_name="form-html"
+        				    data-pass_collection="module-views"
+        				    data-pass_document_id="{{data.main-menu-secondary}}"
+        				    data-pass_name="html"
         				    data-pass_to="render" 
         				    data-modal_width="320px" 
         				    data-modal_height="100%"
         				    data-modal_header="false"
         				    data-modal_color="#229954">
       				      <i class="fas fa-plus"></i>
+      				      <div data-pass_collection="modules" data-document_id="{{data._id}}" data-pass_to="module_id"></div>
       				    </a>
       				  </div>
     				  </li>
     			  </div>
-    			  
-        	  <li class="menuItem">
-        			<a target="modal" href="modules/settings/settings.html" 
+        </ul>
+        <div class="display:inline:block position:absolute bottom:0 background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
+        		<a target="modal" href="modules/settings/settings.html" 
         			data-pass_collection="modules" 
         			data-pass_document_id="" 
-        			data-pass_prefix="form_" 
         			data-pass_to="render" 
-        			data-modal_width="250px" 
+        			data-modal_width="275px" 
         			data-modal_height="100%" 
         			data-modal_color="#229954" 
         			data-modal_x="0" 
         			data-modal_y="0" 
-        			data-modal_header="false">
-          		  <span><i class="fas fa-cogs"></i></span>
-          		  <span>Settings</span>
-    					<span class="cocreate-badge danger line-height:1">4</span>
-          		</a>
-        	  </li>
-        	  <li class="menuItem">
-          		<a href="signin.html" class="logoutBtn">
-          		  <span><i class="fas fa-sign-out-alt"></i></span>
-          		  <span>Logout</span>
-          		</a>
-        	  </li>
-        </ul>
+        			data-modal_header="false"
+        			class="width:50px text-align:center display:inline-block">
+          		  <span class="padding:10px width:50px text-align:center"><i class="fas fa-cogs"></i></span>
+        		</a>
+        		<a href="signin.html" class="logoutBtn width:50px text-align:center display:inline-block">
+        		  <span class="padding:10px width:50px text-align:center"><i class="fas fa-sign-out-alt"></i></span>
+        		</a>
+        </div>
       </div>
 		    <div class="resizeHandler"></div>
     </div>
@@ -259,7 +293,7 @@
         organization_Id: '5de0387b12e200ea63204d6c'
       }
     </script>
-   
+    
     <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-select.js"></script>
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-adapter.js"></script>

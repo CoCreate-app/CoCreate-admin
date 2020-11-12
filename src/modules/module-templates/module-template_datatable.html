@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-		<title>Module Activity Datatables | CoCreate</title>
+		<title>Module Templates Datatables | CoCreate</title>
 		
 		<!-- CoCreateCSS -->
 		<link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
@@ -164,7 +164,7 @@
 				</tr>
 
 				<tbody data-template_id="datatable"
-					data-fetch_collection="module_activity"
+					data-fetch_collection="module-views"
 					data-filter_name="module_id" 
 					data-filter_value="5ef69350e0219c2a488dc6c2" 
 					data-order_by="name" 
@@ -180,8 +180,8 @@
 								<div class="margin-left:10px">
 									<a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-templates/module-template_form.html"
 									    data-pass_collection="modules"
-											data-pass_document_id=""
-											data-pass_name="form-html"
+											data-pass_document_id="{{data._id}}"
+											data-pass_name="html"
 											data-pass_id="render"
 											data-pass_to="render"
 											data-modal_width="320px" 
@@ -221,9 +221,9 @@
 		</div>
 
 		<a target="modal" data-pass_id="render"
-			data-pass_collection="modules"
+			data-pass_collection="module-views"
 			data-pass_document_id=""
-			data-pass_name="form-html"
+			data-pass_name="html"
 			data-pass_to="render"
 			data-modal_width="320px" 
 			data-modal_height="100%"

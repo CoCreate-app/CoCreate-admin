@@ -114,18 +114,13 @@
 	                        <div class="padding:25px bg:medium-gray text-align:left">
 	
 	                           <!-- Industry select -->
-	                            <cocreate-select class="sortable floating-label" 
-	                                data-collection="organizations" 
-	                                data-document_id=""
-	                                name="industry" 
-	                                placeholder="Industry">
-	  					          	  <input class="template-search" placeholder="Search" data-template_id="template1">
+	                            <cocreate-select class="sortable floating-label" data-collection="organizations" name="industry" placeholder="Industry">
+	  					          	  <input class="template-search" placeholder="Search" data-template_id="industries">
 									<ul data-fetch_collection="industries" 
-									    data-template_id="template1" 
-									    data-pass_to="me1234" 
-									    class="template-wrapper selectable--list cocreate-scroll">
-										<li class="template selectable" data-pass_id="me1234">
-											<h5 data-collection="industries" data-document_id="" name="name" data-pass_id="me1234">industry name</h5>
+									    data-template_id="industries"
+									    class="selectable--list cocreate-scroll">
+										<li class="template selectable" data-template_id="industries" value="{{data._id}}">
+											<h4 data-collection="industries" data-document_id="{{data._id}}" name="name">industry name</h4>
 										</li>
 									</ul>
 	                            </cocreate-select>
@@ -194,9 +189,8 @@
 								<button type="button" class="outline white-blue" data-show='#step3,#ava3' data-hide='#step4,#ava4'>Previous</button>
 								<button type="button" class="outline red-white registerBtn" data-actions="registerBtn, industryBtn">
 									Register
-									<a href="index.html" data-pass_collection="modules" data-pass_to="render"></a>
+									<a href="index.html" data-pass_collection="modules" data-pass-document_id="" data-pass_name="html" data-pass_to="render"></a>
 								</button>
-								<!--<button type="button" class="outline blue-white industryBtn"><a href="">Industry</a></button>-->
 
 							</div>
 						</div>
@@ -216,19 +210,12 @@
 		
 		<!--CoCreateJS-->
 		<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
-		<script src="https://server.cocreate.app/CoCreate-components/CoCreate-users/src/CoCreate-users.js"></script>
 		<script src="https://server.cocreate.app/CoCreate-components/CoCreate-industry/src/CoCreate-industry.js"></script>
-		<script src="https://server.cocreate.app/CoCreate-components/CoCreate-action/src/CoCreate-action.js"></script>
+	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-select.js"></script>
+	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-adapter.js"></script>
+	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-uuid/src/CoCreate-uuid.js"></script>
 
-		<script>
-		//   localStorage.removeItem('organization_id');
-		//   localStorage.removeItem('apiKey');
-		//   localStorage.removeItem('securityKey');
-		</script>
 		<script type="text/javascript">
-			document.getElementById('apiKey').value = CoCreateUtils.generateKey();
-			document.getElementById('securityKey').value = CoCreateUtils.generateKey();
-			
 			CoCreateAction.registerEvent('registerBtn', null, window, 'fetchedUsersCurrentOrg')
 			CoCreateAction.registerEvent('industryBtn', buildIndustryRequest, window, 'buildIndustry')
 		</script>  
