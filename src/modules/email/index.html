@@ -22,6 +22,14 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.hide-nav + .cocreate-sidenav, .hide-nav + .sidenav-right{
+	margin-top:0px;
+	max-height: -moz-available;   
+  max-height: -webkit-fill-available;  
+  max-height: fill-available;
+
+}
 </style> 
 
 
@@ -32,7 +40,14 @@
 		      data-scroll="sticky-nav, hide-nav"
 		      data-scroll_up="5"
 		      data-scroll_down="5">
-      
+       
+      <!-- Menu Icon Arrow Left Animations -->
+      <a aria-label="mobile menu" class="nav-toggle menu_icon" data-toggle_sidenav="menuL">
+          <span></span>
+          <span></span>
+          <span></span>
+      </a>
+     
       <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
   			<li class="margin-right:15px">
   			  <a class="btn-modal-close"><i class="fas fa-times"></i></a>
@@ -78,7 +93,7 @@
       <ul class="cocreate-menu border-bottom:1px_solid_lightgray">
     	  <li class="line-height:40px height:40px overflow:hidden font-size:20px">
     			<a data-window_url="compose.html">
-      		  <span><i class="fas fa-plus"></i></span>
+      		  <span class="display:inline-block width:50px text-align:center"><i class="fas fa-plus"></i></span>
       		  <span>Compose</span>
       		</a>
     	  </li>
@@ -86,14 +101,14 @@
       <ul class="cocreate-menu cocreate-scroll vh-120 bottom:10 color:gray">
     	  <li class="line-height:40px height:40px overflow:hidden">
     			<a data-window_url="settings.html">
-      		  <span><i class="fas fa-inbox"></i></span>
+      		  <span class="display:inline-block width:50px text-align:center"><i class="fas fa-inbox"></i></span>
       		  <span>Inbox</span>
   					<span class="cocreate-badge badge-danger line-height:1">4</span>
       		</a>
     	  </li>
     	  <li class="line-height:40px height:40px overflow:hidden">
       		<a href="signin.html">
-      		  <span><i class="fas fa-paper-plane"></i></span>
+      		  <span class="display:inline-block width:50px text-align:center"><i class="fas fa-paper-plane"></i></span>
       		  <span>Sent</span>
       		</a>
     	  </li>
@@ -123,7 +138,7 @@
 		  <!--  <input class="floating-label" data-module_activity_id="5d8c79e7e4be424681b5e48d" name="emailname"  placeholder="Search Inbox">-->
 		  <!--</div>-->
 		  
-		  <div class="menu-content cocreate-scroll">
+		  <div class="menu-content cocreate-scroll height:100vh min-width:300px">
 		    
 		    <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
         <!-- avatar with flip container for selecting avatar -->
@@ -142,7 +157,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px text-align:right">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -165,7 +180,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -188,7 +203,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -211,7 +226,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -234,7 +249,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -257,7 +272,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -280,7 +295,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -303,7 +318,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -326,7 +341,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -349,7 +364,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -372,7 +387,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -395,7 +410,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -418,7 +433,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -441,7 +456,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -464,7 +479,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -487,7 +502,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -510,7 +525,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -533,7 +548,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -556,7 +571,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -579,7 +594,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -602,7 +617,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -625,7 +640,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -648,7 +663,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -671,7 +686,7 @@
   			  <div class="flex-grow:1 padding-left:10px">
   		      <div class="display:flex justify-content:space-between ">
   		        <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
-  		        <p class="margin:0px">09:24 AM</p>
+  		        <p class="width:70px margin:0px font-size:12px">09:24 AM</p>
   		      </div>
   		      <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
   		      <span class="cocreate-badge badge-danger">4</span>
@@ -687,9 +702,10 @@
   	  data-main_content="content" 
   	  sidenav-default_desktop="expanded" 
   	  sidenav-default_tablet="expanded" 
-  	  sidenav-default_phone="ofCanvas">
+  	  sidenav-default_phone="ofCanvas"
+  	  sidenav-expanded_width="370px">
   	  
-      <!--<div class="email-container">-->
+      <div class="min-width:300px">
         <div class="display:flex align-items:center height:70px justify-content:flex-end padding-15_0px font-size:14px border-bottom:1px_solid_lightgray">
           <a class="padding:0px_10px"><i class="fas fa-arrows-alt-v"></i></a>
           <a class="padding:0px_10px"><i class="fas fa-print"></i></a>
@@ -726,12 +742,12 @@
           </div>
           <div class="padding-50px-left">Main Information</div>
         </div>
-      <!--</div>-->
+      </div>
 
 		  <div class="resizeHandler"></div>
     </div>
         
-		          	<button class="submitBtn position:fixed bottom:15px right:15px bg:blue grow-hover border-radius:50%"><i class="fas fa-plus"></i></button>
+		          	<button class="submitBtn position:fixed bottom:15px right:15px background:#2196f3 grow-hover border-radius:50% z-index:10"><i class="fas fa-plus"></i></button>
 
     <script>
       var config = {

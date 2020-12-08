@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" /> 
+
   </head>
 
  <style type="text/css">
@@ -238,13 +239,13 @@
     				     data-pass_name="html"
     				     data-modal_width="600px"
     				     data-modal_height="100%"
-    				     data-modal_color="#229954"
+    				     data-modal_color="{{data.main-modal-color}}"
     				     data-modal_header="false"
     				     class="display:inline-block">
     				    <span class="display:inline-block width:50px text-align:center" data-document_id="{{data._id}}" data-collection="modules" name="icon" value="icon"></span>
     				    <span data-collection="modules" data-document_id="{{data._id}}" name="name" ></span>
     				    <div data-pass_collection="module_activity" data-pass_filter_name="module_id" data-pass_filter_value="{{data._id}}" data-pass_to="datatable"></div>
-    				    <div data-pass_collection="module_activity" data-document_id="{{data._id}}" data-pass_to="module_id"></div>
+    				    <div data-pass_collection="module_activity" data-pass_value="{{data._id}}" data-pass_to="module_id"></div>
     				    <div data-pass_collection="module-views" data-pass_document_id="{{data.main-menu-secondary}}" data-pass_name="html" data-pass_to="form"></div>
   		         </a>
       				  <div class="float:right width:50px text-align:center">
@@ -265,9 +266,10 @@
     			  </div>
         </ul>
         <div class="display:inline:block position:absolute bottom:0 background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
-        		<a target="modal" href="modules/settings/settings.html" 
-        			data-pass_collection="modules" 
-        			data-pass_document_id="" 
+        		<a target="modal"  
+        			data-pass_collection="module-views" 
+        			data-pass_document_id="5fa849674b4c3e4dea76abe6" 
+        			data-pass_name="html"
         			data-pass_to="render" 
         			data-modal_width="275px" 
         			data-modal_height="100%" 
@@ -277,6 +279,32 @@
         			data-modal_header="false"
         			class="width:50px text-align:center display:inline-block">
           		  <span class="padding:10px width:50px text-align:center"><i class="fas fa-cogs"></i></span>
+        		</a>
+        		<a target="modal" href="modules/module-views/module_datatable.html" 
+        			data-pass_collection="modules" 
+        			data-pass_document_id="" 
+        			data-pass_to="render" 
+        			data-modal_width="640px" 
+        			data-modal_height="100%" 
+        			data-modal_color="#229954" 
+        			data-modal_x="0" 
+        			data-modal_y="0" 
+        			data-modal_header="false"
+        			class="width:50px text-align:center display:inline-block">
+          		  <span class="padding:10px width:50px text-align:center"><i class="fas fa-project-diagram"></i></span>
+        		</a>
+        		<a target="modal" href="modules/module-templates/module-template_datatable.html" 
+        			data-pass_collection="modules" 
+        			data-pass_document_id="" 
+        			data-pass_to="render" 
+        			data-modal_width="640px" 
+        			data-modal_height="100%" 
+        			data-modal_color="#229954" 
+        			data-modal_x="0" 
+        			data-modal_y="0" 
+        			data-modal_header="false"
+        			class="width:50px text-align:center display:inline-block">
+          		  <span class="padding:10px width:50px text-align:center"><i class="fas fa-shapes"></i></span>
         		</a>
         		<a href="signin.html" class="logoutBtn width:50px text-align:center display:inline-block">
         		  <span class="padding:10px width:50px text-align:center"><i class="fas fa-sign-out-alt"></i></span>

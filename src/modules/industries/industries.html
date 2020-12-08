@@ -70,9 +70,26 @@
       <form data-collection="industries" class="padding:15px" data-realtime="false">
         <h3>Indusrty Creator</h3>
         <input  data-document_id="" data-pass_id="form-fields" name="name" placeholder="Industry Name" class="floating-label">
+       
         <textarea data-document_id="" data-pass_id="form-fields" name="description" placeholder="Description"  class="floating-label"/></textarea>
+        <!--<cocreate-select class="floating-label" data-collection="test" data-document_id="5e8ff00e8c3af32574df80cb" name="selectField7" placeholder="Collection Select" multiple>-->
+        <!--  <input class="search-options" placeholder="Search" data-search_id="search_05" data-item_selector=".selectable">-->
+        <!--  <ul data-fetch_collection="" -->
+        <!--    data-fetch_value_type="collection"-->
+        <!--    data-template_id="collection-list" -->
+        <!--    class="template-wrapper selectable--list cocreate-scroll" -->
+        <!--    data-pass_to="me1234"-->
+        <!--    data-search_id="search_05">-->
+    				<!--<li class="selectable template" data-template_id="collection-list" data-value="{{data.name}}" data-pass_id="me1234" data-render_array="data">-->
+    				<!--  <a data-pass_to="document-select" data-pass_id="me1234">-->
+    				<!--    <h5 name="name" data-pass_id="me1234" value="{{data.name}}"></h5>-->
+    				<!--  </a>-->
+    				<!--</li>-->
+        <!--  </ul>-->
+        <!--</cocreate-select>-->
+
         <!--<button class="industryCreateBtn submitBtn">Submit</button>-->
-        <a class="submitBtn industryCreateBtn position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover round"><i class="far fa-save"></i></a>
+        <button class="submitBtn industryCreateBtn position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover round">Create Industry <i class="far fa-save"></i></button>
     
       </form>
     </div>
@@ -87,7 +104,8 @@
    
     <!--<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>-->
     <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
-  
+    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-select.js"></script>
+    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-adapter.js"></script>
     <!--CoCreate Plugins-->
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-industry/src/CoCreate-industry.js"></script>
 

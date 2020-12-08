@@ -17,13 +17,6 @@
   
   </head>
   
-  <style type="text/css">
-	.scroll-show-nav + .cocreate-menu{
-	/*margin-top:65px;*/
-
-	}
-  </style>
-
   <body>
     <div id="modal-viewport" class="hidden"></div>
         <div class="nav display:flex align-items:center bg:light-gray position:fixed top:0"
@@ -47,20 +40,21 @@
                 <a data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
             </li>
             <li class="margin-right:15px">
-              <a target="modal" href="render.html"
-                data-pass_collection="modules"
-                data-pass_document_id="" 
-                data-pass_name="" 
-                data-pass_to="builder"
-                data-pass_id="render"
-                data-modal_width="100%">
-                  <i class="fas fa-palette"></i>
-                <div data-pass_collection="modules"
-    			   data-pass_document_id=""
-    		       data-pass_name=""
-    			   data-pass_to="render"
-    			   class="sessionBuilderUI_Id">
-                </div>
+                <a target="modal"
+                	 data-pass_collection="module-views"
+                	 data-pass_document_id="5fa86bfd4b4c3e4dea76abec" 
+                	 data-pass_name="html" 
+                	 data-pass_to="render" 
+                   data-modal_width="100%"
+                   data-modal_header="false"
+                   class="sessionBuilderUI_Id">
+                		<i class="fas fa-palette"></i>
+              		 <div data-pass_id="form-fields"
+              		      data-pass_collection=""
+                        data-pass_document_id=""
+                        data-pass_name="html"
+                        data-pass_to="builder">
+      						 </div>
                 </a>
             </li>
 	    </ul>
@@ -88,8 +82,9 @@
                         data-modal_header="false" class="display:inline-block">
                         <span class="display:inline-block width:50px text-align:center" data-document_id="{{data._id}}" data-collection="modules" name="icon" value="icon"></span>
                         <span data-collection="modules" data-document_id="{{data._id}}" name="name" ></span>
-                        <div data-pass_collection="modules" data-pass_filter_name="module_id" data-pass_filter_value="{{data._id}}" data-pass_to="module_id"></div>
+                        <div data-pass_filter_name="module_id" data-pass_filter_value="{{data._id}}" data-pass_to="datatable"></div>
                         <div data-pass_collection="modules" data-document_id="{{data._id}}" data-pass_to="module_id"></div>
+                        <div data-pass_collection="module-views" data-pass_document_id="{{data.settings-menu-secondary}}" data-pass_to="form"></div>
                     </a>
                     <div class="float:right width:50px text-align:center {{data.settings-menu-secondary}}">
                       <a target="modal" 
@@ -106,281 +101,6 @@
                     </div>
                   </li>
                 </div>
- <!-- static menu -->           
-      <!--      <li class="line-height:40px height:40px overflow:hidden  background:dodgerblue:hover">-->
-      <!--          <a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/organization-profile/organization-profile-form.html"-->
-      <!--              data-pass_collection="modules"-->
-      <!--              data-pass_document_id=""-->
-                   
-      <!--              data-pass_name=""-->
-      <!--              data-pass_to="render"-->
-      <!--              data-modal_width="320px"-->
-      <!--              data-modal_color="#229954"-->
-      <!--              data-modal_header="false"-->
-      <!--              data-open_in="root"-->
-      <!--              class="display:inline-block">-->
-      <!--              <span class="display:inline-block width:50px text-align:center"><i class="far fa-building"></i></span>-->
-      <!--  		    <span>Organization Profile</span>-->
-      <!--          </a>-->
-      <!--      </li>-->
-      <!--      <li class="line-height:40px height:40px overflow:hidden  background:dodgerblue:hover">-->
-      <!--          <a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile-form.html"-->
-      <!--              data-pass_collection="modules"-->
-      <!--              data-pass_document_id=""-->
-      <!--              data-pass_name=""-->
-      <!--              data-pass_to="render"-->
-      <!--              data-modal_width="320px"-->
-      <!--              data-modal_color="#229954"-->
-      <!--              data-modal_header="false"-->
-      <!--              data-open_in="root"-->
-      <!--              data-modal_x=""-->
-      <!--              data-modal_y="" class="display:inline-block">-->
-      <!--              <span class="display:inline-block width:50px text-align:center"><i class="far fa-user"></i></span>-->
-      <!--  		    <span>My Profile</span>-->
-      <!--          </a>-->
-      <!--      </li>-->
-      <!--      <li class="line-height:40px height:40px overflow:hidden  background:dodgerblue:hover">-->
-      <!--          <a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/members_datatable.html"-->
-      <!--              data-pass_collection="modules"-->
-      <!--              data-pass_document_id=""-->
-                   
-      <!--              data-pass_name=""-->
-      <!--              data-pass_to="render"-->
-      <!--              data-modal_width="320px"-->
-      <!--              data-modal_color="#229954"-->
-      <!--              data-modal_header="false"-->
-      <!--              data-modal_x=""-->
-      <!--              data-modal_y="" class="display:inline-block">-->
-      <!--              <span class="display:inline-block width:50px text-align:center"><i class="fas fa-users"></i></span>-->
-      <!--  		    <span>Members</span>-->
-      <!--          </a>-->
-      <!--          <div class="float:right width:50px text-align:center">-->
-    		<!--	    <a target="modal" href="render.html"-->
-    		<!--	        data-pass_collection="modules"-->
-    		<!--	        data-pass_document_id=""-->
-    		<!--	        data-pass_name="form_"-->
-    		<!--	        data-pass_to="render"-->
-    		<!--	        data-modal_width="320px"-->
-      <!--                  data-modal_header="false">-->
-    		<!--	        <i class="fas fa-plus"></i>-->
-    		<!--	    </a>-->
-    		<!--	</div>-->
-    		<!--</li>-->
-            
-      <!--    <hr>-->
-            
-      <!--      <li class="line-height:40px height:40px overflow:hidden  background:dodgerblue:hover">-->
-      <!--          <a target="modal"-->
-      <!--              data-pass_collection="modules"-->
-      <!--              data-pass_document_id="5f9323b95412e75f9b414a31"-->
-      <!--              data-modal_iframe="true"-->
-      <!--              data-pass_name="html"-->
-      <!--              data-pass_to="render"-->
-      <!--              data-modal_width="640px"-->
-      <!--              data-modal_color="#ff8b00"-->
-      <!--              data-modal_header="false"-->
-      <!--              data-open_in="root"-->
-      <!--              data-modal_x=""-->
-      <!--              data-modal_y="" class="display:inline-block">-->
-      <!--              <span class="display:inline-block width:50px text-align:center"><i class="fas fa-project-diagram"></i></span>-->
-      <!--  		    <span>Modules</span>-->
-      <!--              <div data-pass_fetch_value="5f9323b95412e75f9b414a31" data-pass_to="module_id"></div>-->
-      <!--          </a>-->
-      <!--          <div class="float:right width:50px text-align:center">-->
-    		<!--	    <a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-views/module_form.html"-->
-    		<!--	        data-pass_collection="modules"-->
-    		<!--	        data-pass_document_id="5f9323b95412e75f9b414a31"-->
-    		<!--	        data-pass_name="html"-->
-    		<!--	        data-pass_to="render"-->
-    		<!--	        data-modal_width="320px"-->
-      <!--                  data-modal_header="false">-->
-    		<!--	        <i class="fas fa-plus"></i>-->
-    		<!--	    </a>-->
-    		<!--	</div>-->
-      <!--      </li>-->
-            
-      <!--      <li class="line-height:40px height:40px overflow:hidden  background:dodgerblue:hover">-->
-      <!--          <a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-templates/module-template_datatable.html"-->
-      <!--              data-pass_collection="modules"-->
-      <!--              data-pass_document_id=""-->
-      <!--              data-pass_name=""-->
-      <!--              data-pass_to="render"-->
-      <!--              data-modal_width="640px"-->
-      <!--              data-modal_color="#ff8b00"-->
-      <!--              data-modal_header="false"-->
-      <!--              data-modal_x=""-->
-      <!--              data-modal_y="" class="display:inline-block">-->
-      <!--              <span class="display:inline-block width:50px text-align:center"><i class="far fa-copy"></i></span>-->
-      <!--  		    <span>Module Views</span>-->
-      <!--          </a>-->
-      <!--          <div class="float:right width:50px text-align:center">-->
-    		<!--	    <a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-templates/module-template_form.html"-->
-    		<!--	        data-pass_collection="module-views"-->
-    		<!--	        data-pass_document_id=""-->
-    		<!--	        data-pass_name="form_"-->
-    		<!--	        data-pass_to="render"-->
-    		<!--	        data-modal_width="320px"-->
-      <!--                  data-modal_header="false">-->
-    		<!--	        <i class="fas fa-plus"></i>-->
-    		<!--	    </a>-->
-    		<!--	</div>-->
-
-      <!--      </li>-->
-            
-      <!--      <li> -->
-      <!--          <a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/industries/industry-datatable.html"-->
-      <!--              data-pass_collection="modules"-->
-      <!--              data-pass_document_id=""-->
-      <!--              data-pass_name=""-->
-      <!--              data-pass_to="render"-->
-      <!--              data-modal_width="640px"-->
-      <!--              data-modal_color="#ff8b00"-->
-      <!--              data-modal_header="false"-->
-      <!--              data-modal_x=""-->
-      <!--              data-modal_y="" class="display:inline-block">-->
-      <!--              <span class="display:inline-block width:50px text-align:center"><i class="fas fa-industry"></i></span>-->
-      <!--  		    <span>Industries</span>-->
-      <!--          </a>-->
-      <!--          <div class="float:right width:50px text-align:center">-->
-    		<!--	    <a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/industries/industries.html"-->
-    		<!--	        data-pass_collection="modules"-->
-    		<!--	        data-pass_document_id=""-->
-    		<!--	        data-pass_name="form_"-->
-    		<!--	        data-pass_to="render"-->
-    		<!--	        data-modal_width="320px">-->
-    		<!--	        <i class="fas fa-plus"></i>-->
-    		<!--	    </a>-->
-    		<!--	</div>-->
-
-      <!--      </li>-->
-
-      <!--    <hr>-->
-            
-      <!--      <li class="line-height:40px height:40px overflow:hidden  background:dodgerblue:hover">-->
-      <!--          <a target="modal" href="render.html"-->
-      <!--              data-pass_collection="modules"-->
-      <!--              data-pass_document_id=""-->
-                   
-      <!--              data-pass_name="form_"-->
-      <!--              data-pass_to="render"-->
-      <!--              data-modal_width="320px"-->
-      <!--              data-modal_color="#ff8b00"-->
-      <!--              data-modal_header="false"-->
-      <!--              data-modal_x=""-->
-      <!--              data-modal_y="" class="display:inline-block">-->
-      <!--              <span class="display:inline-block width:50px text-align:center"><i class="fa fa-globe"></i></span>-->
-      <!--  		    <span>Domains</span>-->
-      <!--          </a>-->
-      <!--          <div class="float:right width:50px text-align:center">-->
-    		<!--	    <a target="modal" href="./R-n-D/domain-search.html"-->
-    		<!--	        data-pass_collection="modules"-->
-    		<!--	        data-pass_document_id=""-->
-    		<!--	        data-pass_name="form_"-->
-    		<!--	        data-pass_to="render"-->
-    		<!--	        data-modal_width="320px">-->
-    		<!--	        <i class="fas fa-plus"></i>-->
-    		<!--	    </a>-->
-    		<!--	</div>-->
-    		<!--</li>-->
-      <!--      <li class="line-height:40px height:40px overflow:hidden  background:dodgerblue:hover">-->
-      <!--          <a target="modal" href="stripe-connect.html"-->
-      <!--              data-pass_collection="modules"-->
-      <!--              data-pass_document_id=""-->
-                   
-      <!--              data-pass_name="form_"-->
-      <!--              data-pass_to="render"-->
-      <!--              data-modal_width="320px"-->
-      <!--              data-modal_color="#ff8b00"-->
-      <!--              data-modal_header="false"-->
-      <!--              data-modal_x=""-->
-      <!--              data-modal_y="" class="display:inline-block">-->
-      <!--              <span class="display:inline-block width:50px text-align:center"><i class="fab fa-cc-stripe"></i></span>-->
-      <!--  		    <span>Payment Processing</span>-->
-      <!--          </a>-->
-      <!--      </li>-->
-      <!--      <li class="line-height:40px height:40px overflow:hidden  background:dodgerblue:hover">-->
-      <!--          <a target="modal" href="render.html"-->
-      <!--              data-pass_collection="modules"-->
-      <!--              data-pass_document_id=""-->
-                   
-      <!--              data-pass_name="form_"-->
-      <!--              data-pass_to="render"-->
-      <!--              data-modal_width="320px"-->
-      <!--              data-modal_color="#ff8b00"-->
-      <!--              data-modal_header="false"-->
-      <!--              data-modal_x=""-->
-      <!--              data-modal_y="" class="display:inline-block">-->
-      <!--              <span class="display:inline-block width:50px text-align:center"><i class="fa fa-envelope"></i></span>-->
-      <!--  		    <span>Emails</span>-->
-      <!--          </a>-->
-      <!--      </li>-->
-      <!--      <li class="line-height:40px height:40px overflow:hidden  background:dodgerblue:hover">-->
-      <!--          <a target="modal" href="render.html"-->
-      <!--              data-pass_collection="modules"-->
-      <!--              data-pass_document_id=""-->
-                   
-      <!--              data-pass_name="form_"-->
-      <!--              data-pass_to="render"-->
-      <!--              data-modal_width="320px"-->
-      <!--              data-modal_color="#ff8b00"-->
-      <!--              data-modal_header="false"-->
-      <!--              data-modal_x=""-->
-      <!--              data-modal_y="" class="display:inline-block">-->
-      <!--              <span class="display:inline-block width:50px text-align:center"><i class="fa fa-phone"></i></span>-->
-      <!--  		    <span>Phone System</span>-->
-      <!--          </a>-->
-      <!--      </li>-->
-            
-          <!--<hr>-->
-          
-          <!--  <li class="line-height:40px height:40px overflow:hidden  background:dodgerblue:hover">-->
-          <!--      <a target="modal" href="render.html"-->
-          <!--          data-pass_collection="modules"-->
-          <!--          data-pass_document_id=""-->
-                   
-          <!--          data-pass_name="form_"-->
-          <!--          data-pass_to="render"-->
-          <!--          data-modal_width="320px"-->
-          <!--          data-modal_color="#ff8b00"-->
-          <!--          data-modal_header="false"-->
-          <!--          data-modal_x=""-->
-          <!--          data-modal_y="" class="display:inline-block">-->
-          <!--          <span class="display:inline-block width:50px text-align:center"><i class="fa fa-credit-card"></i></span>-->
-        		<!--    <span>Billing Methods</span>-->
-          <!--      </a>-->
-          <!--  </li>-->
-          <!--  <li class="line-height:40px height:40px overflow:hidden  background:dodgerblue:hover">-->
-          <!--      <a target="modal" href="render.html"-->
-          <!--          data-pass_collection="modules"-->
-          <!--          data-pass_document_id=""-->
-                   
-          <!--          data-pass_name="form_"-->
-          <!--          data-pass_to="render"-->
-          <!--          data-modal_width="320px"-->
-          <!--          data-modal_color="#ff8b00"-->
-          <!--          data-modal_header="false"-->
-          <!--          data-modal_x=""-->
-          <!--          data-modal_y="" class="display:inline-block">-->
-          <!--          <span class="display:inline-block width:50px text-align:center"><i class="fa fa-history"></i></span>-->
-        		<!--    <span>Transaction History</span>-->
-          <!--      </a>-->
-          <!--  </li>-->
-          <!--  <li class="line-height:40px height:40px overflow:hidden  background:dodgerblue:hover">-->
-          <!--      <a target="modal" href="render.html"-->
-          <!--          data-pass_collection="modules"-->
-          <!--          data-pass_document_id=""-->
-                   
-          <!--          data-pass_name="form_"-->
-          <!--          data-pass_to="render"-->
-          <!--          data-modal_width="320px"-->
-          <!--          data-modal_color="#ff8b00"-->
-          <!--          data-modal_header="false"-->
-          <!--          data-modal_x=""-->
-          <!--          data-modal_y="" class="display:inline-block">-->
-          <!--          <span class="display:inline-block width:50px text-align:center"><i class="fa fa-cogs"></i></span>-->
-        		<!--    <span>Subscriptions</span>-->
-          <!--      </a>-->
-          <!--  </li>-->
         </ul>
 
     <script>
@@ -393,7 +113,5 @@
    
     <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
     
-    <!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-modal/src/CoCreate-modal.js"></script> -->
-
   </body>
 </html>
