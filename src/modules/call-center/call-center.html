@@ -34,7 +34,7 @@
   </style>
   <body>
     <div id="modal-viewport" class="hidden"></div>
-        <div class="nav display:flex align-items:center bg:light-gray "
+        <div class="nav display:flex align-items:center background:whitesmoke "
 	      data-main_content_id="content"
 	      data-scroll="sticky-nav, hide-nav"
 	      data-scroll_up="5"
@@ -135,9 +135,9 @@
                 
                 <div class="margin-top:10px"
                     data-fetch_collection="testtwillio"
-                    data-filter_name=""
-                    data-filter_value=""
-                    data-filter_operator=""
+                    data-filter_name="status"
+                    data-filter_value="completed"
+                    data-filter_operator="$ne"
                     data-template_id="active-calls">
         			<div data-template_id="createCall" data-render_id="render2">
         			<!--If Incoming Call-->
@@ -197,7 +197,7 @@
             					  <!--<button class="voicemail hidden" title="Send to Voicemail"><i class="mdi mdi-48 mdi-voicemail"></i></button>-->
             					  <!-- Confrence -->
             					  <form  class="display:flex">
-                                    <input type="hidden" data-twilio="dialConference.friendlyName" value="{{render2.parameters.From}}">
+                                    <input type="hidden" data-twilio="dialConference.friendlyName" value="data.From}}">
                                     <input type="hidden" data-twilio="dialConference.holdUrl" value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic">
                                     <!--<input data-twilio="joinConference.friendlyName" value="{{data.friendlyName}}">-->
                                     <input type="hidden" data-twilio="endConference.CallSid" value="{{data.idconference}}">
@@ -262,7 +262,7 @@
                 <div class="cocreate-scroll">
     			<table class="width:100% border-collapse:collapse">
     				<tr class="border-bottom:1px_solid_gainsboro border-top:1px_solid_gainsboro">
-    					<td class="position:sticky top:0 bg:white padding-top:0 padding:10px ">
+    					<td class="position:sticky top:0 background:white padding-top:0 padding:10px ">
     						<input type="text" class="floating-label"
     							data-filter_name="name" 
     							data-value_type="string"
@@ -276,7 +276,7 @@
     								</a>
     							</span>
     					</td>
-    					<td class="position:sticky top:0 bg:white padding:10px padding-top:0">
+    					<td class="position:sticky top:0 background:white padding:10px padding-top:0">
     						<input type="text" class="floating-label"
     							data-filter_name="_id" 
     							data-value_type="string"
@@ -486,7 +486,7 @@
             </div>
             <div class="resizeHandler background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
         </div>
-        <button data-toggle_sidenav="menuR" class="position:fixed bottom:15px right:15px padding:15px bg:blue grow-hover border-radius:50% z-index:15">
+        <button data-toggle_sidenav="menuR" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:15">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="2em" height="2em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 19a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M6 1a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m12-8a2 2 0 0 0 2-2a2 2 0 0 0-2-2a2 2 0 0 0-2 2a2 2 0 0 0 2 2m-6 8a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m6 0a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0-6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-6 0a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0-6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2z" fill="#626262"/></svg>
 		</button>
 
@@ -500,10 +500,7 @@
     </script>
 
     <!-- CoCreateJS --> 
-    <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
-    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-select.js"></script>
-    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-adapter.js"></script>
-    
+    <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
     
     <!--CoCreate Plugins TwilioClient-->
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-api-twilio/src/CoCreate-api.js"></script>
@@ -511,7 +508,7 @@
     <script src="https://server.cocreate.app/CoCreate-components/CoCreate-api-twilio/src/CoCreate-twilio.js"></script>
     
     
-      <script id="rendered-js">
+      <script>
         
         document.querySelectorAll('.number-dig').forEach((number)=>{
             number.addEventListener("click", (e) =>{
