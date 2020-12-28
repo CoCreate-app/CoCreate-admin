@@ -1,7 +1,7 @@
-![GitHub file size in bytes](https://img.shields.io/github/size/CoCreate-app/CoCreate-boilerplate/dist/CoCreate-boilerplate.min.js?label=minified%20size) 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/CoCreate-app/CoCreate-boilerplate)
-![GitHub](https://img.shields.io/github/license/CoCreate-app/CoCreate-boilerplate) 
-![GitHub labels](https://img.shields.io/github/labels/CoCreate-app/CoCreate-boilerplate/help%20wanted)
+![GitHub file size in bytes](https://img.shields.io/github/size/CoCreate-app/CoCreate-adminUI/dist/CoCreate-adminUI.min.js?label=minified%20size&style=for-the-badge) 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/CoCreate-app/CoCreate-adminUI?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/CoCreate-app/CoCreate-adminUI?style=for-the-badge) 
+![GitHub labels](https://img.shields.io/github/labels/CoCreate-app/CoCreate-adminUI/help%20wanted?style=for-the-badge)
 
 # Realtime Admin CRM and CMS UI
 HTML Admin dashboard UI that can be used as a CRM and CMS. This html template is powered by [CoCreateJS](https://cocreate.app/documentation) to provide Realtime CRUD functionality and  convert this admin template into a realtime web application. CoCreateJS is a  makes use of data-attributes to Create, Read, Update and Delete in realtime. Can be used with any Html template to convert it in to a realtime website / web application. 
