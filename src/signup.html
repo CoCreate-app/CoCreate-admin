@@ -20,7 +20,7 @@
 	.speech-bubble:after { content: ''; position: absolute; top: 0; left: 50%; width: 0; height: 0; border: 23px solid transparent; border-bottom-color: #ffffff; border-top: 0; margin-left: -23px; margin-top: -23px;}
 	</style>
 
-    <body style='background-image: url("https://cdn.cocreate.app/background.png");'>
+    <body style='background: url("https://cdn.cocreate.app/background.png") no-repeat fixed;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;'>
     	<!--<a href="index.html" target="" class="sessionTrue hidden"></a>-->
 
 		<a href="signin.html" title="" class="position:relative z-index:1 float:right margin:15px margin-left:auto color:white">Sign In</a>
@@ -37,32 +37,35 @@
                         	</p>
                             <p id="ava2"  class="hidden">
                         		Hi, <span data-get_value="name">First Name</span>!
-                            Let's get started. Enter your business or organization's name. Don't worry if you are not sure, you can allways update it later.<!-- and create a subdomain. The subdomain will be used for your website's address until you choose a custom domain.-->
+                            	Let's get started. Enter your business or organization's name. Don't worry if you are not sure, you can allways update it later.<!-- and create a subdomain. The subdomain will be used for your website's address until you choose a custom domain.-->
                         	</p>
                         	<p id="ava3"  class="hidden">
-                        		Great, <data-get_value="name">First Name</span>!
-                            	Let’s choose an industry so I can begin to understand what we will be doing.
+                        		Choose a domain for <span data-get_value="org-name">Organization Name</span>, this will be the url where you can access your website and admin panel.
                         	</p>
                         	<p id="ava4"  class="hidden">
-                        		Awesome! Enter your email and password and we will get <data-get_value="org-name">Organization Name</span> off the ground!
+                        		Great, <span data-get_value="name">First Name</span>!
+                            	Let’s choose an industry so I can begin to understand what we will be doing.
                         	</p>
                         	<p id="ava5"  class="hidden">
-                        		Copy your API Key and click the Launch button! If you dont need your API Key now you can allways retrieve it later from your Organization's settings.
+                        		Awesome! Enter your email and password and we will get <span data-get_value="org-name">Organization Name</span> off the ground!
                         	</p>
-							<p id="ava6"  class="hidden">
-                        		Here we go! Allow me a few moments while I build your business!
-                        	</p>
+       <!--                 	<p id="ava5"  class="hidden">-->
+       <!--                 		Copy your API Key and click the Launch button! If you dont need your API Key now you can allways retrieve it later from your Organization's settings.-->
+       <!--                 	</p>-->
+							<!--<p id="ava6"  class="hidden">-->
+       <!--                 		Here we go! Allow me a few moments while I build your business!-->
+       <!--                 	</p>-->
                         </div>
 					</hgroup>
                 </div>
                
-                <div class="flex-grow:1 height:fit-content width:35% min-width:300px max-width:400px margin:10px">
-                	<form  data-realtime="false">
+                <div class="flex-grow:1 height:fit-content width:35% min-width:300px max-width:400px margin:10px align-self:flex-end">
+                	<form  data-realtime="false" autocomplete="false">
                 		
 	            		<div id="step1">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-	                    			<h3>Step 1 / 4</h3>
+	                    			<h3>Step 1 / 5</h3>
 	                    		</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 	                    			<i class="fa fa-user"></i>
@@ -74,7 +77,8 @@
 	                    			data-document_id="" 
 	                    			name="name"  
 	                    			placeholder="Full Name"  
-	                    			class="floating-label">
+	                    			class="floating-label"
+	                    			autocomplete="nope">
 		                        
 		                        <button type="button" class="outline" data-show='#step2,#ava2' data-hide='#step1,#ava1'>Next</button>
 		                    </div>
@@ -83,7 +87,7 @@
 						<div id="step2" class="hidden">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-									<h3>Step 2 / 4</h3>
+									<h3>Step 2 / 5</h3>
 								</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 									<i class="fas fa-store"></i>
@@ -96,16 +100,47 @@
 						    		name="name" 
 						    		placeholder="Organization Name" 
 						    		class="floating-label">
-
-						        <button type="button" class="outline white-blue" data-show='#step1,#ava1' data-hide='#step2,#ava2'>Previous</button>
-						        <button type="button" class="outline" data-show='#step3,#ava3' data-hide='#step2,#ava2'>Next</button>
+								<div class="display:flex">
+							        <button type="button" class="outline white-blue margin-right:15px" data-show='#step1,#ava1' data-hide='#step2,#ava2'>Previous</button>
+							        <button type="button" class="outline" data-show='#step3,#ava3' data-hide='#step2,#ava2'>Next</button>
+						   		</div>
 						    </div>
 						</div>
 						
-	                    <div id="step3"  class="hidden">
+						<div id="step3" class="hidden">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-	                    			<h3>Step 3 / 4</h3>
+									<h3>Step 3 / 5</h3>
+								</div>
+	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+									<i class="fas fa-globe"></i>
+								</div>
+						    </div>
+						    <div class="padding:25px bg:medium-gray text-align:left">
+						    	<input type="text" id="subdomain"
+						    		data-type="array"
+						    		data-collection="organizations"
+						    		data-document_id=""  
+						    		name="domains" 
+						    		placeholder="Domain"
+						    		data-suffix_value=".cocreate.app"
+						    		data-unique="false"
+						    		class="floating-label width:calc(100%_-_90px)!important">
+                                <div class="position:relative top:-34px right:8px float:right padding:5px background:whitesmoke">
+                                	<span>.cocreate.app</span>
+                                </div>
+                                <small id="Domain is currently in use" class="text-danger"></small>
+								<div class="display:flex">
+							        <button type="button" class="outline white-blue margin-right:15px" data-show='#step2,#ava2' data-hide='#step3,#ava3'>Previous</button>
+							        <button type="button" class="outline" data-show='#step4,#ava4' data-hide='#step3,#ava3'>Next</button>
+						   		</div>
+						    </div>
+						</div>
+						
+	                    <div id="step4"  class="hidden">
+	                    	<div class="overflow:hidden padding:0px_25px background:white">
+								<div class="float:left width:75% padding-top:25px">
+	                    			<h3>Step 4 / 5</h3>
 	                    		</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 	                    			<i class="fas fa-industry"></i>
@@ -114,26 +149,27 @@
 	                        <div class="padding:25px bg:medium-gray text-align:left">
 	
 	                           <!-- Industry select -->
-	                            <cocreate-select class="sortable floating-label" data-collection="organizations" name="industry" placeholder="Industry">
+	                            <cocreate-select class="sortable floating-label" data-collection="organizations" name="industry" placeholder="Industry" data-realtime="false" data-save_value="false">
 	  					          	  <input class="template-search" placeholder="Search" data-template_id="industries">
 									<ul data-fetch_collection="industries" 
 									    data-template_id="industries"
 									    class="selectable--list cocreate-scroll">
 										<li class="template selectable" data-template_id="industries" value="{{data._id}}">
-											<h4 data-collection="industries" data-document_id="{{data._id}}" name="name">industry name</h4>
+											<h4 data-collection="industries" data-document_id="{{data._id}}" name="name" data-realtime="false">industry name</h4>
 										</li>
 									</ul>
 	                            </cocreate-select>
-																
-		                        <button type="button" class="outline white-blue" data-show='#step2,#ava2' data-hide='#step3,#ava3'>Previous</button>
-		                        <button type="button" class="outline" data-show='#step4,#ava4' data-hide='#step3,#ava3'>Next</button>
+								<div class="display:flex">
+			                        <button type="button" class="outline white-blue margin-right:15px" data-show='#step3,#ava3' data-hide='#step4,#ava4'>Previous</button>
+			                        <button type="button" class="outline" data-show='#step5,#ava5' data-hide='#step4,#ava4'>Next</button>
+			                    </div>
 		                    </div>
 	                    </div>
 
-						<div id="step4" class="hidden">
+						<div id="step5" class="hidden">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-									<h3>Step 4 / 4</h3>
+									<h3>Step 5 / 5</h3>
 								</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 									<i class="fa fa-key"></i>
@@ -163,7 +199,14 @@
 							    	class="floating-label">
 							    	<small id="errorUconfirmpassword" class="text-danger"></small>
 									
-								<!-- Organiztion_id  -->
+								<!-- User _id  -->
+								<input type="hidden" id="user_id"
+									data-collection="users"
+									data-document_id=""
+									name="_id"
+									placeholder="UserId" readonly>
+								
+								<!-- Organiztion _id  -->
 								<input type="hidden" id="org_id"
 									data-collection="organizations"
 									data-document_id=""
@@ -186,12 +229,13 @@
 									placeholder="security Key" 
 									data-uuid="32" readonly>
 									
-								<button type="button" class="outline white-blue" data-show='#step3,#ava3' data-hide='#step4,#ava4'>Previous</button>
-								<button type="button" class="outline red-white registerBtn" data-actions="registerBtn, industryBtn">
-									Register
-									<a href="index.html"></a>
-								</button>
-
+								<div class="display:flex">
+									<button type="button" class="outline white-blue margin-right:15px" data-show='#step4,#ava4' data-hide='#step5,#ava5'>Previous</button>
+									<button type="button" class="outline red-white" data-actions="createOrg, createUser, runIndustry">
+										Launch
+										<a href="index.html"></a>
+									</button>
+								</div>
 							</div>
 						</div>
 					</form>
@@ -210,15 +254,15 @@
 		
 		<!--CoCreateJS-->
 		<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
-		<script src="https://server.cocreate.app/CoCreate-components/CoCreate-industry/src/CoCreate-industry.js"></script>
+		<!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-industry/src/CoCreate-industry.js"></script>-->
 	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-select.js"></script>
 	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-select/src/CoCreate-adapter.js"></script>
 	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-uuid/src/CoCreate-uuid.js"></script>
-
-		<script type="text/javascript">
+	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-organizations/src/CoCreate-organizations.js"></script>
+		<!--<script type="text/javascript">
 			CoCreateAction.registerEvent('registerBtn', null, window, 'fetchedUsersCurrentOrg')
 			CoCreateAction.registerEvent('industryBtn', buildIndustryRequest, window, 'buildIndustry')
-		</script>  
+		</script> --> 
 
 
 	</body>
