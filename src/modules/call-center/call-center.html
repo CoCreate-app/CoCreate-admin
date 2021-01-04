@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
     
     <!-- Material Icons -->
-    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.1.34/css/materialdesignicons.min.css">
+    <!--<link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.1.34/css/materialdesignicons.min.css">-->
     
     <!-- Call Center -->
     <link rel="stylesheet" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/call-center/call-center.css" type="text/css" />
@@ -31,9 +31,53 @@
     }
     .tab.active{border-bottom: 3px solid #0DA3E2}
     ::-webkit-scrollbar:hover{width:10px; overflow:overlay;}
+    
+    .loader[value="completed"] {display:none;}
+    .loader[value="ringing"], .loader[value="in-progress"], .loader[value="in-progress-conference"] {content: url("green.gif");display:block;}
+    .loader[value="hold"], .loader[value="hold-conference"] {content: url("orange.gif");display:block;}
+    
+    .status[value="ringing"]::before {content: 'Ringing';}
+    .status[value="in-progress"]::before, .status[value="in-progress-conference"]::before {content: 'Active';}
+    .status[value="hold"]::before, .status[value="hold-conference"]::before {content: 'Hold';}
+
+    .call[value="completed"], .call[value="no-answer"], .call[value="busy"] {display:none!important}
+    .icon-inbound-dial {
+    content: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggY2xhc3M9Imhlcm9pY29uLXVpIiBkPSJNMTMuMDQgMTQuNjlsMS4wNy0yLjE0YTEgMSAwIDAgMSAxLjItLjVsNiAyQTEgMSAwIDAgMSAyMiAxNXY1YTIgMiAwIDAgMS0yIDJoLTJBMTYgMTYgMCAwIDEgMiA2VjRjMC0xLjEuOS0yIDItMmg1YTEgMSAwIDAgMSAuOTUuNjhsMiA2YTEgMSAwIDAgMS0uNSAxLjIxTDkuMyAxMC45NmExMC4wNSAxMC4wNSAwIDAgMCAzLjczIDMuNzN6TTguMjggNEg0djJhMTQgMTQgMCAwIDAgMTQgMTRoMnYtNC4yOGwtNC41LTEuNS0xLjEyIDIuMjZhMSAxIDAgMCAxLTEuMy40NiAxMi4wNCAxMi4wNCAwIDAgMS02LjAyLTYuMDEgMSAxIDAgMCAxIC40Ni0xLjNsMi4yNi0xLjE0TDguMjggNHptMTIuMDEtMS43YTEgMSAwIDAgMSAxLjQyIDEuNEwxNy40IDhIMjBhMSAxIDAgMCAxIDAgMmgtNWExIDEgMCAwIDEtMS0xVjRhMSAxIDAgMCAxIDIgMHYyLjU5bDQuMy00LjN6Ii8+PC9zdmc+");
+    width:18px;
+    height:18px;
+    /*margin:10px 5px 0 10px;*/
+}
+    .icon-outbound-dial {
+    content: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggY2xhc3M9Imhlcm9pY29uLXVpIiBkPSJNMTMuMDQgMTQuNjlsMS4wNy0yLjE0YTEgMSAwIDAgMSAxLjItLjVsNiAyQTEgMSAwIDAgMSAyMiAxNXY1YTIgMiAwIDAgMS0yIDJoLTJBMTYgMTYgMCAwIDEgMiA2VjRjMC0xLjEuOS0yIDItMmg1YTEgMSAwIDAgMSAuOTUuNjhsMiA2YTEgMSAwIDAgMS0uNSAxLjIxTDkuMyAxMC45NmExMC4wNSAxMC4wNSAwIDAgMCAzLjczIDMuNzN6TTguMjggNEg0djJhMTQgMTQgMCAwIDAgMTQgMTRoMnYtNC4yOGwtNC41LTEuNS0xLjEyIDIuMjZhMSAxIDAgMCAxLTEuMy40NiAxMi4wNCAxMi4wNCAwIDAgMS02LjAyLTYuMDEgMSAxIDAgMCAxIC40Ni0xLjNsMi4yNi0xLjE0TDguMjggNHptNy40MyA1LjdhMSAxIDAgMSAxLTEuNDItMS40TDE4LjYgNEgxNmExIDEgMCAwIDEgMC0yaDVhMSAxIDAgMCAxIDEgMXY1YTEgMSAwIDAgMS0yIDBWNS40MWwtNC4zIDQuM3oiLz48L3N2Zz4=");
+    width:18px;
+    height:18px;
+    /*margin:10px 5px 0 10px;*/
+}
+    .icon-outbound-dial[value="no-answer"] {
+    content: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZmlsbD0ibm9uZSIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2IDhMMTggNk0xOCA2TDIwIDRNMTggNkwxNiA0TTE4IDZMMjAgOE01IDNDMy44OTU0MyAzIDMgMy44OTU0MyAzIDVWNkMzIDE0LjI4NDMgOS43MTU3MyAyMSAxOCAyMUgxOUMyMC4xMDQ2IDIxIDIxIDIwLjEwNDYgMjEgMTlWMTUuNzIwOEMyMSAxNS4yOTAzIDIwLjcyNDYgMTQuOTA4MiAyMC4zMTYyIDE0Ljc3MjFMMTUuODIyOCAxMy4yNzQzQzE1LjM1MDcgMTMuMTE2OSAxNC44MzQ3IDEzLjMzMDYgMTQuNjEyMSAxMy43NzU3TDEzLjQ4MzUgMTYuMDMzQzExLjAzODggMTQuOTMwOCA5LjA2OTI1IDEyLjk2MTIgNy45NjcwMSAxMC41MTY1TDEwLjIyNDMgOS4zODc4N0MxMC42Njk0IDkuMTY1MzEgMTAuODgzMSA4LjY0OTMyIDEwLjcyNTcgOC4xNzcyMUw5LjIyNzkyIDMuNjgzNzdDOS4wOTE4MSAzLjI3NTQzIDguNzA5NjcgMyA4LjI3OTI0IDNINVoiIHN0cm9rZT0iIzM3NDE1MSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=");
+    width:18px;
+    height:18px;
+    /*margin:10px 5px 0 10px;*/
+}
+    .icon-inbound-dial[value="no-answer"] {
+    content: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUxMi4wMDkgNTEyLjAwOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyLjAwOSA1MTIuMDA5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Zz4NCgkJPGc+DQoJCQk8cGF0aCBkPSJNMjQ4LjQ1OCwyMTAuMjEzYzIuMDgzLDIuMDgzLDQuODEzLDMuMTI1LDcuNTQyLDMuMTI1YzIuNzI5LDAsNS40NTgtMS4wNDIsNy41NDItMy4xMjVsMTA5Ljc5Mi0xMDkuNzkydjU5LjU4Mw0KCQkJCWMwLDUuODk2LDQuNzcxLDEwLjY2NywxMC42NjcsMTAuNjY3czEwLjY2Ny00Ljc3MSwxMC42NjctMTAuNjY3Vjc0LjY3MWMwLTUuODk2LTQuNzcxLTEwLjY2Ny0xMC42NjctMTAuNjY3aC04NS4zMzMNCgkJCQljLTUuODk2LDAtMTAuNjY3LDQuNzcxLTEwLjY2NywxMC42NjdjMCw1Ljg5Niw0Ljc3MSwxMC42NjcsMTAuNjY3LDEwLjY2N2g1OS41ODNMMjU2LDE4Ny41ODhMMTM1LjU0Miw2Ny4xMjkNCgkJCQljLTQuMTY3LTQuMTY3LTEwLjkxNy00LjE2Ny0xNS4wODMsMGMtNC4xNjcsNC4xNjctNC4xNjcsMTAuOTE3LDAsMTUuMDgzTDI0OC40NTgsMjEwLjIxM3oiLz4NCgkJCTxwYXRoIGQ9Ik01MDMuMjUsMzQyLjM1OWMtNjYuMDIxLTY5LjQzOC0xNTMuODMzLTEwNy42ODctMjQ3LjI2LTEwNy42ODdjLTkzLjQxNywwLTE4MS4yMjksMzguMjUtMjQ3LjI0LDEwNy42ODcNCgkJCQlDMi45MzgsMzQ4LjQ3MywwLDM1Ni41MDIsMCwzNjQuNTI5YzAsOC4wMjcsMi45MzcsMTYuMDUzLDguNzUsMjIuMTYzbDQ5LjE2Nyw1MS43NGMxMS41NjMsMTIuMTQ2LDMyLjA4MywxMi4xNDYsNDMuNjQ2LDANCgkJCQljMTYuNDQ4LTE3LjMwMiwzNS4xNDYtMzEuNTYzLDU1LjQ3OS00Mi4zMzNjMTAuMTg4LTUuMjUsMTYuNzcxLTE2LjMwMiwxNi42NzctMjYuNzVsNy40MzgtNTYuMDYzDQoJCQkJYzUzLjU4My0xNy4xNDYsOTYuNjE1LTE3LjEzNSwxNDkuNjk4LTAuMDFsNy4zMzMsNTQuNjY3YzAsMTEuODIzLDYuMjcxLDIyLjYxNSwxNi41MjEsMjguMjUNCgkJCQljMjAuNDM4LDEwLjgyMywzOS4xMzUsMjUuMDgzLDU1LjU5NCw0Mi4zNzVjNS43ODEsNi4wOTQsMTMuNTMxLDkuNDM4LDIxLjgyMyw5LjQzOGM4LjI4MSwwLDE2LjAzMS0zLjM0NCwyMS44MTMtOS40MjcNCgkJCQlsNDkuMzEzLTUxLjg3NWM1LjYyNS01LjkxOCw4LjU2OS0xMy42MjgsOC43NS0yMS4zOTZDNTEyLjE5MywzNTcuMDIxLDUwOS4yNSwzNDguNjcsNTAzLjI1LDM0Mi4zNTl6IE00ODcuNzkyLDM3MS45OTQNCgkJCQlsLTQ5LjMxMyw1MS44ODVjLTMuNDQ4LDMuNjE1LTkuMjkyLDMuNjA0LTEyLjcxOS0wLjAxYy0xOC4wNTItMTguOTY5LTM4LjU5NC0zNC42MjUtNjAuOTI3LTQ2LjQ0OA0KCQkJCWMtMy4zMjMtMS44MzMtNS4zMTMtNS4zNzUtNS40MDYtMTAuODg1bC04LjMxMy02Mi42ODhjLTAuNTMxLTQuMDEtMy4yOTItNy4zNzUtNy4xMTUtOC42ODgNCgkJCQljLTMxLjExNS0xMC42NTYtNTkuNDA2LTE1Ljk3OS04Ny43ODEtMTUuOTc5Yy0yOC4zNjUsMC01Ni44MDIsNS4zMjMtODguMTg4LDE1Ljk2OWMtMy44NDQsMS4zMDItNi42MTUsNC42NzctNy4xNDYsOC42OTgNCgkJCQlsLTguNDA2LDY0LjA5NGMwLDMuODk2LTIuMDk0LDcuNTk0LTUuMzEzLDkuMjVjLTIyLjQ3OSwxMS45MDYtNDMuMDIxLDI3LjU2My02MS4wNjIsNDYuNTMxDQoJCQkJYy0zLjQzOCwzLjYwNC05LjI5MiwzLjU5NC0xMi43MjksMC4wMWwtNDkuMTY3LTUxLjc0Yy0zLjg1NC00LjA0Mi0zLjg1NC0xMC44ODUsMC0xNC45MjcNCgkJCQljNjEuOTQ4LTY1LjE3NywxNDQuMjYtMTAxLjA2MywyMzEuNzgxLTEwMS4wNjNzMTY5Ljg0NCwzNS44ODUsMjMxLjgwMiwxMDEuMDYzQzQ5MS42NDYsMzYxLjEwOSw0OTEuNjQ2LDM2Ny45NTIsNDg3Ljc5MiwzNzEuOTk0DQoJCQkJeiIvPg0KCQk8L2c+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=");
+    width:18px;
+    height:18px
+}
+    .to-outbound-dial{display:block!important}
+    .from-inbound-dial{display:block!important}
+    .callbtns[value="ringing"] .hangup{display:block!important}
+    .callbtns[value="in-progress"] .hold, .callbtns[value="in-progress"] .hangup{display:block!important}
+    .conference[value="hold"] .end, .conference[value="hold"] .join{display:block!important}
+    .conference[value="in-progress-conference"] .end, .conference[value="in-progress-conference"] .hold-conference {display:block!important}
+    .conference[value="hold-conference"] .end, .conference[value="hold-conference"] .unhold {display:block!important}
+    .callbtns.inbound-dial[value="ringing"] .answer{display:block!important}
+    /*.callbtns.outbound-dial[value="in-progress"] .decline{display:block!important}*/
   </style>
   <body>
     <div id="modal-viewport" class="hidden"></div>
+        
+        <!-- Navbar -->
         <div class="nav display:flex align-items:center background:whitesmoke "
 	      data-main_content_id="content"
 	      data-scroll="sticky-nav, hide-nav"
@@ -49,7 +93,7 @@
 				<div class="circle"></div>
 			</a>
          
-            <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
+            <ul class="overflow:scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
       			<li class="margin-right:15px">
       			  <a class="btn-modal-close"><i class="fas fa-times"></i></a>
       			</li>
@@ -123,51 +167,43 @@
 			</ul>
         </div>
         
+        <!-- SidNav Left -->
         <div id="menuL" class="cocreate-sidenav background:white height:100vh" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="expanded" sidenav-expanded_width="310px"  sidenav-collapsed_width="0px">
-    		<div class="height:100vh min-width:300px padding:5px cocreate-scroll margin:5px">
+    		<div class="height:100vh min-width:300px padding:5px overflow:scroll margin:5px">
     			
+    			<!-- SideNav Header -->
                 <div class="font-size:22px color:#333333 font-weight:600 padding-bottom:10px">
                     <div class="display:flex border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px" data-collection="call-log" data-document_id="5fd7b6080bb983ccd559157a" name="name">
                         <span>Active Calls</span>
-                        <span><button>Enqueque </button></span>
+                        <span><button class="height:40px">Enqueque </button></span>
                     </div> 
                 </div>
-                
+
+    			<!-- Fetch, Render and Filter -->
+                <input type="hidden" data-template_id="active-calls" data-filter_name="status" value="no-answer" data-filter_operator="$ne">
                 <div class="margin-top:10px"
                     data-fetch_collection="testtwillio"
                     data-filter_name="status"
                     data-filter_value="completed"
                     data-filter_operator="$ne"
+                    data-fetch_count="10"
                     data-template_id="active-calls">
-        			<div data-template_id="createCall" data-render_id="render2">
-        			<!--If Incoming Call-->
-        			  <div id="call{{data._id}}" class="template card padding:20px_10px margin-bottom:15px background:white margin-right:10px" data-template_id="active-calls">
-        			  <div class="font-size:22px color:#333333	font-weight:600">
-                            <div class="border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px margin-bottom:10px"> 
-                            <span class="margin-right:20px" data-collection="{{collection}}" data-document_id="{{data._id}}" name="CallStatus">call status</span>
-        						<span class="Calling hidden">
-        							<div class="Circle"></div>
-        							<div class="Circle"></div>
-        							<div class="Circle"></div>
-        							<div class="Circle"></div>
-        							<div class="Circle"></div>
-        						</span>
-        						<span class="Loader-active hold{{data._id}} hidden">
-    								<div class="Bar"></div>
-    								<div class="Bar"></div>
-    								<div class="Bar"></div>
-    								<div class="Bar"></div>
-    							</span>
-                                <span class="Loader-hold unhold{{data._id}}">
-    								<div class="Bar"></div>
-    								<div class="Bar"></div>
-    								<div class="Bar"></div>
-    								<div class="Bar"></div>
-    							</span>
-    							<span class="font-size:16px margin-top:5px active float:right">0:00</span>
-    						</div> 
-        			  </div>
-        				  <div class="display:flex flex-wrap:wrap">
+
+        			<!-- Call Template -->
+                    <div class="template card call padding:20px_10px margin-bottom:15px background:white margin-right:10px" data-template_id="active-calls" data-collection="{{collection}}" data-document_id="{{data._id}}" name="status" value="">
+                        
+                        <!-- Call Header -->
+                        <div class="display:flex border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px margin-bottom:10px font-size:22px color:#333333 font-weight:600"> 
+                            <div class="status margin-right:5px" data-collection="{{collection}}" data-document_id="{{data._id}}" name="status" value=""></div>
+                            <span class="loader height:24px width:100px" data-collection="{{collection}}" data-document_id="{{data._id}}" name="status" value=""></span>
+                            <div class="width:100%">
+                                <span class="font-size:16px margin-top:5px float:right">0:00</span>
+                            </div>
+                        </div> 
+
+                        <!-- Call Body -->
+                        <div class="display:flex flex-wrap:wrap">
+        				
         					<!-- Avatar -->
                             <div class="avatar-wrapper margin:5px_0px margin-right:10px">
                                 <a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile.html" 
@@ -184,91 +220,97 @@
                                   	  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
                                   	</span>
                                 </a>
-                                <div class="avatar-status sessionUser_Id"  data-collection="users" data-document_id="" data-user_status='{"name":"status"}' ></div>
+                                <div class="avatar-status sessionUser_Id" data-collection="users" data-document_id="" data-user_status='{"name":"status"}'></div>
                             </div>
-        
-        					  <div class="margin-right:10px">
-        						  <span class="font-size:17px font-weight:600"  data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" >Dynamic Contact Name</span>
-        						  <div class="font-size:15px">Dyanmic Contact Phone</div>
-        						  <div class="font-size:12px color:#0ba3e1">Dynamic Contact Job Title</div>
-        					  </div>
-        					  <div class="display:flex margin-top:10px">
-            					  <!--<button class="decline" title="End Call"><i class="mdi mdi-48 mdi-phone-hangup"></i></button>-->
-            					  <!--<button class="voicemail hidden" title="Send to Voicemail"><i class="mdi mdi-48 mdi-voicemail"></i></button>-->
-            					  <!-- Confrence -->
-            					  <form  class="display:flex">
-                                    <input type="hidden" data-twilio="dialConference.friendlyName" value="data.From}}">
+                            
+                            <!-- Call Details -->
+                            <div class="margin-right:10px">
+                                <span class="font-size:17px font-weight:600"  data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" >Dynamic Contact Name</span>
+                                <div class="font-size:15px">Dyanmic Contact Phone</div>
+                                <div class="font-size:12px color:#0ba3e1">Dynamic Contact Job Title</div>
+                            </div>
+                            
+                            <!-- Call Buttons -->
+                            <form class="display:flex margin-top:10px">
+
+                                <!-- Answer and end call -->
+                                <div class="callbtns display:flex {{data.direction}}" data-collection="{{collection}}" data-document_id="{{data._id}}" name="status" value="">
+                                    <button class="answer hidden" data-actions='answerCall' title="Accept Call"><i class="fas fa-phone"></i></button>
+                                    <button class="hold hidden" data-actions='dialConference' title="Hold"><i class="fas fa-pause"></i></button>
+                                    <button class="hangup hidden" data-actions='hangupCall' title="End Call"><i class="fas fa-phone-slash"></i></button>
+                                    <!--<button class="voicemail hidden" title="Send to Voicemail"><i class="mdi mdi-48 mdi-voicemail"></i></button>-->
+
+                                    <input type="hidden" data-twilio="dialConference.friendlyName" value="{{data._id}}">
+                                    <input type="hidden" data-twilio="dialConference.CallSid" value="{{data.CallSid}}">
                                     <input type="hidden" data-twilio="dialConference.holdUrl" value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic">
-                                    <!--<input data-twilio="joinConference.friendlyName" value="{{data.friendlyName}}">-->
-                                    <input type="hidden" data-twilio="endConference.CallSid" value="{{data.idconference}}">
-                                    <input type="hidden"  data-twilio="holdConference.CallSid" value="{{data.idconference}}">
-                                    <input type="hidden"  data-twilio="unholdConference.CallSid" value="{{data.idconference}}"> 
-                                    <!--<button data-actions='dialConference, getConferences' data-id="dialConference" class="hold" title="Put Call on Hold"><i class="mdi mdi-48 mdi-pause"></i></button>-->
-                                    <!--<button data-actions='joinConference' class="hold-active hidden" title="Resume Call"><i class="mdi mdi-48 mdi-pause"></i></button>-->
+                                </div>
+                                
+                                <!-- Conference -->
+                                <div class="conference display:flex"  data-collection="{{collection}}" data-document_id="{{data._id}}" name="status" value="">
+                                    <!--<input type="hidden" data-twilio="joinConference.friendlyName" value="{{data.From}}">-->
+                                    <div type="hidden" data-twilio="endConference.CallSid" data-collection="{{collection}}" data-document_id="{{data._id}}" name="ConferenceSid" value=""></div>
+                                    <div type="hidden" data-twilio="holdConference.CallSid" data-collection="{{collection}}" data-document_id="{{data._id}}" name="ConferenceSid" value=""></div>
+                                    <div type="hidden" data-twilio="unholdConference.CallSid" data-collection="{{collection}}" data-document_id="{{data._id}}" name="ConferenceSid" value=""></div> 
                                     
-                                    <button data-actions='holdConference--' data-show=".unhold{{data._id}}" data-hide=".hold{{data._id}}" class="hold hold{{data._id}} hidden" title="Put Call on Hold"><i class="mdi mdi-48 mdi-pause"></i></button>
-                                    <button data-actions='unholdConference--' data-show=".hold{{data._id}}" data-hide=".unhold{{data._id}}" class="hold-active unhold{{data._id}}" title="Resume Call"><i class="mdi mdi-48 mdi-pause"></i></button>
-                                    <button data-actions='endConference' class="decline" data-hide="#call{{data._id}}" title="End Call"><i class="mdi mdi-48 mdi-phone-hangup"></i></button>
-                                  </form>
-                                  <!-- End Confrence -->
-                                  
-                                    <!--<div data-template_id="getConferences">-->
-                                    <!--    <div class="template margin:10px;"  data-value="{{data.id}}" data-render_array="data">-->
-                                    <!--        <form class="padding:5px">-->
-                                    <!--            <div style="display:flex ; align-items:center; width:100% ;flex-wrap:wrap" >-->
-                                    <!--                <input data-twilio="joinConference.friendlyName" value="{{data.friendlyName}}">-->
-                                    <!--                <input type="hidden" data-twilio="endConference.CallSid" value="{{data.idconference}}">-->
-                                    <!--                <input type="hidden"  data-twilio="holdConference.CallSid" value="{{data.idconference}}">-->
-                                    <!--                <input type="hidden"  data-twilio="unholdConference.CallSid" value="{{data.idconference}}">-->
-                                    <!--                <button data-actions='holdConference' >hold Conf</button>-->
-                                    <!--                <button data-actions='unholdConference' >UnHold Conf</button>-->
-                                    <!--                <button data-actions='joinConference' data-friendlyName="{{data.friendlyName}}">Join</button>-->
-                                    <!--                <button data-actions='endConference' >Closed Conf</button>-->
-                                    <!--            </div>-->
-                                    <!--        </form>-->
-                                    <!--    </div>-->
-                                    <!--</div>-->
-                                    
-            					  <button class="swap hidden" title="Swap Calls"><i class="mdi mdi-48 mdi-swap-horizontal"></i></button>
-        					  </div>
-        				  </div>
-        			
-        			    </div>
-    			    <!--End Incoming Call-->
-    			    </div>
+                                    <button class="join hidden" data-actions='joinConference' title="Resume Call" data-friendlyName="{{data._id}}"><i class="fas fa-pause"></i></button>
+                                    <button class="hold-conference hidden" data-actions='holdConference' title="Put Call on Hold"><i class="fas fa-pause"></i></button>
+                                    <button class="unhold hidden" data-actions='unholdConference'  title="Resume Call"><i class="fas fa-pause"></i></button>
+                                    <button class="end hidden" data-actions='endConference' class="decline" title="End Call con"><i class="fas fa-phone-slash"></i></button>
+                                </div>
+                                
+                                <!-- Transfer -->
+                                <input type="hidden" data-twilio="dialTransfer.CallSid" value="{{render2.parameters.CallSid}}">
+                                <button class="transfer" title="Transfer Call"><i class="mdi mdi-48 mdi-swap-horizontal"></i></button>
+
+                                <!-- Enqueue -->
+                                <div class="hidden">
+                                    <input data-twilio="dialEnqueue.nameEnqueue" data-old="{{data.From}}" value="cocreateEnqueue">
+                                    <input data-twilio="dialEnqueue.CallSid" value="{{data.CallSid}}">
+                                    <input data-twilio="dialEnqueue.waitUrl" value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic">
+                                    <button data-actions='dialEnqueue, getListQueues'>dialEnqueue</button>
+                                </div>
+                                
+                            </form>
+    				  </div>
     			</div>  
+                </div>
             </div>
-    		<div class="resizeHandler background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
+            <div class="resizeHandler background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
         </div>
         
-    		<div data-main_content_id="content" class="padding:5px height:100vh">
-    		    <ul class="cocreate-scroll display:inline-flex align-items:center list-style-type:none width:100% line-height:40px" role="tablist">
-    				<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> 
-    				    <a class="height:40px padding:.5rem_1rem tab active" href="#history" role="tab" data-toggle="tab" aria-selected="true"><i class="mdi mdi-history"></i> History</a> 
-    				</li>
-    			  
-    				<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> 
-    				    <a class="height:40px padding:.5rem_1rem" href="#missed" role="tab" data-toggle="tab" aria-selected="false"><i class="mdi mdi-call-missed"></i> Missed Calls</a> 
-    				</li>
-    			  
-    				<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> 
-    				    <a class="height:40px padding:.5rem_1rem" href="#voicemail" role="tab" data-toggle="tab" aria-selected="false"><i class="mdi mdi-voicemail"></i> Voicemail</a>
-    				</li>
-    			  
-    				<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> 
-    				    <a class="height:40px padding:.5rem_1rem" href="#incoming" role="tab" data-toggle="tab" aria-selected="false"><i class="mdi mdi-phone-incoming"></i> Recordings</a> 
-    				</li>
-                </ul>
-                <div class="cocreate-scroll">
+        <!-- Main Content -->
+    	<div data-main_content_id="content" class="padding:5px height:100vh">
+            
+            <!-- Datatable Navigation Tabs -->
+    	    <ul class="overflow:scroll display:inline-flex align-items:center list-style-type:none width:100% line-height:40px" role="tablist">
+    			<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> 
+    			    <a class="height:40px padding:.5rem_1rem tab active" href="#history" role="tab" data-toggle="tab" aria-selected="true"><i class="mdi mdi-history"></i> History</a> 
+    			</li>
+    		  
+    			<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> 
+    			    <a class="height:40px padding:.5rem_1rem" href="#missed" role="tab" data-toggle="tab" aria-selected="false"><i class="mdi mdi-call-missed"></i> Missed Calls</a> 
+    			</li>
+    		  
+    			<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> 
+    			    <a class="height:40px padding:.5rem_1rem" href="#voicemail" role="tab" data-toggle="tab" aria-selected="false"><i class="mdi mdi-voicemail"></i> Voicemail</a>
+    			</li>
+    		  
+    			<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> 
+    			    <a class="height:40px padding:.5rem_1rem" href="#incoming" role="tab" data-toggle="tab" aria-selected="false"><i class="mdi mdi-phone-incoming"></i> Recordings</a> 
+    			</li>
+            </ul>
+            
+            <!-- Datatable -->
+            <div class="overflow:scroll">
     			<table class="width:100% border-collapse:collapse">
-    				<tr class="border-bottom:1px_solid_gainsboro border-top:1px_solid_gainsboro">
+    				<tr class="border-bottom:1px_solid_darkgray">
     					<td class="position:sticky top:0 background:white padding-top:0 padding:10px ">
     						<input type="text" class="floating-label"
-    							data-filter_name="name" 
+    							data-filter_name="status" 
     							data-value_type="string"
     							data-filter_operator=""
     							data-template_id="datatable" 
-    							placeholder="Name">
+    							placeholder="Status">
     							<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
     								<!-- need a solution to update toggle value="desc|asc" and define and upadte icons... show hide works great but to much html and orderby only has 2 values -->
     								<a data-order_by="name" data-toggle_order data-template_id="datatable">
@@ -276,34 +318,47 @@
     								</a>
     							</span>
     					</td>
+    					<!--<td class="position:sticky top:0 background:white padding:10px padding-top:0">-->
+    					<!--	<input type="text" class="floating-label"-->
+    					<!--		data-filter_name="participants" -->
+    					<!--		data-value_type="string"-->
+    					<!--		data-filter_operator=""-->
+    					<!--		data-template_id="datatable" -->
+    					<!--		placeholder="Participants"/>-->
+    					<!--		<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6" >-->
+    					<!--			<a data-order_by="_id" value="" data-toggle_order="true" data-template_id="datatable">-->
+    					<!--			</a>-->
+    					<!--		</span>-->
+    					<!--</td>-->
     					<td class="position:sticky top:0 background:white padding:10px padding-top:0">
     						<input type="text" class="floating-label"
-    							data-filter_name="_id" 
+    							data-filter_name="duration" 
     							data-value_type="string"
     							data-filter_operator=""
     							data-template_id="datatable" 
-    							placeholder="Document_id"/>
+    							placeholder="duration"/>
     							<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6" >
     								<a data-order_by="_id" value="" data-toggle_order="true" data-template_id="datatable">
     								</a>
     							</span>
     					</td>
     				</tr>
-    
+                    
+                    <!-- Datatable Fetch and Render Rows -->
     				<tbody data-template_id="datatable"
-    					data-fetch_collection="module_activity"
-    					data-filter_name="module_id" 
-    					data-filter_value="" 
-    					data-order_by="name" 
-    					data-order_type="asc"
-    					data-pass_id="datatable">
-    					
-    					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" data-template_id="datatable">
-    						<td class="padding:5px">
+    					data-fetch_collection="testtwillio"
+    					data-fetch_count="15"
+    					data-order_by="" 
+    					data-order_type="asc">
+                        
+                        <!-- Datatable Row Template -->
+    					<tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" data-document_id="{{data._id}}" data-template_id="datatable"  data-toggle="selected">
+    						<td class="padding:10px">
     							<div class="display:flex min-width:200px">
-    								<!-- Avatar -->
-                                    <div class="avatar-wrapper margin:5px_0px margin-right:10px">
-                                        <a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile.html" 
+    								<div class="display:flex justify-content:center width:40px">
+                                	<!-- Avatar -->
+                                    <div class="avatar-wrapper">
+                                        <a class="avatar round" target="modal" 
                                           data-pass_collection="modules" 
                                           data-pass_prefix="" 
                                           data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" 
@@ -312,44 +367,64 @@
                                           data-modal_height="375px" 
                                           data-modal_color="#229954"
                                           data-modal_header="false">
-                                          	<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name"></span>
-                                          	<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+                                          	<span data-collection="users" data-document_id="" name="name" class="first-letter avatar-name"></span>
+                                          	<span data-collection="users" data-document_id="" name="profile_image" class="avatar-image">
                                           	  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
                                           	</span>
                                         </a>
-                                        <div class="avatar-status sessionUser_Id"  data-collection="users" data-document_id="" data-user_status='{"name":"status"}' ></div>
-                                    </div>
-
+                                        <!--<div class="avatar-status sessionUser_Id" data-collection="users" data-document_id="" data-user_status='{"name":"status"}'></div>-->
+                                    </div>								</div>
     								<div class="margin-left:10px">
-    									<a target="modal" data-pass_collection="module-views"
-    											data-pass_document_id=""
+    									<a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-views/module_form.html" 
+    											data-pass_collection="modules"
+    											data-pass_document_id="{{data._id}}"
     											data-pass_name="html"
-    											data-pass_id="form"
     											data-pass_to="render"
     											data-modal_width="320px" 
     											data-modal_color="#229954"
     											data-modal_header="false">
-    										<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Name</h4>
-    										<div data-pass_collection="{{collection}}"
-    											data-pass_document_id="{{data._id}}"
-    											data-pass_to="form-fields">
-    										</div>
+            								<div class="display:none to-{{data.direction}}">
+            								    <h4><span data-collection="{{collection}}" data-document_id="{{data._id}}" name="To">To</span></h4>
+            								</div>
+            								<div class="display:none from-{{data.direction}}">
+            								    <h4><span data-collection="{{collection}}" data-document_id="{{data._id}}" name="From">From</span></h4>
+            								</div>
+    								        <span class="icon-{{data.direction}}" data-collection="{{collection}}" data-document_id="{{data._id}}" name="status" value=""></span>
     									</a>
-    									<h5 name="description" value="description"></h5>
     								</div>
     							</div>
     						</td>
-    						<td class="padding:5px">
-    							<a target="modal" data-pass_id="form"
-    									data-pass_collection="module-views"
-    									data-pass_document_id=""
+    						<!--<td class="padding:10px display:flex">-->
+    							<!-- Avatar -->
+          <!--                      <div class="avatar-wrapper">-->
+          <!--                          <a class="avatar round" target="modal" -->
+          <!--                              data-pass_collection="modules" -->
+          <!--                              data-pass_prefix="" -->
+          <!--                              data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" -->
+          <!--                              data-pass_to="render" -->
+          <!--                              data-modal_width="300px" -->
+          <!--                              data-modal_height="375px" -->
+          <!--                              data-modal_color="#229954"-->
+          <!--                              data-modal_header="false">-->
+          <!--                              <span data-collection="users" data-document_id="" name="name" class="first-letter avatar-name"></span>-->
+          <!--                              <span data-collection="users" data-document_id="" name="profile_image" class="avatar-image">-->
+          <!--                                  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>-->
+          <!--                              </span>-->
+          <!--                          </a>-->
+          <!--                          <div class="avatar-status sessionUser_Id" data-collection="users" data-document_id="" data-user_status='{"name":"status"}'></div>-->
+          <!--                      </div>			-->
+    						<!--</td>-->
+    						<td class="padding:10px">
+    							<a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-views/module_form.html"
+    									data-pass_document_id="{{data._id}}"
+    									data-pass_collection="modules"
     									data-pass_name="html"
-    									data-pass_to="render"
+    									data-pass_to="render" 
     									data-modal_width="320px" 
     									data-modal_color="#229954"
     									data-modal_header="false">
-    								<b value="{{data._id}}">Module Id</b>
-    								<div data-pass_collection="{{collection}}"
+    								<b data-collection="{{collection}}" data-document_id="{{data._id}}" name="duration">Duration</b>
+    								<div data-pass_collection="modules"
     									data-pass_document_id="{{data._id}}"
     									data-pass_to="form-fields">
     								</div>
@@ -359,13 +434,18 @@
     					
     				</tbody>
     			</table>
-    	        </div>
-    		</div>
+    			<div data-template_id="datatable" data-fetch_type="total"></div>
+            </div>
+            
+    	</div>
+    	<!-- SideNav Right -->
         <div id="menuR" class="cocreate-sidenav sidenav-right background:white height:100vh direction:rtl" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="offcanvas" sidenav-expanded_width="300px" sidenav-collapsed_width="0px">
     		
-            <div class="min-width:290px background-color:#ffffff margin:5px  direction:ltr">
+            <div class="min-width:290px background-color:#ffffff margin:5px direction:ltr">
                 <div class="padding:5px">
                     <form data-template_id="createCall" data-render_id="render2">
+                        
+                        <!-- From Fontact or Number-->
                         <cocreate-select class="floating-label sortable" 
                             data-collection="test" 
                             data-collection="module_activities"
@@ -376,7 +456,7 @@
                         
                             <input class="template-search" data-template_id="selectable0">
                         
-                            <ul data-fetch_collection="use" data-template_id="selectable0" class="selectable--list cocreate-scroll height:300px">
+                            <ul data-fetch_collection="use" data-template_id="selectable0" class="selectable--list overflow:scroll height:300px">
                           		<li class="selectable templat display:flex padding:5px" data-template_id="selectable0" value='+13472189814' data-document_id="{{data._id}}" data-render_array="data">
                               		<div> 
                                         <h3 name="name" value="{{data.name}}">+13472189814</h3>
@@ -392,6 +472,8 @@
                             </ul>
                         
                         </cocreate-select>
+                        
+                        <!-- TO Contact or Number-->
                         <div class="position:relative">
                             <cocreate-select class="floating-label sortable" 
                                 data-collection="test" 
@@ -401,22 +483,22 @@
                                 data-limit_selectable="3"
                                 placeholder="Enter a name or number">
                                 
-                                <input data-twilio="dial.To" class="template-search draw_digits" data-template_id="selectable0">
+                                <input data-twilio="dial.To" class="template-search draw_digits" data-template_id="selectable0" value="+19703735168">
                                 <input type="hidden" data-twilio="dial.From" value="+16027372368">
                             
-                                <ul data-fetch_collection="users" data-template_id="number" class="selectable--list cocreate-scroll">
+                                <ul data-fetch_collection="users" data-template_id="number" class="selectable--list overflow:scroll">
                               		<li class="selectable template display:flex padding:5px" data-template_id="number" value='{{data._id}}' data-document_id="{{data._id}}" data-render_array="data">
                     					<!-- Avatar -->
                                         <div class="avatar-wrapper margin:5px_0px margin-right:10px">
                                             <a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile.html" 
-                                              data-pass_collection="modules" 
-                                              data-pass_prefix="" 
-                                              data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" 
-                                              data-pass_to="render" 
-                                              data-modal_width="300px" 
-                                              data-modal_height="375px" 
-                                              data-modal_color="#229954"
-                                              data-modal_header="false">
+                                                data-pass_collection="modules" 
+                                                data-pass_prefix="" 
+                                                data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" 
+                                                data-pass_to="render" 
+                                                data-modal_width="300px" 
+                                                data-modal_height="375px" 
+                                                data-modal_color="#229954"
+                                                data-modal_header="false">
                                               	<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name"></span>
                                               	<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
                                               	  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
@@ -432,37 +514,38 @@
                                 </ul>
                             </cocreate-select>
                             <a data-actions='createCall' class="position:absolute top:12px right:12px float:right z-index:5 font-size:20px" data-actions=""><i class="far fa-plus-square"></i></a>
-                        
-                        
                         </div>  
+                        
                         <!--<div class="phoneString width:100% height:80px background-color:#ffffff">-->
                         <!--    <input type="text" class="background-color:transparent margin:0px_25px height:80px width:250px border:none outline:none:focus font-size:30px font-weight:700 letter-spacing:2px text-align:center" >-->
                         <!--</div>-->
+                       
+                        <!-- Dial Pad -->
                         <div class="digits overflow:hidden width:250px margin:auto margin-top:20px">
                             <div class="dig pound number-dig" name="1">1</div>
                             <div class="dig number-dig" name="2">2
-                              <div class="font-size:8px font-weight:300 position:relative top:-2px">ABC</div>
+                                <div class="font-size:8px font-weight:300 position:relative top:-2px">ABC</div>
                             </div>
                             <div class="dig number-dig" name="3">3
-                              <div class="font-size:8px font-weight:300 position:relative top:-2px">DEF</div>
+                                <div class="font-size:8px font-weight:300 position:relative top:-2px">DEF</div>
                             </div>
                             <div class="dig number-dig" name="4">4
-                              <div class="font-size:8px font-weight:300 position:relative top:-2px">GHI</div>
+                                <div class="font-size:8px font-weight:300 position:relative top:-2px">GHI</div>
                             </div>
                             <div class="dig number-dig" name="5">5
-                              <div class="font-size:8px font-weight:300 position:relative top:-2px">JKL</div>
+                                <div class="font-size:8px font-weight:300 position:relative top:-2px">JKL</div>
                             </div>
                             <div class="dig number-dig" name="6">6
-                              <div class="font-size:8px font-weight:300 position:relative top:-2px">MNO</div>
+                                <div class="font-size:8px font-weight:300 position:relative top:-2px">MNO</div>
                             </div>
                             <div class="dig number-dig" name="7">7
-                              <div class="font-size:8px font-weight:300 position:relative top:-2px">PQRS</div>
+                                <div class="font-size:8px font-weight:300 position:relative top:-2px">PQRS</div>
                             </div>
                             <div class="dig number-dig" name="8">8
-                              <div class="font-size:8px font-weight:300 position:relative top:-2px">TUV</div>
+                                <div class="font-size:8px font-weight:300 position:relative top:-2px">TUV</div>
                             </div>
                             <div class="dig number-dig" name="9">9
-                              <div class="font-size:8px font-weight:300 position:relative top:-2px">WXYZ</div>
+                                <div class="font-size:8px font-weight:300 position:relative top:-2px">WXYZ</div>
                             </div>
                             <div class="dig number-dig padding-top:17px height:58px" name="*">*</div>
                             <div class="dig number-dig padding-top:10px height:58px" name="0">0</div>
@@ -470,12 +553,12 @@
                         </div>
                         <div class="display:flex margin-top:10px">
                             <div class="display:flex justify-content:center width:33%">
-        					    <button  data-actions='dialConference, getConferences' data-id="dialConference" class="hold " title="Put Call on Hold"><i class="mdi mdi-48 mdi-pause"></i></button>
-        					    <button class="hold-active hidden" title="Resume Call"><i class="mdi mdi-48 mdi-pause"></i></button>
+        					    <button data-actions='dialConference' data-id="dialConference" class="hold " title="Put Call on Hold"><i class="fas fa-pause"></i></button>
+        					    <button class="hold-active hidden" title="Resume Call"><i class="fas fa-pause"></i></button>
         					</div>  
                             <div class="display:flex justify-content:center width:33%">
-            					<button data-actions='createCall' class="answer" title="Answer Call"><i class="mdi mdi-48 mdi-phone"></i></button>
-            					<button class="decline hidden" title="End Call"><i class="mdi mdi-48 mdi-phone-hangup"></i></button>
+            					<button data-actions='createCall' class="answer" title="Answer Call"><i class="fas fa-phone"></i></button>
+            					<button class="decline hidden" title="End Call"><i class="fas fa-phone-slash"></i></button>
         					</div>
                             <div class="display:flex justify-content:center width:33%">
         					    <button class="swap " title="Swap Calls"><i class="mdi mdi-48 mdi-swap-horizontal"></i></button>
@@ -486,39 +569,39 @@
             </div>
             <div class="resizeHandler background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
         </div>
+        
+        <!-- SidNav RIght Key pad Button -->
         <button data-toggle_sidenav="menuR" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:15">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="2em" height="2em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 19a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M6 1a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m12-8a2 2 0 0 0 2-2a2 2 0 0 0-2-2a2 2 0 0 0-2 2a2 2 0 0 0 2 2m-6 8a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m6 0a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0-6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-6 0a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0-6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2z" fill="#626262"/></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 19a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M6 1a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m12-8a2 2 0 0 0 2-2a2 2 0 0 0-2-2a2 2 0 0 0-2 2a2 2 0 0 0 2 2m-6 8a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m6 0a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0-6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-6 0a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0-6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2z" fill="#626262"/></svg>
 		</button>
 
     
-    <script>
-      var config = {
-        apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-        securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
-        organization_Id: '5de0387b12e200ea63204d6c'
-      }
-    </script>
-
-    <!-- CoCreateJS --> 
-    <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
-    
-    <!--CoCreate Plugins TwilioClient-->
-    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-api-twilio/src/CoCreate-api.js"></script>
-    <script type="text/javascript" src="https://server.cocreate.app:8088/js/twilio.min.js"></script>
-    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-api-twilio/src/CoCreate-twilio.js"></script>
-    
-    
-      <script>
+        <script>
+            var config = {
+                apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+                securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+                organization_Id: '5de0387b12e200ea63204d6c'
+            }
+        </script>
         
-        document.querySelectorAll('.number-dig').forEach((number)=>{
-            number.addEventListener("click", (e) =>{
-                var valueToAppend = number.getAttribute('name');      
-                let draw_digits = document.querySelector('.draw_digits');
-                let currentValue = draw_digits.value;
-                draw_digits.value = currentValue + valueToAppend;
-            });
-        })
-
-    </script>
-  </body>
+        <!-- CoCreateJS --> 
+        <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+        
+        <!-- CoCreate Plugins -->
+        <script src="https://server.cocreate.app/CoCreate-components/CoCreate-api-twilio/src/CoCreate-api.js"></script>
+        <script type="text/javascript" src="https://server.cocreate.app:8088/js/twilio.min.js"></script>
+        <script src="https://server.cocreate.app/CoCreate-components/CoCreate-api-twilio/src/CoCreate-twilio.js"></script>
+        
+        <script>
+            document.querySelectorAll('.number-dig').forEach((number)=>{
+                number.addEventListener("click", (e) =>{
+                    var valueToAppend = number.getAttribute('name');      
+                    let draw_digits = document.querySelector('.draw_digits');
+                    let currentValue = draw_digits.value;
+                    draw_digits.value = currentValue + valueToAppend;
+                });
+            })
+        </script>
+    
+    </body>
 </html>

@@ -204,6 +204,7 @@
 									data-collection="users"
 									data-document_id=""
 									name="_id"
+									data-localstorage_set="user_id"
 									placeholder="UserId" readonly>
 								
 								<!-- Organiztion _id  -->
@@ -211,6 +212,7 @@
 									data-collection="organizations"
 									data-document_id=""
 									name="_id"
+									data-localstorage_set="organization_id"
 									placeholder="OrganizationId" readonly>
 								
 								<!-- API key  -->
@@ -218,6 +220,7 @@
 									data-collection="organizations"
 									data-document_id=""
 									name="apiKey"
+									data-localstorage_set="apiKey"
 									placeholder="API Key" 
 									data-uuid="32" readonly>
 								
@@ -225,7 +228,8 @@
 								<input type="hidden" id="securityKey"
 									data-collection="organizations"
 									data-document_id=""  
-									name="securityKey"  
+									name="securityKey" 
+									data-localstorage_set="securityKey"
 									placeholder="security Key" 
 									data-uuid="32" readonly>
 									
@@ -235,6 +239,10 @@
 										Launch
 										<a href="index.html"></a>
 									</button>
+         						
+									<!-- btn to set local storage  need to be updated to an action -->
+         							<input type="submit" class="localStorageBtn" value="Submit"/>
+				
 								</div>
 							</div>
 						</div>
@@ -257,6 +265,7 @@
 		<!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-industry/src/CoCreate-industry.js"></script>-->
 	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-uuid/src/CoCreate-uuid.js"></script>
 	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-organizations/src/CoCreate-organizations.js"></script>
+	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-storage/src/CoCreate-storage.js"></script>
 		<!--<script type="text/javascript">
 			CoCreateAction.registerEvent('registerBtn', null, window, 'fetchedUsersCurrentOrg')
 			CoCreateAction.registerEvent('industryBtn', buildIndustryRequest, window, 'buildIndustry')
