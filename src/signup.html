@@ -129,6 +129,7 @@
                                 <div class="position:relative top:-34px right:8px float:right padding:5px background:whitesmoke">
                                 	<span>.cocreate.app</span>
                                 </div>
+
                                 <small id="Domain is currently in use" class="text-danger"></small>
 								<div class="display:flex">
 							        <button type="button" class="outline white-blue margin-right:15px" data-show='#step2,#ava2' data-hide='#step3,#ava3'>Previous</button>
@@ -233,16 +234,23 @@
 									placeholder="security Key" 
 									data-uuid="32" readonly>
 									
+								<!-- Sub Domain -->
+								<input type="hidden" 
+									data-collection="organizations"
+									data-document_id="" 
+									name="domain"
+									data-type="array"
+									placeholder="Text"
+									data-attribute="href" 
+									data-target="redirect-domain">
+									
 								<div class="display:flex">
 									<button type="button" class="outline white-blue margin-right:15px" data-show='#step4,#ava4' data-hide='#step5,#ava5'>Previous</button>
-									<button type="button" class="outline red-white" data-actions="createOrg, createUser, runIndustry">
+									<button type="button" class="outline red-white" data-actions="createOrg, createUser, runIndustry, localStorage">
 										Launch
-										<a href="index.html"></a>
+										<a id="redirect-domain" href="index.html"></a>
 									</button>
-         						
-									<!-- btn to set local storage  need to be updated to an action -->
-         							<input type="submit" class="localStorageBtn" value="Submit"/>
-				
+
 								</div>
 							</div>
 						</div>
@@ -251,25 +259,40 @@
 				</div>
 		    </div>
 		</div>
-
+		
+		<!-- masterDB --
 		<script>
 			var config = {
-			  apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-			  securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
-			  organization_Id: '5de0387b12e200ea63204d6c'
+			  apiKey: '38ffd014-c33b-4202-c54b-ac46a0a4',
+			  securityKey: '69faeace-b065-4c87-b880-22c2f0f3',
+			  organization_Id: '5ae0cfac6fb8c4e656fdaf92'
+			}
+		</script>-->
+		<!-- CoCreate --
+		<script>
+		 	var config = {
+		 	  apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+		 	  securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+		 	  organization_Id: '5de0387b12e200ea63204d6c'
+		 	}
+		</script>-->
+		<!-- General -->
+		<script>
+			var config = {
+			  apiKey: '2061acef-0451-4545-f754-60cf8160',
+			  securityKey: '073daff2-5142-4402-cf59-48e205ef',
+			  organization_Id: '5ff747727005da1c272740ab'
 			}
 		</script>
+
 		
 		<!--CoCreateJS-->
-		<script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
+		<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+		
 		<!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-industry/src/CoCreate-industry.js"></script>-->
 	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-uuid/src/CoCreate-uuid.js"></script>
 	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-organizations/src/CoCreate-organizations.js"></script>
 	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-storage/src/CoCreate-storage.js"></script>
-		<!--<script type="text/javascript">
-			CoCreateAction.registerEvent('registerBtn', null, window, 'fetchedUsersCurrentOrg')
-			CoCreateAction.registerEvent('industryBtn', buildIndustryRequest, window, 'buildIndustry')
-		</script> --> 
 
 
 	</body>

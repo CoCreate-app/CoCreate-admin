@@ -41,6 +41,12 @@
     .status[value="hold"]::before, .status[value="hold-conference"]::before {content: 'Hold';}
 
     .call[value="completed"], .call[value="no-answer"], .call[value="busy"] {display:none!important}
+    .call-transer:before {
+    content: url("./call-transfer.png");
+    width:18px;
+    height:18px;
+    /*margin:10px 5px 0 10px;*/
+}
     .icon-inbound-dial {
     content: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggY2xhc3M9Imhlcm9pY29uLXVpIiBkPSJNMTMuMDQgMTQuNjlsMS4wNy0yLjE0YTEgMSAwIDAgMSAxLjItLjVsNiAyQTEgMSAwIDAgMSAyMiAxNXY1YTIgMiAwIDAgMS0yIDJoLTJBMTYgMTYgMCAwIDEgMiA2VjRjMC0xLjEuOS0yIDItMmg1YTEgMSAwIDAgMSAuOTUuNjhsMiA2YTEgMSAwIDAgMS0uNSAxLjIxTDkuMyAxMC45NmExMC4wNSAxMC4wNSAwIDAgMCAzLjczIDMuNzN6TTguMjggNEg0djJhMTQgMTQgMCAwIDAgMTQgMTRoMnYtNC4yOGwtNC41LTEuNS0xLjEyIDIuMjZhMSAxIDAgMCAxLTEuMy40NiAxMi4wNCAxMi4wNCAwIDAgMS02LjAyLTYuMDEgMSAxIDAgMCAxIC40Ni0xLjNsMi4yNi0xLjE0TDguMjggNHptMTIuMDEtMS43YTEgMSAwIDAgMSAxLjQyIDEuNEwxNy40IDhIMjBhMSAxIDAgMCAxIDAgMmgtNWExIDEgMCAwIDEtMS0xVjRhMSAxIDAgMCAxIDIgMHYyLjU5bDQuMy00LjN6Ii8+PC9zdmc+");
     width:18px;
@@ -93,7 +99,7 @@
 				<div class="circle"></div>
 			</a>
          
-            <ul class="overflow:scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
+            <ul class="overflow:auto display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
       			<li class="margin-right:15px">
       			  <a class="btn-modal-close"><i class="fas fa-times"></i></a>
       			</li>
@@ -168,8 +174,8 @@
         </div>
         
         <!-- SidNav Left -->
-        <div id="menuL" class="cocreate-sidenav background:white height:100vh" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="expanded" sidenav-expanded_width="310px"  sidenav-collapsed_width="0px">
-    		<div class="height:100vh min-width:300px padding:5px overflow:scroll margin:5px">
+        <div id="menuL" class="cocreate-sidenav background:white height:100vh" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="expanded" sidenav-expanded_width="310px" sidenav-collapsed_width="0px">
+    		<div class="height:100vh min-width:300px padding:5px overflow:auto margin:5px">
     			
     			<!-- SideNav Header -->
                 <div class="font-size:22px color:#333333 font-weight:600 padding-bottom:10px">
@@ -260,7 +266,7 @@
                                 
                                 <!-- Transfer -->
                                 <input type="hidden" data-twilio="dialTransfer.CallSid" value="{{render2.parameters.CallSid}}">
-                                <button class="transfer" title="Transfer Call"><i class="mdi mdi-48 mdi-swap-horizontal"></i></button>
+                                <button class="transfer" data-actions='dialTransfer' title="Transfer Call"><img src="call-transfer.png" height="24px"></button>
 
                                 <!-- Enqueue -->
                                 <div class="hidden">
@@ -271,8 +277,58 @@
                                 </div>
                                 
                             </form>
-    				  </div>
-    			</div>  
+                            <!--<div data-template_id="getParticipantsConferences_{{data.idconference}}">-->
+                            <!--    <form>-->
+                            <!--        <input type="hidden"  data-twilio="getParticipantsConference.CallSid" value="{{data.idconference}}">-->
+                            <!--            <button data-actions='getParticipantsConference' -->
+                            <!--                data-friendlyName="{{data.friendlyName}}"-->
+                            <!--                data-idconference="{{data.idconference}}"-->
+                            <!--            >GetPart</button>-->
+                            <!--    </form>-->
+                            <!--    <div class="template margin:10px;" data-value="{{participant.id}}" data-render_array="participant">-->
+                            <!--        <form class="padding:5px">-->
+                                        
+                            <!--            <input type="hidden" data-twilio="delParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
+                            <!--            <input type="hidden" data-twilio="delParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
+                                        
+                            <!--            <input type="hidden" data-twilio="muteParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
+                            <!--            <input type="hidden" data-twilio="muteParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
+                                        
+                            <!--            <input type="hidden" data-twilio="unmuteParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
+                            <!--            <input type="hidden" data-twilio="unmuteParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
+                                        
+                            <!--            <input type="hidden" data-twilio="holdParticipantConference.idconference" value="{{participant.conferenceSid}}">-->
+                            <!--            <input type="hidden" data-twilio="holdParticipantConference.idparticipant" value="{{participant.callSid}}">-->
+                                        
+                            <!--            <input type="hidden" data-twilio="unholdParticipantConference.idconference" value="{{participant.conferenceSid}}">-->
+                            <!--            <input type="hidden" data-twilio="unholdParticipantConference.idparticipant" value="{{participant.callSid}}">-->
+                                        
+                                        
+                            <!--            <li> <span value="{{participant.call.sid}}"></span>  - TO: <span value="{{participant.call.to}}"></span> - from :<span value="{{participant.call.from}}"></span></span></li>-->
+                            <!--            <button -->
+                            <!--                    data-actions='muteParticipantsConference' -->
+                            <!--                    data-idparticipant="{{participant.callSid}}" -->
+                            <!--            >Mute</button>-->
+                            <!--            <button style="display:none"-->
+                            <!--                    data-actions='unmuteParticipantsConference' -->
+                            <!--                    data-idparticipant="{{participant.callSid}}"-->
+                            <!--            >UnMute</button>-->
+                            <!--            <button -->
+                            <!--                    data-actions='holdParticipantConference' -->
+                            <!--                    data-idparticipant="{{participant.callSid}}" -->
+                            <!--            >HoldParticipante</button>-->
+                            <!--            <button style="display:none"-->
+                            <!--                    data-actions='unholdParticipantConference' -->
+                            <!--                    data-idparticipant="{{participant.callSid}}"-->
+                            <!--            >UnHoldParticipante</button>-->
+                            <!--            <button -->
+                            <!--                    data-actions='delParticipantsConference'-->
+                            <!--            >DElete</button>-->
+                            <!--        </form>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                        </div>
+    			    </div>  
                 </div>
             </div>
             <div class="resizeHandler background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
@@ -282,7 +338,7 @@
     	<div data-main_content_id="content" class="padding:5px height:100vh">
             
             <!-- Datatable Navigation Tabs -->
-    	    <ul class="overflow:scroll display:inline-flex align-items:center list-style-type:none width:100% line-height:40px" role="tablist">
+    	    <ul class="overflow:auto display:inline-flex align-items:center list-style-type:none width:100% line-height:40px" role="tablist">
     			<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> 
     			    <a class="height:40px padding:.5rem_1rem tab active" href="#history" role="tab" data-toggle="tab" aria-selected="true"><i class="mdi mdi-history"></i> History</a> 
     			</li>
@@ -301,7 +357,7 @@
             </ul>
             
             <!-- Datatable -->
-            <div class="overflow:scroll">
+            <div class="overflow:auto">
     			<table class="width:100% border-collapse:collapse">
     				<tr class="border-bottom:1px_solid_darkgray">
     					<td class="position:sticky top:0 background:white padding-top:0 padding:10px ">
@@ -438,6 +494,7 @@
             </div>
             
     	</div>
+    	
     	<!-- SideNav Right -->
         <div id="menuR" class="cocreate-sidenav sidenav-right background:white height:100vh direction:rtl" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="offcanvas" sidenav-expanded_width="300px" sidenav-collapsed_width="0px">
     		
@@ -453,10 +510,11 @@
                             name="selectField0"
                             data-limit_selectable="3"
                             placeholder="Call as">
-                        
+                            
+                            <input type="hidden" data-twilio="dial.From" value="+16027372368">
                             <input class="template-search" data-template_id="selectable0">
                         
-                            <ul data-fetch_collection="use" data-template_id="selectable0" class="selectable--list overflow:scroll height:300px">
+                            <ul data-fetch_collection="use" data-template_id="selectable0" class="selectable--list overflow:auto height:300px">
                           		<li class="selectable templat display:flex padding:5px" data-template_id="selectable0" value='+13472189814' data-document_id="{{data._id}}" data-render_array="data">
                               		<div> 
                                         <h3 name="name" value="{{data.name}}">+13472189814</h3>
@@ -475,18 +533,11 @@
                         
                         <!-- TO Contact or Number-->
                         <div class="position:relative">
-                            <cocreate-select class="floating-label sortable" 
-                                data-collection="test" 
-                                data-collection="module_activities"
-                                data-document_id="5e9531b3a762440eed55c2ed" 
-                                name="number"
-                                data-limit_selectable="3"
-                                placeholder="Enter a name or number">
+                            <cocreate-select class="floating-label sortable" placeholder="Enter a name or number">
                                 
                                 <input data-twilio="dial.To" class="template-search draw_digits" data-template_id="selectable0" value="+19703735168">
-                                <input type="hidden" data-twilio="dial.From" value="+16027372368">
                             
-                                <ul data-fetch_collection="users" data-template_id="number" class="selectable--list overflow:scroll">
+                                <ul data-fetch_collection="users" data-template_id="number" class="selectable--list overflow:auto">
                               		<li class="selectable template display:flex padding:5px" data-template_id="number" value='{{data._id}}' data-document_id="{{data._id}}" data-render_array="data">
                     					<!-- Avatar -->
                                         <div class="avatar-wrapper margin:5px_0px margin-right:10px">
@@ -553,15 +604,36 @@
                         </div>
                         <div class="display:flex margin-top:10px">
                             <div class="display:flex justify-content:center width:33%">
-        					    <button data-actions='dialConference' data-id="dialConference" class="hold " title="Put Call on Hold"><i class="fas fa-pause"></i></button>
-        					    <button class="hold-active hidden" title="Resume Call"><i class="fas fa-pause"></i></button>
+        				        <input type="hidden" data-twilio="dialConference.friendlyName" value="{{render2.parameters.To}}">
+                                <input type="hidden" data-twilio="dialConference.CallSid" value="{{render2.parameters.CallSid}}">
+                                <input type="hidden" data-twilio="dialConference.holdUrl" value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic">
+        					    <button data-actions='dialConference' data-id="dialConference" class="hold " title="Put Call on Hold">
+        					        <i class="fas fa-pause"></i>
+        				        </button>
+                                <!-- Conference -->
+        					    <div>
+                                    <input type="hidden" data-twilio="joinConference.friendlyName" value="{{data.friendlyName}}">
+                                    <input type="hidden" data-twilio="endConference.CallSid" value="{{data.idconference}}">
+                                    <input type="hidden"  data-twilio="holdConference.CallSid" value="{{data.idconference}}">
+                                    <input type="hidden"  data-twilio="unholdConference.CallSid" value="{{data.idconference}}">
+                                    <button class="hidden" data-actions='joinConference' data-friendlyName="{{data.friendlyName}}" title="Resume Call">
+                                        <i class="fas fa-pause"></i>
+                                    </button>
+                                    <button class="hidden" data-actions='holdConference'><i class="fas fa-pause"></i></button>
+                                    <button class="hidden" data-actions='unholdConference'><i class="fas fa-pause"></i></button>
+                                </div>
         					</div>  
                             <div class="display:flex justify-content:center width:33%">
-            					<button data-actions='createCall' class="answer" title="Answer Call"><i class="fas fa-phone"></i></button>
-            					<button class="decline hidden" title="End Call"><i class="fas fa-phone-slash"></i></button>
+            					<button data-actions='createCall' class="answer is-animating" title="Answer Call" data-show="#end-call" data-hide="">
+            					    <i class="fas fa-phone"></i>
+            					</button>
+            					<button id="#end-call" class="decline hidden" data-actions='hangupCall' title="End Call"><i class="fas fa-phone-slash"></i></button>
+                                <!-- End Conference -->
+                                <input type="hidden" data-twilio="endConference.CallSid" value="{{data.idconference}}">
+            					<button class="hidden" data-actions='endConference'><i class="fas fa-phone-slash"></i></button>
         					</div>
                             <div class="display:flex justify-content:center width:33%">
-        					    <button class="swap " title="Swap Calls"><i class="mdi mdi-48 mdi-swap-horizontal"></i></button>
+                                <button class="transfer" data-actions='dialTransfer' title="Transfer Call"><img src="call-transfer.png" height="24px"></button>
         					</div>
         				 </div>
     				</form>

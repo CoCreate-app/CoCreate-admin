@@ -1,7 +1,3 @@
-.blue {
-	color: #0DA3E2;
-}
-
 
 button:hover {
 	color: #0DA3E2;
@@ -35,7 +31,7 @@ button:hover {
 		padding: 0;
 		margin:5px;
 	}
-	button.hold, button.hold-conference, button.swap, button.voicemail {
+	button.hold, button.hold-conference, button.swap, button.voicemai, button.transfer {
 		color: #95989A;
 		background: #EEEEEE;
 		border-radius: 50%;
@@ -58,6 +54,7 @@ button:hover {
 		margin:5px;
 	}
 	
+
 	.timer.active {
 		color: #22D67E;
 	}
@@ -72,56 +69,8 @@ button:hover {
 .grey {
 	color: #95989A;
 }
-	.caller-title {
-		font-family: 'Open Sans', sans-serif;
-		font-size: 12px;
-		color: #0ba3e1;
-		
-	}
-.Phone {
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 1em;
-  height: 1em;
-  font-size: 25vmin;
-  background-color: #1C77B2;
-  border-radius: 0.5em;
-  -webkit-box-shadow: 0 0 0 0em rgba(28, 119, 178, 0), 0em 0.05em 0.1em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 0 0em rgba(28, 119, 178, 0), 0em 0.05em 0.1em rgba(0, 0, 0, 0.2);
-  -webkit-transform: translate3d(0, 0, 0) scale(1);
-          transform: translate3d(0, 0, 0) scale(1);
-}
-
-.phone::before,
-.phone::after {
-  position: absolute;
-}
-
-.phone::before {
-  top: 0;
-  left: 0;
-
-  width: 1em;
-  height: 1em;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 100%;
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0) scale(0);
-          transform: translate3d(0, 0, 0) scale(0);
-}
-
-.phone::after {
-  top: 0.25em;
-  left: 0.25em;
-  width: 0.5em;
-  height: 0.5em;
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTYuNiAxMC44YzEuNCAyLjggMy44IDUuMSA2LjYgNi42bDIuMi0yLjJjLjMtLjMuNy0uNCAxLS4yIDEuMS40IDIuMy42IDMuNi42LjUgMCAxIC40IDEgMVYyMGMwIC41LS41IDEtMSAxLTkuNCAwLTE3LTcuNi0xNy0xNyAwLS42LjQtMSAxLTFoMy41Yy41IDAgMSAuNCAxIDEgMCAxLjIuMiAyLjUuNiAzLjYuMS40IDAgLjctLjIgMWwtMi4zIDIuMnoiIGZpbGw9IiNmZmZmZmYiLz48L3N2Zz4=);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+.blue {
+	color: #0DA3E2;
 }
 
 .phone.is-animating {
@@ -437,9 +386,6 @@ button:hover {
   }
 }
 
-
-
-
 /*
 Dialpad
 */
@@ -458,17 +404,15 @@ Dialpad
   cursor: pointer;
   border:1px black solid;
 }
-.dig.clicked {
+.dig:active {
   animation: pulse-gray linear 0.5s 1;
 }
 .dig:nth-child(3n-1) {
   margin: 10px calc(50% - 90px);
 }
-.dig.goBack.clicked {
+.dig.goBack:active {
   animation: pulse-red linear 0.5s 1;
 }
-
-
 
 
 @keyframes pulse-gray {
@@ -577,32 +521,5 @@ Dialpad
     -ms-transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
-  }
-}
-@keyframes pulsator {
-  0% {
-    -ms-transform: scale(1, 1);
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-  40% {
-    -ms-transform: scale(0.8, 0.8);
-    -webkit-transform: scale(0.8, 0.8);
-    transform: scale(0.8, 0.8);
-  }
-  100% {
-    -ms-transform: scale(1, 1);
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-}
-@keyframes showPad {
-  0% {
-    top: 50px;
-    opacity: 0;
-  }
-  100% {
-    top: 0px;
-    opacity: 1;
   }
 }
