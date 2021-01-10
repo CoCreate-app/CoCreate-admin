@@ -47,7 +47,7 @@
 		      data-scroll_up="5"
 		      data-scroll_down="5">
       
-      <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
+        <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
   			<li class="margin-right:15px">
   			  <a class="btn-modal-close"><i class="fas fa-times"></i></a>
   			</li>
@@ -150,43 +150,36 @@
         </div>
     
 		<div class="padding:10px" data-main_content_id="content">
-      <form class="margin-bottom:75px" data-pass_id="form-fields" data-collection="modules" data-document_id="" id="form">
-        <input type="text" name="name" id="name" placeholder="Module Name"  class="floating-label"/>
-        <input type="hidden" name="_id" id="module_id"/>
-        <input type="text" name="description" id="description" placeholder="Description" class="floating-label"/>
-        <input type="text" name="icon" id="icon" placeholder="Icon" class="floating-label"/>
+            <form class="margin-bottom:75px" data-pass_id="form-fields" data-collection="modules" data-document_id="" id="form">
+                <input type="text" name="name" id="name" placeholder="Module Name"  class="floating-label"/>
+                <input type="hidden" name="_id" id="module_id"/>
+                <input type="text" name="description" id="description" placeholder="Description" class="floating-label"/>
+                <input type="text" name="icon" id="icon" placeholder="Icon" class="floating-label"/>
 
-        <!--<div name='html' data-pass_id="form-fields" placeholder="Html" class="codemirror"></div>-->
-       
-        <!-- menu items -->
-        <div class="card padding:10px_5px margin-top:10px collapsed">
-           <div class="display:flex padding:0_10px font-size:18px"> 
-              <span class="flex-grow:1">Menu Items</span>
-              <a data-toggle="collapsed" data-toggle_closest=".card"><i data-transform_to="fas fa-angle-up" class="fas fa-angle-down"></i></a>
-            </div>
-
-            <div class="menu-items">
-              <div class="margin-top:10px display:flex tabs border-bottom:5px_solid_whitesmoke">
-                  <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#navbar-menu" data-selected_group="menu-items" selected>Navbar</div>
-                  <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#main-menu" data-selected_group="menu-items">Menu</div>
-                  <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#settings-menu" data-selected_group="menu-items">Settings</div>
-              </div>
-              <div class="padding:5px background:whitesmoke">
-                <div id='navbar-menu' class="menu-item overflow:hidden height:0px active">
-                    <div class="margin-top:10px display:flex tabs">
-                          <div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" data-selected="active" data-selected_target="#navbar-menu-primary" data-selected_group="navbar-menu-item" selected>Primary</div>
-                          <div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" data-selected="active" data-selected_target="#navbar-menu-secondary" data-selected_group="navbar-menu-item">Secondary</div>
-                      </div>                  
-                      <div id="navbar-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
+                <!-- menu items -->
+                <div class="card padding:10px_5px margin-top:10px collapsed">
+                    <div class="display:flex padding:0_10px font-size:18px"> 
+                        <span class="flex-grow:1">Menu Items</span>
+                        <a data-toggle="collapsed" data-toggle_closest=".card"><i data-transform_to="fas fa-angle-up" class="fas fa-angle-down"></i></a>
+                    </div>
+        
+                    <div class="menu-items">
+                        <div class="margin-top:10px display:flex tabs border-bottom:5px_solid_whitesmoke">
+                            <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#navbar-menu" data-selected_group="menu-items" selected>Navbar</div>
+                            <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#main-menu" data-selected_group="menu-items">Menu</div>
+                            <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#settings-menu" data-selected_group="menu-items">Settings</div>
+                        </div>
+                <div class="padding:5px background:whitesmoke">
+                    <div id='navbar-menu' class="menu-item overflow:hidden height:0px active">
+                        <div id="navbar-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
                             <cocreate-select class="floating-label sortable" placeholder="Primary View" name="navbar-menu-primary">
-                              <input class="template-search" placeholder="Search" data-template_id="navbar-menu-primary">
-                              <ul data-pass_id="module_id" data-fetch_collection="module-views" data-filter_name="" data-filter_value="" data-template_id="navbar-menu-primary" 
-                                  class="selectable--list cocreate-scroll">
-                        				<li class="selectable template" data-template_id="navbar-menu-primary" value='{{data._id}}' data-document_id="{{data._id}}" data-render_array="data">
-                        				  <h3 name="name" value="{{data.name}}">View Name</h3>
-                        				  <h5 name="_id" value="{{data._id}}"></h5>
-                        				</li>
-                              </ul>
+                                <input class="template-search" placeholder="Search" data-template_id="navbar-menu-primary">
+                                <ul data-pass_id="module_id" data-fetch_collection="module-views" data-filter_name="" data-filter_value="" data-template_id="navbar-menu-primary" class="selectable--list cocreate-scroll">
+                                    <li class="selectable template" data-template_id="navbar-menu-primary" value='{{data._id}}' data-document_id="{{data._id}}" data-render_array="data">
+                                    <h3 name="name" value="{{data.name}}">View Name</h3>
+                                    <h5 name="_id" value="{{data._id}}"></h5>
+                                    </li>
+                                </ul>
                             </cocreate-select>
                             <div class="display:flex justify-content:space-between">
                               <div class="width:48%">
@@ -213,42 +206,6 @@
                               </div>
                             </div>
                           </div>
-                    <div id="navbar-menu-secondary" class="menu-item-type overflow:hidden height:0px">
-                    <cocreate-select class="floating-label sortable" placeholder="Secondary View" name="navbar-menu-secondary">
-                      <input class="template-search" placeholder="Search" data-template_id="navbar-menu-secondary">
-                      <ul data-pass_id="module_id" data-fetch_collection="module-views" data-filter_name="" data-filter_value="" 
-                          data-template_id="navbar-menu-secondary" class="selectable--list cocreate-scroll">
-                				<li class="selectable template" data-template_id="navbar-menu-secondary" value='{{data._id}}' data-document_id="{{data._id}}" data-render_array="data">
-                				  <h3 name="name" value="{{data.name}}">View Name</h3>
-                				  <h5 name="_id" value="{{data._id}}"></h5>
-                				</li>
-                      </ul>
-                    </cocreate-select>
-                    <div class="display:flex justify-content:space-between">
-                      <div class="width:48%">
-                        <input type="number" data-pass_id="form-fields" name="navbar-menu-secondary-position" placeholder="Menu Position" class="floating-label"/>
-                      </div>
-                      <div class="width:48%">
-                        <input type="color" data-pass_id="form-fields" name="navbar-modal-secondary-color" placeholder="Modal Color" class="floating-label"/>
-                      </div>
-                    </div>
-                    <div class="display:flex justify-content:space-between">
-                      <div class="width:48%">
-                        <input type="text" data-pass_id="form-fields" name="navbar-modal-secondary-width" placeholder="Modal Width" class="floating-label"/>
-                      </div>
-                      <div class="width:48%">
-                        <input type="text" data-pass_id="form-fields" name="navbar-modal-secondary-height" placeholder="Modal Height" class="floating-label"/>
-                      </div>
-                    </div>
-                    <div class="display:flex justify-content:space-between">
-                      <div class="width:48%">
-                        <input type="text" data-pass_id="form-fields" name="navbar-modal-secondary-x" placeholder="Modal x" class="floating-label"/>
-                      </div>
-                      <div class="width:48%">
-                        <input type="text" data-pass_id="form-fields" name="navbar-modal-secondary-y" placeholder="Modal y" class="floating-label"/>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 <div id='main-menu' class="menu-item overflow:hidden height:0px">
                     <div class="margin-top:10px display:flex tabs">
@@ -302,14 +259,7 @@
                 				</li>
                       </ul>
                     </cocreate-select>
-                    <div class="display:flex justify-content:space-between">
-                      <div class="width:48%">
-                        <input type="number" data-pass_id="form-fields" name="main-menu-secondary-position" placeholder="Menu Position" class="floating-label"/>
-                      </div>
-                      <div class="width:48%">
-                        <input type="color" data-pass_id="form-fields" name="main-modal-secondary-color" placeholder="Modal Color" class="floating-label"/>
-                      </div>
-                    </div>
+                    <input type="color" data-pass_id="form-fields" name="main-modal-secondary-color" placeholder="Modal Color" class="floating-label"/>
                     <div class="display:flex justify-content:space-between">
                       <div class="width:48%">
                         <input type="text" data-pass_id="form-fields" name="main-modal-secondary-width" placeholder="Modal Width" class="floating-label"/>
@@ -380,14 +330,7 @@
                 				</li>
                       </ul>
                     </cocreate-select>
-                    <div class="display:flex justify-content:space-between">
-                      <div class="width:48%">
-                        <input type="number" data-pass_id="form-fields" name="settings-menu-secondary-position" placeholder="Menu Position" class="floating-label"/>
-                      </div>
-                      <div class="width:48%">
-                        <input type="color" data-pass_id="form-fields" name="settings-modal-secondary-color" placeholder="Modal Color" class="floating-label"/>
-                      </div>
-                    </div>
+                    <input type="color" data-pass_id="form-fields" name="settings-modal-secondary-color" placeholder="Modal Color" class="floating-label"/>
                     <div class="display:flex justify-content:space-between">
                       <div class="width:48%">
                         <input type="text" data-pass_id="form-fields" name="settings-modal-secondary-width" placeholder="Modal Width" class="floating-label"/>
