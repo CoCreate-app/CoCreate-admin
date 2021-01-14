@@ -1,202 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-    <title>Invoice View | CoCreate</title>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+		<title>Invoice View | CoCreate</title>
+		
+		<!-- CoCreateCSS -->
+		<link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+		
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
+	</head>
 
-    <!-- CoCreateCSS -->
-    <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
+	<style>
+		.table {
+			width: 100%;
+			color: #727E8C;
+		}
+		.table thead, label {
+			text-transform: uppercase;
+		}
+		.invoice-product-table td,
+		.invoice-product-table th{
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+		}
+	</style>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
-  </head>
-
-  <style>
-    .table {
-        width: 100%;
-        color: #727E8C;
-    }
-    .table thead, label {
-        text-transform: uppercase;
-    }
-    .invoice-product-table td,
-    .invoice-product-table th{
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-    }
-  </style>
-
-<body>
-    <div id="modal-viewport" class="hidden"></div>
-    <div class="nav display:flex align-items:center background:whitesmoke"
-      data-main_content_id="content" 
-      data-nav_effect="sticky-nav" 
-      data-nav_scroll="200">
-      
-      <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
-  			<li class="margin-right:15px">
-  			  <a class="btn-modal-close"><i class="fas fa-times"></i></a>
-  			</li>
-  			<li class="margin-right:15px">
-  			  <a class="btn-modal-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize"></i></a>
-  			</li>
-  			<li class="margin-right:15px">
-  			  <a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a>
-  			</li>
-  			<li class="margin-right:15px">
-  			  <a data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a>
-  			</li>
-  			<li class="margin-right:15px">
-			    <a target="modal" href="render.html"
-          	 data-pass_collection="modules"
-          	 data-pass_document_id="" 
-          	 data-pass_prefix="form_" 
-          	 data-pass_to="builder" 
-             data-modal_width="100%"
-             data-pass_id="render">
-          		<i class="fas fa-palette"></i>
-        		 <div data-pass_collection="modules"
-  						   data-pass_document_id=""
-					       data-pass_prefix=""
-  						   data-pass_to="render"
-  						   class="sessionBuilderUI_Id">
-						 </div>
-          </a>
-        </li>
-  			<li class="margin-right:15px">
-  			  <a data-collection="modules" 
-  			    data-document_id="" 
-  			    data-pass_id="form-fields" 
-  			    class="delete-document btn-modal-close">
-  			     <i class="far fa-trash-alt"></i>
-		      </a>
-  			</li>
+	<body>
+		<!-- Modal Viewport -->
+		<div id="modal-viewport" class="hidden"></div>
+		
+		<!-- Navbar -->
+		<div class="nav display:flex align-items:center background:whitesmoke"
+			data-main_content_id="content"
+			data-scroll="sticky-nav, hide-nav"
+			data-scroll_up="5"
+			data-scroll_down="5">
+		  
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				
+				<!-- Modal Controls -->
+				<li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
+				<li class="margin-right:15px"><a class="btn-modal-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize"></i></a></li>
+				<li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
+				
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px"><a data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a></li>
+				
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a target="modal"
+						data-pass_collection="module-views"
+						data-pass_document_id="5ff747727005da1c27274170" 
+						data-pass_name="html" 
+						data-pass_to="render" 
+						data-modal_width="320px"
+						data-modal_header="false">
+						<i class="fas fa-cog"></i>
+						<div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
+						<div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+					</a>
+				</li>
+				
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a target="modal" 
+						data-pass_collection="module-views"
+						data-pass_document_id="5ff747727005da1c27274164" 
+						data-pass_name="html" 
+						data-pass_to="render" 
+						data-modal_width="100%"
+						data-modal_header="false">
+						<i class="fas fa-code"></i>
+						<div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+					</a>
+				</li>
+				
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a target="modal"
+						data-pass_collection="module-views"
+						data-pass_document_id="5ff747727005da1c2727415f" 
+						data-pass_name="html" 
+						data-pass_to="render" 
+						data-modal_width="100%"
+						data-modal_header="false"
+						class="sessionBuilderUI_Id">
+						<i class="fas fa-palette"></i>
+						<div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+					</a>
+				</li>
+				
+				<!-- deleteDocument-->
+				<li class="margin-right:15px">
+					<a data-collection="" 
+						data-document_id="" 
+						data-pass_id="form-fields" 
+						data-actions="deleteDocument"
+						class="btn-modal-close">
+						<i class="far fa-trash-alt"></i>
+					</a>
+				</li>
 			</ul>
-    </div>
-	<div data-main_content_id="content">
-
-        <form data-real_time="true" data-collection="module_activity" data-form_id="module-form" class="padding:20px">
-            <div class="display:flex justify-content:space-between ">
-                <div>
-                    <lable class="padding-right:10px">Invoice#</lable>
-                    <span>000756</span>
-                </div>
-                <div class="display:flex">
-                    <div class="margin-right:30px"><small>Date Issue: </small>2019-10-08</div>
-                    <div><small>Date Due:</small> 2019-10-08</div>
-                </div>
-            </div>
-            <div class="padding:20px_0px border-bottom:1px_solid_lightgrey">
-                <h3 class="font-size:20px color-light-blue">Invoice</h3>
-                <div>Software Development</div>
-            </div>
-            <div class="padding:20px_0px border-bottom:1px_solid_lightgrey color-dark-gray display:flex justify-content:space-between ">
-                <div class="flex-grow:1">
-                    <div class="margin-bottom:20px font-weight:600">Bill From</div>
-                    <p class="margin-bottom:10px">Clevision PVT. LTD.</p>
-                    <p class="margin-bottom:10px">9205 Whitemarsh Street New York, NY 10002</p>
-                    <p class="margin-bottom:10px">hello@clevision.net</p>
-                    <p class="margin-bottom:10px">601-678-8022</p>                    
-                </div>
-                <div class="flex-grow:1">
-                    <div class="margin-bottom:20px font-weight:600">Bill To</div>
-                    <p class="margin-bottom:10px">Pixinvent PVT. LTD.</p>
-                    <p class="margin-bottom:10px">203 Sussex St. Suite B Waukegan, IL 60085</p>
-                    <p class="margin-bottom:10px">pixinvent@gmail.com</p>
-                    <p class="margin-bottom:10px">987-352-5603</p>
-                </div>
-            </div>
-            
-            <div class="padding:20px_0px border-bottom:1px_solid_lightgrey color-dark-gray">
-                <table class="table invoice-product-table">
-                    <thead class="text-align:left">
-                        <tr>
-                            <th scope="col">Item</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Cost</th>
-                            <th scope="col">Qty</th>
-                            <th scope="col" class="text-align:right">Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                          <td>Frest Admin</td>
-                          <td>HTML Admin Template</td>
-                          <td>28</td>
-                          <td>1</td>
-                          <td class="text-align:right font-bold color-light-blue">$28.00</td>
-                        </tr>
-                        <tr>
-                          <td>Apex Admin</td>
-                          <td>Anguler Admin Template</td>
-                          <td>24</td>
-                          <td>1</td>
-                          <td class="text-align:right font-bold color-light-blue">$24.00</td>
-                        </tr>
-                        <tr>
-                          <td>Stack Admin</td>
-                          <td>HTML Admin Template</td>
-                          <td>24</td>
-                          <td>1</td>
-                          <td class="text-align:right font-bold color-light-blue">$24.00</td>
-                        </tr>
-                      </tbody>
-                </table>
-            </div>
-            
-            
-            
-            <div class="padding:20px_0px display:flex justify-content:space-between">
-                <div class="min-width:300px">
-                    Thanks for your business.
-                </div>
-                <div class="min-width:300px">
-                    <div class="padding:20px_0px border-bottom:1px_solid_lightgrey">
-                        <div class="display:flex justify-content:space-between">
-                            <label class="color-dark-gray">Subtotal</label>
-                            <span>$ 76.00</span>
-                        </div>
-                        <div class="display:flex justify-content:space-between">
-                            <label class="color-dark-gray">Discount</label>
-                            <span>-$09.60</span>
-                        </div>
-                        <div class="display:flex justify-content:space-between">
-                            <label class="color-dark-gray">Tax</label>
-                            <span>21%</span>
-                        </div>
-                    </div>
-                    <div class="padding:20px_0px">
-                        <div class="display:flex justify-content:space-between">
-                            <label class="color-dark-gray">Invoice Total</label>
-                            <span>$66.40</span>
-                        </div>
-                        <div class="display:flex justify-content:space-between">
-                            <label class="color-dark-gray">Paid to date</label>
-                            <span>-$00.00</span>
-                        </div>
-                        <div class="display:flex justify-content:space-between">
-                            <label class="color-dark-gray">Balance (USD)</label>
-                            <span>$10,953</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</body>
-    <script>
-    var config = {
-      apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-      securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
-      organization_Id: '5de0387b12e200ea63204d6c'
-    }
-    
-  </script>
-
-
-  <script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
+		</div> 
+		
+		<!-- Main Content -->
+		<div data-main_content_id="content">
+			<form data-real_time="true" data-collection="module_activity" data-form_id="module-form" class="padding:20px">
+				<div class="display:flex justify-content:space-between ">
+					<div>
+						<lable class="padding-right:10px">Invoice#</lable>
+						<span>000756</span>
+					</div>
+					<div class="display:flex">
+						<div class="margin-right:30px"><small>Date Issue: </small>2019-10-08</div>
+						<div><small>Date Due:</small> 2019-10-08</div>
+					</div>
+				</div>
+				<div class="padding:20px_0px border-bottom:1px_solid_lightgrey">
+					<h3 class="font-size:20px color-light-blue">Invoice</h3>
+					<div>Software Development</div>
+				</div>
+				<div class="padding:20px_0px border-bottom:1px_solid_lightgrey color-dark-gray display:flex justify-content:space-between ">
+					<div class="flex-grow:1">
+						<div class="margin-bottom:20px font-weight:600">Bill From</div>
+						<p class="margin-bottom:10px">Clevision PVT. LTD.</p>
+						<p class="margin-bottom:10px">9205 Whitemarsh Street New York, NY 10002</p>
+						<p class="margin-bottom:10px">hello@clevision.net</p>
+						<p class="margin-bottom:10px">601-678-8022</p>                    
+					</div>
+					<div class="flex-grow:1">
+						<div class="margin-bottom:20px font-weight:600">Bill To</div>
+						<p class="margin-bottom:10px">Pixinvent PVT. LTD.</p>
+						<p class="margin-bottom:10px">203 Sussex St. Suite B Waukegan, IL 60085</p>
+						<p class="margin-bottom:10px">pixinvent@gmail.com</p>
+						<p class="margin-bottom:10px">987-352-5603</p>
+					</div>
+				</div>
+				
+				<div class="padding:20px_0px border-bottom:1px_solid_lightgrey color-dark-gray">
+					<table class="table invoice-product-table">
+						<thead class="text-align:left">
+							<tr>
+								<th scope="col">Item</th>
+								<th scope="col">Description</th>
+								<th scope="col">Cost</th>
+								<th scope="col">Qty</th>
+								<th scope="col" class="text-align:right">Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Frest Admin</td>
+								<td>HTML Admin Template</td>
+								<td>28</td>
+								<td>1</td>
+								<td class="text-align:right font-bold color-light-blue">$28.00</td>
+							</tr>
+							<tr>
+								<td>Apex Admin</td>
+								<td>Anguler Admin Template</td>
+								<td>24</td>
+								<td>1</td>
+								<td class="text-align:right font-bold color-light-blue">$24.00</td>
+							</tr>
+							<tr>
+								<td>Stack Admin</td>
+								<td>HTML Admin Template</td>
+								<td>24</td>
+								<td>1</td>
+								<td class="text-align:right font-bold color-light-blue">$24.00</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<div class="padding:20px_0px display:flex justify-content:space-between">
+					<div class="min-width:300px">
+						Thanks for your business.
+					</div>
+					<div class="min-width:300px">
+						<div class="padding:20px_0px border-bottom:1px_solid_lightgrey">
+							<div class="display:flex justify-content:space-between">
+								<label class="color-dark-gray">Subtotal</label>
+								<span>$ 76.00</span>
+							</div>
+							<div class="display:flex justify-content:space-between">
+								<label class="color-dark-gray">Discount</label>
+								<span>-$09.60</span>
+							</div>
+							<div class="display:flex justify-content:space-between">
+								<label class="color-dark-gray">Tax</label>
+								<span>21%</span>
+							</div>
+						</div>
+						<div class="padding:20px_0px">
+							<div class="display:flex justify-content:space-between">
+								<label class="color-dark-gray">Invoice Total</label>
+								<span>$66.40</span>
+							</div>
+							<div class="display:flex justify-content:space-between">
+								<label class="color-dark-gray">Paid to date</label>
+								<span>-$00.00</span>
+							</div>
+							<div class="display:flex justify-content:space-between">
+								<label class="color-dark-gray">Balance (USD)</label>
+								<span>$10,953</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<!-- CoCreateJS -->
+		<script src="../../apikey.js"></script>
+		<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
+	
+	</body>
 </html>

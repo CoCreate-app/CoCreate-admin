@@ -6,13 +6,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-		<title>Wallet | CoCreate</title>
-
+		<title>Module Activity Form View | CoCreate</title>
+		
 		<!-- CoCreateCSS -->
 		<link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
-
+		
 		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
 	</head>
 
 	<body>
@@ -80,58 +80,34 @@
 						<div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
 					</a>
 				</li>
-			
+				
+				<!-- deleteDocument-->
+				<li class="margin-right:15px">
+					<a data-collection="" 
+						data-document_id="" 
+						data-pass_id="form-fields" 
+						data-actions="deleteDocument"
+						class="btn-modal-close">
+						<i class="far fa-trash-alt"></i>
+					</a>
+				</li>
 			</ul>
 		</div>
-		
+	
 		<!-- Main Content -->
 		<div class="padding:10px" data-main_content_id="content">
-            <div class=" balance_input_box">  
-                <form data-collection='module_activity' data-form_id="wallet_form" class="float-labels">
-	                <input type="text" name="balance" id="balance"  placeholder="Balance" class="floating-label" readonly>
-            	</form>
-            </div>
-            <div class="btn-group balance_buttons">
-                <a href="#" class="btn btn-success" id="add_funds" data-show="#deposit" data-hide="#deposit"><i class="fa fa-plus" data-transform_to="fa fa-ban"></i></a> 
-                <a href="#" class="btn btn-warning" id="wd_funds"><i class="fa fa-minus" data-transform_to="fa fa-ban"></i></a>
-                <a href="#" class="btn btn-primary" data-show='#transfer' id="exchange_funds"><i class="fas fa-exchange-alt" data-transform_to="fa fa-ban"></i></a>
-            </div>
-	        <div id="deposit" class="hidden">
-	            <div class="tagline"><span class="org_name_balance">CoCreate Funds</span></div>
-	            <div id="deposit" class="display:flex">
-		            <!-- input for amount -->
-		            <div class="col-xs-6">
-		                <input type="text" name="funds" id="funds" class="floating-label" placeholder="Deposit">
-		            </div>
-		
-		            <!-- input readonly for new balance-->
-		            <div class="col-xs-6">
-		                <input type="text" name="new_balance" id="new_balance" class="floating-label" placeholder="New balance" readonly>
-		            </div>
-				</div>
-
-	            <!-- select for credit cards -->
-	            <div>
+	  
+			<form data-pass_id="form-fields" data-collection="" data-document_id="">
+				<input type="hidden" name="module_id" data-pass_id="module_id">
+				<input type="text" name="name" class="floating-label" placeholder="Name">
+				<input type="text" name="description" class="floating-label" placeholder="Description">
+				<button class="submitBtn position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50%">
+					<i class="far fa-save"></i>
+				</button>
+			</form>
 	
-	                <!-- Here is where magic happens -->
-	                <a href="#" class="billing_methods"> <small>Add/Edit cards</small> </a> 
-	                <div class="dropdown">
-	                    <a id="default_card_box" class="btn-default dropdown-toggle">
-	                        <div class="select_card"></div>
-	                    </a>
-	
-	                    <ul class="dropdown-menu" id="credit_cards_dropdown"></ul>
-	                </div>
-	                <!-- /magic ends -->
-	            </div>
-	
-                <div class="form-footer">
-                    <button type="button" class="button btn-primary" id="btn_operation">Add Funds</button>
-                    <p id="add_funds_message"></p>
-                </div><!-- end .form-footer section -->
-	        </div>
-        </div>
-
+		</div>
+  
  		<!--CoCreateJS-->
  		<script src="../../apikey.js"></script>
 		<script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
