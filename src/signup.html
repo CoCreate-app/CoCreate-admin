@@ -243,6 +243,14 @@
 									placeholder="Text"
 									data-attribute="href" 
 									data-target="#redirect-domain">
+								
+								<!-- DB Name  -->
+								<input type="hidden" id="dbname"
+									data-collection="organizations"
+									data-document_id=""
+									name="_id"
+									data-localstorage_set="organization_id"
+									placeholder="OrganizationId" readonly>
 									
 								<div class="display:flex">
 									<button type="button" class="outline white-blue margin-right:15px" data-show='#step4,#ava4' data-hide='#step5,#ava5'>Previous</button>
@@ -260,14 +268,14 @@
 		    </div>
 		</div>
 		
-		<!-- masterDB --
+		<!-- masterDB -->
 		<script>
 			var config = {
 			  apiKey: '38ffd014-c33b-4202-c54b-ac46a0a4',
 			  securityKey: '69faeace-b065-4c87-b880-22c2f0f3',
 			  organization_Id: '5ae0cfac6fb8c4e656fdaf92'
 			}
-		</script>-->
+		</script>
 		<!-- CoCreate --
 		<script>
 		 	var config = {
@@ -277,22 +285,22 @@
 		 	}
 		</script>-->
 		<!-- General -->
-		<script>
+		<!--<script>
 			var config = {
 			  apiKey: '2061acef-0451-4545-f754-60cf8160',
 			  securityKey: '073daff2-5142-4402-cf59-48e205ef',
 			  organization_Id: '5ff747727005da1c272740ab'
 			}
-		</script>
+		</script>-->
 
 		
 		<!--CoCreateJS-->
-        <script src="./apikey.js"></script>
+        <!--<script src="./apikey.js"></script>-->
         <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
         
 		<!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-industry/src/CoCreate-industry.js"></script>-->
 	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-uuid/src/CoCreate-uuid.js"></script>
-	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-organizations/src/CoCreate-organizations.js"></script>
+	    <script src="https://server.cocreate.app/CoCreate-components/CoCreate-organizations/dist/CoCreate-organizations.js"></script>
 	    <!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-storage/src/CoCreate-storage.js"></script>-->
 
 

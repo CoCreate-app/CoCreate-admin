@@ -27,14 +27,14 @@
     </style>
     <body>
         <!-- Navbar  -->
-        <div class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" data-scroll=", hide-nav" data-scroll_up="5" data-scroll_down="5">
+        <nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" data-scroll=", hide-nav" data-scroll_up="5" data-scroll_down="5">
       
-            <!-- Menu Icon Animations -->
-            <a aria-label="mobile menu" class="nav-toggle menu_icon" data-toggle_sidenav="menuL">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+			<!-- Menu Icon -->
+			<a class="menu_icon" data-toggle="active" data-toggle_sidenav="menuL">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
         
             <!-- Horizontal Scroll Nav/Tabs -->
             <ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
@@ -134,16 +134,16 @@
                 </a>
                 <div class="avatar-status sessionUser_Id"  data-collection="users" data-document_id="" data-user_status='{"name":"status"}' ></div>
             </div>
-        </div>
+        </nav>
     
         <!-- Modal Viewport  -->
         <div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
        
         <!-- Main container  -->
-        <div class="height:100vh margin-top:10px" data-main_content_id="content"></div>
+        <main class="height:100vh margin-top:10px" data-main_content_id="content"></main>
         
         <!-- SideNav  -->
-        <div id="menuL" class="cocreate-sidenav background:whitesmoke height:100vh" data-main_content="content" sidenav-default_desktop="collapsed" sidenav-default_tablet="collapsed">
+        <sidenav id="menuL" class="cocreate-sidenav background:whitesmoke height:100vh" data-main_content="content" sidenav-default_desktop="collapsed" sidenav-default_tablet="collapsed">
         
             <!-- Select to change organizations  -->
             <cocreate-select class="org-changer remove-none padding:0 border:none sessionUser_Id" name="current_org" data-collection="users" data-document_id="">
@@ -169,25 +169,15 @@
                 </ul>
             </cocreate-select>
         
-            <!-- Search field -->
-            <div class="cocreate-search padding:5px height:50px"> 
-            	<form id='menu-search'>
-                <input type="text" class="searchInput floating-label browser-default" data-pass_value_to="me1234">
-                  <span class="passValueBtn position:relative bottom:28px right:10px float:right font-size:18px">
-                    <a  target="modal" href="template-engine.html"
-              			   data-pass_to="me1234" 
-              			   data-modal_ajax="false" 
-              			   data-modal_width="900px" 
-              			   data-modal_height="100%" 
-              			   data-modal_color="#229954"
-              			   data-modal_header="true"
-              			   data-modal_x="" 
-              			   data-modal_y="">
-                      <i class="fas fa-search"></i>
-                    </a>
-                  </span>
-            	</form>
-            </div>
+			<!-- Search -->
+			<form class="padding:5px">
+				<input type="text" class="floating-label" data-pass_value_to="results">
+				<span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
+					<a target="modal" data-pass_to="render" data-collection="website-pages" data-document_id="" data-pass_name="html" data-modal_width="900px" data-modal_color="#229954">
+						<i class="fas fa-search"></i>
+					</a>
+				</span>
+			</form>
         	
         	<!--<input type="hidden" data-template_id="main-menu" data-filter_name="menu-position" data-filter_value="3,4" data-value_type="number" data-filter_operator="nin">-->
         	<!--<div data-template_id="main-menu" data-filter_name="menu-position" data-filter_value="0" data-value_type="number" data-filter_operator="ne"></div>-->
@@ -262,7 +252,7 @@
                 </div>
             </div>
             <div class="resizeHandler"></div>
-        </div>
+        </sidenav>
 
         <script src="./apikey.js"></script>
         <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
