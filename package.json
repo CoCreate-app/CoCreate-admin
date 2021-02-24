@@ -1,0 +1,11 @@
+{
+  "name": "CoCreate-adminUI",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/CoCreate-app/CoCreate-adminUI.git",
+  "author": "Frank Pagan <frank@cocreate.app>",
+  "license": "MIT",
+  "dependencies": {
+    "node-html-parser": "^2.1.0"
+  }
+}

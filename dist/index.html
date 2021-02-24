@@ -8,16 +8,64 @@
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
         <title>Admin | CoCreate</title>
         
-        <!-- CoCreateCSS -->
-        <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" />
         
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" /> 
+        <link rel="stylesheet" href="https://server.cocreate.app/css/CoCreate.min.css" type="text/css" >
+        
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" > 
     
-    </head>
+    
+<style type="text/css">
+.align-items\:center{align-items:center}
+.background\:dodgerblue\:hover:hover{background:dodgerblue}
+.background\:gainsboro{background:gainsboro}
+.background\:whitesmoke{background:whitesmoke}
+.border\:none{border:none}
+.bottom\:0{bottom:0}
+.bottom\:10px{bottom:10px}
+.bottom\:28px{bottom:28px}
+.direction\:rtl{direction:rtl}
+.display\:flex{display:flex}
+.display\:inline-block{display:inline-block}
+.display\:inline-flex{display:inline-flex}
+.display\:inline\:block:block{display:inline}
+.flex-direction\:column{flex-direction:column}
+.float\:right{float:right}
+.font-size\:18px{font-size:18px}
+.font-size\:20px{font-size:20px}
+.height\:100vh{height:100vh}
+.height\:40px{height:40px}
+.height\:50px{height:50px}
+.height\:calc\(100vh_-_160px\){height:calc(100vh - 160px)}
+.line-height\:40px{line-height:40px}
+.list-style-type\:none{list-style-type:none}
+.margin-right\:10px{margin-right:10px}
+.margin-right\:15px{margin-right:15px}
+.margin-right\:5px{margin-right:5px}
+.margin-top\:10px{margin-top:10px}
+.margin-top\:50px{margin-top:50px}
+.margin\:0{margin:0}
+.margin\:5px_0px{margin:5px 0px}
+.overflow\:auto{overflow:auto}
+.overflow\:hidden{overflow:hidden}
+.padding-bottom\:5px{padding-bottom:5px}
+.padding-right\:5px{padding-right:5px}
+.padding\:10px{padding:10px}
+.padding\:4px_12px{padding:4px 12px}
+.padding\:5px{padding:5px}
+.position\:absolute{position:absolute}
+.position\:fixed{position:fixed}
+.position\:relative{position:relative}
+.right\:14px{right:14px}
+.text-align\:center{text-align:center}
+.width\:100\%{width:100%}
+.width\:50px{width:50px}
+</style>
+</head>
 
     <style type="text/css">
         .cocreate-search .floating-label_field{margin-top:0px;}
+        .org-changer li[selected]{margin:0px;}
     </style> 
     <style type="text/css">
         div[data-user_status="on"] {background-color:yellowgreen;}
@@ -25,25 +73,25 @@
         div[data-user_status="idle"] {background-color:orange;}
     </style>
     <body>
-        <!-- Navbar  -->
+        
         <nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" data-scroll=", hide-nav" data-scroll_up="5" data-scroll_down="5">
       
-			<!-- Menu Icon -->
+			
 			<a class="menu_icon" data-toggle="active" data-toggle_sidenav="menuL">
 				<span></span>
 				<span></span>
 				<span></span>
 			</a>
         
-            <!-- Horizontal Scroll Nav/Tabs -->
+            
             <ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
             			
-            	<!-- Fullscreen toogle and icon transform -->
+            	
                 <li class="margin-right:15px">
                     <a data-fullscreen><i class="fas fa-expand" data-transform_to="fas fa-compress"></i></a>
                 </li>
               
-                <!-- Render Module Form -->
+                
                 <li class="margin-right:15px">
                     <a target="modal"
                         data-pass_collection="module-views"
@@ -58,7 +106,7 @@
                     </a>
                 </li>
                 
-                <!-- Render Code Editor -->
+                
                 <li class="margin-right:15px">
                     <a target="modal" 
                         data-pass_collection="module-views"
@@ -72,7 +120,7 @@
                     </a>
                 </li>
                 
-                <!-- Render Builder -->
+                
                 <li class="margin-right:15px">
                     <a target="modal"
                         data-pass_collection="module-views"
@@ -115,7 +163,7 @@
                 </div>
             </ul>
             
-            <!-- Avatar -->
+            
             <div class="avatar-wrapper margin:5px_0px margin-right:10px">
                 <a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile.html" 
                     data-pass_collection="modules" 
@@ -128,24 +176,24 @@
                     data-modal_header="false">
                     <span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name"></span>
                     <span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
-                        <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
+                        <img src="images/Velazquez.jpg" onerror="this.style.display='none'">
                     </span>
                 </a>
                 <div class="avatar-status sessionUser_Id"  data-collection="users" data-document_id="" data-user_status='{"name":"status"}' ></div>
             </div>
         </nav>
     
-        <!-- Modal Viewport  -->
+        
         <div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
        
-        <!-- Main container  -->
+        
         <main class="height:100vh margin-top:10px" data-main_content_id="content"></main>
         
-        <!-- SideNav  -->
+        
         <sidenav id="menuL" class="cocreate-sidenav background:whitesmoke height:100vh" data-main_content="content" sidenav-default_desktop="collapsed" sidenav-default_tablet="collapsed">
         
-            <!-- Select to change organizations  -->
-            <cocreate-select class="org-changer remove-none border:none sessionUser_Id padding:0" name="current_org" data-collection="users" data-document_id="">
+            
+            <cocreate-select class="org-changer remove-none padding:4px_12px border:none sessionUser_Id" name="current_org" data-collection="users" data-document_id="">
                 <input placeholder="Search" data-template_id="connected_orgs">
                 <ul class="selectable--list cocreate-menu overflow:auto sessionUser_Id"
                     data-fetch_collection="users"
@@ -155,7 +203,7 @@
                     data-filter_operator="$eq"
                     data-fetch_name="connected_orgs" 
                     data-template_id="connected_orgs">
-                    <li class="template selectable height:50px margin:0!important padding:4px_12px!important" data-template_id="connected_orgs"  value="{{connected_orgs.--}}">
+                    <li class="template selectable height:50px margin:0" data-template_id="connected_orgs"  value="{{connected_orgs.--}}">
                         <span class="logo-icon"><img data-collection="organizations" data-document_id="{{connected_orgs.--}}" name="logo" src="https://server.cocreate.app/images/cocreate.png" height="40px"alt="..."></span>
                         <span data-collection="organizations" data-document_id="{{connected_orgs.--}}" name="name" class="logo-name">Organization Name</span>
                     </li>
@@ -168,7 +216,7 @@
                 </ul>
             </cocreate-select>
         
-			<!-- Search -->
+			
 			<form class="padding:5px">
 				<input type="text" class="floating-label" data-pass_value_to="results">
 				<span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
@@ -178,10 +226,10 @@
 				</span>
 			</form>
         	
-        	<!--<input type="hidden" data-template_id="main-menu" data-filter_name="menu-position" data-filter_value="3,4" data-value_type="number" data-filter_operator="nin">-->
-        	<!--<div data-template_id="main-menu" data-filter_name="menu-position" data-filter_value="0" data-value_type="number" data-filter_operator="ne"></div>-->
+        	
+        	
         	<div class="padding-right:5px padding-bottom:5px">
-                <!-- Fetch and Render-->
+                
               	<ul class="cocreate-scroll display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
               	    <div data-fetch_collection="modules" 
                         data-order_by="main-menu-position" 
@@ -192,7 +240,7 @@
                         data-filter_operator="$ne"
                         data-template_id="main-menu">
                         
-                        <!-- Template -->
+                        
                         <li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" data-template_id="main-menu">
                             <a target="modal" 
                                 data-pass_collection="module-views"
@@ -228,7 +276,7 @@
                     </div>
                 </ul>
                 
-                <!-- sidenav Footer -->
+                
                 <div class="display:inline:block position:absolute bottom:0 background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
                     <a target="modal"  
                         data-pass_collection="module-views" 
@@ -254,7 +302,7 @@
         </sidenav>
 
         <script src="./apikey.js"></script>
-        <script defer src="https://server.cocreate.app/CoCreate-components/CoCreate-observer/dist/CoCreate-observer.js"></script>
+            <script defer src="https://server.cocreate.app/CoCreate-components/CoCreate-observer/dist/CoCreate-observer.js"></script>
         <script src="https://server.cocreate.app/js/CoCreate.min.js"></script>
         
     </body>
