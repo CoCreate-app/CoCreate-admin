@@ -106,8 +106,8 @@
 				
 				<cocreate-select class="floating-label sortable" name="connected_orgs" placeholder="Connected Org" multiple>
 					<input class="search-input" placeholder="Search" data-template_id="connect">
-					<ul data-fetch_collection="organizations" data-template_id="connectn" class="selectable--list cocreate-scroll">
-						<li class="template selectable" data-collection="organizations" data-template_id="connectn">
+					<ul data-fetch_collection="organizations" data-template_id="connectn" class="options overflow:overlay">
+						<li class="template option" data-collection="organizations" data-template_id="connectn">
 							<span class="logo-icon"><img data-collection="organizations" data-document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>
 							<div class="display:block line-height:1 padding:5px_0px " style="width: calc(100% - 15px);">
 								<h3 data-collection="organizations" data-document_id="{{data._id}}" name="name">Organization Name</h3>
@@ -123,9 +123,9 @@
 						data-fetch_document=""
 						data-fetch_name="connected_orgs" 
 						data-template_id="connect" 
-						class="selectable--list cocreate-scroll">
+						class="options overflow:overlay">
 					
-						<li class="template selectable" data-collection="organizations" data-template_id="connect">
+						<li class="template option" data-collection="organizations" data-template_id="connect">
 							<span class="logo-icon"><img data-collection="organizations" data-document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>
 							<div class="display:block line-height:1 padding:5px_0px " style="width: calc(100% - 15px);">
 								<h3 data-collection="organizations" data-document_id="{{data._id}}" name="name">Organization Name</h3>

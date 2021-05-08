@@ -148,7 +148,7 @@
             <!-- Select to change organizations  -->
             <cocreate-select class="org-changer remove-none border:none sessionUser_Id padding:0" name="current_org" data-collection="users" data-document_id="">
                 <input placeholder="Search" data-template_id="connected_orgs">
-                <ul class="selectable--list cocreate-menu overflow:auto sessionUser_Id"
+                <ul class="options cocreate-menu overflow:auto sessionUser_Id"
                     data-fetch_collection="users"
                     data-fetch_document_id=""
                     data-filter_name="_id"
@@ -156,7 +156,7 @@
                     data-filter_operator="$eq"
                     data-fetch_name="connected_orgs" 
                     data-template_id="connected_orgs">
-                    <li class="template selectable height:50px margin:0!important padding:4px_12px!important" data-template_id="connected_orgs"  value="{{connected_orgs.--}}">
+                    <li class="template option height:50px margin:0!important padding:4px_12px!important" data-template_id="connected_orgs"  value="{{connected_orgs.--}}">
                         <span class="logo-icon"><img data-collection="organizations" data-document_id="{{connected_orgs.--}}" name="logo" src="https://server.cocreate.app/images/cocreate.png" height="40px"alt="..."></span>
                         <span data-collection="organizations" data-document_id="{{connected_orgs.--}}" name="name" class="logo-name">Organization Name</span>
                     </li>
@@ -183,7 +183,7 @@
         	<!--<div data-template_id="main-menu" data-filter_name="menu-position" data-filter_value="0" data-value_type="number" data-filter_operator="ne"></div>-->
         	<div class="padding-right:5px padding-bottom:5px">
                 <!-- Fetch and Render-->
-              	<ul class="cocreate-scroll display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
+              	<ul class="overflow:overlay display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
               	    <div data-fetch_collection="modules" 
                         data-order_by="main-menu-position" 
                         data-order_type="asc"

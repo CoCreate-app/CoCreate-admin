@@ -25,12 +25,12 @@
 
 		<a href="signin.html" title="" class="position:relative z-index:1 float:right margin:15px margin-left:auto color:white">Sign In</a>
 
-        <div class="main-container justify-content:center align-items:center cocreate-scroll display:flex flex-wrap:wrap position:absolute width:100% height:100%">
+        <div class="main-container justify-content:center align-items:center overflow:overlay display:flex flex-wrap:wrap position:absolute width:100% height:100%">
         	<div class="display:flex flex-wrap:wrap align-items:flex-end justify-content:center align-items:center">
                 <div class="flex-grow:1 height:fit-content width:55% min-width:300px max-width:600px margin:10px">
                 	<img src="https://cdn.cocreate.app/Preloader_2.gif" class="display:block margin:20px_auto">
                 	<hgroup class="speech-bubble position:relative background:white border-radius:4px padding:15px">
-                        <div class="color:blue font-size:24px">
+                        <div class="font-size:24px">
                         	<p id="ava1">
                         		<strong>Hi</strong>, My name is <b>Ava</b>.
                             	Your Artificial Virtual Assistant. Together we will CoCreate your business! Enter your name so I will know what to call my <strong>new boss...</strong>
@@ -78,7 +78,7 @@
 	                    			name="name"  
 	                    			placeholder="Full Name"  
 	                    			class="floating-label"
-	                    			autocomplete="nope">
+	                    			autocomplete="nope" data-key="renderKey.name">
 		                        
 		                        <button type="button" class="outline" data-show='#step2,#ava2' data-hide='#step1,#ava1'>Next</button>
 		                    </div>
@@ -154,8 +154,8 @@
 	  					          	  <input class="template-search" placeholder="Search" data-template_id="industries">
 									<ul data-fetch_collection="industries" 
 									    data-template_id="industries"
-									    class="selectable--list cocreate-scroll">
-										<li class="template selectable" data-template_id="industries" value="{{data._id}}">
+									    class="options overflow:overlay">
+										<li class="template option" data-template_id="industries" value="{{data._id}}">
 											<h4 data-collection="industries" data-document_id="{{data._id}}" name="name" data-realtime="false">industry name</h4>
 										</li>
 									</ul>
@@ -234,11 +234,10 @@
 								<input type="hidden" 
 									data-collection="organizations"
 									data-document_id="" 
-									name="domain"
+									name="domains[0]"
 									data-type="array"
 									placeholder="Text"
-									data-attribute="href" 
-									data-target="#redirect-domain">
+									data-key="renderKey.domain">
 								
 								<!-- DB Name  -->
 								<input type="hidden" id="dbname"
@@ -249,14 +248,16 @@
 									placeholder="OrganizationId" readonly>
 									
 								<!-- Send Email -->
-								<input type="hidden" placeholder="to email" data-sendgrid="sendEmail.to" data-get_value="user-email">
-							    <input type="hidden" placeholder="from email" data-sendgrid="sendEmail.from" value="testing@cocreate.app">
-							    <input type="hidden" placeholder="subject" data-sendgrid="sendEmail.subject" value="Confirm your email address">
-							    <textarea placeholder="html" data-sendgrid="sendEmail.html" hidden value=""></textarea/>
+								<div data-template_id="renderKey">
+									<input type="hidden" placeholder="to email" data-sendgrid="sendEmail.to" data-get_value="user-email">
+								    <input type="hidden" placeholder="from email" data-sendgrid="sendEmail.from" value="testing@cocreate.app">
+								    <input type="hidden" placeholder="subject" data-sendgrid="sendEmail.subject" value="Confirm your email address">
+								    <textarea placeholder="html" data-sendgrid="sendEmail.html" hidden value="hello {{data.name}}, click here https://{{data.domain}}/signin"></textarea>
+								</div>
 
 								<div class="display:flex">
 									<button type="button" class="outline white-blue margin-right:15px" data-show='#step4,#ava4' data-hide='#step5,#ava5'>Previous</button>
-									<button type="button" class="outline red-white" data-actions="createOrg, createUser, runIndustry, sendEmail">
+									<button type="button" class="outline red-white " data-actions="createOrg, createUser, timeout{3000}, runIndustry, renderKey, sendEmail">
 										Launch
 										<!--<a id="redirect-domain" href="index.html"></a>-->
 									</button>
@@ -274,7 +275,6 @@
 		<script>
 			var config = {
 			  apiKey: '38ffd014-c33b-4202-c54b-ac46a0a4',
-			  securityKey: '69faeace-b065-4c87-b880-22c2f0f3',
 			  organization_Id: '5ae0cfac6fb8c4e656fdaf92'
 			}
 		</script>
@@ -282,14 +282,13 @@
 		<script>
 		 	var config = {
 		 	  apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-		 	  		 	  organization_Id: '5de0387b12e200ea63204d6c'
+		 	  organization_Id: '5de0387b12e200ea63204d6c'
 		 	}
 		</script>-->
 		<!-- General -->
 		<!--<script>
 			var config = {
 			  apiKey: '2061acef-0451-4545-f754-60cf8160',
-			  securityKey: '073daff2-5142-4402-cf59-48e205ef',
 			  organization_Id: '5ff747727005da1c272740ab'
 			}
 		</script>-->
@@ -298,13 +297,7 @@
 		<!--CoCreateJS-->
         <!--<script src="./apikey.js"></script>-->
         <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
-        <script src="https://server.cocreate.app/CoCreateJS/dist//CoCreate.js" ></script>
-        
-		<!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-industry/src/CoCreate-industry.js"></script>-->
-	    <!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-uuid/src/CoCreate-uuid.js"></script>-->
-	    <!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-organizations/dist/CoCreate-organizations.js"></script>-->
-	    <!--<script src="https://server.cocreate.app/CoCreate-components/CoCreate-storage/src/CoCreate-storage.js"></script>-->
-
+        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
 
 	</body>
 </html>
