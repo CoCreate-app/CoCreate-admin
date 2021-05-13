@@ -21,14 +21,26 @@
     parse-html-comments "^1.3.1"
     ws "^7.3.1"
 
-"@cocreate/hosting@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@cocreate/hosting/-/hosting-1.0.0.tgz#33877f617f5d6a61a809266d7b629988ee592bb4"
-  integrity sha512-VuH0CsA+qs3AHhrjEHskZlkooHHD/+Hp/gUM3vu7caFETBbsdrcolrx0w9U+9whaoY48QcROgH5Dpp/gUSw6ag==
+"@cocreate/docs@^1.1.8":
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/@cocreate/docs/-/docs-1.1.8.tgz#d2a0ee5ada25dfb7ad4650bf045cca74beb329e7"
+  integrity sha512-HdRAJGpCvyV+Fv9/YQGz3TU0W8bA/1Zo+I3IWX++OWJKpChD1tLKW8OG58Ech4CuUdnZIPmyBV5LEuPKYU+H4g==
+  dependencies:
+    "@cocreate/hosting" "^1.0.0"
+    extract-comments "^1.1.0"
+    glob "^7.1.6"
+    parse-html-comments "^1.3.1"
+    ws "^7.3.1"
+
+"@cocreate/hosting@^1.0.0", "@cocreate/hosting@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@cocreate/hosting/-/hosting-1.0.1.tgz#85a08fa04818f31468070938b867d09680ae12df"
+  integrity sha512-gUrF7pQ2389cDqhwHcGxdVtU7P3qFT2dfva3O/qdlYQxeUIhc77ZljOt7y+kQMPcowLxkxctahQ8tVjV1gsvRw==
   dependencies:
     "@cocreate/crud-client" "^1.0.7"
     "@cocreate/docs" "^1.0.3"
     "@cocreate/socket-client" "^1.0.9"
+    mime-types "^2.1.30"
 
 "@cocreate/socket-client@^1.0.2", "@cocreate/socket-client@^1.0.9":
   version "1.0.9"
@@ -172,6 +184,18 @@ loader-utils@^2.0.0:
     big.js "^5.2.2"
     emojis-list "^3.0.0"
     json5 "^2.1.2"
+
+mime-db@1.47.0:
+  version "1.47.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.47.0.tgz#8cb313e59965d3c05cfbf898915a267af46a335c"
+  integrity sha512-QBmA/G2y+IfeS4oktet3qRZ+P5kPhCKRXxXnQEudYqUaEioAU1/Lq2us3D/t1Jfo4hE9REQPrbB7K5sOczJVIw==
+
+mime-types@^2.1.30:
+  version "2.1.30"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.30.tgz#6e7be8b4c479825f85ed6326695db73f9305d62d"
+  integrity sha512-crmjA4bLtR8m9qLpHvgxSChT+XoSlZi8J4n/aIdn3z92e/U47Z0V/yl+Wh9W046GgFVAmoNR/fmdbZYcSSIUeg==
+  dependencies:
+    mime-db "1.47.0"
 
 mini-css-extract-plugin@^1.5.0:
   version "1.5.0"

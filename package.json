@@ -5,8 +5,13 @@
   "repository": "https://github.com/CoCreate-app/CoCreate-adminUI.git",
   "author": "Frank Pagan <frank@cocreate.app>",
   "license": "MIT",
+  "scripts": {
+    "docs": "node ./node_modules/@cocreate/docs/src/index.js",
+    "hosting": "node ./node_modules/@cocreate/hosting/src/index.js"
+  },
   "dependencies": {
-    "@cocreate/hosting": "^1.0.0",
+    "@cocreate/docs": "^1.1.8",
+    "@cocreate/hosting": "^1.0.1",
     "mini-css-extract-plugin": "^1.5.0",
     "node-html-parser": "^2.1.0"
   }

@@ -5,16 +5,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-        <title>Admin | CoCreate</title>
-        
-        <!-- CoCreateCSS -->
-        <!--<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>-->
-        <link rel="stylesheet" href="https://server.cocreate.app/CoCreateJS/dist/CoCreate.css" type="text/css"/>
-        
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" /> 
-    
+        <title>AdminUI | CoCreate</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
+
+        <!-- CoCreate CSS -->
+        <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>
+        <link rel="stylesheet" href="/admin/index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true"/>
     </head>
 
     <style type="text/css">
@@ -254,7 +250,13 @@
             <div class="resizeHandler"></div>
         </sidenav>
 
-        <script src="./apikey.js"></script>
+		<script>
+			var config = {
+				apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+				organization_Id: '5de0387b12e200ea63204d6c',
+                host: 'wss://ws.cocreate.app'
+			}
+		</script>
         
         <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
         <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>

@@ -5,15 +5,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="32x32">
-        <title>Sign Up | CoCreate</title>
+        <title>Sign up | CoCreate</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
 
-		<!-- CoCreate CSS -->
-		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>
-
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
-
+        <!-- CoCreate CSS -->
+        <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>
+        <!-- Does not work because this page is using masterDb -->
+        <!--<link rel="stylesheet" href="/admin/index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true"/>-->
     </head>
     
     <style>
@@ -23,7 +21,7 @@
     <body style='background: url("https://cdn.cocreate.app/background.png") no-repeat fixed;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;'>
     	<!--<a href="index.html" target="" class="sessionTrue hidden"></a>-->
 
-		<a href="signin.html" title="" class="position:relative z-index:1 float:right margin:15px margin-left:auto color:white">Sign In</a>
+		<a href="/signin" title="" class="position:relative z-index:1 float:right margin:15px margin-left:auto color:white">Sign In</a>
 
         <div class="main-container justify-content:center align-items:center overflow:overlay display:flex flex-wrap:wrap position:absolute width:100% height:100%">
         	<div class="display:flex flex-wrap:wrap align-items:flex-end justify-content:center align-items:center">
@@ -275,7 +273,8 @@
 		<script>
 			var config = {
 			  apiKey: '38ffd014-c33b-4202-c54b-ac46a0a4',
-			  organization_Id: '5ae0cfac6fb8c4e656fdaf92'
+			  organization_Id: '5ae0cfac6fb8c4e656fdaf92',
+			  host: 'wss://ws.cocreate.app'
 			}
 		</script>
 		<!-- CoCreate --
