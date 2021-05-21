@@ -9,5 +9,5 @@
     var config = {
         apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
         organization_Id: '5de0387b12e200ea63204d6c',
-        // host: 'wss://ws.cocreate.app'
+        // host: 'wss://server.cocreate.app:8088'
      }
