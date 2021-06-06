@@ -9,7 +9,7 @@
 		<title>Module Datatable | CoCreate</title>
 		
 		<!-- CoCreateCSS -->
-		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>
+		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" data-parse="true"/>
 		
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" crossorigin="anonymous" />  
@@ -22,7 +22,7 @@
 	<body class="width:fit-content overflow:overlay">
 		
 		<!-- Navbar -->
-		<div class="nav display:flex align-items:center background:whitesmoke position:sticky left:0 width:100vw" 
+		<nav class="nav display:flex align-items:center background:whitesmoke position:sticky left:0 width:100vw" 
 		      data-main_content_id="content"
 		      data-scroll="sticky-nav, hide-nav"
 		      data-scroll_up="5"
@@ -116,13 +116,13 @@
 				</li>
 			
 			 </ul>
-		</div>
+		</nav>
 			
 		<!-- Modal Viewport -->  
 		<div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
 	 
 		<!-- Main Content -->  
-		<div data-main_content_id="content" class="padding:5px">
+		<main data-main_content_id="content" class="padding:5px">
 			<table class="width:100% border-collapse:collapse">
 				<tr class="border-bottom:1px_solid_darkgray">
 					<td class="position:sticky top:0 background:white padding-top:0 padding:10px ">
@@ -200,7 +200,7 @@
 				</tbody>
 			</table>
 			<div data-template_id="datatable" data-fetch_type="total"></div>
-		</div>
+		</main>
 
 		<button target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-views/module_form.html" 
 			 data-pass_collection="modules"

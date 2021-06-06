@@ -52,21 +52,6 @@ module.exports = {
             }
         },
         {
-            "entry": "./src/builder.html",
-            "collection": "files",
-            "document_id": "60972231624235187e4d6978",
-            "key": "src",
-            "data": {
-                "name": "Builder",
-                "domains": [
-                    "cocreate.app",
-                    "server.cocreate.app",
-                    "ws.cocreate.app"
-                ],
-                "path": "/builder"
-            }
-        },
-        {
             "entry": "./src/index.css",
             "collection": "files",
             "document_id": "60972231624235187e4d6979",

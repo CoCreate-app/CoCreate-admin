@@ -11,7 +11,7 @@
         <!-- CoCreate CSS -->
         <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>
         <!-- Does not work because this page is using masterDb -->
-        <!--<link rel="stylesheet" href="/admin/index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true"/>-->
+        <link rel="stylesheet" href="/admin/index.css" data-collection="files" data-document_id="" name="src" type="text/css" data-parse="true" data-save="false"/>
     </head>
     
     <style>
@@ -150,13 +150,13 @@
 	                           <!-- Industry select -->
 	                            <cocreate-select class="sortable floating-label" data-collection="organizations" name="industry" placeholder="Industry" data-realtime="false" data-save_value="false">
 	  					          	  <input class="template-search" placeholder="Search" data-template_id="industries">
-									<ul data-fetch_collection="industries" 
+									<cc-options data-fetch_collection="industries" 
 									    data-template_id="industries"
 									    class="options overflow:overlay">
-										<li class="template option" data-template_id="industries" value="{{data._id}}">
+										<cc-option class="template" data-template_id="industries" value="{{data._id}}">
 											<h4 data-collection="industries" data-document_id="{{data._id}}" name="name" data-realtime="false">industry name</h4>
-										</li>
-									</ul>
+										</cc-option>
+									</cc-options>
 	                            </cocreate-select>
 								<div class="display:flex">
 			                        <button type="button" class="outline white-blue margin-right:15px" data-show='#step3,#ava3' data-hide='#step4,#ava4'>Previous</button>
@@ -274,7 +274,7 @@
 			var config = {
 			  apiKey: '38ffd014-c33b-4202-c54b-ac46a0a4',
 			  organization_Id: '5ae0cfac6fb8c4e656fdaf92',
-			  host: 'wss://ws.cocreate.app'
+			  //host: 'wss://ws.cocreate.app'
 			}
 		</script>
 		<!-- CoCreate --
