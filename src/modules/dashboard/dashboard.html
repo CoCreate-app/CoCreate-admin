@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+		<title>Dashboard | CoCreate</title>
+
+		<!-- CoCreateCSS -->
+		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" data-parse/>
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+		
+	</head>
+    <style>
+      .progressbar {
+        flex-grow: 1;
+        height: 4px;
+        border: none;
+        position: relative;
+        background-color: rgb(194, 240, 253);
+        overflow: hidden;
+      }
+      
+      .progressbar > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        transform-origin: left;
+        transition: transform .4s linear;
+        background-color: #61dafb;
+      }
+      .floating-label{
+        margin-top:0px!important;
+        margin-bottom: 0px!important;
+      }
+      
+      .main-height {
+        height: calc( 100vh - 30px);
+      }
+      
+      .progressbar-text {
+        color: #121212;
+        font-weight: bolder;
+      }
+    </style>
+	
+	<body>
+		<!-- Modal Viewport -->
+		<div id="modal-viewport" class="hidden"></div>
+		
+		<!-- Navbar -->
+		<nav class="nav display:flex align-items:center background:whitesmoke"
+			data-main_content_id="content"
+			data-scroll="sticky-nav, hide-nav"
+			data-scroll_up="5"
+			data-scroll_down="5">
+		  
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				
+				<!-- Modal Controls -->
+				<li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
+				<li class="margin-right:15px"><a class="btn-modal-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize"></i></a></li>
+				<li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
+				
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px"><a data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a></li>
+				
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a target="modal"
+						data-pass_collection="module-views"
+						data-pass_document_id="5ff747727005da1c27274170" 
+						data-pass_name="html" 
+						data-pass_to="render" 
+						data-modal_width="320px"
+						data-modal_header="false">
+						<i class="fas fa-cog"></i>
+						<div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
+						<div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+					</a>
+				</li>
+				
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a target="modal" 
+						data-pass_collection="module-views"
+						data-pass_document_id="5ff747727005da1c27274164" 
+						data-pass_name="html" 
+						data-pass_to="render" 
+						data-modal_width="100%"
+						data-modal_header="false">
+						<i class="fas fa-code"></i>
+						<div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+					</a>
+				</li>
+				
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a target="modal"
+						data-pass_collection="module-views"
+						data-pass_document_id="5ff747727005da1c2727415f" 
+						data-pass_name="html" 
+						data-pass_to="render" 
+						data-modal_width="100%"
+						data-modal_header="false"
+						class="sessionBuilderUI_Id">
+						<i class="fas fa-palette"></i>
+						<div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+					</a>
+				</li>
+				
+				<!-- deleteDocument-->
+				<li class="margin-right:15px">
+					<a data-collection="" 
+						data-document_id="" 
+						data-pass_id="form-fields" 
+						data-actions="deleteDocument"
+						class="btn-modal-close">
+						<i class="far fa-trash-alt"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<!-- Main Content -->
+		<main class="padding:10px" data-main_content_id="content">
+			<div class="domEditor main-height" name='cards1' data-collection="test" data-pass_id="me1234" >
+			
+			<div class="isotope-grid resize-grid" data-group_name="dashboard" data-droppable="true" class="dnd"
+			isotope-itemselector="grid-item" 
+			isotope-layoutMode="masonry" 
+			isotope-columnWidth="1"
+			resizable="true"
+			resize-itemselector="grid-item"
+			resize-snapWidth="10"
+			resize-snapHeight="10"
+			resize-edges="0 1 1 0">
+			
+			<!--<div class="display:flex">-->
+			<div class="card display:inline-flex padding:20px align-items:center margin:1% grid-item width:23% width:47%@xs width:47%@sm width:23%@md" data-draggable="true" data-element_id="id1">
+				<div class="padding-right:20px">
+					<h2>Visits</h2>
+					<p>Total visits today</p>
+					<div class="display:flex align-items:center">
+						<h2>$4000</h2>
+						<i class="fas fa-chart-line color-deep-pink padding:0px_15px"></i>
+						<span class="cocreate-badge badge-warning round font-size:12px">7%</span>
+					</div>
+					<a href="#">Detail</a>
+				</div>
+				<div class="flex-grow:1">
+					<div class="progressbar-circle text-align:center width:100%" progressbar-color="#22CCE2" percent-value="85" percent-note="New Visits"></div>
+				</div>
+			</div>
+			
+			<div class="card display:inline-flex padding:20px align-items:center margin:1% grid-item width:23%  width:47%@xs width:47%@sm width:23%@md" data-draggable="true" data-element_id="id2">
+			<div class="padding-right:20px">
+			<h2>Orders</h2>
+			<p>Total visits today</p>
+			<div class="display:flex align-items:center">
+			  <h2>$1000</h2>
+			  <i class="fas fa-chart-line color-deep-pink padding:0px_15px"></i>
+			  <span class="cocreate-badge badge-danger round font-size:12px">8%</span>
+			</div>
+			<a href="#">Detail</a>
+			</div>
+			<div class="flex-grow:1">
+			<div class="progressbar-circle text-align:center width:100%" progressbar-color="#FDBF5E" percent-value="75" percent-note="New Orders"></div>
+			</div>
+			</div>
+			
+			<div class="card display:inline-flex padding:20px align-items:center margin:1% grid-item width:23%  width:47%@xs width:47%@sm width:23%@md" data-draggable="true" data-element_id="id3">
+			<div class="padding-right:20px">
+			<h2>Sales</h2>
+			<p>Total visits today</p>
+			<div class="display:flex align-items:center">
+			  <h2>$500</h2>
+			  <i class="fas fa-chart-line color-deep-pink padding:0px_15px"></i>
+			  <span class="cocreate-badge badge-success round font-size:12px">7%</span>
+			</div>
+			<a href="#">Detail</a>
+			</div>
+			<div class="flex-grow:1">
+			<div class="progressbar-circle text-align:center width:100%" progressbar-color="#FF3D57" percent-value="80" percent-note="New Sales"></div>
+			</div>
+			</div>
+			</div>  
+			<!-- sortable card -->
+			<!--<div id="card" class="card margin:5px border-radius-2px flex-grow-1 template grid-item" style="width:calc( 20% - 10px )">-->
+			<!--  <div class="margin:15px font-size:18px color-dark-gray">-->
+			<!--    <span class="display:inline-block">-->
+			<!--      <input data-collection="module_activity" data-pass_id="form-fields" data-module_activity_id="" name="clone-name" id="stage-name" class="input_field" placeholder="card">-->
+			<!--    </span>-->
+			<!--    <span class="float:right display:inline-block"><a data-clone_id="card" class="deleteBtn reset-layout"><i class="fas fa-times"></i></a></span>-->
+			<!--  </div>-->
+			<!--  <div class="border:bottom border-color-extra-medium-gray">-->
+			<!--    <div class="display:flex align-items:center margin:0px_15px">-->
+			<!--      <form data-collection="module_activity" class="Sortable" data-group_name="task-items" id="testForm">-->
+			  <!-- sortable task item -->
+			<!--        <div id="task-item" class="display:flex flex-wrap-nowrap align-items:center margin:0px_15px padding:10px_0px template">-->
+			<!--          <h3>Something...</h3>-->
+			
+			<!--          <a data-clone_id="task-item" class="margin-left:15px font-size:20px deleteBtn" ><i class="far fa-trash-alt"></i></a>-->
+			<!--        </div>-->
+			<!--    </form>-->
+			<!--    </div>-->
+			<!--  </div>-->
+			<!--  <div class="margin:0px_15px margin:15px_0px">-->
+			<!--    <a data-clone_id="task-item" class="cloneBtn noDrag reset-layout" style="display: block" ><i class="fas fa-plus"></i> Something...</a>  -->
+			<!--  </div>-->
+			<!--</div>-->
+			</div><!-- Sortable card -->
+
+		</main>
+		
+		<!-- CoCreateJS --> 
+		<script src="../../apikey.js"></script>
+		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
+		<!-- CoCreate Isotope -->
+	    <script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-isotope/src/index.js"></script>
+	   
+	    <!-- CoCreate Interact -->
+	    <!--<script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-interact/src/CoCreate-interact.js"></script>-->
+
+	</body>
+</html>

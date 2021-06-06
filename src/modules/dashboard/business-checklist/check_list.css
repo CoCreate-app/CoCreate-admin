@@ -1,0 +1,114 @@
+.group_check_list {
+    line-height: 1.5;
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+    font-size: 13px;
+
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.group_header {
+    background-color: #f6f6f6;
+}
+.Issues_item_title a {
+    color: #333;
+}
+.Issues_item_title a:hover {
+    text-decoration: none;
+    color:blue;
+}
+.group_header:not(tr) {
+    position: relative;
+    margin: 0 0 5px;
+    padding: 15px 10px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    page-break-inside: avoid;
+}
+.group_title {
+    line-height: 1.2;
+    overflow: hidden;
+    font-size: 120%;
+}
+
+.Issues_item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-bottom-width: 0;
+    page-break-inside: avoid;
+}
+
+.Issues_item_header {
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+}
+.Issues_item_indicator {
+    float: left;
+    margin-right: 10px;
+}
+
+.superscore.superscore__danger {
+    border-color: #e02222;
+    color: #e02222;
+}
+.Issues_item_indicator .superscore {
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
+    border-width: 1px;
+}
+
+.superscore.superscore__danger:empty:before {
+    content: "\0021";
+}
+.superscore:empty:before {
+    content: "i";
+    font-weight: 900;
+}
+.superscore {
+    display: inline-block;
+    border: solid #2a85a7;
+    width: 16px;
+    height: 16px;
+    line-height: 14px;
+    border-width: 1px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    vertical-align: middle;
+    color: #2a85a7;
+    text-align: center;
+    font-style: normal;
+}
+
+.Issues_item_title {
+    overflow: hidden;
+}
+.Issues_item_name {
+    font-size: 110%;
+}
+.superscore.superscore__success {
+    border-color: #7bc15b;
+    color: #7bc15b;
+}
+
+.superscore.superscore__success:empty:before {
+    content: "\2714";
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.Issues_item:last-child {
+    border-bottom-width: 1px;
+}
