@@ -1,0 +1,82 @@
+<html><head>
+        <meta charset="utf-8">
+		<!-- CoCreateCSS -->
+		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" data-parse/>
+        <style type="text/css">
+            body {
+              padding: 0;
+              margin: 0;
+            }
+
+            svg:not(:root) {
+              display: block;
+            }
+
+            .playable-code {
+              background-color: #f4f7f8;
+              border: none;
+              border-left: 6px solid #558abb;
+              border-width: medium medium medium 6px;
+              color: #4d4e53;
+              height: 100px;
+              width: 90%;
+              padding: 10px 10px 0;
+            }
+
+            .playable-canvas {
+              border: 1px solid #4d4e53;
+              border-radius: 2px;
+            }
+
+            .playable-buttons {
+              text-align: right;
+              width: 90%;
+              padding: 5px 10px 5px 26px;
+            }
+        </style>
+        
+        <style type="text/css">
+            * {box-sizing: border-box;}
+
+.wrappe {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+}
+
+.wrapper > div {
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
+
+
+        </style>
+        
+        <title>Auto-placement in CSS Grid Layout - placement_6 - code sample</title>
+    </head>
+    <body>
+        
+        <div class="sortable wrapper display:grid grid-template-columns:repeat(4,_1fr) grid-auto-rows:100px grid-auto-columns:auto gap:10px border:2px_solid_#f76707 border-radius:5px background-color:#fff4e6">
+            <div class="card grid-column:1/3 grid-row:1/3">One</div>
+            <div class="span 2">Two</div>
+            <div>Three</div>
+            <div>Four</div>
+            <div>Five</div>
+            <div>Six</div>
+            <div>Seven</div>
+            <div>Eight</div>
+            <div>Nine</div>
+            <div>Ten</div>
+            <div>Eleven</div>
+            <div>Twelve</div>
+        </div>
+
+		<!-- CoCreateJS --> 
+		<script src="../../apikey.js"></script>
+		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
+        
+    
+</body></html>

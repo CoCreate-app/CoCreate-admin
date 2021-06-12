@@ -249,8 +249,8 @@
 								<div data-template_id="renderKey">
 									<input type="hidden" placeholder="to email" data-sendgrid="sendEmail.to" data-get_value="user-email">
 								    <input type="hidden" placeholder="from email" data-sendgrid="sendEmail.from" value="testing@cocreate.app">
-								    <input type="hidden" placeholder="subject" data-sendgrid="sendEmail.subject" value="Confirm your email address">
-								    <textarea placeholder="html" data-sendgrid="sendEmail.html" hidden value="hello {{data.name}}, click here https://{{data.domain}}/signin"></textarea>
+								    <input type="hidden" placeholder="subject" data-sendgrid="sendEmail.subject" value="Welcome, {{data.name}} — Please confirm your email">
+								    <textarea placeholder="html" data-sendgrid="sendEmail.html" hidden data-collection="email-templates" data-document_id="60bfdaa304ee68b159b63532" name="src"></textarea>
 								</div>
 
 								<div class="display:flex">
@@ -283,7 +283,7 @@
 		 	  apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
 		 	  organization_Id: '5de0387b12e200ea63204d6c'
 		 	}
-		</script>-->
+		</script>
 		<!-- General -->
 		<!--<script>
 			var config = {

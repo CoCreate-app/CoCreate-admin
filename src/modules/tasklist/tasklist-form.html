@@ -9,7 +9,7 @@
 		<title>Tasklist | CoCreate</title>
   
 		<!-- CoCreateCSS -->
-		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>
+		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" data-parse/>
 		
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" crossorigin="anonymous" />  
@@ -122,11 +122,7 @@
 	  <div class="domEditor main-height" name='tasklists1' data-collection="test" data-document_id="5f075add24d24a175fca54e4" data-pass_id="me1234" >
 	  <!--<div class="domEditor main-height" name='tasklists' data-collection="test" data-pass_id="me1234" >-->
 		  <!--<div class="Sortable display:flex align-items:flex-start isotope-grid" data-group_name="tasklist" -->
-		  <div class="isotope-grid dnd" data-group_name="tasklist" 
-			isotope-itemselector="grid-item" 
-			isotope-layoutMode="masonry" 
-			isotope-columnWidth="grid-item" 
-			isotope-rowHeight="200"
+		  <div class="" data-group_name="tasklist" 
 			data-droppable="true"
 			data-element_id="tasklist_container">
 			  
@@ -152,7 +148,7 @@
 						  <input type="checkbox" name="taskcheck"><span class="mark display:inline-block"></span>
 						</label>
 						<div class="flex-grow:1">
-						  <input class="floating-label" data-module_activity_id="5d8c79e7e4be424681b5e48d" name="taskname"  placeholder="Task Name">
+						  <input class="floating-label" data-module_activity_id="5d8c79e7e4be424681b5e48d" name="taskname" placeholder="Task Name">
 						</div>
 						<a data-clone_id="task-item" class="margin-left:15px font-size:20px deleteBtn" ><i class="far fa-trash-alt"></i></a>
 					  </div>
@@ -170,19 +166,16 @@
 	  </div><!-- saveFetch -->
 	</div> <!-- -->
 	  
-	<script>
-	  var config = {
-		apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-				organization_Id: '5de0387b12e200ea63204d6c'
-	  }
-	</script>
+		<script>
+			var config = {
+				apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+				organization_Id: '5de0387b12e200ea63204d6c',
+                host: 'wss://ws.cocreate.app'
+			}
+		</script>
+        
+        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
+        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
 
-	<!-- CoCreateJS -->
-	<script src="https://cdn.cocreate.app/CoCreate.min.js"></script>
-	<script defer src=" https://server.cocreate.app/CoCreate-components/builder-prerequisite/dist/CoCreate-dnd.js"></script>
-	<script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-progressbar/src/CoCreate-progressbar.js"></script>
-	<script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-isotope/src/CoCreate-isotope.js"></script>
-	<script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-interact/src/CoCreate-interact.js"></script>
-	
   </body>
 </html>
