@@ -9,7 +9,7 @@
 		<title>Dashboard | CoCreate</title>
 
 		<!-- CoCreateCSS -->
-		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" data-parse/>
+		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>
 
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
@@ -133,101 +133,96 @@
 		<main class="padding:10px" data-main_content_id="content">
 			<div class="domEditor main-height" name='cards1' data-collection="test" data-pass_id="me1234" >
 			
-			<div class="isotope-grid resize-grid" data-group_name="dashboard" data-droppable="true" class="dnd"
-			isotope-itemselector="grid-item" 
-			isotope-layoutMode="masonry" 
-			isotope-columnWidth="1"
-			resizable="true"
-			resize-itemselector="grid-item"
-			resize-snapWidth="10"
-			resize-snapHeight="10"
-			resize-edges="0 1 1 0">
+			<div class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))" data-group_name="dashboard"
+    			data-fetch_collection="module_activity"
+    			data-template_id="card" 
+    			data-droppable="true">
 			
-			<!--<div class="display:flex">-->
-			<div class="card display:inline-flex padding:20px align-items:center margin:1% grid-item width:23% width:47%@xs width:47%@sm width:23%@md" data-draggable="true" data-element_id="id1">
-				<div class="padding-right:20px">
-					<h2>Visits</h2>
-					<p>Total visits today</p>
-					<div class="display:flex align-items:center">
-						<h2>$4000</h2>
-						<i class="fas fa-chart-line color-deep-pink padding:0px_15px"></i>
-						<span class="cocreate-badge badge-warning round font-size:12px">7%</span>
-					</div>
-					<a href="#">Detail</a>
-				</div>
-				<div class="flex-grow:1">
-					<div class="progressbar-circle text-align:center width:100%" progressbar-color="#22CCE2" percent-value="85" percent-note="New Visits"></div>
-				</div>
-			</div>
-			
-			<div class="card display:inline-flex padding:20px align-items:center margin:1% grid-item width:23%  width:47%@xs width:47%@sm width:23%@md" data-draggable="true" data-element_id="id2">
-			<div class="padding-right:20px">
-			<h2>Orders</h2>
-			<p>Total visits today</p>
-			<div class="display:flex align-items:center">
-			  <h2>$1000</h2>
-			  <i class="fas fa-chart-line color-deep-pink padding:0px_15px"></i>
-			  <span class="cocreate-badge badge-danger round font-size:12px">8%</span>
-			</div>
-			<a href="#">Detail</a>
-			</div>
-			<div class="flex-grow:1">
-			<div class="progressbar-circle text-align:center width:100%" progressbar-color="#FDBF5E" percent-value="75" percent-note="New Orders"></div>
-			</div>
-			</div>
-			
-			<div class="card display:inline-flex padding:20px align-items:center margin:1% grid-item width:23%  width:47%@xs width:47%@sm width:23%@md" data-draggable="true" data-element_id="id3">
-			<div class="padding-right:20px">
-			<h2>Sales</h2>
-			<p>Total visits today</p>
-			<div class="display:flex align-items:center">
-			  <h2>$500</h2>
-			  <i class="fas fa-chart-line color-deep-pink padding:0px_15px"></i>
-			  <span class="cocreate-badge badge-success round font-size:12px">7%</span>
-			</div>
-			<a href="#">Detail</a>
-			</div>
-			<div class="flex-grow:1">
-			<div class="progressbar-circle text-align:center width:100%" progressbar-color="#FF3D57" percent-value="80" percent-note="New Sales"></div>
-			</div>
-			</div>
-			</div>  
-			<!-- sortable card -->
-			<!--<div id="card" class="card margin:5px border-radius-2px flex-grow-1 template grid-item" style="width:calc( 20% - 10px )">-->
-			<!--  <div class="margin:15px font-size:18px color-dark-gray">-->
-			<!--    <span class="display:inline-block">-->
-			<!--      <input data-collection="module_activity" data-pass_id="form-fields" data-module_activity_id="" name="clone-name" id="stage-name" class="input_field" placeholder="card">-->
-			<!--    </span>-->
-			<!--    <span class="float:right display:inline-block"><a data-clone_id="card" class="deleteBtn reset-layout"><i class="fas fa-times"></i></a></span>-->
-			<!--  </div>-->
-			<!--  <div class="border:bottom border-color-extra-medium-gray">-->
-			<!--    <div class="display:flex align-items:center margin:0px_15px">-->
-			<!--      <form data-collection="module_activity" class="Sortable" data-group_name="task-items" id="testForm">-->
-			  <!-- sortable task item -->
-			<!--        <div id="task-item" class="display:flex flex-wrap-nowrap align-items:center margin:0px_15px padding:10px_0px template">-->
-			<!--          <h3>Something...</h3>-->
-			
-			<!--          <a data-clone_id="task-item" class="margin-left:15px font-size:20px deleteBtn" ><i class="far fa-trash-alt"></i></a>-->
-			<!--        </div>-->
-			<!--    </form>-->
-			<!--    </div>-->
-			<!--  </div>-->
-			<!--  <div class="margin:0px_15px margin:15px_0px">-->
-			<!--    <a data-clone_id="task-item" class="cloneBtn noDrag reset-layout" style="display: block" ><i class="fas fa-plus"></i> Something...</a>  -->
-			<!--  </div>-->
-			<!--</div>-->
+    			<div data-template_id="card" class="card template resize display:flex padding:20px align-items:center grid-column-end:span_2" data-element_id="id1" data-draggable="tru">
+    				<!-- dashboard template-->
+        				<div class="flex-grow:1 padding-right:20px">
+        					<h2>Visits</h2>
+        					<p>Total visits today</p>
+        					<div class="display:flex align-items:center">
+        						<h2>$4000</h2>
+        						<!--<i class="fas fa-chart-line color:green font-size:16px padding:0px_15px"></i>-->
+        						<span class="cocreate-badge background:green round font-size:12px">7%</span>
+        					</div>
+        					<a href="#">Detail</a>
+        				</div>
+        				<div class="width:120px">
+        					<div class="progressbar-circle text-align:center width:100%" progressbar-color="#22CCE2" percent-value="85" percent-note="New Visits"></div>
+        				</div>
+
+                    <div data-resize="right"></div>
+                    <div data-resize="bottom"></div>
+    			</div>
+    			
+    			<!--<div class="card resize padding:20px align-items:center grid-column-end:span_3 grid-row-end:span_2" data-element_id="id2">-->
+       <!--                 <canvas class="cocreate-chart" chart-type="bar" chart-options="" chart-labels="January, February, March, April, May, June, July" chart-title="Combine Charts">-->
+       <!--                     <div class="cocreate-chart-dataset" chart-dataset_type="line">-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="Jan" data-calculation="sum">-->
+       <!--                             <div data-filter_name="Jan" data-filter_value="0, 10" data-value_type="number" data-filter_operator="$range"></div>-->
+       <!--                         </div>-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="Feb">-->
+       <!--                             <div data-filter_name="permission" data-filter_value="read" data-filter_operator="$nin"></div>-->
+       <!--                             <div data-filter_name="type" data-filter_value="leader" data-filter_operator="$in"></div>-->
+       <!--                         </div>-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="Mar">-->
+       <!--                             <div data-filter_name="Mar" data-filter_value="-7" data-filter_operator="$eq" data-value_type="number"></div>-->
+       <!--                         </div>-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="Apr"></div>-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="May"></div>-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="Jun"></div>-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="Jul"></div>-->
+       <!--                     </div>-->
+       <!--                     <div class="cocreate-chart-dataset" chart-dataset_label="Average Chart" chart-dataset_type="line">-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="Jan" data-calculation="average"></div>-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="Feb" data-calculation="average"></div>-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="Mar" data-calculation="average"></div>-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="Apr" data-calculation="average"></div>-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="May" data-calculation="average"></div>-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="Jun" data-calculation="average"></div>-->
+       <!--                         <div data-fetch_collection="chart" data-fetch_name="Jul" data-calculation="average"></div>-->
+       <!--                     </div>-->
+                            
+                            <!--<div class="cocreate-chart-dataset" chart-dataset_label="Data Count" chart-dataset_type="">-->
+                            <!--  <div data-fetch_collection="chart" data-fetch_name="Jan" data-calculation="count"></div>-->
+                            <!--  <div data-fetch_collection="chart" data-fetch_name="Feb" data-calculation="count"></div>-->
+                            <!--  <div data-fetch_collection="chart" data-fetch_name="Mar" data-calculation="count"></div>-->
+                            <!--  <div data-fetch_collection="chart" data-fetch_name="Apr" data-calculation="count"></div>-->
+                            <!--  <div data-fetch_collection="chart" data-fetch_name="May" data-calculation="count"></div>-->
+                            <!--  <div data-fetch_collection="chart" data-fetch_name="Jun" data-calculation="count"></div>-->
+                            <!--  <div data-fetch_collection="chart" data-fetch_name="Jul" data-calculation="count"></div>-->
+                            <!--</div>-->
+       <!--                 </canvas>-->
+       <!--                 <div data-resize="left"></div>-->
+       <!--                 <div data-resize="right"></div>-->
+       <!--                 <div data-resize="top"></div>-->
+       <!--                 <div data-resize="bottom"></div>-->
+                    
+    			<!--</div>-->
+
 			</div><!-- Sortable card -->
 
 		</main>
 		
-		<!-- CoCreateJS --> 
-		<script src="../../apikey.js"></script>
-		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
+		<script>
+			var config = {
+				apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+				organization_Id: '5de0387b12e200ea63204d6c',
+                host: 'wss://ws.cocreate.app'
+			}
+		</script>
+        
+        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
+        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
 		<!-- CoCreate Isotope -->
-	    <script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-isotope/src/index.js"></script>
+	    <!--<script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-isotope/src/index.js"></script>-->
 	   
 	    <!-- CoCreate Interact -->
 	    <!--<script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-interact/src/CoCreate-interact.js"></script>-->
+	    <script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-progress-bar/dist/CoCreate-progress-bar.js"></script>
 
 	</body>
 </html>

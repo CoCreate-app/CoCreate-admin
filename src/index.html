@@ -50,7 +50,7 @@
                         data-modal_width="320px"
                         data-modal_header="false">
                         <i class="fas fa-cog"></i>
-                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
+                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="5ff747727005da1c2727415f" data-pass_to="form-fields"></div>
                         <div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
                     </a>
                 </li>
@@ -65,7 +65,7 @@
                         data-modal_width="100%"
                         data-modal_header="false">
                         <i class="fas fa-code"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                        <div data-pass_id="render" data-pass_collection="module-views" data-pass_document_id="5ff747727005da1c2727415f" data-pass_name="html" data-pass_to="code-editor"></div>
                     </a>
                 </li>
                 
@@ -80,7 +80,7 @@
                         data-modal_header="false"
                         class="sessionBuilderUI_Id">
                         <i class="fas fa-palette"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                        <div data-pass_id="render" data-pass_collection="module-views" data-pass_document_id="5ff747727005da1c27274160" data-pass_name="html" data-pass_to="builder"></div>
                     </a>
                 </li>
                 
@@ -114,10 +114,11 @@
             
             <!-- Avatar -->
             <div class="avatar-wrapper margin:5px_0px margin-right:10px">
-                <a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile.html" 
-                    data-pass_collection="modules" 
+                <a class="avatar round" target="modal"
+                    data-pass_collection="module-views" 
                     data-pass_prefix="" 
-                    data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" 
+                    data-pass_document_id="5ffcafa3030bf600180a2646"
+                    data-pass_name="html"
                     data-pass_to="render" 
                     data-modal_width="300px" 
                     data-modal_height="375px" 
@@ -152,8 +153,8 @@
                     data-filter_operator="$eq"
                     data-fetch_name="connected_orgs" 
                     data-template_id="connected_orgs">
-                    <li class="template option height:50px margin:0!important padding:4px_12px!important" data-template_id="connected_orgs"  value="{{connected_orgs.--}}">
-                        <span class="logo-icon"><img data-collection="organizations" data-document_id="{{connected_orgs.--}}" name="logo" src="https://server.cocreate.app/images/cocreate.png" height="40px"alt="..."></span>
+                    <li class="template option height:50px margin:0!important padding:4px_12px!important" data-template_id="connected_orgs"  value="{{connected_orgs[]}}">
+                        <span class="logo-icon"><img data-collection="organizations" data-document_id="{{connected_orgs[]}}" name="logo" src="https://server.cocreate.app/images/cocreate.png" height="40px"alt="..."></span>
                         <span data-collection="organizations" data-document_id="{{connected_orgs.--}}" name="name" class="logo-name">Organization Name</span>
                     </li>
                     <li class="line-height:40px height:40px overflow:hidden">
@@ -226,40 +227,59 @@
                 </ul>
                 
                 <!-- sidenav Footer -->
-                <div class="display:inline-block position:absolute bottom:0 background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
-                    <a target="modal"  
-                        data-pass_collection="module-views" 
-                        data-pass_document_id="5ff747727005da1c2727415e" 
-                        data-pass_name="html"
-                        data-pass_to="render" 
-                        data-modal_width="275px" 
-                        data-modal_height="100%" 
-                        data-modal_color="#229954" 
-                        data-modal_x="0" 
-                        data-modal_y="0" 
-                        data-modal_header="false"
-                        class="width:50px text-align:center display:inline-block">
-                        <span class="padding:10px width:50px text-align:center"><i class="fas fa-cogs"></i></span>
-                    </a>
-                        
-                    <a href="signin.html" class="logoutBtn width:50px text-align:center display:inline-block">
-                        <span class="padding:10px width:50px text-align:center"><i class="fas fa-sign-out-alt"></i></span>
-                    </a>
-                </div>
-            </div>
+				<div class="display:inline:block position:absolute bottom:0 background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
+					<a target="modal"  
+						data-pass_collection="module-views" 
+						data-pass_document_id="5ff747727005da1c2727415e" 
+						data-pass_name="html"
+						data-pass_to="render" 
+						data-modal_width="275px" 
+						data-modal_height="100%" 
+						data-modal_color="#229954" 
+						data-modal_x="0" 
+						data-modal_y="0" 
+						data-modal_header="false"
+						class="width:50px text-align:center display:inline-block">
+					  <span class="padding:10px width:50px text-align:center"><i class="fas fa-cogs"></i></span>
+					</a>
+					<a target="modal" 
+						data-pass_collection="module-views" 
+						data-pass_document_id="5ff747727005da1c2727415a"
+						data-pass_name="html"
+						data-pass_to="render" 
+						data-modal_width="640px" 
+						data-modal_height="100%" 
+						data-modal_color="#229954" 
+						data-modal_x="0" 
+						data-modal_y="0" 
+						data-modal_header="false"
+						class="width:50px text-align:center display:inline-block">
+					  <span class="padding:10px width:50px text-align:center"><i class="fas fa-project-diagram"></i></span>
+					</a>
+					<a target="modal"
+						data-pass_collection="module-views" 
+						data-pass_document_id="5ff747727005da1c27274168" 
+						data-pass_name="html"
+						data-pass_to="render" 
+						data-modal_width="640px" 
+						data-modal_height="100%" 
+						data-modal_color="#229954" 
+						data-modal_x="0" 
+						data-modal_y="0" 
+						data-modal_header="false"
+						class="width:50px text-align:center display:inline-block">
+					  <span class="padding:10px width:50px text-align:center"><i class="fas fa-shapes"></i></span>
+					</a>
+					<a href="signin.html" class="logoutBtn width:50px text-align:center display:inline-block">
+					  <span class="padding:10px width:50px text-align:center"><i class="fas fa-sign-out-alt"></i></span>
+					</a>
+				</div>
+			</div>
             <div class="resizeHandler"></div>
         </sidenav>
 
-		<script>
-			var config = {
-				apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-				organization_Id: '5de0387b12e200ea63204d6c',
-                host: 'wss://ws.cocreate.app'
-			}
-		</script>
-        
-        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
-        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
-        
+ 		<script src="./apikey.js"></script>
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
+
     </body>
 </html>

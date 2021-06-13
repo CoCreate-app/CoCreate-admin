@@ -39,7 +39,7 @@
 
     .call[value="completed"], .call[value="no-answer"], .call[value="busy"] {display:none!important}
     .call-transer:before {
-    content: url("./call-transfer.png");
+    content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABlUlEQVRIiZ3VMWsUQRjG8V8ukSCiELGxsjFFimgpGEELLQUJWoj5DoFU+QpW2likMm2wyAeIomghYqEEoqSQiGCjKZKYIrmol2LnzLju7Mz5wMLx3vN/n9l3hh3+1iieYRWTBtMonuJzG7uIXni+DRiSZa/id2QaJORGjfuHHcaHBlMPXzPNO/iYY+8lDD08zARMl7CvE4ZV1ea1KcuOt6xgOtP8Qgk7mzC8UM23TfMl7FL0x3WMqTY91kQiYLmAtRYMe9Lz3sGdhvp6AWsrmNZThmiVCzgW1bcLWAfB9CbRtP68xFkM4WeC/aNOCICRtlU0qD+aLLsRzBuZZk0j+lTAeh5MBzU4VmqTV3JsB+/D7xFcTARcwpOG+rscO4xT0erGcRk3cQ5vQ30zEXwcdzOsk6rNqp+WXy1vFAfslrCPG0w9vJI/XY9K2MmQ+j+f6/PoJtgHsXEhYeriTCbkfoLdiU2n8b1m2MetTHM4obrsY/YHrtSNtx3dy93C5n1dczSqXdUd36g5fFEdt0E1o/ouTfULh60e2n2ht7rUAAAAAElFTkSuQmCC");
     width:18px;
     height:18px;
     /*margin:10px 5px 0 10px;*/
@@ -263,7 +263,7 @@
                                 
                                 <!-- Transfer -->
                                 <input type="hidden" data-twilio="dialTransfer.CallSid" value="{{render2.parameters.CallSid}}">
-                                <button class="transfer" data-actions='dialTransfer' title="Transfer Call"><img src="call-transfer.png" height="24px"></button>
+                                <button class="transfer" data-actions='dialTransfer' title="Transfer Call"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABlUlEQVRIiZ3VMWsUQRjG8V8ukSCiELGxsjFFimgpGEELLQUJWoj5DoFU+QpW2likMm2wyAeIomghYqEEoqSQiGCjKZKYIrmol2LnzLju7Mz5wMLx3vN/n9l3hh3+1iieYRWTBtMonuJzG7uIXni+DRiSZa/id2QaJORGjfuHHcaHBlMPXzPNO/iYY+8lDD08zARMl7CvE4ZV1ea1KcuOt6xgOtP8Qgk7mzC8UM23TfMl7FL0x3WMqTY91kQiYLmAtRYMe9Lz3sGdhvp6AWsrmNZThmiVCzgW1bcLWAfB9CbRtP68xFkM4WeC/aNOCICRtlU0qD+aLLsRzBuZZk0j+lTAeh5MBzU4VmqTV3JsB+/D7xFcTARcwpOG+rscO4xT0erGcRk3cQ5vQ30zEXwcdzOsk6rNqp+WXy1vFAfslrCPG0w9vJI/XY9K2MmQ+j+f6/PoJtgHsXEhYeriTCbkfoLdiU2n8b1m2MetTHM4obrsY/YHrtSNtx3dy93C5n1dczSqXdUd36g5fFEdt0E1o/ouTfULh60e2n2ht7rUAAAAAElFTkSuQmCC" height="24px"></button>
 
                                 <!-- Enqueue -->
                                 <div class="hidden">
@@ -630,7 +630,7 @@
             					<button class="hidden" data-actions='endConference'><i class="fas fa-phone-slash"></i></button>
         					</div>
                             <div class="display:flex justify-content:center width:33%">
-                                <button class="transfer" data-actions='dialTransfer' title="Transfer Call"><img src="call-transfer.png" height="24px"></button>
+                                <button class="transfer" data-actions='dialTransfer' title="Transfer Call"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABlUlEQVRIiZ3VMWsUQRjG8V8ukSCiELGxsjFFimgpGEELLQUJWoj5DoFU+QpW2likMm2wyAeIomghYqEEoqSQiGCjKZKYIrmol2LnzLju7Mz5wMLx3vN/n9l3hh3+1iieYRWTBtMonuJzG7uIXni+DRiSZa/id2QaJORGjfuHHcaHBlMPXzPNO/iYY+8lDD08zARMl7CvE4ZV1ea1KcuOt6xgOtP8Qgk7mzC8UM23TfMl7FL0x3WMqTY91kQiYLmAtRYMe9Lz3sGdhvp6AWsrmNZThmiVCzgW1bcLWAfB9CbRtP68xFkM4WeC/aNOCICRtlU0qD+aLLsRzBuZZk0j+lTAeh5MBzU4VmqTV3JsB+/D7xFcTARcwpOG+rscO4xT0erGcRk3cQ5vQ30zEXwcdzOsk6rNqp+WXy1vFAfslrCPG0w9vJI/XY9K2MmQ+j+f6/PoJtgHsXEhYeriTCbkfoLdiU2n8b1m2MetTHM4obrsY/YHrtSNtx3dy93C5n1dczSqXdUd36g5fFEdt0E1o/ouTfULh60e2n2ht7rUAAAAAElFTkSuQmCC" height="24px"></button>
         					</div>
         				 </div>
     				</form>
@@ -645,13 +645,14 @@
 		</button>
 
     
-        <script src="../../apikey.js"></script>
+		<script>
+            var config = {                 
+                apiKey: '2061acef-0451-4545-f754-60cf8160',                 
+                organization_Id: '5ff747727005da1c272740ab',                 
+                host: 'wss://general.cocreate.app'             
+            }         
+		</script>
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
-        
-        <!-- CoCreate Plugins -->
-        <script src="https://server.cocreate.app/CoCreate-components/CoCreate-api-twilio/src/CoCreate-api.js"></script>
-        <script type="text/javascript" src="https://server.cocreate.app:8088/js/twilio.min.js"></script>
-        <script src="https://server.cocreate.app/CoCreate-components/CoCreate-api-twilio/src/CoCreate-twilio.js"></script>
         
         <script>
             document.querySelectorAll('.number-dig').forEach((number)=>{
