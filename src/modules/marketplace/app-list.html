@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marketplace | CoCreate</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
+
+    <!-- CoCreate CSS -->
+    <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" />
+    <!--<link rel="stylesheet" href="/admin/index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true"/>-->
+
+</head>
+
+<body>
+    <!-- Navbar  -->
+    <nav class="nav display:flex position:relative align-items:center box-shadow-bottom" data-main_content_id="content" data-scroll=", hide-nav" data-scroll_up="5" data-scroll_down="5">
+        <!-- Menu Icon Animations -->
+        <a class="nav-toggle menu_icon--Vdots" data-toggle_sidenav="menuL">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </a>
+        <!-- Horizontal Scroll Nav/Tabs -->
+        <ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
+            <!-- Modal Controls -->
+            <li class="margin-right:15px"> <a class="btn-modal-close"><i class="fas fa-times"></i></a> </li>
+            <li class="margin-right:15px"><a class="btn-modal-maximize"><i data-transform_to="far fa-window-restore" class="far fa-window-maximize">					</i></a> </li>
+            <li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize">					</i></a> </li>
+            <!-- fullscreen toogle and icon transform-->
+            <li class="margin-right:15px"> <a data-fullscreen><i data-transform_to="fas fa-compress" class="fas fa-expand"></i></a> </li>
+            <!-- Render Module Form -->
+            <li class="margin-right:15px"> <a target="modal" data-pass_collection="module-views" data-pass_document_id="5ff747727005da1c27274170" data-pass_name="html" data-pass_to="render" data-modal_width="320px" data-modal_header="false">							<i class="fas fa-cog"></i>						 <div data-pass_id="module-form"							data-pass_collection="modules"							data-pass_document_id=""							data-pass_to="form-fields">						 </div>                      	<div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id">						 </div>					 </a>                </li>
+            <!-- Render Code Editor -->
+            <li class="margin-right:15px"> <a target="modal" data-pass_collection="module-views" data-pass_document_id="5ff747727005da1c27274164" data-pass_name="html" data-pass_to="render" data-modal_width="100%" data-modal_header="false">							<i class="fas fa-code"></i>						 <div data-pass_id="render"							data-pass_collection=""							data-pass_document_id=""							data-pass_name=""							data-pass_to="code-editor">						 </div>					 </a>                </li>
+            <!-- Render Builder -->
+            <li class="margin-right:15px"> <a target="modal" data-pass_collection="module-views" data-pass_document_id="5ff747727005da1c2727415f" data-pass_name="html" data-pass_to="render" data-modal_width="100%" data-modal_header="false" class="sessionBuilderUI_id">							<i class="fas fa-palette"></i>						 <div data-pass_id="render"							data-pass_collection=""							data-pass_document_id=""							data-pass_name=""							data-pass_to="builder">						 </div>					 </a>                </li>
+            <!-- Render Form -->
+            <li class="margin-right:15px"> <a target="modal" data-pass_id="form" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="render" data-modal_width="320px" data-modal_height="100%" data-modal_color="#229954" data-modal_header="false">					 <i class="fas fa-plus"></i>                      <div data-pass_id="datatable" data-pass_collection="" data-pass_to="form-fields"></div>                      <div data-pass_id="module_id" data-pass_value="" data-pass_to="module_id"></div>					</a>                </li>
+        </ul>
+    </nav>
+
+    <!-- Modal viewport -->
+    <div class="position:fixed z-index:12!important" id="modal-viewport"></div>
+
+    <!-- Main Container -->
+    <main class="padding:20px" data-main_content_id="content">
+
+        <!-- Fetch and Render Product list -->
+        <div class="display:flex flex-wrap:wrap" data-fetch_collection="modules" data-fetch_count="12" data-order_by="name" data-order_type="asc" data-template_id="filter_test" data-search_type="or">
+
+            <!-- Product Template -->
+            <div class="card template margin:10px flex-grow:1 width:250px" data-template_id="filter_test">
+                <!-- Product Image  -->
+                <div class="position:relative">
+                    <img class="cursor:pointer " name="name" data-document_id="" src="http://via.placeholder.com/250x250/BF00FF/ffffff/" width="100%" alt="...">
+                    <div class="overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#289DCC background:#000:hover padding:13px_0 text-align:center color:#fff:hover">Quick View</a> </div>
+                    <!-- Favourite -->
+                    <div class="width:40px cursor:pointer height:40px background:#F23A2E background:#289DCC:hover display:block border:1px_solid_#F23A2E border:1px_solid_#289DCC:hover border-radius:50% position:absolute opacity:0 transition:0.4s right:5% top:5%">
+                        <a href="#"><i class="f-link display:block margin-top:10px font-size:20px color:#fff text-align:center far fa-heart"></i></a>
+                    </div>
+
+                </div>
+                <div class="padding:15px">
+                    <h5 class="" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Item Name</h5>
+                    <!-- ratings-container Start -->
+                    <div class="margin:4px_0">
+                        <span class="color:#555"><i class="fas fa-star"></i></span>
+                        <span class="color:#555"><i class="fas fa-star"></i></span>
+                        <span class="color:#555"><i class="fas fa-star"></i></span>
+                        <span class="color:#555"><i class="fas fa-star"></i></span>
+                        <span class="color:#555"><i class="fas fa-star"></i></span>
+                    </div>
+                    <p class="margin:4px_0" data-collection="{{collection}}" data-document_id="{{data._id}}" name="color">blue</p>
+                    <p class="" value="{{data.price}}">$59</p>
+                    <p class="" data-document_id="_id" name="description" value="description"></p>
+
+                    <a href="#" class="btn padding:10px_10px border:1px_solid_#0DA9EF background:#0DA9EF:hover color:#0DA9EF color:#fff:hover display:block width:60% margin:auto border-radius:30px margin-top:15px">More details</a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <!-- SideNav Left -->
+    <sidenav id="menuL" class="cocreate-sidenav height:100vh background:whitesmoke width:0px@0px-826px!important" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="expanded" sidenav-default_phone="offcanvas" sidenav-ontoggle_desktop="offcanvas" sidenav-ontoggle_tablet="offcanvas"
+        sidenav-expanded_width="240px">
+			
+			<div class="padding:5px">
+    			<button class="width:100% margin:5px btn-modal-close" target="modal" href="./block-form"  data-pass_to="form-field" data-modal_width="320px" data-modal_header="false">
+    			    Custom
+    			</button>
+			</div>
+			<!-- Search -->
+			<form class="padding:5px">
+				<input type="text" class="floating-label" data-pass_value_to="results">
+				<span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
+					<a target="modal" data-pass_to="render" data-collection="website-pages" data-document_id="" data-pass_name="html" data-modal_width="900px" data-modal_color="#229954">
+						<i class="fas fa-search"></i>
+					</a>
+				</span>
+			</form>
+			<div class="padding:10px">
+                <h4>Categories</h4>
+                <div class="padding-left:10px">
+                    <div class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover">Design</div>
+                    <div class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover">Marketing</div>
+                    <div class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover">Communication</div>
+                </div>
+                   
+			</div>
+			
+        <div class="resizeHandler"></div>
+    </sidenav>
+
+    <script>
+        var config = {
+            apiKey: '2061acef-0451-4545-f754-60cf8160',
+            organization_Id: '5ff747727005da1c272740ab',
+            host: 'wss://general.cocreate.app'
+        }
+    </script>
+
+    <!--CoCreateJS-->
+    <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+
+</body>
+
+</html>
