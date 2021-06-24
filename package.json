@@ -10,8 +10,8 @@
     "hosting": "node ./node_modules/@cocreate/hosting/src/index.js"
   },
   "dependencies": {
-    "@cocreate/docs": "^1.1.8",
-    "@cocreate/hosting": "^1.0.1",
+    "@cocreate/docs": "latest",
+    "@cocreate/hosting": "latest",
     "mini-css-extract-plugin": "^1.5.0",
     "node-html-parser": "^2.1.0"
   }
