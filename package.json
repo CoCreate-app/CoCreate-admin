@@ -1,5 +1,9 @@
 {
-  "name": "CoCreate-adminUI",
+  "name": "@cocreate/adminUI",
+  "description": "A simple AdimnUI component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API.",
+  "publishConfig": {
+    "access": "private"
+  },
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/CoCreate-app/CoCreate-adminUI.git",

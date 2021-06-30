@@ -1,11 +1,10 @@
 # CoCreate-adminUI
 
-A simple adminUI component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/adminUI)
+A simple AdimnUI component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API. Take it for a spin in our [playground!](https://cocreate.app/docs/adminUI)
 
-![GitHub file size in bytes](https://img.shields.io/github/size/CoCreate-app/CoCreate-adminUI/dist/CoCreate-adminUI.min.js?label=minified%20size&style=for-the-badge)
-![GitHub latest release](https://img.shields.io/github/v/release/CoCreate-app/CoCreate-adminUI?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/CoCreate-app/CoCreate-adminUI?style=for-the-badge)
-![GitHub labels](https://img.shields.io/github/labels/CoCreate-app/CoCreate-adminUI/help%20wanted?style=for-the-badge)
+![GitHub latest release](https://img.shields.io/github/v/release/CoCreate-app/CoCreate-adminUI?style=flat-square)
+![License](https://img.shields.io/github/license/CoCreate-app/CoCreate-adminUI?style=flat-square)
+![Hiring](https://img.shields.io/static/v1?style=flat-square&label=&message=Hiring&color=blueviolet)
 
 ![CoCreate-adminUI](https://cdn.cocreate.app/docs/CoCreate-adminUI.gif)
 
@@ -26,7 +25,13 @@ For a complete guide and working demo refer to the [doumentation](https://cocrea
 ## NPM
 
 ```shell
-$ npm i @cocreate/adminUI
+$ npm i @cocreate/aminUI
+```
+
+## yarn
+
+```shell
+$ yarn install @cocreate/aadminUI
 ```
 
 # Table of Contents
