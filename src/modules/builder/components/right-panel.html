@@ -1,0 +1,1120 @@
+
+    <style>
+        cocreate-select.styleunit selected {
+            /*padding:0 5px;*/
+            margin:0;
+            text-align:center;
+            background:none;
+        }
+        .pickr{
+            padding:0px;
+            width:100%;
+        }
+        .pickr .pcr-button{
+            height:24px;
+            width: 100%;
+          box-shadow:none!important;
+        }
+    </style>   
+    
+    <form id="domEditorPanel" data-collection="builder" data-document_id="null" class="min-width:305px">
+        <div class="padding-left:5px padding-top:5px">
+            <div class="display:flex margin-bottom:5px font-size:16px tabs">
+                <div className="tab" class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#styles" data-selected_group="editor-panels" selected><i class="fas fa-paint-brush"></i></div>
+                <div class="tab" data-selected="active" data-selected_target="#database" data-selected_group="editor-panels"><i class="fas fa-database"></i></div>
+                <div class="tab" data-selected="active" data-selected_target="#broadcast" data-selected_group="editor-panels"><i class="fas fa-broadcast-tower"></i></div>
+                <div class="tab" data-selected="active" data-selected_target="#logic" data-selected_group="editor-panels"><i class="fas fa-brain"></i></div>
+                <div class="tab" data-selected="active" data-selected_target="#plugins" data-selected_group="editor-panels"><i class="fas fa-plug"></i></div>
+                <div class="tab" data-selected="active" data-selected_target="#settings" data-selected_group="editor-panels"><i class="fas fa-cog"></i></div>
+            </div>
+            <div class="overflow:auto height:90vh">
+                <div class="">
+                 <!--Styles -->
+                <div id="styles" class="editor-panel display:none active" >
+                    <div class="padding:0px_5px_20px_5px">
+                        <cocreate-select class="floating-label sortable" multiple placeholder="Classes" data-attributes="class" data-collection="builder" data-document_id="null" active>
+                          <input class="template-search" placeholder="Add a new class">
+                        </cocreate-select>
+                    </div>
+                    <!--Layout -->
+                    <div class="padding:5px background:gainsboro" data-show=".sizing" data-hide=".sizing">
+                        <span class="sizing hidden"><i class="fas fa-plus"></i></span>
+                        <span class="sizing"><i class="fas fa-minus"></i></span>
+                        <span>Layout</span>
+                    </div>
+                    <div class="sizing padding-bottom:20px">
+                        <div class="margin:5px">
+                            <span>Visibility</span>
+                            <div class="display:flex">
+                                <div class="card background:gainsboro width:50% text-align:center">
+                                    <input type="radio" class="display:none"  id="layout-visible"  value="visible">
+                                    <span class="" for="layout-visible">Visible</span>
+                                </div>
+
+                                <div class="card background:gainsboro width:50% text-align:center">
+                                    <input type="radio" class="display:none"  id="layout-hidden"  value="hidden">
+                                    <span class="" for="layout-hidden">Hidden</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin:5px">
+                            <span>Behaviour</span>
+                            <div class="display:flex">
+                                <div class="card background:gainsboro width:50% text-align:center">
+                                    <input type="radio" class="display:none"  id="layout-fill-parent"  value="inherit">
+                                    <span class="" for="layout-fill-parent">Fill parent</span>
+                                </div>
+
+                                <div class="card background:gainsboro width:50% text-align:center">
+                                    <input type="radio" class="display:none"  id="layout-fit-content"  value="none">
+                                    <span class="" for="layout-fit-content">Fit content</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin:5px">
+                            <span> Vertical Align</span>
+                            <div class="display:flex">
+                                <div class="card background:gainsboro text-align:center width:20% height:90% padding:10px">
+                                    <input type="radio" id="stretch" class="display:none" >
+                                    <span class="" for="stretch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="30px"><path fill="#000" fill-rule="nonzero" d="M15 19H9V6h6v13zM8 6v13H0v1h24v-1h-8V6h8V5H0v1h8z"></path></svg></span>
+                                </div>
+                                <div class="card background:gainsboro text-align:center width:20% height:90% padding:10px">
+                                    <input type="radio" id="verticaltop" class="display:none"  >
+                                    <span class="" for="top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="30px"><path fill="#000" fill-rule="nonzero" d="M18 6H6v13h12V6zM5 6H0V5h24v1h-5v13c0 .6-.4 1-1 1H6a1 1 0 01-1-1V6zm14 6v1H5v-1h14z"></path></svg></span>
+                                </div>
+                                <div class="card background:gainsboro text-align:center width:20% height:90% padding:10px">
+                                    <input type="radio" id="verticalcenter" class="display:none" >
+                                    <span class="" for="center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="30px"><path fill="#000" fill-rule="nonzero" d="M18 6H6v13h12V6zm1 0v13c0 .6-.4 1-1 1H6a1 1 0 01-1-1V6c0-.6.4-1 1-1h12c.6 0 1 .4 1 1zm5 6v1H0v-1h24z"></path></svg></span>
+                                </div>
+                                <div class="card background:gainsboro text-align:center width:20% height:90% padding:10px">
+                                    <input type="radio" id="verticalbottom" class="display:none">
+                                    <span class="" for="bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="30px"><path fill="#000" fill-rule="nonzero" d="M18 19H6V6h12v13zM5 19H0v1h24v-1h-5V6c0-.6-.4-1-1-1H6a1 1 0 00-1 1v13zm14-6v-1H5v1h14z"></path></svg></span>
+                                </div>
+                                <div class="card background:gainsboro text-align:center width:20% height:90% padding:10px">
+                                    <input type="radio" id="baseline" class="display:none">
+                                    <span class="" for="baseline"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="30px"><path fill="#000" fill-rule="evenodd" d="M19 14h1.1a.5.5 0 01.4.8L19 17.3a.5.5 0 01-.8 0l-1.6-2.5a.5.5 0 01.4-.8H18V5.5a.5.5 0 111 0V14zM0 19h24v1H0v-1zM13.4 5l.1 2.9h-.3l-.2-1c-.2-.4-.5-.7-.8-.8-.3-.2-.7-.3-1.2-.3H9.4V15c0 .8 0 1.2.2 1.4.2.3.6.4 1 .4h.4v.3H6v-.3h.4c.5 0 .9-.2 1-.5.2-.2.3-.6.3-1.3V6H5c-.4.2-.6.4-.8.7-.2.3-.4.7-.4 1.3h-.4L3.7 5h9.7z"></path></svg></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin:0_5px">
+                            <input id="order" class="floating-label z-index:0" placeholder="Order:" data-attributes="classstyle" data-attributes_property="order"  data-collection="builder" data-document_id="null" active>
+                        </div>
+                    </div>
+                     <!--Spacing -->
+                    <div class="padding:5px background:gainsboro" data-show=".spacing" data-hide=".spacing">
+                        <span class="spacing hidden"><i class="fas fa-plus"></i></span>
+                        <span class="spacing"><i class="fas fa-minus"></i></span>
+                        <span>Spacing</span>
+                    </div>
+                    <div class="spacing padding-bottom:20px">
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input id="margin-left" class="floating-label z-index:0" placeholder="margin-left:" data-attributes="classstyle" data-attributes_property="margin-left"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="margin-left-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#margin-left">
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units1">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units1" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <input id="margin-right" class="floating-label z-index:0" placeholder="margin-right:" data-attributes="classstyle" data-attributes_property="margin-right"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="margin-right-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#margin-right">
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units2">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units2" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input id="margin-top" class="floating-label z-index:0" placeholder="margin-top:" data-attributes="classstyle" data-attributes_property="margin-top" data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="margin-top-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#margin-top">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units3">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units3" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <input id="margin-bottom" class="floating-label z-index:0" placeholder="margin-bottom:" data-attributes="classstyle" data-attributes_property="margin-bottom"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="margin-bottom-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#margin-bottom">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units4">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units4" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input id="padding-left" class="floating-label z-index:0" placeholder="padding-left:" data-attributes="classstyle" data-attributes_property="padding-left"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="padding-left-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#width">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units5">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units5" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <input id="padding-right" class="floating-label z-index:0" placeholder="padding-right:" data-attributes="classstyle" data-attributes_property="padding-right"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="padding-right-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#width">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units6">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units6" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input id="padding-top" class="floating-label z-index:0" placeholder="padding-top:" data-attributes="classstyle" data-attributes_property="padding-top"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="padding-top-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#width">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units7">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units7" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <input id="padding-bottom" class="floating-label z-index:0" placeholder="padding-bottom:" data-attributes="classstyle" data-attributes_property="padding-bottom"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="padding-bottom-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#width">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units8">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units8" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!--Size -->
+                    <div class="padding:5px background:gainsboro" data-show=".size" data-hide=".size">
+                        <span class="size hidden"><i class="fas fa-plus"></i></span>
+                        <span class="size"><i class="fas fa-minus"></i></span>
+                        <span>Size</span>
+                    </div>
+                    <div class="size padding-bottom:20px">
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input id="width" class="floating-label z-index:0" placeholder="width:" data-attributes="classstyle" data-attributes_property="width"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="width-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#width">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units9">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units9" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <input id="height" class="floating-label z-index:0" placeholder="height:" data-attributes="classstyle" data-attributes_property="height"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="height-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#height">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units10">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units10" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input id="min-width" class="floating-label z-index:0" placeholder="min-width:" data-attributes="classstyle" data-attributes_property="min-width"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-29px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="min-width-unit" class="styleunit remove-none border:none padding:0 min-height:18px!important background:whitesmoke font-size:12px" data-attributes="data-attributes_unit" data-attributes_target="#min-width">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units11">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units11" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <input id="min-height" class="floating-label z-index:0" placeholder="min-height:" data-attributes="classstyle" data-attributes_property="min-height"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="min-height-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#min-height">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units12">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units12" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input id="max-width" class="floating-label z-index:0" placeholder="max-width:" data-attributes="classstyle" data-attributes_property="max-width"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="max-width-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#max-width">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units13">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units13" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <input id="max-height" class="floating-label z-index:0" placeholder="max-height:" data-attributes="classstyle" data-attributes_property="max-height"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="max-height-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#max-height">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units14">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units14" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!--Position -->
+                    <div class="padding:5px background:gainsboro" data-show=".position" data-hide=".position">
+                        <span class="position hidden"><i class="fas fa-plus"></i></span>
+                        <span class="position"><i class="fas fa-minus"></i></span>
+                        <span>Position</span>
+                    </div>
+                    <div class="position padding-bottom:20px">
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input id="top" class="floating-label z-index:0" placeholder="top:" data-attributes="classstyle" data-attributes_property="top"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="top-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#top">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units15">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units15" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <input id="bottom" class="floating-label z-index:0" placeholder="bottom:" data-attributes="classstyle" data-attributes_property="bottom"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="bottom-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#bottom">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units16">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units16" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input id="left" class="floating-label z-index:0" placeholder="left:" data-attributes="classstyle" data-attributes_property="left"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="left-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#left">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units17">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units17" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <input id="right" class="floating-label z-index:0" placeholder="right:" data-attributes="classstyle" data-attributes_property="right"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="right-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#right">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units18">
+                                            <cc-option class="template" data-template_id="units18" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!--typography -->
+                    <div class="padding:5px background:gainsboro" data-show=".typography" data-hide=".typography">
+                        <span class="typography hidden"><i class="fas fa-plus"></i></span>
+                        <span class="typography"><i class="fas fa-minus"></i></span>
+                        <span>Typography</span>
+                    </div>
+                    <div class="typography padding-bottom:20px">
+                        <div class="margin:0_5px">
+                            <cocreate-select class="floating-label" id="font-family" placeholder="font-family:" data-attributes="classstyle" data-attributes_property="font-family"  data-collection="builder" data-document_id="null" active>
+                                <input class="search-options" placeholder="Search" data-item_selector=".option">
+                                <ul class="options z-index:7">
+                                    <cc-option value="none"><span>none</span></cc-option>
+                                    <cc-option value="arial"><span>Arial</span></cc-option>
+                                    <cc-option value="arialblack"><span>Arial Black</span></cc-option>
+                                    <cc-option value="brushscriptmt"><span>Brush Script MT</span></cc-option>
+                                    <cc-option value="comicsansms"><span>Comic Sans MS</span></cc-option>
+                                    <cc-option value="couriernew"><span>Courier New</span></cc-option>
+                                    <cc-option value="georgia"><span>Georgia</span></cc-option>
+                                    <cc-option value="helvetica"><span>Helvetica</span></cc-option>
+                                    <cc-option value="lucidasansunicode"><span>Lucida Sans Unicode</span></cc-option>
+                                    <cc-option value="tahoma"><span>Tahoma</span></cc-option>
+                                    <cc-option value="trebuchetms"><span>Trebuchet MS</span></cc-option>
+                                    <cc-option value="impact"><span>Impact</span></cc-option>
+                                    <cc-option value="verdana"><span>Verdana</span></cc-option>
+                                </ul>
+                            </cocreate-select>
+                        </div>
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input id="font-size" class="floating-label z-index:0" placeholder="font-size:" data-attributes="classstyle" data-attributes_property="font-size"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="font-size-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#font-size">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units19">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units19" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <input type="number" id="font-weight" class="floating-label z-index:0" placeholder="font-weight:" step="100" data-attributes="classstyle" data-attributes_property="font-weight"  data-collection="builder" data-document_id="null" active>
+                            </div>
+                        </div>
+                        <div class="margin:0_5px">
+                            <div class="floating-label" placeholder="color" active>
+                                <div id="color" class="color-picker" data-attributes="classstyle" data-attributes_property="color" data-collection="builder" data-document_id="null" name="color"></div>
+                            </div>
+                        </div>
+                        <div class="margin:0_5px">
+                                <cocreate-select id="font-align" class="floating-label" placeholder="font-align:" data-attributes="classstyle" data-attributes_property="font-align"  data-collection="builder" data-document_id="null" active>
+                                    <ul class="options z-index:7 margin-top:5px">
+                                        <cc-option value="left">
+                                            <label class="fa fa-align-left"></label>
+                                        </cc-option>
+                                        <cc-option value="center">
+                                            <label class="fa fa-align-center"></label>
+                                        </cc-option>
+                                        <cc-option value="right">
+                                            <label class="fa fa-align-right"></label>
+                                        </cc-option>
+                                        <cc-option value="justify">
+                                            <label class="fa fa-align-justify"></label>
+                                        </cc-option>
+                                    </ul>
+                                </cocreate-select>
+                        </div>
+                        <div class="margin:0_5px">
+                                <cocreate-select id="text-decoration" class="floating-label" placeholder="text-decoration:" data-attributes="classstyle" data-attributes_property="text-decoration" data-collection="builder" data-document_id="null" active>
+                                    <ul class="options z-index:7 margin-top:5px">
+                                        <cc-option value="x">
+                                            <span class="fa fa-times"></span>
+                                        </cc-option>
+                                        <cc-option value="u">
+                                            <span class="fa fa-underline"></span>
+                                        </cc-option>
+                                        <cc-option value="s">
+                                            <span class="fa fa-strikethrough"></span>
+                                        </cc-option>
+                                    </ul>
+                                </cocreate-select>
+                        </div>
+                        <div class="margin:0_5px">
+                            <cocreate-select class="remove-none floating-label" placeholder="font-style:" data-attributes="classstyle" data-attributes_property="font-style"  data-collection="builder" data-document_id="null" active>
+                                <ul class="options z-index:7 margin-top:5px">
+                                    <cc-option value="a">
+                                        <label class="fa fa-font"></label>
+                                    </cc-option>
+                                    <cc-option value="em">
+                                        <label class="fa fa-italic"></label>
+                                    </cc-option>
+                                </ul>
+                            </cocreate-select>
+                        </div>
+                    </div>
+                     <!--Border -->
+                    <div class="padding:5px background:gainsboro" data-show=".border" data-hide=".border">
+                        <span class="border hidden"><i class="fas fa-plus"></i></span>
+                        <span class="border"><i class="fas fa-minus"></i></span>
+                        <span>Border</span>
+                    </div>
+                    <div class="border padding-bottom:20px">
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input id="border-width" class="floating-label z-index:0" placeholder="border-width:" data-attributes="classstyle" data-attributes_property="border-width"   data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="border-width-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units21">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units21" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <cocreate-select class="floating-label" id="border-style" placeholder="border-style:" data-attributes="classstyle" data-attributes_property="border-style"  data-collection="builder" data-document_id="null" active>
+
+                                    <ul class="options z-index:7 margin-top:5px">
+                                        <cc-option value="none"><span>none</span></cc-option>
+                                        <cc-option value="solid"><span>solid</span></cc-option>
+                                        <cc-option value="dotted"><span>dotted</span></cc-option>
+                                        <cc-option value="dashed"><span>dashed</span></cc-option>
+                                        <cc-option value="double"><span>double</span></cc-option>
+                                        <cc-option value="groove"><span>groove</span></cc-option>
+                                        <cc-option value="ridge"><span>ridge</span></cc-option>
+                                        <cc-option value="inset"><span>inset</span></cc-option>
+                                        <cc-option value="outset"><span>outset</span></cc-option>
+                                    </ul>
+                                </cocreate-select>
+                            </div>
+                        </div>
+                        <div class="margin:0_5px">
+                            <div class="floating-label" placeholder="border-color" active>
+                                <div id="border-color" class="color-picker" data-attributes="classstyle" data-attributes_property="border-color" data-collection="builder" data-document_id="null" name="border-color"></div>
+                            </div>
+                        </div>
+                        <div class="margin:0_5px">
+                            <input id="border-radius" class="floating-label z-index:0" placeholder="border-radius:" step="100" data-attributes="classstyle" data-attributes_property="border-radius"   data-collection="builder" data-document_id="null" active>
+                            <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                <cocreate-select id="border-radius-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="border-radius">
+                                    <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units22">
+                                        <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units22" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                    </ul>
+                                </cocreate-select>
+                            </div>
+                        </div>
+                    </div>
+                     <!--Shadow -->
+                    <div class="padding:5px background:gainsboro" data-show=".shadow" data-hide=".shadow">
+                        <span class="shadow hidden"><i class="fas fa-plus"></i></span>
+                        <span class="shadow"><i class="fas fa-minus"></i></span>
+                        <span>Shadow</span>
+                    </div>
+                    <div class="shadow padding-bottom:20px">
+                        <!--Box Shadow -->
+                        <div class="card padding:10px_0px">
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <input id="offsetx" class="floating-label z-index:0" placeholder="Offset X:" step="100" data-attributes="classstyle" data-attributes_property="offsetx"   data-collection="builder" data-document_id="null" active>
+                                    <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                        <cocreate-select id="property-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+
+                                            <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units23">
+                                                <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units23" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <input id="offsetv" class="floating-label z-index:0" placeholder="Offset V:" step="100" data-attributes="classstyle" data-attributes_property="offsetv"   data-collection="builder" data-document_id="null" active>
+                                    <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                        <cocreate-select id="property-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+
+                                            <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units24">
+                                                <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units24" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <input id="blur" class="floating-label z-index:0" placeholder="Blur:" step="100" data-attributes="classstyle" data-attributes_sync="blur" data-attributes_unit="px"  data-collection="builder" data-document_id="null" active>
+                                    <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                        <cocreate-select id="property-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+
+                                            <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units25"25>
+                                                <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units26" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <input id="spread" class="floating-label z-index:0" placeholder="Spread:" step="100" data-attributes="classstyle" data-attributes_sync="spread" data-attributes_unit="px"  data-collection="builder" data-document_id="null" active>
+                                    <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                        <cocreate-select id="property-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+
+                                            <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units27">
+                                                <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units27" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                            </ul>
+                                        </cocreate-select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="margin:0_5px">
+                                <input id="fill-color" type="color" class="floating-label z-index:0" placeholder="fill-color:" data-attributes="classstyle" data-attributes_sync="fill-color"  data-collection="builder" data-document_id="null" active>
+                            </div>
+                        </div>
+                    </div>    
+                    <!--Background-->
+                    <div class="padding:5px background:gainsboro" data-show=".backgroundset" data-hide=".backgroundset">
+                        <span class="backgroundset hidden"><i class="fas fa-plus"></i></span>
+                        <span class="backgroundset"><i class="fas fa-minus"></i></span>
+                        <span>Background</span>
+                    </div>
+                    <div class="backgroundset padding-bottom:20px">
+                        <div class="floating-label" placeholder="background-color" active>
+                            <div id="background-color" class="color-picker" data-attributes="classstyle" data-attributes_sync="background-color" data-collection="builder" data-document_id="null"></div>
+                        </div>
+                        <input id="background-image" type="file" class="floating-label z-index:0 display:none" placeholder="image:" step="100" data-attributes="classstyle" data-attributes_sync="background-image"  data-collection="builder" data-document_id="null" active>
+                        <cocreate-select class="floating-label" id="background-repeat" placeholder="background-repeat:" data-attributes="classstyle" data-attributes_property="background-repeat"  data-collection="builder" data-document_id="null" active>
+
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value="none"><span>none</span></cc-option>
+                                <cc-option value="repeat"><span>repeat</span></cc-option>
+                                <cc-option value="repeat-x"><span>repeat-x</span></cc-option>
+                                <cc-option value="repeat-y"><span>repeat-y</span></cc-option>
+                                <cc-option value="norepeat"><span>no repeat</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <cocreate-select class="floating-label" id="background-position" placeholder="background-position" data-attributes="classstyle"  data-collection="builder" data-document_id="null" active>
+
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value="background-position:none"><span>none</span></cc-option>
+                                <cc-option value="background-position:lt"><span>left top</span></cc-option>
+                                <cc-option value="background-position:lc"><span>left center</span></cc-option>
+                                <cc-option value="background-position:lb"><span>left bottom</span></cc-option>
+                                <cc-option value="background-position:rt"><span>right top</span></cc-option>
+                                <cc-option value="background-position:rc"><span>right center</span></cc-option>
+                                <cc-option value="background-position:rb"><span>right bottom</span></cc-option>
+                                <cc-option value="background-position:ct"><span>center top</span></cc-option>
+                                <cc-option value="background-position:cc"><span>center center</span></cc-option>
+                                <cc-option value="background-position:cb"><span>center bottom</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <cocreate-select class="floating-label" id="background-attachment" placeholder="background-attachment:" data-attributes="classstyle" data-attributes_property="background-attachment"  data-collection="builder" data-document_id="null" active>
+
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value="none"><span>none</span></cc-option>
+                                <cc-option value="scroll"><span>scroll</span></cc-option>
+                                <cc-option value="fixed"><span>fixed</span></cc-option>
+                                <cc-option value="local"><span>local</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <cocreate-select class="floating-label" id="background-size" placeholder="background-size:" data-attributes="classstyle" data-attributes_property="background-size"  data-collection="builder" data-document_id="null" active>
+
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value="none"><span>none</span></cc-option>
+                                <cc-option value="auto"><span>auto</span></cc-option>
+                                <cc-option value="cover"><span>cover</span></cc-option>
+                                <cc-option value="contain"><span>contain</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                    </div>
+                     <!--Extra -->
+                    <div class="padding:5px background:gainsboro" data-show=".extra" data-hide=".extra">
+                        <span class="extra hidden"><i class="fas fa-plus"></i></span>
+                        <span class="extra"><i class="fas fa-minus"></i></span>
+                        <span>Extra</span>
+                    </div>
+                    <div class="extra padding:10px_0">
+                        <div class="margin:0_5px">
+                            <input id="opacity" class="floating-label z-index:0" placeholder="opacity:" data-attributes="classstyle" data-attributes_property="opacity"   data-collection="builder" data-document_id="null" active>
+                        </div>
+                        <div class="margin:0_5px">
+                            <cocreate-select class="floating-label" id="cursor" placeholder="Cursor:" data-attributes="classstyle" data-attributes_property="cursor"  data-collection="builder" data-document_id="null" active>
+                                
+                                <ul class="options z-index:7 margin-top:5px">
+                                    <cc-option value="none"><span>none</span></cc-option>
+                                    <cc-option value="auto"><span>Auto</span></cc-option>
+                                    <cc-option value="default"><span></span>Default</cc-option>
+                                    <cc-option value="none"><span></span>None</cc-option>
+                                    <cc-option value="unset"><span></span>Unset</cc-option>
+                                    <cc-option value="acc-optionas"><span></span>Alias</cc-option>
+                                    <cc-option value="col-resize"><span>Column resize</span></cc-option>
+                                    <cc-option value="row-resize"><span>Row resize</span></cc-option>
+                                    <cc-option value="context-menu"><span>Context menu</span></cc-option>
+                                    <cc-option value="copy"><span>Copy</span></cc-option>
+                                    <cc-option value="crosshair"><span></span>Crosshair</cc-option>
+                                    <cc-option value="n-resize"><span>Resize N</span></cc-option>
+                                    <cc-option value="ne-resize"><span>Resize NE</span></cc-option>
+                                    <cc-option value="e-resize"><span>Resize E</span></cc-option>
+                                    <cc-option value="se-resize"><span>Resize SE</span></cc-option>
+                                    <cc-option value="s-resize"><span>Resize S</span></cc-option>
+                                    <cc-option value="sw-resize"><span>Resize SW</span></cc-option>
+                                    <cc-option value="w-resize"><span>Resize W</span></cc-option>
+                                    <cc-option value="nw-resize"><span>Resize NW</span></cc-option>
+                                    <cc-option value="ns-resize"><span>Resize NS</span></cc-option>
+                                    <cc-option value="nesw-resize"><span>Resize NESW</span></cc-option>
+                                    <cc-option value="ew-resize"><span>Resize EW</span></cc-option>
+                                    <cc-option value="nwse-resize"><span>Resize NWSE</span></cc-option>
+                                    <cc-option value="grab"><span>Grab</span></cc-option>
+                                    <cc-option value="grabbing"><span>Grabbing</span></cc-option>
+                                    <cc-option value="help"><span>Help</span></cc-option>
+                                    <cc-option value="move"><span>Move</span></cc-option>
+                                    <cc-option value="not-allowed"><span>Not allowed</span></cc-option>
+                                    <cc-option value="pointer"><span>Pointer</span></cc-option>
+                                    <cc-option value="progress"><span>Progress</span></cc-option>
+                                    <cc-option value="text"><span>Text</span></cc-option>
+                                    <cc-option value="vertical-text"><span>Vertical text</span></cc-option>
+                                    <cc-option value="zoom-in"><span>Zoom in</span></cc-option>
+                                    <cc-option value="zoom-out"><span>Zoom out</span></cc-option>
+                                </ul>
+                            </cocreate-select>
+                        </div>
+                        <div class="card margin:10px padding:10px_0px">
+                            <div class="margin:0_5px">
+                                <cocreate-select class="floating-label" id="filter-type" placeholder="FilterType:" data-attributes="classstyle" data-attributes_property="filter-type"  data-collection="builder" data-document_id="null" active>
+        
+                                    <ul class="options z-index:7 margin-top:5px">
+                                        <cc-option value="none"><span>none</span></cc-option>
+                                        <cc-option value="blur"><span>blur</span></cc-option>
+                                        <cc-option value="brightness"><span>brightness</span></cc-option>
+                                        <cc-option value="contrast"><span>contrast</span></cc-option>
+                                        <cc-option value="grayscale"><span>grayscale</span></cc-option>
+                                        <cc-option value="hue-rotate"><span>hue-rotate</span></cc-option>
+                                        <cc-option value="invert"><span>invert</span></cc-option>
+                                        <cc-option value="opacity"><span>opacity</span></cc-option>
+                                        <cc-option value="saturate"><span>saturate</span></cc-option>
+                                        <cc-option value="sepia"><span>sepia</span></cc-option>
+                                    </ul>
+                                </cocreate-select>
+                            </div>
+                            <div class="margin:0_5px">
+                                <input id="strenth" class="floating-label z-index:0" placeholder="strenth:" step="100" data-attributes="classstyle" data-attributes_property="strenth"   data-collection="builder" data-document_id="null" active>
+                            </div>
+                        </div>
+                        <div class="card margin:10px padding:10px_0px">
+                            <div class="margin:0_5px">
+                                <cocreate-select class="floating-label" id="transform-type" placeholder="transform-type:" data-attributes="classstyle" data-attributes_property="transform-type"  data-collection="builder" data-document_id="null" active>
+        
+                                    <ul class="options z-index:7 margin-top:5px">
+                                        <cc-option value="none"><span>none</span></cc-option>
+                                        <cc-option value="translateX"><span>Move X</span></cc-option>
+                                        <cc-option value="translateY"><span>Move Y</span></cc-option>
+                                        <cc-option value="translateZ"><span>Move Z</span></cc-option>
+                                        <cc-option value="scale"><span>Scale</span></cc-option>
+                                        <cc-option value="scaleX"><span>Scale X</span></cc-option>
+                                        <cc-option value="scaleY"><span>Scale Y</span></cc-option>
+                                        <cc-option value="scaleZ"><span>Scale Z</span></cc-option>
+                                        <cc-option value="rotateX"><span>Rotate X</span></cc-option>
+                                        <cc-option value="rotateY"><span>Rotate Y</span></cc-option>
+                                        <cc-option value="rotateZ"><span>Rotate Z</span></cc-option>
+                                        <cc-option value="skewX"><span>Skew X</span></cc-option>
+                                        <cc-option value="skewY"><span>Skew Y</span></cc-option>
+                                    </ul>
+                                </cocreate-select>
+                            </div>
+                            <div class="margin:0_5px">
+                                <input id="translation-value" class="floating-label z-index:0" placeholder="Value:" step="100" data-attributes="classstyle" data-attributes_property="translation-value"   data-collection="builder" data-document_id="null" active>
+                            </div>
+                        </div>
+                        <div class="card margin:10px padding:10px_0px">
+                            <div class="margin:0_5px">
+                                <cocreate-select class="floating-label" id="transition-property" placeholder="TransitionProperty:" data-attributes="classstyle" data-attributes_property="transition-property"  data-collection="builder" data-document_id="null" active>
+        
+                                    <ul class="options z-index:7 margin-top:5px">
+                                        <cc-option value="none"><span>none</span></cc-option>
+                                        <cc-option value="all"><span>All</span></cc-option>
+                                        <cc-option value="width"><span>Width</span></cc-option>
+                                        <cc-option value="height"><span>Height</span></cc-option>
+                                        <cc-option value="background-color"><span>Background color</span></cc-option>
+                                        <cc-option value="transform"><span>Transform</span></cc-option>
+                                        <cc-option value="border"><span>Border</span></cc-option>
+                                        <cc-option value="box-shadow"><span>Box shadow</span></cc-option>
+                                        <cc-option value="text-shadow"><span>Text shadow</span></cc-option>
+                                        <cc-option value="opacity"><span>Opacity</span></cc-option>
+                                        <cc-option value="color"><span>Color</span></cc-option>
+                                    </ul>
+                                </cocreate-select>
+                            </div>
+                            <div class="display:flex height:50px">
+                                <div class="width:50% margin:0_5px">
+                                    <input id="duration" class="floating-label z-index:0" placeholder="duration:" step="100" data-attributes="classstyle" data-attributes_property="duration"   data-collection="builder" data-document_id="null" active>
+                                </div>
+                                <div class="width:50% margin:0_5px">
+                                    <cocreate-select class="floating-label" id="easing" placeholder="Easing:" data-attributes="classstyle" data-attributes_property="easing"  data-collection="builder" data-document_id="null" active>
+            
+                                        <ul class="options z-index:7 margin-top:5px">
+                                            <cc-option value="none"><span>none</span></cc-option>
+                                            <cc-option value="linear"><span>linear</span></cc-option>
+                                            <cc-option value="ease"><span>ease</span></cc-option>
+                                            <cc-option value="ease-in"><span>ease-in</span></cc-option>
+                                            <cc-option value="ease-out"><span>ease-out</span></cc-option>
+                                            <cc-option value="ease-in-out"><span>ease-in-out</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--dataBase  -->
+                <div id="database" class="editor-panel display:none">
+                    <div class="padding:5px background:gainsboro" data-show=".database" data-hide=".database">
+                        <span class="database hidden"><i class="fas fa-plus"></i></span>
+                        <span class="database"><i class="fas fa-minus"></i></span>
+                        <span>Database</span>
+                    </div>
+                    <div class="database padding-bottom:20px">
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <cocreate-select class="floating-label" id="data-realtime" placeholder="data-realtime:" data-attributes="data-realtime"  data-collection="builder" data-document_id="null" active>
+                                    <ul class="options z-index:7 margin-top:5px" data-search_id="search_01">
+                                        <cc-option value=""><span>none</span></cc-option>
+                                        <cc-option value="true"><span>true</span></cc-option>
+                                        <cc-option value="false"><span>false</span></cc-option>
+                                    </ul>
+                                </cocreate-select>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <cocreate-select class="floating-label" id="data-cursors" placeholder="data-cursors:" data-attributes="data-cursors"  data-collection="builder" data-document_id="null" active>
+                                    <ul class="options z-index:7 margin-top:5px">
+                                        <cc-option value=""><span>none</span></cc-option>
+                                        <cc-option value="true"><span>true</span></cc-option>
+                                        <cc-option value="false"><span>false</span></cc-option>
+                                    </ul>
+                                </cocreate-select>
+                            </div>
+                        </div>
+                        <div class="margin:0_5px">
+                             <cocreate-select class="floating-label" id="data-collection" placeholder="data-collection:" data-attributes="data-collection"  data-collection="builder" data-document_id="null" active>
+                                    <ul class="options z-index:7 margin-top:5px">
+                                        <cc-option value=""><span>none</span></cc-option>
+                                        <cc-option value="true"><span>true</span></cc-option>
+                                        <cc-option value="false"><span>false</span></cc-option>
+                                    </ul>
+                            </cocreate-select>
+                        </div>
+                        <div class="margin:0_5px">
+                            <cocreate-select class="floating-label" id="data-docuemnt_id" placeholder="data-docuemnt_id:" data-attributes="data-docuemnt_id" data-collection="builder" data-document_id="null" active>
+                                <ul class="options z-index:7 margin-top:5px">
+                                    <cc-option value=""><span>none</span></cc-option>
+                                    <cc-option value="true"><span>true</span></cc-option>
+                                    <cc-option value="false"><span>false</span></cc-option>
+                                </ul>
+                            </cocreate-select>
+                        </div>
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input data-attributes="data-prefix" type="text" class="floating-label" placeholder="data-prefix" id="data-prefix" data-collection="builder" data-document_id="null" active>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <input data-attributes="name" type="text" class="floating-label" placeholder="Name" id="name" data-collection="builder" data-document_id="null" active>
+                            </div>
+                        </div>
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <cocreate-select class="floating-label" id="data-read_value" placeholder="data-read_value:" data-attributes="data-read_value"  data-collection="builder" data-document_id="null" active>
+                                    <ul class="options z-index:7 margin-top:5px">
+                                        <cc-option value=""><span>none</span></cc-option>
+                                        <cc-option value="true"><span>true</span></cc-option>
+                                        <cc-option value="false"><span>false</span></cc-option>
+                                    </ul>
+                                </cocreate-select>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                 <cocreate-select class="floating-label" id="data-save" placeholder="data-save_value:" data-attributes="data-save"  data-collection="builder" data-document_id="null" active>
+                                    <ul class="options z-index:7 margin-top:5px">
+                                        <cc-option value=""><span>none</span></cc-option>
+                                        <cc-option value="true"><span>true</span></cc-option>
+                                        <cc-option value="false"><span>false</span></cc-option>
+                                    </ul>
+                                </cocreate-select>
+                            </div>
+                        </div>
+                        <div class="margin:0_5px">
+                             <cocreate-select class="floating-label" id="data-action" placeholder="data-action:" data-attributes="data-action"  data-collection="builder" data-document_id="null" active>
+                                <ul class="options z-index:7 margin-top:5px">
+                                    <cc-option value=""><span>none</span></cc-option>
+                                    <cc-option value="true"><span>true</span></cc-option>
+                                    <cc-option value="false"><span>false</span></cc-option>
+                                </ul>
+                            </cocreate-select>
+                        </div>
+                    </div>
+                    <div class="padding:5px background:gainsboro" data-show=".fetchlist" data-hide=".fetchlist">
+                        <span class="fetchlist hidden"><i class="fas fa-plus"></i></span>
+                        <span class="fetchlist"><i class="fas fa-minus"></i></span>
+                        <span>Fetch List</span>
+                    </div>
+                    <div class="fetchlist padding-bottom:20px margin:0_5px">
+                        <cocreate-select class="floating-label" id="data-fetch_collection" placeholder="data-fetch_collection:" data-attributes="data-fetch_collection"  data-collection="builder" data-document_id="null" active>
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value=""><span>none</span></cc-option>
+                                <cc-option value="true"><span>true</span></cc-option>
+                                <cc-option value="false"><span>false</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <cocreate-select class="floating-label" id="data-fetch_docuemnt_id" placeholder="data-fetch_docuemnt_id:" data-attributes="data-fetch_docuemnt_id"  data-collection="builder" data-document_id="null" active>
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value=""><span>none</span></cc-option>
+                                <cc-option value="true"><span>true</span></cc-option>
+                                <cc-option value="false"><span>false</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <input data-attributes="data-fetch_name" type="text" class="floating-label" placeholder="data-fetch_name"  id="data-fetch_name" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-filter_name" type="text" class="floating-label" placeholder="data-filter_name"  id="data-filter_name" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-filter_value" type="text" class="floating-label" placeholder="data-filter_value"  id="data-filter_value" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-template_id" type="text" class="floating-label" placeholder="data-template_id"  id="data-template_id" data-collection="builder" data-document_id="null" active>    
+                    </div>
+                </div>
+                <!--Broadcast -->
+                <div id="broadcast" class="editor-panel display:none">
+                    <div class="padding:5px background:gainsboro" data-show=".broadcast" data-hide=".broadcast">
+                        <span class="broadcast hidden"><i class="fas fa-plus"></i></span>
+                        <span class="broadcast"><i class="fas fa-minus"></i></span>
+                        <span>Broadcast</span>
+                    </div>
+                    <div class="broadcast padding-bottom:20px margin:0_5px">
+                        <cocreate-select class="floating-label" id="data-pass_collection" placeholder="broadcast" data-attributes="data-pass_collection"  data-collection="builder" data-document_id="null" active>
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value=""><span>none</span></cc-option>
+                                <cc-option value="true"><span>true</span></cc-option>
+                                <cc-option value="false"><span>false</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <cocreate-select class="floating-label" id="data-pass_document_id" placeholder="broadcast-sender" data-attributes="data-pass_document_id"  data-collection="builder" data-document_id="null" active>
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value=""><span>none</span></cc-option>
+                                <cc-option value="true"><span>true</span></cc-option>
+                                <cc-option value="false"><span>false</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <input data-attributes="data-pass_value" type="text" class="floating-label" placeholder="namespace"  id="data-pass_value" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-pass_value" type="text" class="floating-label" placeholder="room"  id="data-pass_value" data-collection="builder" data-document_id="null" active>
+                    </div>
+                    <!--Messages -->
+                    <div class="padding:5px background:gainsboro" data-show=".calculator" data-hide=".calculator">
+                        <span class="calculator hidden"><i class="fas fa-plus"></i></span>
+                        <span class="calculator"><i class="fas fa-minus"></i></span>
+                        <span>messages</span>
+                    </div>
+                    <div class="calculator padding-bottom:20px margin:0_5px">
+                        <input data-attributes="data-calculation" type="text" class="floating-label" placeholder="messages" id="data-calculation" data-collection="builder" data-document_id="null" active>
+                    </div>
+                </div>
+                <!--Logic -->
+                <div id="logic" class="editor-panel display:none">
+                    <div class="padding:5px background:gainsboro" data-show=".logic" data-hide=".logic">
+                        <span class="logic hidden"><i class="fas fa-plus"></i></span>
+                        <span class="logic"><i class="fas fa-minus"></i></span>
+                        <span>Logic</span>
+                    </div>
+                    <div class="logic padding-bottom:20px margin:0_5px">
+                        <input data-attributes="data-pass_to" type="text" class="floating-label" placeholder="data-pass_to" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-pass_id" type="text" class="floating-label" placeholder="data-pass_id" data-collection="builder" data-document_id="null" active>
+                        <cocreate-select class="floating-label" id="data-pass_collection" placeholder="data-pass_collection:" data-attributes="data-pass_collection"  data-collection="builder" data-document_id="null" active>
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value=""><span>none</span></cc-option>
+                                <cc-option value="true"><span>true</span></cc-option>
+                                <cc-option value="false"><span>false</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <cocreate-select class="floating-label" id="data-pass_document_id" placeholder="data-pass_document_id:" data-attributes="data-pass_document_id"  data-collection="builder" data-document_id="null" active>
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value=""><span>none</span></cc-option>
+                                <cc-option value="true"><span>true</span></cc-option>
+                                <cc-option value="false"><span>false</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin-right:5px">
+                                <input data-attributes="data-pass_prefix" type="text" class="floating-label" placeholder="data-pass_prefix"  id="data-pass_prefix" data-collection="builder" data-document_id="null" active>
+                            </div>
+                            <div class="width:50% margin-left:5px">
+                                <input data-attributes="data-pass_name" type="text" class="floating-label" placeholder="data-pass_name"  id="data-pass_name" data-collection="builder" data-document_id="null" active>
+                            </div>
+                        </div>
+                
+                        <input data-attributes="data-pass_value" type="text" class="floating-label" placeholder="data-pass_value"  id="data-pass_value" data-collection="builder" data-document_id="null" active>
+                        <cocreate-select class="floating-label" id="data-pass_fetch_collection" placeholder="data-pass_fetch_collection:" data-attributes="data-pass_fetch_collection"  data-collection="builder" data-document_id="null" active>
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value=""><span>none</span></cc-option>
+                                <cc-option value="true"><span>true</span></cc-option>
+                                <cc-option value="false"><span>false</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <cocreate-select class="floating-label" id="data-pass_fetch_document_id" placeholder="data-pass_fetch_document_id:" data-attributes="data-pass_fetch_document_id"  data-collection="builder" data-document_id="null" active>
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value=""><span>none</span></cc-option>
+                                <cc-option value="true"><span>true</span></cc-option>
+                                <cc-option value="false"><span>false</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <input data-attributes="data-pass_fetch_name" type="text" class="floating-label" placeholder="data-pass_fetch_name"  id="data-pass_fetch_name" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-pass_filter_name" type="text" class="floating-label" placeholder="data-pass_filter_name"  id="data-pass_filter_name" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-pass_filter_value" type="text" class="floating-label" placeholder="data-pass_filter_value"  id="data-pass_filter_value"data-collection="builder" data-document_id="null" active>
+                        <cocreate-select class="floating-label" id="data-pass_refresh" placeholder="data-pass_refresh" data-attributes="data-pass_refresh"  data-collection="builder" data-document_id="null" active>
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value=""><span>none</span></cc-option>
+                                <cc-option value="true"><span>true</span></cc-option>
+                                <cc-option value="false"><span>false</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <input data-attributes="data-pass_value_to" type="text" class="floating-label" placeholder="data-pass_value_to"  id="data-pass_value_to" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-pass_value_id" type="text" class="floating-label" placeholder="data-pass_value_id"  id="data-pass_value_id" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-get_value" type="text" class="floating-label" placeholder="data-get_value"  id="data-get_value" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-room" type="text" class="floating-label" placeholder="data-room"  id="data-room" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-namespace" type="text" class="floating-label" placeholder="data-namespace"  id="data-namespace" data-collection="builder" data-document_id="null" active>
+                    </div>
+                    <div class="padding:5px background:gainsboro" data-show=".datavisible" data-hide=".datavisible">
+                        <span class="datavisible hidden"><i class="fas fa-plus"></i></span>
+                        <span class="datavisible"><i class="fas fa-minus"></i></span>
+                        <span>Conditional Logic</span>
+                    </div>
+                    <div class="datavisible padding-bottom:20px margin:0_5px">
+                        <input data-attributes="data-show" type="text" class="floating-label" placeholder="data-show"  id="data-show" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-hide" type="text" class="floating-label" placeholder="data-hide"  id="data-hide" data-collection="builder" data-document_id="null" active>
+                    </div>
+                    <div class="padding:5px background:gainsboro" data-show=".dataselected" data-hide=".dataselected">
+                        <span class="dataselected hidden"><i class="fas fa-plus"></i></span>
+                        <span class="dataselected"><i class="fas fa-minus"></i></span>
+                        <span>Selected</span>
+                    </div>
+                    <div class="dataselected padding-bottom:20px margin:0_5px">
+                        <input data-attributes="data-selected" type="text" class="floating-label" placeholder="data-selected"  id="data-selected" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-selected_attribute" type="text" class="floating-label" placeholder="data-selected_attribute"  id="data-selected_attribute" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-selected_target" type="text" class="floating-label" placeholder="data-selected_target"  id="data-selected_target" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-selected_closest" type="text" class="floating-label" placeholder="data-selected_closest"  id="data-selected_closest" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-selected_group" type="text" class="floating-label" placeholder="data-selected_group"  id="data-selected_group" data-collection="builder" data-document_id="null" active>
+                    </div>
+                    <div class="padding:5px background:gainsboro" data-show=".toggleattr" data-hide=".toggleattr">
+                        <span class="toggleattr hidden"><i class="fas fa-plus"></i></span>
+                        <span class="toggleattr"><i class="fas fa-minus"></i></span>
+                        <span>Toggle</span>
+                    </div>
+                    <div class="toggleattr padding-bottom:20px margin:0_5px">
+                        <input data-attributes="data-toggle" type="text" class="floating-label" placeholder="data-toggle"  id="data-toggle" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-toggle_attribute" type="text" class="floating-label" placeholder="data-toggle_attribute"  id="data-toggle_attribute" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-toggle_target" type="text" class="floating-label" placeholder="data-toggle_target"  id="data-toggle_target" data-collection="builder" data-document_id="null" active>
+                        <input data-attributes="data-toggle_closest" type="text" class="floating-label" placeholder="data-toggle_closest"  id="data-toggle_closest" data-collection="builder" data-document_id="null" active>
+                    </div>
+                    <div class="padding:5px background:gainsboro" data-show=".hoverattr" data-hide=".hoverattr">
+                        <span class="hoverattr hidden"><i class="fas fa-plus"></i></span>
+                        <span class="hoverattr"><i class="fas fa-minus"></i></span>
+                        <span>Hover</span>
+                    </div>
+                    <div class="hoverattr padding-bottom:20px margin:0_5px">
+                        <input type="text" class="floating-label" data-attributes="data-hover" placeholder="data-hover" id="data-hover" data-collection="builder" data-document_id="null" active>
+                        <input type="text" data-attributes="data-hover_attribute" class="floating-label" placeholder="data-hover_attribute"  id="data-hover_attribute" data-collection="builder" data-document_id="null" active>
+                        <input type="text" data-attributes="data-hover_target" class="floating-label" placeholder="data-hover_target"  id="data-hover_target" data-collection="builder" data-document_id="null" active>
+                        <input type="text" data-attributes="data-hover_closest" class="floating-label" placeholder="data-hover_closest"  id="data-hover_closest" data-collection="builder" data-document_id="null" active>
+                    </div>
+                    <div class="padding:5px background:gainsboro" data-show=".scroll" data-hide=".scroll">
+                        <span class="scroll hidden"><i class="fas fa-plus"></i></span>
+                        <span class="scroll"><i class="fas fa-minus"></i></span>
+                        <span>Scroll</span>
+                    </div>
+                    <div class="scroll padding-bottom:20px">
+                        <div class="margin:0_5px">
+                            <input type="text" data-attributes="data-scroll" class="floating-label" placeholder="data-scroll"  id="data-scroll" data-collection="builder" data-document_id="null" active>
+                            <input type="text" data-attributes="data-scroll_attribute" class="floating-label" placeholder="data-scroll_attribute"  id="data-scroll_attribute" data-collection="builder" data-document_id="null" active>
+                            <input type="text" data-attributes="data-scroll_target" class="floating-label" placeholder="data-scroll_target"  id="data-scroll_target" data-collection="builder" data-document_id="null" active>
+                            <input type="text" data-attributes="data-scroll_closest" class="floating-label" placeholder="data-scroll_closest"   id="data-scroll_closest" data-collection="builder" data-document_id="null" active>
+                        </div>
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input id="data-scroll_up" class="floating-label z-index:0" placeholder="data-scroll_up" data-attributes="classstyle" data-attributes_property="data-scroll_up" data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="data-scroll_up-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#data-scroll_up">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units29">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px border-radius:4px" data-template_id="units29" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <input id="data-scroll_down" class="floating-label z-index:0" placeholder="data-scroll_down:" data-attributes="classstyle" data-attributes_property="data-scroll_down" data-collection="builder" data-document_id="null" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="data-scroll_down-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#data-scroll_down">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" data-fetch_collection="modules" data-filter_value="5f94ff945412e75f9b414a3e" data-filter_name="_id" data-filter_operator="$eq" data-fetch_name="units" data-template_id="units30">
+                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" data-template_id="units30" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin:0_5px">
+                            <input id="data-scroll_position" data-attributes="data-scroll_position" class="floating-label z-index:0" placeholder="data-scroll_position:" data-collection="builder" data-document_id="null" active>
+                            <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                <cocreate-select id="data-scroll_position-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" data-collection="builder" data-document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#data-scroll_position">
+                                    <ul class="options z-index:7">
+                                        <cc-option value="px"><span class="margin:auto">px</span></cc-option>
+                                        <cc-option value="%"><span class="margin:auto">%</span></cc-option>
+                                    </ul>
+                                </cocreate-select>
+                            </div>
+                        </div>
+                        <div class="margin:0_5px">
+                            <input type="text" data-attributes="data-scroll_top" class="floating-label" placeholder="data-scroll_top"  id="data-scroll_top" data-collection="builder" data-document_id="null" active>
+                            <input type="text" data-attributes="data-scroll_bottom" class="floating-label" placeholder="data-scroll_bottom"  id="data-scroll_bottomn" data-collection="builder" data-document_id="null" active>
+                            <input type="text" data-attributes="data-scrolling" class="floating-label" placeholder="data-scrolling"  id="data-scrolling" data-collection="builder" data-document_id="null" active>
+                            <input type="text" data-attributes="data-scroll_intersect" class="floating-label" placeholder="data-scroll_intersect"  id="data-scroll_intersect" data-collection="builder" data-document_id="null" active>
+                        </div>
+                    </div>
+                     <!--Clone -->
+                    <div class="padding:5px background:gainsboro" data-show=".clone" data-hide=".clone">
+                        <span class="clone hidden"><i class="fas fa-plus"></i></span>
+                        <span class="clone"><i class="fas fa-minus"></i></span>
+                        <span>Clone</span>
+                    </div>
+                    <div class="clone padding-bottom:20px margin:0_5px">
+                        <input data-attributes="data-clone_id" type="text" class="floating-label" placeholder="data-clone_id"  id="data-clone_id" data-collection="builder" data-document_id="null" active>
+                    </div>
+                      <!--Calculations -->
+                     <div class="padding:5px background:gainsboro" data-show=".calculator" data-hide=".calculator">
+                        <span class="calculator hidden"><i class="fas fa-plus"></i></span>
+                        <span class="calculator"><i class="fas fa-minus"></i></span>
+                        <span>Calculations</span>
+                    </div>
+                    <div class="calculator padding-bottom:20px margin:0_5px">
+                        <input data-attributes="data-calculation" type="text" class="floating-label" placeholder="data-calculation"  id="data-calculation" data-collection="builder" data-document_id="null" active>
+                    </div>
+                </div>
+                <!--Plugins -->
+                <div id="plugins" class="editor-panel display:none">
+                    <div class="padding:5px background:gainsboro" data-show=".plugins" data-hide=".plugins">
+                        <span class="plugins hidden"><i class="fas fa-plus"></i></span>
+                        <span class="plugins"><i class="fas fa-minus"></i></span>
+                        <span>stripe</span>
+                    </div>
+                    <div class="plugins padding-bottom:20px margin:0_5px">
+                        <cocreate-select class="floating-label" id="data-pass_collection" placeholder="data-stripe" data-attributes="data-stripe"  data-collection="builder" data-document_id="null" active>
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value=""><span>none</span></cc-option>
+                                <cc-option value="createCustomer.email"><span>email</span></cc-option>
+                                <cc-option value="createCustomer.description"><span>description</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <cocreate-select class="floating-label" id="data-pass_document_id" placeholder="data-action" data-attributes="data-action"  data-collection="builder" data-document_id="null" active>
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value=""><span>none</span></cc-option>
+                                <cc-option value="createCustomer"><span>createCustomer</span></cc-option>
+                                <cc-option value="getBalance"><span>getBalance</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                    </div>
+                    <!--sendgrd -->
+                    <div class="padding:5px background:gainsboro" data-show=".calculator" data-hide=".calculator">
+                        <span class="calculator hidden"><i class="fas fa-plus"></i></span>
+                        <span class="calculator"><i class="fas fa-minus"></i></span>
+                        <span>sendgrid</span>
+                    </div>
+                    <div class="calculator padding-bottom:20px margin:0_5px">
+                        <cocreate-select class="floating-label" id="data-pass_collection" placeholder="data-sendgrid" data-attributes="data-stripe"  data-collection="builder" data-document_id="null" active>
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value=""><span>none</span></cc-option>
+                                <cc-option value="sendEmail.to"><span>to</span></cc-option>
+                                <cc-option value="sendEmail.from"><span>from</span></cc-option>
+                                <cc-option value="sendEmail.subject"><span>subject</span></cc-option>
+                                <cc-option value="sendEmail.html"><span>html</span></cc-option>
+                                <cc-option value="sendEmail.text"><span>text</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                        <cocreate-select class="floating-label" id="data-pass_document_id" placeholder="data-action" data-attributes="data-action"  data-collection="builder" data-document_id="null" active>
+                            <ul class="options z-index:7 margin-top:5px">
+                                <cc-option value=""><span>none</span></cc-option>
+                                <cc-option value="sendEmail"><span>sendEmail</span></cc-option>
+                                <cc-option value="domainAuthentication"><span>domainAuthentication</span></cc-option>
+                            </ul>
+                        </cocreate-select>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </form>
+

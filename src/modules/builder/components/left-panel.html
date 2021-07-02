@@ -1,0 +1,164 @@
+        <div class="padding:5px min-width:260px">
+            <div class="display:flex margin-bottom:5px font-size:16px tabs">
+                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#vdom" data-selected_group="left-panels"><i class="fas fa-stream"></i></div>
+                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#assets" data-selected_group="left-panels">
+                    <i class="fas fa-photo-video"></i>
+                </div>
+                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#files" data-selected_group="left-panels"><i class="fas fa-folder"></i></div>
+                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#uploader" data-selected_group="left-panels">
+                    <!--<a target="modal" href="https://server.cocreate.app/CoCreate-modules/CoCreate-builder/demo/components/uploader.html" data-modal_header="false" data-pass_collection="files" data-pass_document_id="" data-pass_name="html" data-pass_to="render" data-modal_width="750px" data-modal_height="570px" data-modal_color="#229954" data-modal_header="false">-->
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    <!--    <div data-pass-collection="apples" data-pass-document_id="60ac06d5741a03083ab0740f" name='html' data-pass_to="code-editor"></div>-->
+                    <!--</a>-->
+                </div>
+                <div className="left-tabs" class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#blocks" data-selected_group="left-panels" selected><i class="fas fa-th-large"></i></div>
+
+            </div>
+            <div class="overflow:overlay height:90vh">
+                 <!--Blocks -->
+                <div id="blocks" class="left-panel display:none position:relative active">
+                            
+                    <div class="display:flex justify-content:center position:relative margin-bottom:30px">
+                        <div class="card background:gainsboro width:50% text-align:center padding:5px" data-selected="active" data-selected_target="#elements" data-selected_group="components" selected>Elements</div>
+                        <div class="card background:gainsboro width:50% text-align:center padding:5px" data-selected="active" data-selected_target="#components" data-selected_group="components" selected>Components</div>
+                        <button target="modal" href="./applist"  data-pass_to="form-field" data-modal_width="830px" data-modal_header="false" class="position:absolute top:13px padding:5px background:gainsboro color:#505050 grow-hover border-radius:50%">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    
+                     <!--Block Categories -->
+                    <div  id="elements" class="components display:none active" data-template_id="block-categories" data-fetch_collection="tags" data-filter_name="module" data-filter_value="blocks" data-order_by="position" data-order_type="asc" data-render_id="tag">
+                            
+                         <!--Block Categories Template -->
+                        <div class="template" data-template_id="block-categories" data-render_key="tag" data-render_array="tag.data" data-document_id="{{tag._id}}">
+                            <div class="padding:5px background:gainsboro" data-show=".category{{tag._id}}" data-hide=".category{{tag._id}}">
+                                <span class="category{{tag._id}} hidden"><i class="fas fa-plus"></i></span>
+                                <span class="category{{tag._id}}"><i class="fas fa-minus"></i></span>
+                                <span data-collection="{{tag.collection}}" data-document_id="{{tag._id}}" name="name">Category Name</span>
+                            </div>
+                             <!--Blocks  -->
+                            <div class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px" data-template_id="{{tag._id}}" data-fetch_collection="blocks" data-filter_name="category" data-filter_value="{{tag._id}}" data-order_by="position" data-order_type="asc">
+                                 <!--Blocks Template -->
+                                <div data-template_id="{{tag._id}}" class="template card flex-grow:1 width:70px height:75px margin:5px padding:5px" data-hover="display:block!important" data-hover_target="#editblock{{data._id}}" data-document_id="{{data._id}}">
+                                    <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
+                                        <!--<a target="modal" data-pass_collection="files" data-pass_document_id="60c02a57df12fd0d3939aca0" data-pass_to="render" data-modal_width="320px" data-modal_header="false">-->
+                                        <!--    <i class="fas fa-pencil-alt"></i>-->
+                                        <!--    <div data-pass_collection="blocks" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>-->
+                                        <!--</a>-->
+                                        <a target="modal" href="./block-form" data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields" data-modal_width="320px" data-modal_header="false">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </a>
+                                    </div>
+                                    <div data-cloneable="true" data-insert-html='{{data.html}}' class="height:65px padding:5px">
+                                        <i data-collection="{{collection}}" data-document_id="{{data._id}}" name="icon"></i>
+                                        <p class="font-size:11px" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Block</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <!--Component Categories -->
+                    <div id="components" class="components display:none" data-template_id="component-categories" data-fetch_collection="tags" data-filter_name="module" data-filter_value="components" data-order_by="position" data-order_type="asc" data-render_id="tag">
+                            
+                         <!--Block Categories Template -->
+                        <div class="template" data-template_id="component-categories" data-document_id="{{tag._id}}">
+                            <div class="padding:5px background:gainsboro" data-show=".category{{tag._id}}" data-hide=".category{{tag._id}}">
+                                <span class="category{{tag._id}} hidden"><i class="fas fa-plus"></i></span>
+                                <span class="category{{tag._id}}"><i class="fas fa-minus"></i></span>
+                                <span data-collection="{{tag.collection}}" data-document_id="{{tag._id}}" name="name">Category Name</span>
+                            </div>
+                             <!--Blocks  -->
+                            <div class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px" data-template_id="{{tag._id}}" data-fetch_collection="blocks" data-filter_name="category" data-filter_value="{{tag._id}}" data-order_by="position" data-order_type="asc">
+                                 <!--Blocks Template -->
+                                <div data-template_id="{{tag._id}}" class="template card flex-grow:1 width:70px height:125px margin:5px padding:5px" data-hover="display:block!important" data-hover_target="#editblock{{data._id}}" data-document_id="{{data._id}}">
+                                    <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
+                                        <!--<a target="modal" data-pass_collection="files" data-pass_document_id="60c02a57df12fd0d3939aca0" data-pass_to="render" data-modal_width="320px" data-modal_header="false">-->
+                                        <!--    <i class="fas fa-pencil-alt"></i>-->
+                                        <!--    <div data-pass_collection="blocks" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>-->
+                                        <!--</a>-->
+                                        <a target="modal" href="./block-form" data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields" data-modal_width="320px" data-modal_header="false">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </a>
+                                    </div>
+                                    <div data-cloneable="true" data-insert-html='{{data.html}}' class="height:115px padding:5px">
+                                        <i data-collection="{{collection}}" data-document_id="{{data._id}}" name="icon"></i>
+                                        <p class="font-size:11px" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Block</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <!--<button target="modal" href="./block-form"  data-pass_to="form-field" data-modal_width="320px" data-modal_header="false" class="position:fixed bottom:15px left:15px padding:15px background:gainsboro color:#505050 grow-hover border-radius:50%">-->
+                        <!--    <i class="fas fa-plus"></i>-->
+                        <!--</button>               -->
+                </div>
+                 <!--Vdom -->
+                <div id="vdom" data-vdom_target="test" data-group_name="test" class="left-panel display:none">vdom</div>
+                 <!--uploader -->
+                <div id="uploader" class="left-panel display:none">
+                    <div class="uppy" data-collection="jean" id="drag-drop-area"></div> 
+                </div>
+                 <!--Files -->
+                <div id="files" class="left-panel display:none">
+                     <!--Search -->
+                    <form class="padding:0px_5px_20px_5px">
+                        <input type="text" class="floating-label" data-pass_value_to="results">
+                        <span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
+        					<a target="modal" data-pass_to="render" data-collection="website-pages" data-document_id="" data-pass_name="html" data-modal_width="900px" data-modal_color="#229954">
+        						<i class="fas fa-search"></i>
+        					</a>
+        				</span>
+                    </form>
+                    <!--File Tree -->
+                    <div class="padding:5px">
+                        <span class=""><i class="fa fa-caret-down" data-toggle="fa-caret-right, fa-caret-down"></i></span>
+                        <span class="margin-left:5px" data-collection="websites" data-document_id="" name="name">Project name</span>
+                        <div class="margin-left:10px sortable" data-template_id="folder" data-fetch_collection="files" data-filter_name="directory" data-filter_value="60b450107d36eaa01048ac49" data-filter_operator="$eq" data-order_by="name" data-order_type="asc" data-fetch_count="6" data-render_id="folder">
+                             <!--Folder Template -->
+                            <div class="template padding:5px" data-template_id="folder" data-document_id="{{folder._id}}" data-render_key="folder" data-render_array="folder.data">
+                                <span class=""><i class="fa fa-caret-down" data-toggle="fa-caret-right, fa-caret-down"></i></span>
+                                <span class="margin-left:5px" data-collection="folders" data-document_id="{{folder._id}}" name="name">{{folder.name}}</span>
+                                <!-- fetches folder and file template. This should create a loop until tree ends -->
+                                <div class="domEditor margin-left:10px" data-collection="component" data-document_id="60b45db37d36eaa01048ac50" name="html"></div>
+                            </div>
+                        </div>
+                        <div class="margin-left:10px sortable" data-template_id="file" data-fetch_collection="files" data-filter_name="directory" data-filter_value="" data-filter_operator="$eq" data-order_by="name" data-fetch_count="6">
+                             <!--File Template -->
+                            <div class="template padding:5px" data-template_id="file" data-document_id="{{data._id}}">
+                                <span class="{{data.content-type}}"><i class="fab fa-html5"></i></span>
+                                <span class="margin-left:5px" data-collection="files" data-document_id="{{data._id}}" name="name">{{data.name}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--assets -->
+                <div id="assets" class="left-panel display:none">
+                     Search 
+                    <form class="padding:0px_5px_20px_5px">
+                        <input type="text" class="floating-label" data-pass_value_to="results">
+                        <span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
+        					<a target="modal" data-pass_to="render" data-collection="website-pages" data-document_id="" data-pass_name="html" data-modal_width="900px" data-modal_color="#229954">
+        						<i class="fas fa-search"></i>
+        					</a>
+        				</span>
+                    </form>
+                     <!--Assets -->
+                    <div class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px" data-template_id="assets" data-fetch_collection="files" data-filter_name="content-type" data-filter_value="" data-order_by="position" data-order_type="asc">
+                         <!--Asset Template -->
+                        <div data-template_id="assets" class="template card flex-grow:1 width:70px height:90px margin:5px padding:5px" data-hover="display:block!important" data-hover_target="#editblock{{data._id}}">
+                            <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
+                                <a target="modal" href="https://server.cocreate.app/CoCreate-plugins/CoCreate-tui-image-editor/demo/index.html" data-pass_collection="blocks" data-pass_document_id="{{data._id}}" data-pass_to="form-fields" data-modal_width="900px" data-modal_header="false">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                            </div>
+                            <div data-cloneable="true" data-insert-html='{{data.src}}' data-collection="files" data-document_id="{{data._id}}" name="thumbnail" class="padding-bottom:5px">
+                                <img width="100%" src="data:image/jpeg;base64,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">
+                                <p class="font-size:11px" data-collection="module_activity" data-document_id="{{data._id}}" name="name">Block</p>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+        </div>

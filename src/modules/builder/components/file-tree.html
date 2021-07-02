@@ -1,0 +1,29 @@
+    <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../demo/style.css" type="text/css" />
+    <link rel="stylesheet" href="./file.css" type="text/css" />
+    
+            <div class="margin-left:10px sortable" data-template_id="{{data._id}}" data-fetch_collection="folders" data-filter_name="_id" data-filter_value="{{data._id}}" data-filter_operator="$eq" data-order_by="name" data-order_type="asc" data-fetch_count="6" data-render_id="folder">
+                 <!--Folder Template -->
+                <div class="template padding:5px" data-template_id="{{data._id}}" data-document_id="{{folder._id}}" data-render_key="folder" data-render_array="folder.data">
+                    <span class=""><i class="fa fa-caret-down" data-toggle="fa-caret-right, fa-caret-down"></i></span>
+                    <span class="margin-left:5px" data-collection="folders" data-document_id="{{folder._id}}" name="name">Folder name</span>
+                    <div class="margin-left:10px" data-collection="component" data-document_id="" name="file-tree"></div>
+                </div>
+            </div>
+            <div class="margin-left:10px sortable" data-template_id="file" data-fetch_collection="files" data-filter_name="folder_id" data-filter_value="folder_id" data-filter_operator="$eq" data-order_by="name" data-fetch_count="6">
+                 <!--File Template -->
+                <div class="template padding:5px" data-template_id="file">
+                    <span class=""><i class="fab fa-html5"></i></span>
+                    <span class="margin-left:5px" data-collection="files" data-document_id="{{data._id}}" name="name"></span>
+                </div>
+            </div>
+
+    <script>
+        var config = {
+            apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+                        organization_Id: '5de0387b12e200ea63204d6c'
+        }
+    </script>
+    
+    <script defer src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+

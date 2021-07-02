@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Monaco | CoCreate</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
+
+        <!-- CoCreate CSS -->
+        <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>
+        <link rel="stylesheet" href="/admin/index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true"/>
+
+</head>
+      <style>
+        .monaco {
+            width:100%;
+            height:600px;
+            border:1px solid #ccc;
+        }
+        .yRemoteSelection {
+            background-color: rgb(250, 129, 0, .5)
+        }
+        .yRemoteSelectionHead {
+            position: absolute;
+            border-left: orange solid 2px;
+            border-top: orange solid 2px;
+            border-bottom: orange solid 2px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .yRemoteSelectionHead::after {
+            position: absolute;
+            content: ' ';
+            border: 3px solid orange;
+            border-radius: 4px;
+            left: -4px;
+            top: -5px;
+        }
+    </style>
+<body class="margin:15px">
+        <!--<textarea data-collection="apples" data-document_id="60ba94e8297df20010adf7c9" name='html' class="width:100% height:100vh clipboard"></textarea>-->
+        <div data-collection="apples"  data-document_id="60ba94e8297df20010adf7c9" name="html" class="monaco"></div>
+    <script>
+        var config = {
+            apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+            securityKey: 'f26baf68-e3a9-45fc-effe-502e47116265',
+            organization_Id: '5de0387b12e200ea63204d6c',
+            host: 'wss://ws.cocreate.app'
+        }
+    </script>
+    <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
+    <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
+  <script type="text/javascript" src="https://server.cocreate.app/CoCreate-plugins/CoCreate-monaco/demo/dist/monaco.bundle.js"></script>
+
+</body>
+
+</html>

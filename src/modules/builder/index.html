@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Builder | CoCreate</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
+
+        <!-- CoCreate CSS -->
+        <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>
+        <link rel="stylesheet" href="/admin/index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true"/>
+
+    <style>
+        .editor-panel.active {
+            display: block
+        }
+        .left-panel.active {
+            display: block
+        }
+        .components.active {
+            display: block
+        }
+
+        .uppy-Dashboard-inner{
+            background-color:gainsboro!important;
+        }
+        .uppy-DashboardTab-btn{
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar  -->
+    <nav class="nav display:flex position:relative align-items:center box-shadow-bottom" data-main_content_id="content" data-scroll=", hide-nav" data-scroll_up="5" data-scroll_down="5" data-collection="components" data-document_id="60c26fdd7492af700086929c" name="html">
+    </nav>
+
+    <!-- Modal viewport -->
+    <div class="position:fixed z-index:12!important" id="modal-viewport"></div>
+
+    <!-- Main Container -->
+    <main data-main_content_id="canvas" class="height:100vh">
+        <div class="canvas-container height:100% margin:auto">
+            <iframe data-vdom_id="test" id="canvas" data-collection="apples" data-document_id="60bfee00e1aabf0011a15c54" name='html' data-read_value="false" frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+    </main>
+
+    <!-- SideNav Left -->
+    <sidenav id="menuL" class="cocreate-sidenav background:whitesmoke height:100vh" data-main_content="canvas,content" sidenav-default_desktop="expanded" sidenav-default_tablet="offcanvas" sidenav-default_phone="offcanvas" sidenav-ontoggle_desktop="offcanvas" sidenav-ontoggle_tablet="expanded" sidenav-expanded_width="260px">
+        <div class="domEditor" data-collection="files" data-document_id="60b3e29dc3df330a601b0ef0" name="html"></div>
+        <div class="resizeHandler"></div>
+    </sidenav>
+
+    <!-- SideNav Right -->
+    <sidenav data-main_content="canvas,content" sidenav-default_desktop="expanded" sidenav-default_tablet="expanded" sidenav-expanded_width="305px" sidenav-collapsed_width="0px" id="menuR" class="cocreate-sidenav sidenav-right background:whitesmoke height:100vh">
+        <div class="domEditor" data-collection="files" data-document_id="5fb16c742fc8e61e01b43c15" name="html"></div>
+        <div class="resizeHandler"></div>
+    </sidenav>
+
+    <!-- Selected Toolbar -->
+    <div id="selectedElementcoc" data-toolbar_placent="top" data-toolbar_target="" class="position:absolute pointer-events:none display:none">
+        <div class="toolbar display:flex flex-direction:row-reverse width:100% fontsize:12px color:white">
+            <span class="padding:3px background:red pointer-events:auto outline:1px_red_solid"><i class="fas fa-arrows-alt"></i></span>
+        </div>
+        <div class="height:100% width:100% outline:1px_red_solid"></div>
+    </div>
+
+    <!-- Hover Toolbar -->
+    <div id="hoveredElementcoc" data-toolbar_placent="top" data-toolbar_target="" class="position:absolute pointer-events:none display:none">
+        <div class="toolbar width:100% ">
+            <span class="padding:0_5px_0_5px background:dodgerblue pointer-events:auto font-size:12px color:white border:2px_dodgerblue_solid" tagName>tagname</span>
+        </div>
+        <div class="height:100% width:100% border:2px_dodgerblue_solid"></div>
+    </div>
+    <!-- End Hover Toolbar -->
+    
+    <!-- Collaboration Toolbar -->
+    <div id="collabElementcoc" data-toolbar_placent="top" data-toolbar_target="" class="position:absolute pointer-events:none display:non">
+        <div class="toolbar width:100%">
+            <span id="bold-button"><i class="fa fa-bold"></i></span>
+            <span id="italic-button"><i class="fa fa-italic"></i></span>
+            <span id="link-button"><i class="fa fa-link"></i></span>
+            <span id="blockquote-button"><i class="fa fa-quote-right"></i></span>
+            <span id="header-1-button"><i class="fa fa-header"><sub>1</sub></i></span>
+            <span id="header-2-button"><i class="fa fa-header"><sub>2</sub></i></span>
+            <div id="sidebar-controls">
+                <span id="show-controls"><i class="fa fa-plus"></i></span>
+                <span class="controls">
+                    <span id="image-button"><i class="fa fa-camera"></i></span>
+                    <span id="video-button"><i class="fa fa-play"></i></span>
+                    <span id="tweet-button"><i class="fa fa-twitter"></i></span>
+                    <span id="divider-button"><i class="fa fa-minus"></i></span>
+                </span>
+            </div>
+        </div>
+        <div class="height:100% width:100%"></div>
+    </div>
+    <!-- End Collaboration Toolbar -->
+    
+    <script>
+        var config = {
+            apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+            organization_Id: '5de0387b12e200ea63204d6c',
+            // host: 'wss://ws.cocreate.app'
+        }
+    </script>
+    
+    <!--<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>-->
+    <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+
+</body>
+
+</html>
