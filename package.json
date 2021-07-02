@@ -1,22 +1,62 @@
 {
   "name": "@cocreate/adminUI",
+  "version": "1.0.0",
   "description": "A simple AdimnUI component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API.",
+  "keywords": [
+    "admin",
+    "crm",
+    "cms",
+    "cocreate",
+    "low-code-framework",
+    "no-code-framework",
+    "cocreatejs",
+    "cocreatejs-component",
+    "cocreate-framework",
+    "no-code",
+    "low-code",
+    "collaborative-framework",
+    "realtime",
+    "realtime-framework",
+    "collaboration",
+    "shared-editing",
+    "html5-framework",
+    "javascript-framework"
+  ],
   "publishConfig": {
     "access": "private"
   },
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/CoCreate-app/CoCreate-adminUI.git",
-  "author": "Frank Pagan <frank@cocreate.app>",
+  "author": "CoCreate LLC",
   "license": "MIT",
+  "repository": "https://github.com/CoCreate-app/CoCreate-adminUI.git",
+  "bugs": {
+    "url": "https://github.com/CoCreate-app/CoCreate-adminUI/issues"
+  },
+  "homepage": "https://cocreate.app/docs/adminUI",
+  "funding": {
+    "type": "GitHub Sponsors ❤",
+    "url": "https://github.com/sponsors/CoCreate-app"
+  },
+  "main": "index.js",
   "scripts": {
     "docs": "node ./node_modules/@cocreate/docs/src/index.js",
     "hosting": "node ./node_modules/@cocreate/hosting/src/index.js"
   },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.5.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0",
+    "webpack-log": "^3.0.1"
+  },
   "dependencies": {
     "@cocreate/docs": "^1.1.14",
     "@cocreate/hosting": "^1.1.4",
-    "mini-css-extract-plugin": "^1.5.0",
     "node-html-parser": "^2.1.0"
   }
 }

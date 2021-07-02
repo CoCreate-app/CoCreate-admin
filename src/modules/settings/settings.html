@@ -40,8 +40,8 @@
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
 					<a target="modal"
-						data-pass_collection="module-views"
-						data-pass_document_id="5ff747727005da1c27274170" 
+						data-pass_collection="files"
+						data-pass_document_id="60ddfdbf14b5ab0c2dd2fe09" 
 						data-pass_name="html" 
 						data-pass_to="render" 
 						data-modal_width="320px"
@@ -55,8 +55,8 @@
 				<!-- Render Code Editor -->
 				<li class="margin-right:15px">
 					<a target="modal" 
-						data-pass_collection="module-views"
-						data-pass_document_id="5ff747727005da1c27274164" 
+						data-pass_collection="files"
+						data-pass_document_id="60ddfdbe14b5ab0c2dd2fdf5" 
 						data-pass_name="html" 
 						data-pass_to="render" 
 						data-modal_width="100%"
@@ -69,8 +69,8 @@
 				<!-- Render Builder -->
 				<li class="margin-right:15px">
 					<a target="modal"
-						data-pass_collection="module-views"
-						data-pass_document_id="5ff747727005da1c2727415f" 
+						data-pass_collection="files"
+						data-pass_document_id="60de0fae14b5ab0c2dd2feb8" 
 						data-pass_name="html" 
 						data-pass_to="render" 
 						data-modal_width="100%"
@@ -97,7 +97,7 @@
 				
 				<li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" data-template_id="settings-menu">
 					<a target="modal" 
-						data-pass_collection="module-views"
+						data-pass_collection="files"
 						data-pass_document_id="{{data.settings-menu-primary}}"
 						data-pass_to="render"
 						data-pass_name="html"
@@ -109,11 +109,11 @@
 						<span data-collection="modules" data-document_id="{{data._id}}" name="name" ></span>
 						<div data-pass_filter_name="module_id" data-pass_filter_value="{{data._id}}" data-pass_to="datatable"></div>
 						<div data-pass_collection="modules" data-document_id="{{data._id}}" data-pass_to="module_id"></div>
-						<div data-pass_collection="module-views" data-pass_document_id="{{data.settings-menu-secondary}}" data-pass_to="form"></div>
+						<div data-pass_collection="files" data-pass_document_id="{{data.settings-menu-secondary}}" data-pass_to="form"></div>
 					</a>
 					<div class="float:right width:50px text-align:center {{data.settings-menu-secondary}}">
 					  <a target="modal" 
-						data-pass_collection="module-views"
+						data-pass_collection="files"
 						data-pass_document_id="{{data.settings-menu-secondary}}"
 						data-pass_name="html"
 						data-pass_to="render" 
@@ -129,9 +129,15 @@
 		</ul>
 
 		<!--CoCreateJS-->
-		<script src="../../apikey.js"></script>
-		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
-		<!--<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>-->
+		<script>
+			var config = {                 
+				apiKey: '2061acef-0451-4545-f754-60cf8160',                 
+				organization_Id: '5ff747727005da1c272740ab',                 
+				host: 'wss://general.cocreate.app'             
+			}         
+	    </script>
+		<!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
+		<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
 
 	</body>
 </html>
