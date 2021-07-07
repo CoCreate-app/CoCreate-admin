@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Permissions Form | CoCreate</title>
+
+        <!-- CoCreate CSS -->
+        <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" />
+        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+    </head>
+
+    <body class="padding:20px">
+        <form data-collection="permissions" data-document_id="607afe5c1ec1dc562ee2ec03">
+            <input class="floating-label" name="key" placeholder="key">
+            <input class="floating-label" name="type" placeholder="type">
+            <div class="floating-label padding:10px active" placeholder="Super Admin" active>
+                <input type="radio" name="super_admin" value="true">
+            </div>
+            <select class="floating-label" placeholder="Contact" name='collections.contact' multiple> 
+                <option value="create">Create</option>
+                <option value="read">Read</option>
+                <option value="update">Update</option>
+                <option value="delete">Delete</option>
+            </select>
+
+            <lable>Test Collection</lable> <br/>
+            <input type="checkbox" name="collections.test" value="create" />Create <br/>
+            <input type="checkbox" name="collections.test" value="read" />Read <br/>
+            <input type="checkbox" name="collections.test" value="update" />Update <br/>
+            <input type="checkbox" name="collections.test" value="delete" />Delete <br/>
+
+            <select class="floating-label" placeholder="Stripe" name='plugins.stripe' data-type="" multiple>
+                <option value="getBalancee">getBalance</option>=0
+                <option value="getCustomer">getCustomers</option>=1
+            </select>
+
+            <button data-actions="saveDocument" class="position:fixed bottom:15px right:15px bg-blue grow-hover round opacity-08"><i class="far fa-save"></i></button>
+        </form>
+
+		<!--CoCreateJS-->
+		<script src="../../apikey.js"></script>
+        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
+
+    </body>
+
+</html>

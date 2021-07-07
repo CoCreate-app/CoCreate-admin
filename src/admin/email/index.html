@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+        <title>Email | CoCreate</title>
+        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+
+    </head>
+
+
+    <style type="text/css">
+        .email-toolbar i {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .hide-nav+.cocreate-sidenav,
+        .hide-nav+.sidenav-right {
+            margin-top: 0px;
+            max-height: -moz-available;
+            max-height: -webkit-fill-available;
+            max-height: fill-available;
+
+        }
+    </style>
+
+
+    <body>
+
+        <!-- Navbar -->
+        <nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" data-scroll="sticky-nav, hide-nav" data-scroll_up="5" data-scroll_down="5">
+
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
+
+                <!-- Modal Controls -->
+                <li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-maximize"><i data-toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
+
+                <!-- fullscreen toogle and icon transform-->
+                <li class="margin-right:15px"><a data-fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../modules/form.html" data-modal_width="320px" data-modal_header="false">
+                        <i class="fas fa-cog"></i>
+                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
+                        <div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+                    </a>
+                </li>
+
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../code-editor" data-modal_width="100%" data-modal_header="false">
+                        <i class="fas fa-code"></i>
+                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                    </a>
+                </li>
+
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../builder/" data-modal_width="100%" data-modal_header="false">
+                        <i class="fas fa-palette"></i>
+                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                    </a>
+                </li>
+
+                <!-- deleteDocument-->
+                <li class="margin-right:15px">
+                    <a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                        <i class="far fa-trash-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- CoCreate sidenav resizeable container... With id to open by btn... attributes to configure screensize and container effect-->
+        <sidenav id="menuL" class="cocreate-sidenav background:white margin-top:50px" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="collapsed" sidenav_default_phone="offCanvas">
+            <ul class="cocreate-menu border-bottom:1px_solid_lightgray">
+                <li class="line-height:40px height:40px overflow:hidden font-size:20px">
+                    <a data-window_url="compose.html">
+                        <span class="display:inline-block width:50px text-align:center"><i class="fas fa-plus"></i></span>
+                        <span>Compose</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="cocreate-menu overflow:overlay vh-120 bottom:10 color:gray">
+                <li class="line-height:40px height:40px overflow:hidden">
+                    <a data-window_url="settings.html">
+                        <span class="display:inline-block width:50px text-align:center"><i class="fas fa-inbox"></i></span>
+                        <span>Inbox</span>
+                        <span class="cocreate-badge badge-danger line-height:1">4</span>
+                    </a>
+                </li>
+                <li class="line-height:40px height:40px overflow:hidden">
+                    <a href="signin.html">
+                        <span class="display:inline-block width:50px text-align:center"><i class="fas fa-paper-plane"></i></span>
+                        <span>Sent</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="resizeHandler"></div>
+        </sidenav>
+
+        <!-- container -->
+        <main class="border-left:1px_solid_lightgray border-right:1px_solid_lightgray color-dark-gray height:100vh" data-main_content_id="content">
+            <div class="display:flex align-items:center height:70px font-size:20px  border-bottom:1px_solid_lightgray">
+                <label class="checkbox padding-right:10px margin-left:20px">
+                    <input type="checkbox"><span class="mark"></span>
+                </label>
+                <div class="display:flex overflow:overlay align-items:center direction:ltr">
+                    <a class="padding:0px_10px"><i class="fas fa-download"></i></a>
+                    <a class="padding:0px_10px"><i class="fas fa-info-circle"></i></a>
+                    <a class="padding:0px_10px"><i class="fas fa-trash"></i></a>
+                    <span class="padding:0px_10px"></span>
+                    <a class="padding:0px_10px"><i class="fas fa-envelope-open-text"></i></a>
+                    <a class="padding:0px_10px"><i class="fas fa-clock"></i></a>
+                    <span class="padding:0px_10px"></span>
+                    <a class="padding:0px_10px"><i class="fas fa-arrow-alt-circle-right"></i></a>
+                    <a class="padding:0px_10px"><i class="fas fa-bookmark"></i></a>
+                </div>
+            </div>
+
+            <div class="menu-content overflow:auto height:100vh min-width:300px">
+
+                <div class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
+
+                    <!-- avatar with flip container for selecting avatar -->
+                    <div class="avatar-wrapper">
+                        <div class="flip-container">
+                            <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
+                            <a class="flip-item avatar round" data-window_url="render.html" data-pass_collection="modules">
+                                <span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+                                <span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+                                    <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex-grow:1 padding-left:10px">
+                        <div class="display:flex justify-content:space-between ">
+                            <div class="text-overflow:ellipsis font-weight:600">Brenda Elisa G. via Freelancer</div>
+                            <p class="width:70px margin:0px font-size:12px text-align:right">09:24 AM</p>
+                        </div>
+                        <div class="email-subject text-overflow:ellipsis">Freelancer test Test Test Test Test Test Test</div>
+                        <span class="cocreate-badge badge-danger">4</span>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+
+        <!-- CoCreate sidenav resizeable container... With id to open by btn... attributes to configure screensize and container effect-->
+        <sidenav id="menuR" class="cocreate-sidenav sidenav-right background:white margin-top:50px color-dark-gray" expandOnHover="false" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="expanded" sidenav-default_phone="ofCanvas"
+            sidenav-expanded_width="370px">
+
+            <div class="min-width:300px">
+                <div class="display:flex align-items:center height:70px justify-content:flex-end padding-15_0px font-size:14px border-bottom:1px_solid_lightgray">
+                    <a class="padding:0px_10px"><i class="fas fa-arrows-alt-v"></i></a>
+                    <a class="padding:0px_10px"><i class="fas fa-print"></i></a>
+                    <a class="padding:0px_10px"><i class="fas fa-sign-out-alt"></i></a>
+
+                    <div>1 of 189</div>
+                    <a class="padding:0px_10px"><i class="fas fa-chevron-left"></i></a>
+                    <a class="padding:0px_10px"><i class="fas fa-chevron-right"></i></a>
+                    <a class="padding:0px_10px"><i class="fas fa-cog"></i></a>
+                </div>
+                <div class="padding:0px_15px">
+                    <div class="display:flex align-items:center justify-content:space-between padding:15px_0px border-bottom:1px_solid_lightgray">
+                        <h2 class="margin:0px_0px">New messagees from Brenda Elisa G.
+                            <div class="cocreate-badge badge-danger font-size:12px">Inbox<i class="fas fa-times padding-left:10px"></i></div>
+                        </h2>
+                    </div>
+                    <div class="display:flex padding:15px_0px">
+                        <div class="avatar-wrapper">
+                            <a class="avatar round" data-window_url="render.html" data-pass_collection="modules" data-pass_prefix="" data-pass_module_id="5dd010bccbc25f0cdb1a4d9f" data-pass_to="render" data-window_width="300px" data-window_height="375px" data-window_color="#229954">
+                                <span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+                                <span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+                                    <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="display:flex justify-content:space-between flex-grow:1 padding-left:10px">
+                            <div class="">
+                                <div class="font-bold">Brenda Elisa G. via Freelancer <span class="font-noBold font-size:12px ">messages@xxx.freelancer.com</span></div>
+                                <div class="font-size:12px">to Frank 9:11 AM (3 hours age)</div>
+                            </div>
+                            <div class="font-size:14px display:flex flex-wrap:wrap-wrap-reverse height:50px">
+                                <a><i class="far fa-star padding:0px_10px"></i></a>
+                                <a><i class="fas fa-reply padding:0px_10px"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="padding-50px-left">Main Information</div>
+                </div>
+            </div>
+
+            <div class="resizeHandler"></div>
+        </sidenav>
+
+        <button class="submitBtn position:fixed bottom:15px right:15px background:#2196f3 grow-hover border-radius:50% z-index:10"><i class="fas fa-plus"></i></button>
+
+		<!--CoCreateJS-->
+		<script src="../../apikey.js"></script>
+        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
+
+    </body>
+
+</html>

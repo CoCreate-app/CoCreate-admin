@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+		<title>Wallet | CoCreate</title>
+        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
+	</head>
+
+	<body>
+		<!-- Modal Viewport -->
+		<div id="modal-viewport" class="hidden"></div>
+
+		<!-- Navbar -->
+		<nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" data-scroll="sticky-nav, hide-nav" data-scroll_up="5" data-scroll_down="5">
+
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
+
+				<!-- Modal Controls -->
+				<li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
+				<li class="margin-right:15px"><a class="btn-modal-maximize"><i data-toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+				<li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
+
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px"><a data-fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a target="modal" href="../modules/form.html" data-modal_width="320px" data-modal_header="false">
+                        <i class="fas fa-cog"></i>
+                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
+                        <div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+                    </a>
+				</li>
+
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a target="modal" href="../code-editor" data-modal_width="100%" data-modal_header="false">
+                        <i class="fas fa-code"></i>
+                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                    </a>
+				</li>
+
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a target="modal" href="../builder/" data-modal_width="100%" data-modal_header="false">
+                        <i class="fas fa-palette"></i>
+                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                    </a>
+				</li>
+
+				<!-- deleteDocument-->
+				<li class="margin-right:15px">
+					<a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                        <i class="far fa-trash-alt"></i>
+                    </a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Main Content -->
+		<main class="padding:10px" data-main_content_id="content">
+			<div class=" balance_input_box">
+				<form data-collection='module_activity' data-form_id="wallet_form" class="float-labels">
+					<input type="text" name="balance" id="balance" placeholder="Balance" class="floating-label" readonly>
+				</form>
+			</div>
+			<div class="btn-group balance_buttons">
+				<a href="#" class="btn btn-success" id="add_funds" data-show="#deposit" data-hide="#deposit"><i class="fa fa-plus" data-transform_to="fa fa-ban"></i></a>
+				<a href="#" class="btn btn-warning" id="wd_funds"><i class="fa fa-minus" data-transform_to="fa fa-ban"></i></a>
+				<a href="#" class="btn btn-primary" data-show='#transfer' id="exchange_funds"><i class="fas fa-exchange-alt" data-transform_to="fa fa-ban"></i></a>
+			</div>
+			<div id="deposit" class="hidden">
+				<div class="tagline"><span class="org_name_balance">CoCreate Funds</span></div>
+				<div id="deposit" class="display:flex">
+					<!-- input for amount -->
+					<div class="col-xs-6">
+						<input type="text" name="funds" id="funds" class="floating-label" placeholder="Deposit">
+					</div>
+
+					<!-- input readonly for new balance-->
+					<div class="col-xs-6">
+						<input type="text" name="new_balance" id="new_balance" class="floating-label" placeholder="New balance" readonly>
+					</div>
+				</div>
+
+				<!-- select for credit cards -->
+				<div>
+
+					<!-- Here is where magic happens -->
+					<a href="#" class="billing_methods"> <small>Add/Edit cards</small> </a>
+					<div class="dropdown">
+						<a id="default_card_box" class="btn-default dropdown-toggle">
+							<div class="select_card"></div>
+						</a>
+
+						<ul class="dropdown-menu" id="credit_cards_dropdown"></ul>
+					</div>
+					<!-- /magic ends -->
+				</div>
+
+				<div class="form-footer">
+					<button type="button" class="button btn-primary" id="btn_operation">Add Funds</button>
+					<p id="add_funds_message"></p>
+				</div>
+				<!-- end .form-footer section -->
+			</div>
+		</main>
+
+		<!--CoCreateJS-->
+		<script src="../../apikey.js"></script>
+        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
+
+	</body>
+
+</html>

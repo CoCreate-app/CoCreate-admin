@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+		<title>Tasklist | CoCreate</title>
+
+		<!-- CoCreateCSS -->
+		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" data-parse/>
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" crossorigin="anonymous" />
+	</head>
+
+	<body class="width:fit-content overflow:overlay">
+
+		<!-- Navbar -->
+		<nav class="nav display:flex align-items:center background:whitesmoke position:sticky left:0 width:100vw" data-main_content_id="content" data-scroll="sticky-nav, hide-nav" data-scroll_up="5" data-scroll_down="5">
+
+			<!-- Menu Icon Animations -->
+			<a class="menu_icon--Vdots" data-toggle="active" data-toggle_sidenav="menuL">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+			</a>
+
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
+
+				<!-- Modal Controls -->
+				<li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
+				<li class="margin-right:15px"><a class="btn-modal-maximize"><i data-toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+				<li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
+
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px"><a data-fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a target="modal" href="../modules/form.html" data-modal_width="320px" data-modal_header="false">
+                        <i class="fas fa-cog"></i>
+                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
+                        <div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+                    </a>
+				</li>
+
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a target="modal" href="../code-editor" data-modal_width="100%" data-modal_header="false">
+                        <i class="fas fa-code"></i>
+                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                    </a>
+				</li>
+
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a target="modal" href="../builder/" data-modal_width="100%" data-modal_header="false">
+                        <i class="fas fa-palette"></i>
+                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                    </a>
+				</li>
+
+				<!-- Datatable Controls -->
+				<li class="margin-right:15px">
+					<a data-actions="deleteDocuments" data-template_id="datatable"><i class="far fa-trash-alt"></i></a>
+				</li>
+				<li class="margin-right:15px">
+					<a data-btn_type="column-visibility" data-template_id="datatable"><i class="far fa-eye"></i></a>
+				</li>
+				<li class="margin-right:15px">
+					<a data-export_type="csv" data-template_id="datatable"><i class="fas fa-file-csv"></i></a>
+				</li>
+				<li class="margin-right:15px">
+					<a data-export_type="json" data-template_id="datatable"><i class="fas fa-file-download"></i></a>
+				</li>
+				<li class="margin-right:15px">
+					<a data-import="true" data-template_id="datatable"><i class="fas fa-file-upload"></i></a>
+				</li>
+				<li class="margin-right:15px">
+					<a data-btn_type="copy" data-template_id="datatable"><i class="far fa-copy"></i></a>
+				</li>
+				<li class="margin-right:15px">
+					<a data-btn_type="print" data-template_id="datatable"><i class="fas fa-print"></i></a>
+				</li>
+
+			</ul>
+		</nav>
+
+		<!-- Modal Viewport -->
+		<div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
+
+		<!-- Main Content -->
+		<div data-main_content_id="content" class="padding:5px">
+			<div class="domEditor main-height" name='tasklists1' data-collection="test" data-document_id="5f075add24d24a175fca54e4" data-pass_id="me1234">
+				<!--<div class="domEditor main-height" name='tasklists' data-collection="test" data-pass_id="me1234" >-->
+				<!--<div class="Sortable display:flex align-items:flex-start isotope-grid" data-group_name="tasklist" -->
+				<div class="" data-group_name="tasklist" data-droppable="true" data-element_id="tasklist_container">
+
+					<!-- sortable card -->
+					<div id="tasklist" class="card template margin:5px border-radius:2px grid-item width:48%@xs width:48%@sm width:24%@md" data-draggable="true">
+						<div class="margin:15px font-size:18px color-dark-gray">
+							<span class="display:inline-block">
+					<input data-collection="module_activity" data-pass_id="form-fields" data-module_activity_id="" name="clone-name" id="stage-name" class="input_field" placeholder="Tasklist">
+				  </span>
+							<span class="float:right display:inline-block"><a data-clone_id="tasklist" class="deleteBtn reset-layout"><i class="fas fa-times"></i></a></span>
+						</div>
+						<div class="border-top:1px_solid_lightgray border-bottom:1px_solid_lightgray padding:10px">
+							<div class="display:flex align-items:center margin:0px_15px">
+								<div class="padding-right:15px">2 / 3</div>
+								<div class="progressbar">
+									<div style="transform:translateX(-30%);"></div>
+								</div>
+							</div>
+							<form data-collection="module_activity" class="Sortable" data-group_name="task-items" id="testForm">
+								<!-- sortable task item -->
+								<div id="task-item" class="display:flex flex-wrap-nowrap align-items:center margin:0px_15px padding:10px_0px template">
+									<label class="checkbox">
+						  <input type="checkbox" name="taskcheck"><span class="mark display:inline-block"></span>
+						</label>
+									<div class="flex-grow:1">
+										<input class="floating-label" data-module_activity_id="5d8c79e7e4be424681b5e48d" name="taskname" placeholder="Task Name">
+									</div>
+									<a data-clone_id="task-item" class="margin-left:15px font-size:20px deleteBtn"><i class="far fa-trash-alt"></i></a>
+								</div>
+							</form>
+						</div>
+						<div class="margin:15px">
+							<a data-clone_id="task-item" class="cloneBtn noDrag reset-layout padding:10px" style="display: block"><i class="fas fa-plus"></i> Add Task</a>
+						</div>
+					</div>
+
+				</div>
+				<!-- Sortable Tasklist -->
+
+				<a data-clone_id="tasklist" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover round cloneBtn padding:20px" id="addTasklistBtn"><i class="fas fa-plus"></i></a>
+
+			</div>
+			<!-- saveFetch -->
+		</div>
+		<!-- -->
+
+		<script>
+			var config = {
+				apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+				organization_Id: '5de0387b12e200ea63204d6c',
+				host: 'wss://ws.cocreate.app'
+			}
+		</script>
+
+		<!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
+		<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
+
+	</body>
+
+</html>

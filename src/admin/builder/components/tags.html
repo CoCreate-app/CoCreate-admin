@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+		<title>Tags | CoCreate</title>
+		
+		<!-- CoCreateCSS -->
+		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" data-parse="true"/>
+		
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
+	</head>
+
+	<body>
+		<!-- Modal Viewport -->
+		<div id="modal-viewport" class="hidden"></div>
+		
+		<!-- Navbar -->
+        <nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" data-scroll="sticky-nav, hide-nav" data-scroll_up="5" data-scroll_down="5">
+
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
+
+                <!-- Modal Controls -->
+                <li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-maximize"><i data-toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
+
+                <!-- fullscreen toogle and icon transform-->
+                <li class="margin-right:15px"><a data-fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../modules/form.html" data-modal_width="320px" data-modal_header="false">
+                        <i class="fas fa-cog"></i>
+                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
+                        <div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+                    </a>
+                </li>
+
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../code-editor" data-modal_width="100%" data-modal_header="false">
+                        <i class="fas fa-code"></i>
+                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                    </a>
+                </li>
+
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../builder/" data-modal_width="100%" data-modal_header="false">
+                        <i class="fas fa-palette"></i>
+                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                    </a>
+                </li>
+
+                <!-- deleteDocument-->
+                <li class="margin-right:15px">
+                    <a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                        <i class="far fa-trash-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+	
+		<!-- Main Content -->
+		<div class="padding:10px" data-main_content_id="content">
+	  
+			<form data-pass_id="form-fields" data-collection="tags" data-document_id="">
+				<input type="hidden" name="module_id" data-pass_id="module_id">
+				<input type="text" name="name" class="floating-label" placeholder="Tag Name">
+				<input type="text" name="module" class="floating-label" placeholder="Module">
+				<input type="text" name="position" class="floating-label" placeholder="Position">
+                <button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue opacity:0.8 grow-hover round">
+      	            <i class="far fa-save"></i>
+      	        </button>
+			</form>
+	
+		</div>
+  
+    <script>
+        var config = {
+            apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
+            organization_Id: '5de0387b12e200ea63204d6c',
+            host: 'wss://ws.cocreate.app'
+        }
+    </script>
+    <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
+    <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
+
+	</body>
+</html>

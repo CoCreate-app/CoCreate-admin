@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+        <title>Website Form | CoCreate</title>
+        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+        <style type="text/css">
+            .collapsed>.menu-items {
+                height: 0px;
+                overflow: hidden
+            }
+
+            .menu-item.active {
+                height: 100%
+            }
+
+            .tab[selected] {
+                background: whitesmoke;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Modal Viewport -->
+        <div id="modal-viewport" class="hidden"></div>
+
+        <!-- Navbar -->
+        <nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" data-scroll="sticky-nav, hide-nav" data-scroll_up="5" data-scroll_down="5">
+
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
+
+                <!-- Modal Controls -->
+                <li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-maximize"><i data-toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
+
+                <!-- fullscreen toogle and icon transform-->
+                <li class="margin-right:15px"><a data-fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../modules/form.html" data-modal_width="320px" data-modal_header="false">
+                        <i class="fas fa-cog"></i>
+                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
+                        <div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+                    </a>
+                </li>
+
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../code-editor" data-modal_width="100%" data-modal_header="false">
+                        <i class="fas fa-code"></i>
+                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                    </a>
+                </li>
+
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../builder/" data-modal_width="100%" data-modal_header="false">
+                        <i class="fas fa-palette"></i>
+                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                    </a>
+                </li>
+
+                <!-- deleteDocument-->
+                <li class="margin-right:15px">
+                    <a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                        <i class="far fa-trash-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main class="padding:10px" data-main_content_id="content">
+            <form data-pass_id="form-fields" data-collection="" data-document_id="" id="form">
+                <input type="text" name="name" id="name" placeholder="Website Name" class="floating-label">
+                <input type="hidden" name="module_id" data-pass_id="module_id" value="">
+                <input type="hidden" name="_id" id="website_id">
+                <input type="text" name="description" id="description" placeholder="Description" class="floating-label">
+                <button data-actions="saveDocument" class="position:fixed bottom:15px right:15px bg:blue grow-hover border-radius:50% padding:15px">
+                    <i class="far fa-save"></i>
+                </button>
+            </form>
+            <section id="website-pages">
+                <!-- Website Pages -->
+                <div class="card display:flex padding:10px_15px margin-top:10px font-size:18px"> 
+                    <span class="flex-grow:1">Website Pages</span> 
+                    <a data-show="#page-templates" data-hide="#form, #website-pages" data-pass_collection="module-templates" data-pass_to="page-templates"><i class="far fa-plus-square"></i></a>
+                </div>
+                <!--<input type="hidden" data-filter_name="module-view" data-filter_value="module-view" data-template_id="module-views">-->
+                <div data-fetch_collection="website-pages" data-filter_name="" data-filter_value="" data-filter_operator="$eq" data-order_by="name" data-order_type="asc" data-template_id="website-pages" data-pass_id="website_id" class="sortable background:whitesmoke padding:5px:10px margin-top:10px" data-group_name="website-pages">
+                    <div data-template_id="website-pages" class="template card padding:10px_5px background:white collapsed margin-top:10px" data-document_id="{{data._id}}" id="module-view{{data._id}}">
+                        <div class="display:flex padding-left:10px">
+                            <a target="modal" data-pass_id="form" data-pass_collection="module-views" data-pass_document_id="5ffb84b46dc1a88ad823ad61" data-pass_name="src" data-pass_to="render" data-modal_width="100%" data-modal_color="#229954" data-modal_header="false" class="flex-grow:1 font-size:16px padding:5px_0">
+                                <p data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Web Page</p>
+                                <div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
+                                <div data-pass_fetch_collection="{{collection}}" data-pass_filter_name="website_id" data-pass_filter_value="{{data._id}}" data-pass_to="website_id"></div>
+                            </a>
+                            <!--<p data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" class="flex-grow:1 font-size:16px padding:5px_0">Web Page</p>-->
+                            <!--<input data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" class="flex-grow:1 min-width:100px border:none outline:none font-size:16px" placeholder="View Name">-->
+                            <!--<input type="hidden" data-collection="{{collection}}" data-document_id="{{data._id}}" name="module_id">-->
+                            <a data-collection="{{collection}}" data-document_id="{{data._id}}" class="delete-document float:right padding:5px">    
+                                <i class="fas fa-trash"></i>                
+                            </a> 
+                            <a target="modal" href="../builder/" data-modal_width="100%" data-modal_header="false" class="float:right padding:5px">  
+                                <i class="fas fa-palette"></i>              		 
+                                <div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_name="src" data-pass_to="builder">      			
+                                </div>                
+                            </a>
+                            <!-- Render Code Editor -->
+                            <a target="modal" href="./code-editor/" data-modal_width="100%" data-modal_header="false" class="float:right padding:5px">
+                                <i class="fas fa-code"></i>
+                                <div data-pass_id="render" data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_name="src" data-pass_to="code-editor"></div>
+                            </a>                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Website Page templates -->
+            <div class="hidden" id="page-templates">
+                <div class="display:flex flex-wrap:wrap" data-fetch_collection="" data-pass_refresh="true" data-order_by="name" data-order_type="asc" data-template_id="module-templates" data-pass_id="page-templates">
+                    <div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" data-template_id="module-templates">
+                        <div class="position:relative"> <img data-collection="{{collection}}" data-document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%">
+                            <form data-realtime="false" data-collection="website-pages" data-document_id=""> <input type="hidden" name="name" placeholder="View Name" value="{{data.name}}"> <input type="hidden" name="website_id" data-get_value="website_id"> <textarea hidden name="html" value="{{data.html}}"></textarea>
+                                <textarea hidden name="css" value="{{data.css}}"></textarea> <textarea hidden name="js" value="{{data.js}}"></textarea>
+                                <button class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" data-actions="createDocument" data-show="#form, #website-pages" data-hide='#page-templates'>                      
+                                    <i class="fa fa-plus"></i>                  
+                                </button> 
+                            </form>
+                            <div class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">
+                                <span data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Template Name</span>
+                            </div>
+                        </div>
+                        <div class="padding:10px">
+                            <p data-collection="{{collection}}" data-document_id="{{data._id}}" name="description">Description</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+		<!--CoCreateJS-->
+		<script src="../../apikey.js"></script>
+        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
+    </body>
+
+</html>
