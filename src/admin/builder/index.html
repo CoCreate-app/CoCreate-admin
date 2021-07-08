@@ -34,7 +34,58 @@
 
     <body>
         <!-- Navbar  -->
-        <nav class="nav display:flex position:relative align-items:center box-shadow-bottom" data-main_content_id="content" data-scroll=", hide-nav" data-scroll_up="5" data-scroll_down="5" data-collection="files" data-document_id="60de0fae14b5ab0c2dd2feb9" name="src">
+        <nav class="nav display:flex position:relative align-items:center box-shadow-bottom" data-main_content_id="content" data-scroll=", hide-nav" data-scroll_up="5" data-scroll_down="5" data-collection="fils" data-document_id="60de0fae14b5ab0c2dd2feb9" name="src">
+            <!-- Menu Icon Arrow Left Animations -->
+            <a aria-label="mobile menu" class="menu_icon arrow-left" data-toggle="active" data-toggle_sidenav="menuL">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul class="direction:rtl display:inline-flex align-items:center overflow:auto font-size:20px list-style-type:none width:100% height:50px">
+        
+                <!-- Modal Controls -->
+                <li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-maximize"><i data-toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
+        
+                <!-- fullscreen toogle and icon transform-->
+                <li class="margin-right:15px"><a data-fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+        
+        
+                <!-- Builder Controls -->
+                <li class="margin-right:15px"><a id="redo-canvas" class=""><i class="fas fa-redo-alt"></i></a></li>
+                <li class="margin-right:15px"><a id='undo-canvas' class=""><i class="fas fa-undo-alt"></i></a></li>
+                
+                
+                <li class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke" data-selected="max-width:100%" data-selected_target=".canvas-container" data-selected_group="screen-size" selected>
+                    <a id="desktop-view" class=""><i class="fas fa-desktop"></i></a>
+                </li>
+                <li class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke" data-selected="max-width:768px" data-selected_target=".canvas-container" data-selected_group="screen-size">
+                    <a id="tablet-view" class=""><i class="fas fa-tablet-alt"></i></a>
+                </li>
+                <li class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke" data-selected="max-width:375px" data-selected_target=".canvas-container" data-selected_group="screen-size">
+                    <a id="mobile-view" class=""><i class="fas fa-mobile-alt"></i></a>
+                </li>
+                
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../code-editor" data-modal_width="900px" data-modal_color="#229954">
+                        <i class="fa fa-code"></i>
+                        <div data-pass_id="builder" data-pass-collection="" data-pass-document_id="" name="" data-pass_to="code-editor"></div>
+                    </a>
+                </li>
+                <li class="margin-right:15px"><a id='element-borders' class=""><i class="far fa-square"></i></a></li>
+                <li class="margin-right:15px padding-left:15px"><a id="clean-canvas"><i class="far fa-trash-alt"></i></a></li>
+            </ul>
+        
+            <!-- Menu Icon Arrow Right Animations -->
+            <a aria-label="mobile menu" class="menu_icon arrow-right" data-toggle="active" data-toggle_sidenav="menuR">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
         </nav>
 
         <!-- Modal viewport -->
@@ -48,15 +99,15 @@
         </main>
 
         <!-- SideNav Left -->
-        <sidenav id="menuL" class="cocreate-sidenav background:whitesmoke height:100vh" data-main_content="canvas,content" sidenav-default_desktop="expanded" sidenav-default_tablet="offcanvas" sidenav-default_phone="offcanvas" sidenav-ontoggle_desktop="offcanvas"
+        <sidenav id="menuL" class="cocreate-sidenav background:whitesmoke height:100vh" data-main_content="canvas,content" sidenav-default_desktop="offcanvas" sidenav-default_tablet="offcanvas" sidenav-default_phone="offcanvas" sidenav-ontoggle_desktop="offcanvas"
             sidenav-ontoggle_tablet="expanded" sidenav-expanded_width="260px">
-            <div class="domEditor" data-collection="files" data-document_id="60de0fae14b5ab0c2dd2feba" name="src"></div>
+            <div class="domEdito" data-collection="files" data-document_id="60de0fae14b5ab0c2dd2feba" name="src"></div>
             <div class="resizeHandler"></div>
         </sidenav>
 
         <!-- SideNav Right -->
-        <sidenav data-main_content="canvas,content" sidenav-default_desktop="expanded" sidenav-default_tablet="expanded" sidenav-expanded_width="305px" sidenav-collapsed_width="0px" id="menuR" class="cocreate-sidenav sidenav-right background:whitesmoke height:100vh">
-            <div class="domEditor" data-collection="files" data-document_id="60de0fae14b5ab0c2dd2febb" name="src"></div>
+        <sidenav data-main_content="canvas,content" sidenav-default_desktop="offcanvas" sidenav-default_tablet="offcanvas" sidenav-expanded_width="305px" sidenav-collapsed_width="0px" id="menuR" class="cocreate-sidenav sidenav-right background:whitesmoke height:100vh">
+            <div class="domEdito" data-collection="files" data-document_id="60de0fae14b5ab0c2dd2febb" name="src"></div>
             <div class="resizeHandler"></div>
         </sidenav>
 
