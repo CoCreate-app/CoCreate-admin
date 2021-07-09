@@ -2,9 +2,39 @@ module.exports = {
     "config": {
         "apiKey": "2061acef-0451-4545-f754-60cf8160",
         "organization_Id": "5ff747727005da1c272740ab",
-        "host": "server.cocreate.app:8088"
+        "host": "general.cocreate.app"
     },
     "sources": [
+        {
+            "entry": "./src/admin/signin.html",
+            "collection": "files",
+            "document_id": "5ff747727005da1c272740fb",
+            "key": "src",
+            "data": {
+                "name": "signin.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/signin",
+                "public": "true",
+                "module_id": "5ff747727005da1c2727419c"
+            }
+        },
+        {
+            "entry": "./src/admin/signup.html",
+            "collection": "files",
+            "document_id": "60bea0c3b25613e8da1b4bde",
+            "key": "src",
+            "data": {
+                "name": "signup.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/signup",
+                "public": "true",
+                "module_id": "5ff747727005da1c2727419c"
+            }
+        },
         {
             "entry": "./src/apikey.js",
             "collection": "files",
@@ -16,7 +46,8 @@ module.exports = {
                     "general.cocreate.app"
                 ],
                 "path": "/apikey.js",
-                "public": "true"
+                "public": "true",
+                "module_id": "5ff747727005da1c2727419c"
             }
         },
         {
@@ -35,37 +66,7 @@ module.exports = {
             }
         },
         {
-            "entry": "./src/signin.html",
-            "collection": "files",
-            "document_id": "5ff747727005da1c272740fb",
-            "key": "src",
-            "data": {
-                "name": "signin.html",
-                "domains": [
-                    "general.cocreate.app"
-                ],
-                "path": "/signin",
-                "public": "true",
-                "module_id": ""
-            }
-        },
-        {
-            "entry": "./src/signup.html",
-            "collection": "files",
-            "document_id": "60bea0c3b25613e8da1b4bde",
-            "key": "src",
-            "data": {
-                "name": "signup.html",
-                "domains": [
-                    "general.cocreate.app"
-                ],
-                "path": "/signup",
-                "public": "true",
-                "module_id": ""
-            }
-        },
-        {
-            "entry": "./src/index.css",
+            "entry": "./src/admin/index.css",
             "collection": "files",
             "document_id": "60972231624235187e4d6979",
             "key": "src",
@@ -76,7 +77,7 @@ module.exports = {
                 ],
                 "path": "/admin/index.css",
                 "public": "true",
-                "module_id": ""
+                "module_id": "5ff747727005da1c2727419c"
             }
         },
         {
@@ -91,7 +92,7 @@ module.exports = {
                 ],
                 "path": "/admin/activities/datatable.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e74055b979b40017448c60"
             }
         },
         {
@@ -125,6 +126,21 @@ module.exports = {
             }
         },
         {
+            "entry": "./src/admin/blog/datatable.html",
+            "collection": "files",
+            "document_id": "60be9e27b25613e8da1b4bdc",
+            "key": "src",
+            "data": {
+                "name": "datatable.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/blog/datatable.html",
+                "public": "true",
+                "module_id": "60e7416eb979b40017448c76"
+            }
+        },
+        {
             "entry": "./src/admin/blog/form.html",
             "collection": "files",
             "document_id": "60ddfdbd14b5ab0c2dd2fdf2",
@@ -136,7 +152,7 @@ module.exports = {
                 ],
                 "path": "/admin/blog/form.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e7416eb979b40017448c76"
             }
         },
         {
@@ -376,7 +392,22 @@ module.exports = {
                 ],
                 "path": "/admin/dashboard",
                 "public": "true",
-                "module_id": ""
+                "module_id": "5ff747727005da1c2727418a"
+            }
+        },
+        {
+            "entry": "./src/admin/domains/index.html",
+            "collection": "files",
+            "document_id": "60e72af6ab74b22c0064e008",
+            "key": "src",
+            "data": {
+                "name": "index.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/domains/index.html",
+                "public": "true",
+                "module_id": "5ff747727005da1c2727418b"
             }
         },
         {
@@ -395,12 +426,12 @@ module.exports = {
             }
         },
         {
-            "entry": "./src/admin/email/setting.html",
+            "entry": "./src/admin/email/settings.html",
             "collection": "files",
-            "document_id": "",
+            "document_id": "60e72b3bab74b22c0064e00d",
             "key": "src",
             "data": {
-                "name": "setting.html",
+                "name": "settings.html",
                 "domains": [
                     "general.cocreate.app"
                 ],
@@ -440,6 +471,21 @@ module.exports = {
             }
         },
         {
+            "entry": "./src/admin/estimates/datatable.html",
+            "collection": "files",
+            "document_id": "60e8c660b979b40017449b5a",
+            "key": "src",
+            "data": {
+                "name": "datatable.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/estimates/datatable.html",
+                "public": "true",
+                "module_id": "5ff747727005da1c27274184"
+            }
+        },
+        {
             "entry": "./src/admin/estimates/form.html",
             "collection": "files",
             "document_id": "60de3a9414b5ab0c2dd30030",
@@ -466,7 +512,7 @@ module.exports = {
                 ],
                 "path": "/admin/expenses/datatable.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e7435ab979b40017448c90"
             }
         },
         {
@@ -481,7 +527,37 @@ module.exports = {
                 ],
                 "path": "/admin/expenses/form.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e7435ab979b40017448c90"
+            }
+        },
+        {
+            "entry": "./src/admin/files/datatable.html",
+            "collection": "files",
+            "document_id": "60ddfdc014b5ab0c2dd2fe15",
+            "key": "src",
+            "data": {
+                "name": "datatable.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/files/datatable.html",
+                "public": "true",
+                "module_id": "5ff747727005da1c2727419a"
+            }
+        },
+        {
+            "entry": "./src/admin/files/form.html",
+            "collection": "files",
+            "document_id": "60ddfdc014b5ab0c2dd2fe16",
+            "key": "src",
+            "data": {
+                "name": "form.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/files/form.html",
+                "public": "true",
+                "module_id": "5ff747727005da1c2727419a"
             }
         },
         {
@@ -496,7 +572,7 @@ module.exports = {
                 ],
                 "path": "/admin/fleet-tracking/index.css",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e7444eb979b40017448ca8"
             }
         },
         {
@@ -511,7 +587,7 @@ module.exports = {
                 ],
                 "path": "/admin/fleet-tracking",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e7444eb979b40017448ca8"
             }
         },
         {
@@ -526,7 +602,7 @@ module.exports = {
                 ],
                 "path": "/admin/invoices/datatable.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e7452eb979b40017448cd2"
             }
         },
         {
@@ -541,7 +617,7 @@ module.exports = {
                 ],
                 "path": "/admin/invoices/form.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e7452eb979b40017448cd2"
             }
         },
         {
@@ -556,7 +632,7 @@ module.exports = {
                 ],
                 "path": "/admin/invoices/index.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e7452eb979b40017448cd2"
             }
         },
         {
@@ -571,7 +647,7 @@ module.exports = {
                 ],
                 "path": "/admin/items/datatable.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e74739b979b40017448d03"
             }
         },
         {
@@ -586,7 +662,7 @@ module.exports = {
                 ],
                 "path": "/admin/items/form.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e74739b979b40017448d03"
             }
         },
         {
@@ -601,7 +677,7 @@ module.exports = {
                 ],
                 "path": "/admin/marketplace/form.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e7483fb979b40017448d13"
             }
         },
         {
@@ -616,7 +692,7 @@ module.exports = {
                 ],
                 "path": "/admin/marketplace/list.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e7483fb979b40017448d13"
             }
         },
         {
@@ -631,7 +707,7 @@ module.exports = {
                 ],
                 "path": "/admin/marketplace/item.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e7483fb979b40017448d13"
             }
         },
         {
@@ -662,6 +738,54 @@ module.exports = {
                 "path": "/admin/module-templates/form.html",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274192"
+            }
+        },
+        {
+            "entry": "./src/admin/module-templates/templates/blank.html",
+            "collection": "files",
+            "document_id": "60e8bbf9b979b40017449ac3",
+            "key": "src",
+            "data": {
+                "name": "blank.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/module-templates/templates/blank.html",
+                "public": "true",
+                "module_id": "5ff747727005da1c27274192",
+                "tags": "template"
+            }
+        },
+        {
+            "entry": "./src/admin/module-templates/templates/datatable.html",
+            "collection": "files",
+            "document_id": "60e8bbfab979b40017449ac4",
+            "key": "src",
+            "data": {
+                "name": "datatable.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/module-templates/templates/datatable.html",
+                "public": "true",
+                "module_id": "5ff747727005da1c27274192",
+                "tags": "template"
+            }
+        },
+        {
+            "entry": "./src/admin/module-templates/templates/form.html",
+            "collection": "files",
+            "document_id": "60e8bbfab979b40017449ac5",
+            "key": "src",
+            "data": {
+                "name": "form.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/module-templates/templates/form.html",
+                "public": "true",
+                "module_id": "5ff747727005da1c27274192",
+                "tags": "template"
             }
         },
         {
@@ -781,7 +905,7 @@ module.exports = {
                 ],
                 "path": "/admin/payments/datatable.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "5ff747727005da1c27274189"
             }
         },
         {
@@ -796,7 +920,22 @@ module.exports = {
                 ],
                 "path": "/admin/payments/form.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "5ff747727005da1c27274189"
+            }
+        },
+        {
+            "entry": "./src/admin/payments/settings.html",
+            "collection": "files",
+            "document_id": "60972231624235187e4d6979",
+            "key": "src",
+            "data": {
+                "name": "settings.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/payments/settings.html",
+                "public": "true",
+                "module_id": "5ff747727005da1c27274189"
             }
         },
         {
@@ -841,7 +980,7 @@ module.exports = {
                 ],
                 "path": "/admin/projects/datatable.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e73c8eb979b40017448c1b"
             }
         },
         {
@@ -856,37 +995,7 @@ module.exports = {
                 ],
                 "path": "/admin/projects/form.html",
                 "public": "true",
-                "module_id": ""
-            }
-        },
-        {
-            "entry": "./src/admin/files/datatable.html",
-            "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe15",
-            "key": "src",
-            "data": {
-                "name": "datatable.html",
-                "domains": [
-                    "general.cocreate.app"
-                ],
-                "path": "/admin/routes/datatable.html",
-                "public": "true",
-                "module_id": "5ff747727005da1c2727419a"
-            }
-        },
-        {
-            "entry": "./src/admin/files/form.html",
-            "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe16",
-            "key": "src",
-            "data": {
-                "name": "form.html",
-                "domains": [
-                    "general.cocreate.app"
-                ],
-                "path": "/admin/routes/form.html",
-                "public": "true",
-                "module_id": "5ff747727005da1c2727419a"
+                "module_id": "60e73c8eb979b40017448c1b"
             }
         },
         {
@@ -916,7 +1025,7 @@ module.exports = {
                 ],
                 "path": "/admin/social/index.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e73d29b979b40017448c2b"
             }
         },
         {
@@ -931,7 +1040,7 @@ module.exports = {
                 ],
                 "path": "/admin/tasklists/datatable.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e73eefb979b40017448c4c"
             }
         },
         {
@@ -946,7 +1055,7 @@ module.exports = {
                 ],
                 "path": "/admin/tasklists/form.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e73eefb979b40017448c4c"
             }
         },
         {
@@ -961,7 +1070,7 @@ module.exports = {
                 ],
                 "path": "/admin/users/form.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "5ff747727005da1c27274182"
             }
         },
         {
@@ -976,7 +1085,7 @@ module.exports = {
                 ],
                 "path": "/admin/users/profile.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "5ff747727005da1c27274182"
             }
         },
         {
@@ -991,7 +1100,7 @@ module.exports = {
                 ],
                 "path": "/admin/users/datatable.html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727419e"
+                "module_id": "5ff747727005da1c27274182"
             }
         },
         {
@@ -1006,7 +1115,7 @@ module.exports = {
                 ],
                 "path": "/admin/wallet/index.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "60e74833b979b40017448d12"
             }
         },
         {

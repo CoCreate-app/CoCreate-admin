@@ -17,6 +17,7 @@
         div[data-user_status="on"] {background-color:yellowgreen;}
         div[data-user_status="off"] {background-color:red;}
         div[data-user_status="idle"] {background-color:orange;}
+        ul::-webkit-scrollbar-thumb, ul::-webkit-scrollbar-track{background-color:rgba(0,0,0,0.01)}
     </style>
     <body>
         <!-- Navbar  -->
@@ -103,7 +104,7 @@
         <main class="height:100vh margin-top:10px" data-main_content_id="content"></main>
         
         <!-- SideNav  -->
-        <sidenav id="menuL" class="cocreate-sidenav background:whitesmoke height:100vh" data-main_content="content" sidenav-default_desktop="collapsed" sidenav-default_tablet="collapsed">
+        <sidenav id="menuL" class="cocreate-sidenav background:whitesmoke height:100vh background:transparent::-webkit-scrollbar-thumb" data-main_content="content" sidenav-default_desktop="collapsed" sidenav-default_tablet="collapsed">
         
             <!-- Select to change organizations  -->
             <cocreate-select class="org-changer remove-none border:none sessionUser_Id padding:0" name="current_org" data-collection="users" data-document_id="5ff747727005da1c272740ac">
@@ -141,7 +142,7 @@
         	<!--<div data-template_id="main-menu" data-filter_name="menu-position" data-filter_value="0" data-value_type="number" data-filter_operator="ne"></div>-->
         	<div class="padding-right:5px padding-bottom:5px">
                 <!-- Fetch and Render-->
-              	<ul class="overflow:overlay display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
+              	<ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
               	    <div data-fetch_collection="modules" 
                         data-order_by="main-menu-position" 
                         data-order_type="asc"
@@ -163,6 +164,7 @@
                                 <div data-pass_collection="module_activities" data-pass_value="{{data._id}}" data-pass_to="module_id"></div>
                                 <div data-pass_collection="files" data-pass_document_id="{{data.main-menu-secondary}}" data-pass_name="src" data-pass_to="form"></div>
                                 <div data-pass_collection="files" data-pass_document_id="{{data.main-menu-primary}}" data-pass_name="src" data-pass_to="render"></div>
+                                <div data-pass_document_id="{{data._id}}" data-pass_to="module-form"></div>
                             </a>
                             <div class="float:right width:50px text-align:center">
                                 <a target="modal" fetch-for href='..{"collection":"files", "document_id":"{{data.main-menu-secondary}}","name":"path"}'
@@ -171,6 +173,8 @@
                                     <i class="fas fa-plus"></i>
                                     <div data-pass_collection="modules" data-document_id="{{data._id}}" data-pass_to="module_id"></div>
                                     <div data-pass_collection="files" data-pass_document_id="{{data.main-menu-secondary}}" data-pass_name="src" data-pass_to="render"></div>
+                                    <div data-pass_document_id="{{data._id}}" data-pass_to="module-form"></div>
+
                                 </a>
                             </div>
                         </li>
@@ -178,7 +182,7 @@
                 </ul>
                 
                 <!-- sidenav Footer -->
-				<div class="display:inline:block position:absolute bottom:0 background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
+				<div class="display:flex justify-content:space-between flex-wrap:wrap position:absolute bottom:0 background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
 					<a target="modal" href="./settings/index.html" data-modal_width="275px" data-modal_color="#229954" data-modal_x="0" data-modal_y="0" class="width:50px text-align:center display:inline-block">
 					    <span class="padding:10px width:50px text-align:center"><i class="fas fa-cogs"></i></span>
 					    <div data-pass_collection="files" data-pass_document_id="60ddfdc014b5ab0c2dd2fe18" data-pass_name="src" data-pass_to="render"></div>
@@ -190,6 +194,10 @@
 					<a target="modal" href="./module-views/datatable.html" data-modal_width="640px" data-modal_color="#229954" class="width:50px text-align:center display:inline-block">
 					    <span class="padding:10px width:50px text-align:center"><i class="fas fa-shapes"></i></span>
 					    <div data-pass_collection="files" data-pass_document_id="60ddfdc014b5ab0c2dd2fe0b" data-pass_name="src" data-pass_to="render"></div>
+					</a>
+					<a target="modal" href="./files/datatable.html" data-modal_width="640px" data-modal_color="#229954" class="width:50px text-align:center display:inline-block">
+					    <span class="padding:10px width:50px text-align:center"><i class="far fa-folder"></i></span>
+					    <div data-pass_collection="files" data-pass_document_id="60ddfdc014b5ab0c2dd2fe15" data-pass_name="src" data-pass_to="render"></div>
 					</a>
 					<a href="signin.html" class="logoutBtn width:50px text-align:center display:inline-block">
 					  <span class="padding:10px width:50px text-align:center"><i class="fas fa-sign-out-alt"></i></span>

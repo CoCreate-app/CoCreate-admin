@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+        <title>Module Activity Kanban View | CoCreate</title>
+        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+    </head>
+
+    <body>
+        <!-- Modal Viewport -->
+        <div id="modal-viewport" class="hidden"></div>
+
+        <!-- Navbar -->
+        <nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" data-scroll="sticky-nav, hide-nav" data-scroll_up="5" data-scroll_down="5">
+
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
+
+                <!-- Modal Controls -->
+                <li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-maximize"><i data-toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
+
+                <!-- fullscreen toogle and icon transform-->
+                <li class="margin-right:15px"><a data-fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../modules/form.html" data-modal_width="320px">
+                        <i class="fas fa-cog"></i>
+                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
+                        <div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+                    </a>
+                </li>
+
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../code-editor">
+                        <i class="fas fa-code"></i>
+                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                    </a>
+                </li>
+
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../builder/">
+                        <i class="fas fa-palette"></i>
+                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                    </a>
+                </li>
+
+                <!-- deleteDocument-->
+                <li class="margin-right:15px">
+                    <a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                        <i class="far fa-trash-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="padding:10px" data-main_content_id="content">
+
+            <div id="board" class="display:flex overflow:overlay height:90vh">
+
+                <div class="display:flex flex-wrap:nowrap flex-direction:row sortable" data-group_name="stage" data-fetch_collection="" data-filter_name="module_id" data-filter_value="" data-filter_operator="$eq" data-order_by="stage_position" data-order_type="asc" data-template_id="stage" data-render_id="stage" data-pass_id="datatable" data-droppable="true">
+
+                    <!-- Stage Column -->
+                    <div class="template margin:10px background:whitesmoke max-width:300px" data-template_id="stage" data-element_id="{{stage._id}}" data-document_id="{{stage._id}}">
+                        <div class="margin:15px font-size:18px color-dark-gray">
+                            <span class="display:inline-block">
+                              <input class="input_field"
+                                data-collection="{{collection}}" 
+                                data-document_id="{{stage._id}}" 
+                                name="name" 
+                                id="stage-name"  
+                                placeholder="Stage">
+                            </span>
+                            <span class="float:right display:inline-block">
+                              <a data-clone_id="stage" data-actions="deleteDocument" data-collection="{{collection}}" data-document_id="{{stage._id}}"><i class="fas fa-times"></i></a>
+                            </span>
+                        </div>
+                        <div class="height:70vh padding:10px overflow:auto">
+
+                            <div class="display:flex flex-direction:column height:100% sortable" data-group_name="card" data-fetch_collection="{{collection}}" data-filter_name="stage" data-filter_value="{{stage._id}}" data-filter_operator="$eq" data-fetch_count="" data-order_by="stage-index_position"
+                                data-order_type="asc" data-template_id="{{stage._id}}">
+
+                                <!-- Card -->
+                                <div class="template card margin-bottom:10px padding:10px background:white" data-template_id="{{stage._id}}" data-value="{{data._id}}" data-document_id="{{data._id}}">
+                                    <div class="width:100%">
+                                        <img data-collection="{{collection}}" data-document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
+                                    </div>
+                                    <div class="border-bottom:1px_solid_gray margin:0px_15px">
+                                        <div class="display:flex margin:10px_0px">
+                                            <span class="cocreate-badge round badge-danger margin-right:10px font-size:10px padding:0px_20px"></span>
+                                            <span class="cocreate-badge round margin-right:10px font-size:10px padding:0px_20px"></span>
+                                        </div>
+                                        <p data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Card Name</p>
+                                        <div class="display:flex margin:10px_0px">
+                                            <span class="cocreate-badge badge-danger margin-right:10px font-size:14px">
+                                                <i class="far fa-clock"></i>
+                                                <span>Aug 29th 17</span>
+                                            </span>
+                                            <span class="cocreate-badge margin-right:10px font-size:14px">
+                                                <i class="far fa-check-circle"></i>
+                                                <span>2/7</span>
+                                            </span>
+                                        </div>
+                                        <div class="display:flex">
+
+                                            <!-- Avatar -->
+                                            <div class="avatar-wrapper margin:5px_0px margin-right:10px">
+                                                <a class="avatar round" data-window_url="render.html" data-pass_collection="modules" data-pass_prefix="" data-pass_module_id="5dd010bccbc25f0cdb1a4d9f" data-pass_to="render" data-window_width="300px" data-window_height="375px" data-window_color="#229954">
+                                      				<span data-collection="users" data-module_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+                                      				<span data-collection="users" data-module_id="" name="profile_image" class="sessionUser_Id avatar-image">
+                                      			        <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+                                      				</span>
+                                      			</a>
+                                                <div class="avatar-status off"></div>
+                                            </div>
+
+                                            <!-- Avatar -->
+                                            <div class="avatar-wrapper margin:5px_0px margin-right:10px">
+                                                <a class="avatar round" data-window_url="render.html" data-pass_collection="modules" data-pass_prefix="" data-pass_module_id="5dd010bccbc25f0cdb1a4d9f" data-pass_to="render" data-window_width="300px" data-window_height="375px" data-window_color="#229954">
+                                      				<span data-collection="users" data-module_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
+                                      				<span data-collection="users" data-module_id="" name="profile_image" class="sessionUser_Id avatar-image">
+                                      				  <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
+                                      				</span>
+                                      			</a>
+                                                <div class="avatar-status off"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="display:flex margin:15px">
+                                        <span class="float:left"><i class="fas fa-eye"></i></span>
+                                        <div class="display:flex float:right">
+                                            <span class="margin-left:10px"><i class="far fa-sticky-note"></i><span>0</span></span>
+                                            <span class="margin-left:10px"><i class="far fa-envelope"></i><span>8</span></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="margin:0px_15px padding:15px_0px">
+                            <form data-collection="{{collection}}">
+                                <input type="hidden" data-document_id="" name="stage" value="{{stage._id}}" />
+                                <a data-actions="createDocument"><i class="fas fa-plus"></i> New Card</a>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <form>
+                <input type="hidden" data-pass_id="module_id" data-collection="" data-document_id="" name="module_id"/>
+                <button data-actions="createDocument" class="position:fixed bottom:15px right:15px background:dodgerblue border-radius:50% grow-hover">
+                    <i class="fas fa-plus"></i>
+               	</button>
+            </form>
+
+        </main>
+
+		<!--CoCreateJS-->
+		<script src="../../apikey.js"></script>
+        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
+
+
+    </body>
+
+</html>

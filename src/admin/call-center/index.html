@@ -417,7 +417,7 @@
                     <tbody data-template_id="datatable" data-fetch_collection="testtwillio" data-fetch_count="15" data-order_by="" data-order_type="asc">
 
                         <!-- Datatable Row Template -->
-                        <tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" data-document_id="{{data._id}}" data-template_id="datatable" data-toggle="selected">
+                        <tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" data-document_id="{{data._id}}" data-template_id="datatable" data-document_id="{{data._id}}" data-toggle="selected">
                             <td class="padding:10px">
                                 <div class="display:flex min-width:200px">
                                     <div class="display:flex justify-content:center width:40px">
@@ -502,13 +502,13 @@
                                 <li class="option templat display:flex padding:5px" data-template_id="option0" value='+13472189814' data-document_id="{{data._id}}" data-render_array="data">
                                     <div>
                                         <h3 name="name" value="{{data.name}}">+13472189814</h3>
-                                        <h5 name="_id" value="{{data._id}}"></h5>
+                                        <h5>{{data._id}}</h5>
                                     </div>
                                 </li>
                                 <li class="option templat display:flex padding:5px" data-template_id="option0" value='+13472189814' data-document_id="{{data._id}}" data-render_array="data">
                                     <div>
                                         <h3 name="name" value="{{data.name}}">+16027372368</h3>
-                                        <h5 name="_id" value="{{data._id}}"></h5>
+                                        <h5>{{data._id}}</h5>
                                     </div>
                                 </li>
                             </ul>
@@ -536,7 +536,7 @@
                                         </div>
                                         <div>
                                             <h3 name="name" value="{{data.name}}">No Name</h3>
-                                            <h5 name="_id" value="{{data._id}}"></h5>
+                                            <h5>{{data._id}}</h5>
                                         </div>
                                     </li>
                                 </ul>

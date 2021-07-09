@@ -10,6 +10,12 @@
         <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
 	</head>
 
+	<style>
+		.selected {
+			background: gainsboro;
+		}
+	</style>
+
 	<body class="width:fit-content overflow:overlay">
 
 		<!-- Navbar -->
@@ -108,7 +114,7 @@
 
 				<tbody data-template_id="datatable" data-fetch_collection="files" data-order_by="name" data-order_type="asc">
 
-					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" data-template_id="datatable">
+					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" data-template_id="datatable" data-document_id="{{data._id}}" data-toggle="selected">
 						<td class="padding:10px">
 							<div class="display:flex min-width:200px">
 								<div class="display:flex justify-content:center width:25px">

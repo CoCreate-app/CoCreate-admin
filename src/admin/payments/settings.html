@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 	<head>
@@ -5,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-		<title>User Form | CoCreate</title>
+		<title>Payment Settings | CoCreate</title>
 
 		<!-- CoCreate CSS -->
 		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" />
@@ -66,46 +67,12 @@
 
 		<!-- Main Content -->
 		<main class="padding:10px" data-main_content_id="content">
-			<form data-pass_id="form-fields" data-collection="users" data-document_id="5ee2e3a93e956152355a3443" auto-complete="off">
-				<input type="text" name="name" id="name" placeholder="Name" class="floating-label" />
-				<input type="text" name="email" id="email" placeholder="Email" class="floating-label" autocomplete="off" />
-				<input type="password" name="password" placeholder="password" class="floating-label" />
-				<input type="text" name="description" placeholder="Description" class="floating-label" />
-				<input type="text" name="profile_image" placeholder="Profile Image" class="floating-label" />
 
-				<cocreate-select class="floating-label sortable" name="connected_orgs" placeholder="Connected Org" multiple>
-					<input class="search-input" placeholder="Search" data-template_id="connect">
-					<ul data-fetch_collection="organizations" data-template_id="connectn" class="options overflow:overlay">
-						<li class="template option" data-collection="organizations" data-template_id="connectn">
-							<span class="logo-icon"><img data-collection="organizations" data-document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>
-							<div class="display:block line-height:1 padding:5px_0px " style="width: calc(100% - 15px);">
-								<h3 data-collection="organizations" data-document_id="{{data._id}}" name="name">Organization Name</h3>
-								<h5 value="{{data._id}}">id</h5>
-							</div>
-						</li>
-					</ul>
-				</cocreate-select>
+			<h2>Connect with cocreate stripe</h2>
+			<a href="https://connect.stripe.com/oauth/authorize?response_type=code&client_id=ca_9su9H1OK4WqFG7V6044QFXcFdmCrZZ0b&scope=read_write" target="_blank">
+			Connect -> <img src="./stripe-connect-button.png">
+			</a>
 
-				<cocreate-select class="floating-label sortable" name="current_org" placeholder="Current Org">
-					<input class="search-input" placeholder="Search" data-template_id="connect">
-					<ul data-fetch_collection="users" data-fetch_document="" data-fetch_name="connected_orgs" data-template_id="connect" class="options overflow:overlay">
-
-						<li class="template option" data-collection="organizations" data-template_id="connect">
-							<span class="logo-icon"><img data-collection="organizations" data-document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>
-							<div class="display:block line-height:1 padding:5px_0px " style="width: calc(100% - 15px);">
-								<h3 data-collection="organizations" data-document_id="{{data._id}}" name="name">Organization Name</h3>
-								<h5 value="{{data._id}}">id</h5>
-							</div>
-						</li>
-
-					</ul>
-				</cocreate-select>
-
-				<!-- current-org -->
-				<input type="text" name="current_org" class="floating-label" placeholder="Current Org">
-
-				<button data-actions="saveDocument" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50%"><i class="far fa-save"></i></button>
-			</form>
 		</main>
 
 		<!--CoCreateJS-->

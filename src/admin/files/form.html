@@ -7,9 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
         <title>Files Form | CoCreate</title>
-
-        <!-- CoCreate CSS -->
-        <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" />
         <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
     </head>
 
@@ -73,8 +70,9 @@
                             <h3 name="name" value="{{data.domain}}">Domain Name</h3>
                         </li>
                     </ul>
-                </cocreate-select> <input type="text" name="route" class="floating-label" placeholder="route"> <input type="text" name="collection" class="floating-label" placeholder="collection"> <input type="text" name="document_id" class="floating-label" placeholder="document_id">
-                <input type="text" name="name" class="floating-label" placeholder="name">
+                </cocreate-select> <input type="text" name="path" class="floating-label" placeholder="path"> <input type="text" name="collection" class="floating-label" placeholder="collection"> <input type="text" name="document_id" class="floating-label" placeholder="document_id">
+                <input type="text" name="name" class="floating-label" placeholder="File Name">
+                <input type="text" name="module_id" class="floating-label" placeholder="Module_id">
                 <button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue opacity:0.8 grow-hover round">
       	            <i class="far fa-save"></i>
       	        </button>
