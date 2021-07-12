@@ -69,16 +69,80 @@
                 <input type="hidden" name="module_id" data-pass_id="module_id">
                 <input type="text" name="name" class="floating-label" placeholder="Name">
                 <input type="text" name="description" class="floating-label" placeholder="Description">
-                <button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue opacity:0.8 grow-hover round">
-      	            <i class="far fa-save"></i>
-      	        </button>
+				
+				<div class="display:flex">
+					<div class="flex-grow:1 padding-right:5px">
+						<cocreate-select class="sortable floating-label" name="status" data-document_id="" multiple placeholder="Status">
+							<input placeholder="Search" data-template_id="status">
+						    <div data-template_id="status" data-filter_name="type" data-filter_value="5ff747727005da1c272740ab"></div>
+							<cc-options data-fetch_collection="tags" data-pass_id="module_id" data-filter_name="module_id" data-filter_value="" data-template_id="status" class="overflow:auto">
+								<cc-option class="template" data-template_id="status" value="{{data._id}}">
+									<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Status Name</h4>
+								</cc-option>
+							</cc-options>
+						</cocreate-select>
+					</div>
+					<div class="flex-grow:1 padding-left:5px">
+						<cocreate-select class="sortable floating-label flex-grow:1" name="stage" data-document_id="stage" multiple placeholder="Stage">
+							<input placeholder="Search" data-template_id="stage">
+						    <div data-template_id="stage" data-filter_name="type" data-filter_value="60eb93a2b979b4001744b445"></div>
+							<cc-options data-fetch_collection="tags" data-filter_name="module_id" data-pass_id="module_id" data-filter_value="" data-template_id="stage" class="overflow:auto">
+								<cc-option class="template" data-template_id="stage" value="{{data._id}}">
+									<h4 data-collection="collection" data-document_id="{{data._id}}" name="name">Stage Name</h4>
+								</cc-option>
+							</cc-options>
+						</cocreate-select>
+					</div>
+				</div>
+				
+				<cocreate-select class="sortable floating-label" name="related_to" data-document_id="" multiple placeholder="Related To:">
+					<input placeholder="Search" data-template_id="related_to">
+					<cc-options data-fetch_collection="module_activities" data-template_id="related_to" class="overflow:auto">
+						<cc-option class="template display:flex padding:5px" data-template_id="related_to" value="{{data._id}}">
+							<div class="display:flex justify-content:center width:25px">
+								<span data-collection="modules" data-document_id="{{data.module_id}}" name="icon"></span>
+							</div>
+							<div class="margin-left:10px">
+								<span data-collection="{{collection}}" data-document_id="{{data._id}}" name="name"></span>
+								<h5 data-collection="{{collection}}" data-document_id="{{data._id}}" name="description"></h5>
+							</div>
+						</cc-option>
+					</cc-options>
+				</cocreate-select>
+				
+				<cocreate-select class="sortable floating-label" name="team" data-document_id="" multiple placeholder="Team">
+					<input placeholder="Search" data-template_id="team">
+					<cc-options data-fetch_collection="users" data-template_id="team" class="overflow:auto">
+						<cc-option class="template display:flex padding:5px" data-template_id="team" value="{{data._id}}">
+							<div class="display:flex justify-content:center">
+					            <div class="avatar-wrapper margin:5px">
+					                <a class="avatar round" target="modal" href="../users/profile.html" data-modal_width="300px"  data-modal_height="375px"  data-modal_color="#229954">
+					                    <span data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" class="avatar-name width:1ch letter-spacing:2px overflow:hidden text-transform:uppercase"></span>
+					                    <span class="avatar-image">
+					                        <img data-collection="users" data-document_id="{{collection}}" name="avatar" onerror="this.style.display='none'" width="40px"/>
+					                    </span>
+					                </a>
+					                <div class="avatar-status"  data-collection="{{collection}}" data-document_id="{{data._id}}" data-user_status='{"name":"status"}'></div>
+					            </div>
+							</div>
+							<div class="margin-left:5px diaplay:flex">
+								<h3 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name"></h3>
+								<h5 data-collection="{{collection}}" data-document_id="{{data._id}}" name="email"></h5>
+							</div>
+						</cc-option>
+					</cc-options>
+				</cocreate-select>
+				
+				<button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
+				    <i class="far fa-save"></i>
+				</button>
             </form>
 
         </main>
 
 		<!--CoCreateJS-->
 		<script src="../../apikey.js"></script>
-        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
 
     </body>
 

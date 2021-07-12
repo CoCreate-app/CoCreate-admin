@@ -36,7 +36,7 @@ module.exports = {
             }
         },
         {
-            "entry": "./src/apikey.js",
+            "entry": "./src/admin/apikey.js",
             "collection": "files",
             "document_id": "60de467b14b5ab0c2dd30098",
             "key": "src",
@@ -999,6 +999,21 @@ module.exports = {
             }
         },
         {
+            "entry": "./src/admin/projects/kanban.html",
+            "collection": "files",
+            "document_id": "60e9f699b979b4001744a5f6",
+            "key": "src",
+            "data": {
+                "name": "kanban.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/projects/kanban.html",
+                "public": "true",
+                "module_id": "60e73c8eb979b40017448c1b"
+            }
+        },
+        {
             "entry": "./src/admin/settings/index.html",
             "collection": "files",
             "document_id": "60ddfdc014b5ab0c2dd2fe18",
@@ -1026,6 +1041,36 @@ module.exports = {
                 "path": "/admin/social/index.html",
                 "public": "true",
                 "module_id": "60e73d29b979b40017448c2b"
+            }
+        },
+        {
+            "entry": "./src/admin/tags/datatable.html",
+            "collection": "files",
+            "document_id": "60eb8562b979b4001744b39a",
+            "key": "src",
+            "data": {
+                "name": "datatable.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/tags/datatable.html",
+                "public": "true",
+                "module_id": "60eb8361b979b4001744b339"
+            }
+        },
+        {
+            "entry": "./src/admin/tags/form.html",
+            "collection": "files",
+            "document_id": "60eb8562b979b4001744b39b",
+            "key": "src",
+            "data": {
+                "name": "form.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/tags/form.html",
+                "public": "true",
+                "module_id": "60eb8361b979b4001744b339"
             }
         },
         {

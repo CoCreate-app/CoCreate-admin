@@ -99,19 +99,20 @@
 			<table class="width:100% border-collapse:collapse">
 				<tr class="border-bottom:1px_solid_darkgray">
 					<td class="position:sticky top:0 background:white padding-top:0 padding:10px ">
-						<input type="text" class="floating-label" data-filter_name="name" data-value_type="string" data-filter_operator="" data-template_id="datatable" placeholder="Module Name">
-						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-							<a data-order_by="name" data-toggle_order data-template_id="datatable"></a>
-						</span>
-					</td>
-					<td class="position:sticky top:0 background:white padding-top:0 padding:10px ">
 						<input type="text" class="floating-label" data-filter_name="name" data-value_type="string" data-filter_operator="" data-template_id="datatable" placeholder="View Name">
 						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
 							<a data-order_by="name" data-toggle_order data-template_id="datatable"></a>
 						</span>
 					</td>
+					<td class="position:sticky top:0 background:white padding-top:0 padding:10px ">
+						<input type="text" class="floating-label" data-filter_name="_id" data-value_type="string" data-filter_operator="" data-template_id="datatable" placeholder="Document Id">
+						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
+							<a data-order_by="name" data-toggle_order data-template_id="datatable"></a>
+						</span>
+					</td>
 				</tr>
-
+				
+				<div data-template_id="datatable" data-filter_name="tags" data-filter_value="60ec69d7b979b4001744bbc8"></div>
 				<tbody data-template_id="datatable" data-fetch_collection="files" data-order_by="name" data-order_type="asc">
 
 					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" data-template_id="datatable" data-document_id="{{data._id}}" data-toggle="selected">
@@ -120,22 +121,24 @@
 								<div class="display:flex justify-content:center width:25px">
 									<span data-collection="modules" data-document_id="{{data.module_id}}" name="icon"></span>
 								</div>
-								<div class="margin-left:10px">
-									<a target="modal" href="../modules/form.html" data-modal_width="320px" data-modal_color="#229954">
-										<h4 data-collection="modules" data-document_id="{{data.module_id}}" name="name">Module Name</h4>
+								<div class="margin-left:10px display:flex">
+									<a target="modal" href="./form.html" data-pass_collection="modules" data-pass_document_id="{{data._id}}" data-pass_name="src" data-pass_id="render" data-pass_to="render" data-modal_width="320px" data-modal_color="#229954">
+										<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">View Name</h4>
 										<div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
 									</a>
-									<h5 data-collection="modules" data-document_id="{{data.module_id}}" name="_id"></h5>
+									<a target="modal" href="../modules/form.html" data-modal_width="320px" data-modal_color="#229954" class="cocreate-badge margin-left:5px">
+										<span data-collection="modules" data-document_id="{{data.module_id}}" name="name">Module Name</span>
+										<div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
+									</a>
 								</div>
 							</div>
 						</td>
 						<td class="padding:10px">
 							<div class="min-width:200px">
-								<a target="modal" href="./form.html" data-pass_collection="modules" data-pass_document_id="{{data._id}}" data-pass_name="src" data-pass_id="render" data-pass_to="render" data-modal_width="320px" data-modal_color="#229954">
-									<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">View Name</h4>
+								<a target="modal" href="./form.html" data-modal_width="320px" data-modal_color="#229954">
+									<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="_id">document_id</h4>
 									<div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
 								</a>
-								<h5 data-collection="{{collection}}" data-document_id="{{data._id}}" name="_id"></h5>
 							</div>
 						</td>
 					</tr>
@@ -144,13 +147,14 @@
 			</table>
 		</main>
 
-		<button target="modal" href="./form.html" data-modal_width="320px" data-modal_color="#229954" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:8">
-			<i class="fa fa-plus"></i>
+		<button class="position:fixed bottom:15px right:15px width:50px height:50px background:dodgerblue grow-hover border-radius:50% z-index:8 color:white">
+			<a target="modal" href="./form.html" data-modal_width="320px" data-modal_color="#229954">
+			<i class="fa fa-plus"></i></a>
 		</button>
 
 		<!--CoCreateJS-->
 		<script src="../../apikey.js"></script>
-		<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
+		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
 
 	</body>
 

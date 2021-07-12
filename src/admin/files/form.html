@@ -65,23 +65,46 @@
         <main class="padding:10px" data-main_content_id="content">
             <form data-pass_id="form-fields" data-collection="" data-document_id=""> <input type="hidden" name="module_id" value="" data-pass_id="module_id">
                 <cocreate-select name="domains" class="floating-label" placeholder="domains" multiple> <input class="template-search" placeholder="Search" data-template_id="domains">
-                    <ul data-fetch_collection="domains" data-template_id="domains" class="selectable--list cocreate-scroll">
-                        <li class="selectable template" data-template_id="domains" value='{{data.domain}}' data-document_id="{{data._id}}">
-                            <h3 name="name" value="{{data.domain}}">Domain Name</h3>
-                        </li>
-                    </ul>
-                </cocreate-select> <input type="text" name="path" class="floating-label" placeholder="path"> <input type="text" name="collection" class="floating-label" placeholder="collection"> <input type="text" name="document_id" class="floating-label" placeholder="document_id">
+					<cc-options data-fetch_collection="organizations" data-fetch_document_id="5ff747727005da1c272740ab" data-fetch_name="domains" data-template_id="domains" class="overflow:auto">
+						<cc-option class="template display:flex" data-template_id="domains" value="{{domains[]}}">
+							<h4>{{domains[]}}</h4>
+						</cc-option>
+					</cc-options>
+                </cocreate-select> 
+                <input type="text" name="path" class="floating-label" placeholder="path">
+				<cocreate-select class="sortable floating-label" name="tags" multiple placeholder="Tags">
+					<input placeholder="Search" data-template_id="tags">
+				    <div data-template_id="datatable" data-filter_name="type" data-filter_value="type"></div>
+					<cc-options data-fetch_collection="tags" data-filter_name="module_id" data-filter_value="5ff747727005da1c2727419a" data-pass_id="module_id" data-template_id="tags" class="overflow:auto">
+						<cc-option class="template display:flex" data-template_id="tags" value="{{data._id}}">
+							<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">tags Name</h4>
+						</cc-option>
+					</cc-options>
+				</cocreate-select>
+                <!--<input type="text" name="collection" class="floating-label" placeholder="collection"> -->
+                <!--<input type="text" name="document_id" class="floating-label" placeholder="document_id">-->
+                <!--<input type="text" name="name" class="floating-label" placeholder="name">-->
                 <input type="text" name="name" class="floating-label" placeholder="File Name">
-                <input type="text" name="module_id" class="floating-label" placeholder="Module_id">
-                <button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue opacity:0.8 grow-hover round">
-      	            <i class="far fa-save"></i>
-      	        </button>
+				<cocreate-select class="sortable floating-label" name="module_id" placeholder="Module">
+					<input placeholder="Search" data-template_id="module_id">
+					<cc-options data-fetch_collection="modules" data-order_by="name" data-template_id="module_id" class="overflow:auto">
+						<cc-option class="template" data-template_id="module_id" value="{{data._id}}">
+							<div class="display:flex padding:5px">
+								<span data-collection="{{collection}}" data-document_id="{{data._id}}" name="icon"></span>
+								<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" class="margin-left:10px">Name</h4>
+							</div>
+						</cc-option>
+					</cc-options>
+				</cocreate-select>
+				<button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
+				    <i class="far fa-save"></i>
+				</button>
             </form>
         </main>
 
 		<!--CoCreateJS-->
 		<script src="../../apikey.js"></script>
-        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
 
     </body>
 

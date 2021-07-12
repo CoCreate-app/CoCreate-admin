@@ -6,9 +6,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-        <title>Email Settings | CoCreate</title>
+        <title>Module Activity Form View | CoCreate</title>
         <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
     </head>
+
+    <style type="text/css">
+        .collapsed>.code-editor {
+            height: 0px;
+            overflow: hidden
+        }
+
+        .tab[selected] {
+            background: whitesmoke;
+        }
+
+        .codemirror.active {
+            height: 100%
+        }
+
+        .CodeMirror {
+            height: 90vh
+        }
+    </style>
 
     <body>
         <!-- Modal Viewport -->
@@ -62,22 +81,34 @@
             </ul>
         </nav>
 
-        <!-- Main Content -->
         <main class="padding:10px" data-main_content_id="content">
 
-            <form data-pass_id="form-fields" data-collection="" data-document_id="">
-                <input type="hidden" name="module_id" data-pass_id="module_id">
-                <input type="text" name="name" class="floating-label" placeholder="Name">
-                <input type="text" name="description" class="floating-label" placeholder="Description">
-				<button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
+            <form data-pass_id="form-fields" data-collection="files" data-document_id="" class="margin-bottom:75px">
+
+                <input type="text" name="name" id="name" placeholder="Name" class="floating-label" />
+                <input type="text" name="description" id="description" placeholder="Description" class="floating-label" />
+                <input type="text" name="image" id="image" placeholder="Image" class="floating-label" />
+
+                <div class="margin-top:10px display:flex tabs border-bottom:5px_solid_whitesmoke">
+                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#html" data-selected_group="code-editor" selected>HTML</div>
+                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#css" data-selected_group="code-editor">CSS</div>
+                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#js" data-selected_group="code-editor">JS</div>
+                </div>
+                <div id="html" name="html" class="codemirror overflow:hidden height:0px active"></div>
+                <div id="css" name="css" class="codemirror overflow:hidden height:0px"></div>
+                <div id="js" name="js" class="codemirror overflow:hidden height:0px"></div>
+
+                <input type="text" name="module_id" placeholder="Module" class="floating-label" />
+                <button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>
 				</button>
+
             </form>
 
         </main>
 
-		<!--CoCreateJS-->
-		<script src="../../apikey.js"></script>
+        <!-- CoCreateJS -->
+        <script src="../apikey.js"></script>
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
 
     </body>

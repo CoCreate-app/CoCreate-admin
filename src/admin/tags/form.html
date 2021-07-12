@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-        <title>Email Settings | CoCreate</title>
+        <title>Tags Form View | CoCreate</title>
         <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
     </head>
 
@@ -65,10 +65,30 @@
         <!-- Main Content -->
         <main class="padding:10px" data-main_content_id="content">
 
-            <form data-pass_id="form-fields" data-collection="" data-document_id="">
-                <input type="hidden" name="module_id" data-pass_id="module_id">
+            <form data-pass_id="form-fields" data-collection="tags" data-document_id="">
                 <input type="text" name="name" class="floating-label" placeholder="Name">
                 <input type="text" name="description" class="floating-label" placeholder="Description">
+				<cocreate-select class="sortable floating-label" name="type" placeholder="Type">
+					<input placeholder="Search" data-template_id="type">
+					<cc-options data-fetch_collection="tags" data-template_id="type" data-filter_name="module_id" data-filter_value="60eb8361b979b4001744b339" class="overflow:auto">
+						<cc-option class="template" data-template_id="type" value="{{data._id}}">
+							<h3 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Type Name</h3>
+						</cc-option>
+					</cc-options>
+				</cocreate-select>
+				<cocreate-select class="sortable floating-label" name="module_id" placeholder="Module">
+					<input placeholder="Search" data-template_id="module_id">
+					<cc-options data-fetch_collection="modules" data-order_by="name" data-template_id="module_id" class="overflow:auto">
+						<cc-option class="template" data-template_id="module_id" value="{{data._id}}">
+							<div class="display:flex padding:5px">
+								<span data-collection="{{collection}}" data-document_id="{{data._id}}" name="icon"></span>
+								<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" class="margin-left:10px">Name</h4>
+							</div>
+						</cc-option>
+					</cc-options>
+				</cocreate-select>
+                
+                <!--<input type="hidden" name="module_id" data-pass_id="module_id">-->
 				<button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>
 				</button>
@@ -78,7 +98,8 @@
 
 		<!--CoCreateJS-->
 		<script src="../../apikey.js"></script>
-        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>-->
+        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
 
     </body>
 
