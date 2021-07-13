@@ -165,7 +165,7 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
-                "path": "/admin/builder",
+                "path": "/admin/builder/index.html",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274193"
             }
@@ -225,7 +225,7 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
-                "path": "/admin/calendar",
+                "path": "/admin/calendar/index.html",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274197"
             }
@@ -270,7 +270,7 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
-                "path": "/admin/call-center",
+                "path": "/admin/call-center/index.html",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274199"
             }
@@ -285,7 +285,7 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
-                "path": "/admin/code-editor",
+                "path": "/admin/code-editor/index.html",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274191"
             }
@@ -390,7 +390,22 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
-                "path": "/admin/dashboard",
+                "path": "/admin/dashboard/index.html",
+                "public": "true",
+                "module_id": "5ff747727005da1c2727418a"
+            }
+        },
+        {
+            "entry": "./src/admin/dashboard/form.html",
+            "collection": "files",
+            "document_id": "60edb93bb979b4001744c77e",
+            "key": "src",
+            "data": {
+                "name": "form.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/dashboard/form.html",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727418a"
             }
