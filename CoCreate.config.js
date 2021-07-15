@@ -15,7 +15,7 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
-                "path": "/signin",
+                "path": "/admin/signin",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727419c"
             }
@@ -30,7 +30,7 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
-                "path": "/signup",
+                "path": "/admin/signup",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727419c"
             }
@@ -45,7 +45,7 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
-                "path": "/apikey.js",
+                "path": "/admin/apikey.js",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727419c"
             }
