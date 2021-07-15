@@ -118,8 +118,8 @@
                                 <div class="margin-left:10px">
                                     <a target="modal" href="./form.html" data-modal_width="320px" data-modal_color="#229954">
                                         <h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Name</h4>
-                                        <div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields">
-                                        </div>
+										<div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
+										<div data-pass_filter_value="{{data.module_id}}" data-pass_to="module_id"></div>
                                     </a>
                                     <h5 name="description" value="description"></h5>
                                 </div>
@@ -129,6 +129,7 @@
                             <a target="modal" href="./form.html" data-modal_width="320px" data-modal_color="#229954">
 								<b>{{data._id}}</b>
 								<div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
+								<div data-pass_filter_value="{{data.module_id}}" data-pass_to="module_id"></div>
 							</a>
                         </td>
                     </tr>
