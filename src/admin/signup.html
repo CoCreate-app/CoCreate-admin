@@ -7,11 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Sign up | CoCreate</title>
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
-
-        <!-- CoCreate CSS -->
-        <link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css"/>
-        <!-- Does not work because this page is using masterDb -->
-        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="" name="src" type="text/css" data-parse="true" data-save="false"/>
+        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
     </head>
     
     <style>
@@ -269,12 +265,12 @@
 		    </div>
 		</div>
 		
-		<!-- masterDB -->
+		<!-- masterDB currently only work when it is master db -->
 		<script>
 			var config = {
 			  apiKey: '38ffd014-c33b-4202-c54b-ac46a0a4',
 			  organization_Id: '5ae0cfac6fb8c4e656fdaf92',
-			  //host: 'wss://ws.cocreate.app'
+			  host: 'wss://server.cocreate.app:8088'
 			}
 		</script>
 		<!-- CoCreate --
@@ -295,7 +291,6 @@
 		
 		<!--CoCreateJS-->
         <!--<script src="./apikey.js"></script>-->
-        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
 
 	</body>

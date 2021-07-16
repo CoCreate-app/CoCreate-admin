@@ -131,10 +131,12 @@
 									<a target="modal" href="./form.html" data-modal_width="320px" data-modal_color="#229954" class="display:flex">
 										<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Name</h4>
 										<div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
+										<div data-pass_filter_value="{{data.module_id}}" data-pass_to="module_id"></div>
 									</a>
 									<a target="modal" href="../modules/form.html" data-modal_width="320px" data-modal_color="#229954" class="cocreate-badge margin-left:5px success">
 										<span data-collection="modules" data-document_id="{{data.module_id}}" name="name"></span>
-										<div data-pass_collection="module" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
+										<div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
+										<div data-pass_filter_value="{{data.module_id}}" data-pass_to="module_id"></div>
 									</a>
 									<span class="cocreate-badge margin-left:5px warning" data-collection="{{collection}}" data-document_id="{{data.type}}" name="name"></span>
 								</div>
@@ -167,7 +169,7 @@
 		</button>
 
 		<!--CoCreateJS-->
-		<script src="../../apikey.js"></script>
+		<script src="../apikey.js"></script>
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
 
 	</body>

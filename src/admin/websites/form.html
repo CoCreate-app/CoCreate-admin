@@ -97,7 +97,8 @@
                         <div class="display:flex padding-left:10px">
                             <a target="modal" data-pass_id="form" data-pass_collection="module-views" data-pass_document_id="5ffb84b46dc1a88ad823ad61" data-pass_name="src" data-pass_to="render" data-modal_color="#229954" class="flex-grow:1 font-size:16px padding:5px_0">
                                 <p data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Web Page</p>
-                                <div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
+								<div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
+								<div data-pass_filter_value="{{data.module_id}}" data-pass_to="module_id"></div>
                                 <div data-pass_fetch_collection="{{collection}}" data-pass_filter_name="website_id" data-pass_filter_value="{{data._id}}" data-pass_to="website_id"></div>
                             </a>
                             <!--<p data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" class="flex-grow:1 font-size:16px padding:5px_0">Web Page</p>-->
@@ -143,7 +144,7 @@
             </div>
         </main>
 		<!--CoCreateJS-->
-		<script src="../../apikey.js"></script>
+		<script src="../apikey.js"></script>
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
     </body>
 
