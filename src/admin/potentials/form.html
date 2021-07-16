@@ -67,13 +67,38 @@
 
             <form data-realtime="true" data-collection="" data-document_id="" data-pass_id="form-fields">
 
+				<div class="display:flex height:50px">
+					<div class="width:50% padding-right:5px z-index:7">
+						<cocreate-select class="sortable floating-label" name="stage" data-document_id="" multiple placeholder="Stage">
+							<input placeholder="Search" data-template_id="stage">
+						    <div data-template_id="stage" data-filter_name="stage" data-filter_value="60eb93a2b979b4001744b445"></div>
+							<cc-options data-fetch_collection="tags" data-pass_id="module_id" data-filter_name="module_id" data-filter_value="" data-template_id="stage" class="overflow:auto">
+								<cc-option class="template" data-template_id="stage" value="{{data._id}}">
+									<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Stage Name</h4>
+								</cc-option>
+							</cc-options>
+						</cocreate-select>
+					</div>
+					<div class="width:50% padding-left:5px">
+						<cocreate-select class="sortable floating-label z-index:7" name="status" data-document_id="status" multiple placeholder="Status">
+							<input placeholder="Search" data-template_id="status">
+						    <div data-template_id="status" data-filter_name="type" data-filter_value="5ff747727005da1c272740ab"></div>
+							<cc-options data-fetch_collection="tags" data-pass_id="module_id" data-filter_name="module_id" data-filter_value="" data-template_id="status" class="overflow:auto">
+								<cc-option class="template" data-template_id="status" value="{{data._id}}">
+									<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Status Name</h4>
+								</cc-option>
+							</cc-options>
+						</cocreate-select>
+					</div>
+				</div>
+
                 <input type="text" name='name' id="name" class="floating-label" placeholder="Potential Name">
 
                 <input type="text" name='description' class="floating-label" placeholder="Description">
 
-                <input type="text" name="start_date" class="floating-label" placeholder="Start Date">
+                <input type="datetime-local" name="start_date" class="floating-label" placeholder="Start Date">
 
-                <input type="text" name="end_date" class="floating-label" placeholder="End Date">
+                <input type="datetime-local" name="end_date" class="floating-label" placeholder="End Date">
 
                 <button data-action="saveDocument" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50%">
 					<i class="far fa-save"></i>

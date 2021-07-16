@@ -112,33 +112,6 @@
 				<input type="text" name="description" id="description" placeholder="Description" class="floating-label" />
 				<input type="text" name="icon" id="icon" placeholder="Icon" class="floating-label" />
 				
-				<cocreate-select class="sortable floating-label" name="statuses" multiple placeholder="Statuses">
-					<input placeholder="Search" data-template_id="statuses">
-					<cc-options data-fetch_collection="module_activities" data-template_id="statuses" class="overflow:auto">
-						<cc-option class="template" data-template_id="statuses" value="{{data._id}}">
-							<h3 data-collection="module_activities" data-document_id="" name="status_name">Status Name</h3>
-						</cc-option>
-					</cc-options>
-				</cocreate-select>
-				
-				<cocreate-select class="sortable floating-label" name="stages" multiple placeholder="Stages">
-					<input placeholder="Search" data-template_id="stages">
-					<cc-options data-fetch_collection="{{collecion}}" data-template_id="stages" class="overflow:auto">
-						<cc-option class="template" data-template_id="stages" value="{{data._id}}">
-							<h3 data-collection="{{collecion}}" data-document_id="{{data._id}}" name="stage_name">Stage Name</h3>
-						</cc-option>
-					</cc-options>
-				</cocreate-select>
-				
-				<cocreate-select class="sortable floating-label" name="tags" multiple placeholder="Tags">
-					<input placeholder="Search" data-template_id="tags">
-					<cc-options data-fetch_collection="{{collecion}}" data-template_id="tags" class="overflow:auto">
-						<cc-option class="template" data-template_id="tags" value="{{data._id}}">
-							<h3 data-collection="{{collecion}}" data-document_id="{{data._id}}" name="tag_name">tags Name</h3>
-						</cc-option>
-					</cc-options>
-				</cocreate-select>
-				
 				<!-- menu items -->
 				<div class="card padding:10px_5px margin-top:10px collapsed">
 					<div class="display:flex padding:0_10px font-size:18px">
@@ -347,7 +320,7 @@
 
 					<div data-template_id="files" class="template card padding:10px_5px background:white collapsed margin-top:10px" data-document_id="{{data._id}}" id="module-view{{data._id}}">
 						<div class="display:flex padding-left:10px">
-							<input data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" placeholder="View Name" class="flex-grow:1 min-width:100px border:none outline:none font-size:16px" placeholder="View Name">
+							<span data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" class="flex-grow:1 min-width:100px border:none outline:none font-size:16px"></span>
 							<input type="hidden" data-collection="{{collection}}" data-document_id="{{data._id}}" name="module_id">
 							<a data-collection="{{collection}}" data-document_id="{{data._id}}" class="delete-document float:right padding:5px">
 									<i class="fas fa-trash"></i>
@@ -358,13 +331,13 @@
 								 </div>
 							</a>
 							<a target="modal" href="../code-editor/" class="float:right padding:5px">
-									<i class="fas fa-external-link-alt"></i>
+									<i class="fas fa-code"></i>
 								 <div data-pass_document_id="{{data._id}}" data-pass_name="src" data-pass_to="code-editor"></div>
 							</a>
-							<a class="float:right padding:5px" data-toggle="collapsed" data-toggle_closest=".card" data-show="#view-up{{data._id}}, #view-down{{data._id}}" data-hide="#view-down{{data._id}}, #view-up{{data._id}}">
-								<i id="view-down{{data._id}}" class="fas fa-angle-down"></i>
-								<i id="view-up{{data._id}}" class="fas fa-angle-up hidden"></i>
-							</a>
+							<!--<a class="float:right padding:5px" data-toggle="collapsed" data-toggle_closest=".card" data-show="#view-up{{data._id}}, #view-down{{data._id}}" data-hide="#view-down{{data._id}}, #view-up{{data._id}}">-->
+							<!--	<i id="view-down{{data._id}}" class="fas fa-angle-down"></i>-->
+							<!--	<i id="view-up{{data._id}}" class="fas fa-angle-up hidden"></i>-->
+							<!--</a>-->
 						</div>
 
 						<div id="module-view{{data._id}}" class="code-editor">

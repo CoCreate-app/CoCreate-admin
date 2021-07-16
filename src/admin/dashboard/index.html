@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
 		<title>Dashboard | CoCreate</title>
-        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+		<link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
 	</head>
 	<style>
 		.progressbar {
@@ -101,71 +101,72 @@
 		<main class="padding:10px" data-main_content_id="content">
 			<!--<div class="domEditor main-height" name='cards1' data-collection="test" data-pass_id="me1234">-->
 
-				<div class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))" data-group_name="dashboard" data-fetch_collection="files" data-template_id="card" data-droppable="true">
+			<div class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))" data-group_name="dashboard" data-fetch_collection="files" data-template_id="card" data-droppable="true">
 
-					<div data-template_id="card" class="card template resize display:flex padding:20px align-items:center grid-column-end:span_2" data-element_id="id1" data-draggable="tru">
-						<!-- dashboard template-->
-						<div class="flex-grow:1 padding-right:20px">
-							<h2>Visits</h2>
-							<p>Total visits today</p>
-							<div class="display:flex align-items:center">
-								<h2>$4000</h2>
-								<!--<i class="fas fa-chart-line color:green font-size:16px padding:0px_15px"></i>-->
-								<span class="cocreate-badge background:green round font-size:12px">7%</span>
-							</div>
-							<a href="#">Detail</a>
+				<div data-template_id="card" class="card template resize display:flex padding:20px align-items:center grid-column-end:span_2" data-element_id="id1" data-draggable="tru">
+					<!-- dashboard template-->
+					<div class="flex-grow:1 padding-right:20px">
+						<h2 name="name">Visits</h2>
+						<p name="description">Total visits today</p>
+						<div class="display:flex align-items:center">
+							<h2>$<span data-fetch_collection="" data-filter_name="total" data-set_id="1" data-calculation="sum">4000</span></h2>
+							<div data-filter_name="status" data-filter_value="completed" data-set_id="1"></div>
+							<!--<i class="fas fa-chart-line color:green font-size:16px padding:0px_15px"></i>-->
+							<span class="cocreate-badge background:green round font-size:12px">7%</span>
 						</div>
-						<div class="width:120px">
-							<div class="progressbar-circle text-align:center width:100%" progressbar-color="#22CCE2" percent-value="85" percent-note="New Visits"></div>
-						</div>
-						<div data-resize="right"></div>
-						<div data-resize="bottom"></div>
+						<a href="#">Detail</a>
 					</div>
+					<div class="width:120px">
+						<div class="progressbar-circle text-align:center width:100%" progressbar-color="#22CCE2" percent-value="85" percent-note="New Visits"></div>
+					</div>
+					<div data-resize="right"></div>
+					<div data-resize="bottom"></div>
+				</div>
 
-					<!--<div class="card resize padding:20px align-items:center grid-column-end:span_3 grid-row-end:span_2" data-element_id="id2">-->
-					<!--                 <canvas class="cocreate-chart" chart-type="bar" chart-options="" chart-labels="January, February, March, April, May, June, July" chart-title="Combine Charts">-->
-					<!--                     <div class="cocreate-chart-dataset" chart-dataset_type="line">-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="Jan" data-calculation="sum">-->
-					<!--                             <div data-filter_name="Jan" data-filter_value="0, 10" data-value_type="number" data-filter_operator="$range"></div>-->
-					<!--                         </div>-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="Feb">-->
-					<!--                             <div data-filter_name="permission" data-filter_value="read" data-filter_operator="$nin"></div>-->
-					<!--                             <div data-filter_name="type" data-filter_value="leader" data-filter_operator="$in"></div>-->
-					<!--                         </div>-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="Mar">-->
-					<!--                             <div data-filter_name="Mar" data-filter_value="-7" data-filter_operator="$eq" data-value_type="number"></div>-->
-					<!--                         </div>-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="Apr"></div>-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="May"></div>-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="Jun"></div>-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="Jul"></div>-->
-					<!--                     </div>-->
-					<!--                     <div class="cocreate-chart-dataset" chart-dataset_label="Average Chart" chart-dataset_type="line">-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="Jan" data-calculation="average"></div>-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="Feb" data-calculation="average"></div>-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="Mar" data-calculation="average"></div>-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="Apr" data-calculation="average"></div>-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="May" data-calculation="average"></div>-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="Jun" data-calculation="average"></div>-->
-					<!--                         <div data-fetch_collection="chart" data-fetch_name="Jul" data-calculation="average"></div>-->
-					<!--                     </div>-->
+				<!--<div class="card resize padding:20px align-items:center grid-column-end:span_3 grid-row-end:span_2" data-element_id="id2">-->
+				<!--                 <canvas class="cocreate-chart" chart-type="bar" chart-options="" chart-labels="January, February, March, April, May, June, July" chart-title="Combine Charts">-->
+				<!--                     <div class="cocreate-chart-dataset" chart-dataset_type="line">-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="Jan" data-calculation="sum">-->
+				<!--                             <div data-filter_name="Jan" data-filter_value="0, 10" data-value_type="number" data-filter_operator="$range"></div>-->
+				<!--                         </div>-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="Feb">-->
+				<!--                             <div data-filter_name="permission" data-filter_value="read" data-filter_operator="$nin"></div>-->
+				<!--                             <div data-filter_name="type" data-filter_value="leader" data-filter_operator="$in"></div>-->
+				<!--                         </div>-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="Mar">-->
+				<!--                             <div data-filter_name="Mar" data-filter_value="-7" data-filter_operator="$eq" data-value_type="number"></div>-->
+				<!--                         </div>-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="Apr"></div>-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="May"></div>-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="Jun"></div>-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="Jul"></div>-->
+				<!--                     </div>-->
+				<!--                     <div class="cocreate-chart-dataset" chart-dataset_label="Average Chart" chart-dataset_type="line">-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="Jan" data-calculation="average"></div>-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="Feb" data-calculation="average"></div>-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="Mar" data-calculation="average"></div>-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="Apr" data-calculation="average"></div>-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="May" data-calculation="average"></div>-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="Jun" data-calculation="average"></div>-->
+				<!--                         <div data-fetch_collection="chart" data-fetch_name="Jul" data-calculation="average"></div>-->
+				<!--                     </div>-->
 
-					<!--<div class="cocreate-chart-dataset" chart-dataset_label="Data Count" chart-dataset_type="">-->
-					<!--  <div data-fetch_collection="chart" data-fetch_name="Jan" data-calculation="count"></div>-->
-					<!--  <div data-fetch_collection="chart" data-fetch_name="Feb" data-calculation="count"></div>-->
-					<!--  <div data-fetch_collection="chart" data-fetch_name="Mar" data-calculation="count"></div>-->
-					<!--  <div data-fetch_collection="chart" data-fetch_name="Apr" data-calculation="count"></div>-->
-					<!--  <div data-fetch_collection="chart" data-fetch_name="May" data-calculation="count"></div>-->
-					<!--  <div data-fetch_collection="chart" data-fetch_name="Jun" data-calculation="count"></div>-->
-					<!--  <div data-fetch_collection="chart" data-fetch_name="Jul" data-calculation="count"></div>-->
-					<!--</div>-->
-					<!--                 </canvas>-->
-					<!--                 <div data-resize="left"></div>-->
-					<!--                 <div data-resize="right"></div>-->
-					<!--                 <div data-resize="top"></div>-->
-					<!--                 <div data-resize="bottom"></div>-->
+				<!--<div class="cocreate-chart-dataset" chart-dataset_label="Data Count" chart-dataset_type="">-->
+				<!--  <div data-fetch_collection="chart" data-fetch_name="Jan" data-calculation="count"></div>-->
+				<!--  <div data-fetch_collection="chart" data-fetch_name="Feb" data-calculation="count"></div>-->
+				<!--  <div data-fetch_collection="chart" data-fetch_name="Mar" data-calculation="count"></div>-->
+				<!--  <div data-fetch_collection="chart" data-fetch_name="Apr" data-calculation="count"></div>-->
+				<!--  <div data-fetch_collection="chart" data-fetch_name="May" data-calculation="count"></div>-->
+				<!--  <div data-fetch_collection="chart" data-fetch_name="Jun" data-calculation="count"></div>-->
+				<!--  <div data-fetch_collection="chart" data-fetch_name="Jul" data-calculation="count"></div>-->
+				<!--</div>-->
+				<!--                 </canvas>-->
+				<!--                 <div data-resize="left"></div>-->
+				<!--                 <div data-resize="right"></div>-->
+				<!--                 <div data-resize="top"></div>-->
+				<!--                 <div data-resize="bottom"></div>-->
 
-					<!--</div>-->
+				<!--</div>-->
 
 				<!--</div>-->
 				<!-- Sortable card -->
@@ -174,7 +175,7 @@
 
 		<!--CoCreateJS-->
 		<script src="../apikey.js"></script>
-        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
 
 		<script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-progress-bar/dist/CoCreate-progress-bar.js"></script>
 

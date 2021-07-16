@@ -77,7 +77,8 @@
                             data-modal_color="{{data.navbar-modal-primary-color}}">
                             <span data-document_id="{{data._id}}" data-collection="modules" name="icon" value="icon"></span>
                             <div data-pass_collection="module_activities" data-pass_filter_name="module_id" data-pass_filter_value="{{data._id}}" data-pass_to="datatable"></div>
-                            <div data-pass_collection="module_activities" data-document_id="{{data._id}}" data-pass_to="module_id"></div>
+                            <div data-pass_collection="module_activities" data-pass_filter_name="module_id" data-pass_filter_value="{{data._id}}" data-pass_to="module-form"></div>
+                            <div data-pass_document_id="{{data._id}}" data-pass_to="module_id"></div>
                             <div data-pass_collection="files" data-pass_document_id="{{data.main-menu-secondary}}" data-pass_name="src" data-pass_to="form"></div>
                             <div data-pass_collection="files" data-pass_document_id="{{data.navbar-menu-primary}}" data-pass_name="src" data-pass_to="render"></div>
                         </a>
@@ -88,7 +89,7 @@
             <!-- Avatar -->
             <div class="avatar-wrapper margin:5px">
                 <a class="avatar round" target="modal" href="./users/profile.html" data-modal_width="300px"  data-modal_height="375px"  data-modal_color="#229954">
-                    <span data-collection="users" data-document_id="" name="name" class="sessionUser_Id avatar-name width:1ch letter-spacing:2px overflow:hidden text-transform:uppercase"></span>
+                    <span data-collection="users" data-document_id="" name="name" class="sessionUser_Id avatar-name"></span>
                     <span class="sessionUser_Id avatar-image">
                         <img data-collection="users" data-document_id="" name="avatar" onerror="this.style.display='none'" class="sessionUser_Id" width="40px"/>
                     </span>
@@ -168,8 +169,8 @@
                             </a>
                             <div class="float:right width:50px text-align:center">
                                 <a target="modal" fetch-for href='..{"collection":"files", "document_id":"{{data.main-menu-secondary}}","name":"path"}'
-                                    data-modal_width="320px"
-                                    data-modal_color="#229954">
+                                    data-modal_width="{{data.main-menu-secondary-width}}"
+                                    data-modal_color="{{data.main-menu-secondary-color}}">
                                     <i class="fas fa-plus"></i>
                                     <div data-pass_collection="modules" data-document_id="{{data._id}}" data-pass_to="module_id"></div>
                                     <div data-pass_collection="files" data-pass_document_id="{{data.main-menu-secondary}}" data-pass_name="src" data-pass_to="render"></div>
@@ -208,8 +209,8 @@
         </sidenav>
 
  		<script src="./apikey.js"></script>
-		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
-		<!--<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.min.js"></script>-->
+		<!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
+		<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
 
     </body>
 </html>
