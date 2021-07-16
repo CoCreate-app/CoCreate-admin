@@ -63,7 +63,7 @@
         <!-- Main Content -->
         <main data-main_content_id="content">
 
-            <form data-realtime="true" data-collection="module_activity">
+            <form data-realtime="true" data-collection="module_activities">
 
                 <input data-document_id="" type="text" name="name" placeholder="Name" class="floating-label">
 
@@ -85,8 +85,8 @@
                 </div>
 
                 <!-- CoCreate Select field multiple documents -->
-                <div class="select--field sortable floating-label" name="contact" data-collection="module_activity" data-document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Contact">
-                    <input class="search-input template-search" placeholder="Search" data-engine-id="idEngine1">
+                <div class="select--field sortable floating-label" name="contact" data-collection="module_activities" data-document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Contact">
+                    <input class="search-input template-search" placeholder="Search" data-template_id="idEngine1">
                     <!-- Fetches and displays results using template -->
                     <ul data-fetch_collection="users" data-template_id="option1" data-pass_to="me1234" id="idEngine1" class="template-wrapper options  overflow:overlay">
                         <!-- template -->
@@ -98,8 +98,8 @@
                 </div>
 
                 <!-- CoCreate Select field multiple documents -->
-                <div class="select--field sortable floating-label" name="company" data-collection="module_activity" data-document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Company">
-                    <input class="search-input template-search" placeholder="Search" data-engine-id="idEngine1">
+                <div class="select--field sortable floating-label" name="company" data-collection="module_activities" data-document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Company">
+                    <input class="search-input template-search" placeholder="Search" data-template_id="idEngine1">
                     <!-- Fetches and displays results using template -->
                     <ul data-fetch_collection="users" data-template_id="option1" data-pass_to="me1234" id="idEngine1" class="template-wrapper options  overflow:overlay">
                         <!-- template -->
@@ -111,8 +111,8 @@
                 </div>
 
                 <!-- CoCreate Select field multiple documents -->
-                <div class="select--field sortable floating-label" name="related_to" data-collection="module_activity" data-document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Related to">
-                    <input class="search-input template-search" placeholder="Search" data-engine-id="idEngine1">
+                <div class="select--field sortable floating-label" name="related_to" data-collection="module_activities" data-document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Related to">
+                    <input class="search-input template-search" placeholder="Search" data-template_id="idEngine1">
                     <!-- Fetches and displays results using template -->
                     <ul data-fetch_collection="users" data-template_id="option1" data-pass_to="me1234" id="idEngine1" class="template-wrapper options  overflow:overlay">
                         <!-- template -->
@@ -123,14 +123,16 @@
                     </ul>
                 </div>
 
-                <button data-actions="saveDocument" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50%"><i class="far fa-save"></i></button>
+				<button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
+				    <i class="far fa-save"></i>
+				</button>
             </form>
         </main>
 
 
 		<!--CoCreateJS-->
 		<script src="../../apikey.js"></script>
-        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
 
     </body>
 

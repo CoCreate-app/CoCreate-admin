@@ -140,8 +140,8 @@
 							 class="display:inline-block">
 								<span class="display:inline-block width:50px text-align:center" data-document_id="{{data._id}}" data-collection="modules" name="icon" value="icon"></span>
 								<span data-collection="modules" data-document_id="{{data._id}}" name="name" ></span>
-								<div data-pass_collection="module_activity" data-pass_filter_name="module_id" data-pass_filter_value="{{data._id}}" data-pass_to="datatable"></div>
-								<div data-pass_collection="module_activity" data-pass_value="{{data._id}}" data-pass_to="module_id"></div>
+								<div data-pass_collection="module_activities" data-pass_filter_name="module_id" data-pass_filter_value="{{data._id}}" data-pass_to="datatable"></div>
+								<div data-pass_collection="module_activities" data-pass_value="{{data._id}}" data-pass_to="module_id"></div>
 								<div data-pass_collection="files" data-pass_document_id="{{data.main-menu-secondary}}" data-pass_name="src" data-pass_to="form"></div>
 							</a>
 							<div class="float:right width:50px text-align:center">
@@ -174,7 +174,7 @@
 		</sidenav>
 
 		<main data-main_content_id="content" class="height:100vh">
-			<div class="display:flex flex-wrap:wrap padding:20px" data-fetch_collection="module_activity" data-fetch_count="12" data-order_by="name" data-order_type="asc" data-template_id="filter_test" data-search_type="or">
+			<div class="display:flex flex-wrap:wrap padding:20px" data-fetch_collection="module_activities" data-fetch_count="12" data-order_by="name" data-order_type="asc" data-template_id="filter_test" data-search_type="or">
 
 				<div class="template card position:relative flex-grow:1 margin:10px background:#ffffff height:470px width:250px max-width:350px" data-template_id="filter_test">
 					<div class="height:400px overflow:hidden">
@@ -223,7 +223,7 @@
 
 		<!--CoCreateJS-->
 		<script src="../../apikey.js"></script>
-        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js" ></script>
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
 
 	</body>
 
