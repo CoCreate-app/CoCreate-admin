@@ -108,7 +108,7 @@
 
 			<form class="margin-bottom:75px" data-pass_id="form-fields" data-collection="modules" data-document_id="" id="form">
 				<input type="text" name="name" id="name" placeholder="Module Name" class="floating-label" />
-				<input type="hidden" name="_id" id="module_id" />
+				<input type="hidden" name="_id" id="module_id"/>
 				<input type="text" name="description" id="description" placeholder="Description" class="floating-label" />
 				<input type="text" name="icon" id="icon" placeholder="Icon" class="floating-label" />
 				
@@ -312,7 +312,7 @@
 				<!-- module views -->
 				<div class="card display:flex padding:10px_15px margin-top:10px font-size:18px">
 					<span class="flex-grow:1">Module Views</span>
-					<a data-show="#module-templates" data-hide="#form" data-pass_collection="files" data-pass_to="module-templates"><i class="far fa-plus-square"></i></a>
+					<a data-show="#module-templates" data-hide="#form" data-pass_fetch_collection="files" data-pass_to="module-templates"><i class="far fa-plus-square"></i></a>
 				</div>
 
 				<!--<input type="hidden" data-filter_name="module-view" data-filter_value="module-view" data-template_id="files">-->
@@ -402,7 +402,7 @@
 
 		<!-- CoCreateJS -->
 		<script src="../apikey.js"></script>
-		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
 
 	</body>
 
