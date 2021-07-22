@@ -17,7 +17,7 @@
     <body style='background: url("https://cdn.cocreate.app/background.png") no-repeat fixed;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;'>
     	<!--<a href="index.html" target="" class="sessionTrue hidden"></a>-->
 
-		<a href="/signin" title="" class="position:relative z-index:1 float:right margin:15px margin-left:auto color:white">Sign In</a>
+		<a href="./signin.html" title="" class="position:relative z-index:1 float:right margin:15px margin-left:auto color:white">Sign In</a>
 
         <div class="main-container justify-content:center align-items:center overflow:overlay display:flex flex-wrap:wrap position:absolute width:100% height:100%">
         	<div class="display:flex flex-wrap:wrap align-items:flex-end justify-content:center align-items:center">
@@ -144,7 +144,7 @@
 	                        <div class="padding:25px background:gainsboro text-align:left">
 	
 	                           <!-- Industry select -->
-	                            <cocreate-select class="sortable floating-label" data-collection="organizations" name="industry" placeholder="Industry" data-realtime="false" data-save_value="false">
+	                            <cocreate-select class="floating-label" data-collection="organizations" name="industry" placeholder="Industry" data-realtime="false" data-save_value="false">
 	  					          	  <input class="template-search" placeholder="Search" data-template_id="industries">
 									<cc-options data-fetch_collection="industries" 
 									    data-template_id="industries"
@@ -292,7 +292,8 @@
 		
 		<!--CoCreateJS-->
         <!--<script src="./apikey.js"></script>-->
-        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+		<!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
+		<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
 
 	</body>
 </html>
