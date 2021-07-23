@@ -19,7 +19,7 @@
 
 		<a href="./signin.html" title="" class="position:relative z-index:1 float:right margin:15px margin-left:auto color:white">Sign In</a>
 
-        <div class="main-container justify-content:center align-items:center overflow:overlay display:flex flex-wrap:wrap position:absolute width:100% height:100%">
+        <main class="main-container justify-content:center align-items:center overflow:overlay display:flex flex-wrap:wrap position:absolute width:100% height:100%">
         	<div class="display:flex flex-wrap:wrap align-items:flex-end justify-content:center align-items:center">
                 <div class="flex-grow:1 height:fit-content width:55% min-width:300px max-width:600px margin:10px">
                 	<img src="https://cdn.cocreate.app/Preloader_2.gif" class="display:block margin:20px_auto">
@@ -29,26 +29,23 @@
                         		<strong>Hi</strong>, My name is <b>Ava</b>.
                             	Your Artificial Virtual Assistant. Together we will CoCreate your business! Enter your name so I will know what to call my <strong>new boss...</strong>
                         	</p>
-                            <p id="ava2"  class="hidden">
+                            <p id="ava2" class="hidden">
                         		Hi, <span data-get_value="name">First Name</span>!
                             	Let's get started. Enter your business or organization's name. Don't worry if you are not sure, you can allways update it later.<!-- and create a subdomain. The subdomain will be used for your website's address until you choose a custom domain.-->
                         	</p>
-                        	<p id="ava3"  class="hidden">
+                        	<p id="ava3" class="hidden">
                         		Choose a domain for <span data-get_value="org-name">Organization Name</span>, this will be the url where you can access your website and admin panel.
                         	</p>
-                        	<p id="ava4"  class="hidden">
+                        	<p id="ava4" class="hidden">
                         		Great, <span data-get_value="name">First Name</span>!
                             	Let’s choose an industry so I can begin to understand what we will be doing.
                         	</p>
-                        	<p id="ava5"  class="hidden">
+                        	<p id="ava5" class="hidden">
                         		Awesome! Enter your email and password and we will get <span data-get_value="org-name">Organization Name</span> off the ground!
                         	</p>
-       <!--                 	<p id="ava5"  class="hidden">-->
-       <!--                 		Copy your API Key and click the Launch button! If you dont need your API Key now you can allways retrieve it later from your Organization's settings.-->
-       <!--                 	</p>-->
-							<!--<p id="ava6"  class="hidden">-->
-       <!--                 		Here we go! Allow me a few moments while I build your business!-->
-       <!--                 	</p>-->
+							<p id="ava6" class="hidden">
+                        		Here we go! Lets confirm your email and access your new business!
+                        	</p>
                         </div>
 					</hgroup>
                 </div>
@@ -56,10 +53,10 @@
                 <div class="flex-grow:1 height:fit-content width:35% min-width:300px max-width:400px margin:10px align-self:flex-end">
                 	<form  data-realtime="false" autocomplete="false">
                 		
-	            		<div id="step1">
+	            		<section id="step1">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-	                    			<h3>Step 1 / 5</h3>
+	                    			<h3>Step 1  6</h3>
 	                    		</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 	                    			<i class="fa fa-user"></i>
@@ -76,12 +73,12 @@
 		                        
 		                        <button type="button" class="outline" data-show='#step2,#ava2' data-hide='#step1,#ava1'>Next</button>
 		                    </div>
-	                  	</div>
+	                  	</section>
 
-						<div id="step2" class="hidden">
+						<section id="step2" class="hidden">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-									<h3>Step 2 / 5</h3>
+									<h3>Step 2  6</h3>
 								</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 									<i class="fas fa-store"></i>
@@ -99,12 +96,12 @@
 							        <button type="button" class="outline" data-show='#step3,#ava3' data-hide='#step2,#ava2'>Next</button>
 						   		</div>
 						    </div>
-						</div>
+						</section>
 						
-						<div id="step3" class="hidden">
+						<section id="step3" class="hidden">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-									<h3>Step 3 / 5</h3>
+									<h3>Step 3  6</h3>
 								</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 									<i class="fas fa-globe"></i>
@@ -130,12 +127,12 @@
 							        <button type="button" class="outline" data-show='#step4,#ava4' data-hide='#step3,#ava3'>Next</button>
 						   		</div>
 						    </div>
-						</div>
+						</section>
 						
-	                    <div id="step4"  class="hidden">
+	                    <section id="step4"  class="hidden">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-	                    			<h3>Step 4 / 5</h3>
+	                    			<h3>Step 4  6</h3>
 	                    		</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 	                    			<i class="fas fa-industry"></i>
@@ -159,19 +156,19 @@
 			                        <button type="button" class="outline" data-show='#step5,#ava5' data-hide='#step4,#ava4'>Next</button>
 			                    </div>
 		                    </div>
-	                    </div>
+	                    </section>
 
-						<div id="step5" class="hidden">
+						<section id="step5" class="hidden">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-									<h3>Step 5 / 5</h3>
+									<h3>Step 5  6</h3>
 								</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 									<i class="fa fa-key"></i>
 								</div>
 							</div>
 							<div class="padding:25px background:gainsboro text-align:left">
-								<input type="email" id="user-email"
+								<input type="email" id="email"
 									data-collection="users"
 									data-unique="false" 
 									data-document_id="" 
@@ -199,14 +196,14 @@
 									data-collection="users"
 									data-document_id=""
 									name="_id"
-									placeholder="UserId" readonly>
+									placeholder="UserId">
 								
 								<!-- Organiztion _id  -->
 								<input type="hidden" id="org_id"
 									data-collection="organizations"
 									data-document_id=""
 									name="_id"
-									placeholder="OrganizationId" readonly>
+									placeholder="OrganizationId">
 								
 								<!-- API key  -->
 								<input type="hidden" id="apiKey"
@@ -214,16 +211,8 @@
 									data-document_id=""
 									name="apiKey"
 									placeholder="API Key" 
-									data-uuid="32" readonly>
+									data-uuid="32">
 								
-								<!-- Security key  -->
-								<input type="hidden" id="securityKey"
-									data-collection="organizations"
-									data-document_id=""  
-									name="securityKey" 
-									placeholder="security Key" 
-									data-uuid="32" readonly>
-									
 								<!-- Sub Domain -->
 								<input type="hidden" 
 									data-collection="organizations"
@@ -238,8 +227,7 @@
 									data-collection="organizations"
 									data-document_id=""
 									name="_id"
-									data-localstorage_set="organization_id"
-									placeholder="OrganizationId" readonly>
+									placeholder="OrganizationId">
 									
 								<!-- Send Email -->
 								<div data-template_id="renderKey">
@@ -247,53 +235,50 @@
 								    <input type="hidden" placeholder="from email" data-sendgrid="sendEmail.from" value="testing@cocreate.app">
 								    <input type="hidden" placeholder="subject" data-sendgrid="sendEmail.subject" value="Welcome, {{data.name}} — Please confirm your email">
 								    <textarea placeholder="html" data-sendgrid="sendEmail.html" hidden data-collection="email-templates" data-document_id="60bfdaa304ee68b159b63532" name="src"></textarea>
-								</div>
 
-								<div class="display:flex">
-									<button type="button" class="outline white-blue margin-right:15px" data-show='#step4,#ava4' data-hide='#step5,#ava5'>Previous</button>
-									<button type="button" class="outline red-white " data-actions="createOrg, createUser, timeout{3000}, runIndustry, renderKey, sendEmail">
-										Launch
-										<!--<a id="redirect-domain" href="index.html"></a>-->
-									</button>
-
+									<div class="display:flex">
+										<button type="button" class="outline white-blue margin-right:15px" data-show='#step4,#ava4' data-hide='#step5,#ava5'>Previous</button>
+										<button type="button" class="outline red-white " data-actions="createOrg, createUser, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">
+											Launch
+										</button>
+									</div>
 								</div>
+								
 							</div>
-						</div>
+						</section>
+	                    <section id="step6"  class="hidden">
+	                    	<div class="overflow:hidden padding:0px_25px background:white">
+								<div class="float:left width:75% padding-top:25px">
+	                    			<h3>Step 6 / 6</h3>
+	                    		</div>
+	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+	                    			<i class="fas fa-industry"></i>
+	                    		</div>
+	                        </div>
+	                        <div class="padding:25px background:gainsboro text-align:left">
+	
+	                           <!-- Industry select -->
+	                           <h2>Confirm your email</h2>
+								<div class="display:flex">
+			                        <button type="button" class="outline white-blue margin-right:15px" data-show='#step5,#ava5' data-hide='#step6,#ava6'>Previous</button>
+			                    </div>
+		                    </div>
+	                    </section>
 					</form>
-		              	
+					<div class="hidden">
+						<form data-realtime="false" data-collection="users">
+							<input type="email" name='email' placeholder="Email" data-get_value="email" class="floating-label">
+							<input type="password" name='password' placeholder="Password" data-get_value="password" class="floating-label">
+							<button id="login" data-actions="login" href="index.html" class="outline">Login</button>
+						</form>							
+					</div>
 				</div>
 		    </div>
-		</div>
-		
-		<!-- masterDB currently only work when it is master db -->
-		<script>
-			var config = {
-			  apiKey: '38ffd014-c33b-4202-c54b-ac46a0a4',
-			  organization_Id: '5ae0cfac6fb8c4e656fdaf92',
-			  host: 'wss://server.cocreate.app:8088'
-			}
-		</script>
-		
-		<!-- CoCreate --
-		<script>
-		 	var config = {
-		 	  apiKey: 'c2b08663-06e3-440c-ef6f-13978b42883a',
-		 	  organization_Id: '5de0387b12e200ea63204d6c'
-		 	}
-		</script>
-		<!-- General -->
-		<!--<script>
-			var config = {
-			  apiKey: '2061acef-0451-4545-f754-60cf8160',
-			  organization_Id: '5ff747727005da1c272740ab'
-			}
-		</script>-->
-
+		</main>
 		
 		<!--CoCreateJS-->
-        <!--<script src="./apikey.js"></script>-->
-		<!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
-		<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
+        <script src="./apikey.js"></script>
+		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
 
 	</body>
 </html>

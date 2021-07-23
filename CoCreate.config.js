@@ -15,7 +15,7 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
-                "path": "/admin/signin",
+                "path": "/admin/signin.html",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727419c"
             }
@@ -30,7 +30,7 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
-                "path": "/admin/signup",
+                "path": "/admin/signup.html",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727419c"
             }
@@ -60,7 +60,7 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
-                "path": "/admin",
+                "path": "/admin/index.html",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727419c"
             }
