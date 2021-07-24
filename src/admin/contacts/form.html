@@ -64,12 +64,11 @@
 
         <main class="padding:10px" data-main_content_id="content">
 
-            <form data-collection="module_activities">
-
+            <form data-collection="module_activities" data-document_id="" data-realtime="false">
 
 				<div class="display:flex height:50px">
 					<div class="width:50% padding-right:5px z-index:7">
-						<cocreate-select class="sortable floating-label" name="type" data-document_id="" multiple placeholder="Type">
+						<cocreate-select class="sortable floating-label" name="type" multiple placeholder="Type">
 							<input placeholder="Search" data-template_id="type">
 						    <div data-template_id="type" data-filter_name="type" data-filter_value="60edaf79b979b4001744c6fe"></div>
 							<cc-options data-fetch_collection="tags" data-pass_id="module_id" data-filter_name="module_id" data-filter_value="" data-template_id="type" class="overflow:auto">
@@ -80,7 +79,7 @@
 						</cocreate-select>
 					</div>
 					<div class="width:50% padding-left:5px z-index:7">
-						<cocreate-select class="sortable floating-label" name="status" data-document_id="status" multiple placeholder="Status">
+						<cocreate-select class="sortable floating-label" name="status" data-document_id="status" placeholder="Status">
 							<input placeholder="Search" data-template_id="status">
 						    <div data-template_id="status" data-filter_name="type" data-filter_value="5ff747727005da1c272740ab"></div>
 							<cc-options data-fetch_collection="tags" data-pass_id="module_id" data-filter_name="module_id" data-filter_value="" data-template_id="status" class="overflow:auto">
@@ -92,13 +91,13 @@
 					</div>
 				</div>
 				
-                <input type="hidden" data-collection="" data-document_id="" name="module_id" data-pass_id="module_id" />
+                <input type="hidden" name="module_id"  data-document_id="" data-pass_id="module_id" value=""/>
                 
-                <input type="text" data-document_id="" name="name" class="floating-label" placeholder="Name" data-pass_id="form-fields" />
+                <input type="text" name="name" class="floating-label" placeholder="Name" data-pass_id="form-fields" />
 
-                <input type="text" name="email" class="floating-label" placeholder="Email" data-document_id="" data-pass_id="form-fields" />
+                <input type="text" name="email" class="floating-label" placeholder="Email" data-pass_id="form-fields" />
 
-                <input type="text" class="floating-label" name="profile_photo" placeholder="Profile Photo" data-document_id="" data-pass_id="form-fields" />
+                <input type="text" class="floating-label" name="profile_photo" placeholder="Profile Photo" data-pass_id="form-fields" />
 
 				<button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>
@@ -107,7 +106,8 @@
             </form>
 
         </main>
-        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+
+		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
 
     </body>
 

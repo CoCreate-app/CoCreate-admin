@@ -70,7 +70,7 @@
                     data-filter_operator="$ne"
                     data-template_id="navbar-menu" class="display:inline-flex">
                   
-                    <li class="template margin-right:15px" data-template_id="navbar-menu">
+                    <li class="template margin-right:15px" data-template_id="navbar-menu" data-document_id="{{data._id}}">
                         <a target="modal" fetch-for href='..{"collection":"files", "document_id":"{{data.navbar-menu-primary}}","name":"path"}'
                             data-modal_width="{{data.navbar-modal-primary-width}}"
                             data-modal_height="{{data.navbar-modal-primary-height}}"
@@ -164,7 +164,7 @@
                                 <div data-pass_collection="module_activities" data-pass_value="{{data._id}}" data-pass_to="module_id"></div>
                                 <div data-pass_collection="files" data-pass_document_id="{{data.main-menu-secondary}}" data-pass_name="src" data-pass_to="form"></div>
                                 <div data-pass_collection="files" data-pass_document_id="{{data.main-menu-primary}}" data-pass_name="src" data-pass_to="render"></div>
-                                <div data-pass_document_id="{{data._id}}" data-pass_to="module-form"></div>
+                                <div data-pass_value="{{data._id}}" data-pass_filter_value="{{data._id}}" data-pass_to="module-form"></div>
                             </a>
                             <div class="float:right width:50px text-align:center">
                                 <a target="modal" fetch-for href='..{"collection":"files", "document_id":"{{data.main-menu-secondary}}","name":"path"}'
@@ -208,7 +208,6 @@
         </sidenav>
 
 		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
-		<!--<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>-->
 
     </body>
 </html>
