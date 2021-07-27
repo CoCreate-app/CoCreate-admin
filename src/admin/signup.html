@@ -195,22 +195,19 @@
 								<input type="hidden" id="user_id"
 									data-collection="users"
 									data-document_id=""
-									name="_id"
-									placeholder="UserId">
+									name="_id">
 								
 								<!-- Organiztion _id  -->
 								<input type="hidden" id="org_id"
 									data-collection="organizations"
 									data-document_id=""
-									name="_id"
-									placeholder="OrganizationId">
+									name="_id">
 								
 								<!-- API key  -->
 								<input type="hidden" id="apiKey"
 									data-collection="organizations"
 									data-document_id=""
-									name="apiKey"
-									placeholder="API Key" 
+									name="apiKey" 
 									data-uuid="32">
 								
 								<!-- Sub Domain -->
@@ -219,15 +216,19 @@
 									data-document_id="" 
 									name="domains[0]"
 									data-type="array"
-									placeholder="Text"
 									data-key="renderKey.domain">
 								
-								<!-- DB Name  -->
-								<input type="hidden" id="dbname"
-									data-collection="organizations"
+								<!-- Connected Org  -->
+								<input type="hidden" id="connected_orgs"
+									data-collection="users"
 									data-document_id=""
-									name="_id"
-									placeholder="OrganizationId">
+									name="connected_orgs[0]">
+
+								<!-- Current Org  -->
+								<input type="hidden" id="current_org"
+									data-collection="users"
+									data-document_id=""
+									name="current_org">
 									
 								<!-- Send Email -->
 								<div data-template_id="renderKey">
@@ -238,6 +239,7 @@
 
 									<div class="display:flex">
 										<button type="button" class="outline white-blue margin-right:15px" data-show='#step4,#ava4' data-hide='#step5,#ava5'>Previous</button>
+										<!--<button type="button" class="outline red-white " data-actions="saveDocument, createOrgNew, createUserNew, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">-->
 										<button type="button" class="outline red-white " data-actions="createOrg, createUser, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">
 											Launch
 										</button>
@@ -279,6 +281,7 @@
 		<!--CoCreateJS-->
         <script src="./apikey.js"></script>
 		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
+		<!--<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>-->
 
 	</body>
 </html>
