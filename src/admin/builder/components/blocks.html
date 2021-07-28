@@ -8,7 +8,7 @@
     			<!--<form class="padding:5px">-->
     			<!--	<input type="text" class="floating-label" data-pass_value_to="results">-->
     			<!--	<span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">-->
-    			<!--		<a target="modal" data-pass_to="render" data-collection="website-pages" data-document_id="" data-pass_name="src" data-modal_width="900px" data-modal_color="#229954">-->
+    			<!--		<a target="modal" data-pass_to="render" collection="website-pages" document_id="" data-pass_name="src" data-modal_width="900px" data-modal_color="#229954">-->
     			<!--			<i class="fas fa-search"></i>-->
     			<!--		</a>-->
     			<!--	</span>-->
@@ -21,12 +21,12 @@
             <!--            <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".{{data.name}}" data-hide=".{{data.name}}">-->
             <!--                <span class="{{data.name}} hidden"><i class="fas fa-plus"></i></span>-->
             <!--                <span class="{{data.name}}"><i class="fas fa-minus"></i></span>-->
-            <!--                <span data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Label</span>-->
+            <!--                <span collection="{{collection}}" document_id="{{data._id}}" name="name">Label</span>-->
             <!--            </div>-->
                        <!-- fetch blocks -->
             <!--            <div class="display:flex flex-wrap:wrap justify-content:center text-align:center {{data.name}}" data-template_id="blocks-{{data._id}}" data-fetch_collection="blocks" data-filter_name="category" data-filter_value="{{data._name}}" data-filter_operator="$ne" data-order_by="menu-position" data-order_type="asc">-->
                             <!-- block template -->
-            <!--                <div class="card flex-grow:1 width:70px height:70px margin:5px padding:5px template" data-template_id="blocks-{{data._id}}" data-document_id="{{data._id}}" data-hover="display:block" data-hover_target="#editblock">-->
+            <!--                <div class="card flex-grow:1 width:70px height:70px margin:5px padding:5px template" data-template_id="blocks-{{data._id}}" document_id="{{data._id}}" data-hover="display:block" data-hover_target="#editblock">-->
             <!--                    <div id="editblock" class="position:absolute top:5 right:5 font-size:11px display:none">-->
             <!--                        <a target="modal" href="block-form.html" data-pass_collection="blocks" data-pass_document_id="{{data._id}}" data-pass_to="form-fields" data-modal_width="320px">-->
             <!--                            <i class="fas fa-pencil-alt"></i>-->
@@ -34,9 +34,9 @@
             <!--                    </div>-->
 
             <!--                    <div data-cloneable="true" data-insert-html='{{data._html}}'>-->
-                                    <!--<div data-collection="{{collection}}" data-document_id="{{data._id}}" name="icon"></div>                                       -->
-            <!--                        <div data-collection="{{collection}}" data-document_id="{{data._id}}" name="icon"><svg aria-hidden="true" focusable="false" width="50" viewBox="0 0 62 50"><path opacity=".25" fill="currentColor" d="M59 1H3c-1.1 0-2 .9-2 2v44c0 1.1.9 2 2 2h56c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zM14.5 3c.8 0 1.5.7 1.5 1.5S15.3 6 14.5 6 13 5.3 13 4.5 13.7 3 14.5 3zm-5 0c.8 0 1.5.7 1.5 1.5S10.3 6 9.5 6 8 5.3 8 4.5 8.7 3 9.5 3zm-5 0C5.3 3 6 3.7 6 4.5S5.3 6 4.5 6 3 5.3 3 4.5 3.7 3 4.5 3zM59 47H3V8h56v39z"></path><path opacity=".2" fill="currentColor" d="M5 10h52v16H5z"></path><g fill="currentColor"><path d="M5 10h2v4H5zm50 0h2v4h-2zM7 10h2v2H7zm16 0h4v2h-4zm-6 0h4v2h-4zm-6 0h4v2h-4zm18 0h4v2h-4zm6 0h4v2h-4zm6 0h4v2h-4zM23 24h4v2h-4zm-6 0h4v2h-4zm-6 0h4v2h-4zm18 0h4v2h-4zm6 0h4v2h-4zm6 0h4v2h-4zm6-14h4v2h-4zm0 14h4v2h-4z"></path><path d="M53 10h4v2h-4zm2 12h2v4h-2zM5 22h2v4H5zm0-6h2v4H5zm50 0h2v4h-2zm-2 8h2v2h-2z"></path><path d="M5 24h4v2H5z"></path></g><g opacity=".3" fill="currentColor"><path d="M5 29h2v4H5zm50 0h2v4h-2zM7 29h2v2H7zm16 0h4v2h-4zm-6 0h4v2h-4zm-6 0h4v2h-4zm18 0h4v2h-4zm6 0h4v2h-4zm6 0h4v2h-4zM23 43h4v2h-4zm-6 0h4v2h-4zm-6 0h4v2h-4zm18 0h4v2h-4zm6 0h4v2h-4zm6 0h4v2h-4zm6-14h4v2h-4zm0 14h4v2h-4z"></path><path d="M53 29h4v2h-4zm2 12h2v4h-2zM5 41h2v4H5zm0-6h2v4H5zm50 0h2v4h-2zm-2 8h2v2h-2z"></path><path d="M5 43h4v2H5z"></path></g><path opacity=".4" d="M57 10v16H5V10h52m1-1H4v18h54V9z"></path></svg</div>                                       -->
-            <!--                        <div class="font-size:11px" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Block Name</div>-->
+                                    <!--<div collection="{{collection}}" document_id="{{data._id}}" name="icon"></div>                                       -->
+            <!--                        <div collection="{{collection}}" document_id="{{data._id}}" name="icon"><svg aria-hidden="true" focusable="false" width="50" viewBox="0 0 62 50"><path opacity=".25" fill="currentColor" d="M59 1H3c-1.1 0-2 .9-2 2v44c0 1.1.9 2 2 2h56c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zM14.5 3c.8 0 1.5.7 1.5 1.5S15.3 6 14.5 6 13 5.3 13 4.5 13.7 3 14.5 3zm-5 0c.8 0 1.5.7 1.5 1.5S10.3 6 9.5 6 8 5.3 8 4.5 8.7 3 9.5 3zm-5 0C5.3 3 6 3.7 6 4.5S5.3 6 4.5 6 3 5.3 3 4.5 3.7 3 4.5 3zM59 47H3V8h56v39z"></path><path opacity=".2" fill="currentColor" d="M5 10h52v16H5z"></path><g fill="currentColor"><path d="M5 10h2v4H5zm50 0h2v4h-2zM7 10h2v2H7zm16 0h4v2h-4zm-6 0h4v2h-4zm-6 0h4v2h-4zm18 0h4v2h-4zm6 0h4v2h-4zm6 0h4v2h-4zM23 24h4v2h-4zm-6 0h4v2h-4zm-6 0h4v2h-4zm18 0h4v2h-4zm6 0h4v2h-4zm6 0h4v2h-4zm6-14h4v2h-4zm0 14h4v2h-4z"></path><path d="M53 10h4v2h-4zm2 12h2v4h-2zM5 22h2v4H5zm0-6h2v4H5zm50 0h2v4h-2zm-2 8h2v2h-2z"></path><path d="M5 24h4v2H5z"></path></g><g opacity=".3" fill="currentColor"><path d="M5 29h2v4H5zm50 0h2v4h-2zM7 29h2v2H7zm16 0h4v2h-4zm-6 0h4v2h-4zm-6 0h4v2h-4zm18 0h4v2h-4zm6 0h4v2h-4zm6 0h4v2h-4zM23 43h4v2h-4zm-6 0h4v2h-4zm-6 0h4v2h-4zm18 0h4v2h-4zm6 0h4v2h-4zm6 0h4v2h-4zm6-14h4v2h-4zm0 14h4v2h-4z"></path><path d="M53 29h4v2h-4zm2 12h2v4h-2zM5 41h2v4H5zm0-6h2v4H5zm50 0h2v4h-2zm-2 8h2v2h-2z"></path><path d="M5 43h4v2H5z"></path></g><path opacity=".4" d="M57 10v16H5V10h52m1-1H4v18h54V9z"></path></svg</div>                                       -->
+            <!--                        <div class="font-size:11px" collection="{{collection}}" document_id="{{data._id}}" name="name">Block Name</div>-->
             <!--                    </div>-->
             <!--                </div>-->
             <!--            </div>-->
@@ -50,7 +50,7 @@
     			<form class="padding:5px">
     				<input type="text" class="floating-label" data-pass_value_to="results">
     				<span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
-    					<a target="modal" data-pass_to="render" data-collection="website-pages" data-document_id="" data-pass_name="src" data-modal_width="900px" data-modal_color="#229954">
+    					<a target="modal" data-pass_to="render" collection="website-pages" document_id="" data-pass_name="src" data-modal_width="900px" data-modal_color="#229954">
     						<i class="fas fa-search"></i>
     					</a>
     				</span>

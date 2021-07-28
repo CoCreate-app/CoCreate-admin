@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
         <title>Module Activity Form View | CoCreate</title>
-        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+        <link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
 
         <!-- CodeMirror -->
         <link rel="stylesheet" href="https://server.cocreate.app//CoCreate-plugins/CoCreate-codemirror/src/css/CoCreate-codemirror.css" type="text/css" />
@@ -77,7 +77,7 @@
 
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
-                    <a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                    <a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
                 </li>
@@ -87,7 +87,7 @@
 		<!-- Main Content -->
 		<main class="padding:10px" data-main_content_id="content">
 
-            <form data-pass_id="form-fields" data-collection="files" data-document_id="" class="margin-bottom:75px">
+            <form data-pass_id="form-fields" collection="files" document_id="" class="margin-bottom:75px">
 
                 <input type="text" name="name" id="name" placeholder="Name" class="floating-label" />
                 <input type="text" name="description" id="description" placeholder="Description" class="floating-label" />
@@ -98,8 +98,8 @@
 					<cc-options data-fetch_collection="modules" data-template_id="module_id" class="overflow:auto">
 						<cc-option class="template" data-template_id="module_id" value="{{data._id}}">
 							<div class="display:flex padding:5px">
-								<span class="width:25px" data-collection="{{collection}}" data-document_id="{{data._id}}" name="icon"></span>
-								<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Name</h4>
+								<span class="width:25px" collection="{{collection}}" document_id="{{data._id}}" name="icon"></span>
+								<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Name</h4>
 							</div>
 						</cc-option>
 					</cc-options>

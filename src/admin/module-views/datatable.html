@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
 		<title>Module Templates Datatables | CoCreate</title>
-        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+        <link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
 	</head>
 
 	<style>
@@ -68,7 +68,7 @@
 
 				<!-- Datatable Controls -->
 				<li class="margin-right:15px">
-					<a data-actions="deleteDocuments" data-collection="" data-pass_id="datatable" data-template_id="datatable"><i class="far fa-trash-alt"></i></a>
+					<a data-actions="deleteDocuments" collection="" data-pass_id="datatable" data-template_id="datatable"><i class="far fa-trash-alt"></i></a>
 				</li>
 				<li class="margin-right:15px">
 					<a data-btn_type="column-visibility" data-template_id="datatable"><i class="far fa-eye"></i></a>
@@ -115,19 +115,19 @@
 				<div data-template_id="datatable" data-filter_name="tags" data-filter_value="60ec69d7b979b4001744bbc8"></div>
 				<tbody data-template_id="datatable" data-fetch_collection="files" data-order_by="name" data-order_type="asc">
 
-					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" data-template_id="datatable" data-document_id="{{data._id}}" data-toggle="selected">
+					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" data-template_id="datatable" document_id="{{data._id}}" data-toggle="selected">
 						<td class="padding:10px">
 							<div class="display:flex min-width:200px">
 								<div class="display:flex justify-content:center width:25px">
-									<span data-collection="modules" data-document_id="{{data.module_id}}" name="icon"></span>
+									<span collection="modules" document_id="{{data.module_id}}" name="icon"></span>
 								</div>
 								<div class="display:flex align-items:center margin-left:10px">
 									<a target="modal" href="./form.html" data-pass_collection="modules" data-pass_document_id="{{data._id}}" data-pass_name="src" data-pass_id="render" data-pass_to="render" data-modal_width="320px" data-modal_color="#229954">
-										<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">View Name</h4>
+										<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">View Name</h4>
 										<div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
 									</a>
 									<a target="modal" href="../modules/form.html" data-modal_width="320px" data-modal_color="#229954" class="cocreate-badge margin-left:5px">
-										<span data-collection="modules" data-document_id="{{data.module_id}}" name="name">Module Name</span>
+										<span collection="modules" document_id="{{data.module_id}}" name="name">Module Name</span>
 										<div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
 									</a>
 								</div>
@@ -136,7 +136,7 @@
 						<td class="padding:10px">
 							<div class="min-width:200px">
 								<a target="modal" href="./form.html" data-modal_width="320px" data-modal_color="#229954">
-									<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="_id">document_id</h4>
+									<h4 collection="{{collection}}" document_id="{{data._id}}" name="_id">document_id</h4>
 									<div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
 								</a>
 							</div>

@@ -60,7 +60,7 @@
 
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
-                    <a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                    <a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
                 </li>
@@ -70,7 +70,7 @@
 		<!-- Main Content -->
 		<div class="padding:10px" data-main_content_id="content">
 	  
-			<form data-pass_id="form-fields" data-collection="blocks" data-document_id="">
+			<form data-pass_id="form-fields" collection="blocks" document_id="">
 				<input type="hidden" name="module_id" data-pass_id="module_id">
 				<input type="text" name="name" class="floating-label" placeholder="Name" data-pass_id="form-fields">
 				<input type="text" name="icon" class="floating-label" placeholder="Icon" data-pass_id="form-fields">
@@ -79,7 +79,7 @@
 				<cocreate-select class="floating-label" name="category" placeholder="Category-select">
 					<input class="text">
 					<ul class="display:flex flex-direction:column background:whitesmoke width:100%" data-fetch_collection="tags" data-template_id="categories">
-						<cc-option class="template" data-template_id="categories" data-document_id="{{data._id}}"><span data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">layout</span></cc-options>
+						<cc-option class="template" data-template_id="categories" document_id="{{data._id}}"><span collection="{{collection}}" document_id="{{data._id}}" name="name">layout</span></cc-options>
 					</ul>
 				</cocreate-select>
 				<!--<select class="floating-label" name="category" placeholder="Category">-->

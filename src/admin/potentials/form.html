@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
         <title>Potential Form | CoCreate</title>
-        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+        <link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
     </head>
 
     <body>
@@ -55,7 +55,7 @@
 
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
-                    <a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                    <a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
                 </li>
@@ -65,27 +65,27 @@
         <!-- Main Content -->
         <div class="padding:10px" data-main_content_id="content">
 
-            <form data-realtime="true" data-collection="" data-document_id="" data-pass_id="form-fields">
+            <form realtime="true" collection="" document_id="" data-pass_id="form-fields">
 
 				<div class="display:flex height:50px">
 					<div class="width:50% padding-right:5px z-index:7">
-						<cocreate-select class="sortable floating-label" name="stage" data-document_id="" multiple placeholder="Stage">
+						<cocreate-select class="sortable floating-label" name="stage" document_id="" multiple placeholder="Stage">
 							<input placeholder="Search" data-template_id="stage">
 						    <div data-template_id="stage" data-filter_name="stage" data-filter_value="60eb93a2b979b4001744b445"></div>
 							<cc-options data-fetch_collection="tags" data-pass_id="module_id" data-filter_name="module_id" data-filter_value="" data-template_id="stage" class="overflow:auto">
 								<cc-option class="template" data-template_id="stage" value="{{data._id}}">
-									<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Stage Name</h4>
+									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Stage Name</h4>
 								</cc-option>
 							</cc-options>
 						</cocreate-select>
 					</div>
 					<div class="width:50% padding-left:5px">
-						<cocreate-select class="sortable floating-label z-index:7" name="status" data-document_id="status" placeholder="Status">
+						<cocreate-select class="sortable floating-label z-index:7" name="status" document_id="status" placeholder="Status">
 							<input placeholder="Search" data-template_id="status">
 						    <div data-template_id="status" data-filter_name="type" data-filter_value="5ff747727005da1c272740ab"></div>
 							<cc-options data-fetch_collection="tags" data-pass_id="module_id" data-filter_name="module_id" data-filter_value="" data-template_id="status" class="overflow:auto">
 								<cc-option class="template" data-template_id="status" value="{{data._id}}">
-									<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Status Name</h4>
+									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Status Name</h4>
 								</cc-option>
 							</cc-options>
 						</cocreate-select>

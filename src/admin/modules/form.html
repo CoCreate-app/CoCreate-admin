@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Module Form | CoCreate</title>
 		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-		<link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+		<link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
 	</head>
 	<style type="text/css">
 		.collapsed>.menu-items {
@@ -96,7 +96,7 @@
 
 				<!-- deleteDocument-->
 				<li class="margin-right:15px">
-					<a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+					<a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
 				</li>
@@ -106,7 +106,7 @@
 		<!-- Main Content -->
 		<main class="padding:10px" data-main_content_id="content">
 
-			<form class="margin-bottom:75px" data-pass_id="form-fields" data-collection="modules" data-document_id="" id="form">
+			<form class="margin-bottom:75px" data-pass_id="form-fields" collection="modules" document_id="" id="form">
 				<input type="text" name="name" id="name" placeholder="Module Name" class="floating-label" />
 				<input type="hidden" name="_id" id="module_id"/>
 				<input type="text" name="description" id="description" placeholder="Description" class="floating-label" />
@@ -134,8 +134,8 @@
 									<cocreate-select class="floating-label sortable" placeholder="Primary View" name="navbar-menu-primary">
 										<input class="template-search" placeholder="Search" data-template_id="navbar-menu-primary">
 										<cc-options data-pass_id="module_id" data-fetch_collection="files" data-filter_name="" data-filter_value="" data-template_id="navbar-menu-primary" class="overflow:auto">
-											<cc-option class="template" data-template_id="navbar-menu-primary" value='{{data._id}}' data-document_id="{{data._id}}" data-render_array="data">
-												<h3 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
+											<cc-option class="template" data-template_id="navbar-menu-primary" value='{{data._id}}' document_id="{{data._id}}" data-render_array="data">
+												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
 											</cc-option>
 										</cc-options>
@@ -176,8 +176,8 @@
 									<cocreate-select class="floating-label sortable" placeholder="Primary View" name="main-menu-primary">
 										<input class="template-search" placeholder="Search" data-template_id="main-menu-primary">
 										<cc-options data-pass_id="module_id" data-fetch_collection="files" data-filter_name="" data-filter_value="" data-template_id="main-menu-primary" class="overflow:auto">
-											<cc-option class="template" data-template_id="main-menu-primary" value='{{data._id}}' data-document_id="{{data._id}}" data-render_array="data">
-												<h3 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
+											<cc-option class="template" data-template_id="main-menu-primary" value='{{data._id}}' document_id="{{data._id}}" data-render_array="data">
+												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
 											</cc-option>
 										</cc-options>
@@ -211,8 +211,8 @@
 									<cocreate-select class="floating-label sortable" placeholder="Secondary View" name="main-menu-secondary">
 										<input class="template-search" placeholder="Search" data-template_id="main-menu-secondary">
 										<cc-options data-pass_id="module_id" data-fetch_collection="files" data-filter_name="" data-filter_value="" data-template_id="main-menu-secondary" class="overflow:auto">
-											<cc-option class="template" data-template_id="main-menu-secondary" value='{{data._id}}' data-document_id="{{data._id}}" data-render_array="data">
-												<h3 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
+											<cc-option class="template" data-template_id="main-menu-secondary" value='{{data._id}}' document_id="{{data._id}}" data-render_array="data">
+												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
 											</cc-option>
 										</cc-options>
@@ -245,8 +245,8 @@
 									<cocreate-select class="floating-label sortable" placeholder="Primary View" name="settings-menu-primary">
 										<input class="template-search" placeholder="Search" data-template_id="settings-menu-primary">
 										<cc-options data-pass_id="module_id" data-fetch_collection="files" data-filter_name="" data-filter_value="" data-template_id="settings-menu-primary" class="overflow:auto">
-											<cc-option class="template" data-template_id="settings-menu-primary" value='{{data._id}}' data-document_id="{{data._id}}" data-render_array="data">
-												<h3 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
+											<cc-option class="template" data-template_id="settings-menu-primary" value='{{data._id}}' document_id="{{data._id}}" data-render_array="data">
+												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
 											</cc-option>
 										</cc-options>
@@ -280,8 +280,8 @@
 									<cocreate-select class="floating-label sortable" placeholder="Secondary View" name="settings-menu-secondary">
 										<input class="template-search" placeholder="Search" data-template_id="settings-menu-secondary">
 										<cc-options data-pass_id="module_id" data-fetch_collection="files" data-filter_name="" data-filter_value="" data-template_id="settings-menu-secondary" class="overflow:auto">
-											<cc-option class="template" data-template_id="settings-menu-secondary" value='{{data._id}}' data-document_id="{{data._id}}" data-render_array="data">
-												<h3 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
+											<cc-option class="template" data-template_id="settings-menu-secondary" value='{{data._id}}' document_id="{{data._id}}" data-render_array="data">
+												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
 											</cc-option>
 										</cc-options>
@@ -318,14 +318,14 @@
 				<!--<input type="hidden" data-filter_name="module-view" data-filter_value="module-view" data-template_id="files">-->
 				<div data-fetch_collection="files" data-filter_name="module_id" data-filter_value="" data-filter_operator="$eq" data-order_by="name" data-order_type="asc" data-template_id="files" data-pass_id="module_id" class="sortable background:whitesmoke padding:5px:10px margin-top:10px" data-group_name="files">
 
-					<div data-template_id="files" class="template card padding:10px_5px background:white collapsed margin-top:10px" data-document_id="{{data._id}}" id="module-view{{data._id}}">
+					<div data-template_id="files" class="template card padding:10px_5px background:white collapsed margin-top:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
 						<div class="display:flex padding-left:10px">
 							<a target="modal" href="../files/form.html" class="flex-grow:1">
-								<span data-collection="{{collection}}" data-document_id="{{data._id}}" name="name"></span>
+								<span collection="{{collection}}" document_id="{{data._id}}" name="name"></span>
 								 <div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_name="src" data-pass_to="form-fields"></div>
 							</a>
-							<input type="hidden" data-collection="{{collection}}" data-document_id="{{data._id}}" name="module_id">
-							<a data-collection="{{collection}}" data-document_id="{{data._id}}" class="delete-document float:right padding:5px">
+							<input type="hidden" collection="{{collection}}" document_id="{{data._id}}" name="module_id">
+							<a collection="{{collection}}" document_id="{{data._id}}" class="delete-document float:right padding:5px">
 									<i class="fas fa-trash"></i>
 							</a>
 							<a target="modal" href="../builder/index.html" class="float:right padding:5px">
@@ -350,9 +350,9 @@
 						<!--		<a href="#module-view{{data._id}}" class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target='#css{{data._id}}' data-selected_group="{{data._id}}">CSS</a>-->
 						<!--		<a href="#module-view{{data._id}}" class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target='#js{{data._id}}' data-selected_group="{{data._id}}">JS</a>-->
 						<!--	</div>-->
-						<!--	<div id="html{{data._id}}" data-collection="{{collection}}" data-document_id="{{data._id}}" name='html' class="codemirror height:0px overflow:hidden active"></div>-->
-						<!--	<div id='css{{data._id}}' data-collection="{{collection}}" data-document_id="{{data._id}}" name='css' class="codemirror overflow:hidden height:0px"></div>-->
-						<!--	<div id='js{{data._id}}' data-collection="{{collection}}" data-document_id="{{data._id}}" name='js' class="codemirror overflow:hidden height:0px"></div>-->
+						<!--	<div id="html{{data._id}}" collection="{{collection}}" document_id="{{data._id}}" name='html' class="codemirror height:0px overflow:hidden active"></div>-->
+						<!--	<div id='css{{data._id}}' collection="{{collection}}" document_id="{{data._id}}" name='css' class="codemirror overflow:hidden height:0px"></div>-->
+						<!--	<div id='js{{data._id}}' collection="{{collection}}" document_id="{{data._id}}" name='js' class="codemirror overflow:hidden height:0px"></div>-->
 						<!--</div>-->
 
 					</div>
@@ -374,24 +374,24 @@
 					<div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" data-template_id="module-templates">
 
 						<div class="position:relative">
-							<img data-collection="{{collection}}" data-document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
-							<form data-realtime="false" data-collection="files" data-document_id="">
+							<img collection="{{collection}}" document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
+							<form realtime="false" collection="files" document_id="">
 								<input type="hidden" name="name" placeholder="View Name" value="{{data.name}}">
 								<input type="hidden" name="module_id" data-get_value="module_id">
 								<textarea hidden name="src" value="{{data.src}}"></textarea>
-								<!--<textarea hidden name="css" data-collection="files" data-document_id="{{data.css}}" name="src"></textarea>-->
-								<!--<textarea hidden name="js" data-collection="files" data-document_id="{{data.js}}" name="src"></textarea>-->
+								<!--<textarea hidden name="css" collection="files" document_id="{{data.css}}" name="src"></textarea>-->
+								<!--<textarea hidden name="js" collection="files" document_id="{{data.js}}" name="src"></textarea>-->
 								<button class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" data-actions="createDocument" data-show="#form" data-hide='#module-templates'>
 									<i class="fa fa-plus"></i>
 								</button>
 							</form>
 							<div class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">
-								<span data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Template Name</span>
+								<span collection="{{collection}}" document_id="{{data._id}}" name="name">Template Name</span>
 							</div>
 						</div>
 
 						<div class="padding:10px">
-							<p data-collection="{{collection}}" data-document_id="{{data._id}}" name="description">Description</p>
+							<p collection="{{collection}}" document_id="{{data._id}}" name="description">Description</p>
 						</div>
 					</div>
 

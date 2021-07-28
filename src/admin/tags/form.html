@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
         <title>Tags Form View | CoCreate</title>
-        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+        <link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
     </head>
 
     <body>
@@ -55,7 +55,7 @@
 
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
-                    <a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                    <a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
                 </li>
@@ -65,14 +65,14 @@
         <!-- Main Content -->
         <main class="padding:10px" data-main_content_id="content">
 
-            <form data-pass_id="form-fields" data-collection="tags" data-document_id="">
+            <form data-pass_id="form-fields" collection="tags" document_id="">
                 <input type="text" name="name" class="floating-label" placeholder="Name">
                 <input type="text" name="description" class="floating-label" placeholder="Description">
 				<cocreate-select class="sortable floating-label" name="type" placeholder="Type">
 					<input placeholder="Search" data-template_id="type">
 					<cc-options data-fetch_collection="tags" data-template_id="type" data-filter_name="module_id" data-filter_value="60eb8361b979b4001744b339" class="overflow:auto">
 						<cc-option class="template" data-template_id="type" value="{{data._id}}">
-							<h3 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Type Name</h3>
+							<h3 collection="{{collection}}" document_id="{{data._id}}" name="name">Type Name</h3>
 						</cc-option>
 					</cc-options>
 				</cocreate-select>
@@ -81,8 +81,8 @@
 					<cc-options data-fetch_collection="modules" data-order_by="name" data-template_id="module_id" class="overflow:auto">
 						<cc-option class="template" data-template_id="module_id" value="{{data._id}}">
 							<div class="display:flex padding:5px">
-								<span class="width:25px" data-collection="{{collection}}" data-document_id="{{data._id}}" name="icon"></span>
-								<h4 data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Name</h4>
+								<span class="width:25px" collection="{{collection}}" document_id="{{data._id}}" name="icon"></span>
+								<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Name</h4>
 							</div>
 						</cc-option>
 					</cc-options>

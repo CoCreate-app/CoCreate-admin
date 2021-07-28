@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
 		<title>Social Dashboard | CoCreate</title>
-        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+        <link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
 
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
@@ -87,7 +87,7 @@
 
 				<!-- deleteDocument-->
 				<li class="margin-right:15px">
-					<a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+					<a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
 				</li>
@@ -97,14 +97,14 @@
 		<sidenav id="menuL" class="cocreate-sidenav background:whitesmoke height:100vh" data-main_content="content" sidenav-default_desktop="collapsed" sidenav-default_tablet="collapsed">
 
 			<!-- Select to change organizations  -->
-			<cocreate-select class="org-changer remove-none padding:0 border:none sessionUser_Id" name="current_org" data-collection="users" data-document_id="">
+			<cocreate-select class="org-changer remove-none padding:0 border:none sessionUser_Id" name="current_org" collection="users" document_id="">
 
 				<input placeholder="Search" data-template_id="connected_orgs">
 
 				<ul class="options cocreate-menu overflow:overlay sessionUser_Id" data-fetch_collection="users" data-fetch_document_id="5ee2e3a93e956152355a3443" data-filter_name="_id" data-filter_value="" data-filter_operator="$eq" data-fetch_name="connected_orgs" data-template_id="connected_orgs">
 					<li class="template option height:50px margin:0" data-template_id="connected_orgs" value="{{connected_orgs.--}}">
-						<span class="logo-icon"><img data-collection="organizations" data-document_id="{{connected_orgs.--}}" name="logo" src="https://server.cocreate.app/images/cocreate.png" height="40px"alt="..."></span>
-						<span data-collection="organizations" data-document_id="{{connected_orgs.--}}" name="name" class="logo-name">Organization Name</span>
+						<span class="logo-icon"><img collection="organizations" document_id="{{connected_orgs.--}}" name="logo" src="https://server.cocreate.app/images/cocreate.png" height="40px"alt="..."></span>
+						<span collection="organizations" document_id="{{connected_orgs.--}}" name="name" class="logo-name">Organization Name</span>
 					</li>
 					<li class="line-height:40px height:40px overflow:hidden">
 						<a href="new-org.html">
@@ -138,8 +138,8 @@
 						<li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" data-template_id="main-menu">
 							<a target="modal" data-pass_collection="files" data-pass_document_id="{{data.main-menu-primary}}" data-pass_to="render" data-pass_name="src" data-modal_width="600px" data-modal_color="{{data.main-modal-color}}"
 							 class="display:inline-block">
-								<span class="display:inline-block width:50px text-align:center" data-document_id="{{data._id}}" data-collection="modules" name="icon" value="icon"></span>
-								<span data-collection="modules" data-document_id="{{data._id}}" name="name" ></span>
+								<span class="display:inline-block width:50px text-align:center" document_id="{{data._id}}" collection="modules" name="icon" value="icon"></span>
+								<span collection="modules" document_id="{{data._id}}" name="name" ></span>
 								<div data-pass_collection="module_activities" data-pass_filter_name="module_id" data-pass_filter_value="{{data._id}}" data-pass_to="datatable"></div>
 								<div data-pass_collection="module_activities" data-pass_value="{{data._id}}" data-pass_to="module_id"></div>
 								<div data-pass_collection="files" data-pass_document_id="{{data.main-menu-secondary}}" data-pass_name="src" data-pass_to="form"></div>
@@ -147,7 +147,7 @@
 							<div class="float:right width:50px text-align:center">
 								<a target="modal" data-pass_collection="files" data-pass_document_id="{{data.main-menu-secondary}}" data-pass_name="src" data-pass_to="render" data-modal_width="320px" data-modal_color="#229954">
 								<i class="fas fa-plus"></i>
-								<div data-pass_collection="modules" data-document_id="{{data._id}}" data-pass_to="module_id"></div>
+								<div data-pass_collection="modules" document_id="{{data._id}}" data-pass_to="module_id"></div>
 							  </a>
 							</div>
 						</li>

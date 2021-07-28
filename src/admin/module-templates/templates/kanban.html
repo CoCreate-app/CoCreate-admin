@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
         <title>Module Activity Kanban View | CoCreate</title>
-        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+        <link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
     </head>
 
     <body>
@@ -55,7 +55,7 @@
 
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
-                    <a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                    <a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
                 </li>
@@ -70,18 +70,18 @@
                 <div class="display:flex flex-wrap:nowrap flex-direction:row sortable" data-group_name="stage" data-fetch_collection="" data-filter_name="module_id" data-filter_value="" data-filter_operator="$eq" data-order_by="stage_position" data-order_type="asc" data-template_id="stage" data-render_id="stage" data-pass_id="datatable" data-droppable="true">
 
                     <!-- Stage Column -->
-                    <div class="template margin:10px background:whitesmoke max-width:300px" data-template_id="stage" data-element_id="{{stage._id}}" data-document_id="{{stage._id}}">
+                    <div class="template margin:10px background:whitesmoke max-width:300px" data-template_id="stage" data-element_id="{{stage._id}}" document_id="{{stage._id}}">
                         <div class="margin:15px font-size:18px color-dark-gray">
                             <span class="display:inline-block">
                               <input class="input_field"
-                                data-collection="{{collection}}" 
-                                data-document_id="{{stage._id}}" 
+                                collection="{{collection}}" 
+                                document_id="{{stage._id}}" 
                                 name="name" 
                                 id="stage-name"  
                                 placeholder="Stage">
                             </span>
                             <span class="float:right display:inline-block">
-                              <a data-clone_id="stage" data-actions="deleteDocument" data-collection="{{collection}}" data-document_id="{{stage._id}}"><i class="fas fa-times"></i></a>
+                              <a data-clone_id="stage" data-actions="deleteDocument" collection="{{collection}}" document_id="{{stage._id}}"><i class="fas fa-times"></i></a>
                             </span>
                         </div>
                         <div class="height:70vh padding:10px overflow:auto">
@@ -90,16 +90,16 @@
                                 data-order_type="asc" data-template_id="{{stage._id}}">
 
                                 <!-- Card -->
-                                <div class="template card margin-bottom:10px padding:10px background:white" data-template_id="{{stage._id}}" data-value="{{data._id}}" data-document_id="{{data._id}}">
+                                <div class="template card margin-bottom:10px padding:10px background:white" data-template_id="{{stage._id}}" data-value="{{data._id}}" document_id="{{data._id}}">
                                     <div class="width:100%">
-                                        <img data-collection="{{collection}}" data-document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
+                                        <img collection="{{collection}}" document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
                                     </div>
                                     <div class="border-bottom:1px_solid_gray margin:0px_15px">
                                         <div class="display:flex margin:10px_0px">
                                             <span class="cocreate-badge round badge-danger margin-right:10px font-size:10px padding:0px_20px"></span>
                                             <span class="cocreate-badge round margin-right:10px font-size:10px padding:0px_20px"></span>
                                         </div>
-                                        <p data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Card Name</p>
+                                        <p collection="{{collection}}" document_id="{{data._id}}" name="name">Card Name</p>
                                         <div class="display:flex margin:10px_0px">
                                             <span class="cocreate-badge badge-danger margin-right:10px font-size:14px">
                                                 <i class="far fa-clock"></i>
@@ -115,12 +115,12 @@
                                             <!-- Avatar -->
                                             <div class="avatar-wrapper margin:5px">
                                                 <a class="avatar round" target="modal" href="./users/profile.html" data-modal_width="300px" data-modal_height="375px"  data-modal_color="#229954">
-                                                    <span data-collection="users" data-document_id="" name="name" class="avatar-name"></span>
+                                                    <span collection="users" document_id="" name="name" class="avatar-name"></span>
                                                     <span class="avatar-image">
-                                                        <img data-collection="users" data-document_id="" name="avatar" onerror="this.style.display='none'" width="40px"/>
+                                                        <img collection="users" document_id="" name="avatar" onerror="this.style.display='none'" width="40px"/>
                                                     </span>
                                                 </a>
-                                                <div class="avatar-status" data-collection="users" data-document_id="" data-user_status='{"name":"status"}'></div>
+                                                <div class="avatar-status" collection="users" document_id="" data-user_status='{"name":"status"}'></div>
                                             </div>
                                             
                                         </div>
@@ -137,8 +137,8 @@
                             </div>
                         </div>
                         <div class="margin:0px_15px padding:15px_0px">
-                            <form data-collection="{{collection}}">
-                                <input type="hidden" data-document_id="" name="stage" value="{{stage._id}}" />
+                            <form collection="{{collection}}">
+                                <input type="hidden" document_id="" name="stage" value="{{stage._id}}" />
                                 <a data-actions="createDocument"><i class="fas fa-plus"></i> New Card</a>
                             </form>
                         </div>
@@ -148,7 +148,7 @@
             </div>
 
             <form>
-                <input type="hidden" data-pass_id="module_id" data-collection="" data-document_id="" name="module_id"/>
+                <input type="hidden" data-pass_id="module_id" collection="" document_id="" name="module_id"/>
                 <button data-actions="createDocument" class="position:fixed bottom:15px right:15px background:dodgerblue border-radius:50% grow-hover">
                     <i class="fas fa-plus"></i>
                	</button>

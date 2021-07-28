@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
         <title>Website Form | CoCreate</title>
-        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+        <link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
         <style type="text/css">
             .collapsed>.menu-items {
                 height: 0px;
@@ -69,14 +69,14 @@
 
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
-                    <a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                    <a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
                 </li>
             </ul>
         </nav>
         <main class="padding:10px" data-main_content_id="content">
-            <form data-pass_id="form-fields" data-collection="" data-document_id="" id="form">
+            <form data-pass_id="form-fields" collection="" document_id="" id="form">
                 <input type="text" name="name" id="name" placeholder="Website Name" class="floating-label">
                 <input type="hidden" name="module_id" data-pass_id="module_id" value="">
                 <input type="hidden" name="_id" id="website_id">
@@ -93,18 +93,18 @@
                 </div>
                 <!--<input type="hidden" data-filter_name="module-view" data-filter_value="module-view" data-template_id="module-views">-->
                 <div data-fetch_collection="files" data-filter_name="" data-filter_value="" data-filter_operator="$eq" data-order_by="name" data-order_type="asc" data-template_id="website-pages" data-pass_id="website_id" class="sortable background:whitesmoke padding:5px:10px margin-top:10px" data-group_name="website-pages">
-                    <div data-template_id="website-pages" class="template card padding:10px_5px background:white collapsed margin-top:10px" data-document_id="{{data._id}}" id="module-view{{data._id}}">
+                    <div data-template_id="website-pages" class="template card padding:10px_5px background:white collapsed margin-top:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
                         <div class="display:flex padding-left:10px">
                             <a target="modal" href="../website-pages/form.html" data-modal_color="#229954" class="flex-grow:1 font-size:16px padding:5px_0">
-                                <p data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Web Page</p>
+                                <p collection="{{collection}}" document_id="{{data._id}}" name="name">Web Page</p>
 								<div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
 								<div data-pass_filter_value="{{data.module_id}}" data-pass_to="module_id"></div>
                                 <div data-pass_fetch_collection="{{collection}}" data-pass_filter_name="website_id" data-pass_filter_value="{{data._id}}" data-pass_to="website_id"></div>
                             </a>
-                            <!--<p data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" class="flex-grow:1 font-size:16px padding:5px_0">Web Page</p>-->
-                            <!--<input data-collection="{{collection}}" data-document_id="{{data._id}}" name="name" class="flex-grow:1 min-width:100px border:none outline:none font-size:16px" placeholder="View Name">-->
-                            <!--<input type="hidden" data-collection="{{collection}}" data-document_id="{{data._id}}" name="module_id">-->
-                            <a data-collection="{{collection}}" data-document_id="{{data._id}}" class="delete-document float:right padding:5px">    
+                            <!--<p collection="{{collection}}" document_id="{{data._id}}" name="name" class="flex-grow:1 font-size:16px padding:5px_0">Web Page</p>-->
+                            <!--<input collection="{{collection}}" document_id="{{data._id}}" name="name" class="flex-grow:1 min-width:100px border:none outline:none font-size:16px" placeholder="View Name">-->
+                            <!--<input type="hidden" collection="{{collection}}" document_id="{{data._id}}" name="module_id">-->
+                            <a collection="{{collection}}" document_id="{{data._id}}" class="delete-document float:right padding:5px">    
                                 <i class="fas fa-trash"></i>                
                             </a> 
                             <a target="modal" href="../builder/index.html" class="float:right padding:5px">  
@@ -127,8 +127,8 @@
                 <div class="display:flex flex-wrap:wrap" data-fetch_collection="" data-pass_refresh="true" data-order_by="name" data-order_type="asc" data-template_id="module-templates" data-pass_id="page-templates">
                     <div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" data-template_id="module-templates">
                         <div class="position:relative"> 
-                            <img data-collection="{{collection}}" data-document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%">
-                            <form data-realtime="false" data-collection="files" data-document_id=""> 
+                            <img collection="{{collection}}" document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%">
+                            <form realtime="false" collection="files" document_id=""> 
                                 <input type="hidden" name="name" placeholder="View Name" value="{{data.name}}"> 
                                 <input type="hidden" name="website_id" data-get_value="website_id"> 
                                 <textarea hidden name="html" value="{{data.html}}"></textarea>
@@ -139,11 +139,11 @@
                                 </button> 
                             </form>
                             <div class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">
-                                <span data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Template Name</span>
+                                <span collection="{{collection}}" document_id="{{data._id}}" name="name">Template Name</span>
                             </div>
                         </div>
                         <div class="padding:10px">
-                            <p data-collection="{{collection}}" data-document_id="{{data._id}}" name="description">Description</p>
+                            <p collection="{{collection}}" document_id="{{data._id}}" name="description">Description</p>
                         </div>
                     </div>
                 </div>

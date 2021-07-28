@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
         <title>Call Center | CoCreate</title>
-        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+        <link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
 
         <!-- Call Center -->
         <link rel="stylesheet" href="./index.css" type="text/css" />
@@ -202,7 +202,7 @@
 
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
-                    <a data-actions="deleteDocument" data-collection="" data-document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                    <a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
                 </li>
@@ -215,7 +215,7 @@
 
                 <!-- SideNav Header -->
                 <div class="font-size:22px color:#333333 font-weight:600 padding-bottom:10px">
-                    <div class="display:flex border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px" data-collection="call-log" data-document_id="5fd7b6080bb983ccd559157a" name="name">
+                    <div class="display:flex border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px" collection="call-log" document_id="5fd7b6080bb983ccd559157a" name="name">
                         <span>Active Calls</span>
                         <span><button class="height:40px">Enqueque </button></span>
                     </div>
@@ -226,12 +226,12 @@
                 <div class="margin-top:10px" data-fetch_collection="testtwillio" data-filter_name="status" data-filter_value="completed" data-filter_operator="$ne" data-fetch_count="10" data-template_id="active-calls">
 
                     <!-- Call Template -->
-                    <div class="template card call padding:20px_10px margin-bottom:15px background:white margin-right:10px" data-template_id="active-calls" data-collection="{{collection}}" data-document_id="{{data._id}}" name="status" value="">
+                    <div class="template card call padding:20px_10px margin-bottom:15px background:white margin-right:10px" data-template_id="active-calls" collection="{{collection}}" document_id="{{data._id}}" name="status" value="">
 
                         <!-- Call Header -->
                         <div class="display:flex border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px margin-bottom:10px font-size:22px color:#333333 font-weight:600">
-                            <div class="status margin-right:5px" data-collection="{{collection}}" data-document_id="{{data._id}}" name="status" value=""></div>
-                            <span class="loader height:24px width:100px" data-collection="{{collection}}" data-document_id="{{data._id}}" name="status" value=""></span>
+                            <div class="status margin-right:5px" collection="{{collection}}" document_id="{{data._id}}" name="status" value=""></div>
+                            <span class="loader height:24px width:100px" collection="{{collection}}" document_id="{{data._id}}" name="status" value=""></span>
                             <div class="width:100%">
                                 <span class="font-size:16px margin-top:5px float:right">0:00</span>
                             </div>
@@ -244,17 +244,17 @@
                             <div class="avatar-wrapper margin:5px_0px margin-right:10px">
                                 <a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile.html" data-pass_collection="modules" data-pass_prefix="" data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" data-pass_to="render" data-modal_width="300px"
                                     data-modal_height="375px" data-modal_color="#229954">
-                                  	<span data-collection="users" data-document_id="" name="name" class="first-letter avatar-name"></span>
-                                  	<span data-collection="users" data-document_id="" name="profile_image" class="avatar-image">
+                                  	<span collection="users" document_id="" name="name" class="first-letter avatar-name"></span>
+                                  	<span collection="users" document_id="" name="profile_image" class="avatar-image">
                                   	  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
                                   	</span>
                                 </a>
-                                <div class="avatar-status sessionUser_Id" data-collection="users" data-document_id="" data-user_status='{"name":"status"}'></div>
+                                <div class="avatar-status sessionUser_Id" collection="users" document_id="" data-user_status='{"name":"status"}'></div>
                             </div>
 
                             <!-- Call Details -->
                             <div class="margin-right:10px">
-                                <span class="font-size:17px font-weight:600" data-collection="{{collection}}" data-document_id="{{data._id}}" name="name">Dynamic Contact Name</span>
+                                <span class="font-size:17px font-weight:600" collection="{{collection}}" document_id="{{data._id}}" name="name">Dynamic Contact Name</span>
                                 <div class="font-size:15px">Dyanmic Contact Phone</div>
                                 <div class="font-size:12px color:#0ba3e1">Dynamic Contact Job Title</div>
                             </div>
@@ -263,7 +263,7 @@
                             <form class="display:flex margin-top:10px">
 
                                 <!-- Answer and end call -->
-                                <div class="callbtns display:flex {{data.direction}}" data-collection="{{collection}}" data-document_id="{{data._id}}" name="status" value="">
+                                <div class="callbtns display:flex {{data.direction}}" collection="{{collection}}" document_id="{{data._id}}" name="status" value="">
                                     <button class="answer hidden" data-actions='answerCall' title="Accept Call"><i class="fas fa-phone"></i></button>
                                     <button class="hold hidden" data-actions='dialConference' title="Hold"><i class="fas fa-pause"></i></button>
                                     <button class="hangup hidden" data-actions='hangupCall' title="End Call"><i class="fas fa-phone-slash"></i></button>
@@ -275,11 +275,11 @@
                                 </div>
 
                                 <!-- Conference -->
-                                <div class="conference display:flex" data-collection="{{collection}}" data-document_id="{{data._id}}" name="status" value="">
+                                <div class="conference display:flex" collection="{{collection}}" document_id="{{data._id}}" name="status" value="">
                                     <!--<input type="hidden" data-twilio="joinConference.friendlyName" value="{{data.From}}">-->
-                                    <div type="hidden" data-twilio="endConference.CallSid" data-collection="{{collection}}" data-document_id="{{data._id}}" name="ConferenceSid" value=""></div>
-                                    <div type="hidden" data-twilio="holdConference.CallSid" data-collection="{{collection}}" data-document_id="{{data._id}}" name="ConferenceSid" value=""></div>
-                                    <div type="hidden" data-twilio="unholdConference.CallSid" data-collection="{{collection}}" data-document_id="{{data._id}}" name="ConferenceSid" value=""></div>
+                                    <div type="hidden" data-twilio="endConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
+                                    <div type="hidden" data-twilio="holdConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
+                                    <div type="hidden" data-twilio="unholdConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
 
                                     <button class="join hidden" data-actions='joinConference' title="Resume Call" data-friendlyName="{{data._id}}"><i class="fas fa-pause"></i></button>
                                     <button class="hold-conference hidden" data-actions='holdConference' title="Put Call on Hold"><i class="fas fa-pause"></i></button>
@@ -417,31 +417,31 @@
                     <tbody data-template_id="datatable" data-fetch_collection="testtwillio" data-fetch_count="15" data-order_by="" data-order_type="asc">
 
                         <!-- Datatable Row Template -->
-                        <tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" data-document_id="{{data._id}}" data-template_id="datatable" data-document_id="{{data._id}}" data-toggle="selected">
+                        <tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{data._id}}" data-template_id="datatable" document_id="{{data._id}}" data-toggle="selected">
                             <td class="padding:10px">
                                 <div class="display:flex min-width:200px">
                                     <div class="display:flex justify-content:center width:40px">
                                         <!-- Avatar -->
                                         <div class="avatar-wrapper">
                                             <a class="avatar round" target="modal" data-pass_collection="modules" data-pass_prefix="" data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" data-pass_to="render" data-modal_width="300px" data-modal_height="375px" data-modal_color="#229954">
-                                          	<span data-collection="users" data-document_id="" name="name" class="first-letter avatar-name"></span>
-                                          	<span data-collection="users" data-document_id="" name="profile_image" class="avatar-image">
+                                          	<span collection="users" document_id="" name="name" class="first-letter avatar-name"></span>
+                                          	<span collection="users" document_id="" name="profile_image" class="avatar-image">
                                           	  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
                                           	</span>
                                         </a>
-                                            <!--<div class="avatar-status sessionUser_Id" data-collection="users" data-document_id="" data-user_status='{"name":"status"}'></div>-->
+                                            <!--<div class="avatar-status sessionUser_Id" collection="users" document_id="" data-user_status='{"name":"status"}'></div>-->
                                         </div>
                                     </div>
                                     <div class="margin-left:10px">
                                         <a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-views/module_form.html" data-pass_collection="modules" data-pass_document_id="{{data._id}}" data-pass_name="src" data-pass_to="render" data-modal_width="320px" data-modal_color="#229954"
                                            >
                                             <div class="display:none to-{{data.direction}}">
-                                                <h4><span data-collection="{{collection}}" data-document_id="{{data._id}}" name="To">To</span></h4>
+                                                <h4><span collection="{{collection}}" document_id="{{data._id}}" name="To">To</span></h4>
                                             </div>
                                             <div class="display:none from-{{data.direction}}">
-                                                <h4><span data-collection="{{collection}}" data-document_id="{{data._id}}" name="From">From</span></h4>
+                                                <h4><span collection="{{collection}}" document_id="{{data._id}}" name="From">From</span></h4>
                                             </div>
-                                            <span class="icon-{{data.direction}}" data-collection="{{collection}}" data-document_id="{{data._id}}" name="status" value=""></span>
+                                            <span class="icon-{{data.direction}}" collection="{{collection}}" document_id="{{data._id}}" name="status" value=""></span>
                                         </a>
                                     </div>
                                 </div>
@@ -458,18 +458,18 @@
                             <!--                              data-modal_height="375px" -->
                             <!--                              data-modal_color="#229954"-->
                             <!--                             >-->
-                            <!--                              <span data-collection="users" data-document_id="" name="name" class="first-letter avatar-name"></span>-->
-                            <!--                              <span data-collection="users" data-document_id="" name="profile_image" class="avatar-image">-->
+                            <!--                              <span collection="users" document_id="" name="name" class="first-letter avatar-name"></span>-->
+                            <!--                              <span collection="users" document_id="" name="profile_image" class="avatar-image">-->
                             <!--                                  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>-->
                             <!--                              </span>-->
                             <!--                          </a>-->
-                            <!--                          <div class="avatar-status sessionUser_Id" data-collection="users" data-document_id="" data-user_status='{"name":"status"}'></div>-->
+                            <!--                          <div class="avatar-status sessionUser_Id" collection="users" document_id="" data-user_status='{"name":"status"}'></div>-->
                             <!--                      </div>			-->
                             <!--</td>-->
                             <td class="padding:10px">
                                 <a target="modal" href="https://server.cocreate.app/CoCreate-adminUI/src/modules/module-views/module_form.html" data-pass_document_id="{{data._id}}" data-pass_collection="modules" data-pass_name="src" data-pass_to="render" data-modal_width="320px" data-modal_color="#229954"
                                    >
-    								<b data-collection="{{collection}}" data-document_id="{{data._id}}" name="duration">Duration</b>
+    								<b collection="{{collection}}" document_id="{{data._id}}" name="duration">Duration</b>
     								<div data-pass_collection="modules"
     									data-pass_document_id="{{data._id}}"
     									data-pass_to="form-fields">
@@ -493,19 +493,19 @@
                     <form data-template_id="createCall" data-render_id="render2">
 
                         <!-- From Fontact or Number-->
-                        <cocreate-select class="floating-label sortable" data-collection="test" data-collection="module_activities" data-document_id="5e9531b3a762440eed55c2ed" name="selectField0" data-limit_option="3" placeholder="Call as">
+                        <cocreate-select class="floating-label sortable" collection="test" collection="module_activities" document_id="5e9531b3a762440eed55c2ed" name="selectField0" data-limit_option="3" placeholder="Call as">
 
                             <input type="hidden" data-twilio="dial.From" value="+16027372368">
                             <input class="template-search" data-template_id="option0">
 
                             <ul data-fetch_collection="use" data-template_id="option0" class="options overflow:auto height:300px">
-                                <li class="option templat display:flex padding:5px" data-template_id="option0" value='+13472189814' data-document_id="{{data._id}}" data-render_array="data">
+                                <li class="option templat display:flex padding:5px" data-template_id="option0" value='+13472189814' document_id="{{data._id}}" data-render_array="data">
                                     <div>
                                         <h3 name="name" value="{{data.name}}">+13472189814</h3>
                                         <h5>{{data._id}}</h5>
                                     </div>
                                 </li>
-                                <li class="option templat display:flex padding:5px" data-template_id="option0" value='+13472189814' data-document_id="{{data._id}}" data-render_array="data">
+                                <li class="option templat display:flex padding:5px" data-template_id="option0" value='+13472189814' document_id="{{data._id}}" data-render_array="data">
                                     <div>
                                         <h3 name="name" value="{{data.name}}">+16027372368</h3>
                                         <h5>{{data._id}}</h5>
@@ -522,17 +522,17 @@
                                 <input data-twilio="dial.To" class="template-search draw_digits" data-template_id="option0" value="+19703735168">
 
                                 <ul data-fetch_collection="users" data-template_id="number" class="options overflow:auto">
-                                    <li class="option template display:flex padding:5px" data-template_id="number" value='{{data._id}}' data-document_id="{{data._id}}" data-render_array="data">
+                                    <li class="option template display:flex padding:5px" data-template_id="number" value='{{data._id}}' document_id="{{data._id}}" data-render_array="data">
                                         <!-- Avatar -->
                                         <div class="avatar-wrapper margin:5px_0px margin-right:10px">
                                             <a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-adminUI/user-profile/user-profile.html" data-pass_collection="modules" data-pass_prefix="" data-pass_document_id="5dd010bccbc25f0cdb1a4d9f" data-pass_to="render" data-modal_width="300px"
                                                 data-modal_height="375px" data-modal_color="#229954">
-                                              	<span data-collection="users" data-document_id="" name="name" class="sessionUser_Id first-letter avatar-name"></span>
-                                              	<span data-collection="users" data-document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+                                              	<span collection="users" document_id="" name="name" class="sessionUser_Id first-letter avatar-name"></span>
+                                              	<span collection="users" document_id="" name="profile_image" class="sessionUser_Id avatar-image">
                                               	  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
                                               	</span>
                                             </a>
-                                            <div class="avatar-status sessionUser_Id" data-collection="users" data-document_id="" data-user_status='{"name":"status"}'></div>
+                                            <div class="avatar-status sessionUser_Id" collection="users" document_id="" data-user_status='{"name":"status"}'></div>
                                         </div>
                                         <div>
                                             <h3 name="name" value="{{data.name}}">No Name</h3>

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Sign up | CoCreate</title>
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
-        <link rel="stylesheet" href="../index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+        <link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
     </head>
     
     <style>
@@ -51,7 +51,7 @@
                 </div>
                
                 <div class="flex-grow:1 height:fit-content width:35% min-width:300px max-width:400px margin:10px align-self:flex-end">
-                	<form  data-realtime="false" autocomplete="false">
+                	<form  realtime="false" autocomplete="false">
                 		
 	            		<section id="step1">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
@@ -64,8 +64,8 @@
 	                        </div>
 	                        <div class="padding:25px background:gainsboro text-align:left">
 	                    		<input type="text" id="name" 
-	                    			data-collection="users" 
-	                    			data-document_id="" 
+	                    			collection="users" 
+	                    			document_id="" 
 	                    			name="name"  
 	                    			placeholder="Full Name"  
 	                    			class="floating-label"
@@ -86,8 +86,8 @@
 						    </div>
 						    <div class="padding:25px background:gainsboro text-align:left">
 						    	<input type="text" id="org-name"
-						    		data-collection="organizations"
-						    		data-document_id=""  
+						    		collection="organizations"
+						    		document_id=""  
 						    		name="name" 
 						    		placeholder="Organization Name" 
 						    		class="floating-label">
@@ -110,8 +110,8 @@
 						    <div class="padding:25px background:gainsboro text-align:left">
 						    	<input type="text" id="subdomain"
 						    		data-type="array"
-						    		data-collection="organizations"
-						    		data-document_id=""  
+						    		collection="organizations"
+						    		document_id=""  
 						    		name="domains" 
 						    		placeholder="Domain"
 						    		data-suffix_value=".cocreate.app"
@@ -141,13 +141,13 @@
 	                        <div class="padding:25px background:gainsboro text-align:left">
 	
 	                           <!-- Industry select -->
-	                            <cocreate-select class="floating-label" data-collection="organizations" name="industry" placeholder="Industry" data-realtime="false" data-save_value="false">
+	                            <cocreate-select class="floating-label" collection="organizations" name="industry" placeholder="Industry" realtime="false" data-save_value="false">
 	  					          	  <input class="template-search" placeholder="Search" data-template_id="industries">
 									<cc-options data-fetch_collection="industries" 
 									    data-template_id="industries"
 									    class="options overflow:overlay">
 										<cc-option class="template" data-template_id="industries" value="{{data._id}}">
-											<h4 data-collection="industries" data-document_id="{{data._id}}" name="name" data-realtime="false">industry name</h4>
+											<h4 collection="industries" document_id="{{data._id}}" name="name" realtime="false">industry name</h4>
 										</cc-option>
 									</cc-options>
 	                            </cocreate-select>
@@ -169,17 +169,17 @@
 							</div>
 							<div class="padding:25px background:gainsboro text-align:left">
 								<input type="email" id="email"
-									data-collection="users"
+									collection="users"
 									data-unique="false" 
-									data-document_id="" 
+									document_id="" 
 									name='email'  
 									placeholder="Email" 
 									class="floating-label">
 							 		<small id="errorUemail" class="text-danger"></small>
 							
 								<input type="password" id="password"
-									data-collection="users"
-							    	data-document_id=""
+									collection="users"
+							    	document_id=""
 							    	name="password" 
 							    	placeholder="Password" 
 							    	class="floating-label">
@@ -193,41 +193,41 @@
 									
 								<!-- User _id  -->
 								<input type="hidden" id="user_id"
-									data-collection="users"
-									data-document_id=""
+									collection="users"
+									document_id=""
 									name="_id">
 								
 								<!-- Organiztion _id  -->
 								<input type="hidden" id="org_id"
-									data-collection="organizations"
-									data-document_id=""
+									collection="organizations"
+									document_id=""
 									name="_id">
 								
 								<!-- API key  -->
 								<input type="hidden" id="apiKey"
-									data-collection="organizations"
-									data-document_id=""
+									collection="organizations"
+									document_id=""
 									name="apiKey" 
 									data-uuid="32">
 								
 								<!-- Sub Domain -->
 								<input type="hidden" 
-									data-collection="organizations"
-									data-document_id="" 
+									collection="organizations"
+									document_id="" 
 									name="domains[0]"
 									data-type="array"
 									data-key="renderKey.domain">
 								
 								<!-- Connected Org  -->
 								<input type="hidden" id="connected_orgs"
-									data-collection="users"
-									data-document_id=""
+									collection="users"
+									document_id=""
 									name="connected_orgs[0]">
 
 								<!-- Current Org  -->
 								<input type="hidden" id="current_org"
-									data-collection="users"
-									data-document_id=""
+									collection="users"
+									document_id=""
 									name="current_org">
 									
 								<!-- Send Email -->
@@ -235,7 +235,7 @@
 									<input type="hidden" placeholder="to email" data-sendgrid="sendEmail.to" data-get_value="user-email">
 								    <input type="hidden" placeholder="from email" data-sendgrid="sendEmail.from" value="testing@cocreate.app">
 								    <input type="hidden" placeholder="subject" data-sendgrid="sendEmail.subject" value="Welcome, {{data.name}} — Please confirm your email">
-								    <textarea placeholder="html" data-sendgrid="sendEmail.html" hidden data-collection="email-templates" data-document_id="60bfdaa304ee68b159b63532" name="src"></textarea>
+								    <textarea placeholder="html" data-sendgrid="sendEmail.html" hidden collection="email-templates" document_id="60bfdaa304ee68b159b63532" name="src"></textarea>
 
 									<div class="display:flex">
 										<button type="button" class="outline white-blue margin-right:15px" data-show='#step4,#ava4' data-hide='#step5,#ava5'>Previous</button>
@@ -268,7 +268,7 @@
 	                    </section>
 					</form>
 					<div class="hidden">
-						<form data-realtime="false" data-collection="users">
+						<form realtime="false" collection="users">
 							<input type="email" name='email' placeholder="Email" data-get_value="email" class="floating-label">
 							<input type="password" name='password' placeholder="Password" data-get_value="password" class="floating-label">
 							<button id="login" data-actions="login" href="index.html" class="outline">Login</button>

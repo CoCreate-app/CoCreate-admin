@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="32x32">
         <title>Organiztion Creator | CoCreate</title>
-        <link rel="stylesheet" href="./index.css" data-collection="files" data-document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true"/>
+        <link rel="stylesheet" href="./index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true"/>
     </head>
 
     <style>
@@ -39,10 +39,10 @@
                     <hgroup class="speech-bubble position:relative background:white border-radius:4px padding:15px">
                         <div class="color:blue font-size:24px">
                             <p id="ava1">
-                                Hey, <span data-document_id="" name="name" class="sessionUser_Id" data-collection="users">First Name</span>! Enter your new organization's name. Don't worry if you are not sure, you can allways update it later.
+                                Hey, <span document_id="" name="name" class="sessionUser_Id" collection="users">First Name</span>! Enter your new organization's name. Don't worry if you are not sure, you can allways update it later.
                             </p>
                             <p id="ava2" class="hidden">
-                                Great, <span data-document_id="" name="name" class="sessionUser_Id" data-collection="users">First Name</span>! Let’s choose an industry so I can begin to understand what we will be doing.
+                                Great, <span document_id="" name="name" class="sessionUser_Id" collection="users">First Name</span>! Let’s choose an industry so I can begin to understand what we will be doing.
                             </p>
                             <p id="ava3" class="hidden">
                                 I could do special animations to impress you. But instead I will build your organization instantly and impress you with my speed!
@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="flex-grow:1 height:fit-content width:35% min-width:300px max-width:400px margin:10px">
-                    <form data-realtime="false">
+                    <form realtime="false">
 
                         <div id="step1">
                             <div class="overflow:hidden padding:0px_25px background:white">
@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                             <div class="padding:25px background:gainsboro text-align:left">
-                                <input type="text" id="org-name" data-collection="organizations" data-document_id="" name="name" placeholder="Organization Name" class="floating-label">
+                                <input type="text" id="org-name" collection="organizations" document_id="" name="name" placeholder="Organization Name" class="floating-label">
 
                                 <button type="button" class="outline" data-show='#step2,#ava2' data-hide='#step1,#ava1'>Next</button>
                             </div>
@@ -82,11 +82,11 @@
                             <div class="padding:25px background:gainsboro text-align:left">
 
                                 <!-- Industry select -->
-                                <cocreate-select class="sortable floating-label" data-collection="organizations" data-document_id="" name="industry" placeholder="Industry">
+                                <cocreate-select class="sortable floating-label" collection="organizations" document_id="" name="industry" placeholder="Industry">
                                     <input class="template-search" placeholder="Search" data-template_id="template1">
                                     <ul data-fetch_collection="industries" data-template_id="template1" data-pass_to="me1234" class="template-wrapper options overflow:overlay">
                                         <li class="template option" data-pass_id="me1234">
-                                            <h5 data-collection="industries" data-document_id="" name="industry_name" data-pass_id="me1234">industry name</h5>
+                                            <h5 collection="industries" document_id="" name="industry_name" data-pass_id="me1234">industry name</h5>
                                         </li>
                                     </ul>
                                 </cocreate-select>
@@ -108,10 +108,10 @@
                             <div class="padding:25px background:gainsboro text-align:left">
 
                                 <!-- API key  -->
-                                <input type="hidden" id="apiKey" data-collection="organizations" data-document_id="" name="apiKey" placeholder="API Key" data-uuid="32" readonly>
+                                <input type="hidden" id="apiKey" collection="organizations" document_id="" name="apiKey" placeholder="API Key" data-uuid="32" readonly>
 
                                 <!-- Security key  -->
-                                <input type="hidden" id="securityKey" data-collection="organizations" data-document_id="" name="securityKey" placeholder="security Key" data-uuid="32" readonly>
+                                <input type="hidden" id="securityKey" collection="organizations" document_id="" name="securityKey" placeholder="security Key" data-uuid="32" readonly>
 
                                 <button type="button" class="outline white-blue" data-show='#step2,#ava2' data-hide='#step3,#ava3'>Previous</button>
                                 <button type="button" class="outline red-white registerBtn industryBtn"><a href="index.html">Launch</a></button>
