@@ -71,10 +71,10 @@
 
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
-					<a target="modal" href="../modules/form.html" data-modal_width="320px">
+					<a target="modal" href="../modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
-                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="5ff747727005da1c27274190" data-pass_to="form-fields"></div>
-                        <div data-pass_id="datatable" data-pass_filter_value="5ff747727005da1c27274190" data-pass_to="module_id"></div>
+                        <div pass_id="module-form" pass-collection="modules" pass-document_id="5ff747727005da1c27274190" pass_to="form-fields"></div>
+                        <div pass_id="datatable" pass-filter-value="5ff747727005da1c27274190" pass_to="module_id"></div>
                     </a>
 				</li>
 
@@ -82,7 +82,7 @@
 				<li class="margin-right:15px">
 					<a target="modal" href="../code-editor/index.html">
                         <i class="fas fa-code"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
 				</li>
 
@@ -90,13 +90,13 @@
 				<li class="margin-right:15px">
 					<a target="modal" href="../builder/index.html">
                         <i class="fas fa-palette"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
 				</li>
 
 				<!-- deleteDocument-->
 				<li class="margin-right:15px">
-					<a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
+					<a actions="deleteDocument" collection="" document_id="" pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
 				</li>
@@ -106,7 +106,7 @@
 		<!-- Main Content -->
 		<main class="padding:10px" data-main_content_id="content">
 
-			<form class="margin-bottom:75px" data-pass_id="form-fields" collection="modules" document_id="" id="form">
+			<form class="margin-bottom:75px" pass_id="form-fields" collection="modules" document_id="" id="form">
 				<input type="text" name="name" id="name" placeholder="Module Name" class="floating-label" />
 				<input type="hidden" name="_id" id="module_id"/>
 				<input type="text" name="description" id="description" placeholder="Description" class="floating-label" />
@@ -132,37 +132,37 @@
 							<div id='navbar-menu' class="menu-item overflow:hidden height:0px active">
 								<div id="navbar-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
 									<cocreate-select class="floating-label sortable" placeholder="Primary View" name="navbar-menu-primary">
-										<input class="template-search" placeholder="Search" data-template_id="navbar-menu-primary">
-										<cc-options data-pass_id="module_id" data-fetch_collection="files" data-filter_name="" data-filter_value="" data-template_id="navbar-menu-primary" class="overflow:auto">
-											<cc-option class="template" data-template_id="navbar-menu-primary" value='{{data._id}}' document_id="{{data._id}}" data-render_array="data">
+										<input class="template-search" placeholder="Search" template_id="navbar-menu-primary">
+										<cc-options pass_id="module_id" fetch-collection="files" filter-name="" filter-value="" template_id="navbar-menu-primary" class="overflow:auto">
+											<cc-option class="template" template_id="navbar-menu-primary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
 												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
 											</cc-option>
 										</cc-options>
 									</cocreate-select>
-									<!--<input type="text" data-pass_id="form-fields" name="navbar-menu-primary-href" placeholder="href" class="floating-label" />-->
+									<!--<input type="text" pass_id="form-fields" name="navbar-menu-primary-href" placeholder="href" class="floating-label" />-->
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="number" data-pass_id="form-fields" name="navbar-menu-position" placeholder="Menu Position" class="floating-label" />
+											<input type="number" pass_id="form-fields" name="navbar-menu-position" placeholder="Menu Position" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="color" data-pass_id="form-fields" name="navbar-modal-primary-color" placeholder="Modal Color" class="floating-label" />
+											<input type="color" pass_id="form-fields" name="navbar-modal-primary-color" placeholder="Modal Color" class="floating-label" />
 										</div>
 									</div>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="navbar-modal-primary-width" placeholder="Modal Width" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="navbar-modal-primary-width" placeholder="Modal Width" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="navbar-modal-primary-height" placeholder="Modal Height" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="navbar-modal-primary-height" placeholder="Modal Height" class="floating-label" />
 										</div>
 									</div>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="navbar-modal-primary-x" placeholder="Modal x" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="navbar-modal-primary-x" placeholder="Modal x" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="navbar-modal-primary-y" placeholder="Modal y" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="navbar-modal-primary-y" placeholder="Modal y" class="floating-label" />
 										</div>
 									</div>
 								</div>
@@ -174,9 +174,9 @@
 								</div>
 								<div id="main-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
 									<cocreate-select class="floating-label sortable" placeholder="Primary View" name="main-menu-primary">
-										<input class="template-search" placeholder="Search" data-template_id="main-menu-primary">
-										<cc-options data-pass_id="module_id" data-fetch_collection="files" data-filter_name="" data-filter_value="" data-template_id="main-menu-primary" class="overflow:auto">
-											<cc-option class="template" data-template_id="main-menu-primary" value='{{data._id}}' document_id="{{data._id}}" data-render_array="data">
+										<input class="template-search" placeholder="Search" template_id="main-menu-primary">
+										<cc-options pass_id="module_id" fetch-collection="files" filter-name="" filter-value="" template_id="main-menu-primary" class="overflow:auto">
+											<cc-option class="template" template_id="main-menu-primary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
 												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
 											</cc-option>
@@ -184,54 +184,54 @@
 									</cocreate-select>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="number" data-pass_id="form-fields" name="main-menu-position" placeholder="Menu Position" class="floating-label" />
+											<input type="number" pass_id="form-fields" name="main-menu-position" placeholder="Menu Position" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="color" data-pass_id="form-fields" name="main-modal-primary-color" placeholder="Modal Color" class="floating-label" />
-										</div>
-									</div>
-									<div class="display:flex justify-content:space-between">
-										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="main-modal-primary-width" placeholder="Modal Width" class="floating-label" />
-										</div>
-										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="main-modal-primary-height" placeholder="Modal Height" class="floating-label" />
+											<input type="color" pass_id="form-fields" name="main-modal-primary-color" placeholder="Modal Color" class="floating-label" />
 										</div>
 									</div>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="main-modal-primary-x" placeholder="Modal x" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="main-modal-primary-width" placeholder="Modal Width" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="main-modal-primary-y" placeholder="Modal y" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="main-modal-primary-height" placeholder="Modal Height" class="floating-label" />
+										</div>
+									</div>
+									<div class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input type="text" pass_id="form-fields" name="main-modal-primary-x" placeholder="Modal x" class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input type="text" pass_id="form-fields" name="main-modal-primary-y" placeholder="Modal y" class="floating-label" />
 										</div>
 									</div>
 								</div>
 								<div id="main-menu-secondary" class="menu-item-type overflow:hidden height:0px">
 									<cocreate-select class="floating-label sortable" placeholder="Secondary View" name="main-menu-secondary">
-										<input class="template-search" placeholder="Search" data-template_id="main-menu-secondary">
-										<cc-options data-pass_id="module_id" data-fetch_collection="files" data-filter_name="" data-filter_value="" data-template_id="main-menu-secondary" class="overflow:auto">
-											<cc-option class="template" data-template_id="main-menu-secondary" value='{{data._id}}' document_id="{{data._id}}" data-render_array="data">
+										<input class="template-search" placeholder="Search" template_id="main-menu-secondary">
+										<cc-options pass_id="module_id" fetch-collection="files" filter-name="" filter-value="" template_id="main-menu-secondary" class="overflow:auto">
+											<cc-option class="template" template_id="main-menu-secondary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
 												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
 											</cc-option>
 										</cc-options>
 									</cocreate-select>
-									<input type="color" data-pass_id="form-fields" name="main-modal-secondary-color" placeholder="Modal Color" class="floating-label" />
+									<input type="color" pass_id="form-fields" name="main-modal-secondary-color" placeholder="Modal Color" class="floating-label" />
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="main-modal-secondary-width" placeholder="Modal Width" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="main-modal-secondary-width" placeholder="Modal Width" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="main-modal-secondary-height" placeholder="Modal Height" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="main-modal-secondary-height" placeholder="Modal Height" class="floating-label" />
 										</div>
 									</div>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="main-modal-secondary-x" placeholder="Modal x" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="main-modal-secondary-x" placeholder="Modal x" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="main-modal-secondary-y" placeholder="Modal y" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="main-modal-secondary-y" placeholder="Modal y" class="floating-label" />
 										</div>
 									</div>
 								</div>
@@ -243,9 +243,9 @@
 								</div>
 								<div id="settings-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
 									<cocreate-select class="floating-label sortable" placeholder="Primary View" name="settings-menu-primary">
-										<input class="template-search" placeholder="Search" data-template_id="settings-menu-primary">
-										<cc-options data-pass_id="module_id" data-fetch_collection="files" data-filter_name="" data-filter_value="" data-template_id="settings-menu-primary" class="overflow:auto">
-											<cc-option class="template" data-template_id="settings-menu-primary" value='{{data._id}}' document_id="{{data._id}}" data-render_array="data">
+										<input class="template-search" placeholder="Search" template_id="settings-menu-primary">
+										<cc-options pass_id="module_id" fetch-collection="files" filter-name="" filter-value="" template_id="settings-menu-primary" class="overflow:auto">
+											<cc-option class="template" template_id="settings-menu-primary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
 												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
 											</cc-option>
@@ -253,54 +253,54 @@
 									</cocreate-select>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="number" data-pass_id="form-fields" name="settings-menu-position" placeholder="Menu Position" class="floating-label" />
+											<input type="number" pass_id="form-fields" name="settings-menu-position" placeholder="Menu Position" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="color" data-pass_id="form-fields" name="settings-modal-primary-color" placeholder="Modal Color" class="floating-label" />
-										</div>
-									</div>
-									<div class="display:flex justify-content:space-between">
-										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="settings-modal-primary-width" placeholder="Modal Width" class="floating-label" />
-										</div>
-										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="settings-modal-primary-height" placeholder="Modal Height" class="floating-label" />
+											<input type="color" pass_id="form-fields" name="settings-modal-primary-color" placeholder="Modal Color" class="floating-label" />
 										</div>
 									</div>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="settings-modal-primary-x" placeholder="Modal x" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="settings-modal-primary-width" placeholder="Modal Width" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="settings-modal-primary-y" placeholder="Modal y" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="settings-modal-primary-height" placeholder="Modal Height" class="floating-label" />
+										</div>
+									</div>
+									<div class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input type="text" pass_id="form-fields" name="settings-modal-primary-x" placeholder="Modal x" class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input type="text" pass_id="form-fields" name="settings-modal-primary-y" placeholder="Modal y" class="floating-label" />
 										</div>
 									</div>
 								</div>
 								<div id="settings-menu-secondary" class="menu-item-type overflow:hidden height:0px">
 									<cocreate-select class="floating-label sortable" placeholder="Secondary View" name="settings-menu-secondary">
-										<input class="template-search" placeholder="Search" data-template_id="settings-menu-secondary">
-										<cc-options data-pass_id="module_id" data-fetch_collection="files" data-filter_name="" data-filter_value="" data-template_id="settings-menu-secondary" class="overflow:auto">
-											<cc-option class="template" data-template_id="settings-menu-secondary" value='{{data._id}}' document_id="{{data._id}}" data-render_array="data">
+										<input class="template-search" placeholder="Search" template_id="settings-menu-secondary">
+										<cc-options pass_id="module_id" fetch-collection="files" filter-name="" filter-value="" template_id="settings-menu-secondary" class="overflow:auto">
+											<cc-option class="template" template_id="settings-menu-secondary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
 												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
 											</cc-option>
 										</cc-options>
 									</cocreate-select>
-									<input type="color" data-pass_id="form-fields" name="settings-modal-secondary-color" placeholder="Modal Color" class="floating-label" />
+									<input type="color" pass_id="form-fields" name="settings-modal-secondary-color" placeholder="Modal Color" class="floating-label" />
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="settings-modal-secondary-width" placeholder="Modal Width" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="settings-modal-secondary-width" placeholder="Modal Width" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="settings-modal-secondary-height" placeholder="Modal Height" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="settings-modal-secondary-height" placeholder="Modal Height" class="floating-label" />
 										</div>
 									</div>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="settings-modal-secondary-x" placeholder="Modal x" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="settings-modal-secondary-x" placeholder="Modal x" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" data-pass_id="form-fields" name="settings-modal-secondary-y" placeholder="Modal y" class="floating-label" />
+											<input type="text" pass_id="form-fields" name="settings-modal-secondary-y" placeholder="Modal y" class="floating-label" />
 										</div>
 									</div>
 								</div>
@@ -312,17 +312,17 @@
 				<!-- module views -->
 				<div class="card display:flex padding:10px_15px margin-top:10px font-size:18px">
 					<span class="flex-grow:1">Module Views</span>
-					<a data-show="#module-templates" data-hide="#form" data-pass_collection="files" data-pass_to="module-templates"><i class="far fa-plus-square"></i></a>
+					<a data-show="#module-templates" data-hide="#form" pass-collection="files" pass_to="module-templates"><i class="far fa-plus-square"></i></a>
 				</div>
 
-				<!--<input type="hidden" data-filter_name="module-view" data-filter_value="module-view" data-template_id="files">-->
-				<div data-fetch_collection="files" data-filter_name="module_id" data-filter_value="" data-filter_operator="$eq" data-order_by="name" data-order_type="asc" data-template_id="files" data-pass_id="module_id" class="sortable background:whitesmoke padding:5px:10px margin-top:10px" data-group_name="files">
+				<!--<input type="hidden" filter-name="module-view" filter-value="module-view" template_id="files">-->
+				<div fetch-collection="files" filter-name="module_id" filter-value="" filter-operator="$eq" order-by="name" order-type="asc" template_id="files" pass_id="module_id" class="sortable background:whitesmoke padding:5px:10px margin-top:10px" data-group_name="files">
 
-					<div data-template_id="files" class="template card padding:10px_5px background:white collapsed margin-top:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
+					<div template_id="files" class="template card padding:10px_5px background:white collapsed margin-top:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
 						<div class="display:flex padding-left:10px">
 							<a target="modal" href="../files/form.html" class="flex-grow:1">
 								<span collection="{{collection}}" document_id="{{data._id}}" name="name"></span>
-								 <div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_name="src" data-pass_to="form-fields"></div>
+								 <div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass-name="src" pass_to="form-fields"></div>
 							</a>
 							<input type="hidden" collection="{{collection}}" document_id="{{data._id}}" name="module_id">
 							<a collection="{{collection}}" document_id="{{data._id}}" class="delete-document float:right padding:5px">
@@ -330,12 +330,12 @@
 							</a>
 							<a target="modal" href="../builder/index.html" class="float:right padding:5px">
 									<i class="fas fa-palette"></i>
-								 <div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_name="src" data-pass_to="builder">
+								 <div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass-name="src" pass_to="builder">
 								 </div>
 							</a>
 							<a target="modal" href="../code-editor/index.html" class="float:right padding:5px">
 									<i class="fas fa-code"></i>
-								 <div data-pass_document_id="{{data._id}}" data-pass_name="src" data-pass_to="code-editor"></div>
+								 <div pass-document_id="{{data._id}}" pass-name="src" pass_to="code-editor"></div>
 							</a>
 							<!--<a class="float:right padding:5px" data-toggle="collapsed" data-toggle_closest=".card" data-show="#view-up{{data._id}}, #view-down{{data._id}}" data-hide="#view-down{{data._id}}, #view-up{{data._id}}">-->
 							<!--	<i id="view-down{{data._id}}" class="fas fa-angle-down"></i>-->
@@ -359,7 +359,7 @@
 
 				</div>
 
-				<button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
+				<button actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>
 				</button>
 
@@ -368,10 +368,10 @@
 			<!-- Module form templates to pass value and create clone -->
 			<div class="hidden" id="module-templates">
 				<div class="height:20px padding:0_10px font-size:18px"><i class="fas fa-times float:right" data-show="#form" data-hide='#module-templates'></i></div>
-				<div data-template_id="module-templates" data-filter_name="tags" data-filter_value="template"></div>
-				<div class="display:flex flex-wrap:wrap" data-fetch_collection="" data-pass_refresh="true" data-order_by="name" data-order_type="asc" data-template_id="module-templates" data-pass_id="module-templates">
+				<div template_id="module-templates" filter-name="tags" filter-value="template"></div>
+				<div class="display:flex flex-wrap:wrap" fetch-collection="" pass-refresh="true" order-by="name" order-type="asc" template_id="module-templates" pass_id="module-templates">
 
-					<div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" data-template_id="module-templates">
+					<div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" template_id="module-templates">
 
 						<div class="position:relative">
 							<img collection="{{collection}}" document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
@@ -381,7 +381,7 @@
 								<textarea hidden name="src" value="{{data.src}}"></textarea>
 								<!--<textarea hidden name="css" collection="files" document_id="{{data.css}}" name="src"></textarea>-->
 								<!--<textarea hidden name="js" collection="files" document_id="{{data.js}}" name="src"></textarea>-->
-								<button class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" data-actions="createDocument" data-show="#form" data-hide='#module-templates'>
+								<button class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" actions="createDocument" data-show="#form" data-hide='#module-templates'>
 									<i class="fa fa-plus"></i>
 								</button>
 							</form>

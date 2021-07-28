@@ -28,10 +28,10 @@
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
-                    <a target="modal" href="../modules/form.html" data-modal_width="320px">
+                    <a target="modal" href="../modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
-                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
-                        <div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
+                        <div pass_id="datatable" pass-filter-value="" pass_to="module_id"></div>
                     </a>
                 </li>
 
@@ -39,7 +39,7 @@
                 <li class="margin-right:15px">
                     <a target="modal" href="../code-editor/index.html">
                         <i class="fas fa-code"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
                 </li>
 
@@ -47,13 +47,13 @@
                 <li class="margin-right:15px">
                     <a target="modal" href="../builder/index.html">
                         <i class="fas fa-palette"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
                 </li>
 
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
-                    <a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                    <a actions="deleteDocument" collection="" document_id="" pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
                 </li>
@@ -61,15 +61,15 @@
         </nav>
 
         <main class="padding:10px" data-main_content_id="content">
-            <form realtime="true" collection="test" class="margin-bottom:75px" document_id="" data-pass_id="form-fields">
+            <form realtime="true" collection="test" class="margin-bottom:75px" document_id="" pass_id="form-fields">
 				
 				<div class="display:flex height:50px">
 					<div class="width:50% padding-right:5px z-index:7">
 						<cocreate-select class="sortable floating-label" name="stage" document_id="" multiple placeholder="Stage">
-							<input placeholder="Search" data-template_id="stage">
-						    <div data-template_id="stage" data-filter_name="stage" data-filter_value="60eb93a2b979b4001744b445"></div>
-							<cc-options data-fetch_collection="tags" data-pass_id="module_id" data-filter_name="module_id" data-filter_value="" data-template_id="stage" class="overflow:auto">
-								<cc-option class="template" data-template_id="stage" value="{{data._id}}">
+							<input placeholder="Search" template_id="stage">
+						    <div template_id="stage" filter-name="stage" filter-value="60eb93a2b979b4001744b445"></div>
+							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="stage" class="overflow:auto">
+								<cc-option class="template" template_id="stage" value="{{data._id}}">
 									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Stage Name</h4>
 								</cc-option>
 							</cc-options>
@@ -77,10 +77,10 @@
 					</div>
 					<div class="width:50% padding-left:5px">
 						<cocreate-select class="sortable floating-label z-index:7" name="status" document_id="status" placeholder="Status">
-							<input placeholder="Search" data-template_id="status">
-						    <div data-template_id="status" data-filter_name="type" data-filter_value="5ff747727005da1c272740ab"></div>
-							<cc-options data-fetch_collection="tags" data-pass_id="module_id" data-filter_name="module_id" data-filter_value="" data-template_id="status" class="overflow:auto">
-								<cc-option class="template" data-template_id="status" value="{{data._id}}">
+							<input placeholder="Search" template_id="status">
+						    <div template_id="status" filter-name="type" filter-value="5ff747727005da1c272740ab"></div>
+							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="status" class="overflow:auto">
+								<cc-option class="template" template_id="status" value="{{data._id}}">
 									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Status Name</h4>
 								</cc-option>
 							</cc-options>
@@ -88,26 +88,26 @@
 					</div>
 				</div>
 				
-                <input type="text" name="name" id="name" placeholder="Title" data-pass_id="form-fields" class="floating-label">
+                <input type="text" name="name" id="name" placeholder="Title" pass_id="form-fields" class="floating-label">
 
                 <input type="text" name="description" id="description" placeholder="Description" class="floating-label">
             
-                <input type="date" class="floating-label" placeholder="Start Date" name="start_date" id="start_date" data-pass_value_id="start_date">
+                <input type="date" class="floating-label" placeholder="Start Date" name="start_date" id="start_date" pass-value_id="start_date">
 
-                <input type="time" class="floating-label" placeholder="Start Time" name="start_time" id="start_time" data-pass_id="form-fields" data-pass_value_id="start_time">
+                <input type="time" class="floating-label" placeholder="Start Time" name="start_time" id="start_time" pass_id="form-fields" pass-value_id="start_time">
 
-                <input type="date" class="floating-label" placeholder="End Date" name="end_date" id="end_date" data-pass_value_id="end_date">
+                <input type="date" class="floating-label" placeholder="End Date" name="end_date" id="end_date" pass-value_id="end_date">
 
-                <input type="time" class="floating-label" placeholder="End Time" name="end_time" id="end_time" data-pass_value_id="end_time">
+                <input type="time" class="floating-label" placeholder="End Time" name="end_time" id="end_time" pass-value_id="end_time">
 
                 <div class="padding-top:10px">
-                    <input type="checkbox" placeholder="Time" name="allDay" id="allDayCheckbox" data-pass_value_id="allDay">
+                    <input type="checkbox" placeholder="Time" name="allDay" id="allDayCheckbox" pass-value_id="allDay">
                     <label class="padding-left:1rem" for="allDayCheckbox"> All Day</label>
                 </div>
 				<cocreate-select class="sortable floating-label" name="related_to" document_id="" multiple placeholder="Related To:">
-					<input placeholder="Search" data-template_id="related_to">
-					<cc-options data-fetch_collection="module_activities" data-template_id="related_to" class="overflow:auto">
-						<cc-option class="template display:flex padding:5px" data-template_id="related_to" value="{{data._id}}">
+					<input placeholder="Search" template_id="related_to">
+					<cc-options fetch-collection="module_activities" template_id="related_to" class="overflow:auto">
+						<cc-option class="template display:flex padding:5px" template_id="related_to" value="{{data._id}}">
 							<div class="display:flex justify-content:center width:25px">
 								<span collection="modules" document_id="{{data.module_id}}" name="icon"></span>
 							</div>
@@ -120,12 +120,12 @@
 				</cocreate-select>
 				
 				<cocreate-select class="sortable floating-label" name="team" document_id="" multiple placeholder="Team">
-					<input placeholder="Search" data-template_id="team">
-					<cc-options data-fetch_collection="users" data-template_id="team" class="overflow:auto">
-						<cc-option class="template display:flex padding:5px" data-template_id="team" value="{{data._id}}">
+					<input placeholder="Search" template_id="team">
+					<cc-options fetch-collection="users" template_id="team" class="overflow:auto">
+						<cc-option class="template display:flex padding:5px" template_id="team" value="{{data._id}}">
 							<div class="display:flex justify-content:center">
 					            <div class="avatar-wrapper margin:5px">
-					                <a class="avatar round" target="modal" href="../users/profile.html" data-modal_width="300px"  data-modal_height="375px"  data-modal_color="#229954">
+					                <a class="avatar round" target="modal" href="../users/profile.html" modal-width="300px"  modal-height="375px"  modal-color="#229954">
 					                    <span collection="{{collection}}" document_id="{{data._id}}" name="name" class="avatar-name"></span>
 					                    <span class="avatar-image">
 					                        <img collection="users" document_id="{{collection}}" name="avatar" onerror="this.style.display='none'" width="40px"/>
@@ -142,7 +142,7 @@
 					</cc-options>
 				</cocreate-select>
 				
-				<button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
+				<button actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>
 				</button>
 

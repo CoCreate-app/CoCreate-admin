@@ -37,10 +37,10 @@
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
-                    <a target="modal" href="../modules/form.html" data-modal_width="320px">
+                    <a target="modal" href="../modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
-                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
-                        <div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
+                        <div pass_id="datatable" pass-filter-value="" pass_to="module_id"></div>
                     </a>
                 </li>
 
@@ -48,7 +48,7 @@
                 <li class="margin-right:15px">
                     <a target="modal" href="../code-editor/index.html">
                         <i class="fas fa-code"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
                 </li>
 
@@ -56,31 +56,31 @@
                 <li class="margin-right:15px">
                     <a target="modal" href="../builder/index.html">
                         <i class="fas fa-palette"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
                 </li>
 
                 <!-- Datatable Controls -->
                 <li class="margin-right:15px">
-                    <a data-actions="deleteDocuments" collection="" data-pass_id="datatable" data-template_id="datatable"><i class="far fa-trash-alt"></i></a>
+                    <a actions="deleteDocuments" collection="" pass_id="datatable" template_id="datatable"><i class="far fa-trash-alt"></i></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a data-btn_type="column-visibility" data-template_id="datatable"><i class="far fa-eye"></i></a>
+                    <a data-btn_type="column-visibility" template_id="datatable"><i class="far fa-eye"></i></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a data-export_type="csv" data-template_id="datatable"><i class="fas fa-file-csv"></i></a>
+                    <a data-export_type="csv" template_id="datatable"><i class="fas fa-file-csv"></i></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a data-export_type="json" data-template_id="datatable"><i class="fas fa-file-download"></i></a>
+                    <a data-export_type="json" template_id="datatable"><i class="fas fa-file-download"></i></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a data-import="true" data-template_id="datatable"><i class="fas fa-file-upload"></i></a>
+                    <a data-import="true" template_id="datatable"><i class="fas fa-file-upload"></i></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a data-btn_type="copy" data-template_id="datatable"><i class="far fa-copy"></i></a>
+                    <a data-btn_type="copy" template_id="datatable"><i class="far fa-copy"></i></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a data-btn_type="print" data-template_id="datatable"><i class="fas fa-print"></i></a>
+                    <a data-btn_type="print" template_id="datatable"><i class="fas fa-print"></i></a>
                 </li>
 
             </ul>
@@ -91,22 +91,22 @@
 
         <!-- Main Content -->
         <main data-main_content_id="content" class="padding:5px">
-            <div class="display:flex flex-wrap:wrap" data-template_id="datatable" data-fetch_collection="" data-filter_name="module_id" data-filter_value="" data-order_by="name" data-order_type="asc" data-pass_id="datatable">
-                <div class="card template flex-grow:1 width:250px max-width:350px margin:10px box-shadow-hover" data-template_id="datatable" document_id="{{data._id}}">
+            <div class="display:flex flex-wrap:wrap" template_id="datatable" fetch-collection="" filter-name="module_id" filter-value="" order-by="name" order-type="asc" pass_id="datatable">
+                <div class="card template flex-grow:1 width:250px max-width:350px margin:10px box-shadow-hover" template_id="datatable" document_id="{{data._id}}">
                     <div class="position:relative">
                         <img href="" collection="{{collection}}" document_id="{{data._id}}" name="image" src="../CoCreate-website-preview.png" width="100%">
                         <button class="position:absolute bg:blue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" class="color:white">
                             <a target="modal" href="../builder/index.html" >
                                 <i class="fas fa-palette"></i>
-                                <div data-pass_collection="files" data-pass_document_id="{{data.home}}" data-pass_name="src" data-pass_to="builder"></div>                          
+                                <div pass-collection="files" pass-document_id="{{data.home}}" pass-name="src" pass_to="builder"></div>                          
                             </a>
                         </button>
                         <div class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4 box-sizing:border-box">
-                            <a target="modal" href="./form" data-modal_width="320px" data-modal_color="#229954">
+                            <a target="modal" href="./form" modal-width="320px" modal-color="#229954">
                                 <span collection="{{collection}}" document_id="{{data._id}}" name="name" class="color:white">Site Name</span>
-								<div data-pass_collection="{{collection}}" data-pass_document_id="{{data._id}}" data-pass_to="form-fields"></div>
-								<div data-pass_filter_value="{{data.module_id}}" data-pass_to="module_id"></div>
-                                <div data-pass_fetch_collection="{{collection}}" data-pass_filter_name="website_id" data-pass_filter_value="{{data._id}}" data-pass_to="website_id"></div>                  
+								<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
+								<div pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
+                                <div pass-fetch_collection="{{collection}}" pass-filter-name="website_id" pass-filter-value="{{data._id}}" pass_to="website_id"></div>                  
                             </a>
                         </div>
                     </div>
@@ -116,10 +116,10 @@
                 </div>
             </div>
         </main>
-        <button target="modal" href="./form.html" data-modal_width="320px" data-modal_color="#229954" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:8">
+        <button target="modal" href="./form.html" modal-width="320px" modal-color="#229954" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:8">
 			<i class="fa fa-plus"></i>
-        	<div data-pass_id="datatable" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="form-fields"></div>
-        	<div data-pass_id="module_id" data-pass_value="" data-pass_to="module_id"></div>
+        	<div pass_id="datatable" pass-collection="" pass-document_id="" pass-name="" pass_to="form-fields"></div>
+        	<div pass_id="module_id" pass-value="" pass_to="module_id"></div>
         </button>
 
         <!--CoCreateJS-->

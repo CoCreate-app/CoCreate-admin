@@ -30,10 +30,10 @@
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
-                    <a target="modal" href="../modules/form.html" data-modal_width="320px">
+                    <a target="modal" href="../modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
-                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
-                        <div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
+                        <div pass_id="datatable" pass-filter-value="" pass_to="module_id"></div>
                     </a>
                 </li>
 
@@ -41,7 +41,7 @@
                 <li class="margin-right:15px">
                     <a target="modal" href="../code-editor/index.html">
                         <i class="fas fa-code"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
                 </li>
 
@@ -49,13 +49,13 @@
                 <li class="margin-right:15px">
                     <a target="modal" href="../builder/index.html">
                         <i class="fas fa-palette"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
                 </li>
 
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
-                    <a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                    <a actions="deleteDocument" collection="" document_id="" pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
                 </li>
@@ -67,10 +67,10 @@
 
             <div id="board" class="display:flex overflow:overlay height:90vh">
 
-                <div class="display:flex flex-wrap:nowrap flex-direction:row sortable" data-group_name="stage" data-fetch_collection="" data-filter_name="module_id" data-filter_value="" data-filter_operator="$eq" data-order_by="stage_position" data-order_type="asc" data-template_id="stage" data-render_id="stage" data-pass_id="datatable" data-droppable="true">
+                <div class="display:flex flex-wrap:nowrap flex-direction:row sortable" data-group_name="stage" fetch-collection="" filter-name="module_id" filter-value="" filter-operator="$eq" order-by="stage_position" order-type="asc" template_id="stage" render_id="stage" pass_id="datatable" data-droppable="true">
 
                     <!-- Stage Column -->
-                    <div class="template margin:10px background:whitesmoke max-width:300px" data-template_id="stage" data-element_id="{{stage._id}}" document_id="{{stage._id}}">
+                    <div class="template margin:10px background:whitesmoke max-width:300px" template_id="stage" data-element_id="{{stage._id}}" document_id="{{stage._id}}">
                         <div class="margin:15px font-size:18px color-dark-gray">
                             <span class="display:inline-block">
                               <input class="input_field"
@@ -81,16 +81,16 @@
                                 placeholder="Stage">
                             </span>
                             <span class="float:right display:inline-block">
-                              <a data-clone_id="stage" data-actions="deleteDocument" collection="{{collection}}" document_id="{{stage._id}}"><i class="fas fa-times"></i></a>
+                              <a data-clone_id="stage" actions="deleteDocument" collection="{{collection}}" document_id="{{stage._id}}"><i class="fas fa-times"></i></a>
                             </span>
                         </div>
                         <div class="height:70vh padding:10px overflow:auto">
 
-                            <div class="display:flex flex-direction:column height:100% sortable" data-group_name="card" data-fetch_collection="{{collection}}" data-filter_name="stage" data-filter_value="{{stage._id}}" data-filter_operator="$eq" data-fetch_count="" data-order_by="stage-index_position"
-                                data-order_type="asc" data-template_id="{{stage._id}}">
+                            <div class="display:flex flex-direction:column height:100% sortable" data-group_name="card" fetch-collection="{{collection}}" filter-name="stage" filter-value="{{stage._id}}" filter-operator="$eq" data-fetch_count="" order-by="stage-index_position"
+                                order-type="asc" template_id="{{stage._id}}">
 
                                 <!-- Card -->
-                                <div class="template card margin-bottom:10px padding:10px background:white" data-template_id="{{stage._id}}" data-value="{{data._id}}" document_id="{{data._id}}">
+                                <div class="template card margin-bottom:10px padding:10px background:white" template_id="{{stage._id}}" data-value="{{data._id}}" document_id="{{data._id}}">
                                     <div class="width:100%">
                                         <img collection="{{collection}}" document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
                                     </div>
@@ -114,7 +114,7 @@
 
                                             <!-- Avatar -->
                                             <div class="avatar-wrapper margin:5px">
-                                                <a class="avatar round" target="modal" href="./users/profile.html" data-modal_width="300px" data-modal_height="375px"  data-modal_color="#229954">
+                                                <a class="avatar round" target="modal" href="./users/profile.html" modal-width="300px" modal-height="375px"  modal-color="#229954">
                                                     <span collection="users" document_id="" name="name" class="avatar-name"></span>
                                                     <span class="avatar-image">
                                                         <img collection="users" document_id="" name="avatar" onerror="this.style.display='none'" width="40px"/>
@@ -139,7 +139,7 @@
                         <div class="margin:0px_15px padding:15px_0px">
                             <form collection="{{collection}}">
                                 <input type="hidden" document_id="" name="stage" value="{{stage._id}}" />
-                                <a data-actions="createDocument"><i class="fas fa-plus"></i> New Card</a>
+                                <a actions="createDocument"><i class="fas fa-plus"></i> New Card</a>
                             </form>
                         </div>
                     </div>
@@ -148,8 +148,8 @@
             </div>
 
             <form>
-                <input type="hidden" data-pass_id="module_id" collection="" document_id="" name="module_id"/>
-                <button data-actions="createDocument" class="position:fixed bottom:15px right:15px background:dodgerblue border-radius:50% grow-hover">
+                <input type="hidden" pass_id="module_id" collection="" document_id="" name="module_id"/>
+                <button actions="createDocument" class="position:fixed bottom:15px right:15px background:dodgerblue border-radius:50% grow-hover">
                     <i class="fas fa-plus"></i>
                	</button>
             </form>

@@ -28,10 +28,10 @@
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
-                    <a target="modal" href="../modules/form.html" data-modal_width="320px">
+                    <a target="modal" href="../modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
-                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
-                        <div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
+                        <div pass_id="datatable" pass-filter-value="" pass_to="module_id"></div>
                     </a>
                 </li>
 
@@ -39,7 +39,7 @@
                 <li class="margin-right:15px">
                     <a target="modal" href="../code-editor/index.html">
                         <i class="fas fa-code"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
                 </li>
 
@@ -47,13 +47,13 @@
                 <li class="margin-right:15px">
                     <a target="modal" href="../builder/index.html">
                         <i class="fas fa-palette"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
                 </li>
 
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
-                    <a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
+                    <a actions="deleteDocument" collection="" document_id="" pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
                 </li>
@@ -86,44 +86,44 @@
 
                 <!-- CoCreate Select field multiple documents -->
                 <div class="select--field sortable floating-label" name="contact" collection="module_activities" document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Contact">
-                    <input class="search-input template-search" placeholder="Search" data-template_id="idEngine1">
+                    <input class="search-input template-search" placeholder="Search" template_id="idEngine1">
                     <!-- Fetches and displays results using template -->
-                    <ul data-fetch_collection="users" data-template_id="option1" data-pass_to="me1234" id="idEngine1" class="template-wrapper options  overflow:overlay">
+                    <ul fetch-collection="users" template_id="option1" pass_to="me1234" id="idEngine1" class="template-wrapper options  overflow:overlay">
                         <!-- template -->
-                        <li class="option template" id="option1" data-pass_id="me1234">
-                            <h3 collection="users" document_id="" name="name" data-pass_id="me1234">user name</h3>
-                            <h5 collection="users" document_id="" name="email" data-pass_id="me1234"></h5>
+                        <li class="option template" id="option1" pass_id="me1234">
+                            <h3 collection="users" document_id="" name="name" pass_id="me1234">user name</h3>
+                            <h5 collection="users" document_id="" name="email" pass_id="me1234"></h5>
                         </li>
                     </ul>
                 </div>
 
                 <!-- CoCreate Select field multiple documents -->
                 <div class="select--field sortable floating-label" name="company" collection="module_activities" document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Company">
-                    <input class="search-input template-search" placeholder="Search" data-template_id="idEngine1">
+                    <input class="search-input template-search" placeholder="Search" template_id="idEngine1">
                     <!-- Fetches and displays results using template -->
-                    <ul data-fetch_collection="users" data-template_id="option1" data-pass_to="me1234" id="idEngine1" class="template-wrapper options  overflow:overlay">
+                    <ul fetch-collection="users" template_id="option1" pass_to="me1234" id="idEngine1" class="template-wrapper options  overflow:overlay">
                         <!-- template -->
-                        <li class="option template" id="option1" data-pass_id="me1234">
-                            <h3 collection="users" document_id="" name="name" data-pass_id="me1234">user name</h3>
-                            <h5 collection="users" document_id="" name="email" data-pass_id="me1234"></h5>
+                        <li class="option template" id="option1" pass_id="me1234">
+                            <h3 collection="users" document_id="" name="name" pass_id="me1234">user name</h3>
+                            <h5 collection="users" document_id="" name="email" pass_id="me1234"></h5>
                         </li>
                     </ul>
                 </div>
 
                 <!-- CoCreate Select field multiple documents -->
                 <div class="select--field sortable floating-label" name="related_to" collection="module_activities" document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Related to">
-                    <input class="search-input template-search" placeholder="Search" data-template_id="idEngine1">
+                    <input class="search-input template-search" placeholder="Search" template_id="idEngine1">
                     <!-- Fetches and displays results using template -->
-                    <ul data-fetch_collection="users" data-template_id="option1" data-pass_to="me1234" id="idEngine1" class="template-wrapper options  overflow:overlay">
+                    <ul fetch-collection="users" template_id="option1" pass_to="me1234" id="idEngine1" class="template-wrapper options  overflow:overlay">
                         <!-- template -->
-                        <li class="option template" id="option1" data-pass_id="me1234">
-                            <h3 collection="users" document_id="" name="name" data-pass_id="me1234">user name</h3>
-                            <h5 collection="users" document_id="" name="email" data-pass_id="me1234"></h5>
+                        <li class="option template" id="option1" pass_id="me1234">
+                            <h3 collection="users" document_id="" name="name" pass_id="me1234">user name</h3>
+                            <h5 collection="users" document_id="" name="email" pass_id="me1234"></h5>
                         </li>
                     </ul>
                 </div>
 
-				<button data-actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
+				<button actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>
 				</button>
             </form>

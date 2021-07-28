@@ -48,10 +48,10 @@
 
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
-					<a target="modal" href="../modules/form.html" data-modal_width="320px">
+					<a target="modal" href="../modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
-                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
-                        <div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
+                        <div pass_id="datatable" pass-filter-value="" pass_to="module_id"></div>
                     </a>
 				</li>
 
@@ -59,7 +59,7 @@
 				<li class="margin-right:15px">
 					<a target="modal" href="../code-editor/index.html">
                         <i class="fas fa-code"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
 				</li>
 
@@ -67,31 +67,31 @@
 				<li class="margin-right:15px">
 					<a target="modal" href="../builder/index.html">
                         <i class="fas fa-palette"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
 				</li>
 
 				<!-- Datatable Controls -->
 				<li class="margin-right:15px">
-					<a data-actions="deleteDocuments" collection="" data-pass_id="datatable" data-template_id="datatable"><i class="far fa-trash-alt"></i></a>
+					<a actions="deleteDocuments" collection="" pass_id="datatable" template_id="datatable"><i class="far fa-trash-alt"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-btn_type="column-visibility" data-template_id="datatable"><i class="far fa-eye"></i></a>
+					<a data-btn_type="column-visibility" template_id="datatable"><i class="far fa-eye"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-export_type="csv" data-template_id="datatable"><i class="fas fa-file-csv"></i></a>
+					<a data-export_type="csv" template_id="datatable"><i class="fas fa-file-csv"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-export_type="json" data-template_id="datatable"><i class="fas fa-file-download"></i></a>
+					<a data-export_type="json" template_id="datatable"><i class="fas fa-file-download"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-import="true" data-template_id="datatable"><i class="fas fa-file-upload"></i></a>
+					<a data-import="true" template_id="datatable"><i class="fas fa-file-upload"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-btn_type="copy" data-template_id="datatable"><i class="far fa-copy"></i></a>
+					<a data-btn_type="copy" template_id="datatable"><i class="far fa-copy"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-btn_type="print" data-template_id="datatable"><i class="fas fa-print"></i></a>
+					<a data-btn_type="print" template_id="datatable"><i class="fas fa-print"></i></a>
 				</li>
 
 			</ul>
@@ -102,8 +102,8 @@
 
 		<!-- Main Content -->
 		<div data-main_content_id="content" class="padding:5px">
-			<div class="domEditor main-height" name='tasklists1' collection="test" document_id="5f075add24d24a175fca54e4" data-pass_id="me1234">
-				<!--<div class="domEditor main-height" name='tasklists' collection="test" data-pass_id="me1234" >-->
+			<div class="domEditor main-height" name='tasklists1' collection="test" document_id="5f075add24d24a175fca54e4" pass_id="me1234">
+				<!--<div class="domEditor main-height" name='tasklists' collection="test" pass_id="me1234" >-->
 				<!--<div class="Sortable display:flex align-items:flex-start isotope-grid" data-group_name="tasklist" -->
 				<div class="" data-group_name="tasklist" data-droppable="true" data-element_id="tasklist_container">
 
@@ -111,7 +111,7 @@
 					<div id="tasklist" class="card template margin:5px border-radius:2px grid-item width:48%@xs width:48%@sm width:24%@md" data-draggable="true">
 						<div class="margin:15px font-size:18px color-dark-gray">
 							<span class="display:inline-block">
-					<input collection="module_activities" data-pass_id="form-fields" data-module_activity_id="" name="clone-name" id="stage-name" class="input_field" placeholder="Tasklist">
+					<input collection="module_activities" pass_id="form-fields" data-module_activity_id="" name="clone-name" id="stage-name" class="input_field" placeholder="Tasklist">
 				  </span>
 							<span class="float:right display:inline-block"><a data-clone_id="tasklist" class="deleteBtn reset-layout"><i class="fas fa-times"></i></a></span>
 						</div>

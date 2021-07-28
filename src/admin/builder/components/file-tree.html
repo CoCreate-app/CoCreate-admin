@@ -2,17 +2,17 @@
     <link rel="stylesheet" href="../demo/style.css" type="text/css" />
     <link rel="stylesheet" href="./file.css" type="text/css" />
     
-            <div class="margin-left:10px sortable" data-template_id="{{data._id}}" data-fetch_collection="folders" data-filter_name="_id" data-filter_value="{{data._id}}" data-filter_operator="$eq" data-order_by="name" data-order_type="asc" data-fetch_count="6" data-render_id="folder">
+            <div class="margin-left:10px sortable" template_id="{{data._id}}" fetch-collection="folders" filter-name="_id" filter-value="{{data._id}}" filter-operator="$eq" order-by="name" order-type="asc" data-fetch_count="6" render_id="folder">
                  <!--Folder Template -->
-                <div class="template padding:5px" data-template_id="{{data._id}}" document_id="{{folder._id}}" data-render_key="folder" data-render_array="folder.data">
+                <div class="template padding:5px" template_id="{{data._id}}" document_id="{{folder._id}}" render-key="folder" render-array="folder.data">
                     <span class=""><i class="fa fa-caret-down" data-toggle="fa-caret-right, fa-caret-down"></i></span>
                     <span class="margin-left:5px" collection="folders" document_id="{{folder._id}}" name="name">Folder name</span>
                     <div class="margin-left:10px" collection="component" document_id="" name="file-tree"></div>
                 </div>
             </div>
-            <div class="margin-left:10px sortable" data-template_id="file" data-fetch_collection="files" data-filter_name="folder_id" data-filter_value="folder_id" data-filter_operator="$eq" data-order_by="name" data-fetch_count="6">
+            <div class="margin-left:10px sortable" template_id="file" fetch-collection="files" filter-name="folder_id" filter-value="folder_id" filter-operator="$eq" order-by="name" data-fetch_count="6">
                  <!--File Template -->
-                <div class="template padding:5px" data-template_id="file">
+                <div class="template padding:5px" template_id="file">
                     <span class=""><i class="fab fa-html5"></i></span>
                     <span class="margin-left:5px" collection="files" document_id="{{data._id}}" name="name"></span>
                 </div>

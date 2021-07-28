@@ -6,29 +6,29 @@
             <div id="blocks" class="block-panel background:silver active" >
                <!-- Search -->
     			<!--<form class="padding:5px">-->
-    			<!--	<input type="text" class="floating-label" data-pass_value_to="results">-->
+    			<!--	<input type="text" class="floating-label" pass-value_to="results">-->
     			<!--	<span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">-->
-    			<!--		<a target="modal" data-pass_to="render" collection="website-pages" document_id="" data-pass_name="src" data-modal_width="900px" data-modal_color="#229954">-->
+    			<!--		<a target="modal" pass_to="render" collection="website-pages" document_id="" pass-name="src" modal-width="900px" modal-color="#229954">-->
     			<!--			<i class="fas fa-search"></i>-->
     			<!--		</a>-->
     			<!--	</span>-->
     			<!--</form>-->
                 
                 <!-- fetch category -->
-            <!--    <div id="category" data-template_id="category" data-fetch_collection="blocks" data-filter_name="menu-position" data-filter_value="0" data-filter_value_type="number" data-filter_operator="$ne" data-order_by="menu-position" data-order_type="asc">-->
+            <!--    <div id="category" template_id="category" fetch-collection="blocks" filter-name="menu-position" filter-value="0" filter-value_type="number" filter-operator="$ne" order-by="menu-position" order-type="asc">-->
                     <!-- category template -->
-            <!--        <div class="templat" data-template_id="category">-->
+            <!--        <div class="templat" template_id="category">-->
             <!--            <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".{{data.name}}" data-hide=".{{data.name}}">-->
             <!--                <span class="{{data.name}} hidden"><i class="fas fa-plus"></i></span>-->
             <!--                <span class="{{data.name}}"><i class="fas fa-minus"></i></span>-->
             <!--                <span collection="{{collection}}" document_id="{{data._id}}" name="name">Label</span>-->
             <!--            </div>-->
                        <!-- fetch blocks -->
-            <!--            <div class="display:flex flex-wrap:wrap justify-content:center text-align:center {{data.name}}" data-template_id="blocks-{{data._id}}" data-fetch_collection="blocks" data-filter_name="category" data-filter_value="{{data._name}}" data-filter_operator="$ne" data-order_by="menu-position" data-order_type="asc">-->
+            <!--            <div class="display:flex flex-wrap:wrap justify-content:center text-align:center {{data.name}}" template_id="blocks-{{data._id}}" fetch-collection="blocks" filter-name="category" filter-value="{{data._name}}" filter-operator="$ne" order-by="menu-position" order-type="asc">-->
                             <!-- block template -->
-            <!--                <div class="card flex-grow:1 width:70px height:70px margin:5px padding:5px template" data-template_id="blocks-{{data._id}}" document_id="{{data._id}}" data-hover="display:block" data-hover_target="#editblock">-->
+            <!--                <div class="card flex-grow:1 width:70px height:70px margin:5px padding:5px template" template_id="blocks-{{data._id}}" document_id="{{data._id}}" data-hover="display:block" data-hover_target="#editblock">-->
             <!--                    <div id="editblock" class="position:absolute top:5 right:5 font-size:11px display:none">-->
-            <!--                        <a target="modal" href="block-form.html" data-pass_collection="blocks" data-pass_document_id="{{data._id}}" data-pass_to="form-fields" data-modal_width="320px">-->
+            <!--                        <a target="modal" href="block-form.html" pass-collection="blocks" pass-document_id="{{data._id}}" pass_to="form-fields" modal-width="320px">-->
             <!--                            <i class="fas fa-pencil-alt"></i>-->
             <!--                        </a>-->
             <!--                    </div>-->
@@ -48,9 +48,9 @@
             <div class="background:gainsboro width:250px">
                <!-- Search -->
     			<form class="padding:5px">
-    				<input type="text" class="floating-label" data-pass_value_to="results">
+    				<input type="text" class="floating-label" pass-value_to="results">
     				<span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
-    					<a target="modal" data-pass_to="render" collection="website-pages" document_id="" data-pass_name="src" data-modal_width="900px" data-modal_color="#229954">
+    					<a target="modal" pass_to="render" collection="website-pages" document_id="" pass-name="src" modal-width="900px" modal-color="#229954">
     						<i class="fas fa-search"></i>
     					</a>
     				</span>

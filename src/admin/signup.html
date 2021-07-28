@@ -142,11 +142,11 @@
 	
 	                           <!-- Industry select -->
 	                            <cocreate-select class="floating-label" collection="organizations" name="industry" placeholder="Industry" realtime="false" save="false">
-	  					          	  <input class="template-search" placeholder="Search" data-template_id="industries">
-									<cc-options data-fetch_collection="industries" 
-									    data-template_id="industries"
+	  					          	  <input class="template-search" placeholder="Search" template_id="industries">
+									<cc-options fetch-collection="industries" 
+									    template_id="industries"
 									    class="options overflow:overlay">
-										<cc-option class="template" data-template_id="industries" value="{{data._id}}">
+										<cc-option class="template" template_id="industries" value="{{data._id}}">
 											<h4 collection="industries" document_id="{{data._id}}" name="name" realtime="false">industry name</h4>
 										</cc-option>
 									</cc-options>
@@ -231,7 +231,7 @@
 									name="current_org">
 									
 								<!-- Send Email -->
-								<div data-template_id="renderKey">
+								<div template_id="renderKey">
 									<input type="hidden" placeholder="to email" data-sendgrid="sendEmail.to" data-get_value="user-email">
 								    <input type="hidden" placeholder="from email" data-sendgrid="sendEmail.from" value="testing@cocreate.app">
 								    <input type="hidden" placeholder="subject" data-sendgrid="sendEmail.subject" value="Welcome, {{data.name}} — Please confirm your email">
@@ -239,8 +239,8 @@
 
 									<div class="display:flex">
 										<button type="button" class="outline white-blue margin-right:15px" data-show='#step4,#ava4' data-hide='#step5,#ava5'>Previous</button>
-										<!--<button type="button" class="outline red-white " data-actions="saveDocument, createOrgNew, createUserNew, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">-->
-										<button type="button" class="outline red-white " data-actions="createOrg, createUser, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">
+										<!--<button type="button" class="outline red-white " actions="saveDocument, createOrgNew, createUserNew, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">-->
+										<button type="button" class="outline red-white " actions="createOrg, createUser, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">
 											Launch
 										</button>
 									</div>
@@ -271,7 +271,7 @@
 						<form realtime="false" collection="users">
 							<input type="email" name='email' placeholder="Email" data-get_value="email" class="floating-label">
 							<input type="password" name='password' placeholder="Password" data-get_value="password" class="floating-label">
-							<button id="login" data-actions="login" href="index.html" class="outline">Login</button>
+							<button id="login" actions="login" href="index.html" class="outline">Login</button>
 						</form>							
 					</div>
 				</div>

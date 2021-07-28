@@ -68,10 +68,10 @@
 
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
-					<a target="modal" href="../modules/form.html" data-modal_width="320px">
+					<a target="modal" href="../modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
-                        <div data-pass_id="module-form" data-pass_collection="modules" data-pass_document_id="" data-pass_to="form-fields"></div>
-                        <div data-pass_id="datatable" data-pass_filter_value="" data-pass_to="module_id"></div>
+                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
+                        <div pass_id="datatable" pass-filter-value="" pass_to="module_id"></div>
                     </a>
 				</li>
 
@@ -79,7 +79,7 @@
 				<li class="margin-right:15px">
 					<a target="modal" href="../code-editor/index.html">
                         <i class="fas fa-code"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="code-editor"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
 				</li>
 
@@ -87,13 +87,13 @@
 				<li class="margin-right:15px">
 					<a target="modal" href="../builder/index.html">
                         <i class="fas fa-palette"></i>
-                        <div data-pass_id="render" data-pass_collection="" data-pass_document_id="" data-pass_name="" data-pass_to="builder"></div>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
 				</li>
 
 				<!-- deleteDocument-->
 				<li class="margin-right:15px">
-					<a data-actions="deleteDocument" collection="" document_id="" data-pass_id="form-fields" class="btn-modal-close">
+					<a actions="deleteDocument" collection="" document_id="" pass_id="form-fields" class="btn-modal-close">
                         <i class="far fa-trash-alt"></i>
                     </a>
 				</li>
@@ -102,46 +102,46 @@
 
 		<!-- Main Content -->
 		<main class="padding:10px" data-main_content_id="content">
-			<div class="domEditor main-height" name='cards1' collection="test" data-pass_id="me1234">
+			<div class="domEditor main-height" name='cards1' collection="test" pass_id="me1234">
 
-				<div class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))" data-group_name="dashboard" data-fetch_collection="module_activities" data-fetch_count="20" data-template_id="card" data-droppable="true">
+				<div class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))" data-group_name="dashboard" fetch-collection="module_activities" data-fetch_count="20" template_id="card" data-droppable="true">
 
-					<div data-template_id="card" class="card template resize padding:20px align-items:center grid-column-end:span_3 grid-row-end:span_2" data-element_id="card">
+					<div template_id="card" class="card template resize padding:20px align-items:center grid-column-end:span_3 grid-row-end:span_2" data-element_id="card">
 						<canvas class="cocreate-chart" chart-type="bar" chart-options="" chart-labels="January, February, March, April, May, June, July" chart-title="Combine Charts">
                             <div class="cocreate-chart-dataset" chart-dataset_type="line">
-                                <div data-fetch_collection="chart" data-fetch_name="Jan" data-calculation="sum">
-                                    <div data-filter_name="Jan" data-filter_value="0, 10" data-value_type="number" data-filter_operator="$range"></div>
+                                <div fetch-collection="chart" fetch-name="Jan" data-calculation="sum">
+                                    <div filter-name="Jan" filter-value="0, 10" data-value_type="number" filter-operator="$range"></div>
                                 </div>
-                                <div data-fetch_collection="chart" data-fetch_name="Feb">
-                                    <div data-filter_name="permission" data-filter_value="read" data-filter_operator="$nin"></div>
-                                    <div data-filter_name="type" data-filter_value="leader" data-filter_operator="$in"></div>
+                                <div fetch-collection="chart" fetch-name="Feb">
+                                    <div filter-name="permission" filter-value="read" filter-operator="$nin"></div>
+                                    <div filter-name="type" filter-value="leader" filter-operator="$in"></div>
                                 </div>
-                                <div data-fetch_collection="chart" data-fetch_name="Mar">
-                                    <div data-filter_name="Mar" data-filter_value="-7" data-filter_operator="$eq" data-value_type="number"></div>
+                                <div fetch-collection="chart" fetch-name="Mar">
+                                    <div filter-name="Mar" filter-value="-7" filter-operator="$eq" data-value_type="number"></div>
                                 </div>
-                                <div data-fetch_collection="chart" data-fetch_name="Apr"></div>
-                                <div data-fetch_collection="chart" data-fetch_name="May"></div>
-                                <div data-fetch_collection="chart" data-fetch_name="Jun"></div>
-                                <div data-fetch_collection="chart" data-fetch_name="Jul"></div>
+                                <div fetch-collection="chart" fetch-name="Apr"></div>
+                                <div fetch-collection="chart" fetch-name="May"></div>
+                                <div fetch-collection="chart" fetch-name="Jun"></div>
+                                <div fetch-collection="chart" fetch-name="Jul"></div>
                             </div>
                             <div class="cocreate-chart-dataset" chart-dataset_label="Average Chart" chart-dataset_type="line">
-                                <div data-fetch_collection="chart" data-fetch_name="Jan" data-calculation="average"></div>
-                                <div data-fetch_collection="chart" data-fetch_name="Feb" data-calculation="average"></div>
-                                <div data-fetch_collection="chart" data-fetch_name="Mar" data-calculation="average"></div>
-                                <div data-fetch_collection="chart" data-fetch_name="Apr" data-calculation="average"></div>
-                                <div data-fetch_collection="chart" data-fetch_name="May" data-calculation="average"></div>
-                                <div data-fetch_collection="chart" data-fetch_name="Jun" data-calculation="average"></div>
-                                <div data-fetch_collection="chart" data-fetch_name="Jul" data-calculation="average"></div>
+                                <div fetch-collection="chart" fetch-name="Jan" data-calculation="average"></div>
+                                <div fetch-collection="chart" fetch-name="Feb" data-calculation="average"></div>
+                                <div fetch-collection="chart" fetch-name="Mar" data-calculation="average"></div>
+                                <div fetch-collection="chart" fetch-name="Apr" data-calculation="average"></div>
+                                <div fetch-collection="chart" fetch-name="May" data-calculation="average"></div>
+                                <div fetch-collection="chart" fetch-name="Jun" data-calculation="average"></div>
+                                <div fetch-collection="chart" fetch-name="Jul" data-calculation="average"></div>
                             </div>
                             
                             <div class="cocreate-chart-dataset" chart-dataset_label="Data Count" chart-dataset_type="">
-                              <div data-fetch_collection="chart" data-fetch_name="Jan" data-calculation="count"></div>
-                              <div data-fetch_collection="chart" data-fetch_name="Feb" data-calculation="count"></div>
-                              <div data-fetch_collection="chart" data-fetch_name="Mar" data-calculation="count"></div>
-                              <div data-fetch_collection="chart" data-fetch_name="Apr" data-calculation="count"></div>
-                              <div data-fetch_collection="chart" data-fetch_name="May" data-calculation="count"></div>
-                              <div data-fetch_collection="chart" data-fetch_name="Jun" data-calculation="count"></div>
-                              <div data-fetch_collection="chart" data-fetch_name="Jul" data-calculation="count"></div>
+                              <div fetch-collection="chart" fetch-name="Jan" data-calculation="count"></div>
+                              <div fetch-collection="chart" fetch-name="Feb" data-calculation="count"></div>
+                              <div fetch-collection="chart" fetch-name="Mar" data-calculation="count"></div>
+                              <div fetch-collection="chart" fetch-name="Apr" data-calculation="count"></div>
+                              <div fetch-collection="chart" fetch-name="May" data-calculation="count"></div>
+                              <div fetch-collection="chart" fetch-name="Jun" data-calculation="count"></div>
+                              <div fetch-collection="chart" fetch-name="Jul" data-calculation="count"></div>
                             </div>
                         </canvas>
 						<div data-resize="left"></div>
