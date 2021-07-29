@@ -8,7 +8,7 @@
                 <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#uploader" data-selected_group="left-panels">
                     <!--<a target="modal" href="https://server.cocreate.app/CoCreate-modules/CoCreate-builder/demo/components/uploader.html" pass-collection="files" pass-document_id="" pass-name="src" pass_to="render" modal-width="750px" modal-height="570px" modal-color="#229954">-->
                         <i class="fas fa-cloud-upload-alt"></i>
-                    <!--    <div data-pass-collection="apples" data-pass-document_id="60ac06d5741a03083ab0740f" name='html' pass_to="code-editor"></div>-->
+                    <!--    <div pass-collection="apples" pass-document_id="60ac06d5741a03083ab0740f" name='html' pass_to="code-editor"></div>-->
                     <!--</a>-->
                 </div>
                 <div className="left-tabs" class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#blocks" data-selected_group="left-panels" selected><i class="fas fa-th-large"></i></div>
@@ -114,7 +114,7 @@
                     <div class="padding:5px">
                         <span class=""><i class="fa fa-caret-down" data-toggle="fa-caret-right, fa-caret-down"></i></span>
                         <span class="margin-left:5px" collection="websites" document_id="" name="name">Project name</span>
-                        <div class="margin-left:10px sortable" template_id="folder" fetch-collection="files" filter-name="directory" filter-value="60b450107d36eaa01048ac49" filter-operator="$eq" order-by="name" order-type="asc" data-fetch_count="6" render_id="folder">
+                        <div class="margin-left:10px sortable" template_id="folder" fetch-collection="files" filter-name="directory" filter-value="60b450107d36eaa01048ac49" filter-operator="$eq" order-by="name" order-type="asc" fetch-count="6" render_id="folder">
                              <!--Folder Template -->
                             <div class="template padding:5px" template_id="folder" document_id="{{folder._id}}" render-key="folder" render-array="folder.data">
                                 <span class=""><i class="fa fa-caret-down" data-toggle="fa-caret-right, fa-caret-down"></i></span>
@@ -123,7 +123,7 @@
                                 <div class="domEditor margin-left:10px" collection="component" document_id="60b45db37d36eaa01048ac50" name="html"></div>
                             </div>
                         </div>
-                        <div class="margin-left:10px sortable" template_id="file" fetch-collection="files" filter-name="directory" filter-value="" filter-operator="$eq" order-by="name" data-fetch_count="6">
+                        <div class="margin-left:10px sortable" template_id="file" fetch-collection="files" filter-name="directory" filter-value="" filter-operator="$eq" order-by="name" fetch-count="6">
                              <!--File Template -->
                             <div class="template padding:5px" template_id="file" document_id="{{data._id}}">
                                 <span class="{{data.content-type}}"><i class="fab fa-html5"></i></span>

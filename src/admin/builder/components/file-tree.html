@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="../demo/style.css" type="text/css" />
     <link rel="stylesheet" href="./file.css" type="text/css" />
     
-            <div class="margin-left:10px sortable" template_id="{{data._id}}" fetch-collection="folders" filter-name="_id" filter-value="{{data._id}}" filter-operator="$eq" order-by="name" order-type="asc" data-fetch_count="6" render_id="folder">
+            <div class="margin-left:10px sortable" template_id="{{data._id}}" fetch-collection="folders" filter-name="_id" filter-value="{{data._id}}" filter-operator="$eq" order-by="name" order-type="asc" fetch-count="6" render_id="folder">
                  <!--Folder Template -->
                 <div class="template padding:5px" template_id="{{data._id}}" document_id="{{folder._id}}" render-key="folder" render-array="folder.data">
                     <span class=""><i class="fa fa-caret-down" data-toggle="fa-caret-right, fa-caret-down"></i></span>
@@ -10,7 +10,7 @@
                     <div class="margin-left:10px" collection="component" document_id="" name="file-tree"></div>
                 </div>
             </div>
-            <div class="margin-left:10px sortable" template_id="file" fetch-collection="files" filter-name="folder_id" filter-value="folder_id" filter-operator="$eq" order-by="name" data-fetch_count="6">
+            <div class="margin-left:10px sortable" template_id="file" fetch-collection="files" filter-name="folder_id" filter-value="folder_id" filter-operator="$eq" order-by="name" fetch-count="6">
                  <!--File Template -->
                 <div class="template padding:5px" template_id="file">
                     <span class=""><i class="fab fa-html5"></i></span>

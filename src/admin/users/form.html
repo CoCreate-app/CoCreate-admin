@@ -28,7 +28,7 @@
 				<li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
 
 				<!-- fullscreen toogle and icon transform-->
-				<li class="margin-right:15px"><a data-fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+				<li class="margin-right:15px"><a fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
 
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
@@ -88,7 +88,7 @@
 
 				<cocreate-select class="floating-label sortable" name="current_org" placeholder="Current Org">
 					<input class="search-input" placeholder="Search" template_id="connect">
-					<ul fetch-collection="users" data-fetch_document="" fetch-name="connected_orgs" template_id="connect" class="options overflow:overlay">
+					<ul fetch-collection="users" fetch-document="" fetch-name="connected_orgs" template_id="connect" class="options overflow:overlay">
 
 						<li class="template option" collection="organizations" template_id="connect">
 							<span class="logo-icon"><img collection="organizations" document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>

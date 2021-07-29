@@ -173,7 +173,7 @@
                 <li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
 
                 <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px"><a data-fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+                <li class="margin-right:15px"><a fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
@@ -223,7 +223,7 @@
 
                 <!-- Fetch, Render and Filter -->
                 <input type="hidden" template_id="active-calls" filter-name="status" value="no-answer" filter-operator="$ne">
-                <div class="margin-top:10px" fetch-collection="testtwillio" filter-name="status" filter-value="completed" filter-operator="$ne" data-fetch_count="10" template_id="active-calls">
+                <div class="margin-top:10px" fetch-collection="testtwillio" filter-name="status" filter-value="completed" filter-operator="$ne" fetch-count="10" template_id="active-calls">
 
                     <!-- Call Template -->
                     <div class="template card call padding:20px_10px margin-bottom:15px background:white margin-right:10px" template_id="active-calls" collection="{{collection}}" document_id="{{data._id}}" name="status" value="">
@@ -414,7 +414,7 @@
                     </tr>
 
                     <!-- Datatable Fetch and Render Rows -->
-                    <tbody template_id="datatable" fetch-collection="testtwillio" data-fetch_count="15" order-by="" order-type="asc">
+                    <tbody template_id="datatable" fetch-collection="testtwillio" fetch-count="15" order-by="" order-type="asc">
 
                         <!-- Datatable Row Template -->
                         <tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{data._id}}" template_id="datatable" document_id="{{data._id}}" data-toggle="selected">
@@ -480,7 +480,7 @@
 
                     </tbody>
                 </table>
-                <div template_id="datatable" data-fetch_type="total"></div>
+                <div template_id="datatable" fetch-type="total"></div>
             </div>
 
         </main>
