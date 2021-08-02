@@ -56,18 +56,18 @@
 		<div id="modal-viewport" class="hidden"></div>
 
 		<!-- Navbar -->
-		<nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" data-scroll="sticky-nav, hide-nav" data-scroll_up="5" data-scroll_down="5">
+		<nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
 			<!-- Horizontal Scroll Nav/Tabs -->
 			<ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
 
 				<!-- Modal Controls -->
 				<li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
-				<li class="margin-right:15px"><a class="btn-modal-maximize"><i data-toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+				<li class="margin-right:15px"><a class="btn-modal-maximize"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
 				<li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
 
 				<!-- fullscreen toogle and icon transform-->
-				<li class="margin-right:15px"><a fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+				<li class="margin-right:15px"><a fullscreen><i toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
 
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
@@ -116,7 +116,7 @@
 				<div class="card padding:10px_5px margin-top:10px collapsed">
 					<div class="display:flex padding:0_10px font-size:18px">
 						<span class="flex-grow:1">Menu Items</span>
-						<a data-toggle="collapsed" data-toggle_closest=".card" data-show="#menu-up, #menu-down" data-hide="#menu-down, #menu-up">
+						<a toggle="collapsed" toggle-closest=".card" show="#menu-up, #menu-down" hide="#menu-down, #menu-up">
 							<i id="menu-down" class="fas fa-angle-down"></i>
 							<i id="menu-up" class="fas fa-angle-up hidden"></i>
 						</a>
@@ -124,9 +124,9 @@
 
 					<div class="menu-items">
 						<div class="margin-top:10px display:flex tabs border-bottom:5px_solid_whitesmoke">
-							<div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#navbar-menu" data-selected_group="menu-items" selected>Navbar</div>
-							<div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#main-menu" data-selected_group="menu-items">Menu</div>
-							<div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#settings-menu" data-selected_group="menu-items">Settings</div>
+							<div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#navbar-menu" selected-group="menu-items" selected>Navbar</div>
+							<div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#main-menu" selected-group="menu-items">Menu</div>
+							<div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#settings-menu" selected-group="menu-items">Settings</div>
 						</div>
 						<div class="padding:5px background:whitesmoke">
 							<div id='navbar-menu' class="menu-item overflow:hidden height:0px active">
@@ -169,8 +169,8 @@
 							</div>
 							<div id='main-menu' class="menu-item overflow:hidden height:0px">
 								<div class="margin-top:10px display:flex tabs">
-									<div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" data-selected="active" data-selected_target="#main-menu-primary" data-selected_group="main-menu-item" selected>Primary</div>
-									<div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" data-selected="active" data-selected_target="#main-menu-secondary" data-selected_group="main-menu-item">Secondary</div>
+									<div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" selected-value="active" selected-target="#main-menu-primary" selected-group="main-menu-item" selected>Primary</div>
+									<div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" selected-value="active" selected-target="#main-menu-secondary" selected-group="main-menu-item">Secondary</div>
 								</div>
 								<div id="main-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
 									<cocreate-select class="floating-label sortable" placeholder="Primary View" name="main-menu-primary">
@@ -238,8 +238,8 @@
 							</div>
 							<div id='settings-menu' class="menu-item overflow:hidden height:0px">
 								<div class="margin-top:10px display:flex tabs">
-									<div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" data-selected="active" data-selected_target="#settings-menu-primary" data-selected_group="settings-menu-item" selected>Primary</div>
-									<div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" data-selected="active" data-selected_target="#settings-menu-secondary" data-selected_group="settings-menu-item">Secondary</div>
+									<div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" selected-value="active" selected-target="#settings-menu-primary" selected-group="settings-menu-item" selected>Primary</div>
+									<div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" selected-value="active" selected-target="#settings-menu-secondary" selected-group="settings-menu-item">Secondary</div>
 								</div>
 								<div id="settings-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
 									<cocreate-select class="floating-label sortable" placeholder="Primary View" name="settings-menu-primary">
@@ -312,7 +312,7 @@
 				<!-- module views -->
 				<div class="card display:flex padding:10px_15px margin-top:10px font-size:18px">
 					<span class="flex-grow:1">Module Views</span>
-					<a data-show="#module-templates" data-hide="#form" pass-collection="files" pass_to="module-templates"><i class="far fa-plus-square"></i></a>
+					<a show="#module-templates" hide="#form" pass-collection="files" pass_to="module-templates"><i class="far fa-plus-square"></i></a>
 				</div>
 
 				<!--<input type="hidden" filter-name="module-view" filter-value="module-view" template_id="files">-->
@@ -337,7 +337,7 @@
 									<i class="fas fa-code"></i>
 								 <div pass-document_id="{{data._id}}" pass-name="src" pass_to="code-editor"></div>
 							</a>
-							<!--<a class="float:right padding:5px" data-toggle="collapsed" data-toggle_closest=".card" data-show="#view-up{{data._id}}, #view-down{{data._id}}" data-hide="#view-down{{data._id}}, #view-up{{data._id}}">-->
+							<!--<a class="float:right padding:5px" toggle="collapsed" toggle-closest=".card" show="#view-up{{data._id}}, #view-down{{data._id}}" hide="#view-down{{data._id}}, #view-up{{data._id}}">-->
 							<!--	<i id="view-down{{data._id}}" class="fas fa-angle-down"></i>-->
 							<!--	<i id="view-up{{data._id}}" class="fas fa-angle-up hidden"></i>-->
 							<!--</a>-->
@@ -345,10 +345,10 @@
 
 						<!--<div id="module-view{{data._id}}" class="code-editor">-->
 						<!--	<div class="margin-top:10px display:flex tabs border-bottom:5px_solid_whitesmoke">-->
-						<!--		<a href="#module-view{{data._id}}" class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target='#html{{data._id}}' data-selected_group="{{data._id}}"-->
+						<!--		<a href="#module-view{{data._id}}" class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target='#html{{data._id}}' selected-group="{{data._id}}"-->
 						<!--		 selected>HTML</a>-->
-						<!--		<a href="#module-view{{data._id}}" class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target='#css{{data._id}}' data-selected_group="{{data._id}}">CSS</a>-->
-						<!--		<a href="#module-view{{data._id}}" class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target='#js{{data._id}}' data-selected_group="{{data._id}}">JS</a>-->
+						<!--		<a href="#module-view{{data._id}}" class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target='#css{{data._id}}' selected-group="{{data._id}}">CSS</a>-->
+						<!--		<a href="#module-view{{data._id}}" class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target='#js{{data._id}}' selected-group="{{data._id}}">JS</a>-->
 						<!--	</div>-->
 						<!--	<div id="html{{data._id}}" collection="{{collection}}" document_id="{{data._id}}" name='html' class="codemirror height:0px overflow:hidden active"></div>-->
 						<!--	<div id='css{{data._id}}' collection="{{collection}}" document_id="{{data._id}}" name='css' class="codemirror overflow:hidden height:0px"></div>-->
@@ -367,7 +367,7 @@
 
 			<!-- Module form templates to pass value and create clone -->
 			<div class="hidden" id="module-templates">
-				<div class="height:20px padding:0_10px font-size:18px"><i class="fas fa-times float:right" data-show="#form" data-hide='#module-templates'></i></div>
+				<div class="height:20px padding:0_10px font-size:18px"><i class="fas fa-times float:right" show="#form" hide='#module-templates'></i></div>
 				<div template_id="module-templates" filter-name="tags" filter-value="template"></div>
 				<div class="display:flex flex-wrap:wrap" fetch-collection="" pass-refresh="true" order-by="name" order-type="asc" template_id="module-templates" pass_id="module-templates">
 
@@ -377,11 +377,11 @@
 							<img collection="{{collection}}" document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
 							<form realtime="false" collection="files" document_id="">
 								<input type="hidden" name="name" placeholder="View Name" value="{{data.name}}">
-								<input type="hidden" name="module_id" data-get_value="module_id">
+								<input type="hidden" name="module_id" get-value="module_id">
 								<textarea hidden name="src" value="{{data.src}}"></textarea>
 								<!--<textarea hidden name="css" collection="files" document_id="{{data.css}}" name="src"></textarea>-->
 								<!--<textarea hidden name="js" collection="files" document_id="{{data.js}}" name="src"></textarea>-->
-								<button class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" actions="createDocument" data-show="#form" data-hide='#module-templates'>
+								<button class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" actions="createDocument" show="#form" hide='#module-templates'>
 									<i class="fa fa-plus"></i>
 								</button>
 							</form>
@@ -400,7 +400,8 @@
 
 		</main>
 
-		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
+		<!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
+		<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
 
 	</body>
 

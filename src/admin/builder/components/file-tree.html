@@ -5,7 +5,7 @@
             <div class="margin-left:10px sortable" template_id="{{data._id}}" fetch-collection="folders" filter-name="_id" filter-value="{{data._id}}" filter-operator="$eq" order-by="name" order-type="asc" fetch-count="6" render_id="folder">
                  <!--Folder Template -->
                 <div class="template padding:5px" template_id="{{data._id}}" document_id="{{folder._id}}" render-key="folder" render-array="folder.data">
-                    <span class=""><i class="fa fa-caret-down" data-toggle="fa-caret-right, fa-caret-down"></i></span>
+                    <span class=""><i class="fa fa-caret-down" toggle="fa-caret-right, fa-caret-down"></i></span>
                     <span class="margin-left:5px" collection="folders" document_id="{{folder._id}}" name="name">Folder name</span>
                     <div class="margin-left:10px" collection="component" document_id="" name="file-tree"></div>
                 </div>

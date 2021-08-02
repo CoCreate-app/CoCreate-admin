@@ -20,12 +20,12 @@
     <form id="domEditorPanel" collection="builder" document_id="null" class="min-width:305px">
         <div class="padding-left:5px padding-top:5px">
             <div class="display:flex margin-bottom:5px font-size:16px tabs">
-                <div className="tab" class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#styles" data-selected_group="editor-panels" selected><i class="fas fa-paint-brush"></i></div>
-                <div class="tab" data-selected="active" data-selected_target="#database" data-selected_group="editor-panels"><i class="fas fa-database"></i></div>
-                <div class="tab" data-selected="active" data-selected_target="#broadcast" data-selected_group="editor-panels"><i class="fas fa-broadcast-tower"></i></div>
-                <div class="tab" data-selected="active" data-selected_target="#logic" data-selected_group="editor-panels"><i class="fas fa-brain"></i></div>
-                <div class="tab" data-selected="active" data-selected_target="#plugins" data-selected_group="editor-panels"><i class="fas fa-plug"></i></div>
-                <div class="tab" data-selected="active" data-selected_target="#settings" data-selected_group="editor-panels"><i class="fas fa-cog"></i></div>
+                <div className="tab" class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#styles" selected-group="editor-panels" selected><i class="fas fa-paint-brush"></i></div>
+                <div class="tab" selected-value="active" selected-target="#database" selected-group="editor-panels"><i class="fas fa-database"></i></div>
+                <div class="tab" selected-value="active" selected-target="#broadcast" selected-group="editor-panels"><i class="fas fa-broadcast-tower"></i></div>
+                <div class="tab" selected-value="active" selected-target="#logic" selected-group="editor-panels"><i class="fas fa-brain"></i></div>
+                <div class="tab" selected-value="active" selected-target="#plugins" selected-group="editor-panels"><i class="fas fa-plug"></i></div>
+                <div class="tab" selected-value="active" selected-target="#settings" selected-group="editor-panels"><i class="fas fa-cog"></i></div>
             </div>
             <div class="overflow:auto height:90vh">
                 <div class="">
@@ -37,7 +37,7 @@
                         </cocreate-select>
                     </div>
                     <!--Layout -->
-                    <div class="padding:5px background:gainsboro" data-show=".sizing" data-hide=".sizing">
+                    <div class="padding:5px background:gainsboro" show=".sizing" hide=".sizing">
                         <span class="sizing hidden"><i class="fas fa-plus"></i></span>
                         <span class="sizing"><i class="fas fa-minus"></i></span>
                         <span>Layout</span>
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                      <!--Spacing -->
-                    <div class="padding:5px background:gainsboro" data-show=".spacing" data-hide=".spacing">
+                    <div class="padding:5px background:gainsboro" show=".spacing" hide=".spacing">
                         <span class="spacing hidden"><i class="fas fa-plus"></i></span>
                         <span class="spacing"><i class="fas fa-minus"></i></span>
                         <span>Spacing</span>
@@ -203,7 +203,7 @@
                         </div>
                     </div>
                      <!--Size -->
-                    <div class="padding:5px background:gainsboro" data-show=".size" data-hide=".size">
+                    <div class="padding:5px background:gainsboro" show=".size" hide=".size">
                         <span class="size hidden"><i class="fas fa-plus"></i></span>
                         <span class="size"><i class="fas fa-minus"></i></span>
                         <span>Size</span>
@@ -283,7 +283,7 @@
                         </div>
                     </div>
                      <!--Position -->
-                    <div class="padding:5px background:gainsboro" data-show=".position" data-hide=".position">
+                    <div class="padding:5px background:gainsboro" show=".position" hide=".position">
                         <span class="position hidden"><i class="fas fa-plus"></i></span>
                         <span class="position"><i class="fas fa-minus"></i></span>
                         <span>Position</span>
@@ -339,7 +339,7 @@
                         </div>
                     </div>
                      <!--typography -->
-                    <div class="padding:5px background:gainsboro" data-show=".typography" data-hide=".typography">
+                    <div class="padding:5px background:gainsboro" show=".typography" hide=".typography">
                         <span class="typography hidden"><i class="fas fa-plus"></i></span>
                         <span class="typography"><i class="fas fa-minus"></i></span>
                         <span>Typography</span>
@@ -433,7 +433,7 @@
                         </div>
                     </div>
                      <!--Border -->
-                    <div class="padding:5px background:gainsboro" data-show=".border" data-hide=".border">
+                    <div class="padding:5px background:gainsboro" show=".border" hide=".border">
                         <span class="border hidden"><i class="fas fa-plus"></i></span>
                         <span class="border"><i class="fas fa-minus"></i></span>
                         <span>Border</span>
@@ -485,7 +485,7 @@
                         </div>
                     </div>
                      <!--Shadow -->
-                    <div class="padding:5px background:gainsboro" data-show=".shadow" data-hide=".shadow">
+                    <div class="padding:5px background:gainsboro" show=".shadow" hide=".shadow">
                         <span class="shadow hidden"><i class="fas fa-plus"></i></span>
                         <span class="shadow"><i class="fas fa-minus"></i></span>
                         <span>Shadow</span>
@@ -547,7 +547,7 @@
                         </div>
                     </div>    
                     <!--Background-->
-                    <div class="padding:5px background:gainsboro" data-show=".backgroundset" data-hide=".backgroundset">
+                    <div class="padding:5px background:gainsboro" show=".backgroundset" hide=".backgroundset">
                         <span class="backgroundset hidden"><i class="fas fa-plus"></i></span>
                         <span class="backgroundset"><i class="fas fa-minus"></i></span>
                         <span>Background</span>
@@ -602,7 +602,7 @@
                         </cocreate-select>
                     </div>
                      <!--Extra -->
-                    <div class="padding:5px background:gainsboro" data-show=".extra" data-hide=".extra">
+                    <div class="padding:5px background:gainsboro" show=".extra" hide=".extra">
                         <span class="extra hidden"><i class="fas fa-plus"></i></span>
                         <span class="extra"><i class="fas fa-minus"></i></span>
                         <span>Extra</span>
@@ -741,7 +741,7 @@
                 </div>
                 <!--dataBase  -->
                 <div id="database" class="editor-panel display:none">
-                    <div class="padding:5px background:gainsboro" data-show=".database" data-hide=".database">
+                    <div class="padding:5px background:gainsboro" show=".database" hide=".database">
                         <span class="database hidden"><i class="fas fa-plus"></i></span>
                         <span class="database"><i class="fas fa-minus"></i></span>
                         <span>Database</span>
@@ -823,7 +823,7 @@
                             </cocreate-select>
                         </div>
                     </div>
-                    <div class="padding:5px background:gainsboro" data-show=".fetchlist" data-hide=".fetchlist">
+                    <div class="padding:5px background:gainsboro" show=".fetchlist" hide=".fetchlist">
                         <span class="fetchlist hidden"><i class="fas fa-plus"></i></span>
                         <span class="fetchlist"><i class="fas fa-minus"></i></span>
                         <span>Fetch List</span>
@@ -851,7 +851,7 @@
                 </div>
                 <!--Broadcast -->
                 <div id="broadcast" class="editor-panel display:none">
-                    <div class="padding:5px background:gainsboro" data-show=".broadcast" data-hide=".broadcast">
+                    <div class="padding:5px background:gainsboro" show=".broadcast" hide=".broadcast">
                         <span class="broadcast hidden"><i class="fas fa-plus"></i></span>
                         <span class="broadcast"><i class="fas fa-minus"></i></span>
                         <span>Broadcast</span>
@@ -875,7 +875,7 @@
                         <input data-attributes="pass-value" type="text" class="floating-label" placeholder="room"  id="pass-value" collection="builder" document_id="null" active>
                     </div>
                     <!--Messages -->
-                    <div class="padding:5px background:gainsboro" data-show=".calculator" data-hide=".calculator">
+                    <div class="padding:5px background:gainsboro" show=".calculator" hide=".calculator">
                         <span class="calculator hidden"><i class="fas fa-plus"></i></span>
                         <span class="calculator"><i class="fas fa-minus"></i></span>
                         <span>messages</span>
@@ -886,7 +886,7 @@
                 </div>
                 <!--Logic -->
                 <div id="logic" class="editor-panel display:none">
-                    <div class="padding:5px background:gainsboro" data-show=".logic" data-hide=".logic">
+                    <div class="padding:5px background:gainsboro" show=".logic" hide=".logic">
                         <span class="logic hidden"><i class="fas fa-plus"></i></span>
                         <span class="logic"><i class="fas fa-minus"></i></span>
                         <span>Logic</span>
@@ -944,70 +944,70 @@
                         </cocreate-select>
                         <input data-attributes="pass-value_to" type="text" class="floating-label" placeholder="pass-value_to"  id="pass-value_to" collection="builder" document_id="null" active>
                         <input data-attributes="pass-value_id" type="text" class="floating-label" placeholder="pass-value_id"  id="pass-value_id" collection="builder" document_id="null" active>
-                        <input data-attributes="data-get_value" type="text" class="floating-label" placeholder="data-get_value"  id="data-get_value" collection="builder" document_id="null" active>
-                        <input data-attributes="data-room" type="text" class="floating-label" placeholder="data-room"  id="data-room" collection="builder" document_id="null" active>
-                        <input data-attributes="data-namespace" type="text" class="floating-label" placeholder="data-namespace"  id="data-namespace" collection="builder" document_id="null" active>
+                        <input data-attributes="get-value" type="text" class="floating-label" placeholder="get-value"  id="get-value" collection="builder" document_id="null" active>
+                        <input data-attributes="room" type="text" class="floating-label" placeholder="room"  id="room" collection="builder" document_id="null" active>
+                        <input data-attributes="namespace" type="text" class="floating-label" placeholder="namespace"  id="namespace" collection="builder" document_id="null" active>
                     </div>
-                    <div class="padding:5px background:gainsboro" data-show=".datavisible" data-hide=".datavisible">
+                    <div class="padding:5px background:gainsboro" show=".datavisible" hide=".datavisible">
                         <span class="datavisible hidden"><i class="fas fa-plus"></i></span>
                         <span class="datavisible"><i class="fas fa-minus"></i></span>
                         <span>Conditional Logic</span>
                     </div>
                     <div class="datavisible padding-bottom:20px margin:0_5px">
-                        <input data-attributes="data-show" type="text" class="floating-label" placeholder="data-show"  id="data-show" collection="builder" document_id="null" active>
-                        <input data-attributes="data-hide" type="text" class="floating-label" placeholder="data-hide"  id="data-hide" collection="builder" document_id="null" active>
+                        <input data-attributes="show" type="text" class="floating-label" placeholder="show"  id="show" collection="builder" document_id="null" active>
+                        <input data-attributes="hide" type="text" class="floating-label" placeholder="hide"  id="hide" collection="builder" document_id="null" active>
                     </div>
-                    <div class="padding:5px background:gainsboro" data-show=".dataselected" data-hide=".dataselected">
+                    <div class="padding:5px background:gainsboro" show=".dataselected" hide=".dataselected">
                         <span class="dataselected hidden"><i class="fas fa-plus"></i></span>
                         <span class="dataselected"><i class="fas fa-minus"></i></span>
                         <span>Selected</span>
                     </div>
                     <div class="dataselected padding-bottom:20px margin:0_5px">
-                        <input data-attributes="data-selected" type="text" class="floating-label" placeholder="data-selected"  id="data-selected" collection="builder" document_id="null" active>
-                        <input data-attributes="data-selected_attribute" type="text" class="floating-label" placeholder="data-selected_attribute"  id="data-selected_attribute" collection="builder" document_id="null" active>
-                        <input data-attributes="data-selected_target" type="text" class="floating-label" placeholder="data-selected_target"  id="data-selected_target" collection="builder" document_id="null" active>
-                        <input data-attributes="data-selected_closest" type="text" class="floating-label" placeholder="data-selected_closest"  id="data-selected_closest" collection="builder" document_id="null" active>
-                        <input data-attributes="data-selected_group" type="text" class="floating-label" placeholder="data-selected_group"  id="data-selected_group" collection="builder" document_id="null" active>
+                        <input data-attributes="selected-value" type="text" class="floating-label" placeholder="selected-value"  id="selected-value" collection="builder" document_id="null" active>
+                        <input data-attributes="selected-attribute" type="text" class="floating-label" placeholder="selected-attribute"  id="selected-attribute" collection="builder" document_id="null" active>
+                        <input data-attributes="selected-target" type="text" class="floating-label" placeholder="selected-target"  id="selected-target" collection="builder" document_id="null" active>
+                        <input data-attributes="selected-closest" type="text" class="floating-label" placeholder="selected-closest"  id="selected-closest" collection="builder" document_id="null" active>
+                        <input data-attributes="selected-group" type="text" class="floating-label" placeholder="selected-group"  id="selected-group" collection="builder" document_id="null" active>
                     </div>
-                    <div class="padding:5px background:gainsboro" data-show=".toggleattr" data-hide=".toggleattr">
+                    <div class="padding:5px background:gainsboro" show=".toggleattr" hide=".toggleattr">
                         <span class="toggleattr hidden"><i class="fas fa-plus"></i></span>
                         <span class="toggleattr"><i class="fas fa-minus"></i></span>
                         <span>Toggle</span>
                     </div>
                     <div class="toggleattr padding-bottom:20px margin:0_5px">
-                        <input data-attributes="data-toggle" type="text" class="floating-label" placeholder="data-toggle"  id="data-toggle" collection="builder" document_id="null" active>
-                        <input data-attributes="data-toggle_attribute" type="text" class="floating-label" placeholder="data-toggle_attribute"  id="data-toggle_attribute" collection="builder" document_id="null" active>
-                        <input data-attributes="data-toggle_target" type="text" class="floating-label" placeholder="data-toggle_target"  id="data-toggle_target" collection="builder" document_id="null" active>
-                        <input data-attributes="data-toggle_closest" type="text" class="floating-label" placeholder="data-toggle_closest"  id="data-toggle_closest" collection="builder" document_id="null" active>
+                        <input data-attributes="toggle" type="text" class="floating-label" placeholder="toggle"  id="toggle" collection="builder" document_id="null" active>
+                        <input data-attributes="toggle-attribute" type="text" class="floating-label" placeholder="toggle-attribute"  id="toggle-attribute" collection="builder" document_id="null" active>
+                        <input data-attributes="toggle-target" type="text" class="floating-label" placeholder="toggle-target"  id="toggle-target" collection="builder" document_id="null" active>
+                        <input data-attributes="toggle-closest" type="text" class="floating-label" placeholder="toggle-closest"  id="toggle-closest" collection="builder" document_id="null" active>
                     </div>
-                    <div class="padding:5px background:gainsboro" data-show=".hoverattr" data-hide=".hoverattr">
+                    <div class="padding:5px background:gainsboro" show=".hoverattr" hide=".hoverattr">
                         <span class="hoverattr hidden"><i class="fas fa-plus"></i></span>
                         <span class="hoverattr"><i class="fas fa-minus"></i></span>
                         <span>Hover</span>
                     </div>
                     <div class="hoverattr padding-bottom:20px margin:0_5px">
-                        <input type="text" class="floating-label" data-attributes="data-hover" placeholder="data-hover" id="data-hover" collection="builder" document_id="null" active>
-                        <input type="text" data-attributes="data-hover_attribute" class="floating-label" placeholder="data-hover_attribute"  id="data-hover_attribute" collection="builder" document_id="null" active>
-                        <input type="text" data-attributes="data-hover_target" class="floating-label" placeholder="data-hover_target"  id="data-hover_target" collection="builder" document_id="null" active>
-                        <input type="text" data-attributes="data-hover_closest" class="floating-label" placeholder="data-hover_closest"  id="data-hover_closest" collection="builder" document_id="null" active>
+                        <input type="text" class="floating-label" data-attributes="hover" placeholder="hover" id="hover" collection="builder" document_id="null" active>
+                        <input type="text" data-attributes="hover-attribute" class="floating-label" placeholder="hover-attribute"  id="hover-attribute" collection="builder" document_id="null" active>
+                        <input type="text" data-attributes="hover-target" class="floating-label" placeholder="hover-target"  id="hover-target" collection="builder" document_id="null" active>
+                        <input type="text" data-attributes="hover-closest" class="floating-label" placeholder="hover-closest"  id="hover-closest" collection="builder" document_id="null" active>
                     </div>
-                    <div class="padding:5px background:gainsboro" data-show=".scroll" data-hide=".scroll">
+                    <div class="padding:5px background:gainsboro" show=".scroll" hide=".scroll">
                         <span class="scroll hidden"><i class="fas fa-plus"></i></span>
                         <span class="scroll"><i class="fas fa-minus"></i></span>
                         <span>Scroll</span>
                     </div>
                     <div class="scroll padding-bottom:20px">
                         <div class="margin:0_5px">
-                            <input type="text" data-attributes="data-scroll" class="floating-label" placeholder="data-scroll"  id="data-scroll" collection="builder" document_id="null" active>
-                            <input type="text" data-attributes="data-scroll_attribute" class="floating-label" placeholder="data-scroll_attribute"  id="data-scroll_attribute" collection="builder" document_id="null" active>
-                            <input type="text" data-attributes="data-scroll_target" class="floating-label" placeholder="data-scroll_target"  id="data-scroll_target" collection="builder" document_id="null" active>
-                            <input type="text" data-attributes="data-scroll_closest" class="floating-label" placeholder="data-scroll_closest"   id="data-scroll_closest" collection="builder" document_id="null" active>
+                            <input type="text" data-attributes="scroll" class="floating-label" placeholder="scroll"  id="scroll" collection="builder" document_id="null" active>
+                            <input type="text" data-attributes="scroll-attribute" class="floating-label" placeholder="scroll-attribute"  id="scroll-attribute" collection="builder" document_id="null" active>
+                            <input type="text" data-attributes="scroll-target" class="floating-label" placeholder="scroll-target"  id="scroll-target" collection="builder" document_id="null" active>
+                            <input type="text" data-attributes="scroll-closest" class="floating-label" placeholder="scroll-closest"   id="scroll-closest" collection="builder" document_id="null" active>
                         </div>
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <input id="data-scroll_up" class="floating-label z-index:0" placeholder="data-scroll_up" data-attributes="classstyle" data-attributes_property="data-scroll_up" collection="builder" document_id="null" active>
+                                <input id="scroll-up" class="floating-label z-index:0" placeholder="scroll-up" data-attributes="classstyle" data-attributes_property="scroll-up" collection="builder" document_id="null" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="data-scroll_up-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#data-scroll_up">
+                                    <cocreate-select id="scroll-up-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#scroll-up">
 
                                         <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units29">
                                             <cc-option class="template option margin:0px padding:3px border-radius:4px border-radius:4px" template_id="units29" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
@@ -1016,9 +1016,9 @@
                                 </div>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <input id="data-scroll_down" class="floating-label z-index:0" placeholder="data-scroll_down:" data-attributes="classstyle" data-attributes_property="data-scroll_down" collection="builder" document_id="null" active>
+                                <input id="scroll-down" class="floating-label z-index:0" placeholder="scroll-down:" data-attributes="classstyle" data-attributes_property="scroll-down" collection="builder" document_id="null" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="data-scroll_down-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#data-scroll_down">
+                                    <cocreate-select id="scroll-down-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#scroll-down">
 
                                         <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units30">
                                             <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units30" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
@@ -1028,9 +1028,9 @@
                             </div>
                         </div>
                         <div class="margin:0_5px">
-                            <input id="data-scroll_position" data-attributes="data-scroll_position" class="floating-label z-index:0" placeholder="data-scroll_position:" collection="builder" document_id="null" active>
+                            <input id="scroll-position" data-attributes="scroll-position" class="floating-label z-index:0" placeholder="scroll-position:" collection="builder" document_id="null" active>
                             <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                <cocreate-select id="data-scroll_position-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#data-scroll_position">
+                                <cocreate-select id="scroll-position-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#scroll-position">
                                     <ul class="options z-index:7">
                                         <cc-option value="px"><span class="margin:auto">px</span></cc-option>
                                         <cc-option value="%"><span class="margin:auto">%</span></cc-option>
@@ -1039,14 +1039,14 @@
                             </div>
                         </div>
                         <div class="margin:0_5px">
-                            <input type="text" data-attributes="data-scroll_top" class="floating-label" placeholder="data-scroll_top"  id="data-scroll_top" collection="builder" document_id="null" active>
-                            <input type="text" data-attributes="data-scroll_bottom" class="floating-label" placeholder="data-scroll_bottom"  id="data-scroll_bottomn" collection="builder" document_id="null" active>
-                            <input type="text" data-attributes="data-scrolling" class="floating-label" placeholder="data-scrolling"  id="data-scrolling" collection="builder" document_id="null" active>
-                            <input type="text" data-attributes="data-scroll_intersect" class="floating-label" placeholder="data-scroll_intersect"  id="data-scroll_intersect" collection="builder" document_id="null" active>
+                            <input type="text" data-attributes="scroll-top" class="floating-label" placeholder="scroll-top"  id="scroll-top" collection="builder" document_id="null" active>
+                            <input type="text" data-attributes="scroll-bottom" class="floating-label" placeholder="scroll-bottom"  id="scroll-bottomn" collection="builder" document_id="null" active>
+                            <input type="text" data-attributes="scrolling" class="floating-label" placeholder="scrolling"  id="scrolling" collection="builder" document_id="null" active>
+                            <input type="text" data-attributes="scroll-intersect" class="floating-label" placeholder="scroll-intersect"  id="scroll-intersect" collection="builder" document_id="null" active>
                         </div>
                     </div>
                      <!--Clone -->
-                    <div class="padding:5px background:gainsboro" data-show=".clone" data-hide=".clone">
+                    <div class="padding:5px background:gainsboro" show=".clone" hide=".clone">
                         <span class="clone hidden"><i class="fas fa-plus"></i></span>
                         <span class="clone"><i class="fas fa-minus"></i></span>
                         <span>Clone</span>
@@ -1055,7 +1055,7 @@
                         <input data-attributes="data-clone_id" type="text" class="floating-label" placeholder="data-clone_id"  id="data-clone_id" collection="builder" document_id="null" active>
                     </div>
                       <!--Calculations -->
-                     <div class="padding:5px background:gainsboro" data-show=".calculator" data-hide=".calculator">
+                     <div class="padding:5px background:gainsboro" show=".calculator" hide=".calculator">
                         <span class="calculator hidden"><i class="fas fa-plus"></i></span>
                         <span class="calculator"><i class="fas fa-minus"></i></span>
                         <span>Calculations</span>
@@ -1066,7 +1066,7 @@
                 </div>
                 <!--Plugins -->
                 <div id="plugins" class="editor-panel display:none">
-                    <div class="padding:5px background:gainsboro" data-show=".plugins" data-hide=".plugins">
+                    <div class="padding:5px background:gainsboro" show=".plugins" hide=".plugins">
                         <span class="plugins hidden"><i class="fas fa-plus"></i></span>
                         <span class="plugins"><i class="fas fa-minus"></i></span>
                         <span>stripe</span>
@@ -1088,7 +1088,7 @@
                         </cocreate-select>
                     </div>
                     <!--sendgrd -->
-                    <div class="padding:5px background:gainsboro" data-show=".calculator" data-hide=".calculator">
+                    <div class="padding:5px background:gainsboro" show=".calculator" hide=".calculator">
                         <span class="calculator hidden"><i class="fas fa-plus"></i></span>
                         <span class="calculator"><i class="fas fa-minus"></i></span>
                         <span>sendgrid</span>

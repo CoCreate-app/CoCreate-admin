@@ -30,18 +30,18 @@
                             	Your Artificial Virtual Assistant. Together we will CoCreate your business! Enter your name so I will know what to call my <strong>new boss...</strong>
                         	</p>
                             <p id="ava2" class="hidden">
-                        		Hi, <span data-get_value="name">First Name</span>!
+                        		Hi, <span get-value="name">First Name</span>!
                             	Let's get started. Enter your business or organization's name. Don't worry if you are not sure, you can allways update it later.<!-- and create a subdomain. The subdomain will be used for your website's address until you choose a custom domain.-->
                         	</p>
                         	<p id="ava3" class="hidden">
-                        		Choose a domain for <span data-get_value="org-name">Organization Name</span>, this will be the url where you can access your website and admin panel.
+                        		Choose a domain for <span get-value="org-name">Organization Name</span>, this will be the url where you can access your website and admin panel.
                         	</p>
                         	<p id="ava4" class="hidden">
-                        		Great, <span data-get_value="name">First Name</span>!
+                        		Great, <span get-value="name">First Name</span>!
                             	Let’s choose an industry so I can begin to understand what we will be doing.
                         	</p>
                         	<p id="ava5" class="hidden">
-                        		Awesome! Enter your email and password and we will get <span data-get_value="org-name">Organization Name</span> off the ground!
+                        		Awesome! Enter your email and password and we will get <span get-value="org-name">Organization Name</span> off the ground!
                         	</p>
 							<p id="ava6" class="hidden">
                         		Here we go! Lets confirm your email and access your new business!
@@ -71,7 +71,7 @@
 	                    			class="floating-label"
 	                    			autocomplete="nope" data-key="renderKey.name">
 		                        
-		                        <button type="button" class="outline" data-show='#step2,#ava2' data-hide='#step1,#ava1'>Next</button>
+		                        <button type="button" class="outline" show='#step2,#ava2' hide='#step1,#ava1'>Next</button>
 		                    </div>
 	                  	</section>
 
@@ -92,8 +92,8 @@
 						    		placeholder="Organization Name" 
 						    		class="floating-label">
 								<div class="display:flex">
-							        <button type="button" class="outline white-blue margin-right:15px" data-show='#step1,#ava1' data-hide='#step2,#ava2'>Previous</button>
-							        <button type="button" class="outline" data-show='#step3,#ava3' data-hide='#step2,#ava2'>Next</button>
+							        <button type="button" class="outline white-blue margin-right:15px" show='#step1,#ava1' hide='#step2,#ava2'>Previous</button>
+							        <button type="button" class="outline" show='#step3,#ava3' hide='#step2,#ava2'>Next</button>
 						   		</div>
 						    </div>
 						</section>
@@ -123,8 +123,8 @@
 
                                 <small id="Domain is currently in use" class="text-danger"></small>
 								<div class="display:flex">
-							        <button type="button" class="outline white-blue margin-right:15px" data-show='#step2,#ava2' data-hide='#step3,#ava3'>Previous</button>
-							        <button type="button" class="outline" data-show='#step4,#ava4' data-hide='#step3,#ava3'>Next</button>
+							        <button type="button" class="outline white-blue margin-right:15px" show='#step2,#ava2' hide='#step3,#ava3'>Previous</button>
+							        <button type="button" class="outline" show='#step4,#ava4' hide='#step3,#ava3'>Next</button>
 						   		</div>
 						    </div>
 						</section>
@@ -152,8 +152,8 @@
 									</cc-options>
 	                            </cocreate-select>
 								<div class="display:flex">
-			                        <button type="button" class="outline white-blue margin-right:15px" data-show='#step3,#ava3' data-hide='#step4,#ava4'>Previous</button>
-			                        <button type="button" class="outline" data-show='#step5,#ava5' data-hide='#step4,#ava4'>Next</button>
+			                        <button type="button" class="outline white-blue margin-right:15px" show='#step3,#ava3' hide='#step4,#ava4'>Previous</button>
+			                        <button type="button" class="outline" show='#step5,#ava5' hide='#step4,#ava4'>Next</button>
 			                    </div>
 		                    </div>
 	                    </section>
@@ -208,7 +208,7 @@
 									collection="organizations"
 									document_id=""
 									name="apiKey" 
-									data-uuid="32">
+									uuid="32">
 								
 								<!-- Sub Domain -->
 								<input type="hidden" 
@@ -232,13 +232,13 @@
 									
 								<!-- Send Email -->
 								<div template_id="renderKey">
-									<input type="hidden" placeholder="to email" data-sendgrid="sendEmail.to" data-get_value="user-email">
+									<input type="hidden" placeholder="to email" data-sendgrid="sendEmail.to" get-value="user-email">
 								    <input type="hidden" placeholder="from email" data-sendgrid="sendEmail.from" value="testing@cocreate.app">
 								    <input type="hidden" placeholder="subject" data-sendgrid="sendEmail.subject" value="Welcome, {{data.name}} — Please confirm your email">
 								    <textarea placeholder="html" data-sendgrid="sendEmail.html" hidden collection="email-templates" document_id="60bfdaa304ee68b159b63532" name="src"></textarea>
 
 									<div class="display:flex">
-										<button type="button" class="outline white-blue margin-right:15px" data-show='#step4,#ava4' data-hide='#step5,#ava5'>Previous</button>
+										<button type="button" class="outline white-blue margin-right:15px" show='#step4,#ava4' hide='#step5,#ava5'>Previous</button>
 										<!--<button type="button" class="outline red-white " actions="saveDocument, createOrgNew, createUserNew, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">-->
 										<button type="button" class="outline red-white " actions="createOrg, createUser, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">
 											Launch
@@ -262,15 +262,15 @@
 	                           <!-- Industry select -->
 	                           <h2>Confirm your email</h2>
 								<div class="display:flex">
-			                        <button type="button" class="outline white-blue margin-right:15px" data-show='#step5,#ava5' data-hide='#step6,#ava6'>Previous</button>
+			                        <button type="button" class="outline white-blue margin-right:15px" show='#step5,#ava5' hide='#step6,#ava6'>Previous</button>
 			                    </div>
 		                    </div>
 	                    </section>
 					</form>
 					<div class="hidden">
 						<form realtime="false" collection="users">
-							<input type="email" name='email' placeholder="Email" data-get_value="email" class="floating-label">
-							<input type="password" name='password' placeholder="Password" data-get_value="password" class="floating-label">
+							<input type="email" name='email' placeholder="Email" get-value="email" class="floating-label">
+							<input type="password" name='password' placeholder="Password" get-value="password" class="floating-label">
 							<button id="login" actions="login" href="index.html" class="outline">Login</button>
 						</form>							
 					</div>

@@ -19,10 +19,10 @@
 	<body class="width:fit-content overflow:overlay">
 
 		<!-- Navbar -->
-		<nav class="nav display:flex align-items:center background:whitesmoke position:sticky left:0 width:100vw" data-main_content_id="content" data-scroll="sticky-nav, hide-nav" data-scroll_up="5" data-scroll_down="5">
+		<nav class="nav display:flex align-items:center background:whitesmoke position:sticky left:0 width:100vw" data-main_content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
 			<!-- Menu Icon Animations -->
-			<a class="menu_icon--Vdots" data-toggle="active" data-toggle_sidenav="menuL">
+			<a class="menu_icon--Vdots" toggle="active" toggle-sidenav="menuL">
 				<div class="circle"></div>
 				<div class="circle"></div>
 				<div class="circle"></div>
@@ -35,11 +35,11 @@
 
 				<!-- Modal Controls -->
 				<li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
-				<li class="margin-right:15px"><a class="btn-modal-maximize"><i data-toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+				<li class="margin-right:15px"><a class="btn-modal-maximize"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
 				<li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
 
 				<!-- fullscreen toogle and icon transform-->
-				<li class="margin-right:15px"><a fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+				<li class="margin-right:15px"><a fullscreen><i toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
 
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
@@ -102,20 +102,20 @@
 					<td class="position:sticky top:0 background:white padding-top:0 padding:10px ">
 						<input type="text" class="floating-label" filter-name="name" data-value_type="string" filter-operator="" template_id="datatable" placeholder="Name">
 						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-							<a order-by="name" data-toggle_order="asc" template_id="datatable"></a>
+							<a order-by="name" toggle-order="asc" template_id="datatable"></a>
 						</span>
 					</td>
 					<td class="position:sticky top:0 background:white padding:10px padding-top:0">
 						<input type="text" class="floating-label" filter-name="_id" data-value_type="string" filter-operator="" template_id="datatable" placeholder="Document_id" />
 						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-							<a order-by="_id" data-toggle_order="asc" template_id="datatable"></a>
+							<a order-by="_id" toggle-order="asc" template_id="datatable"></a>
 						</span>
 					</td>
 				</tr>
 
 				<tbody template_id="datatable" fetch-collection="" filter-name="" filter-value="" order-by="name" order-type="asc" pass_id="datatable">
 
-					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{data._id}}" data-toggle="selected">
+					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{data._id}}" toggle="selected">
 						<td class="padding:10px">
 							<div class="display:flex min-width:200px">
 								<div class="display:flex justify-content:center width:25px">

@@ -66,7 +66,7 @@
                             <div class="padding:25px background:gainsboro text-align:left">
                                 <input type="text" id="org-name" collection="organizations" document_id="" name="name" placeholder="Organization Name" class="floating-label">
 
-                                <button type="button" class="outline" data-show='#step2,#ava2' data-hide='#step1,#ava1'>Next</button>
+                                <button type="button" class="outline" show='#step2,#ava2' hide='#step1,#ava1'>Next</button>
                             </div>
                         </div>
 
@@ -91,8 +91,8 @@
                                     </ul>
                                 </cocreate-select>
 
-                                <button type="button" class="outline white-blue" data-show='#step1,#ava1' data-hide='#step2,#ava2'>Previous</button>
-                                <button type="button" class="outline" data-show='#step3,#ava3' data-hide='#step2,#ava2'>Next</button>
+                                <button type="button" class="outline white-blue" show='#step1,#ava1' hide='#step2,#ava2'>Previous</button>
+                                <button type="button" class="outline" show='#step3,#ava3' hide='#step2,#ava2'>Next</button>
                             </div>
                         </div>
 
@@ -108,12 +108,12 @@
                             <div class="padding:25px background:gainsboro text-align:left">
 
                                 <!-- API key  -->
-                                <input type="hidden" id="apiKey" collection="organizations" document_id="" name="apiKey" placeholder="API Key" data-uuid="32" readonly>
+                                <input type="hidden" id="apiKey" collection="organizations" document_id="" name="apiKey" placeholder="API Key" uuid="32" readonly>
 
                                 <!-- Security key  -->
-                                <input type="hidden" id="securityKey" collection="organizations" document_id="" name="securityKey" placeholder="security Key" data-uuid="32" readonly>
+                                <input type="hidden" id="securityKey" collection="organizations" document_id="" name="securityKey" placeholder="security Key" uuid="32" readonly>
 
-                                <button type="button" class="outline white-blue" data-show='#step2,#ava2' data-hide='#step3,#ava3'>Previous</button>
+                                <button type="button" class="outline white-blue" show='#step2,#ava2' hide='#step3,#ava3'>Previous</button>
                                 <button type="button" class="outline red-white registerBtn industryBtn"><a href="index.html">Launch</a></button>
 
                             </div>

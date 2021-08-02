@@ -18,7 +18,7 @@
             <!--    <div id="category" template_id="category" fetch-collection="blocks" filter-name="menu-position" filter-value="0" filter-value_type="number" filter-operator="$ne" order-by="menu-position" order-type="asc">-->
                     <!-- category template -->
             <!--        <div class="templat" template_id="category">-->
-            <!--            <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".{{data.name}}" data-hide=".{{data.name}}">-->
+            <!--            <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".{{data.name}}" hide=".{{data.name}}">-->
             <!--                <span class="{{data.name}} hidden"><i class="fas fa-plus"></i></span>-->
             <!--                <span class="{{data.name}}"><i class="fas fa-minus"></i></span>-->
             <!--                <span collection="{{collection}}" document_id="{{data._id}}" name="name">Label</span>-->
@@ -26,7 +26,7 @@
                        <!-- fetch blocks -->
             <!--            <div class="display:flex flex-wrap:wrap justify-content:center text-align:center {{data.name}}" template_id="blocks-{{data._id}}" fetch-collection="blocks" filter-name="category" filter-value="{{data._name}}" filter-operator="$ne" order-by="menu-position" order-type="asc">-->
                             <!-- block template -->
-            <!--                <div class="card flex-grow:1 width:70px height:70px margin:5px padding:5px template" template_id="blocks-{{data._id}}" document_id="{{data._id}}" data-hover="display:block" data-hover_target="#editblock">-->
+            <!--                <div class="card flex-grow:1 width:70px height:70px margin:5px padding:5px template" template_id="blocks-{{data._id}}" document_id="{{data._id}}" hover="display:block" hover-target="#editblock">-->
             <!--                    <div id="editblock" class="position:absolute top:5 right:5 font-size:11px display:none">-->
             <!--                        <a target="modal" href="block-form.html" pass-collection="blocks" pass-document_id="{{data._id}}" pass_to="form-fields" modal-width="320px">-->
             <!--                            <i class="fas fa-pencil-alt"></i>-->
@@ -61,7 +61,7 @@
                      <!-- Blocks -->
                     <div id="blocks" class="block-panel display:non active" >
                         <!--Layout -->
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".sizing" data-hide=".sizing">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".sizing" hide=".sizing">
                             <span class="sizing hidden"><i class="fas fa-plus"></i></span>
                             <span class="sizing"><i class="fas fa-minus"></i></span>
                             <span>Layout</span>
@@ -91,7 +91,7 @@
                             </div>
                         </div>
                         <!-- Basics -->
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".basic-blocks" data-hide=".basic-blocks">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".basic-blocks" hide=".basic-blocks">
                             <span class="basic-blocks hidden"><i class="fas fa-plus"></i></span>
                             <span class="basic-blocks"><i class="fas fa-minus"></i></span>
                             <span>Basics</span>
@@ -120,7 +120,7 @@
                         </div>
 
                          <!--form-blocks -->
-                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" data-show=".form-blocks" data-hide=".form-blocks">
+                        <div class="padding:5px background:darkgrey border-bottom:1px_solid_grey" show=".form-blocks" hide=".form-blocks">
                             <span class="form-blocks hidden"><i class="fas fa-plus"></i></span>
                             <span class="form-blocks"><i class="fas fa-minus"></i></span>
                             <span>Form</span>

@@ -13,18 +13,18 @@
 
     <body>
         <div id="modal-viewport" class="hidden"></div>
-        <nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" data-scroll="sticky-nav, hide-nav" data-scroll_up="5" data-scroll_down="5">
+        <nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
             <!-- Horizontal Scroll Nav/Tabs -->
             <ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
 
                 <!-- Modal Controls -->
                 <li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
-                <li class="margin-right:15px"><a class="btn-modal-maximize"><i data-toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-maximize"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
                 <li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
 
                 <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px"><a fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+                <li class="margin-right:15px"><a fullscreen><i toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
@@ -131,7 +131,7 @@
 					                        <img collection="users" document_id="{{collection}}" name="avatar" onerror="this.style.display='none'" width="40px"/>
 					                    </span>
 					                </a>
-					                <div class="avatar-status"  collection="{{collection}}" document_id="{{data._id}}" data-user_status='{"name":"status"}'></div>
+					                <div class="avatar-status"  collection="{{collection}}" document_id="{{data._id}}" user-status='{"name":"status"}'></div>
 					            </div>
 							</div>
 							<div class="margin-left:5px diaplay:flex">

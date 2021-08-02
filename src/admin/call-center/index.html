@@ -154,10 +154,10 @@
         <div id="modal-viewport" class="hidden"></div>
 
         <!-- Navbar -->
-        <div class="nav display:flex align-items:center background:whitesmoke " data-main_content_id="content" data-scroll="sticky-nav, hide-nav" data-scroll_up="5" data-scroll_down="5">
+        <div class="nav display:flex align-items:center background:whitesmoke " data-main_content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
             <!-- Menu Icon Animations -->
-            <a class="nav-toggle menu_icon--Vdots" data-toggle_sidenav="menuL">
+            <a class="nav-toggle menu_icon--Vdots" toggle-sidenav="menuL">
                 <div class="circle"></div>
                 <div class="circle"></div>
                 <div class="circle"></div>
@@ -169,11 +169,11 @@
 
                 <!-- Modal Controls -->
                 <li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
-                <li class="margin-right:15px"><a class="btn-modal-maximize"><i data-toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-maximize"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
                 <li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
 
                 <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px"><a fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+                <li class="margin-right:15px"><a fullscreen><i toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
@@ -249,7 +249,7 @@
                                   	  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
                                   	</span>
                                 </a>
-                                <div class="avatar-status sessionUser_Id" collection="users" document_id="" data-user_status='{"name":"status"}'></div>
+                                <div class="avatar-status sessionUser_Id" collection="users" document_id="" user-status='{"name":"status"}'></div>
                             </div>
 
                             <!-- Call Details -->
@@ -363,19 +363,19 @@
             <!-- Datatable Navigation Tabs -->
             <ul class="overflow:auto display:inline-flex align-items:center list-style-type:none width:100% line-height:40px" role="tablist">
                 <li class="flex-grow:1 text-align:center line-height:40px min-width:140px">
-                    <a class="height:40px padding:.5rem_1rem tab active" href="#history" role="tab" data-toggle="tab" aria-selected="true"><i class="mdi mdi-history"></i> History</a>
+                    <a class="height:40px padding:.5rem_1rem tab active" href="#history" role="tab" toggle="tab" aria-selected="true"><i class="mdi mdi-history"></i> History</a>
                 </li>
 
                 <li class="flex-grow:1 text-align:center line-height:40px min-width:140px">
-                    <a class="height:40px padding:.5rem_1rem" href="#missed" role="tab" data-toggle="tab" aria-selected="false"><i class="mdi mdi-call-missed"></i> Missed Calls</a>
+                    <a class="height:40px padding:.5rem_1rem" href="#missed" role="tab" toggle="tab" aria-selected="false"><i class="mdi mdi-call-missed"></i> Missed Calls</a>
                 </li>
 
                 <li class="flex-grow:1 text-align:center line-height:40px min-width:140px">
-                    <a class="height:40px padding:.5rem_1rem" href="#voicemail" role="tab" data-toggle="tab" aria-selected="false"><i class="mdi mdi-voicemail"></i> Voicemail</a>
+                    <a class="height:40px padding:.5rem_1rem" href="#voicemail" role="tab" toggle="tab" aria-selected="false"><i class="mdi mdi-voicemail"></i> Voicemail</a>
                 </li>
 
                 <li class="flex-grow:1 text-align:center line-height:40px min-width:140px">
-                    <a class="height:40px padding:.5rem_1rem" href="#incoming" role="tab" data-toggle="tab" aria-selected="false"><i class="mdi mdi-phone-incoming"></i> Recordings</a>
+                    <a class="height:40px padding:.5rem_1rem" href="#incoming" role="tab" toggle="tab" aria-selected="false"><i class="mdi mdi-phone-incoming"></i> Recordings</a>
                 </li>
             </ul>
 
@@ -387,7 +387,7 @@
                             <input type="text" class="floating-label" filter-name="status" data-value_type="string" filter-operator="" template_id="datatable" placeholder="Status">
                             <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
     								<!-- need a solution to update toggle value="desc|asc" and define and upadte icons... show hide works great but to much html and orderby only has 2 values -->
-    								<a order-by="name" data-toggle_order template_id="datatable">
+    								<a order-by="name" toggle-order template_id="datatable">
     									<i></i>
     								</a>
     							</span>
@@ -400,14 +400,14 @@
                         <!--		template_id="datatable" -->
                         <!--		placeholder="Participants"/>-->
                         <!--		<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6" >-->
-                        <!--			<a order-by="_id" value="" data-toggle_order="true" template_id="datatable">-->
+                        <!--			<a order-by="_id" value="" toggle-order="true" template_id="datatable">-->
                         <!--			</a>-->
                         <!--		</span>-->
                         <!--</td>-->
                         <td class="position:sticky top:0 background:white padding:10px padding-top:0">
                             <input type="text" class="floating-label" filter-name="duration" data-value_type="string" filter-operator="" template_id="datatable" placeholder="duration" />
                             <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-    								<a order-by="_id" value="" data-toggle_order="true" template_id="datatable">
+    								<a order-by="_id" value="" toggle-order="true" template_id="datatable">
     								</a>
     							</span>
                         </td>
@@ -417,7 +417,7 @@
                     <tbody template_id="datatable" fetch-collection="testtwillio" fetch-count="15" order-by="" order-type="asc">
 
                         <!-- Datatable Row Template -->
-                        <tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{data._id}}" template_id="datatable" document_id="{{data._id}}" data-toggle="selected">
+                        <tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{data._id}}" template_id="datatable" document_id="{{data._id}}" toggle="selected">
                             <td class="padding:10px">
                                 <div class="display:flex min-width:200px">
                                     <div class="display:flex justify-content:center width:40px">
@@ -429,7 +429,7 @@
                                           	  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
                                           	</span>
                                         </a>
-                                            <!--<div class="avatar-status sessionUser_Id" collection="users" document_id="" data-user_status='{"name":"status"}'></div>-->
+                                            <!--<div class="avatar-status sessionUser_Id" collection="users" document_id="" user-status='{"name":"status"}'></div>-->
                                         </div>
                                     </div>
                                     <div class="margin-left:10px">
@@ -463,7 +463,7 @@
                             <!--                                  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>-->
                             <!--                              </span>-->
                             <!--                          </a>-->
-                            <!--                          <div class="avatar-status sessionUser_Id" collection="users" document_id="" data-user_status='{"name":"status"}'></div>-->
+                            <!--                          <div class="avatar-status sessionUser_Id" collection="users" document_id="" user-status='{"name":"status"}'></div>-->
                             <!--                      </div>			-->
                             <!--</td>-->
                             <td class="padding:10px">
@@ -532,7 +532,7 @@
                                               	  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
                                               	</span>
                                             </a>
-                                            <div class="avatar-status sessionUser_Id" collection="users" document_id="" data-user_status='{"name":"status"}'></div>
+                                            <div class="avatar-status sessionUser_Id" collection="users" document_id="" user-status='{"name":"status"}'></div>
                                         </div>
                                         <div>
                                             <h3 name="name" value="{{data.name}}">No Name</h3>
@@ -601,7 +601,7 @@
                                 </div>
                             </div>
                             <div class="display:flex justify-content:center width:33%">
-                                <button actions='createCall' class="answer is-animating" title="Answer Call" data-show="#end-call" data-hide="">
+                                <button actions='createCall' class="answer is-animating" title="Answer Call" show="#end-call" hide="">
             					    <i class="fas fa-phone"></i>
             					</button>
                                 <button id="#end-call" class="decline hidden" actions='hangupCall' title="End Call"><i class="fas fa-phone-slash"></i></button>
@@ -620,7 +620,7 @@
         </sidenav>
 
         <!-- SidNav RIght Key pad Button -->
-        <button data-toggle_sidenav="menuR" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:15">
+        <button toggle-sidenav="menuR" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:15">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 19a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M6 1a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m12-8a2 2 0 0 0 2-2a2 2 0 0 0-2-2a2 2 0 0 0-2 2a2 2 0 0 0 2 2m-6 8a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m6 0a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0-6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-6 0a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0-6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2z" fill="#626262"/></svg>
 		</button>
 

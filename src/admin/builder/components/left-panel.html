@@ -1,17 +1,17 @@
         <div class="padding:5px min-width:260px">
             <div class="display:flex margin-bottom:5px font-size:16px tabs">
-                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#vdom" data-selected_group="left-panels"><i class="fas fa-stream"></i></div>
-                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#assets" data-selected_group="left-panels">
+                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#vdom" selected-group="left-panels"><i class="fas fa-stream"></i></div>
+                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#assets" selected-group="left-panels">
                     <i class="fas fa-photo-video"></i>
                 </div>
-                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#files" data-selected_group="left-panels"><i class="fas fa-folder"></i></div>
-                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#uploader" data-selected_group="left-panels">
+                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#files" selected-group="left-panels"><i class="fas fa-folder"></i></div>
+                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#uploader" selected-group="left-panels">
                     <!--<a target="modal" href="https://server.cocreate.app/CoCreate-modules/CoCreate-builder/demo/components/uploader.html" pass-collection="files" pass-document_id="" pass-name="src" pass_to="render" modal-width="750px" modal-height="570px" modal-color="#229954">-->
                         <i class="fas fa-cloud-upload-alt"></i>
                     <!--    <div pass-collection="apples" pass-document_id="60ac06d5741a03083ab0740f" name='html' pass_to="code-editor"></div>-->
                     <!--</a>-->
                 </div>
-                <div className="left-tabs" class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#blocks" data-selected_group="left-panels" selected><i class="fas fa-th-large"></i></div>
+                <div className="left-tabs" class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#blocks" selected-group="left-panels" selected><i class="fas fa-th-large"></i></div>
 
             </div>
             <div class="overflow:overlay height:90vh">
@@ -19,8 +19,8 @@
                 <div id="blocks" class="left-panel display:none position:relative active">
                             
                     <div class="display:flex justify-content:center position:relative margin-bottom:30px">
-                        <div class="card background:gainsboro width:50% text-align:center padding:5px" data-selected="active" data-selected_target="#elements" data-selected_group="components" selected>Elements</div>
-                        <div class="card background:gainsboro width:50% text-align:center padding:5px" data-selected="active" data-selected_target="#components" data-selected_group="components" selected>Components</div>
+                        <div class="card background:gainsboro width:50% text-align:center padding:5px" selected-value="active" selected-target="#elements" selected-group="components" selected>Elements</div>
+                        <div class="card background:gainsboro width:50% text-align:center padding:5px" selected-value="active" selected-target="#components" selected-group="components" selected>Components</div>
                         <button target="modal" href="./applist"  pass_to="form-field" modal-width="830px" class="position:absolute top:13px padding:5px background:gainsboro color:#505050 grow-hover border-radius:50%">
                             <i class="fas fa-plus"></i>
                         </button>
@@ -31,7 +31,7 @@
                             
                          <!--Block Categories Template -->
                         <div class="template" template_id="block-categories" render-key="tag" render-array="tag.data" document_id="{{tag._id}}">
-                            <div class="padding:5px background:gainsboro" data-show=".category{{tag._id}}" data-hide=".category{{tag._id}}">
+                            <div class="padding:5px background:gainsboro" show=".category{{tag._id}}" hide=".category{{tag._id}}">
                                 <span class="category{{tag._id}} hidden"><i class="fas fa-plus"></i></span>
                                 <span class="category{{tag._id}}"><i class="fas fa-minus"></i></span>
                                 <span collection="{{tag.collection}}" document_id="{{tag._id}}" name="name">Category Name</span>
@@ -39,7 +39,7 @@
                              <!--Blocks  -->
                             <div class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px" template_id="{{tag._id}}" fetch-collection="blocks" filter-name="category" filter-value="{{tag._id}}" order-by="position" order-type="asc">
                                  <!--Blocks Template -->
-                                <div template_id="{{tag._id}}" class="template card flex-grow:1 width:70px height:75px margin:5px padding:5px" data-hover="display:block!important" data-hover_target="#editblock{{data._id}}" document_id="{{data._id}}">
+                                <div template_id="{{tag._id}}" class="template card flex-grow:1 width:70px height:75px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}" document_id="{{data._id}}">
                                     <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                         <!--<a target="modal" pass-collection="files" pass-document_id="60c02a57df12fd0d3939aca0" pass_to="render" modal-width="320px">-->
                                         <!--    <i class="fas fa-pencil-alt"></i>-->
@@ -63,7 +63,7 @@
                             
                          <!--Block Categories Template -->
                         <div class="template" template_id="component-categories" document_id="{{tag._id}}">
-                            <div class="padding:5px background:gainsboro" data-show=".category{{tag._id}}" data-hide=".category{{tag._id}}">
+                            <div class="padding:5px background:gainsboro" show=".category{{tag._id}}" hide=".category{{tag._id}}">
                                 <span class="category{{tag._id}} hidden"><i class="fas fa-plus"></i></span>
                                 <span class="category{{tag._id}}"><i class="fas fa-minus"></i></span>
                                 <span collection="{{tag.collection}}" document_id="{{tag._id}}" name="name">Category Name</span>
@@ -71,7 +71,7 @@
                              <!--Blocks  -->
                             <div class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px" template_id="{{tag._id}}" fetch-collection="blocks" filter-name="category" filter-value="{{tag._id}}" order-by="position" order-type="asc">
                                  <!--Blocks Template -->
-                                <div template_id="{{tag._id}}" class="template card flex-grow:1 width:70px height:125px margin:5px padding:5px" data-hover="display:block!important" data-hover_target="#editblock{{data._id}}" document_id="{{data._id}}">
+                                <div template_id="{{tag._id}}" class="template card flex-grow:1 width:70px height:125px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}" document_id="{{data._id}}">
                                     <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                         <!--<a target="modal" pass-collection="files" pass-document_id="60c02a57df12fd0d3939aca0" pass_to="render" modal-width="320px">-->
                                         <!--    <i class="fas fa-pencil-alt"></i>-->
@@ -112,12 +112,12 @@
                     </form>
                     <!--File Tree -->
                     <div class="padding:5px">
-                        <span class=""><i class="fa fa-caret-down" data-toggle="fa-caret-right, fa-caret-down"></i></span>
+                        <span class=""><i class="fa fa-caret-down" toggle="fa-caret-right, fa-caret-down"></i></span>
                         <span class="margin-left:5px" collection="websites" document_id="" name="name">Project name</span>
                         <div class="margin-left:10px sortable" template_id="folder" fetch-collection="files" filter-name="directory" filter-value="60b450107d36eaa01048ac49" filter-operator="$eq" order-by="name" order-type="asc" fetch-count="6" render_id="folder">
                              <!--Folder Template -->
                             <div class="template padding:5px" template_id="folder" document_id="{{folder._id}}" render-key="folder" render-array="folder.data">
-                                <span class=""><i class="fa fa-caret-down" data-toggle="fa-caret-right, fa-caret-down"></i></span>
+                                <span class=""><i class="fa fa-caret-down" toggle="fa-caret-right, fa-caret-down"></i></span>
                                 <span class="margin-left:5px" collection="folders" document_id="{{folder._id}}" name="name">{{folder.name}}</span>
                                 <!-- fetches folder and file template. This should create a loop until tree ends -->
                                 <div class="domEditor margin-left:10px" collection="component" document_id="60b45db37d36eaa01048ac50" name="html"></div>
@@ -146,7 +146,7 @@
                      <!--Assets -->
                     <div class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px" template_id="assets" fetch-collection="files" filter-name="content-type" filter-value="" order-by="position" order-type="asc">
                          <!--Asset Template -->
-                        <div template_id="assets" class="template card flex-grow:1 width:70px height:90px margin:5px padding:5px" data-hover="display:block!important" data-hover_target="#editblock{{data._id}}">
+                        <div template_id="assets" class="template card flex-grow:1 width:70px height:90px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}">
                             <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                 <a target="modal" href="https://server.cocreate.app/CoCreate-plugins/CoCreate-tui-image-editor/demo/index.html" pass-collection="blocks" pass-document_id="{{data._id}}" pass_to="form-fields" modal-width="900px">
                                     <i class="fas fa-pencil-alt"></i>

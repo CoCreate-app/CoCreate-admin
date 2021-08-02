@@ -37,18 +37,18 @@
         <div id="modal-viewport" class="hidden"></div>
 
         <!-- Navbar -->
-        <nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" data-scroll="sticky-nav, hide-nav" data-scroll_up="5" data-scroll_down="5">
+        <nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
             <!-- Horizontal Scroll Nav/Tabs -->
             <ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
 
                 <!-- Modal Controls -->
                 <li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
-                <li class="margin-right:15px"><a class="btn-modal-maximize"><i data-toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-maximize"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
                 <li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
 
                 <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px"><a fullscreen><i data-toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+                <li class="margin-right:15px"><a fullscreen><i toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
@@ -106,9 +106,9 @@
 				</cocreate-select>
 				
                 <div class="margin-top:10px display:flex tabs border-bottom:5px_solid_whitesmoke">
-                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#html" data-selected_group="code-editor" selected>HTML</div>
-                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#css" data-selected_group="code-editor">CSS</div>
-                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" data-selected="active" data-selected_target="#js" data-selected_group="code-editor">JS</div>
+                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#html" selected-group="code-editor" selected>HTML</div>
+                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#css" selected-group="code-editor">CSS</div>
+                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#js" selected-group="code-editor">JS</div>
                 </div>
                 <div id="html" name="html" class="codemirror overflow:hidden height:0px active"></div>
                 <div id="css" name="css" class="codemirror overflow:hidden height:0px"></div>
