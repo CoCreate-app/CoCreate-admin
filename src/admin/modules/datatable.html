@@ -135,6 +135,7 @@
 							<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954">
 								<b value="">{{data._id}}</b>
 								<div pass-collection="modules" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
+								<div pass-collection="files" pass-document_id="{{data._id}}" pass-name="src" pass_to="render"></div>
 							</a>
 						</td>
 					</tr>
@@ -149,6 +150,7 @@
 				<i class="fa fa-plus"></i>
 				<div pass_to="form-fields" pass-document_id=""></div>
 				<div pass_id="module-form" pass-value="" pass-filter-value="" pass_to="module_id"></div>
+                <div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
 			</a>
 		</button>
 

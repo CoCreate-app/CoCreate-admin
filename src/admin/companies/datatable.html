@@ -125,6 +125,8 @@
                                     <h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Name</h4>
 									<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
 									<div pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
+								<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
+									<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
                                 </a>
                                 <h5 name="description" value="description"></h5>
                             </div>
@@ -134,6 +136,7 @@
 								<b>{{data._id}}</b>
 								<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
 								<div pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
+								<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
 							</a>
                         </td>
                     </tr>
@@ -148,6 +151,7 @@
 				<i class="fa fa-plus"></i>
 				<div pass_to="form-fields" pass-document_id=""></div>
 				<div pass_id="module-form" pass-value="" pass-filter-value="" pass_to="module_id"></div>
+                <div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
 			</a>
 		</button>
 
