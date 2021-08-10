@@ -171,6 +171,36 @@ module.exports = {
             }
         },
         {
+            "entry": "./src/admin/builder/index.css",
+            "collection": "files",
+            "document_id": "610cb468c0e9580010e5ba50",
+            "key": "src",
+            "data": {
+                "name": "index.css",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/builder/index.css",
+                "public": "true",
+                "module_id": "5ff747727005da1c27274193"
+            }
+        },
+        {
+            "entry": "./src/admin/builder/components/right-panel.html",
+            "collection": "files",
+            "document_id": "60de0fae14b5ab0c2dd2febb",
+            "key": "src",
+            "data": {
+                "name": "right-panel.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/builder/components/right-panel.html",
+                "public": "true",
+                "module_id": "5ff747727005da1c27274193"
+            }
+        },
+        {
             "entry": "./src/admin/builder/components/nav.html",
             "collection": "files",
             "document_id": "60de0fae14b5ab0c2dd2feb9",

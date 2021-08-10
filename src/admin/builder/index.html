@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Builder | CoCreate</title>
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
-        <link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" data-save="true" data-parse="true" />
+        <link rel="stylesheet" href="./index.css" collection="files" document_id="610cb468c0e9580010e5ba50" name="src" type="text/css" data-save="true" data-parse="true" />
 
         <style>
             .editor-panel.active {
@@ -94,7 +94,7 @@
         <!-- Main Container -->
         <main data-main_content_id="canvas" class="height:100vh">
             <div class="canvas-container height:100% margin:auto">
-                <iframe data-vdom_id="test" id="canvas" pass_id="builder" collection="" document_id="" name="" read="false" frameborder="0" width="100%" height="100%"></iframe>
+                <iframe data-vdom_id="test" id="canvas" pass_id="builder" collection="" document_id="" name="src" read="false" update="false" frameborder="0" width="100%" height="100%"></iframe>
             </div>
         </main>
 
@@ -129,31 +129,30 @@
         <!-- End Hover Toolbar -->
 
         <!-- Collaboration Toolbar -->
-        <div id="collabElementcoc" data-toolbar_placent="top" data-toolbar_target="" class="position:absolute pointer-events:none display:non">
-            <div class="toolbar width:100%">
-                <span id="bold-button"><i class="fa fa-bold"></i></span>
-                <span id="italic-button"><i class="fa fa-italic"></i></span>
-                <span id="link-button"><i class="fa fa-link"></i></span>
-                <span id="blockquote-button"><i class="fa fa-quote-right"></i></span>
-                <span id="header-1-button"><i class="fa fa-header"><sub>1</sub></i></span>
-                <span id="header-2-button"><i class="fa fa-header"><sub>2</sub></i></span>
-                <div id="sidebar-controls">
-                    <span id="show-controls"><i class="fa fa-plus"></i></span>
-                    <span class="controls">
-                    <span id="image-button"><i class="fa fa-camera"></i></span>
-                    <span id="video-button"><i class="fa fa-play"></i></span>
-                    <span id="tweet-button"><i class="fa fa-twitter"></i></span>
-                    <span id="divider-button"><i class="fa fa-minus"></i></span>
-                    </span>
-                </div>
-            </div>
-            <div class="height:100% width:100%"></div>
-        </div>
+        <!--<div id="collabElementcoc" data-toolbar_placent="top" data-toolbar_target="" class="position:absolute pointer-events:none display:non">-->
+        <!--    <div class="toolbar width:100%">-->
+        <!--        <span id="bold-button"><i class="fa fa-bold"></i></span>-->
+        <!--        <span id="italic-button"><i class="fa fa-italic"></i></span>-->
+        <!--        <span id="link-button"><i class="fa fa-link"></i></span>-->
+        <!--        <span id="blockquote-button"><i class="fa fa-quote-right"></i></span>-->
+        <!--        <span id="header-1-button"><i class="fa fa-header"><sub>1</sub></i></span>-->
+        <!--        <span id="header-2-button"><i class="fa fa-header"><sub>2</sub></i></span>-->
+        <!--        <div id="sidebar-controls">-->
+        <!--            <span id="show-controls"><i class="fa fa-plus"></i></span>-->
+        <!--            <span class="controls">-->
+        <!--            <span id="image-button"><i class="fa fa-camera"></i></span>-->
+        <!--            <span id="video-button"><i class="fa fa-play"></i></span>-->
+        <!--            <span id="tweet-button"><i class="fa fa-twitter"></i></span>-->
+        <!--            <span id="divider-button"><i class="fa fa-minus"></i></span>-->
+        <!--            </span>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--    <div class="height:100% width:100%"></div>-->
+        <!--</div>-->
         <!-- End Collaboration Toolbar -->
 
-        <!--CoCreateJS-->
-        <script src="../apikey.js"></script>
 		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+		<!--<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>-->
 
     </body>
 

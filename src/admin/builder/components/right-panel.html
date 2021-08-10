@@ -17,7 +17,7 @@
         }
     </style>   
     
-    <form id="domEditorPanel" collection="builder" document_id="null" class="min-width:305px">
+    <form id="domEditorPanel" pass_id="builder" collection="" document_id="" class="min-width:305px">
         <div class="padding-left:5px padding-top:5px">
             <div class="display:flex margin-bottom:5px font-size:16px tabs">
                 <div className="tab" class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#styles" selected-group="editor-panels" selected><i class="fas fa-paint-brush"></i></div>
@@ -32,9 +32,9 @@
                  <!--Styles -->
                 <div id="styles" class="editor-panel display:none active" >
                     <div class="padding:0px_5px_20px_5px">
-                        <cocreate-select class="floating-label sortable" multiple placeholder="Classes" data-attributes="class" collection="builder" document_id="null" active>
-                          <input class="template-search" placeholder="Add a new class">
-                        </cocreate-select>
+                        <!--<cocreate-select class="floating-label sortable" multiple placeholder="Classes" data-attributes="class" pass_id="builder" collection="" document_id="" active>-->
+                        <!--  <input class="template-search" placeholder="Add a new class">-->
+                        <!--</cocreate-select>-->
                     </div>
                     <!--Layout -->
                     <div class="padding:5px background:gainsboro" show=".sizing" hide=".sizing">
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                         <div class="margin:0_5px">
-                            <input id="order" class="floating-label z-index:0" placeholder="Order:" data-attributes="classstyle" data-attributes_property="order"  collection="builder" document_id="null" active>
+                            <input id="order" class="floating-label z-index:0" placeholder="Order:" data-attributes="classstyle" data-attributes_property="order"  pass_id="builder" collection="" document_id="" active>
                         </div>
                     </div>
                      <!--Spacing -->
@@ -109,45 +109,21 @@
                     <div class="spacing padding-bottom:20px">
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <input id="margin-left" class="floating-label z-index:0" placeholder="margin-left:" data-attributes="classstyle" data-attributes_property="margin-left"   collection="builder" document_id="null" active>
+                                <input id="margin-left" class="floating-label z-index:0" placeholder="margin-left:" data-attributes="classstyle" data-attributes_property="margin-left"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="margin-left-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#margin-left">
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units1">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units1" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                    <cocreate-select id="margin-left-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#margin-left">
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units1">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units1" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <input id="margin-right" class="floating-label z-index:0" placeholder="margin-right:" data-attributes="classstyle" data-attributes_property="margin-right"   collection="builder" document_id="null" active>
+                                <input id="margin-right" class="floating-label z-index:0" placeholder="margin-right:" data-attributes="classstyle" data-attributes_property="margin-right"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="margin-right-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#margin-right">
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units2">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units2" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
-                                        </ul>
-                                    </cocreate-select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="display:flex height:50px">
-                            <div class="width:50% margin:0_5px">
-                                <input id="margin-top" class="floating-label z-index:0" placeholder="margin-top:" data-attributes="classstyle" data-attributes_property="margin-top" collection="builder" document_id="null" active>
-                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="margin-top-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#margin-top">
-
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units3">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units3" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
-                                        </ul>
-                                    </cocreate-select>
-                                </div>
-                            </div>
-                            <div class="width:50% margin:0_5px">
-                                <input id="margin-bottom" class="floating-label z-index:0" placeholder="margin-bottom:" data-attributes="classstyle" data-attributes_property="margin-bottom"   collection="builder" document_id="null" active>
-                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="margin-bottom-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#margin-bottom">
-
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units4">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units4" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                    <cocreate-select id="margin-right-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#margin-right">
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units2">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units2" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
@@ -155,23 +131,23 @@
                         </div>
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <input id="padding-left" class="floating-label z-index:0" placeholder="padding-left:" data-attributes="classstyle" data-attributes_property="padding-left"   collection="builder" document_id="null" active>
+                                <input id="margin-top" class="floating-label z-index:0" placeholder="margin-top:" data-attributes="classstyle" data-attributes_property="margin-top" pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="padding-left-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#width">
+                                    <cocreate-select id="margin-top-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#margin-top">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units5">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units5" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units3">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units3" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <input id="padding-right" class="floating-label z-index:0" placeholder="padding-right:" data-attributes="classstyle" data-attributes_property="padding-right"   collection="builder" document_id="null" active>
+                                <input id="margin-bottom" class="floating-label z-index:0" placeholder="margin-bottom:" data-attributes="classstyle" data-attributes_property="margin-bottom"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="padding-right-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#width">
+                                    <cocreate-select id="margin-bottom-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#margin-bottom">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units6">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units6" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units4">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units4" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
@@ -179,23 +155,47 @@
                         </div>
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <input id="padding-top" class="floating-label z-index:0" placeholder="padding-top:" data-attributes="classstyle" data-attributes_property="padding-top"   collection="builder" document_id="null" active>
+                                <input id="padding-left" class="floating-label z-index:0" placeholder="padding-left:" data-attributes="classstyle" data-attributes_property="padding-left"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="padding-top-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#width">
+                                    <cocreate-select id="padding-left-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#padding-left">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units7">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units7" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units5">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units5" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <input id="padding-bottom" class="floating-label z-index:0" placeholder="padding-bottom:" data-attributes="classstyle" data-attributes_property="padding-bottom"   collection="builder" document_id="null" active>
+                                <input id="padding-right" class="floating-label z-index:0" placeholder="padding-right:" data-attributes="classstyle" data-attributes_property="padding-right"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="padding-bottom-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#width">
+                                    <cocreate-select id="padding-right-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#padding-right">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units8">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units8" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units6">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units6" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <input id="padding-top" class="floating-label z-index:0" placeholder="padding-top:" data-attributes="classstyle" data-attributes_property="padding-top"   pass_id="builder" collection="" document_id="" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="padding-top-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#padding-top">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units7">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units7" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
+                                        </ul>
+                                    </cocreate-select>
+                                </div>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                <input id="padding-bottom" class="floating-label z-index:0" placeholder="padding-bottom:" data-attributes="classstyle" data-attributes_property="padding-bottom"   pass_id="builder" collection="" document_id="" active>
+                                <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
+                                    <cocreate-select id="padding-bottom-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#padding-bottom">
+
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units8">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units8" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
@@ -211,23 +211,23 @@
                     <div class="size padding-bottom:20px">
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <input id="width" class="floating-label z-index:0" placeholder="width:" data-attributes="classstyle" data-attributes_property="width"   collection="builder" document_id="null" active>
+                                <input id="width" class="floating-label z-index:0" placeholder="width:" data-attributes="classstyle" data-attributes_property="width"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="width-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#width">
+                                    <cocreate-select id="width-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#width">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units9">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units9" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units9">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units9" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <input id="height" class="floating-label z-index:0" placeholder="height:" data-attributes="classstyle" data-attributes_property="height"   collection="builder" document_id="null" active>
+                                <input id="height" class="floating-label z-index:0" placeholder="height:" data-attributes="classstyle" data-attributes_property="height"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="height-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#height">
+                                    <cocreate-select id="height-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#height">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units10">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units10" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units10">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units10" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
@@ -235,23 +235,23 @@
                         </div>
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <input id="min-width" class="floating-label z-index:0" placeholder="min-width:" data-attributes="classstyle" data-attributes_property="min-width"   collection="builder" document_id="null" active>
+                                <input id="min-width" class="floating-label z-index:0" placeholder="min-width:" data-attributes="classstyle" data-attributes_property="min-width"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-29px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="min-width-unit" class="styleunit remove-none border:none padding:0 min-height:18px!important background:whitesmoke font-size:12px" data-attributes="data-attributes_unit" data-attributes_target="#min-width">
+                                    <cocreate-select id="min-width-unit" class="styleunit remove-none border:none padding:0 min-height:18px!important background:#eee" data-attributes="data-attributes_unit" data-attributes_target="#min-width">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units11">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units11" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units11">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units11" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <input id="min-height" class="floating-label z-index:0" placeholder="min-height:" data-attributes="classstyle" data-attributes_property="min-height"   collection="builder" document_id="null" active>
+                                <input id="min-height" class="floating-label z-index:0" placeholder="min-height:" data-attributes="classstyle" data-attributes_property="min-height"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="min-height-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#min-height">
+                                    <cocreate-select id="min-height-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#min-height">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units12">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units12" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units12">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units12" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
@@ -259,23 +259,23 @@
                         </div>
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <input id="max-width" class="floating-label z-index:0" placeholder="max-width:" data-attributes="classstyle" data-attributes_property="max-width"   collection="builder" document_id="null" active>
+                                <input id="max-width" class="floating-label z-index:0" placeholder="max-width:" data-attributes="classstyle" data-attributes_property="max-width"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="max-width-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#max-width">
+                                    <cocreate-select id="max-width-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#max-width">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units13">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units13" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units13">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units13" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <input id="max-height" class="floating-label z-index:0" placeholder="max-height:" data-attributes="classstyle" data-attributes_property="max-height"   collection="builder" document_id="null" active>
+                                <input id="max-height" class="floating-label z-index:0" placeholder="max-height:" data-attributes="classstyle" data-attributes_property="max-height"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="max-height-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#max-height">
+                                    <cocreate-select id="max-height-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#max-height">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units14">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units14" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units14">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units14" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
@@ -291,23 +291,23 @@
                     <div class="position padding-bottom:20px">
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <input id="top" class="floating-label z-index:0" placeholder="top:" data-attributes="classstyle" data-attributes_property="top"   collection="builder" document_id="null" active>
+                                <input id="top" class="floating-label z-index:0" placeholder="top:" data-attributes="classstyle" data-attributes_property="top"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="top-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#top">
+                                    <cocreate-select id="top-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#top">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units15">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units15" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units15">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units15" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <input id="bottom" class="floating-label z-index:0" placeholder="bottom:" data-attributes="classstyle" data-attributes_property="bottom"   collection="builder" document_id="null" active>
+                                <input id="bottom" class="floating-label z-index:0" placeholder="bottom:" data-attributes="classstyle" data-attributes_property="bottom"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="bottom-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#bottom">
+                                    <cocreate-select id="bottom-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#bottom">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units16">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units16" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units16">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units16" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
@@ -315,23 +315,23 @@
                         </div>
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <input id="left" class="floating-label z-index:0" placeholder="left:" data-attributes="classstyle" data-attributes_property="left"   collection="builder" document_id="null" active>
+                                <input id="left" class="floating-label z-index:0" placeholder="left:" data-attributes="classstyle" data-attributes_property="left"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="left-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#left">
+                                    <cocreate-select id="left-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#left">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units17">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units17" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units17">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units17" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <input id="right" class="floating-label z-index:0" placeholder="right:" data-attributes="classstyle" data-attributes_property="right"   collection="builder" document_id="null" active>
+                                <input id="right" class="floating-label z-index:0" placeholder="right:" data-attributes="classstyle" data-attributes_property="right"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="right-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#right">
+                                    <cocreate-select id="right-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#right">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units18">
-                                            <cc-option class="template" template_id="units18" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units18">
+                                            <cc-option class="template" template_id="units18" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
@@ -346,7 +346,7 @@
                     </div>
                     <div class="typography padding-bottom:20px">
                         <div class="margin:0_5px">
-                            <cocreate-select class="floating-label" id="font-family" placeholder="font-family:" data-attributes="classstyle" data-attributes_property="font-family"  collection="builder" document_id="null" active>
+                            <cocreate-select class="floating-label" id="font-family" placeholder="font-family:" data-attributes="classstyle" data-attributes_property="font-family"  pass_id="builder" collection="" document_id="" active>
                                 <input class="search-options" placeholder="Search" data-item_selector=".option">
                                 <ul class="options z-index:7">
                                     <cc-option value="none"><span>none</span></cc-option>
@@ -367,45 +367,45 @@
                         </div>
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <input id="font-size" class="floating-label z-index:0" placeholder="font-size:" data-attributes="classstyle" data-attributes_property="font-size"   collection="builder" document_id="null" active>
+                                <input id="font-size" class="floating-label z-index:0" placeholder="font-size:" data-attributes="classstyle" data-attributes_property="font-size"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="font-size-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#font-size">
+                                    <cocreate-select id="font-size-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#font-size">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units19">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units19" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units19">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units19" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <input type="number" id="font-weight" class="floating-label z-index:0" placeholder="font-weight:" step="100" data-attributes="classstyle" data-attributes_property="font-weight"  collection="builder" document_id="null" active>
+                                <input type="number" id="font-weight" class="floating-label z-index:0" placeholder="font-weight:" step="100" data-attributes="classstyle" data-attributes_property="font-weight"  pass_id="builder" collection="" document_id="" active>
                             </div>
                         </div>
                         <div class="margin:0_5px">
                             <div class="floating-label" placeholder="color" active>
-                                <div id="color" class="color-picker" data-attributes="classstyle" data-attributes_property="color" collection="builder" document_id="null" name="color"></div>
+                                <div id="color" class="color-picker" data-attributes="classstyle" data-attributes_property="color" pass_id="builder" collection="" document_id="" name="color"></div>
                             </div>
                         </div>
                         <div class="margin:0_5px">
-                                <cocreate-select id="font-align" class="floating-label" placeholder="font-align:" data-attributes="classstyle" data-attributes_property="font-align"  collection="builder" document_id="null" active>
-                                    <ul class="options z-index:7 margin-top:5px">
-                                        <cc-option value="left">
-                                            <label class="fa fa-align-left"></label>
-                                        </cc-option>
-                                        <cc-option value="center">
-                                            <label class="fa fa-align-center"></label>
-                                        </cc-option>
-                                        <cc-option value="right">
-                                            <label class="fa fa-align-right"></label>
-                                        </cc-option>
-                                        <cc-option value="justify">
-                                            <label class="fa fa-align-justify"></label>
-                                        </cc-option>
-                                    </ul>
-                                </cocreate-select>
+                            <cocreate-select id="text-align" class="floating-label" placeholder="text-align:" data-attributes="classstyle" data-attributes_property="text-align"  pass_id="builder" collection="" document_id="" active>
+                                <ul class="options z-index:7 margin-top:5px">
+                                    <cc-option value="left">
+                                        <label class="fa fa-align-left"></label>
+                                    </cc-option>
+                                    <cc-option value="center">
+                                        <label class="fa fa-align-center"></label>
+                                    </cc-option>
+                                    <cc-option value="right">
+                                        <label class="fa fa-align-right"></label>
+                                    </cc-option>
+                                    <cc-option value="justify">
+                                        <label class="fa fa-align-justify"></label>
+                                    </cc-option>
+                                </ul>
+                            </cocreate-select>
                         </div>
                         <div class="margin:0_5px">
-                                <cocreate-select id="text-decoration" class="floating-label" placeholder="text-decoration:" data-attributes="classstyle" data-attributes_property="text-decoration" collection="builder" document_id="null" active>
+                                <cocreate-select id="text-decoration" class="floating-label" placeholder="text-decoration:" data-attributes="classstyle" data-attributes_property="text-decoration" pass_id="builder" collection="" document_id="" active>
                                     <ul class="options z-index:7 margin-top:5px">
                                         <cc-option value="x">
                                             <span class="fa fa-times"></span>
@@ -420,7 +420,7 @@
                                 </cocreate-select>
                         </div>
                         <div class="margin:0_5px">
-                            <cocreate-select class="remove-none floating-label" placeholder="font-style:" data-attributes="classstyle" data-attributes_property="font-style"  collection="builder" document_id="null" active>
+                            <cocreate-select class="remove-none floating-label" placeholder="font-style:" data-attributes="classstyle" data-attributes_property="font-style"  pass_id="builder" collection="" document_id="" active>
                                 <ul class="options z-index:7 margin-top:5px">
                                     <cc-option value="a">
                                         <label class="fa fa-font"></label>
@@ -441,18 +441,18 @@
                     <div class="border padding-bottom:20px">
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <input id="border-width" class="floating-label z-index:0" placeholder="border-width:" data-attributes="classstyle" data-attributes_property="border-width"   collection="builder" document_id="null" active>
+                                <input id="border-width" class="floating-label z-index:0" placeholder="border-width:" data-attributes="classstyle" data-attributes_property="border-width"   pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="border-width-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+                                    <cocreate-select id="border-width-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="border-width">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units21">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units21" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units21">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units21" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <cocreate-select class="floating-label" id="border-style" placeholder="border-style:" data-attributes="classstyle" data-attributes_property="border-style"  collection="builder" document_id="null" active>
+                                <cocreate-select class="floating-label" id="border-style" placeholder="border-style:" data-attributes="classstyle" data-attributes_property="border-style"  pass_id="builder" collection="" document_id="" active>
 
                                     <ul class="options z-index:7 margin-top:5px">
                                         <cc-option value="none"><span>none</span></cc-option>
@@ -470,15 +470,15 @@
                         </div>
                         <div class="margin:0_5px">
                             <div class="floating-label" placeholder="border-color" active>
-                                <div id="border-color" class="color-picker" data-attributes="classstyle" data-attributes_property="border-color" collection="builder" document_id="null" name="border-color"></div>
+                                <div id="border-color" class="color-picker" data-attributes="classstyle" data-attributes_property="border-color" pass_id="builder" collection="" document_id="" name="border-color"></div>
                             </div>
                         </div>
                         <div class="margin:0_5px">
-                            <input id="border-radius" class="floating-label z-index:0" placeholder="border-radius:" step="100" data-attributes="classstyle" data-attributes_property="border-radius"   collection="builder" document_id="null" active>
+                            <input id="border-radius" class="floating-label z-index:0" placeholder="border-radius:" step="100" data-attributes="classstyle" data-attributes_property="border-radius"   pass_id="builder" collection="" document_id="" active>
                             <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                <cocreate-select id="border-radius-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="border-radius">
-                                    <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units22">
-                                        <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units22" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                <cocreate-select id="border-radius-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="border-radius">
+                                    <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units22">
+                                        <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units22" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                     </ul>
                                 </cocreate-select>
                             </div>
@@ -495,23 +495,23 @@
                         <div class="card padding:10px_0px">
                             <div class="display:flex height:50px">
                                 <div class="width:50% margin:0_5px">
-                                    <input id="offsetx" class="floating-label z-index:0" placeholder="Offset X:" step="100" data-attributes="classstyle" data-attributes_property="offsetx"   collection="builder" document_id="null" active>
+                                    <input id="offsetx" class="floating-label z-index:0" placeholder="Offset X:" step="100" data-attributes="classstyle" data-attributes_property="offsetx"   pass_id="builder" collection="" document_id="" active>
                                     <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                        <cocreate-select id="property-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+                                        <cocreate-select id="property-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="border-width">
 
-                                            <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units23">
-                                                <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units23" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                            <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units23">
+                                                <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units23" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                             </ul>
                                         </cocreate-select>
                                     </div>
                                 </div>
                                 <div class="width:50% margin:0_5px">
-                                    <input id="offsetv" class="floating-label z-index:0" placeholder="Offset V:" step="100" data-attributes="classstyle" data-attributes_property="offsetv"   collection="builder" document_id="null" active>
+                                    <input id="offsetv" class="floating-label z-index:0" placeholder="Offset V:" step="100" data-attributes="classstyle" data-attributes_property="offsetv"   pass_id="builder" collection="" document_id="" active>
                                     <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                        <cocreate-select id="property-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+                                        <cocreate-select id="property-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="border-width">
 
-                                            <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units24">
-                                                <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units24" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                            <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units24">
+                                                <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units24" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                             </ul>
                                         </cocreate-select>
                                     </div>
@@ -519,30 +519,30 @@
                             </div>
                             <div class="display:flex height:50px">
                                 <div class="width:50% margin:0_5px">
-                                    <input id="blur" class="floating-label z-index:0" placeholder="Blur:" step="100" data-attributes="classstyle" data-attributes_sync="blur" data-attributes_unit="px"  collection="builder" document_id="null" active>
+                                    <input id="blur" class="floating-label z-index:0" placeholder="Blur:" step="100" data-attributes="classstyle" data-attributes_property="blur" data-attributes_unit="px"  pass_id="builder" collection="" document_id="" active>
                                     <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                        <cocreate-select id="property-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+                                        <cocreate-select id="property-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="border-width">
 
-                                            <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units25"25>
-                                                <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units26" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                            <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units25"25>
+                                                <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units26" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                             </ul>
                                         </cocreate-select>
                                     </div>
                                 </div>
                                 <div class="width:50% margin:0_5px">
-                                    <input id="spread" class="floating-label z-index:0" placeholder="Spread:" step="100" data-attributes="classstyle" data-attributes_sync="spread" data-attributes_unit="px"  collection="builder" document_id="null" active>
+                                    <input id="spread" class="floating-label z-index:0" placeholder="Spread:" step="100" data-attributes="classstyle" data-attributes_property="spread" data-attributes_unit="px"  pass_id="builder" collection="" document_id="" active>
                                     <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                        <cocreate-select id="property-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="border-width">
+                                        <cocreate-select id="property-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="border-width">
 
-                                            <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units27">
-                                                <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units27" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                            <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units27">
+                                                <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units27" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                             </ul>
                                         </cocreate-select>
                                     </div>
                                 </div>
                             </div>
                             <div class="margin:0_5px">
-                                <input id="fill-color" type="color" class="floating-label z-index:0" placeholder="fill-color:" data-attributes="classstyle" data-attributes_sync="fill-color"  collection="builder" document_id="null" active>
+                                <input id="fill-color" type="color" class="floating-label z-index:0" placeholder="fill-color:" data-attributes="classstyle" data-attributes_property="fill-color"  pass_id="builder" collection="" document_id="" active>
                             </div>
                         </div>
                     </div>    
@@ -554,10 +554,10 @@
                     </div>
                     <div class="backgroundset padding-bottom:20px">
                         <div class="floating-label" placeholder="background-color" active>
-                            <div id="background-color" class="color-picker" data-attributes="classstyle" data-attributes_sync="background-color" collection="builder" document_id="null"></div>
+                            <div id="background-color" class="color-picker" data-attributes="classstyle" data-attributes_property="background-color" pass_id="builder" collection="" document_id=""></div>
                         </div>
-                        <input id="background-image" type="file" class="floating-label z-index:0 display:none" placeholder="image:" step="100" data-attributes="classstyle" data-attributes_sync="background-image"  collection="builder" document_id="null" active>
-                        <cocreate-select class="floating-label" id="background-repeat" placeholder="background-repeat:" data-attributes="classstyle" data-attributes_property="background-repeat"  collection="builder" document_id="null" active>
+                        <input id="background-image" type="file" class="floating-label z-index:0 display:none" placeholder="image:" step="100" data-attributes="classstyle" data-attributes_property="background-image"  pass_id="builder" collection="" document_id="" active>
+                        <cocreate-select class="floating-label" id="background-repeat" placeholder="background-repeat:" data-attributes="classstyle" data-attributes_property="background-repeat"  pass_id="builder" collection="" document_id="" active>
 
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value="none"><span>none</span></cc-option>
@@ -567,7 +567,7 @@
                                 <cc-option value="norepeat"><span>no repeat</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <cocreate-select class="floating-label" id="background-position" placeholder="background-position" data-attributes="classstyle"  collection="builder" document_id="null" active>
+                        <cocreate-select class="floating-label" id="background-position" placeholder="background-position" data-attributes="classstyle"  pass_id="builder" collection="" document_id="" active>
 
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value="background-position:none"><span>none</span></cc-option>
@@ -582,7 +582,7 @@
                                 <cc-option value="background-position:cb"><span>center bottom</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <cocreate-select class="floating-label" id="background-attachment" placeholder="background-attachment:" data-attributes="classstyle" data-attributes_property="background-attachment"  collection="builder" document_id="null" active>
+                        <cocreate-select class="floating-label" id="background-attachment" placeholder="background-attachment:" data-attributes="classstyle" data-attributes_property="background-attachment"  pass_id="builder" collection="" document_id="" active>
 
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value="none"><span>none</span></cc-option>
@@ -591,7 +591,7 @@
                                 <cc-option value="local"><span>local</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <cocreate-select class="floating-label" id="background-size" placeholder="background-size:" data-attributes="classstyle" data-attributes_property="background-size"  collection="builder" document_id="null" active>
+                        <cocreate-select class="floating-label" id="background-size" placeholder="background-size:" data-attributes="classstyle" data-attributes_property="background-size"  pass_id="builder" collection="" document_id="" active>
 
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value="none"><span>none</span></cc-option>
@@ -609,10 +609,10 @@
                     </div>
                     <div class="extra padding:10px_0">
                         <div class="margin:0_5px">
-                            <input id="opacity" class="floating-label z-index:0" placeholder="opacity:" data-attributes="classstyle" data-attributes_property="opacity"   collection="builder" document_id="null" active>
+                            <input id="opacity" class="floating-label z-index:0" placeholder="opacity:" data-attributes="classstyle" data-attributes_property="opacity"   pass_id="builder" collection="" document_id="" active>
                         </div>
                         <div class="margin:0_5px">
-                            <cocreate-select class="floating-label" id="cursor" placeholder="Cursor:" data-attributes="classstyle" data-attributes_property="cursor"  collection="builder" document_id="null" active>
+                            <cocreate-select class="floating-label" id="cursor" placeholder="Cursor:" data-attributes="classstyle" data-attributes_property="cursor"  pass_id="builder" collection="" document_id="" active>
                                 
                                 <ul class="options z-index:7 margin-top:5px">
                                     <cc-option value="none"><span>none</span></cc-option>
@@ -654,7 +654,7 @@
                         </div>
                         <div class="card margin:10px padding:10px_0px">
                             <div class="margin:0_5px">
-                                <cocreate-select class="floating-label" id="filter-type" placeholder="FilterType:" data-attributes="classstyle" data-attributes_property="filter-type"  collection="builder" document_id="null" active>
+                                <cocreate-select class="floating-label" id="filter" placeholder="FilterType:" data-attributes="classstyle" data-attributes_property="filter"  pass_id="builder" collection="" document_id="" active>
         
                                     <ul class="options z-index:7 margin-top:5px">
                                         <cc-option value="none"><span>none</span></cc-option>
@@ -671,12 +671,12 @@
                                 </cocreate-select>
                             </div>
                             <div class="margin:0_5px">
-                                <input id="strenth" class="floating-label z-index:0" placeholder="strenth:" step="100" data-attributes="classstyle" data-attributes_property="strenth"   collection="builder" document_id="null" active>
+                                <input id="strenth" class="floating-label z-index:0" placeholder="strenth:" step="100" data-attributes="classstyle" data-attributes_property="strenth"   pass_id="builder" collection="" document_id="" active>
                             </div>
                         </div>
                         <div class="card margin:10px padding:10px_0px">
                             <div class="margin:0_5px">
-                                <cocreate-select class="floating-label" id="transform-type" placeholder="transform-type:" data-attributes="classstyle" data-attributes_property="transform-type"  collection="builder" document_id="null" active>
+                                <cocreate-select class="floating-label" id="transform" placeholder="transform:" data-attributes="classstyle" data-attributes_property="transform"  pass_id="builder" collection="" document_id="" active>
         
                                     <ul class="options z-index:7 margin-top:5px">
                                         <cc-option value="none"><span>none</span></cc-option>
@@ -696,12 +696,12 @@
                                 </cocreate-select>
                             </div>
                             <div class="margin:0_5px">
-                                <input id="translation-value" class="floating-label z-index:0" placeholder="Value:" step="100" data-attributes="classstyle" data-attributes_property="translation-value"   collection="builder" document_id="null" active>
+                                <input id="translate" class="floating-label z-index:0" placeholder="Value:" step="100" data-attributes="classstyle" data-attributes_property="translate"   pass_id="builder" collection="" document_id="" active>
                             </div>
                         </div>
                         <div class="card margin:10px padding:10px_0px">
                             <div class="margin:0_5px">
-                                <cocreate-select class="floating-label" id="transition-property" placeholder="TransitionProperty:" data-attributes="classstyle" data-attributes_property="transition-property"  collection="builder" document_id="null" active>
+                                <cocreate-select class="floating-label" id="transition-property" placeholder="TransitionProperty:" data-attributes="classstyle" data-attributes_property="transition-property"  pass_id="builder" collection="" document_id="" active>
         
                                     <ul class="options z-index:7 margin-top:5px">
                                         <cc-option value="none"><span>none</span></cc-option>
@@ -720,10 +720,10 @@
                             </div>
                             <div class="display:flex height:50px">
                                 <div class="width:50% margin:0_5px">
-                                    <input id="duration" class="floating-label z-index:0" placeholder="duration:" step="100" data-attributes="classstyle" data-attributes_property="duration"   collection="builder" document_id="null" active>
+                                    <input id="duration" class="floating-label z-index:0" placeholder="duration:" step="100" data-attributes="classstyle" data-attributes_property="duration"   pass_id="builder" collection="" document_id="" active>
                                 </div>
                                 <div class="width:50% margin:0_5px">
-                                    <cocreate-select class="floating-label" id="easing" placeholder="Easing:" data-attributes="classstyle" data-attributes_property="easing"  collection="builder" document_id="null" active>
+                                    <cocreate-select class="floating-label" id="easing" placeholder="Easing:" data-attributes="classstyle" data-attributes_property="easing"  pass_id="builder" collection="" document_id="" active>
             
                                         <ul class="options z-index:7 margin-top:5px">
                                             <cc-option value="none"><span>none</span></cc-option>
@@ -749,7 +749,7 @@
                     <div class="database padding-bottom:20px">
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <cocreate-select class="floating-label" id="realtime" placeholder="realtime:" data-attributes="realtime"  collection="builder" document_id="null" active>
+                                <cocreate-select class="floating-label" id="realtime" placeholder="realtime:" data-attributes="realtime"  pass_id="builder" collection="" document_id="" active>
                                     <ul class="options z-index:7 margin-top:5px" data-search_id="search_01">
                                         <cc-option value=""><span>none</span></cc-option>
                                         <cc-option value="true"><span>true</span></cc-option>
@@ -758,7 +758,7 @@
                                 </cocreate-select>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <cocreate-select class="floating-label" id="data-cursors" placeholder="data-cursors:" data-attributes="data-cursors"  collection="builder" document_id="null" active>
+                                <cocreate-select class="floating-label" id="data-cursors" placeholder="data-cursors:" data-attributes="data-cursors"  pass_id="builder" collection="" document_id="" active>
                                     <ul class="options z-index:7 margin-top:5px">
                                         <cc-option value=""><span>none</span></cc-option>
                                         <cc-option value="true"><span>true</span></cc-option>
@@ -768,7 +768,7 @@
                             </div>
                         </div>
                         <div class="margin:0_5px">
-                             <cocreate-select class="floating-label" id="collection" placeholder="collection:" data-attributes="collection"  collection="builder" document_id="null" active>
+                             <cocreate-select class="floating-label" id="collection" placeholder="collection:" data-attributes="collection"  pass_id="builder" collection="" document_id="" active>
                                     <ul class="options z-index:7 margin-top:5px">
                                         <cc-option value=""><span>none</span></cc-option>
                                         <cc-option value="true"><span>true</span></cc-option>
@@ -777,7 +777,7 @@
                             </cocreate-select>
                         </div>
                         <div class="margin:0_5px">
-                            <cocreate-select class="floating-label" id="data-docuemnt_id" placeholder="data-docuemnt_id:" data-attributes="data-docuemnt_id" collection="builder" document_id="null" active>
+                            <cocreate-select class="floating-label" id="data-docuemnt_id" placeholder="data-docuemnt_id:" data-attributes="data-docuemnt_id" pass_id="builder" collection="" document_id="" active>
                                 <ul class="options z-index:7 margin-top:5px">
                                     <cc-option value=""><span>none</span></cc-option>
                                     <cc-option value="true"><span>true</span></cc-option>
@@ -787,15 +787,15 @@
                         </div>
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <input data-attributes="data-prefix" type="text" class="floating-label" placeholder="data-prefix" id="data-prefix" collection="builder" document_id="null" active>
+                                <input data-attributes="data-prefix" type="text" class="floating-label" placeholder="data-prefix" id="data-prefix" pass_id="builder" collection="" document_id="" active>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <input data-attributes="name" type="text" class="floating-label" placeholder="Name" id="name" collection="builder" document_id="null" active>
+                                <input data-attributes="name" type="text" class="floating-label" placeholder="Name" id="name" pass_id="builder" collection="" document_id="" active>
                             </div>
                         </div>
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <cocreate-select class="floating-label" id="read" placeholder="read:" data-attributes="read"  collection="builder" document_id="null" active>
+                                <cocreate-select class="floating-label" id="read" placeholder="read:" data-attributes="read"  pass_id="builder" collection="" document_id="" active>
                                     <ul class="options z-index:7 margin-top:5px">
                                         <cc-option value=""><span>none</span></cc-option>
                                         <cc-option value="true"><span>true</span></cc-option>
@@ -804,7 +804,7 @@
                                 </cocreate-select>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                 <cocreate-select class="floating-label" id="data-save" placeholder="save:" data-attributes="data-save"  collection="builder" document_id="null" active>
+                                 <cocreate-select class="floating-label" id="data-save" placeholder="save:" data-attributes="data-save"  pass_id="builder" collection="" document_id="" active>
                                     <ul class="options z-index:7 margin-top:5px">
                                         <cc-option value=""><span>none</span></cc-option>
                                         <cc-option value="true"><span>true</span></cc-option>
@@ -814,7 +814,7 @@
                             </div>
                         </div>
                         <div class="margin:0_5px">
-                             <cocreate-select class="floating-label" id="data-action" placeholder="data-action:" data-attributes="data-action"  collection="builder" document_id="null" active>
+                             <cocreate-select class="floating-label" id="data-action" placeholder="data-action:" data-attributes="data-action"  pass_id="builder" collection="" document_id="" active>
                                 <ul class="options z-index:7 margin-top:5px">
                                     <cc-option value=""><span>none</span></cc-option>
                                     <cc-option value="true"><span>true</span></cc-option>
@@ -829,24 +829,24 @@
                         <span>Fetch List</span>
                     </div>
                     <div class="fetchlist padding-bottom:20px margin:0_5px">
-                        <cocreate-select class="floating-label" id="fetch-collection" placeholder="fetch-collection:" data-attributes="fetch-collection"  collection="builder" document_id="null" active>
+                        <cocreate-select class="floating-label" id="fetch-collection" placeholder="fetch-collection:" data-attributes="fetch-collection"  pass_id="builder" collection="" document_id="" active>
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value=""><span>none</span></cc-option>
                                 <cc-option value="true"><span>true</span></cc-option>
                                 <cc-option value="false"><span>false</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <cocreate-select class="floating-label" id="fetch-docuemnt_id" placeholder="fetch-docuemnt_id:" data-attributes="fetch-docuemnt_id"  collection="builder" document_id="null" active>
+                        <cocreate-select class="floating-label" id="fetch-docuemnt_id" placeholder="fetch-docuemnt_id:" data-attributes="fetch-docuemnt_id"  pass_id="builder" collection="" document_id="" active>
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value=""><span>none</span></cc-option>
                                 <cc-option value="true"><span>true</span></cc-option>
                                 <cc-option value="false"><span>false</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <input data-attributes="fetch-name" type="text" class="floating-label" placeholder="fetch-name"  id="fetch-name" collection="builder" document_id="null" active>
-                        <input data-attributes="filter-name" type="text" class="floating-label" placeholder="filter-name"  id="filter-name" collection="builder" document_id="null" active>
-                        <input data-attributes="filter-value" type="text" class="floating-label" placeholder="filter-value"  id="filter-value" collection="builder" document_id="null" active>
-                        <input data-attributes="template_id" type="text" class="floating-label" placeholder="template_id"  id="template_id" collection="builder" document_id="null" active>    
+                        <input data-attributes="fetch-name" type="text" class="floating-label" placeholder="fetch-name"  id="fetch-name" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="filter-name" type="text" class="floating-label" placeholder="filter-name"  id="filter-name" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="filter-value" type="text" class="floating-label" placeholder="filter-value"  id="filter-value" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="template_id" type="text" class="floating-label" placeholder="template_id"  id="template_id" pass_id="builder" collection="" document_id="" active>    
                     </div>
                 </div>
                 <!--Broadcast -->
@@ -857,31 +857,31 @@
                         <span>Broadcast</span>
                     </div>
                     <div class="broadcast padding-bottom:20px margin:0_5px">
-                        <cocreate-select class="floating-label" id="pass-collection" placeholder="broadcast" data-attributes="pass-collection"  collection="builder" document_id="null" active>
+                        <cocreate-select class="floating-label" id="pass-collection" placeholder="broadcast" data-attributes="pass-collection"  pass_id="builder" collection="" document_id="" active>
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value=""><span>none</span></cc-option>
                                 <cc-option value="true"><span>true</span></cc-option>
                                 <cc-option value="false"><span>false</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <cocreate-select class="floating-label" id="pass-document_id" placeholder="broadcast-sender" data-attributes="pass-document_id"  collection="builder" document_id="null" active>
+                        <cocreate-select class="floating-label" id="pass-document_id" placeholder="broadcast-sender" data-attributes="pass-document_id"  pass_id="builder" collection="" document_id="" active>
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value=""><span>none</span></cc-option>
                                 <cc-option value="true"><span>true</span></cc-option>
                                 <cc-option value="false"><span>false</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <input data-attributes="pass-value" type="text" class="floating-label" placeholder="namespace"  id="pass-value" collection="builder" document_id="null" active>
-                        <input data-attributes="pass-value" type="text" class="floating-label" placeholder="room"  id="pass-value" collection="builder" document_id="null" active>
+                        <input data-attributes="namespace" type="text" class="floating-label" placeholder="namespace"  id="namespace" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="room" type="text" class="floating-label" placeholder="room"  id="room" pass_id="builder" collection="" document_id="" active>
                     </div>
                     <!--Messages -->
-                    <div class="padding:5px background:gainsboro" show=".calculator" hide=".calculator">
-                        <span class="calculator hidden"><i class="fas fa-plus"></i></span>
-                        <span class="calculator"><i class="fas fa-minus"></i></span>
+                    <div class="padding:5px background:gainsboro" show=".messages" hide=".messages">
+                        <span class="messages hidden"><i class="fas fa-plus"></i></span>
+                        <span class="messages"><i class="fas fa-minus"></i></span>
                         <span>messages</span>
                     </div>
-                    <div class="calculator padding-bottom:20px margin:0_5px">
-                        <input data-attributes="data-calculation" type="text" class="floating-label" placeholder="messages" id="data-calculation" collection="builder" document_id="null" active>
+                    <div class="messages padding-bottom:20px margin:0_5px">
+                        <input data-attributes="message" type="text" class="floating-label" placeholder="messages" id="message" pass_id="builder" collection="" document_id="" active>
                     </div>
                 </div>
                 <!--Logic -->
@@ -892,16 +892,16 @@
                         <span>Logic</span>
                     </div>
                     <div class="logic padding-bottom:20px margin:0_5px">
-                        <input data-attributes="pass_to" type="text" class="floating-label" placeholder="pass_to" collection="builder" document_id="null" active>
-                        <input data-attributes="pass_id" type="text" class="floating-label" placeholder="pass_id" collection="builder" document_id="null" active>
-                        <cocreate-select class="floating-label" id="pass-collection" placeholder="pass-collection:" data-attributes="pass-collection"  collection="builder" document_id="null" active>
+                        <input data-attributes="pass_to" type="text" class="floating-label" placeholder="pass_to" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="pass_id" type="text" class="floating-label" placeholder="pass_id" pass_id="builder" collection="" document_id="" active>
+                        <cocreate-select class="floating-label" id="pass-collection" placeholder="pass-collection:" data-attributes="pass-collection"  pass_id="builder" collection="" document_id="" active>
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value=""><span>none</span></cc-option>
                                 <cc-option value="true"><span>true</span></cc-option>
                                 <cc-option value="false"><span>false</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <cocreate-select class="floating-label" id="pass-document_id" placeholder="pass-document_id:" data-attributes="pass-document_id"  collection="builder" document_id="null" active>
+                        <cocreate-select class="floating-label" id="pass-document_id" placeholder="pass-document_id:" data-attributes="pass-document_id"  pass_id="builder" collection="" document_id="" active>
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value=""><span>none</span></cc-option>
                                 <cc-option value="true"><span>true</span></cc-option>
@@ -910,43 +910,41 @@
                         </cocreate-select>
                         <div class="display:flex height:50px">
                             <div class="width:50% margin-right:5px">
-                                <input data-attributes="pass-prefix" type="text" class="floating-label" placeholder="pass-prefix"  id="pass-prefix" collection="builder" document_id="null" active>
+                                <input data-attributes="pass-prefix" type="text" class="floating-label" placeholder="pass-prefix"  id="pass-prefix" pass_id="builder" collection="" document_id="" active>
                             </div>
                             <div class="width:50% margin-left:5px">
-                                <input data-attributes="pass-name" type="text" class="floating-label" placeholder="pass-name"  id="pass-name" collection="builder" document_id="null" active>
+                                <input data-attributes="pass-name" type="text" class="floating-label" placeholder="pass-name"  id="pass-name" pass_id="builder" collection="" document_id="" active>
                             </div>
                         </div>
                 
-                        <input data-attributes="pass-value" type="text" class="floating-label" placeholder="pass-value"  id="pass-value" collection="builder" document_id="null" active>
-                        <cocreate-select class="floating-label" id="pass-fetch_collection" placeholder="pass-fetch_collection:" data-attributes="pass-fetch_collection"  collection="builder" document_id="null" active>
+                        <input data-attributes="pass-value" type="text" class="floating-label" placeholder="pass-value"  id="pass-value" pass_id="builder" collection="" document_id="" active>
+                        <cocreate-select class="floating-label" id="pass-fetch_collection" placeholder="pass-fetch_collection:" data-attributes="pass-fetch_collection"  pass_id="builder" collection="" document_id="" active>
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value=""><span>none</span></cc-option>
                                 <cc-option value="true"><span>true</span></cc-option>
                                 <cc-option value="false"><span>false</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <cocreate-select class="floating-label" id="pass-fetch_document_id" placeholder="pass-fetch_document_id:" data-attributes="pass-fetch_document_id"  collection="builder" document_id="null" active>
+                        <cocreate-select class="floating-label" id="pass-fetch_document_id" placeholder="pass-fetch_document_id:" data-attributes="pass-fetch_document_id"  pass_id="builder" collection="" document_id="" active>
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value=""><span>none</span></cc-option>
                                 <cc-option value="true"><span>true</span></cc-option>
                                 <cc-option value="false"><span>false</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <input data-attributes="pass-fetch_name" type="text" class="floating-label" placeholder="pass-fetch_name"  id="pass-fetch_name" collection="builder" document_id="null" active>
-                        <input data-attributes="pass-filter-name" type="text" class="floating-label" placeholder="pass-filter-name"  id="pass-filter-name" collection="builder" document_id="null" active>
-                        <input data-attributes="pass-filter-value" type="text" class="floating-label" placeholder="pass-filter-value"  id="pass-filter-value"collection="builder" document_id="null" active>
-                        <cocreate-select class="floating-label" id="pass-refresh" placeholder="pass-refresh" data-attributes="pass-refresh"  collection="builder" document_id="null" active>
+                        <input data-attributes="pass-fetch_name" type="text" class="floating-label" placeholder="pass-fetch_name"  id="pass-fetch_name" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="pass-filter-name" type="text" class="floating-label" placeholder="pass-filter-name"  id="pass-filter-name" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="pass-filter-value" type="text" class="floating-label" placeholder="pass-filter-value"  id="pass-filter-value"pass_id="builder" collection="" document_id="" active>
+                        <cocreate-select class="floating-label" id="pass-refresh" placeholder="pass-refresh" data-attributes="pass-refresh"  pass_id="builder" collection="" document_id="" active>
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value=""><span>none</span></cc-option>
                                 <cc-option value="true"><span>true</span></cc-option>
                                 <cc-option value="false"><span>false</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <input data-attributes="pass-value_to" type="text" class="floating-label" placeholder="pass-value_to"  id="pass-value_to" collection="builder" document_id="null" active>
-                        <input data-attributes="pass-value_id" type="text" class="floating-label" placeholder="pass-value_id"  id="pass-value_id" collection="builder" document_id="null" active>
-                        <input data-attributes="get-value" type="text" class="floating-label" placeholder="get-value"  id="get-value" collection="builder" document_id="null" active>
-                        <input data-attributes="room" type="text" class="floating-label" placeholder="room"  id="room" collection="builder" document_id="null" active>
-                        <input data-attributes="namespace" type="text" class="floating-label" placeholder="namespace"  id="namespace" collection="builder" document_id="null" active>
+                        <input data-attributes="pass-value_to" type="text" class="floating-label" placeholder="pass-value_to"  id="pass-value_to" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="pass-value_id" type="text" class="floating-label" placeholder="pass-value_id"  id="pass-value_id" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="get-value" type="text" class="floating-label" placeholder="get-value"  id="get-value" pass_id="builder" collection="" document_id="" active>
                     </div>
                     <div class="padding:5px background:gainsboro" show=".datavisible" hide=".datavisible">
                         <span class="datavisible hidden"><i class="fas fa-plus"></i></span>
@@ -954,8 +952,8 @@
                         <span>Conditional Logic</span>
                     </div>
                     <div class="datavisible padding-bottom:20px margin:0_5px">
-                        <input data-attributes="show" type="text" class="floating-label" placeholder="show"  id="show" collection="builder" document_id="null" active>
-                        <input data-attributes="hide" type="text" class="floating-label" placeholder="hide"  id="hide" collection="builder" document_id="null" active>
+                        <input data-attributes="show" type="text" class="floating-label" placeholder="show"  id="show" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="hide" type="text" class="floating-label" placeholder="hide"  id="hide" pass_id="builder" collection="" document_id="" active>
                     </div>
                     <div class="padding:5px background:gainsboro" show=".dataselected" hide=".dataselected">
                         <span class="dataselected hidden"><i class="fas fa-plus"></i></span>
@@ -963,11 +961,11 @@
                         <span>Selected</span>
                     </div>
                     <div class="dataselected padding-bottom:20px margin:0_5px">
-                        <input data-attributes="selected-value" type="text" class="floating-label" placeholder="selected-value"  id="selected-value" collection="builder" document_id="null" active>
-                        <input data-attributes="selected-attribute" type="text" class="floating-label" placeholder="selected-attribute"  id="selected-attribute" collection="builder" document_id="null" active>
-                        <input data-attributes="selected-target" type="text" class="floating-label" placeholder="selected-target"  id="selected-target" collection="builder" document_id="null" active>
-                        <input data-attributes="selected-closest" type="text" class="floating-label" placeholder="selected-closest"  id="selected-closest" collection="builder" document_id="null" active>
-                        <input data-attributes="selected-group" type="text" class="floating-label" placeholder="selected-group"  id="selected-group" collection="builder" document_id="null" active>
+                        <input data-attributes="selected-value" type="text" class="floating-label" placeholder="selected-value"  id="selected-value" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="selected-attribute" type="text" class="floating-label" placeholder="selected-attribute"  id="selected-attribute" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="selected-target" type="text" class="floating-label" placeholder="selected-target"  id="selected-target" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="selected-closest" type="text" class="floating-label" placeholder="selected-closest"  id="selected-closest" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="selected-group" type="text" class="floating-label" placeholder="selected-group"  id="selected-group" pass_id="builder" collection="" document_id="" active>
                     </div>
                     <div class="padding:5px background:gainsboro" show=".toggleattr" hide=".toggleattr">
                         <span class="toggleattr hidden"><i class="fas fa-plus"></i></span>
@@ -975,10 +973,10 @@
                         <span>Toggle</span>
                     </div>
                     <div class="toggleattr padding-bottom:20px margin:0_5px">
-                        <input data-attributes="toggle" type="text" class="floating-label" placeholder="toggle"  id="toggle" collection="builder" document_id="null" active>
-                        <input data-attributes="toggle-attribute" type="text" class="floating-label" placeholder="toggle-attribute"  id="toggle-attribute" collection="builder" document_id="null" active>
-                        <input data-attributes="toggle-target" type="text" class="floating-label" placeholder="toggle-target"  id="toggle-target" collection="builder" document_id="null" active>
-                        <input data-attributes="toggle-closest" type="text" class="floating-label" placeholder="toggle-closest"  id="toggle-closest" collection="builder" document_id="null" active>
+                        <input data-attributes="toggle" type="text" class="floating-label" placeholder="toggle"  id="toggle" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="toggle-attribute" type="text" class="floating-label" placeholder="toggle-attribute"  id="toggle-attribute" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="toggle-target" type="text" class="floating-label" placeholder="toggle-target"  id="toggle-target" pass_id="builder" collection="" document_id="" active>
+                        <input data-attributes="toggle-closest" type="text" class="floating-label" placeholder="toggle-closest"  id="toggle-closest" pass_id="builder" collection="" document_id="" active>
                     </div>
                     <div class="padding:5px background:gainsboro" show=".hoverattr" hide=".hoverattr">
                         <span class="hoverattr hidden"><i class="fas fa-plus"></i></span>
@@ -986,10 +984,10 @@
                         <span>Hover</span>
                     </div>
                     <div class="hoverattr padding-bottom:20px margin:0_5px">
-                        <input type="text" class="floating-label" data-attributes="hover" placeholder="hover" id="hover" collection="builder" document_id="null" active>
-                        <input type="text" data-attributes="hover-attribute" class="floating-label" placeholder="hover-attribute"  id="hover-attribute" collection="builder" document_id="null" active>
-                        <input type="text" data-attributes="hover-target" class="floating-label" placeholder="hover-target"  id="hover-target" collection="builder" document_id="null" active>
-                        <input type="text" data-attributes="hover-closest" class="floating-label" placeholder="hover-closest"  id="hover-closest" collection="builder" document_id="null" active>
+                        <input type="text" class="floating-label" data-attributes="hover" placeholder="hover" id="hover" pass_id="builder" collection="" document_id="" active>
+                        <input type="text" data-attributes="hover-attribute" class="floating-label" placeholder="hover-attribute"  id="hover-attribute" pass_id="builder" collection="" document_id="" active>
+                        <input type="text" data-attributes="hover-target" class="floating-label" placeholder="hover-target"  id="hover-target" pass_id="builder" collection="" document_id="" active>
+                        <input type="text" data-attributes="hover-closest" class="floating-label" placeholder="hover-closest"  id="hover-closest" pass_id="builder" collection="" document_id="" active>
                     </div>
                     <div class="padding:5px background:gainsboro" show=".scroll" hide=".scroll">
                         <span class="scroll hidden"><i class="fas fa-plus"></i></span>
@@ -998,39 +996,39 @@
                     </div>
                     <div class="scroll padding-bottom:20px">
                         <div class="margin:0_5px">
-                            <input type="text" data-attributes="scroll" class="floating-label" placeholder="scroll"  id="scroll" collection="builder" document_id="null" active>
-                            <input type="text" data-attributes="scroll-attribute" class="floating-label" placeholder="scroll-attribute"  id="scroll-attribute" collection="builder" document_id="null" active>
-                            <input type="text" data-attributes="scroll-target" class="floating-label" placeholder="scroll-target"  id="scroll-target" collection="builder" document_id="null" active>
-                            <input type="text" data-attributes="scroll-closest" class="floating-label" placeholder="scroll-closest"   id="scroll-closest" collection="builder" document_id="null" active>
+                            <input type="text" data-attributes="scroll" class="floating-label" placeholder="scroll"  id="scroll" pass_id="builder" collection="" document_id="" active>
+                            <input type="text" data-attributes="scroll-attribute" class="floating-label" placeholder="scroll-attribute"  id="scroll-attribute" pass_id="builder" collection="" document_id="" active>
+                            <input type="text" data-attributes="scroll-target" class="floating-label" placeholder="scroll-target"  id="scroll-target" pass_id="builder" collection="" document_id="" active>
+                            <input type="text" data-attributes="scroll-closest" class="floating-label" placeholder="scroll-closest"   id="scroll-closest" pass_id="builder" collection="" document_id="" active>
                         </div>
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
-                                <input id="scroll-up" class="floating-label z-index:0" placeholder="scroll-up" data-attributes="classstyle" data-attributes_property="scroll-up" collection="builder" document_id="null" active>
+                                <input id="scroll-up" class="floating-label z-index:0" placeholder="scroll-up" data-attributes="scroll-up" pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="scroll-up-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#scroll-up">
+                                    <cocreate-select id="scroll-up-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#scroll-up">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units29">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px border-radius:4px" template_id="units29" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units29">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px border-radius:4px" template_id="units29" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
                             </div>
                             <div class="width:50% margin:0_5px">
-                                <input id="scroll-down" class="floating-label z-index:0" placeholder="scroll-down:" data-attributes="classstyle" data-attributes_property="scroll-down" collection="builder" document_id="null" active>
+                                <input id="scroll-down" class="floating-label z-index:0" placeholder="scroll-down:" data-attributes="scroll-down" pass_id="builder" collection="" document_id="" active>
                                 <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                    <cocreate-select id="scroll-down-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#scroll-down">
+                                    <cocreate-select id="scroll-down-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#scroll-down">
 
-                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units30">
-                                            <cc-option class="template option margin:0px padding:3px border-radius:4px" template_id="units30" value="{{units[]}}"><span value="{{units[]}}">Unit Name</span></cc-option>
+                                        <ul class="options overflow:auto padding:0px z-index:7" fetch-collection="modules" filter-value="5ff747727005da1c27274193" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units30">
+                                            <cc-option class="template margin:0px padding:3px border-radius:4px" template_id="units30" value="{{units[]}}"><span value="{{units[]}}">{{units[]}}</span></cc-option>
                                         </ul>
                                     </cocreate-select>
                                 </div>
                             </div>
                         </div>
                         <div class="margin:0_5px">
-                            <input id="scroll-position" data-attributes="scroll-position" class="floating-label z-index:0" placeholder="scroll-position:" collection="builder" document_id="null" active>
+                            <input id="scroll-position" data-attributes="scroll-position" class="floating-label z-index:0" placeholder="scroll-position:" pass_id="builder" collection="" document_id="" active>
                             <div class="position:relative width:40px top:-32px right:8px float:right cursor:pointer">
-                                <cocreate-select id="scroll-position-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" collection="builder" document_id="null" data-attributes="data-attributes_unit" data-attributes_target="#scroll-position">
+                                <cocreate-select id="scroll-position-unit" class="styleunit remove-none border:none padding:0 min-height:24px!important background:#eee" pass_id="builder" collection="" document_id="" data-attributes="data-attributes_unit" data-attributes_target="#scroll-position">
                                     <ul class="options z-index:7">
                                         <cc-option value="px"><span class="margin:auto">px</span></cc-option>
                                         <cc-option value="%"><span class="margin:auto">%</span></cc-option>
@@ -1039,10 +1037,10 @@
                             </div>
                         </div>
                         <div class="margin:0_5px">
-                            <input type="text" data-attributes="scroll-top" class="floating-label" placeholder="scroll-top"  id="scroll-top" collection="builder" document_id="null" active>
-                            <input type="text" data-attributes="scroll-bottom" class="floating-label" placeholder="scroll-bottom"  id="scroll-bottomn" collection="builder" document_id="null" active>
-                            <input type="text" data-attributes="scrolling" class="floating-label" placeholder="scrolling"  id="scrolling" collection="builder" document_id="null" active>
-                            <input type="text" data-attributes="scroll-intersect" class="floating-label" placeholder="scroll-intersect"  id="scroll-intersect" collection="builder" document_id="null" active>
+                            <input type="text" data-attributes="scroll-top" class="floating-label" placeholder="scroll-top"  id="scroll-top" pass_id="builder" collection="" document_id="" active>
+                            <input type="text" data-attributes="scroll-bottom" class="floating-label" placeholder="scroll-bottom"  id="scroll-bottomn" pass_id="builder" collection="" document_id="" active>
+                            <input type="text" data-attributes="scrolling" class="floating-label" placeholder="scrolling"  id="scrolling" pass_id="builder" collection="" document_id="" active>
+                            <input type="text" data-attributes="scroll-intersect" class="floating-label" placeholder="scroll-intersect"  id="scroll-intersect" pass_id="builder" collection="" document_id="" active>
                         </div>
                     </div>
                      <!--Clone -->
@@ -1052,16 +1050,16 @@
                         <span>Clone</span>
                     </div>
                     <div class="clone padding-bottom:20px margin:0_5px">
-                        <input data-attributes="data-clone_id" type="text" class="floating-label" placeholder="data-clone_id"  id="data-clone_id" collection="builder" document_id="null" active>
+                        <input data-attributes="data-clone_id" type="text" class="floating-label" placeholder="data-clone_id"  id="data-clone_id" pass_id="builder" collection="" document_id="" active>
                     </div>
                       <!--Calculations -->
-                     <div class="padding:5px background:gainsboro" show=".calculator" hide=".calculator">
-                        <span class="calculator hidden"><i class="fas fa-plus"></i></span>
-                        <span class="calculator"><i class="fas fa-minus"></i></span>
+                     <div class="padding:5px background:gainsboro" show=".calculate" hide=".calculate">
+                        <span class="calculate hidden"><i class="fas fa-plus"></i></span>
+                        <span class="calculate"><i class="fas fa-minus"></i></span>
                         <span>Calculations</span>
                     </div>
-                    <div class="calculator padding-bottom:20px margin:0_5px">
-                        <input data-attributes="data-calculation" type="text" class="floating-label" placeholder="data-calculation"  id="data-calculation" collection="builder" document_id="null" active>
+                    <div class="calculate padding-bottom:20px margin:0_5px">
+                        <input data-attributes="calculate" type="text" class="floating-label" placeholder="calculate"  id="calculate" pass_id="builder" collection="" document_id="" active>
                     </div>
                 </div>
                 <!--Plugins -->
@@ -1072,14 +1070,14 @@
                         <span>stripe</span>
                     </div>
                     <div class="plugins padding-bottom:20px margin:0_5px">
-                        <cocreate-select class="floating-label" id="pass-collection" placeholder="data-stripe" data-attributes="data-stripe"  collection="builder" document_id="null" active>
+                        <cocreate-select class="floating-label" id="pass-collection" placeholder="data-stripe" data-attributes="data-stripe"  pass_id="builder" collection="" document_id="" active>
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value=""><span>none</span></cc-option>
                                 <cc-option value="createCustomer.email"><span>email</span></cc-option>
                                 <cc-option value="createCustomer.description"><span>description</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <cocreate-select class="floating-label" id="pass-document_id" placeholder="data-action" data-attributes="data-action"  collection="builder" document_id="null" active>
+                        <cocreate-select class="floating-label" id="pass-document_id" placeholder="data-action" data-attributes="data-action"  pass_id="builder" collection="" document_id="" active>
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value=""><span>none</span></cc-option>
                                 <cc-option value="createCustomer"><span>createCustomer</span></cc-option>
@@ -1088,13 +1086,13 @@
                         </cocreate-select>
                     </div>
                     <!--sendgrd -->
-                    <div class="padding:5px background:gainsboro" show=".calculator" hide=".calculator">
-                        <span class="calculator hidden"><i class="fas fa-plus"></i></span>
-                        <span class="calculator"><i class="fas fa-minus"></i></span>
+                    <div class="padding:5px background:gainsboro" show=".sendgrid" hide=".sendgrid">
+                        <span class="sendgrid hidden"><i class="fas fa-plus"></i></span>
+                        <span class="sendgrid"><i class="fas fa-minus"></i></span>
                         <span>sendgrid</span>
                     </div>
-                    <div class="calculator padding-bottom:20px margin:0_5px">
-                        <cocreate-select class="floating-label" id="pass-collection" placeholder="data-sendgrid" data-attributes="data-stripe"  collection="builder" document_id="null" active>
+                    <div class="sendgrid padding-bottom:20px margin:0_5px">
+                        <cocreate-select class="floating-label" id="sendgrid" placeholder="data-sendgrid" data-attributes="data-sendgrid"  pass_id="builder" collection="" document_id="" active>
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value=""><span>none</span></cc-option>
                                 <cc-option value="sendEmail.to"><span>to</span></cc-option>
@@ -1104,7 +1102,7 @@
                                 <cc-option value="sendEmail.text"><span>text</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <cocreate-select class="floating-label" id="pass-document_id" placeholder="data-action" data-attributes="data-action"  collection="builder" document_id="null" active>
+                        <cocreate-select class="floating-label" id="pass-document_id" placeholder="data-action" data-attributes="data-action"  pass_id="builder" collection="" document_id="" active>
                             <ul class="options z-index:7 margin-top:5px">
                                 <cc-option value=""><span>none</span></cc-option>
                                 <cc-option value="sendEmail"><span>sendEmail</span></cc-option>
