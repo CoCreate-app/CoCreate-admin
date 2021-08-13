@@ -7,12 +7,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
 		<title>Block form | CoCreate</title>
-		
-		<!-- CoCreateCSS -->
-		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" data-parse="true"/>
-		
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />    
 	</head>
 
 	<body>
@@ -72,26 +66,21 @@
 	  
 			<form pass_id="form-fields" collection="blocks" document_id="">
 				<input type="hidden" name="module_id" pass_id="module_id">
-				<input type="text" name="name" class="floating-label" placeholder="Name" pass_id="form-fields">
-				<input type="text" name="icon" class="floating-label" placeholder="Icon" pass_id="form-fields">
-				<input type="number" name="position" class="floating-label" placeholder="Position" pass_id="form-fields">
-				<!--<input type="text" name="category" class="floating-label" placeholder="Category" pass_id="form-fields">-->
-				<cocreate-select class="floating-label" name="category" placeholder="Category-select">
-					<input class="text">
-					<ul class="display:flex flex-direction:column background:whitesmoke width:100%" fetch-collection="tags" template_id="categories">
-						<cc-option class="template" template_id="categories" document_id="{{data._id}}"><span collection="{{collection}}" document_id="{{data._id}}" name="name">layout</span></cc-options>
-					</ul>
+				<input type="text" name="name" class="floating-label" placeholder="Name">
+				<input type="text" name="icon" class="floating-label" placeholder="Icon">
+				<input type="number" name="position" class="floating-label" placeholder="Position">
+
+				<cocreate-select class="sortable floating-label" name="type" placeholder="Type">
+					<input placeholder="Search" template_id="type">
+					<cc-options fetch-collection="tags" template_id="type" filter-name="module_id" filter-value="5ff747727005da1c27274194" class="overflow:auto">
+						<cc-option class="template" template_id="type" value="{{data._id}}">
+							<h3 collection="{{collection}}" document_id="{{data._id}}" name="name">Type Name</h3>
+						</cc-option>
+					</cc-options>
 				</cocreate-select>
-				<!--<select class="floating-label" name="category" placeholder="Category">-->
-				<!--	<option class="background:whitesmoke" value="60c0ca3bf3d0a20018e62e07">Layout</option>-->
-				<!--	<option class="background:whitesmoke" value="60c0b785f3d0a20018e62db6">Basics</option>-->
-				<!--	<option class="background:whitesmoke" value="60c0dcf6f3d0a20018e62e5b">Components</option>-->
-				<!--	<option class="background:whitesmoke" value="60c0ca69f3d0a20018e62e09">Form</option>-->
-				<!--	<option class="background:whitesmoke" value="60c0d5f5f3d0a20018e62e3b">Typography</option>-->
-				<!--	<option class="background:whitesmoke" value="60c0dc66f3d0a20018e62e58">Media</option>-->
-				<!--</select>-->
-				<!--<input type="text" name="description" class="floating-label" placeholder="Description">-->
+				
 				<textarea name="html" class="floating-label" placeholder="html" pass_id="form-fields"></textarea>
+				
 				<button actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>
 				</button>
@@ -99,7 +88,8 @@
 	
 		</div>
   
-        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+		<!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
+		<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
 
 	</body>
 </html>
