@@ -68,19 +68,19 @@
                     <a data-btn_type="column-visibility" template_id="datatable"><i class="far fa-eye"></i></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a data-export_type="csv" template_id="datatable"><i class="fas fa-file-csv"></i></a>
+                    <a actions="export" export-type="csv" template_id="datatable"><i class="fas fa-file-csv"></i></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a data-export_type="json" template_id="datatable"><i class="fas fa-file-download"></i></a>
+                    <a actions="export" template_id="datatable"><i class="fas fa-file-download"></i></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a data-import="true" template_id="datatable"><i class="fas fa-file-upload"></i></a>
+                    <a actions="import" collection="" pass_id="datatable"><i class="fas fa-file-upload"></i></a>
                 </li>
                 <li class="margin-right:15px">
                     <a data-btn_type="copy" template_id="datatable"><i class="far fa-copy"></i></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a data-btn_type="print" template_id="datatable"><i class="fas fa-print"></i></a>
+                    <a actions="print" print-target='tbody[template_id="datatable"]'><i class="fas fa-print"></i></a>
                 </li>
 
             </ul>
