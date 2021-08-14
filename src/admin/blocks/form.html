@@ -70,14 +70,25 @@
 				<input type="text" name="icon" class="floating-label" placeholder="Icon">
 				<input type="number" name="position" class="floating-label" placeholder="Position">
 
-				<cocreate-select class="sortable floating-label" name="type" placeholder="Type">
-					<input placeholder="Search" template_id="type">
-					<cc-options fetch-collection="tags" template_id="type" filter-name="module_id" filter-value="5ff747727005da1c27274194" class="overflow:auto">
-						<cc-option class="template" template_id="type" value="{{data._id}}">
-							<h3 collection="{{collection}}" document_id="{{data._id}}" name="name">Type Name</h3>
+				<cocreate-select class="sortable floating-label" name="category" placeholder="Category">
+					<input placeholder="Search" template_id="category">
+					<div template_id="category" filter-name="type" filter-value="611829a9c0e9580010ea589d"></div>
+					<cc-options fetch-collection="tags" template_id="category" filter-name="module_id" filter-value="5ff747727005da1c27274194" class="overflow:auto">
+						<cc-option class="template" template_id="category" value="{{data._id}}">
+							<h3 collection="{{collection}}" document_id="{{data._id}}" name="name">Category Name</h3>
 						</cc-option>
 					</cc-options>
 				</cocreate-select>
+				
+				<!--<cocreate-select class="sortable floating-label" name="type" placeholder="Type">-->
+				<!--	<input placeholder="Search" template_id="type">-->
+				<!--	<div template_id="type" filter-name="type" filter-value="60edaf79b979b4001744c6fe"></div>-->
+				<!--	<cc-options fetch-collection="tags" template_id="type" filter-name="module_id" filter-value="5ff747727005da1c27274194" class="overflow:auto">-->
+				<!--		<cc-option class="template" template_id="type" value="{{data._id}}">-->
+				<!--			<h3 collection="{{collection}}" document_id="{{data._id}}" name="name">Type Name</h3>-->
+				<!--		</cc-option>-->
+				<!--	</cc-options>-->
+				<!--</cocreate-select>-->
 				
 				<textarea name="html" class="floating-label" placeholder="html" pass_id="form-fields"></textarea>
 				
@@ -88,8 +99,8 @@
 	
 		</div>
   
-		<!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
-		<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
+		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
+		<!--<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>-->
 
 	</body>
 </html>
