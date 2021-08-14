@@ -74,7 +74,7 @@
 					<a actions="deleteDocuments" collection="users" pass_id="datatable" template_id="datatable"><i class="far fa-trash-alt"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-btn_type="column-visibility" template_id="datatable"><i class="far fa-eye"></i></a>
+					<a toggle="hidden" toogle-target="#column-visibility"><i class="far fa-eye"></i></a>
 				</li>
 				<li class="margin-right:15px">
 					<a actions="export" export-type="csv" template_id="datatable"><i class="fas fa-file-csv"></i></a>
@@ -86,7 +86,7 @@
 					<a actions="import" collection="" pass_id="datatable"><i class="fas fa-file-upload"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-btn_type="copy" template_id="datatable"><i class="far fa-copy"></i></a>
+					<a actions="copy" copy-target"tbody"><i class="far fa-copy"></i></a>
 				</li>
 				<li class="margin-right:15px">
 					<a actions="print" print-target='tbody[template_id="datatable"]'><i class="fas fa-print"></i></a>

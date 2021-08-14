@@ -76,7 +76,7 @@
 					<a actions="deleteDocuments" collection="" pass_id="datatable" template_id="datatable"><i class="far fa-trash-alt"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-btn_type="column-visibility" template_id="datatable"><i class="far fa-eye"></i></a>
+					<a toggle="hidden" toogle-target="#column-visibility"><i class="far fa-eye"></i></a>
 				</li>
 				<li class="margin-right:15px">
 					<a actions="export" export-type="csv" template_id="datatable"><i class="fas fa-file-csv"></i></a>
@@ -88,7 +88,7 @@
 					<a actions="import" collection="" pass_id="datatable"><i class="fas fa-file-upload"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-btn_type="copy" template_id="datatable"><i class="far fa-copy"></i></a>
+					<a actions="copy" copy-target"tbody"><i class="far fa-copy"></i></a>
 				</li>
 				<li class="margin-right:15px">
 					<a actions="print" print-target='tbody[template_id="datatable"]'><i class="fas fa-print"></i></a>
@@ -105,7 +105,7 @@
 			<div class="domEditor main-height" name='tasklists1' collection="test" document_id="5f075add24d24a175fca54e4" pass_id="me1234">
 				<!--<div class="domEditor main-height" name='tasklists' collection="test" pass_id="me1234" >-->
 				<!--<div class="Sortable display:flex align-items:flex-start isotope-grid" dnd-group-name="tasklist" -->
-				<div class="" dnd-group-name="tasklist" droppable="true" data-element_id="tasklist_container">
+				<div class="" dnd-group-name="tasklist" droppable="true" element_id="tasklist_container">
 
 					<!-- sortable card -->
 					<div id="tasklist" class="card template margin:5px border-radius:2px grid-item width:48%@xs width:48%@sm width:24%@md" draggable="true">
