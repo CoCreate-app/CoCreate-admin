@@ -6,11 +6,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-		<title>Projects Datatable | CoCreate</title>
-
-		<!-- CoCreate CSS -->
-		<link rel="stylesheet" href="https://cdn.cocreate.app/latest/CoCreate.min.css" type="text/css" />
-		<link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" save="true" parse="true" />
+		<title>Industires Datatables | CoCreate</title>
+        <link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" save="true" parse="true" />
 	</head>
 
 	<style>
@@ -71,7 +68,7 @@
 
 				<!-- Datatable Controls -->
 				<li class="margin-right:15px">
-					<a actions="deleteDocuments" collection="" pass_id="datatable" template_id="datatable"><i class="far fa-trash-alt"></i></a>
+					<a actions="deleteDocuments" collection="files" pass_id="datatable" template_id="datatable"><i class="far fa-trash-alt"></i></a>
 				</li>
 				<li class="margin-right:15px">
 					<a toggle="hidden" toogle-target="#column-visibility"><i class="far fa-eye"></i></a>
@@ -116,7 +113,8 @@
 					</td>
 				</tr>
 
-				<tbody template_id="datatable" fetch-collection="" filter-name="" filter-value="" filter-operator="$eq" order-by="name" order-type="asc" pass_id="datatable">
+				<div template_id="datatable" filter-name="tags" filter-value="template"></div>
+				<tbody template_id="datatable" fetch-collection="industires" filter-name="" filter-value="" filter-operator="$eq" order-by="name" order-type="asc" pass_id="datatable">
 
 					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{data._id}}" toggle="selected">
 						<td class="padding:10px">
@@ -154,7 +152,9 @@
 		<button class="position:fixed bottom:15px right:15px width:50px height:50px background:dodgerblue grow-hover border-radius:50% z-index:8 color:white">
 			<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954">
 				<i class="fa fa-plus"></i>
-				<div pass_id="datatable" pass-filter-value="" pass_to="module_id"></div>
+				<div pass_to="form-fields" pass-document_id=""></div>
+				<div pass_id="module-form" pass-value="" pass-filter-value="" pass_to="module_id"></div>
+                <div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
 			</a>
 		</button>
 

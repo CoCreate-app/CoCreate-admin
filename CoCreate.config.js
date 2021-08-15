@@ -636,6 +636,36 @@ module.exports = {
             }
         },
         {
+            "entry": "./src/admin/industries/datatable.html",
+            "collection": "files",
+            "document_id": "61186f46c0e9580010ea640a",
+            "key": "src",
+            "data": {
+                "name": "datatable.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/industries/datatable.html",
+                "public": "true",
+                "module_id": ""
+            }
+        },
+        {
+            "entry": "./src/admin/industries/form.html",
+            "collection": "files",
+            "document_id": "61186f46c0e9580010ea640b",
+            "key": "src",
+            "data": {
+                "name": "form.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/industires/form.html",
+                "public": "true",
+                "module_id": ""
+            }
+        },
+        {
             "entry": "./src/admin/invoices/datatable.html",
             "collection": "files",
             "document_id": "60e50150b865a60c74e0e51e",
@@ -1236,6 +1266,36 @@ module.exports = {
                 "path": "/admin/websites/form.html",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274185"
+            }
+        },
+        {
+            "entry": "./src/admin/website-pages/datatable.html",
+            "collection": "files",
+            "document_id": "61185ed9c0e9580010ea6245",
+            "key": "src",
+            "data": {
+                "name": "datatable.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/website-pages/datatable.html",
+                "public": "true",
+                "module_id": "5ff7a71ff11d2d00103c4518"
+            }
+        },
+        {
+            "entry": "./src/admin/website-pages/form.html",
+            "collection": "files",
+            "document_id": "61185ed9c0e9580010ea6246",
+            "key": "src",
+            "data": {
+                "name": "form.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/website-pages/form.html",
+                "public": "true",
+                "module_id": "5ff7a71ff11d2d00103c4518"
             }
         }
     ]

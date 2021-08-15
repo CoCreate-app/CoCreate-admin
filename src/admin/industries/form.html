@@ -6,9 +6,30 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-        <title>Tags Form View | CoCreate</title>
+        <title>Module Activity Form View | CoCreate</title>
         <link rel="stylesheet" href="../index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" save="true" parse="true" />
+        <!-- CodeMirror -->
+        <link rel="stylesheet" href="https://server.cocreate.app//CoCreate-plugins/CoCreate-codemirror/src/css/CoCreate-codemirror.css" type="text/css" />
     </head>
+
+    <style type="text/css">
+        .collapsed>.code-editor {
+            height: 0px;
+            overflow: hidden
+        }
+
+        .tab[selected] {
+            background: whitesmoke;
+        }
+
+        .codemirror.active {
+            height: 100%
+        }
+
+        .CodeMirror {
+            height: 90vh
+        }
+    </style>
 
     <body>
         <!-- Modal Viewport -->
@@ -62,24 +83,17 @@
             </ul>
         </nav>
 
-        <!-- Main Content -->
         <main class="padding:10px" data-main_content_id="content">
 
-            <form pass_id="form-fields" collection="tags" document_id="">
-                <input type="text" name="name" class="floating-label" placeholder="Name">
-                <input type="text" name="description" class="floating-label" placeholder="Description">
-				<input type="number" name="position" class="floating-label" placeholder="Position">
-				<cocreate-select class="sortable floating-label" name="type" placeholder="Type">
-					<input placeholder="Search" template_id="type">
-					<cc-options fetch-collection="tags" template_id="type" filter-name="module_id" filter-value="60eb8361b979b4001744b339" class="overflow:auto">
-						<cc-option class="template" template_id="type" value="{{data._id}}">
-							<h3 collection="{{collection}}" document_id="{{data._id}}" name="name">Type Name</h3>
-						</cc-option>
-					</cc-options>
-				</cocreate-select>
+            <form pass_id="form-fields" collection="files" document_id="" class="margin-bottom:75px">
+
+                <input type="text" name="name" id="name" placeholder="Name" class="floating-label" />
+                <input type="text" name="description" id="description" placeholder="Description" class="floating-label" />
+                <input type="text" name="image" id="image" placeholder="Image" class="floating-label" />
+
 				<cocreate-select class="sortable floating-label" name="module_id" placeholder="Module">
 					<input placeholder="Search" template_id="module_id">
-					<cc-options fetch-collection="modules" order-by="name" template_id="module_id" class="overflow:auto">
+					<cc-options fetch-collection="modules" template_id="module_id" class="overflow:auto">
 						<cc-option class="template" template_id="module_id" value="{{data._id}}">
 							<div class="display:flex padding:5px">
 								<span class="width:25px" collection="{{collection}}" document_id="{{data._id}}" name="icon"></span>
@@ -88,17 +102,19 @@
 						</cc-option>
 					</cc-options>
 				</cocreate-select>
-                
-                <!--<input type="hidden" name="module_id" pass_id="module_id">-->
+				
 				<button actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>
 				</button>
+
             </form>
 
         </main>
 
-		<!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>-->
-		<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
+        <!-- CoCreateJS -->
+        <script src="../apikey.js"></script>
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+        <script type="text/javascript" src="https://server.cocreate.app/CoCreate-plugins/CoCreate-codemirror/dist/CoCreate-codemirror.js" async></script>
 
     </body>
 
