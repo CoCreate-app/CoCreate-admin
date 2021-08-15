@@ -1,7 +1,7 @@
 {
-  "name": "@cocreate/adminUI",
+  "name": "@cocreate/admin",
   "version": "1.0.0",
-  "description": "A simple AdimnUI component in vanilla javascript. Easily configured using HTML5 data-attributes and/or JavaScript API.",
+  "description": "A No Code Admin, CRM, CMS, Website Builder platform. Powered by CoCreateJS to provide Realtime and Collaborative CRUD functionality. ",
   "keywords": [
     "admin",
     "crm",
@@ -27,11 +27,11 @@
   },
   "author": "CoCreate LLC",
   "license": "MIT",
-  "repository": "https://github.com/CoCreate-app/CoCreate-adminUI.git",
+  "repository": "https://github.com/CoCreate-app/CoCreate-admin.git",
   "bugs": {
-    "url": "https://github.com/CoCreate-app/CoCreate-adminUI/issues"
+    "url": "https://github.com/CoCreate-app/CoCreate-admin/issues"
   },
-  "homepage": "https://cocreate.app/docs/adminUI",
+  "homepage": "https://cocreate.app/docs/admin",
   "funding": {
     "type": "GitHub Sponsors ❤",
     "url": "https://github.com/sponsors/CoCreate-app"
