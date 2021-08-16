@@ -62,7 +62,13 @@
                 </li>
                 
                 <!-- Render Form -->
-                <li class="margin-right:15px"> <a target="modal" pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to = "render"modal-width="320px" modal-color="#229954">					 <i class="fas fa-plus"></i>                      <div pass_id="datatable" pass-collection="" pass_to="form-fields"></div>                      <div pass_id="module_id" pass-value="" pass_to="module_id"></div>					</a>                    </li>
+                <li class="margin-right:15px"> 
+                    <a target="modal" href="./form.html" pass_to="form-field" modal-width="320px">
+                        <i class="fas fa-plus"></i>                      
+                        <div pass_id="datatable" pass-collection="" pass_to="form-fields"></div>
+                        <div pass_id="module_id" pass-value="" pass_to="module_id"></div>	
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -115,7 +121,7 @@
             sidenav-ontoggle_tablet="offcanvas" sidenav-expanded_width="240px">
 
             <div class="padding:5px">
-                <button class="width:100% margin:5px btn-modal-close" target="modal" href="./block-form" pass_to="form-field" modal-width="320px">
+                <button class="width:100% btn-modal-close" target="modal" href="./form.html" pass_to="form-field" modal-width="320px">
     			    Custom
     			</button>
             </div>
