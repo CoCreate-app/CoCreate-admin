@@ -29,7 +29,7 @@ jobs:
             @semantic-release/github
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          # NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
+          NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
     outputs:
       new_release_published: "${{ steps.semantic.outputs.new_release_published }}"
       new_release_version: "${{ steps.semantic.outputs.new_release_version }}"

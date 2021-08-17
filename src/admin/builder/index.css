@@ -1,4 +1,4 @@
-.left-panel.active, .right-panel.active, .block-panel.active, .component-panel.active, .editor-panel.active {
+.left-panel.active, .right-panel.active, .blocks.active, .components.active, .editor-panel.active {
     display: block
 }
 
