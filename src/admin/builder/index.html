@@ -7,29 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Builder | CoCreate</title>
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
-        <link rel="stylesheet" href="./index.css" collection="files" document_id="610cb468c0e9580010e5ba50" name="src" type="text/css"/>
-
-        <style>
-            .editor-panel.active {
-                display: block
-            }
-
-            .left-panel.active {
-                display: block
-            }
-
-            .components.active {
-                display: block
-            }
-
-            .uppy-Dashboard-inner {
-                background-color: gainsboro!important;
-            }
-
-            .uppy-DashboardTab-btn {
-                justify-content: flex-start;
-            }
-        </style>
+        <link rel="stylesheet" href="./index.css" collection="files" document_id="610cb468c0e9580010e5ba50" name="src" type="text/css" />
     </head>
 
     <body>
@@ -41,24 +19,24 @@
                 <span></span>
                 <span></span>
             </a>
-        
+
             <!-- Horizontal Scroll Nav/Tabs -->
             <ul class="direction:rtl display:inline-flex align-items:center overflow:auto font-size:20px list-style-type:none width:100% height:50px">
-        
+
                 <!-- Modal Controls -->
                 <li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
                 <li class="margin-right:15px"><a class="btn-modal-maximize"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
                 <li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
-        
+
                 <!-- fullscreen toogle and icon transform-->
                 <li class="margin-right:15px"><a fullscreen><i toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
-        
-        
+
+
                 <!-- Builder Controls -->
                 <li class="margin-right:15px"><a id="redo-canvas" class=""><i class="fas fa-redo-alt"></i></a></li>
                 <li class="margin-right:15px"><a id='undo-canvas' class=""><i class="fas fa-undo-alt"></i></a></li>
-                
-                
+
+
                 <li class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke" selected-value="max-width:100%" selected-target=".canvas-container" selected-group="screen-size" selected>
                     <a id="desktop-view" class=""><i class="fas fa-desktop"></i></a>
                 </li>
@@ -68,7 +46,7 @@
                 <li class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke" selected-value="max-width:375px" selected-target=".canvas-container" selected-group="screen-size">
                     <a id="mobile-view" class=""><i class="fas fa-mobile-alt"></i></a>
                 </li>
-                
+
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
                     <a target="modal" href="../code-editor/index.html" modal-width="900px" modal-color="#229954">
@@ -79,7 +57,7 @@
                 <li class="margin-right:15px"><a id='element-borders' class=""><i class="far fa-square"></i></a></li>
                 <li class="margin-right:15px padding-left:15px"><a id="clean-canvas"><i class="far fa-trash-alt"></i></a></li>
             </ul>
-        
+
             <!-- Menu Icon Arrow Right Animations -->
             <a aria-label="mobile menu" class="menu_icon arrow-right" toggle="active" toggle-sidenav="menuR">
                 <span></span>
@@ -94,7 +72,7 @@
         <!-- Main Container -->
         <main data-main_content_id="canvas" class="height:100vh">
             <div class="canvas-container height:100% margin:auto">
-                <iframe vdom-id="test" id="canvas" pass_id="builder" collection="" document_id="" name="src" read="false" update="false" frameborder="0" width="100%" height="100%"></iframe>
+                <iframe vdom-id="canvas" id="canvas" pass_id="builder" collection="" document_id="" name="src" read="false" update="false" frameborder="0" width="100%" height="100%"></iframe>
             </div>
         </main>
 
@@ -151,8 +129,8 @@
         <!--</div>-->
         <!-- End Collaboration Toolbar -->
 
-		<!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>-->
-		<script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
+        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>-->
+        <script src="https://server.cocreate.app/CoCreateJS/dist/CoCreate.js"></script>
 
     </body>
 

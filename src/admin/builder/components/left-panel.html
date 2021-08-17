@@ -1,4 +1,5 @@
         <div class="padding:5px min-width:260px">
+            
             <div class="display:flex margin-bottom:5px font-size:16px tabs">
                 <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#vdom" selected-group="left-panels"><i class="fas fa-stream"></i></div>
                 <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#assets" selected-group="left-panels">
@@ -6,16 +7,13 @@
                 </div>
                 <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#files" selected-group="left-panels"><i class="fas fa-folder"></i></div>
                 <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#uploader" selected-group="left-panels">
-                    <!--<a target="modal" href="https://server.cocreate.app/CoCreate-modules/CoCreate-builder/demo/components/uploader.html" pass-collection="files" pass-document_id="" pass-name="src" pass_to="render" modal-width="750px" modal-height="570px" modal-color="#229954">-->
-                        <i class="fas fa-cloud-upload-alt"></i>
-                    <!--    <div pass-collection="apples" pass-document_id="60ac06d5741a03083ab0740f" name='html' pass_to="code-editor"></div>-->
-                    <!--</a>-->
+                    <i class="fas fa-cloud-upload-alt"></i>
                 </div>
                 <div className="left-tabs" class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#blocks" selected-group="left-panels" selected><i class="fas fa-th-large"></i></div>
-
             </div>
+            
             <div class="overflow:overlay height:90vh">
-                 <!--Blocks -->
+                 <!-- Blocks -->
                 <div id="blocks" class="left-panel display:none position:relative active">
                             
                     <div class="display:flex justify-content:center position:relative margin-bottom:30px">
@@ -26,26 +24,22 @@
                         </button>
                     </div>
                     
-                     <!--Block Categories -->
+                     <!-- Block Categories -->
 					<!--<div template_id="block-categories" filter-name="type" filter-value="611829a9c0e9580010ea589d"></div>-->
                     <div  id="elements" class="components display:none active" template_id="block-categories" fetch-collection="tags" filter-name="module_id" filter-value="5ff747727005da1c27274194" order-by="position" order-type="asc" data-value_type="number" render_id="tag">
                             
-                         <!--Block Categories Template -->
+                         <!-- Block Categories Template -->
                         <div class="template" template_id="block-categories" render-key="tag" render-array="tag.data" document_id="{{tag._id}}">
                             <div class="padding:5px background:gainsboro" show=".category{{tag._id}}" hide=".category{{tag._id}}">
                                 <span class="category{{tag._id}} hidden"><i class="fas fa-plus"></i></span>
                                 <span class="category{{tag._id}}"><i class="fas fa-minus"></i></span>
                                 <span collection="{{tag.collection}}" document_id="{{tag._id}}" name="name">Category Name</span>
                             </div>
-                             <!--Blocks  -->
+                             <!-- Blocks  -->
                             <div class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px" template_id="{{tag._id}}" fetch-collection="blocks" filter-name="category" filter-value="{{tag._id}}" order-by="position" order-type="asc">
-                                 <!--Blocks Template -->
+                                 <!-- Blocks Template -->
                                 <div template_id="{{tag._id}}" class="template card flex-grow:1 width:70px height:75px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}" document_id="{{data._id}}">
                                     <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
-                                        <!--<a target="modal" pass-collection="files" pass-document_id="60c02a57df12fd0d3939aca0" pass_to="render" modal-width="320px">-->
-                                        <!--    <i class="fas fa-pencil-alt"></i>-->
-                                        <!--    <div pass-collection="blocks" pass-document_id="{{data._id}}" pass_to="form-fields"></div>-->
-                                        <!--</a>-->
                                         <a target="modal" href="../blocks/form.html" pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields" modal-width="320px">
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
@@ -59,25 +53,21 @@
                         </div>
                     </div>
                     
-                     <!--Component Categories -->
+                    <!-- Component Categories -->
                     <div id="components" class="components display:none" template_id="component-categories" fetch-collection="tags" filter-name="module_id" filter-value="5ffb889df11d2d00103c452b" order-by="position" order-type="asc" render_id="tag">
                             
-                         <!--Block Categories Template -->
+                         <!-- Components Categories Template -->
                         <div class="template" template_id="component-categories" document_id="{{tag._id}}">
                             <div class="padding:5px background:gainsboro" show=".category{{tag._id}}" hide=".category{{tag._id}}">
                                 <span class="category{{tag._id}} hidden"><i class="fas fa-plus"></i></span>
                                 <span class="category{{tag._id}}"><i class="fas fa-minus"></i></span>
                                 <span collection="{{tag.collection}}" document_id="{{tag._id}}" name="name">Category Name</span>
                             </div>
-                             <!--Blocks  -->
+                             <!-- Components -->
                             <div class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px" template_id="{{tag._id}}" fetch-collection="blocks" filter-name="category" filter-value="{{tag._id}}" order-by="position" order-type="asc">
-                                 <!--Blocks Template -->
+                                 <!-- Components Template -->
                                 <div template_id="{{tag._id}}" class="template card flex-grow:1 width:70px height:125px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}" document_id="{{data._id}}">
                                     <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
-                                        <!--<a target="modal" pass-collection="files" pass-document_id="60c02a57df12fd0d3939aca0" pass_to="render" modal-width="320px">-->
-                                        <!--    <i class="fas fa-pencil-alt"></i>-->
-                                        <!--    <div pass-collection="blocks" pass-document_id="{{data._id}}" pass_to="form-fields"></div>-->
-                                        <!--</a>-->
                                         <a target="modal" href="../blocks/form.html" pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields" modal-width="320px">
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
@@ -90,19 +80,19 @@
                             </div>
                         </div>
                     </div>
-                        <!--<button target="modal" href="./block-form"  pass_to="form-field" modal-width="320px" class="position:fixed bottom:15px left:15px padding:15px background:gainsboro color:#505050 grow-hover border-radius:50%">-->
-                        <!--    <i class="fas fa-plus"></i>-->
-                        <!--</button>               -->
                 </div>
-                 <!--Vdom -->
-                <div id="vdom" vdom-target="test" dnd-group-name="test" class="left-panel display:none">vdom</div>
-                 <!--uploader -->
+                
+                <!-- Vdom -->
+                <div id="vdom" vdom-target="canvas" dnd-group-name="vdom" class="left-panel display:none">vdom</div>
+                
+                <!-- uploader -->
                 <div id="uploader" class="left-panel display:none">
-                    <div class="uppy" collection="jean" id="drag-drop-area"></div> 
+                    <div class="uppy" collection="files" id="drag-drop-area"></div> 
                 </div>
-                 <!--Files -->
+                
+                <!-- Files -->
                 <div id="files" class="left-panel display:none">
-                     <!--Search -->
+                    <!-- Search Files -->
                     <form class="padding:0px_5px_20px_5px">
                         <input type="text" class="floating-label" pass-value_to="results">
                         <span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
@@ -111,21 +101,21 @@
         					</a>
         				</span>
                     </form>
-                    <!--File Tree -->
+                    <!-- File Tree -->
                     <div class="padding:5px">
                         <span class=""><i class="fa fa-caret-down" toggle="fa-caret-right, fa-caret-down"></i></span>
                         <span class="margin-left:5px" collection="websites" document_id="" name="name">Project name</span>
-                        <div class="margin-left:10px sortable" template_id="folder" fetch-collection="files" filter-name="directory" filter-value="60b450107d36eaa01048ac49" filter-operator="$eq" order-by="name" order-type="asc" fetch-count="6" render_id="folder">
-                             <!--Folder Template -->
+                        <div class="margin-left:10px sortable" template_id="folder" fetch-collection="files" filter-name1="directory" filter-value="" filter-operator="$eq" order-by="name" order-type="asc" fetch-count="6" render_id="folder">
+                            <!--Folder Template -->
                             <div class="template padding:5px" template_id="folder" document_id="{{folder._id}}" render-key="folder" render-array="folder.data">
                                 <span class=""><i class="fa fa-caret-down" toggle="fa-caret-right, fa-caret-down"></i></span>
                                 <span class="margin-left:5px" collection="folders" document_id="{{folder._id}}" name="name">{{folder.name}}</span>
-                                <!-- fetches folder and file template. This should create a loop until tree ends -->
-                                <div class="domEditor margin-left:10px" collection="component" document_id="60b45db37d36eaa01048ac50" name="html"></div>
+                                <!-- fetches folder and file template. This loops until tree ends -->
+                                <div class="domEditor margin-left:10px" collection="component" document_id="611ab5d9251afa96bd20f6cc" name="html"></div>
                             </div>
                         </div>
                         <div class="margin-left:10px sortable" template_id="file" fetch-collection="files" filter-name="directory" filter-value="" filter-operator="$eq" order-by="name" fetch-count="6">
-                             <!--File Template -->
+                             <!-- File Template -->
                             <div class="template padding:5px" template_id="file" document_id="{{data._id}}">
                                 <span class="{{data.content-type}}"><i class="fab fa-html5"></i></span>
                                 <span class="margin-left:5px" collection="files" document_id="{{data._id}}" name="name">{{data.name}}</span>
@@ -133,7 +123,8 @@
                         </div>
                     </div>
                 </div>
-                <!--assets -->
+                
+                <!-- Assets -->
                 <div id="assets" class="left-panel display:none">
                      Search 
                     <form class="padding:0px_5px_20px_5px">
@@ -144,9 +135,9 @@
         					</a>
         				</span>
                     </form>
-                     <!--Assets -->
+                    <!-- Assets -->
                     <div class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px" template_id="assets" fetch-collection="files" filter-name="content-type" filter-value="" order-by="position" order-type="asc">
-                         <!--Asset Template -->
+                         <!-- Asset Template -->
                         <div template_id="assets" class="template card flex-grow:1 width:70px height:90px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}">
                             <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                 <a target="modal" href="https://server.cocreate.app/CoCreate-plugins/CoCreate-tui-image-editor/demo/index.html" pass-collection="blocks" pass-document_id="{{data._id}}" pass_to="form-fields" modal-width="900px">

@@ -1,1 +1,35 @@
-test{color:white}
+.left-panel.active, .right-panel.active, .block-panel.active, .component-panel.active, .editor-panel.active {
+    display: block
+}
+
+.uppy-Dashboard-inner {
+    background-color: whitesmoke!important;
+}
+
+.uppy-DashboardTab-btn {
+    justify-content: flex-start;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+.selected {
+    margin: 0;
+    padding: 0;
+    height: 25px;
+    min-height: 25px;
+}
+
+.tab[selected] {
+    background: darkgrey;
+}
+
+li[selected-group="screen-size"][selected] {
+    background: gainsboro;
+}
+
+.card:hover {
+    background: rgba(0, 0, 0, 0.2);
+}

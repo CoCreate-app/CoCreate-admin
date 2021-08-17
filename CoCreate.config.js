@@ -201,21 +201,6 @@ module.exports = {
             }
         },
         {
-            "entry": "./src/admin/builder/components/nav.html",
-            "collection": "files",
-            "document_id": "60de0fae14b5ab0c2dd2feb9",
-            "key": "src",
-            "data": {
-                "name": "nav.html",
-                "domains": [
-                    "general.cocreate.app"
-                ],
-                "path": "/admin/builder/nav.html",
-                "public": "true",
-                "module_id": "5ff747727005da1c27274193"
-            }
-        },
-        {
             "entry": "./src/admin/builder/components/left-panel.html",
             "collection": "files",
             "document_id": "60de0fae14b5ab0c2dd2feba",
@@ -1149,7 +1134,7 @@ module.exports = {
             }
         },
         {
-            "entry": "./src/admin/tasklist/datatable.html",
+            "entry": "./src/admin/tasklists/datatable.html",
             "collection": "files",
             "document_id": "60ddfdc114b5ab0c2dd2fe1a",
             "key": "src",
@@ -1164,7 +1149,7 @@ module.exports = {
             }
         },
         {
-            "entry": "./src/admin/tasklist/form.html",
+            "entry": "./src/admin/tasklists/form.html",
             "collection": "files",
             "document_id": "60ddfdc114b5ab0c2dd2fe1b",
             "key": "src",
