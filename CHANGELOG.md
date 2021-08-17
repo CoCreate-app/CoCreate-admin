@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.0.0...v1.0.1) (2021-08-17)
+
+
+### Bug Fixes
+
+* builder blocks css ([69ab779](https://github.com/CoCreate-app/CoCreate-admin/commit/69ab77948b26de9de8eee406fb7258e1404cf107))
+
 # 1.0.0 (2021-08-17)
 
 
