@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.0.1...v1.1.0) (2021-08-22)
+
+
+### Features
+
+* added idustry module. Has the ability to create a clone of the db and use it to create new organizations replacing it with unique id of new org. ([f8ae373](https://github.com/CoCreate-app/CoCreate-admin/commit/f8ae373e659af9d3754217effe09dbd282af78f4))
+
 ## [1.0.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.0.0...v1.0.1) (2021-08-17)
 
 
