@@ -68,7 +68,7 @@
 
 				<!-- Datatable Controls -->
 				<li class="margin-right:15px">
-					<a actions="deleteDocuments" collection="files" pass_id="datatable" template_id="datatable"><i class="far fa-trash-alt"></i></a>
+					<a actions="deleteDocuments" collection="industries" pass_id="datatable" template_id="datatable"><i class="far fa-trash-alt"></i></a>
 				</li>
 				<li class="margin-right:15px">
 					<a toggle="hidden" toogle-target="#column-visibility"><i class="far fa-eye"></i></a>
@@ -113,8 +113,7 @@
 					</td>
 				</tr>
 
-				<div template_id="datatable" filter-name="tags" filter-value="template"></div>
-				<tbody template_id="datatable" fetch-collection="industires" filter-name="" filter-value="" filter-operator="$eq" order-by="name" order-type="asc" pass_id="datatable">
+				<tbody template_id="datatable" fetch-collection="industries" order-by="name" order-type="asc" pass_id="datatable">
 
 					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{data._id}}" toggle="selected">
 						<td class="padding:10px">

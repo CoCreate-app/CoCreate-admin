@@ -632,7 +632,7 @@ module.exports = {
                 ],
                 "path": "/admin/industries/datatable.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "611d97fdc0e9580010eb9028"
             }
         },
         {
@@ -647,7 +647,7 @@ module.exports = {
                 ],
                 "path": "/admin/industires/form.html",
                 "public": "true",
-                "module_id": ""
+                "module_id": "611d97fdc0e9580010eb9028"
             }
         },
         {

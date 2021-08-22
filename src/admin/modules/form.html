@@ -316,7 +316,7 @@
 				</div>
 
 				<!--<input type="hidden" filter-name="module-view" filter-value="module-view" template_id="files">-->
-				<div fetch-collection="files" filter-name="module_id" filter-value="" filter-operator="$eq" order-by="name" order-type="asc" template_id="files" pass_id="module_id" class="sortable background:whitesmoke padding:5px:10px margin-top:10px" dnd-group-name="files">
+				<div fetch-collection="files" filter-name="module_id" filter-value="" order-by="name" order-type="asc" template_id="files" pass_id="module_id" class="sortable background:whitesmoke padding:5px:10px margin-top:10px" dnd-group-name="files">
 
 					<div template_id="files" class="template card padding:10px_5px background:white collapsed margin-top:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
 						<div class="display:flex padding-left:10px">
@@ -366,37 +366,37 @@
 			</form>
 
 			<!-- Module form templates to pass value and create clone -->
-			<div class="hidden" id="module-templates">
-				<div class="height:20px padding:0_10px font-size:18px"><i class="fas fa-times float:right" show="#form" hide='#module-templates'></i></div>
-				<div template_id="module-templates" filter-name="tags" filter-value="template"></div>
-				<div class="display:flex flex-wrap:wrap" fetch-collection="" pass-refresh="true" order-by="name" order-type="asc" template_id="module-templates" pass_id="module-templates">
+			<!--<div class="hidden" id="module-templates">-->
+			<!--	<div class="height:20px padding:0_10px font-size:18px"><i class="fas fa-times float:right" show="#form" hide='#module-templates'></i></div>-->
+			<!--	<div template_id="module-templates" filter-name="tags" filter-value="template"></div>-->
+			<!--	<div class="display:flex flex-wrap:wrap" fetch-collection="" pass-refresh="true" order-by="name" order-type="asc" template_id="module-templates" pass_id="module-templates">-->
 
-					<div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" template_id="module-templates">
+			<!--		<div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" template_id="module-templates">-->
 
-						<div class="position:relative">
-							<img collection="{{collection}}" document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
-							<form realtime="false" collection="files" document_id="">
-								<input type="hidden" name="name" placeholder="View Name" value="{{data.name}}">
-								<input type="hidden" name="module_id" get-value="module_id">
-								<textarea hidden name="src" value="{{data.src}}"></textarea>
+			<!--			<div class="position:relative">-->
+			<!--				<img collection="{{collection}}" document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>-->
+			<!--				<form realtime="false" collection="files" document_id="">-->
+			<!--					<input type="hidden" name="name" placeholder="View Name" value="{{data.name}}">-->
+			<!--					<input type="hidden" name="module_id" get-value="module_id">-->
+			<!--					<textarea hidden name="src" value="{{data.src}}"></textarea>-->
 								<!--<textarea hidden name="css" collection="files" document_id="{{data.css}}" name="src"></textarea>-->
 								<!--<textarea hidden name="js" collection="files" document_id="{{data.js}}" name="src"></textarea>-->
-								<button class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" actions="createDocument" show="#form" hide='#module-templates'>
-									<i class="fa fa-plus"></i>
-								</button>
-							</form>
-							<div class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">
-								<span collection="{{collection}}" document_id="{{data._id}}" name="name">Template Name</span>
-							</div>
-						</div>
+			<!--					<button class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" actions="createDocument" show="#form" hide='#module-templates'>-->
+			<!--						<i class="fa fa-plus"></i>-->
+			<!--					</button>-->
+			<!--				</form>-->
+			<!--				<div class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">-->
+			<!--					<span collection="{{collection}}" document_id="{{data._id}}" name="name">Template Name</span>-->
+			<!--				</div>-->
+			<!--			</div>-->
 
-						<div class="padding:10px">
-							<p collection="{{collection}}" document_id="{{data._id}}" name="description">Description</p>
-						</div>
-					</div>
+			<!--			<div class="padding:10px">-->
+			<!--				<p collection="{{collection}}" document_id="{{data._id}}" name="description">Description</p>-->
+			<!--			</div>-->
+			<!--		</div>-->
 
-				</div>
-			</div>
+			<!--	</div>-->
+			<!--</div>-->
 
 		</main>
 
