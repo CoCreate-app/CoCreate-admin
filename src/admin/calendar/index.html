@@ -34,7 +34,7 @@
 	<body class="overflow:overlay">
 
 		<!-- Navbar -->
-		<nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
+		<nav class="nav display:flex align-items:center background:whitesmoke" main-content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
 			<!-- Menu Icon Animations -->
 			<a class="menu_icon--Vdots" toggle="active" toggle-sidenav="menuL">
@@ -105,12 +105,12 @@
 			</ul>
 		</nav>
 
-		<div class="position:fixed margin-top:50px" id="modal-viewport" data-main_content_id="content"></div>
+		<div class="position:fixed margin-top:50px" id="modal-viewport" main-content_id="content"></div>
 
 		<!-- Define filter-name to define field to filter results for calendar -->
 		<div data-calendar_id="calendar" filter-name="start_date" filter-value="0" filter-operator="$gt"></div>
 
-		<main class="height:100vh position:relative" data-main_content_id="content">
+		<main class="height:100vh position:relative" main-content_id="content">
 			<div id='calendar-container'>
 				<div id='calendar' class="cal-container" fetch-collection="test" data-dispaly_field="name" data-calendar_id="calendar" filter-name="" filter-value="" filter-operator="$eq" pass_id="datatable">
 					<a class="eventLink" target="modal" href="./form.html" pass-collection="test" pass-document_id="" pass_to="form-fields" modal-width="320px" modal-color="#21618C">

@@ -13,7 +13,7 @@
     <body class="width:fit-content overflow:overlay">
 
         <!-- Navbar -->
-        <nav class="nav display:flex align-items:center background:whitesmoke position:sticky left:0 width:100vw" data-main_content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
+        <nav class="nav display:flex align-items:center background:whitesmoke position:sticky left:0 width:100vw" main-content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
             <!-- Menu Icon Animations -->
             <a class="menu_icon--Vdots" toggle="active" toggle-sidenav="menuL">
@@ -87,20 +87,20 @@
         </nav>
 
         <!-- Modal Viewport -->
-        <div class="position:fixed margin-top:50px" data-main_content_id="content" id="modal-viewport"></div>
+        <div class="position:fixed margin-top:50px" main-content_id="content" id="modal-viewport"></div>
 
         <!-- Main Content -->
-        <main data-main_content_id="content" class="padding:5px">
+        <main main-content_id="content" class="padding:5px">
             <table class="width:100% border-collapse:collapse">
                 <tr class="border-bottom:1px_solid_darkgray">
                     <td class="position:sticky top:0 background:white padding-top:0 padding:10px ">
-                        <input type="text" class="floating-label" filter-name="name" data-value_type="string" filter-operator="" template_id="datatable" placeholder="Name">
+                        <input type="text" class="floating-label" filter-name="name" filter-value_type="string" filter-operator="" template_id="datatable" placeholder="Name">
                         <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
 							<a order-by="name" toggle-order="asc" template_id="datatable"></a>
 						</span>
                     </td>
                     <td class="position:sticky top:0 background:white padding:10px padding-top:0">
-                        <input type="text" class="floating-label" filter-name="_id" data-value_type="string" filter-operator="" template_id="datatable" placeholder="Document_id" />
+                        <input type="text" class="floating-label" filter-name="_id" filter-value_type="string" filter-operator="" template_id="datatable" placeholder="Document_id" />
                         <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
 							<a order-by="_id" toggle-order="asc" template_id="datatable"></a>
 						</span>
@@ -155,7 +155,7 @@
 			</a>
 		</button>
 
-        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
 
     </body>
 

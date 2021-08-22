@@ -56,7 +56,7 @@
 		<div id="modal-viewport" class="hidden"></div>
 
 		<!-- Navbar -->
-		<nav class="nav display:flex align-items:center background:whitesmoke" data-main_content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
+		<nav class="nav display:flex align-items:center background:whitesmoke" main-content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
 			<!-- Horizontal Scroll Nav/Tabs -->
 			<ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
@@ -104,9 +104,9 @@
 		</nav>
 
 		<!-- Main Content -->
-		<main class="padding:10px" data-main_content_id="content">
+		<main class="padding:10px" main-content_id="content">
 
-			<form class="margin-bottom:75px" pass_id="form-fields" collection="modules" document_id="" id="form">
+			<form pass_id="form-fields" collection="modules" document_id="" id="form">
 				<input type="text" name="name" id="name" placeholder="Module Name" class="floating-label" />
 				<input type="hidden" name="_id" id="module_id"/>
 				<input type="text" name="description" id="description" placeholder="Description" class="floating-label" />
@@ -308,16 +308,21 @@
 						</div>
 					</div>
 				</div>
-
+				<button actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
+				    <i class="far fa-save"></i>
+				</button>
+			</form>
+			
+			<section id="module-views" class="margin-bottom:75px">
 				<!-- module views -->
 				<div class="card display:flex padding:10px_15px margin-top:10px font-size:18px">
 					<span class="flex-grow:1">Module Views</span>
-					<a show="#module-templates" hide="#form" pass-collection="files" pass_to="module-templates"><i class="far fa-plus-square"></i></a>
+					<a show="#module-templates" hide="#form, #module-views" pass-collection="files" pass_to="module-templates"><i class="far fa-plus-square"></i></a>
 				</div>
-
+	
 				<!--<input type="hidden" filter-name="module-view" filter-value="module-view" template_id="files">-->
-				<div fetch-collection="files" filter-name="module_id" filter-value="" order-by="name" order-type="asc" template_id="files" pass_id="module_id" class="sortable background:whitesmoke padding:5px:10px margin-top:10px" dnd-group-name="files">
-
+				<div fetch-collection="" filter-name="module_id" filter-value="" order-by="name" order-type="asc" template_id="files" pass_id="module_id" class="sortable background:whitesmoke padding:5px:10px margin-top:10px" dnd-group-name="files">
+	
 					<div template_id="files" class="template card padding:10px_5px background:white collapsed margin-top:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
 						<div class="display:flex padding-left:10px">
 							<a target="modal" href="../files/form.html" class="flex-grow:1">
@@ -337,66 +342,43 @@
 									<i class="fas fa-code"></i>
 								 <div pass-document_id="{{data._id}}" pass-name="src" pass_to="code-editor"></div>
 							</a>
-							<!--<a class="float:right padding:5px" toggle="collapsed" toggle-closest=".card" show="#view-up{{data._id}}, #view-down{{data._id}}" hide="#view-down{{data._id}}, #view-up{{data._id}}">-->
-							<!--	<i id="view-down{{data._id}}" class="fas fa-angle-down"></i>-->
-							<!--	<i id="view-up{{data._id}}" class="fas fa-angle-up hidden"></i>-->
-							<!--</a>-->
+						</div>
+					</div>
+	
+				</div>
+			</section>
+			<section class="hidden" id="module-templates">
+				<!-- Module form templates to pass value and create clone -->
+				<div class="height:20px padding:0_10px font-size:18px"><i class="fas fa-times float:right" show="#form" hide='#module-templates'></i></div>
+				<div template_id="module-templates" filter-name="tags" filter-value="template"></div>
+				<div class="display:flex flex-wrap:wrap" fetch-collection="" pass-refresh="true" order-by="name" order-type="asc" template_id="module-templates" pass_id="module-templates">
+
+					<div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" template_id="module-templates">
+
+						<div class="position:relative">
+							<img collection="{{collection}}" document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
+							<form realtime="false" collection="files" document_id="">
+								<input type="hidden" name="name" placeholder="View Name" value="{{data.name}}">
+								<input type="hidden" name="module_id" get-value="module_id">
+								<textarea hidden name="src" value="{{data.src}}"></textarea>
+								<textarea hidden name="css" collection="files" document_id="{{data.css}}" name="src"></textarea>
+								<textarea hidden name="js" collection="files" document_id="{{data.js}}" name="src"></textarea>
+								<button class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" actions="createDocument" show="#form, #module-views" hide='#module-templates' pass-collection="files" pass_to="module_id">
+									<i class="fa fa-plus"></i>
+								</button>
+							</form>
+							<div class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">
+								<span collection="{{collection}}" document_id="{{data._id}}" name="name">Template Name</span>
+							</div>
 						</div>
 
-						<!--<div id="module-view{{data._id}}" class="code-editor">-->
-						<!--	<div class="margin-top:10px display:flex tabs border-bottom:5px_solid_whitesmoke">-->
-						<!--		<a href="#module-view{{data._id}}" class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target='#html{{data._id}}' selected-group="{{data._id}}"-->
-						<!--		 selected>HTML</a>-->
-						<!--		<a href="#module-view{{data._id}}" class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target='#css{{data._id}}' selected-group="{{data._id}}">CSS</a>-->
-						<!--		<a href="#module-view{{data._id}}" class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target='#js{{data._id}}' selected-group="{{data._id}}">JS</a>-->
-						<!--	</div>-->
-						<!--	<div id="html{{data._id}}" collection="{{collection}}" document_id="{{data._id}}" name='html' class="codemirror height:0px overflow:hidden active"></div>-->
-						<!--	<div id='css{{data._id}}' collection="{{collection}}" document_id="{{data._id}}" name='css' class="codemirror overflow:hidden height:0px"></div>-->
-						<!--	<div id='js{{data._id}}' collection="{{collection}}" document_id="{{data._id}}" name='js' class="codemirror overflow:hidden height:0px"></div>-->
-						<!--</div>-->
-
+						<div class="padding:10px">
+							<p collection="{{collection}}" document_id="{{data._id}}" name="description">Description</p>
+						</div>
 					</div>
 
 				</div>
-
-				<button actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
-				    <i class="far fa-save"></i>
-				</button>
-
-			</form>
-
-			<!-- Module form templates to pass value and create clone -->
-			<!--<div class="hidden" id="module-templates">-->
-			<!--	<div class="height:20px padding:0_10px font-size:18px"><i class="fas fa-times float:right" show="#form" hide='#module-templates'></i></div>-->
-			<!--	<div template_id="module-templates" filter-name="tags" filter-value="template"></div>-->
-			<!--	<div class="display:flex flex-wrap:wrap" fetch-collection="" pass-refresh="true" order-by="name" order-type="asc" template_id="module-templates" pass_id="module-templates">-->
-
-			<!--		<div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" template_id="module-templates">-->
-
-			<!--			<div class="position:relative">-->
-			<!--				<img collection="{{collection}}" document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>-->
-			<!--				<form realtime="false" collection="files" document_id="">-->
-			<!--					<input type="hidden" name="name" placeholder="View Name" value="{{data.name}}">-->
-			<!--					<input type="hidden" name="module_id" get-value="module_id">-->
-			<!--					<textarea hidden name="src" value="{{data.src}}"></textarea>-->
-								<!--<textarea hidden name="css" collection="files" document_id="{{data.css}}" name="src"></textarea>-->
-								<!--<textarea hidden name="js" collection="files" document_id="{{data.js}}" name="src"></textarea>-->
-			<!--					<button class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" actions="createDocument" show="#form" hide='#module-templates'>-->
-			<!--						<i class="fa fa-plus"></i>-->
-			<!--					</button>-->
-			<!--				</form>-->
-			<!--				<div class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">-->
-			<!--					<span collection="{{collection}}" document_id="{{data._id}}" name="name">Template Name</span>-->
-			<!--				</div>-->
-			<!--			</div>-->
-
-			<!--			<div class="padding:10px">-->
-			<!--				<p collection="{{collection}}" document_id="{{data._id}}" name="description">Description</p>-->
-			<!--			</div>-->
-			<!--		</div>-->
-
-			<!--	</div>-->
-			<!--</div>-->
+			</section>
 
 		</main>
 
