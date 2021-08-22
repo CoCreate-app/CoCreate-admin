@@ -76,15 +76,24 @@
             </ul>
         </nav>
         <main class="padding:10px" data-main_content_id="content">
-            <form pass_id="form-fields" collection="" document_id="" id="form">
+            <form pass_id="form-fields" collection="module_activities" document_id="" id="form">
                 <input type="text" name="name" id="name" placeholder="Website Name" class="floating-label">
                 <input type="hidden" name="module_id" pass_id="module_id" value="">
                 <input type="hidden" name="_id" id="website_id">
                 <input type="text" name="description" id="description" placeholder="Description" class="floating-label">
+				<cocreate-select class="sortable floating-label" name="home" placeholder="Home Page">
+					<input placeholder="Search" template_id="home">
+					<cc-options fetch-collection="" filter-name="" filter-value="" order-by="name" order-type="asc" template_id="home" pass_id="website_id" class="overflow:auto">
+						<cc-option class="template" template_id="home" value="{{data._id}}">
+							<h3 collection="{{collection}}" document_id="{{data._id}}" name="name">Type Name</h3>
+						</cc-option>
+					</cc-options>
+				</cocreate-select>
                 <button actions="saveDocument" class="position:fixed bottom:15px right:15px bg:blue grow-hover border-radius:50% padding:15px">
                     <i class="far fa-save"></i>
                 </button>
             </form>
+            
             <section id="website-pages">
                 <!-- Website Pages -->
                 <div class="card display:flex padding:10px_15px margin-top:10px font-size:18px"> 
@@ -92,7 +101,7 @@
                     <a show="#page-templates" hide="#form, #website-pages" pass-collection="files" pass_to="page-templates"><i class="far fa-plus-square"></i></a>
                 </div>
                 <!--<input type="hidden" filter-name="module-view" filter-value="module-view" template_id="module-views">-->
-                <div fetch-collection="files" filter-name="" filter-value="" order-by="name" order-type="asc" template_id="website-pages" pass_id="website_id" class="sortable background:whitesmoke padding:5px:10px margin-top:10px" dnd-group-name="website-pages">
+                <div fetch-collection="" filter-name="" filter-value="" order-by="name" order-type="asc" template_id="website-pages" pass_id="website_id" class="sortable background:whitesmoke padding:5px:10px margin-top:10px" dnd-group-name="website-pages">
                     <div template_id="website-pages" class="template card padding:10px_5px background:white collapsed margin-top:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
                         <div class="display:flex padding-left:10px">
                             <a target="modal" href="../website-pages/form.html" modal-color="#229954" class="flex-grow:1 font-size:16px padding:5px_0">
@@ -135,7 +144,7 @@
                                 <textarea hidden name="html" value="{{data.html}}"></textarea>
                                 <textarea hidden name="css" value="{{data.css}}"></textarea> 
                                 <textarea hidden name="js" value="{{data.js}}"></textarea>
-                                <button class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" actions="createDocument" show="#form, #website-pages" hide='#page-templates'>                      
+                                <button class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" actions="createDocument" show="#form, #website-pages" hide='#page-templates' pass-collection="files" pass_to="website_id">                      
                                     <i class="fa fa-plus"></i>                  
                                 </button> 
                             </form>
@@ -150,7 +159,9 @@
                 </div>
             </div>
         </main>
+        
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+        
     </body>
 
 </html>
