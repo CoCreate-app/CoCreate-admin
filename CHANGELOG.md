@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.1.1...v1.1.2) (2021-08-22)
+
+
+### Bug Fixes
+
+* bump dependancy package versions ([2516ee8](https://github.com/CoCreate-app/CoCreate-admin/commit/2516ee8f992037f3d0c2e1380804e2ac1b2c17a0))
+
 ## [1.1.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.1.0...v1.1.1) (2021-08-22)
 
 
