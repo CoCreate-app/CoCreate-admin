@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.1.7...v1.1.8) (2021-08-31)
+
+
+### Bug Fixes
+
+* datatable css ([4371f38](https://github.com/CoCreate-app/CoCreate-admin/commit/4371f38dc62a12878760026b637398c849acba8f))
+
 ## [1.1.7](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.1.6...v1.1.7) (2021-08-27)
 
 
