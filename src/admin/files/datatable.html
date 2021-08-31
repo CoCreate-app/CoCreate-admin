@@ -16,10 +16,10 @@
 		}
 	</style>
 
-	<body class="width:fit-content overflow:overlay">
+	<body>
 
 		<!-- Navbar -->
-		<nav class="nav display:flex align-items:center background:whitesmoke position:sticky left:0 width:100vw" main-content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
+		<nav class="nav display:flex align-items:center background:whitesmoke position:sticky" main-content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
 			<!-- Menu Icon Animations -->
 			<a class="menu_icon--Vdots" toggle="active" toggle-sidenav="menuL">
@@ -96,7 +96,7 @@
 		<div class="position:fixed margin-top:50px" main-content_id="content" id="modal-viewport"></div>
 
 		<!-- Main Content -->
-		<main main-content_id="content" class="padding:5px">
+		<main main-content_id="content" class="padding:5px overflow:overlay">
 			<table class="width:100% border-collapse:collapse">
 				<tr class="border-bottom:1px_solid_darkgray">
 					<td class="position:sticky top:0 background:white padding-top:0 padding:10px ">
@@ -145,7 +145,6 @@
 
 				</tbody>
 			</table>
-
 		</main>
 
 		<button class="position:fixed bottom:15px right:15px width:50px height:50px background:dodgerblue grow-hover border-radius:50% z-index:8 color:white">

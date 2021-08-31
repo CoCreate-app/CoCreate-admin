@@ -26,10 +26,10 @@
                     
                      <!-- Block Categories -->
 					<!--<div template_id="block-categories" filter-name="type" filter-value="611829a9c0e9580010ea589d"></div>-->
-                    <div  id="elements" class="components display:none active" template_id="block-categories" fetch-collection="tags" filter-name="module_id" filter-value="5ff747727005da1c27274194" order-by="position" order-type="asc" filter-value_type="number" render_id="tag">
+                    <div  id="elements" class="components display:none active" template_id="block-categories" fetch-collection="tags" filter-name="module_id" filter-value="5ff747727005da1c27274194" order-by="position" order-type="asc" render_id="tag">
                             
                          <!-- Block Categories Template -->
-                        <div class="template" template_id="block-categories" render-key="tag" render-array="tag.data" document_id="{{tag._id}}">
+                        <div class="template" template_id="block-categories" document_id="{{tag._id}}">
                             <div class="padding:5px background:gainsboro" show=".category{{tag._id}}" hide=".category{{tag._id}}">
                                 <span class="category{{tag._id}} hidden"><i class="fas fa-plus"></i></span>
                                 <span class="category{{tag._id}}"><i class="fas fa-minus"></i></span>
