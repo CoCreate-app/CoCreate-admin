@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.1.9...v1.2.0) (2021-09-04)
+
+
+### Features
+
+* image-editor ([ed170be](https://github.com/CoCreate-app/CoCreate-admin/commit/ed170bee752c4da5aa9fc4cefb74bcf23b6499f4))
+
 ## [1.1.9](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.1.8...v1.1.9) (2021-08-31)
 
 
