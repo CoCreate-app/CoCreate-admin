@@ -68,10 +68,14 @@
 							<div pass-collection="modules" document_id="{{data._id}}" pass_to="module_id"></div>
 							<div pass-collection="files" pass-document_id="{{data.settings-menu-secondary}}" pass_to="form"></div>
 							<div pass-collection="organizations" pass-document_id="{{data.organization_id}}" pass_to="form-fields"></div>
+							<div pass-collection="files" pass-document_id="{{data.settings-menu-primary}}" pass-name="src" pass_to="render"></div>
 						</a>
 						<div class="float:right width:50px text-align:center {{data.settings-menu-secondary}}">
 							<a target="modal" fetch-for href='../..{"collection":"files", "document_id":"{{data.settings-menu-secondary}}","name":"path"}' modal-width="{{data.settings-modal-secondary-width}}" modal-color="{{data.settings-modal-secondary-color}}">
 								<i class="fas fa-plus"></i>
+                                <div pass-collection="files" pass-document_id="{{data.main-menu-secondary}}" pass-name="src" pass_to="render"></div>
+                                <div pass-document_id="{{data._id}}" pass_to="module-form"></div>
+			                    <div pass_to="form-fields" pass-document_id=""></div>
 					  		</a>
 						</div>
 					</li>

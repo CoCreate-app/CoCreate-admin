@@ -47,8 +47,8 @@
                     <a id="mobile-view" class=""><i class="fas fa-mobile-alt"></i></a>
                 </li>
 
-                <li actions="disableLinks" link-target="#canvas;" class="margin-right:15px" show="[actions='activateLinks']" hide="[actions='disableLinks']"><i class="fas fa-link"></i></li>
-                <li actions="activateLinks" link-target="#canvas;" class="margin-right:15px color:red hidden" show="[actions='disableLinks']" hide="[actions='activateLinks']"><i class="fas fa-unlink"></i></li>
+                <li actions="disableLinks" link-target="#canvas;" class="margin-right:15px" show="[actions='enableLinks']" hide="[actions='disableLinks']"><i class="fas fa-link"></i></li>
+                <li actions="enableLinks" link-target="#canvas;" class="margin-right:15px color:red hidden" show="[actions='disableLinks']" hide="[actions='enableLinks']"><i class="fas fa-unlink"></i></li>
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
@@ -98,7 +98,9 @@
                 <span class="padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid" tagName></span>
                 <!--<span class="padding:3px background:dodgerblue pointer-events:auto"><i class="fas fa-arrows-alt"></i></span>-->
                 <div class="display:flex align-items:center padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid pointer-events:auto">
-                    <span actions="previousElement" class="margin-right:5px"><i class="fas fa-arrow-up"></i></span>
+                    <span actions="cloneElement" class="margin-right:10px"><i class="far fa-clone"></i></span>
+                    <span actions="deleteElement" class="margin-right:10px"><i class="fas fa-trash-alt"></i></span>
+                    <span actions="previousElement" class="margin-right:10px"><i class="fas fa-arrow-up"></i></span>
                     <span actions="nextElement"><i class="fas fa-arrow-down"></i></span>
                 </div>
             </tools>

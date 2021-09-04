@@ -621,6 +621,21 @@ module.exports = {
             }
         },
         {
+            "entry": "./src/admin/image-editor/index.html",
+            "collection": "files",
+            "document_id": "61302d1a8ed7b00013653215",
+            "key": "src",
+            "data": {
+                "name": "index.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/image-editor/index.html",
+                "public": "true",
+                "module_id": "61302bae8ed7b000136531d0"
+            }
+        },
+        {
             "entry": "./src/admin/industries/datatable.html",
             "collection": "files",
             "document_id": "61186f46c0e9580010ea640a",
