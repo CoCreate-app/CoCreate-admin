@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+		<title>tui-image-editor | CoCreateJS</title>
+
+		<link rel="stylesheet" href="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.css" />
+
+		<style>
+			.tui-image-editor-header-logo {
+				display: none!important;
+			}
+
+			.tui-image-editor-header-buttons {
+				display: none!important;
+			}
+		</style>
+	</head>
+
+	<body>
+        <div id="modal-viewport" class="hidden"></div>
+        <!-- Navbar -->
+        <nav class="nav display:flex align-items:center background:whitesmoke" main-content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
+
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
+
+                <!-- Modal Controls -->
+                <li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-maximize"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+                <li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
+
+                <!-- fullscreen toogle and icon transform-->
+                <li class="margin-right:15px"><a fullscreen><i toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../modules/form.html" modal-width="320px">
+                        <i class="fas fa-cog"></i>
+                        <div pass-collection="modules" pass-document_id="5ff747727005da1c27274191" pass_to="form-fields"></div>
+                        <div pass-filter-value="5ff747727005da1c27274191" pass_to="module_id"></div>
+                    </a>
+                </li>
+
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../code-editor/index.html">
+                        <i class="fas fa-code"></i>
+                        <div pass_id="render" pass-collection="files" pass-document_id="60ddfdbe14b5ab0c2dd2fdf5" pass-name="src" pass_to="code-editor"></div>
+                    </a>
+                </li>
+
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="../builder/index.html">
+                        <i class="fas fa-palette"></i>
+                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main main-content_id="content">
+			<div id="tui-image-editor"></div>
+		</main>
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+
+	</body>
+
+</html>
