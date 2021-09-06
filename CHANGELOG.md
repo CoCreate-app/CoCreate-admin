@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.2.2...v1.3.0) (2021-09-06)
+
+
+### Features
+
+* filetree using cocreate-fetch ([5dda682](https://github.com/CoCreate-app/CoCreate-admin/commit/5dda682ed9dac352a2dc28539d1ef940d1e1a392))
+
 ## [1.2.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.2.1...v1.2.2) (2021-09-04)
 
 
