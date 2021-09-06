@@ -105,20 +105,26 @@
                     <div class="padding:5px">
                         <span class=""><i class="fa fa-caret-down" toggle="fa-caret-right, fa-caret-down"></i></span>
                         <span class="margin-left:5px" collection="websites" document_id="" name="name">Project name</span>
-                        <div class="margin-left:10px sortable" template_id="folder" fetch-collection="files" filter-name1="directory" filter-value="" order-by="name" order-type="asc" fetch-count="6" render_id="folder">
+                        <div class="margin-left:10px sortable" template_id="auto" fetch-collection="files" filter-name="directory" filter-value="/" filter-operator="$eq" order-by="name" order-type="asc" render_id="auto">
+                            <div template_id="auto" filter-name="content-type" filter-value="text/directory"></div>
                             <!--Folder Template -->
-                            <div class="template padding:5px" template_id="folder" document_id="{{folder._id}}" render-key="folder" render-array="folder.data">
-                                <span class=""><i class="fa fa-caret-down" toggle="fa-caret-right, fa-caret-down"></i></span>
-                                <span class="margin-left:5px" collection="folders" document_id="{{folder._id}}" name="name">{{folder.name}}</span>
+                            <div class="template padding:5px" template_id="auto" document_id="{{auto._id}}">
+                                <span class="" show="#directory{{auto._id}}" hide="#directory{{auto._id}}" toggle="fa-caret-down, fa-caret-right" toggle-target="#icon{{auto._id}}">
+                                    <i id="icon{{auto._id}}" class="fa fa-caret-right" ></i>
+                                </span>
+                                <span class="margin-left:5px" collection="files" document_id="{{auto._id}}" name="name"></span>
+                                
                                 <!-- fetches folder and file template. This loops until tree ends -->
-                                <div class="domEditor margin-left:10px" collection="component" document_id="611ab5d9251afa96bd20f6cc" name="html"></div>
+                                <div id="directory{{auto._id}}" class="domEditor margin-left:10px hidden" collection="components" document_id="611ab5d9251afa96bd20f6cc" name="html" filter-value="{{auto.path}}"></div>
                             </div>
                         </div>
-                        <div class="margin-left:10px sortable" template_id="file" fetch-collection="files" filter-name="directory" filter-value="" order-by="name" fetch-count="6">
+                        <div class="margin-left:10px sortable" template_id="auto" fetch-collection="files" filter-name="directory" filter-value="/"  filter-operator="$eq" order-by="name" render_id="auto">
+                            <div template_id="auto" filter-name="content-type" filter-value="text/directory" filter-operator="$ne"></div>
+
                              <!-- File Template -->
-                            <div class="template padding:5px" template_id="file" document_id="{{data._id}}">
-                                <span class="{{data.content-type}}"><i class="fab fa-html5"></i></span>
-                                <span class="margin-left:5px" collection="files" document_id="{{data._id}}" name="name">{{data.name}}</span>
+                            <div class="template padding:5px" template_id="auto" document_id="{{auto._id}}">
+                                <span class="{{auto.content-type}}"><i class="fab fa-html5"></i></span>
+                                <span class="margin-left:5px" collection="files" document_id="{{auto._id}}" name="name"></span>
                             </div>
                         </div>
                     </div>
@@ -136,7 +142,7 @@
         				</span>
                     </form>
                     <!-- Assets -->
-                    <div class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px" template_id="assets" fetch-collection="files" filter-name="content-type" filter-value="image" order-by="position" order-type="asc">
+                    <div class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px" template_id="assets" fetch-collection="files" filter-name="content-type" filter-value="image, video" order-by="position" order-type="asc">
                          <!-- Asset Template -->
                         <div template_id="assets" class="template card flex-grow:1 width:70px height:90px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}">
                             <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
@@ -144,10 +150,19 @@
                                     <i class="fas fa-pencil-alt"></i>
                                 </a>
                             </div>
-                            <div cloneable="true" cloneable-html='<img src=".{{data.path}}"></img>' collection="files" document_id="{{data._id}}" name="thumbnail" class="padding-bottom:5px">
-                                <img width="100%" src="{{data.path}}">
-                                <!--<p class="font-size:11px" collection="module_activities" document_id="{{data._id}}" name="name">Block</p>-->
-                            </div>
+                            <a actions="attributes" attribute="src" value="{{data.path}}">
+                                <!-- image -->
+                                <div cloneable="true" cloneable-html='<img src="{{data.path}}"></img>' class="padding:5px">
+                                    <img width="auto" height="65px" collection="files" document_id="{{data._id}}" name="path">
+                                    <!--<p class="font-size:11px" collection="module_activities" document_id="{{data._id}}" name="name">Block</p>-->
+                                </div>
+                                <!-- Video -->
+                                <!--<div cloneable="true" cloneable-html='<video><source src="{{data.path}}"></video>' class="padding:5px">-->
+                                <!--    <video width="auto" height="65px">-->
+                                <!--        <source collection="files" document_id="{{data._id}}" name="path">-->
+                                <!--    </video>-->
+                                <!--</div>-->
+                            </a>
                         </div>
                     </div>
                         

@@ -1,0 +1,20 @@
+<div class="margin-left:10px sortable" template_id="auto" fetch-collection="files" filter-name="directory" filter-value="parent" filter-operator="$eq" order-by="directory" order_type="asc" render_id="auto">
+    <div template_id="auto" filter-name="content-type" filter-value="directory"></div>
+    <!--Folder Template -->
+    <div class="template padding:5px" template_id="auto" document_id="{{auto._id}}">
+        <span class="" show="#directory{{auto._id}}" hide="#directory{{auto._id}}" toggle="fa-caret-down, fa-caret-right" toggle-target="#icon{{auto._id}}">
+            <i id="icon{{auto._id}}" class="fa fa-caret-right" ></i>
+        </span>
+        <span class="margin-left:5px" collection="files" document_id="{{auto._id}}" name="name">Folder name</span>
+        <div id="directory{{auto._id}}" class="domEditor margin-left:10px hidden" collection="components" document_id="611ab5d9251afa96bd20f6cc" name="html" filter-value="{{auto.path}}"></div>
+    </div>
+</div>
+<div class="margin-left:10px sortable" template_id="auto" fetch-collection="files" filter-name="directory" filter-value="parent" filter-operator="$eq" order-by="directory" render_id="auto">
+    <div template_id="auto" filter-name="content-type" filter-value="text/directory" filter-operator="$ne"></div>
+
+    <!--File Template -->
+    <div class="template padding:5px" template_id="auto" document_id="{{auto._id}}">
+        <span class=""><i class="fab fa-html5"></i></span>
+        <span class="margin-left:5px" collection="files" document_id="{{auto._id}}" name="name"></span>
+    </div>
+</div>
