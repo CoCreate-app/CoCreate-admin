@@ -104,12 +104,12 @@
                 <div fetch-collection="" filter-name="" filter-value="" order-by="name" order-type="asc" template_id="website-pages" pass_id="website_id" class="sortable background:whitesmoke padding:10px" dnd-group-name="website-pages">
                     <div template_id="website-pages" class="template card padding:10px_5px background:white collapsed margin-bottom:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
                         <div class="display:flex padding-left:10px">
-                            <a target="modal" href="../website-pages/form.html" modal-color="#229954" class="flex-grow:1 font-size:16px padding:5px_0">
-                                <p collection="{{collection}}" document_id="{{data._id}}" name="name">Web Page</p>
+                            <a target="modal" href="../files/form.html" modal-width="320px" class="flex-grow:1 font-size:16px padding:5px_0">
+                                <p collection="{{collection}}" document_id="{{data._id}}" name="name"></p>
 								<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
 								<div pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
 								<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
-                                <div pass-fetch_collection="{{collection}}" pass-filter-name="website_id" pass-filter-value="{{data._id}}" pass_to="website_id"></div>
+                                <!--<div pass-fetch_collection="{{collection}}" pass-filter-name="website_id" pass-filter-value="{{data._id}}" pass_to="website_id"></div>-->
                             </a>
                             <!--<p collection="{{collection}}" document_id="{{data._id}}" name="name" class="flex-grow:1 font-size:16px padding:5px_0">Web Page</p>-->
                             <!--<input collection="{{collection}}" document_id="{{data._id}}" name="name" class="flex-grow:1 min-width:100px border:none outline:none font-size:16px" placeholder="View Name">-->

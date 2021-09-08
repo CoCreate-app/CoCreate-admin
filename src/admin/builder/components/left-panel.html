@@ -1,12 +1,13 @@
         <div class="padding:5px min-width:260px">
             
             <div class="display:flex margin-bottom:5px font-size:16px tabs">
-                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#vdom" selected-group="left-panels"><i class="fas fa-stream"></i></div>
-                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#assets" selected-group="left-panels">
+                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#vdom" selected-group="left-panels" toggle="#canvas" toggle-target="#vdom" toggle-attribute="vdom-target"><i class="fas fa-stream"></i></div>
+                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#assets" selected-group="left-panels" toggle="files" toggle-target="#fetch-assets" toggle-attribute="fetch-collection">
                     <i class="fas fa-photo-video"></i>
                 </div>
-                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#files" selected-group="left-panels"><i class="fas fa-folder"></i></div>
-                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#uploader" selected-group="left-panels">
+                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#files" selected-group="left-panels" toggle="files" toggle-target=".fetch-files" toggle-attribute="fetch-collection">
+                    <i class="fas fa-folder"></i></div>
+                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#uploader" selected-group="left-panels"  toggle="uppy" toggle-target="#uppy" toggle-attribute="uploader">
                     <i class="fas fa-cloud-upload-alt"></i>
                 </div>
                 <div className="left-tabs" class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#blocks" selected-group="left-panels" selected><i class="fas fa-th-large"></i></div>
@@ -83,11 +84,11 @@
                 </div>
                 
                 <!-- Vdom -->
-                <div id="vdom" vdom-target="canvas" dnd-group-name="vdom" class="left-panel display:none">vdom</div>
+                <div id="vdom" vdom-target="" dnd-group-name="vdom" class="left-panel display:none">vdom</div>
                 
                 <!-- uploader -->
                 <div id="uploader" class="left-panel display:none">
-                    <div class="uppy" collection="files" id="drag-drop-area"></div> 
+                    <div id="uppy" uploader="uppy" collection="files" id="drag-drop-area"></div> 
                 </div>
                 
                 <!-- Files -->
@@ -105,26 +106,26 @@
                     <div class="padding:5px">
                         <span class=""><i class="fa fa-caret-down" toggle="fa-caret-right, fa-caret-down"></i></span>
                         <span class="margin-left:5px" collection="websites" document_id="" name="name">Project name</span>
-                        <div class="margin-left:10px sortable" template_id="auto" fetch-collection="files" filter-name="directory" filter-value="/" filter-operator="$eq" order-by="name" order-type="asc" render_id="auto">
-                            <div template_id="auto" filter-name="content-type" filter-value="text/directory"></div>
+                        <div id="fetch-files" class="fetch-files margin-left:10px sortable" template_id="$auto" fetch-collection="" filter-name="directory" filter-value="/" filter-operator="$eq" order-by="name" order-type="asc" render_id="$auto">
+                            <div template_id="$auto" filter-name="content-type" filter-value="text/directory"></div>
                             <!--Folder Template -->
-                            <div class="template padding:5px" template_id="auto" document_id="{{auto._id}}">
-                                <span class="" show="#directory{{auto._id}}" hide="#directory{{auto._id}}" toggle="fa-caret-down, fa-caret-right" toggle-target="#icon{{auto._id}}">
-                                    <i id="icon{{auto._id}}" class="fa fa-caret-right" ></i>
+                            <div class="template padding:5px" template_id="$auto" document_id="{{$auto._id}}">
+                                <span class="" show="#directory{{$auto._id}}" hide="#directory{{$auto._id}}" toggle="fa-caret-down, fa-caret-right" toggle-target="#icon{{$auto._id}}">
+                                    <i id="icon{{$auto._id}}" class="fa fa-caret-right" ></i>
                                 </span>
-                                <span class="margin-left:5px" collection="files" document_id="{{auto._id}}" name="name"></span>
+                                <span class="margin-left:5px" collection="files" document_id="{{$auto._id}}" name="name"></span>
                                 
                                 <!-- fetches folder and file template. This loops until tree ends -->
-                                <div id="directory{{auto._id}}" class="domEditor margin-left:10px hidden" collection="components" document_id="611ab5d9251afa96bd20f6cc" name="html" filter-value="{{auto.path}}"></div>
+                                <div id="directory{{$auto._id}}" class="domEditor margin-left:10px hidden" collection="components" document_id="611ab5d9251afa96bd20f6cc" name="html" filter-value="{{$auto.path}}"></div>
                             </div>
                         </div>
-                        <div class="margin-left:10px sortable" template_id="auto" fetch-collection="files" filter-name="directory" filter-value="/"  filter-operator="$eq" order-by="name" render_id="auto">
-                            <div template_id="auto" filter-name="content-type" filter-value="text/directory" filter-operator="$ne"></div>
+                        <div class="fetch-files margin-left:10px sortable" template_id="$auto" fetch-collection="" filter-name="directory" filter-value="/"  filter-operator="$eq" order-by="name" render_id="auto">
+                            <div template_id="$auto" filter-name="content-type" filter-value="text/directory" filter-operator="$ne"></div>
 
                              <!-- File Template -->
-                            <div class="template padding:5px" template_id="auto" document_id="{{auto._id}}">
-                                <span class="{{auto.content-type}}"><i class="fab fa-html5"></i></span>
-                                <span class="margin-left:5px" collection="files" document_id="{{auto._id}}" name="name"></span>
+                            <div class="template padding:5px" template_id="$auto" document_id="{{$auto._id}}">
+                                <span class="{{$auto.content-type}}"><i class="fab fa-html5"></i></span>
+                                <span class="margin-left:5px" collection="files" document_id="{{$auto._id}}" name="name"></span>
                             </div>
                         </div>
                     </div>
@@ -142,7 +143,7 @@
         				</span>
                     </form>
                     <!-- Assets -->
-                    <div class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px" template_id="assets" fetch-collection="files" filter-name="content-type" filter-value="image, video" order-by="position" order-type="asc">
+                    <div id="fetch-assets" class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px" template_id="assets" fetch-collection="" filter-name="content-type" filter-value="image, video" order-by="position" order-type="asc">
                          <!-- Asset Template -->
                         <div template_id="assets" class="template card flex-grow:1 width:70px height:90px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}">
                             <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
@@ -152,16 +153,15 @@
                             </div>
                             <a actions="attributes" attribute="src" value="{{data.path}}">
                                 <!-- image -->
-                                <div cloneable="true" cloneable-html='<img src="{{data.path}}"></img>' class="padding:5px">
+                                <div  cloneable="true" cloneable-html='<img src="{{data.path}}"></img>' class="padding:5px display:none" image-type="{{data.content-type}}">
                                     <img width="auto" height="65px" collection="files" document_id="{{data._id}}" name="path">
-                                    <!--<p class="font-size:11px" collection="module_activities" document_id="{{data._id}}" name="name">Block</p>-->
                                 </div>
                                 <!-- Video -->
-                                <!--<div cloneable="true" cloneable-html='<video><source src="{{data.path}}"></video>' class="padding:5px">-->
-                                <!--    <video width="auto" height="65px">-->
-                                <!--        <source collection="files" document_id="{{data._id}}" name="path">-->
-                                <!--    </video>-->
-                                <!--</div>-->
+                                <div cloneable="true" cloneable-html='<video><source src="{{data.path}}"></video>' class="padding:5px display:none" video-type="{{data.content-type}}">
+                                    <video width="auto" height="65px">
+                                        <source collection="files" document_id="{{data._id}}" name="path">
+                                    </video>
+                                </div>
                             </a>
                         </div>
                     </div>
