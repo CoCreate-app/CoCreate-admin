@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.3.0...v1.4.0) (2021-09-08)
+
+
+### Features
+
+* lazy load left panel items ([021a192](https://github.com/CoCreate-app/CoCreate-admin/commit/021a1920c0797d703cf0979f3e56365d5e5b2e8b))
+
 # [1.3.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.2.2...v1.3.0) (2021-09-06)
 
 
