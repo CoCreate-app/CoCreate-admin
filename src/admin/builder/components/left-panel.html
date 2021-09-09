@@ -116,7 +116,7 @@
                                 <span class="margin-left:5px" collection="files" document_id="{{$auto._id}}" name="name"></span>
                                 
                                 <!-- fetches folder and file template. This loops until tree ends -->
-                                <div id="directory{{$auto._id}}" class="domEditor margin-left:10px hidden" collection="components" document_id="611ab5d9251afa96bd20f6cc" name="html" filter-value="{{$auto.path}}"></div>
+                                <div id="directory{{$auto._id}}" class="domEditor margin-left:10px hidden" collection="files" document_id="611ab5d9251afa96bd20f6cc" name="src" filter-value="{{$auto.path}}"></div>
                             </div>
                         </div>
                         <div class="fetch-files margin-left:10px sortable" template_id="$auto" fetch-collection="" filter-name="directory" filter-value="/"  filter-operator="$eq" order-by="name" render_id="auto">
@@ -145,7 +145,7 @@
                     <!-- Assets -->
                     <div id="fetch-assets" class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px" template_id="assets" fetch-collection="" filter-name="content-type" filter-value="image, video" order-by="position" order-type="asc">
                          <!-- Asset Template -->
-                        <div template_id="assets" class="template card flex-grow:1 width:70px height:90px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}">
+                        <div template_id="assets" class="template card flex-grow:1 width:105px height:90px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}">
                             <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                 <a target="modal" href="https://server.cocreate.app/CoCreate-plugins/CoCreate-tui-image-editor/demo/index.html" pass-collection="files" pass-document_id="{{data._id}}" pass_to="form-fields" modal-width="900px">
                                     <i class="fas fa-pencil-alt"></i>
@@ -154,12 +154,12 @@
                             <a actions="attributes" attribute="src" value="{{data.path}}">
                                 <!-- image -->
                                 <div  cloneable="true" cloneable-html='<img src="{{data.path}}"></img>' class="padding:5px display:none" image-type="{{data.content-type}}">
-                                    <img width="auto" height="65px" collection="files" document_id="{{data._id}}" name="path">
+                                    <img width="auto" height="auto" collection="files" document_id="{{data._id}}" name="path" class="max-height:65px max-width:100%">
                                 </div>
                                 <!-- Video -->
                                 <div cloneable="true" cloneable-html='<video><source src="{{data.path}}"></video>' class="padding:5px display:none" video-type="{{data.content-type}}">
-                                    <video width="auto" height="65px">
-                                        <source collection="files" document_id="{{data._id}}" name="path">
+                                    <video width="auto" height="auto" class="max-height:65px max-width:100%">
+                                        <source collection="files" document_id="{{data._id}}" name="path" src="{{data.path}}" type="{{data.content-type}}">
                                     </video>
                                 </div>
                             </a>

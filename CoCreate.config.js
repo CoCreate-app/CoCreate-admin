@@ -219,6 +219,10 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
+                "path": "/admin/builder/right-panel.html",
+                "directory": "/admin/builder",
+                "content-type": "text/html",
+                "public": "true",
                 "module_id": "5ff747727005da1c27274193"
             }
         },
@@ -232,6 +236,27 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
+                "path": "/admin/builder/left-panel.html",
+                "directory": "/admin/builder",
+                "content-type": "text/html",
+                "public": "true",
+                "module_id": "5ff747727005da1c27274193"
+            }
+        },
+        {
+            "entry": "./src/admin/builder/components/filetree.html",
+            "collection": "files",
+            "document_id": "611ab5d9251afa96bd20f6cc",
+            "key": "src",
+            "data": {
+                "name": "filetree.html",
+                "domains": [
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/builder/filetree.html",
+                "directory": "/admin/builder",
+                "content-type": "text/html",
+                "public": "true",
                 "module_id": "5ff747727005da1c27274193"
             }
         },
@@ -500,7 +525,7 @@ module.exports = {
                 "domains": [
                     "general.cocreate.app"
                 ],
-                "path": "/admin/settings.html",
+                "path": "/admin/email/settings.html",
                 "directory": "/admin/email",
                 "content-type": "text/html",
                 "public": "true",
