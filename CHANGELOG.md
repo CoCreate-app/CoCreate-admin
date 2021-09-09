@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.4.2...v1.4.3) (2021-09-09)
+
+
+### Bug Fixes
+
+* ci docs ([8ade736](https://github.com/CoCreate-app/CoCreate-admin/commit/8ade736dee6ca6bae6e567c2c087c4c626a3d8d7))
+
 ## [1.4.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.4.1...v1.4.2) (2021-09-09)
 
 
