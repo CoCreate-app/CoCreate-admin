@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.4.0...v1.4.1) (2021-09-09)
+
+
+### Bug Fixes
+
+* filetree component collection ([09a6c7b](https://github.com/CoCreate-app/CoCreate-admin/commit/09a6c7b902db2820b051a0c249cd0da60976e370))
+
 # [1.4.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.3.0...v1.4.0) (2021-09-08)
 
 
