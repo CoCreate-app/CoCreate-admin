@@ -32,7 +32,7 @@
     <body>
 
         <!-- Navbar -->
-        <nav class="nav display:flex align-items:center background:whitesmoke" main-content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
+        <nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
             <!-- Horizontal Scroll Nav/Tabs -->
             <ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
@@ -79,8 +79,7 @@
             </ul>
         </nav>
 
-        <!-- CoCreate sidenav resizeable container... With id to open by btn... attributes to configure screensize and container effect-->
-        <sidenav id="menuL" class="cocreate-sidenav background:white margin-top:50px" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="collapsed" sidenav_default_phone="offCanvas">
+        <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:white height:100vh width:275px width:275px:hover width:50px@sm width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-right" resize-value="width">        
             <ul class="cocreate-menu border-bottom:1px_solid_lightgray">
                 <li class="line-height:40px height:40px overflow:hidden font-size:20px">
                     <a target="modal" href="compose.html">
@@ -104,11 +103,11 @@
                     </a>
                 </li>
             </ul>
-            <div class="resizeHandler"></div>
+            <div resize="right"></div>
         </sidenav>
 
         <!-- container -->
-        <main class="border-left:1px_solid_lightgray border-right:1px_solid_lightgray color-dark-gray height:100vh" main-content_id="content">
+        <main class="border-left:1px_solid_lightgray border-right:1px_solid_lightgray color-dark-gray height:100vh" content_id="content">
             <div class="display:flex align-items:center height:70px font-size:20px  border-bottom:1px_solid_lightgray">
                 <label class="checkbox padding-right:10px margin-left:20px">
                     <input type="checkbox"><span class="mark"></span>
@@ -157,9 +156,7 @@
         </main>
 
 
-        <!-- CoCreate sidenav resizeable container... With id to open by btn... attributes to configure screensize and container effect-->
-        <sidenav id="menuR" class="cocreate-sidenav sidenav-right background:white margin-top:50px color-dark-gray" expandOnHover="false" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="expanded" sidenav-default_phone="ofCanvas"
-            sidenav-expanded_width="370px">
+        <sidenav id="menuR" class="position:fixed top:0px right:0px overflow:hidden background:white height:100vh width:375px width:375px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-right" resize-value="width">        
 
             <div class="min-width:300px">
                 <div class="display:flex align-items:center height:70px justify-content:flex-end padding-15_0px font-size:14px border-bottom:1px_solid_lightgray">
@@ -202,7 +199,7 @@
                 </div>
             </div>
 
-            <div class="resizeHandler"></div>
+            <div resize="right"></div>
         </sidenav>
 
         <button actions="saveDocument" class="position:fixed bottom:15px right:15px background:#2196f3 grow-hover border-radius:50% z-index:10"><i class="fas fa-plus"></i></button>

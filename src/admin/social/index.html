@@ -47,7 +47,7 @@
 		<div id="modal-viewport" class="hidden"></div>
 
 		<!-- Navbar -->
-		<nav class="nav display:flex align-items:center background:whitesmoke" main-content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
+		<nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
 			<!-- Horizontal Scroll Nav/Tabs -->
 			<ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
@@ -94,7 +94,7 @@
 			</ul>
 		</nav>
 
-		<sidenav id="menuL" class="cocreate-sidenav background:whitesmoke height:100vh" data-main_content="content" sidenav-default_desktop="collapsed" sidenav-default_tablet="collapsed">
+		<sidenav id="menuL" class="position:fixed top:0px left:0px background:whitesmoke height:100vh width:50px width:300px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
 
 			<!-- Select to change organizations  -->
 			<cocreate-select class="org-changer remove-none padding:0 border:none sessionUser_Id" name="current_org" collection="users" document_id="">
@@ -173,7 +173,7 @@
 			<div class="resizeHandler background:rgba(0,0,0,0.06):hover"></div>
 		</sidenav>
 
-		<main main-content_id="content" class="height:100vh">
+		<main content_id="content" class="height:100vh">
 			<div class="display:flex flex-wrap:wrap padding:20px" fetch-collection="module_activities" fetch-count="12" order-by="name" order-type="asc" template_id="filter_test" data-search_type="or">
 
 				<div class="template card position:relative flex-grow:1 margin:10px background:#ffffff height:470px width:250px max-width:350px" template_id="filter_test">
@@ -211,7 +211,8 @@
 
 			</div>
 		</main>
-		<sidenav id="menuR" class="cocreate-sidenav sidenav-right background:white height:100vh direction:rtl" data-main_content="content" sidenav-default_desktop="offcanvas" sidenav-default_tablet="offcanvas" sidenav-expanded_width="300px" sidenav-collapsed_width="0px">
+		
+        <sidenav id="menuR" class="position:fixed top:0px right:0px direction:rtl overflow:hidden background:white height:100vh width:0px" resizable resize-target="[content_id='content']" resize-property="margin-right" resize-value="width">        
 
 			<div class="min-width:290px background-color:#ffffff margin:5px  direction:ltr">
 				<div class="padding:5px">

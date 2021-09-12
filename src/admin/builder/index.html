@@ -11,14 +11,14 @@
     </head>
 
     <body>
-        <!-- Navbar  -->
-        <nav class="nav display:flex position:relative align-items:center box-shadow-bottom" main-content_id="content" scroll=", hide-nav" scroll-up="5" scroll-down="5" collection="fils" document_id="60de0fae14b5ab0c2dd2feb9" name="src">
+        <nav class="nav display:flex position:relative align-items:center box-shadow-bottom" content_id="canvas" scroll=", hide-nav" scroll-up="5" scroll-down="5" collection="fils" document_id="60de0fae14b5ab0c2dd2feb9" name="src">
+            
             <!-- Menu Icon Arrow Left Animations -->
-            <a aria-label="mobile menu" class="menu_icon arrow-left" toggle="active" toggle-sidenav="menuL">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+			<a class="menu_icon  arrow-left" click="active" toggle="width:0px," toggle-target="#menuL" toggle-attribute="style">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
 
             <!-- Horizontal Scroll Nav/Tabs -->
             <ul class="direction:rtl display:inline-flex align-items:center overflow:auto font-size:20px list-style-type:none width:100% height:50px">
@@ -62,33 +62,33 @@
             </ul>
 
             <!-- Menu Icon Arrow Right Animations -->
-            <a aria-label="mobile menu" class="menu_icon arrow-right" toggle="active" toggle-sidenav="menuR">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+			<a class="menu_icon arrow-right" click="active" toggle="width:0px," toggle-target="#menuR" toggle-attribute="style">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
         </nav>
 
         <!-- Modal viewport -->
-        <div class="position:fixed z-index:12!important" id="modal-viewport"></div>
+        <div id="modal-viewport" class="position:fixed z-index:12!important"></div>
 
         <!-- Main Container -->
-        <main main-content_id="canvas" class="height:100vh">
+        <main content_id="canvas" class="height:100vh">
             <div class="canvas-container height:100% margin:auto">
                 <iframe editor="dom" id="canvas" pass_id="builder" collection="" document_id="" name="src" read="false" update="false" frameborder="0" width="100%" height="100%"></iframe>
             </div>
         </main>
 
         <!-- SideNav Left -->
-        <sidenav id="menuL" class="cocreate-sidenav background:whitesmoke height:100vh" data-main_content="canvas,content" sidenav-default_desktop="expanded" sidenav-default_tablet="expanded" sidenav-default_phone="offcanvas" sidenav-ontoggle_desktop="offcanvas" sidenav-ontoggle_tablet="offcanvas" sidenav-expanded_width="260px">
+        <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:270px width:270px:hover width:0px@xs" resizable resize-target="[content_id='canvas']" resize-property="margin-left" resize-value="width">
             <div class="domEditor" collection="files" document_id="60de0fae14b5ab0c2dd2feba" name="src"></div>
-            <div class="resizeHandler"></div>
+            <div resize="right"></div>
         </sidenav>
 
         <!-- SideNav Right -->
-        <sidenav data-main_content="canvas,content" sidenav-default_desktop="expanded" sidenav-default_tablet="offcanvas" sidenav-expanded_width="305px" sidenav-collapsed_width="0px" id="menuR" class="cocreate-sidenav sidenav-right background:whitesmoke height:100vh">
+        <sidenav id="menuR" class="position:fixed top:0px right:0px overflow:hidden background:whitesmoke height:100vh width:310px width:310px:hover width:0px@xs" resizable resize-target="[content_id='canvas']" resize-property="margin-right" resize-value="width">
             <div class="domEditor" collection="files" document_id="60de0fae14b5ab0c2dd2febb" name="src"></div>
-            <div class="resizeHandler"></div>
+            <div resize="left"></div>
         </sidenav>
 
         <!-- Selected Toolbar -->

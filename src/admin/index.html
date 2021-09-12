@@ -21,10 +21,10 @@
     </style>
     <body>
         <!-- Navbar  -->
-        <nav class="nav display:flex align-items:center background:whitesmoke" main-content_id="content" scroll=", hide-nav" scroll-up="5" scroll-down="5">
+        <nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll=", hide-nav" scroll-up="5" scroll-down="5">
       
 			<!-- Menu Icon -->
-			<a class="menu_icon" toggle="active" toggle-sidenav="menuL">
+			<a class="menu_icon" click="active" toggle="width:300px," toggle-target="#menuL" toggle-attribute="style">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -103,13 +103,13 @@
         </nav>
     
         <!-- Modal Viewport  -->
-        <div class="position:fixed margin-top:50px" main-content_id="content" id="modal-viewport"></div>
+        <div class="position:fixed margin-top:50px" content_id="content" id="modal-viewport"></div>
        
         <!-- Main container  -->
-        <main class="height:100vh margin-top:10px" main-content_id="content"></main>
+        <main class="height:100vh margin-top:10px" content_id="content"></main>
         
         <!-- SideNav  -->
-        <sidenav id="menuL" class="cocreate-sidenav background:whitesmoke height:100vh background:transparent::-webkit-scrollbar-thumb" data-main_content="content" sidenav-default_desktop="collapsed" sidenav-default_tablet="collapsed">
+        <sidenav id="menuL" class="position:fixed top:0px left:0px background:whitesmoke height:100vh width:50px width:300px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
         
             <!-- Select to change organizations  -->
             <cocreate-select class="org-changer remove-none border:none sessionUser_Id padding:0" name="current_org" collection="users" document_id="">
@@ -208,7 +208,7 @@
 					</a>
 				</div>
 			</div>
-            <div class="resizeHandler"></div>
+            <div resize="right"></div>
         </sidenav>
        
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>

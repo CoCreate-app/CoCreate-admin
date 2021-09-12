@@ -154,10 +154,10 @@
         <div id="modal-viewport" class="hidden"></div>
 
         <!-- Navbar -->
-        <div class="nav display:flex align-items:center background:whitesmoke " main-content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
+        <div class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
             <!-- Menu Icon Animations -->
-            <a class="nav-toggle menu_icon--Vdots" toggle-sidenav="menuL">
+            <a class="menu_icon--Vdots" click="active" toggle="width:310px," toggle-target="#menuL" toggle-attribute="style">
                 <div class="circle"></div>
                 <div class="circle"></div>
                 <div class="circle"></div>
@@ -210,7 +210,8 @@
         </div>
 
         <!-- SidNav Left -->
-        <sidenav id="menuL" class="cocreate-sidenav background:white height:100vh" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="expanded" sidenav-expanded_width="310px" sidenav-collapsed_width="0px">
+        <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:white height:100vh width:310px width:310px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-right" resize-value="width">
+            
             <div class="height:100vh min-width:300px padding:5px overflow:auto margin:5px">
 
                 <!-- SideNav Header -->
@@ -354,11 +355,11 @@
                     </div>
                 </div>
             </div>
-            <div class="resizeHandler background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
+            <div resize="right" class="background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
         </sidenav>
 
         <!-- Main Content -->
-        <main main-content_id="content" class="padding:5px height:100vh">
+        <main content_id="content" class="padding:5px height:100vh">
 
             <!-- Datatable Navigation Tabs -->
             <ul class="overflow:auto display:inline-flex align-items:center list-style-type:none width:100% line-height:40px" role="tablist">
@@ -486,7 +487,7 @@
         </main>
 
         <!-- SideNav Right -->
-        <sidenav id="menuR" class="cocreate-sidenav sidenav-right background:white height:100vh direction:rtl" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="offcanvas" sidenav-expanded_width="300px" sidenav-collapsed_width="0px">
+        <sidenav id="menuR" class="position:fixed top:0px right:0px overflow:hidden direction:rtl background:white height:100vh width:300px width:300px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-right" resize-value="width">
 
             <div class="min-width:290px background-color:#ffffff margin:5px direction:ltr">
                 <div class="padding:5px">
@@ -616,7 +617,7 @@
                     </form>
                 </div>
             </div>
-            <div class="resizeHandler background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
+            <div resize="left" class="background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
         </sidenav>
 
         <!-- SidNav RIght Key pad Button -->

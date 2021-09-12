@@ -51,7 +51,7 @@ module.exports = {
                 ],
                 "path": "/admin/apikey.js",
                 "directory": "/admin",
-                "content-type": "text/html",
+                "content-type": "application/javascript",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727419c"
             }
