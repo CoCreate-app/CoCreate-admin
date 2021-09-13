@@ -15,7 +15,7 @@
         <!-- Navbar  -->
         <nav class="nav display:flex position:relative align-items:center box-shadow-bottom" content_id="content" scroll=", hide-nav" scroll-up="5" scroll-down="5">
             <!-- Menu Icon Animations -->
-            <a class="nav-toggle menu_icon--Vdots" toggle-sidenav="menuL">
+            <a class="nav-toggle menu_icon--Vdots active" click="active" toggle="width:0px, width:240px" toggle-target="#menuL" toggle-attribute="style">
                 <div class="circle"></div>
                 <div class="circle"></div>
                 <div class="circle"></div>
@@ -114,8 +114,7 @@
         </main>
 
         <!-- SideNav Left -->
-        <sidenav id="menuL" class="cocreate-sidenav height:100vh background:whitesmoke width:0px@0px-826px!important" data-main_content="content" sidenav-default_desktop="expanded" sidenav-default_tablet="expanded" sidenav-default_phone="offcanvas" sidenav-ontoggle_desktop="offcanvas"
-            sidenav-ontoggle_tablet="offcanvas" sidenav-expanded_width="240px">
+        <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:240px width:240px:hover width:0px@0px-826px" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
 
             <div class="padding:5px">
                 <button class="width:100% btn-modal-close" target="modal" href="./form.html" pass_to="form-field" modal-width="320px">
