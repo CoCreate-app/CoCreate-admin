@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.4.5...v1.4.6) (2021-09-13)
+
+
+### Bug Fixes
+
+* upgrade dependencies ([f8248e2](https://github.com/CoCreate-app/CoCreate-admin/commit/f8248e24f7172511c535d57bbeca355036d26b61))
+
 ## [1.4.5](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.4.4...v1.4.5) (2021-09-12)
 
 
