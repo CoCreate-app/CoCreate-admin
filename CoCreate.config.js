@@ -80,7 +80,7 @@ module.exports = {
         {
             "entry": "./src/admin/index.css",
             "collection": "files",
-            "document_id": "60972231624235187e4d6979",
+            "document_id": "60e4f9714792bff869f1bde5",
             "key": "src",
             "data": {
                 "name": "index.css",

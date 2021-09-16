@@ -1,1 +1,27 @@
-.align-items\:center{align-items:center}
+*{padding:0px; margin:0px;}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+body {
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #505050;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  }
+  
+a {
+  text-decoration: none;
+  cursor: pointer;
+  align-items: center;
+  color: inherit;
+}
