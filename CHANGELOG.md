@@ -1,3 +1,10 @@
+## [1.4.8](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.4.7...v1.4.8) (2021-09-16)
+
+
+### Bug Fixes
+
+* update dependencies ([7ccd7c5](https://github.com/CoCreate-app/CoCreate-admin/commit/7ccd7c5437e2b3d65c4894e89d833c611361ad16))
+
 ## [1.4.7](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.4.6...v1.4.7) (2021-09-14)
 
 
