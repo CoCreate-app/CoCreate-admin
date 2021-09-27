@@ -1,3 +1,10 @@
+## [1.4.9](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.4.8...v1.4.9) (2021-09-27)
+
+
+### Bug Fixes
+
+* Ui elements ([42a08a8](https://github.com/CoCreate-app/CoCreate-admin/commit/42a08a80f698b9efebb081111937c512299b9f9a))
+
 ## [1.4.8](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.4.7...v1.4.8) (2021-09-16)
 
 
