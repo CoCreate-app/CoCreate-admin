@@ -27,7 +27,10 @@
   },
   "author": "CoCreate LLC",
   "license": "MIT",
-  "repository": "https://github.com/CoCreate-app/CoCreate-admin.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoCreate-app/CoCreate-admin.git"
+  },
   "bugs": {
     "url": "https://github.com/CoCreate-app/CoCreate-admin/issues"
   },

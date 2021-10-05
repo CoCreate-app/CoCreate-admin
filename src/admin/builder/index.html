@@ -75,7 +75,7 @@
         <!-- Main Container -->
         <main content_id="canvas" class="height:100vh">
             <div class="canvas-container height:100% margin:auto">
-                <iframe editor="dom" id="canvas" pass_id="builder" collection="" document_id="" name="src" read="false" update="false" crud="false" frameborder="0" width="100%" height="100%"></iframe>
+                <iframe contenteditable editor="dom" id="canvas" pass_id="builder" collection="" document_id="" name="src" read="false" update="false" crud="false" frameborder="0" width="100%" height="100%"></iframe>
             </div>
         </main>
 
@@ -92,7 +92,7 @@
         </sidenav>
 
         <!-- Selected Toolbar -->
-        <toolbar id="selectedElement" toolbar-placement="top" class="position:absolute pointer-events:none display:none">
+        <toolbar toolbar-placement="top" toolbar-target="iframe;" toolbar-event="click" config-key="selectable" class="position:absolute pointer-events:none display:none">
             <tools class="display:flex justify-content:space-between width:100% color:white font-size:11px">
                 <span class="padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid" tagName></span>
                 <!--<span class="padding:3px background:dodgerblue pointer-events:auto"><i class="fas fa-arrows-alt"></i></span>-->
@@ -107,7 +107,7 @@
         </toolbar>
 
         <!-- Hover Toolbar -->
-        <toolbar id="hoveredElement" toolbar-placent="top" class="position:absolute pointer-events:none display:none">
+        <toolbar toolbar-placent="top" toolbar-target="iframe;" toolbar-event="mouseover" config-key="hoverable" class="position:absolute pointer-events:none display:none">
             <tools class="tools display:flex align-items:center color:white font-size:11px">
                 <span class="padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid" tagName></span>
             </tools>
@@ -116,7 +116,7 @@
         <!-- End Hover Toolbar -->
 
         <!-- Collaboration Toolbar -->
-        <div id="collabElement" toolbar-placent="top" class="toolbar position:absolute pointer-events:none display:none">
+        <div toolbar-placent="top" toolbar-target="iframe;" toolbar-event="mouseup" config-key="editable" class="toolbar position:absolute pointer-events:none display:none">
             <tools class="display:flex align-items:center width:fit-content background:gainsboro border-radius:5px pointer-events:auto">
                 <div actions="nodeName" nodeName="b" nodeTarget="#canvas;" classname="rte-btn" class="padding:5px" id="bold-button"><i class="fa fa-bold"></i></div>
                 <div actions="nodeName" nodeName="i" nodeTarget="#canvas;" class="rte-btn" id="italic-button"><i class="fa fa-italic"></i></div>
@@ -149,6 +149,7 @@
         <!-- End Collaboration Toolbar -->
 
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+        <!--<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>-->
 
     </body>
 
