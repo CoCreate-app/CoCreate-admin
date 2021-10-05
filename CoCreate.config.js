@@ -21,7 +21,7 @@ module.exports = {
                 "content-type": "text/html",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727419c",
-                "website_id": "614298c2829b690010a5c034"
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -40,7 +40,7 @@ module.exports = {
                 "content-type": "text/html",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727419c",
-                "website_id": "614298c2829b690010a5c034"
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -59,7 +59,7 @@ module.exports = {
                 "content-type": "application/javascript",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727419c",
-                "website_id": "614298c2829b690010a5c034"
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -78,7 +78,7 @@ module.exports = {
                 "content-type": "text/html",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727419c",
-                "website_id": "614298c2829b690010a5c034"
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -97,7 +97,7 @@ module.exports = {
                 "content-type": "text/css",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727419c",
-                "website_id": "614298c2829b690010a5c034"
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -115,7 +115,8 @@ module.exports = {
                 "directory": "/admin/activities",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e74055b979b40017448c60"
+                "module_id": "60e74055b979b40017448c60",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -133,7 +134,8 @@ module.exports = {
                 "directory": "/admin/blocks",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274193"
+                "module_id": "5ff747727005da1c27274193",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -151,7 +153,8 @@ module.exports = {
                 "directory": "/admin/blocks",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274193"
+                "module_id": "5ff747727005da1c27274193",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -169,7 +172,8 @@ module.exports = {
                 "directory": "/admin/blog",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e7416eb979b40017448c76"
+                "module_id": "60e7416eb979b40017448c76",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -187,7 +191,8 @@ module.exports = {
                 "directory": "/admin/blog",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e7416eb979b40017448c76"
+                "module_id": "60e7416eb979b40017448c76",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -205,7 +210,8 @@ module.exports = {
                 "directory": "/admin/builder",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274193"
+                "module_id": "5ff747727005da1c27274193",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -223,7 +229,8 @@ module.exports = {
                 "directory": "/admin/builder",
                 "content-type": "text/css",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274193"
+                "module_id": "5ff747727005da1c27274193",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -241,7 +248,8 @@ module.exports = {
                 "directory": "/admin/builder",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274193"
+                "module_id": "5ff747727005da1c27274193",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -259,7 +267,8 @@ module.exports = {
                 "directory": "/admin/builder",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274193"
+                "module_id": "5ff747727005da1c27274193",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -277,7 +286,8 @@ module.exports = {
                 "directory": "/admin/builder",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274193"
+                "module_id": "5ff747727005da1c27274193",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -295,7 +305,8 @@ module.exports = {
                 "directory": "/admin/calendar",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274197"
+                "module_id": "5ff747727005da1c27274197",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -313,7 +324,8 @@ module.exports = {
                 "directory": "/admin/calendar",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274197"
+                "module_id": "5ff747727005da1c27274197",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -331,7 +343,8 @@ module.exports = {
                 "directory": "/admin/call-center",
                 "content-type": "text/css",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274199"
+                "module_id": "5ff747727005da1c27274199",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -349,7 +362,8 @@ module.exports = {
                 "directory": "/admin/call-center",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274199"
+                "module_id": "5ff747727005da1c27274199",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -367,7 +381,8 @@ module.exports = {
                 "directory": "/admin/code-editor",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274191"
+                "module_id": "5ff747727005da1c27274191",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -385,7 +400,8 @@ module.exports = {
                 "directory": "/admin/companies",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274183"
+                "module_id": "5ff747727005da1c27274183",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -403,7 +419,8 @@ module.exports = {
                 "directory": "/admin/companies",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274183"
+                "module_id": "5ff747727005da1c27274183",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -421,7 +438,8 @@ module.exports = {
                 "directory": "/admin/components",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ffb889df11d2d00103c452b"
+                "module_id": "5ffb889df11d2d00103c452b",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -439,7 +457,8 @@ module.exports = {
                 "directory": "/admin/components",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ffb889df11d2d00103c452b"
+                "module_id": "5ffb889df11d2d00103c452b",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -457,7 +476,8 @@ module.exports = {
                 "directory": "/admin/contacts",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727419d"
+                "module_id": "5ff747727005da1c2727419d",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -475,7 +495,8 @@ module.exports = {
                 "directory": "/admin/contacts",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727419d"
+                "module_id": "5ff747727005da1c2727419d",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -493,7 +514,8 @@ module.exports = {
                 "directory": "/admin/dashboard",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727418a"
+                "module_id": "5ff747727005da1c2727418a",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -511,7 +533,8 @@ module.exports = {
                 "directory": "/admin/dashboard",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727418a"
+                "module_id": "5ff747727005da1c2727418a",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -529,7 +552,8 @@ module.exports = {
                 "directory": "/admin/domains",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727418b"
+                "module_id": "5ff747727005da1c2727418b",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -547,7 +571,8 @@ module.exports = {
                 "directory": "/admin/email",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274186"
+                "module_id": "5ff747727005da1c27274186",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -565,7 +590,8 @@ module.exports = {
                 "directory": "/admin/email",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274186"
+                "module_id": "5ff747727005da1c27274186",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -583,7 +609,8 @@ module.exports = {
                 "directory": "/admin/email",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274186"
+                "module_id": "5ff747727005da1c27274186",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -601,7 +628,8 @@ module.exports = {
                 "directory": "/admin/estimates",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274184"
+                "module_id": "5ff747727005da1c27274184",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -619,7 +647,8 @@ module.exports = {
                 "directory": "/admin/estimates",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274184"
+                "module_id": "5ff747727005da1c27274184",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -637,7 +666,8 @@ module.exports = {
                 "directory": "/admin/estimates",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274184"
+                "module_id": "5ff747727005da1c27274184",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -655,7 +685,8 @@ module.exports = {
                 "directory": "/admin/expenses",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e7435ab979b40017448c90"
+                "module_id": "60e7435ab979b40017448c90",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -673,7 +704,8 @@ module.exports = {
                 "directory": "/admin/expenses",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e7435ab979b40017448c90"
+                "module_id": "60e7435ab979b40017448c90",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -691,7 +723,8 @@ module.exports = {
                 "directory": "/admin/files",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727419a"
+                "module_id": "5ff747727005da1c2727419a",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -709,7 +742,8 @@ module.exports = {
                 "directory": "/admin/files",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727419a"
+                "module_id": "5ff747727005da1c2727419a",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -727,7 +761,8 @@ module.exports = {
                 "directory": "/admin/fleet-tracking",
                 "content-type": "text/css",
                 "public": "true",
-                "module_id": "60e7444eb979b40017448ca8"
+                "module_id": "60e7444eb979b40017448ca8",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -745,7 +780,8 @@ module.exports = {
                 "directory": "/admin/fleet-tracking",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e7444eb979b40017448ca8"
+                "module_id": "60e7444eb979b40017448ca8",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -763,7 +799,8 @@ module.exports = {
                 "directory": "/admin/image-editor",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "61302bae8ed7b000136531d0"
+                "module_id": "61302bae8ed7b000136531d0",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -781,7 +818,8 @@ module.exports = {
                 "directory": "/admin/industries",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "611d97fdc0e9580010eb9028"
+                "module_id": "611d97fdc0e9580010eb9028",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -799,7 +837,8 @@ module.exports = {
                 "directory": "/admin/industries",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "611d97fdc0e9580010eb9028"
+                "module_id": "611d97fdc0e9580010eb9028",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -817,7 +856,8 @@ module.exports = {
                 "directory": "/admin/invoices",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e7452eb979b40017448cd2"
+                "module_id": "60e7452eb979b40017448cd2",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -835,7 +875,8 @@ module.exports = {
                 "directory": "/admin/invoices",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e7452eb979b40017448cd2"
+                "module_id": "60e7452eb979b40017448cd2",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -853,7 +894,8 @@ module.exports = {
                 "directory": "/admin/invoices",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e7452eb979b40017448cd2"
+                "module_id": "60e7452eb979b40017448cd2",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -871,7 +913,8 @@ module.exports = {
                 "directory": "/admin/items",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e74739b979b40017448d03"
+                "module_id": "60e74739b979b40017448d03",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -889,7 +932,8 @@ module.exports = {
                 "directory": "/admin/items",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e74739b979b40017448d03"
+                "module_id": "60e74739b979b40017448d03",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -907,7 +951,8 @@ module.exports = {
                 "directory": "/admin/marketplace",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e7483fb979b40017448d13"
+                "module_id": "60e7483fb979b40017448d13",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -925,7 +970,8 @@ module.exports = {
                 "directory": "/admin/marketplace",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e7483fb979b40017448d13"
+                "module_id": "60e7483fb979b40017448d13",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -943,7 +989,8 @@ module.exports = {
                 "directory": "/admin/marketplace",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e7483fb979b40017448d13"
+                "module_id": "60e7483fb979b40017448d13",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -961,7 +1008,8 @@ module.exports = {
                 "directory": "/admin/module-templates",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274192"
+                "module_id": "5ff747727005da1c27274192",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -979,7 +1027,8 @@ module.exports = {
                 "directory": "/admin/module-templates",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274192"
+                "module_id": "5ff747727005da1c27274192",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -998,7 +1047,8 @@ module.exports = {
                 "content-type": "text/html",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274192",
-                "tags": "template"
+                "tags": "template",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1017,7 +1067,8 @@ module.exports = {
                 "content-type": "text/html",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274192",
-                "tags": "template"
+                "tags": "template",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1036,7 +1087,8 @@ module.exports = {
                 "content-type": "text/html",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274192",
-                "tags": "template"
+                "tags": "template",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1054,7 +1106,8 @@ module.exports = {
                 "directory": "/admin/modules",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274190"
+                "module_id": "5ff747727005da1c27274190",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1072,7 +1125,8 @@ module.exports = {
                 "directory": "/admin/modules",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274190"
+                "module_id": "5ff747727005da1c27274190",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1090,7 +1144,8 @@ module.exports = {
                 "directory": "/admin/module-views",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274187"
+                "module_id": "5ff747727005da1c27274187",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1108,7 +1163,8 @@ module.exports = {
                 "directory": "/admin/module-views",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274187"
+                "module_id": "5ff747727005da1c27274187",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1126,7 +1182,8 @@ module.exports = {
                 "directory": "/admin/organizations",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727418c"
+                "module_id": "5ff747727005da1c2727418c",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1144,7 +1201,8 @@ module.exports = {
                 "directory": "/admin/organizations",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727418c"
+                "module_id": "5ff747727005da1c2727418c",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1162,7 +1220,8 @@ module.exports = {
                 "directory": "/admin/organizations",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727418c"
+                "module_id": "5ff747727005da1c2727418c",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1180,7 +1239,8 @@ module.exports = {
                 "directory": "/admin/payments",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274189"
+                "module_id": "5ff747727005da1c27274189",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1198,7 +1258,8 @@ module.exports = {
                 "directory": "/admin/payments",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274189"
+                "module_id": "5ff747727005da1c27274189",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1216,7 +1277,8 @@ module.exports = {
                 "directory": "/admin/payments",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274189"
+                "module_id": "5ff747727005da1c27274189",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1234,7 +1296,8 @@ module.exports = {
                 "directory": "/admin/potentials",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727419b"
+                "module_id": "5ff747727005da1c2727419b",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1252,7 +1315,8 @@ module.exports = {
                 "directory": "/admin/potentials",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727419b"
+                "module_id": "5ff747727005da1c2727419b",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1270,7 +1334,8 @@ module.exports = {
                 "directory": "/admin/projects",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e73c8eb979b40017448c1b"
+                "module_id": "60e73c8eb979b40017448c1b",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1288,7 +1353,8 @@ module.exports = {
                 "directory": "/admin/projects",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e73c8eb979b40017448c1b"
+                "module_id": "60e73c8eb979b40017448c1b",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1306,7 +1372,8 @@ module.exports = {
                 "directory": "/admin/projects",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e73c8eb979b40017448c1b"
+                "module_id": "60e73c8eb979b40017448c1b",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1324,7 +1391,8 @@ module.exports = {
                 "directory": "/admin/settings",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c2727418f"
+                "module_id": "5ff747727005da1c2727418f",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1342,7 +1410,8 @@ module.exports = {
                 "directory": "/admin/social",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e73d29b979b40017448c2b"
+                "module_id": "60e73d29b979b40017448c2b",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1360,7 +1429,8 @@ module.exports = {
                 "directory": "/admin/tags",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60eb8361b979b4001744b339"
+                "module_id": "60eb8361b979b4001744b339",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1378,7 +1448,8 @@ module.exports = {
                 "directory": "/admin/tags",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60eb8361b979b4001744b339"
+                "module_id": "60eb8361b979b4001744b339",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1396,7 +1467,8 @@ module.exports = {
                 "directory": "/admin/tasklists",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e73eefb979b40017448c4c"
+                "module_id": "60e73eefb979b40017448c4c",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1414,7 +1486,8 @@ module.exports = {
                 "directory": "/admin/tasklists",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e73eefb979b40017448c4c"
+                "module_id": "60e73eefb979b40017448c4c",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1432,7 +1505,8 @@ module.exports = {
                 "directory": "/admin/users",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274182"
+                "module_id": "5ff747727005da1c27274182",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1450,7 +1524,8 @@ module.exports = {
                 "directory": "/admin/users",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274182"
+                "module_id": "5ff747727005da1c27274182",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1468,7 +1543,8 @@ module.exports = {
                 "directory": "/admin/users",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274182"
+                "module_id": "5ff747727005da1c27274182",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1486,7 +1562,8 @@ module.exports = {
                 "directory": "/admin/wallet",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "60e74833b979b40017448d12"
+                "module_id": "60e74833b979b40017448d12",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1504,7 +1581,8 @@ module.exports = {
                 "directory": "/admin/websites",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274185"
+                "module_id": "5ff747727005da1c27274185",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
         {
@@ -1522,7 +1600,8 @@ module.exports = {
                 "directory": "/admin/websites",
                 "content-type": "text/html",
                 "public": "true",
-                "module_id": "5ff747727005da1c27274185"
+                "module_id": "5ff747727005da1c27274185",
+                "website_id": "5ffa235ff11d2d00103c4520"
             }
         }
     ]
