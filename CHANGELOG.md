@@ -1,3 +1,16 @@
+# [1.6.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.5.0...v1.6.0) (2021-10-07)
+
+
+### Bug Fixes
+
+* website_id in CoCreate.config ([192fd8b](https://github.com/CoCreate-app/CoCreate-admin/commit/192fd8b216e6f239b1e4851c8479a5c45a2a46c5))
+
+
+### Features
+
+* abiltiy to upload files using uploader uppy ([e2b0387](https://github.com/CoCreate-app/CoCreate-admin/commit/e2b0387710521d265dfd8b54c1ebb8edd664edd6))
+* added save btn to builder and code-editor to make changes live ([73f790d](https://github.com/CoCreate-app/CoCreate-admin/commit/73f790dd01ce5526908b05d0aa5d6b91d1788513))
+
 # [1.5.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.4.9...v1.5.0) (2021-10-05)
 
 
