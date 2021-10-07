@@ -90,11 +90,11 @@
         <div class="position:fixed margin-top:50px" content_id="content" id="modal-viewport"></div>
 
         <!-- Main Content -->
-        <main content_id="content" class="padding:5px">
-            <div class="display:flex flex-wrap:wrap" template_id="datatable" fetch-collection="" filter-name="module_id" filter-value="" order-by="name" order-type="asc" pass_id="datatable">
-                <div class="card template flex-grow:1 width:250px max-width:350px margin:10px box-shadow-hover" template_id="datatable" document_id="{{data._id}}" toggle="selected">
+        <main content_id="content" class="padding:15px">
+			<div class="display:grid gap:15px grid-template-columns:repeat(auto-fill,minmax(290px,1fr))" template_id="datatable" fetch-collection="" filter-name="module_id" filter-value="" order-by="name" order-type="asc" pass_id="datatable">
+				<div template_id="datatable" class="card template align-items:center grid-column-end:span_1 box-shadow-hover" document_id="{{data._id}}" toggle="selected">
                     <div class="position:relative">
-                        <img collection="{{collection}}" document_id="{{data._id}}" name="image" width="100%">
+                        <img src="website-preview.png" collection="{{collection}}" document_id="{{data._id}}" name="image" width="100%">
                         
                         <button class="position:absolute bg:blue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" class="color:white">
                             <a target="modal" href="../builder/index.html" >
@@ -115,16 +115,10 @@
                     <div class="padding:10px">
                         <p collection="{{collection}}" document_id="{{data._id}}" name="description">Description</p>
                     </div>
-                </div>
-            </div>
+				</div>
+			</div>
         </main>
         
-   <!--     <button target="modal" href="./form.html" modal-width="320px" modal-color="#229954" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50% z-index:8">-->
-			<!--<i class="fa fa-plus"></i>-->
-   <!--     	<div pass_id="datatable" pass-collection="" pass-document_id="" pass-name="" pass_to="form-fields"></div>-->
-   <!--     	<div pass_id="module_id" pass-value="" pass_to="module_id"></div>-->
-   <!--     </button>-->
-   
 		<button class="position:fixed bottom:15px right:15px width:50px height:50px background:dodgerblue grow-hover border-radius:50% z-index:8 color:white">
 			<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954">
 				<i class="fa fa-plus"></i>

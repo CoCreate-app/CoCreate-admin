@@ -64,53 +64,62 @@
 
         <main class="padding:10px" content_id="content">
             <form pass_id="form-fields" collection="files" document_id="">
-                <input type="hidden" name="module_id" value="" pass_id="module_id">
-                <input type="text" name="name" class="floating-label" placeholder="File Name">
-                <cocreate-select name="domains" class="floating-label" placeholder="domains" multiple> <input class="template-search" placeholder="Search" template_id="domains">
-					<cc-options fetch-collection="organizations" fetch-document_id="5ff747727005da1c272740ab" fetch-name="domains" template_id="domains" class="overflow:auto">
-						<cc-option class="template display:flex" template_id="domains" value="{{domains[]}}">
-							<h4>{{domains[]}}</h4>
-						</cc-option>
-					</cc-options>
-                </cocreate-select> 
-                <input type="text" name="path" class="floating-label" placeholder="path">
-                <input type="text" name="directory" class="floating-label" placeholder="directory">
-                <textarea name="src" class="floating-label" placeholder="src"></textarea>
-                <input type="text" name="content-type" class="floating-label" placeholder="content-type">
-				<cocreate-select class="sortable floating-label" name="tags" multiple placeholder="Tags">
-					<input placeholder="Search" template_id="tags">
-				    <div template_id="datatable" filter-name="type" filter-value="type"></div>
-					<cc-options fetch-collection="tags" filter-name="module_id" filter-value="5ff747727005da1c2727419a" pass_id="module_id" template_id="tags" class="overflow:auto">
-						<cc-option class="template display:flex" template_id="tags" value="{{data._id}}">
-							<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">tags Name</h4>
-						</cc-option>
-					</cc-options>
-				</cocreate-select>
-                <!--<input type="text" name="collection" class="floating-label" placeholder="collection"> -->
-                <!--<input type="text" name="module_id" class="floating-label" placeholder="document_id">-->
-                <!--<input type="text" name="name" class="floating-label" placeholder="name">-->
-				<cocreate-select class="sortable floating-label" name="module_id" placeholder="Module">
-					<input placeholder="Search" template_id="module_id">
-					<cc-options fetch-collection="modules" order-by="name" template_id="module_id" class="overflow:auto">
-						<cc-option class="template" template_id="module_id" value="{{data._id}}">
-							<div class="display:flex padding:5px">
-								<span class="width:25px" collection="{{collection}}" document_id="{{data._id}}" name="icon"></span>
-								<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Name</h4>
-							</div>
-						</cc-option>
-					</cc-options>
-				</cocreate-select>
-				<cocreate-select class="sortable floating-label" name="website_id" placeholder="Website">
-					<input placeholder="Search" template_id="website_id">
-					<cc-options fetch-collection="module_activities" filter-name="module_id" filter-value="5ff747727005da1c27274185" order-by="name" template_id="module_id" class="overflow:auto">
-						<cc-option class="template" template_id="website_id" value="{{data._id}}">
-							<div class="display:flex padding:5px">
-								<span class="width:25px" collection="{{collection}}" document_id="{{data._id}}" name="icon"></span>
-								<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Name</h4>
-							</div>
-						</cc-option>
-					</cc-options>
-				</cocreate-select>
+                <div class="form-fields">
+                    <input type="hidden" name="module_id" value="" pass_id="module_id">
+                    <input type="text" name="name" class="floating-label" placeholder="File Name"> 
+                    <cocreate-select name="domains" class="floating-label" placeholder="domains" multiple> <input class="template-search" placeholder="Search" template_id="domains">
+    					<cc-options fetch-collection="organizations" fetch-document_id="5ff747727005da1c272740ab" fetch-name="domains" template_id="domains" class="overflow:auto">
+    						<cc-option class="template display:flex" template_id="domains" value="{{domains[]}}">
+    							<h4>{{domains[]}}</h4>
+    						</cc-option>
+    					</cc-options>
+                    </cocreate-select> 
+                    <input type="text" name="path" class="floating-label" placeholder="path">
+                    <input type="text" name="directory" class="floating-label" placeholder="directory">
+                    <textarea name="src" class="floating-label" placeholder="src"></textarea>
+                    <input type="text" name="content-type" class="floating-label" placeholder="content-type">
+    				<cocreate-select class="sortable floating-label" name="tags" multiple placeholder="Tags">
+    					<input placeholder="Search" template_id="tags">
+    				    <div template_id="datatable" filter-name="type" filter-value="type"></div>
+    					<cc-options fetch-collection="tags" filter-name="module_id" filter-value="5ff747727005da1c2727419a" pass_id="module_id" template_id="tags" class="overflow:auto">
+    						<cc-option class="template display:flex" template_id="tags" value="{{data._id}}">
+    							<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">tags Name</h4>
+    						</cc-option>
+    					</cc-options>
+    				</cocreate-select>
+                    <!--<input type="text" name="collection" class="floating-label" placeholder="collection"> -->
+                    <!--<input type="text" name="module_id" class="floating-label" placeholder="document_id">-->
+                    <!--<input type="text" name="name" class="floating-label" placeholder="name">-->
+    				<cocreate-select class="sortable floating-label" name="module_id" placeholder="Module">
+    					<input placeholder="Search" template_id="module_id">
+    					<cc-options fetch-collection="modules" order-by="name" template_id="module_id" class="overflow:auto">
+    						<cc-option class="template" template_id="module_id" value="{{data._id}}">
+    							<div class="display:flex padding:5px">
+    								<span class="width:25px" collection="{{collection}}" document_id="{{data._id}}" name="icon"></span>
+    								<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Name</h4>
+    							</div>
+    						</cc-option>
+    					</cc-options>
+    				</cocreate-select>
+    				<cocreate-select class="sortable floating-label" name="website_id" placeholder="Website">
+    					<input placeholder="Search" template_id="website_id">
+    					<cc-options fetch-collection="module_activities" filter-name="module_id" filter-value="5ff747727005da1c27274185" order-by="name" template_id="module_id" class="overflow:auto">
+    						<cc-option class="template" template_id="website_id" value="{{data._id}}">
+    							<div class="display:flex padding:5px">
+    								<span class="width:25px" collection="{{collection}}" document_id="{{data._id}}" name="icon"></span>
+    								<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Name</h4>
+    							</div>
+    						</cc-option>
+    					</cc-options>
+    				</cocreate-select>
+				</div>
+				<div id="uploader" class="hidden uploader">
+		            <div uploader="uppy" collection="files" document_id="" pass_id="form-fields"></div>
+                </div>
+				<button show=".uploader, .form-fields" hide=".form-fields, .uploader" class="position:fixed bottom:15px left:15px width:54px height:54px background:dodgerblue grow-hover border-radius:50% padding:15px">
+				    <i class="fas fa-cloud-upload-alt form-fields"></i>
+				    <i class="fas fa-times uploader hidden"></i>
+				</button>
 				<button actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>
 				</button>
