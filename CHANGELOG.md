@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.4.9...v1.5.0) (2021-10-05)
+
+
+### Features
+
+* toolbars in builder have the abilty to target elements in other frames ([79b725d](https://github.com/CoCreate-app/CoCreate-admin/commit/79b725d7d73caf4a011d9ee794e518188fc5fb75))
+
 ## [1.4.9](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.4.8...v1.4.9) (2021-09-27)
 
 
