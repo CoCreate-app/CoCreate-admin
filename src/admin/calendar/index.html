@@ -6,10 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Calendar | CoCreate</title>
-        <link rel="stylesheet" href="../index.css" collection="files" document_id="60e4f9714792bff869f1bde5" name="src" type="text/css"/>
-
-		<!-- CoCreate Calendar -->
-		<link rel="stylesheet" href="https://server.cocreate.app/CoCreate-plugins/CoCreate-fullcalendar/demo/CoCreate-fullcalendar.css" type="text/css" />
+        <link rel="stylesheet" href="./index.css" collection="files" document_id="61631f3716b39f00108f7380" name="src" type="text/css"/>
 
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" crossorigin="anonymous" />
@@ -90,16 +87,16 @@
 
 				<!-- Calendar Controls -->
 				<li class="margin-right:15px">
-					<a data-btn_type="timeGridDay" data-calendar_id="calendar"><i class="fas fa-calendar-day"></i></a>
+					<a calendar-view="timeGridDay" calendar_id="calendar"><i class="fas fa-calendar-day"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-btn_type="timeGridWeek" data-calendar_id="calendar"><i class="fas fa-calendar-week"></i></a>
+					<a calendar-view="timeGridWeek" calendar_id="calendar"><i class="fas fa-calendar-week"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-btn_type="dayGridMonth" data-calendar_id="calendar"><i class="far fa-calendar-alt"></i></a>
+					<a calendar-view="dayGridMonth" calendar_id="calendar"><i class="far fa-calendar-alt"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a data-btn_type="today" data-calendar_id="calendar">T</a>
+					<a calendar-view="today" calendar_id="calendar">T</a>
 				</li>
 
 			</ul>
@@ -108,18 +105,20 @@
 		<div class="position:fixed margin-top:50px" id="modal-viewport" content_id="content"></div>
 
 		<!-- Define filter-name to define field to filter results for calendar -->
-		<div data-calendar_id="calendar" filter-name="start_date" filter-value="0" filter-operator="$gt"></div>
+		<div calendar_id="calendar" filter-name="start_date" filter-value="0" filter-operator="$gt"></div>
 
 		<main class="height:100vh position:relative" content_id="content">
 			<div id='calendar-container'>
-				<div id='calendar' class="cal-container" fetch-collection="test" data-dispaly_field="name" data-calendar_id="calendar" filter-name="" filter-value="" filter-operator="$eq" pass_id="datatable">
-					<a class="eventLink" target="modal" href="./form.html" pass-collection="test" pass-document_id="" pass_to="form-fields" modal-width="320px" modal-color="#21618C">
+				<div id='calendar' class="cal-container" fetch-collection="apples" event-name="name" calendar_id="calendar" filter-name="" filter-value="" filter-operator="$eq" pass_id="datatable">
+					<a class="eventLink" target="modal" href="./form.html" pass-collection="apples" pass-document_id="" pass_to="form-fields" modal-width="320px" modal-color="#21618C">
+						<div pass_id="module-form" pass-value="" pass_to="module_id"></div>
 	  				</a>
 				</div>
 			</div>
 		</main>
 
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+
 	</body>
 
 </html>

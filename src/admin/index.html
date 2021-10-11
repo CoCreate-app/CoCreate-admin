@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>admin | CoCreate</title>
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
-        <link rel="stylesheet" href="../index.css" collection="files" document_id="60e4f9714792bff869f1bde5" name="src" type="text/css"/>
+        <link rel="stylesheet" href="./index.css" collection="files" document_id="60e4f9714792bff869f1bde5" name="src" type="text/css"/>
     </head>
 
     <style type="text/css">
@@ -78,7 +78,7 @@
                             modal-color="{{data.navbar-modal-primary-color}}">
                             <span document_id="{{data._id}}" collection="modules" name="icon" value="icon"></span>
                             <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{data._id}}" pass_to="datatable"></div>
-                            <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{data._id}}" pass_to="module-form"></div>
+                            <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{data._id}}" pass-value="{{data._id}}" pass_to="module-form"></div>
                             <div pass-document_id="{{data._id}}" pass_to="module_id"></div>
                             <div pass-collection="files" pass-document_id="{{data.main-menu-secondary}}" pass-name="src" pass_to="form"></div>
                             <div pass-collection="files" pass-document_id="{{data.navbar-menu-primary}}" pass-name="src" pass_to="render"></div>
@@ -110,7 +110,7 @@
         <main class="height:100vh margin-top:10px" content_id="content"></main>
         
         <!-- SideNav  -->
-        <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:auto background:whitesmoke height:100vh width:50px width:275px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
+        <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:50px width:275px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
         
             <!-- Select to change organizations  -->
             <cocreate-select class="org-changer remove-none border:none sessionUser_Id padding:0" name="current_org" collection="users" document_id="">
@@ -158,7 +158,7 @@
                         template_id="main-menu">
                         
                         <!-- Template -->
-                        <li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template_id="main-menu" document_id="{{data._id}}">
+                        <li class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" template_id="main-menu" document_id="{{data._id}}">
                             <a target="modal" fetch-for href='..{"collection":"files", "document_id":"{{data.main-menu-primary}}","name":"path"}'
                                 modal-width="{{data.main-modal-primary-width}}"
                                 modal-color="{{data.main-modal-color}}"
@@ -213,6 +213,7 @@
         </sidenav>
        
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
-
+        <!--<script src="../../../CoCreateJS/dist/CoCreate.js"></script>-->
+        
     </body>
 </html>

@@ -96,14 +96,99 @@
 				</li>
 			</ul>
 		</nav>
+		
+		<!-- SideNav  -->
+        <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:50px width:275px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
+        
+			<!-- Search -->
+			<form class="padding:5px">
+				<input type="text" class="floating-label" pass-value_to="results">
+				<span class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">
+					<a target="modal" pass_to="render" collection="website-pages" document_id="" pass-name="src" modal-width="900px" modal-color="#229954">
+						<i class="fas fa-search"></i>
+					</a>
+				</span>
+			</form>
+        	
+        	<!--<input type="hidden" template_id="main-menu" filter-name="menu-position" filter-value="3,4" filter-value_type="number" filter-operator="nin">-->
+        	<!--<div template_id="main-menu" filter-name="menu-position" filter-value="0" filter-value_type="number" filter-operator="ne"></div>-->
+        	<div class="padding-right:5px padding-bottom:5px">
+                <!-- Fetch and Render-->
+              	<ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
+              	    <div fetch-collection="modules" 
+                        order-by="main-menu-position" 
+                        order-type="asc"
+                        filter-name="main-menu-position" 
+                        filter-value="0"
+                        filter-value_type="number"
+                        filter-operator="$ne"
+                        template_id="main-menu">
+                        
+                        <!-- Template -->
+                        <li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template_id="main-menu" document_id="{{data._id}}">
+                            <a target="modal" fetch-for href='..{"collection":"files", "document_id":"{{data.main-menu-primary}}","name":"path"}'
+                                modal-width="{{data.main-modal-primary-width}}"
+                                modal-color="{{data.main-modal-color}}"
+                                class="display:inline-block">
+                                <span class="display:inline-block width:50px text-align:center" document_id="{{data._id}}" collection="modules" name="icon" value="icon"></span>
+                                <span collection="modules" document_id="{{data._id}}" name="name" ></span>
+                                <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{data._id}}" pass_to="datatable"></div>
+                                <div pass-collection="module_activities" pass-value="{{data._id}}" pass_to="module_id"></div>
+                                <div pass-collection="files" pass-document_id="{{data.main-menu-secondary}}" pass-name="src" pass_to="form"></div>
+                                <div pass-collection="files" pass-document_id="{{data.main-menu-primary}}" pass-name="src" pass_to="render"></div>
+                                <div pass-value="{{data._id}}" pass-filter-value="{{data._id}}" pass_to="module-form"></div>
+                            </a>
+                            <div class="float:right width:50px text-align:center">
+                                <a target="modal" fetch-for href='..{"collection":"files", "document_id":"{{data.main-menu-secondary}}","name":"path"}'
+                                    modal-width="{{data.main-menu-secondary-width}}"
+                                    modal-color="{{data.main-menu-secondary-color}}">
+                                    <i class="fas fa-plus"></i>
+                                    <div pass-value="{{data._id}}" pass-filter-value="{{data._id}}" pass_to="module_id"></div>
+                                    <div pass-collection="files" pass-document_id="{{data.main-menu-secondary}}" pass-name="src" pass_to="render"></div>
+                                    <div pass-document_id="{{data._id}}" pass_to="module-form"></div>
+				                    <div pass_to="form-fields" pass-document_id=""></div>
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+                
+                <!-- sidenav Footer -->
+				<div class="display:flex justify-content:space-between flex-wrap:wrap position:absolute bottom:0px background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
+					<a target="modal" href="../admin/settings/index.html" modal-width="275px" modal-color="#229954" modal-x="0" modal-y="0" class="width:50px text-align:center display:inline-block">
+					    <span class="padding:10px width:50px text-align:center"><i class="fas fa-cogs"></i></span>
+					    <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe18" pass-name="src" pass_to="render"></div>
+					</a>
+					<a target="modal" href="../admin/modules/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">
+					    <span class="padding:10px width:50px text-align:center"><i class="fas fa-project-diagram"></i></span>
+					    <div pass-collection="files" pass-document_id="60ddfdbf14b5ab0c2dd2fe08" pass-name="src" pass_to="render"></div>
+					</a>
+					<a target="modal" href="../admin/module-views/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">
+					    <span class="padding:10px width:50px text-align:center"><i class="fas fa-shapes"></i></span>
+					    <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe0b" pass-name="src" pass_to="render"></div>
+					</a>
+					<a target="modal" href="../admin/files/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">
+					    <span class="padding:10px width:50px text-align:center"><i class="far fa-folder"></i></span>
+					    <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe15" pass-name="src" pass_to="render"></div>
+					</a>
+					<a actions="logout" href="./signin.html" pass_to class="width:50px text-align:center display:inline-block">
+					  <span class="padding:10px width:50px text-align:center"><i class="fas fa-sign-out-alt"></i></span>
+					</a>
+				</div>
+			</div>
+            <div resize="right"></div>
+        </sidenav>
+        
+        <!-- Modal Viewport  -->
+        <div class="position:fixed margin-top:50px" content_id="content" id="modal-viewport"></div>
 
 		<!-- Main Content -->
 		<main class="padding:10px" content_id="content">
 			<!--<div class="domEditor main-height" name='cards1' collection="test" pass_id="me1234">-->
 
-			<div class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))" dnd-group-name="dashboard" fetch-collection="files" template_id="card" droppable="true">
+			<div class="display:grid grid-auto-rows:50px gap:10px grid-template-columns:repeat(auto-fill,minmax(50px,1fr))" dnd-group-name="dashboard" fetch-collection="files" template_id="card" droppable="true">
 
-				<div template_id="card" class="card template resize display:flex padding:20px align-items:center grid-column-end:span_2" element_id="id1" draggable="tru">
+				<div template_id="card" class="card template resize display:flex padding:20px align-items:center grid-column-end:span_6 grid-row-end:span_2" element_id="id1" draggable="tru">
 					<!-- dashboard template-->
 					<div class="flex-grow:1 padding-right:20px">
 						<h2 name="name">Visits</h2>
@@ -123,58 +208,22 @@
 					<div resize="bottom"></div>
 				</div>
 			</div>
-				<!--<div class="card resize padding:20px align-items:center grid-column-end:span_3 grid-row-end:span_2" element_id="id2">-->
-				<!--                 <canvas class="cocreate-chart" chart-type="bar" chart-options="" chart-labels="January, February, March, April, May, June, July" chart-title="Combine Charts">-->
-				<!--                     <div class="cocreate-chart-dataset" chart-dataset_type="line">-->
-				<!--                         <div fetch-collection="chart" fetch-name="Jan" data-calculation="sum">-->
-				<!--                             <div filter-name="Jan" filter-value="0, 10" filter-value_type="number" filter-operator="$range"></div>-->
-				<!--                         </div>-->
-				<!--                         <div fetch-collection="chart" fetch-name="Feb">-->
-				<!--                             <div filter-name="permission" filter-value="read" filter-operator="$nin"></div>-->
-				<!--                             <div filter-name="type" filter-value="leader" filter-operator="$in"></div>-->
-				<!--                         </div>-->
-				<!--                         <div fetch-collection="chart" fetch-name="Mar">-->
-				<!--                             <div filter-name="Mar" filter-value="-7" filter-operator="$eq" filter-value_type="number"></div>-->
-				<!--                         </div>-->
-				<!--                         <div fetch-collection="chart" fetch-name="Apr"></div>-->
-				<!--                         <div fetch-collection="chart" fetch-name="May"></div>-->
-				<!--                         <div fetch-collection="chart" fetch-name="Jun"></div>-->
-				<!--                         <div fetch-collection="chart" fetch-name="Jul"></div>-->
-				<!--                     </div>-->
-				<!--                     <div class="cocreate-chart-dataset" chart-dataset_label="Average Chart" chart-dataset_type="line">-->
-				<!--                         <div fetch-collection="chart" fetch-name="Jan" data-calculation="average"></div>-->
-				<!--                         <div fetch-collection="chart" fetch-name="Feb" data-calculation="average"></div>-->
-				<!--                         <div fetch-collection="chart" fetch-name="Mar" data-calculation="average"></div>-->
-				<!--                         <div fetch-collection="chart" fetch-name="Apr" data-calculation="average"></div>-->
-				<!--                         <div fetch-collection="chart" fetch-name="May" data-calculation="average"></div>-->
-				<!--                         <div fetch-collection="chart" fetch-name="Jun" data-calculation="average"></div>-->
-				<!--                         <div fetch-collection="chart" fetch-name="Jul" data-calculation="average"></div>-->
-				<!--                     </div>-->
+			
+			<button class="position:fixed bottom:15px right:15px width:50px height:50px background:dodgerblue grow-hover border-radius:50% z-index:8 color:white">
+				<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954">
+					<i class="fa fa-plus"></i>
+					<div pass_to="form-fields" pass-document_id=""></div>
+					<div pass_id="module-form" pass-value="" pass-filter-value="" pass_to="module_id"></div>
+	                <div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
+				</a>
+			</button>
 
-				<!--<div class="cocreate-chart-dataset" chart-dataset_label="Data Count" chart-dataset_type="">-->
-				<!--  <div fetch-collection="chart" fetch-name="Jan" data-calculation="count"></div>-->
-				<!--  <div fetch-collection="chart" fetch-name="Feb" data-calculation="count"></div>-->
-				<!--  <div fetch-collection="chart" fetch-name="Mar" data-calculation="count"></div>-->
-				<!--  <div fetch-collection="chart" fetch-name="Apr" data-calculation="count"></div>-->
-				<!--  <div fetch-collection="chart" fetch-name="May" data-calculation="count"></div>-->
-				<!--  <div fetch-collection="chart" fetch-name="Jun" data-calculation="count"></div>-->
-				<!--  <div fetch-collection="chart" fetch-name="Jul" data-calculation="count"></div>-->
-				<!--</div>-->
-				<!--                 </canvas>-->
-				<!--                 <div resize="left"></div>-->
-				<!--                 <div resize="right"></div>-->
-				<!--                 <div resize="top"></div>-->
-				<!--                 <div resize="bottom"></div>-->
-
-				<!--</div>-->
-
-				<!--</div>-->
-				<!-- Sortable card -->
 
 		</main>
+		
 
 		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
-
+        <!--<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>-->
 		<!--<script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-progress-bar/dist/CoCreate-progress-bar.js"></script>-->
 
 	</body>

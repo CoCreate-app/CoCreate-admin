@@ -1,0 +1,17 @@
+#calendar-container {
+  /*top: 0;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*bottom: 0;*/
+  /*height:100%;*/
+  /*position: absolute;*/
+}
+.fc-toolbar.fc-header-toolbar{
+	margin-bottom:10px!important;
+}
+.cal-container {
+  height:100vh;
+}
+td.fc-event-container{
+	/*padding:0px!important;*/
+}

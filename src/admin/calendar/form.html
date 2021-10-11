@@ -61,7 +61,7 @@
         </nav>
 
         <main class="padding:10px" content_id="content">
-            <form collection="test" class="margin-bottom:75px" document_id="" pass_id="form-fields">
+            <form collection="" class="margin-bottom:75px" document_id="" pass_id="form-fields">
 				
 				<div class="display:flex height:50px">
 					<div class="width:50% padding-right:5px z-index:7">
@@ -88,6 +88,8 @@
 					</div>
 				</div>
 				
+                <input type="hidden" name="module_id"  document_id="" pass_id="module_id" value=""/>
+                
                 <input type="text" name="name" id="name" placeholder="Title" pass_id="form-fields" class="floating-label">
 
                 <input type="text" name="description" id="description" placeholder="Description" class="floating-label">
@@ -101,7 +103,7 @@
                 <input type="time" class="floating-label" placeholder="End Time" name="end_time" id="end_time" pass-value_id="end_time">
 
                 <div class="padding-top:10px">
-                    <input type="checkbox" placeholder="Time" name="allDay" id="allDayCheckbox" pass-value_id="allDay">
+                    <input type="checkbox" placeholder="Time" name="allDay" id="allDayCheckbox">
                     <label class="padding-left:1rem" for="allDayCheckbox"> All Day</label>
                 </div>
 				<cocreate-select class="sortable floating-label" name="related_to" document_id="" multiple placeholder="Related To:">
@@ -150,6 +152,7 @@
         </main>
 
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+
     </body>
 
 </html>

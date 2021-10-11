@@ -291,6 +291,25 @@ module.exports = {
             }
         },
         {
+            "entry": "./src/admin/calendar/index.css",
+            "collection": "files",
+            "document_id": "61631f3716b39f00108f7380",
+            "key": "src",
+            "data": {
+                "name": "index.css",
+                "domains": [
+                    "cocreate.app",
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/calendar/index.css",
+                "directory": "/admin/calendar",
+                "content-type": "text/css",
+                "public": "true",
+                "module_id": "5ff747727005da1c27274197",
+                "website_id": "5ffa235ff11d2d00103c4520"
+            }
+        },
+        {
             "entry": "./src/admin/calendar/index.html",
             "collection": "files",
             "document_id": "60de3a9114b5ab0c2dd3002d",
@@ -363,6 +382,25 @@ module.exports = {
                 "content-type": "text/html",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274199",
+                "website_id": "5ffa235ff11d2d00103c4520"
+            }
+        },
+        {
+            "entry": "./src/admin/code-editor/index.css",
+            "collection": "files",
+            "document_id": "6163165716b39f00108f7201",
+            "key": "src",
+            "data": {
+                "name": "index.css",
+                "domains": [
+                    "cocreate.app",
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/code-editor/index.css",
+                "directory": "/admin/code-editor",
+                "content-type": "text/css",
+                "public": "true",
+                "module_id": "5ff747727005da1c27274191",
                 "website_id": "5ffa235ff11d2d00103c4520"
             }
         },
