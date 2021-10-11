@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.6.2...v1.6.3) (2021-10-11)
+
+
+### Bug Fixes
+
+* update calendar to use cdn ([5c6838f](https://github.com/CoCreate-app/CoCreate-admin/commit/5c6838fa94e9fdeaa4c7f9cff22adb31ceb57352))
+
 ## [1.6.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.6.1...v1.6.2) (2021-10-11)
 
 
