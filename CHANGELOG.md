@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.6.1...v1.6.2) (2021-10-11)
+
+
+### Bug Fixes
+
+* dynamically pass collection to calendar ([cbcd142](https://github.com/CoCreate-app/CoCreate-admin/commit/cbcd142177aa0debb989eea8cc8900ecb17cfc84))
+
 ## [1.6.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.6.0...v1.6.1) (2021-10-11)
 
 
