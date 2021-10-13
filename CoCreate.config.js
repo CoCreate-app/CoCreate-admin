@@ -814,7 +814,7 @@ module.exports = {
                     "cocreate.app",
                     "general.cocreate.app"
                 ],
-                "path": "/admin/fleet-tracking",
+                "path": "/admin/fleet-tracking/index.html",
                 "directory": "/admin/fleet-tracking",
                 "content-type": "text/html",
                 "public": "true",
