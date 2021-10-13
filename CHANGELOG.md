@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.6.4...v1.7.0) (2021-10-13)
+
+
+### Features
+
+* add error notifications in signin.html ([b990ac2](https://github.com/CoCreate-app/CoCreate-admin/commit/b990ac2a55ff2a3ec946f19032c6b81b2b2b4be6))
+
 ## [1.6.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.6.3...v1.6.4) (2021-10-13)
 
 
