@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.7.0...v1.7.1) (2021-10-13)
+
+
+### Bug Fixes
+
+* update descriptions ([a8275ce](https://github.com/CoCreate-app/CoCreate-admin/commit/a8275ce2b715e35c503a3bcd64ce97c158c16e56))
+
 # [1.7.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.6.4...v1.7.0) (2021-10-13)
 
 
