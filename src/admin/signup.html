@@ -44,19 +44,19 @@
                         		Awesome! Enter your email and password and we will get <span get-value="org-name">Organization Name</span> off the ground!
                         	</p>
 							<p id="ava6" class="hidden">
-                        		Here we go! Lets confirm your email and access your new business!
+                        		Here we go! Preparing your new business!
                         	</p>
                         </div>
 					</hgroup>
                 </div>
                
-                <div class="flex-grow:1 height:fit-content width:35% min-width:300px max-width:400px margin:10px align-self:flex-end">
+                <div class="flex-grow:1 height:fit-content width:35% min-width:370px max-width:400px margin:10px align-self:flex-end">
                 	<form  realtime="false" autocomplete="false">
                 		
 	            		<section id="step1">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-	                    			<h3>Step 1  6</h3>
+	                    			<h3>Step 1 / 5</h3>
 	                    		</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 	                    			<i class="fa fa-user"></i>
@@ -78,7 +78,7 @@
 						<section id="step2" class="hidden">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-									<h3>Step 2  6</h3>
+									<h3>Step 2 / 5</h3>
 								</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 									<i class="fas fa-store"></i>
@@ -101,7 +101,7 @@
 						<section id="step3" class="hidden">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-									<h3>Step 3  6</h3>
+									<h3>Step 3 / 5</h3>
 								</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 									<i class="fas fa-globe"></i>
@@ -132,7 +132,7 @@
 	                    <section id="step4"  class="hidden">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-	                    			<h3>Step 4  6</h3>
+	                    			<h3>Step 4 / 5</h3>
 	                    		</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 	                    			<i class="fas fa-industry"></i>
@@ -161,7 +161,7 @@
 						<section id="step5" class="hidden">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
-									<h3>Step 5  6</h3>
+									<h3>Step 5 / 5</h3>
 								</div>
 	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
 									<i class="fa fa-key"></i>
@@ -239,8 +239,7 @@
 
 									<div class="display:flex">
 										<button type="button" class="outline white-blue margin-right:15px" show='#step4,#ava4' hide='#step5,#ava5'>Previous</button>
-										<!--<button type="button" class="outline red-white " actions="saveDocument, createOrgNew, createUserNew, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">-->
-										<button type="button" class="outline red-white " actions="createOrg, createUser, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">
+										<button type="button" class="outline red-white startAnimation" show='#step6,#ava6' hide='#step5,#ava5' actions="createOrg, createUser, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">
 											Launch
 										</button>
 									</div>
@@ -249,31 +248,33 @@
 							</div>
 						</section>
 	                    <section id="step6"  class="hidden">
-	                    	<div class="overflow:hidden padding:0px_25px background:white">
-								<div class="float:left width:75% padding-top:25px">
-	                    			<h3>Step 6 / 6</h3>
-	                    		</div>
-	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
-	                    			<i class="fas fa-industry"></i>
-	                    		</div>
-	                        </div>
-	                        <div class="padding:25px background:gainsboro text-align:left">
+
+        					<div class="animation-wrapper height:224px"></div>
+	    <!--                	<div class="overflow:hidden padding:0px_25px background:white">-->
+					<!--			<div class="float:left width:75% padding-top:25px">-->
+	    <!--                			<h3>Step 6 / 5</h3>-->
+	    <!--                		</div>-->
+	    <!--                		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">-->
+	    <!--                			<i class="fas fa-rocket"></i>-->
+	    <!--                		</div>-->
+	    <!--                    </div>-->
+	    <!--                    <div class="padding:25px background:gainsboro text-align:left">-->
 	
 	                           <!-- Industry select -->
-	                           <h2>Confirm your email</h2>
-								<div class="display:flex">
-			                        <button type="button" class="outline white-blue margin-right:15px" show='#step5,#ava5' hide='#step6,#ava6'>Previous</button>
-			                    </div>
-		                    </div>
+	    <!--                       <h2>Confirm your email</h2>-->
+					<!--			<div class="display:flex">-->
+			  <!--                      <button type="button" class="outline white-blue margin-right:15px" show='#step5,#ava5' hide='#step6,#ava6'>Previous</button>-->
+			  <!--                  </div>-->
+		   <!--                 </div>-->
 	                    </section>
-					</form>
-					<div class="hidden">
-						<form realtime="false" collection="users">
-							<input type="email" name='email' placeholder="Email" get-value="email" class="floating-label">
-							<input type="password" name='password' placeholder="Password" get-value="password" class="floating-label">
-							<button id="login" actions="login" href="index.html" class="outline">Login</button>
-						</form>							
-					</div>
+					<!--</form>-->
+					<!--<div class="hidden">-->
+					<!--	<form realtime="false" collection="users">-->
+					<!--		<input type="email" name='email' placeholder="Email" get-value="email" class="floating-label">-->
+					<!--		<input type="password" name='password' placeholder="Password" get-value="password" class="floating-label">-->
+					<!--		<button id="login" actions="login" href="index.html" class="outline">Login</button>-->
+					<!--	</form>							-->
+					<!--</div>-->
 				</div>
 		    </div>
 		</main>

@@ -22,10 +22,6 @@
 		<div class="justify-content:center align-items:center overflow:auto display:flex flex-wrap:wrap position:absolute width:100% height:100%">
 			<div class="flex-grow:1 min-width:300px max-width:400px margin:15px">
 				
-				<div template_id="login">
-					<p value="{{message}}"></p>
-				</div>            	
-				
 				<form realtime="false" collection="users" id="signin">
 					<div class="overflow:hidden padding:0px_25px background:white">
 						<div class="float:left width:75% padding-top:25px">
@@ -68,6 +64,10 @@
 					
 			</div>
 		</div>
+		
+        <div template_id="login" class="template card position:absolute bottom:15px right:15px padding:10px danger">
+            <span class="{{status}} {{type}}">{{message}}</span><a actions="removeElement"> X</a>
+        </div>
 
  		<script src="./apikey.js"></script>
 		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
