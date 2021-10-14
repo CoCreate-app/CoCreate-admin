@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.7.1...v1.8.0) (2021-10-14)
+
+
+### Features
+
+* display notigfications if login failed and add animation to signup.html ([b80ffc5](https://github.com/CoCreate-app/CoCreate-admin/commit/b80ffc5c7aa5c00c223fffa1dd7996fdcc78564e))
+
 ## [1.7.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.7.0...v1.7.1) (2021-10-13)
 
 
