@@ -1,3 +1,11 @@
+## [1.8.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.8.0...v1.8.1) (2021-10-14)
+
+
+### Bug Fixes
+
+* added notigfication template and example.apiKey ([5e59e24](https://github.com/CoCreate-app/CoCreate-admin/commit/5e59e2437e21d8743d2f27749dab9d3e667173fe))
+* updated dependencies ([ac6c06c](https://github.com/CoCreate-app/CoCreate-admin/commit/ac6c06c2711c0f8fcb2f43f85dffea7956f3412e))
+
 # [1.8.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.7.1...v1.8.0) (2021-10-14)
 
 
