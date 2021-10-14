@@ -67,7 +67,7 @@
                              <!-- Components -->
                             <div class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px" template_id="{{tag._id}}" fetch-collection="blocks" filter-name="category" filter-value="{{tag._id}}" order-by="position" order-type="asc">
                                  <!-- Components Template -->
-                                <div template_id="{{tag._id}}" class="template card flex-grow:1 width:70px height:125px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}" document_id="{{data._id}}">
+                                <div template_id="{{tag._id}}" class="template card position:relative flex-grow:1 width:70px height:125px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}" document_id="{{data._id}}">
                                     <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                         <a target="modal" href="../blocks/form.html" pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields" modal-width="320px">
                                             <i class="fas fa-pencil-alt"></i>
@@ -145,7 +145,7 @@
                     <!-- Assets -->
                     <div id="fetch-assets" class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px" template_id="assets" fetch-collection="" filter-name="content-type" filter-value="image, video" order-by="position" order-type="asc">
                          <!-- Asset Template -->
-                        <div template_id="assets" class="template card flex-grow:1 width:105px height:90px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}">
+                        <div template_id="assets" class="template card position:relative flex-grow:1 width:105px height:90px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}">
                             <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                 <a target="modal" href="https://server.cocreate.app/CoCreate-plugins/CoCreate-tui-image-editor/demo/index.html" pass-collection="files" pass-document_id="{{data._id}}" pass_to="form-fields" modal-width="900px">
                                     <i class="fas fa-pencil-alt"></i>
