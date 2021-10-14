@@ -69,9 +69,9 @@
 	                    			name="name"  
 	                    			placeholder="Full Name"  
 	                    			class="floating-label"
-	                    			autocomplete="off" data-key="renderKey.name">
+	                    			autocomplete="off" data-key="renderKey.name" unique>
 		                        
-		                        <button type="button" class="outline" show='#step2,#ava2' hide='#step1,#ava1'>Next</button>
+		                        <button type="button" actions="validate(#name), showHide" class="outline" show='#step2,#ava2' hide='#step1,#ava1'>Next</button>
 		                    </div>
 	                  	</section>
 
@@ -115,7 +115,7 @@
 						    		name="domains" 
 						    		placeholder="Domain"
 						    		value-suffix=".cocreate.app"
-						    		unique="false"
+						    		unique
 						    		class="floating-label width:calc(100%_-_90px)!important">
                                 <div class="position:relative top:-34px right:8px float:right padding:5px background:whitesmoke">
                                 	<span>.cocreate.app</span>
@@ -124,7 +124,7 @@
                                 <small id="Domain is currently in use" class="text-danger"></small>
 								<div class="display:flex">
 							        <button type="button" class="outline white-blue margin-right:15px" show='#step2,#ava2' hide='#step3,#ava3'>Previous</button>
-							        <button type="button" class="outline" show='#step4,#ava4' hide='#step3,#ava3'>Next</button>
+							        <button type="button" actions="validate(#subdomain), showHide" class="outline" show='#step4,#ava4' hide='#step3,#ava3'>Next</button>
 						   		</div>
 						    </div>
 						</section>
@@ -170,7 +170,7 @@
 							<div class="padding:25px background:gainsboro text-align:left">
 								<input type="email" id="email"
 									collection="users"
-									unique="false" 
+									unique
 									document_id="" 
 									name='email'  
 									placeholder="Email" 
@@ -186,7 +186,7 @@
 							    	<small id="errorUpassword" class="text-danger"></small>
 							
 								<input type="password"
-							    	data-validate_equal_to="#password" 
+							    	equal_to="#password" 
 							    	placeholder="Confirm Password" 
 							    	class="floating-label">
 							    	<small id="errorUconfirmpassword" class="text-danger"></small>
@@ -239,7 +239,7 @@
 
 									<div class="display:flex">
 										<button type="button" class="outline white-blue margin-right:15px" show='#step4,#ava4' hide='#step5,#ava5'>Previous</button>
-										<button type="button" class="outline red-white startAnimation" show='#step6,#ava6' hide='#step5,#ava5' actions="createOrg, createUser, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">
+										<button type="button" class="outline red-white startAnimation" show='#step6,#ava6' hide='#step5,#ava5' actions="validate, showHide, createOrg, createUser, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">
 											Launch
 										</button>
 									</div>
@@ -255,6 +255,10 @@
 		    </div>
 		</main>
 		
+        <div template_id="validate" class="template card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
+            <span class="{{type}}">{{message}}</span><a actions="removeElement"> X</a>
+        </div>
+        
         <div template_id="notification" class="template card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
             <span class="{{type}}">{{message}}</span><a actions="removeElement"> X</a>
         </div>
