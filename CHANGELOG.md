@@ -1,3 +1,10 @@
+## [1.8.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.8.2...v1.8.3) (2021-10-14)
+
+
+### Bug Fixes
+
+* notifications ([24ad122](https://github.com/CoCreate-app/CoCreate-admin/commit/24ad12225877ddf1acd8de5d1fc776c561b46ec8))
+
 ## [1.8.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.8.1...v1.8.2) (2021-10-14)
 
 
