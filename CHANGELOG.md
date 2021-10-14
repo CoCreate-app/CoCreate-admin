@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.8.1...v1.8.2) (2021-10-14)
+
+
+### Bug Fixes
+
+* added notification template to index.html ([a32eed5](https://github.com/CoCreate-app/CoCreate-admin/commit/a32eed51751f74f6263fa9fb7eaab4ed14b67695))
+
 ## [1.8.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.8.0...v1.8.1) (2021-10-14)
 
 
