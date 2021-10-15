@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.9.0...v1.9.1) (2021-10-15)
+
+
+### Bug Fixes
+
+* update apiKeys ([8c5f4ef](https://github.com/CoCreate-app/CoCreate-admin/commit/8c5f4ef0dbcffdeab30b5b2583ef0299a3d9f301))
+
 # [1.9.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.8.3...v1.9.0) (2021-10-14)
 
 
