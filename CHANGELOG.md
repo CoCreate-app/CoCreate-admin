@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.9.1...v1.9.2) (2021-10-15)
+
+
+### Bug Fixes
+
+* update packages ([bde95da](https://github.com/CoCreate-app/CoCreate-admin/commit/bde95dae7d5c280ce8e8dfbc580547b8bf5104be))
+
 ## [1.9.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.9.0...v1.9.1) (2021-10-15)
 
 
