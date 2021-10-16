@@ -1,3 +1,10 @@
+## [1.9.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.9.3...v1.9.4) (2021-10-16)
+
+
+### Bug Fixes
+
+* update socket package to fix bug in docs ([8a09bcb](https://github.com/CoCreate-app/CoCreate-admin/commit/8a09bcb99c400c643639a2b7c609e49cf72e3684))
+
 ## [1.9.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.9.2...v1.9.3) (2021-10-15)
 
 
