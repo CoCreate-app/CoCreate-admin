@@ -71,7 +71,7 @@
 	                    			class="floating-label"
 	                    			autocomplete="off" data-key="renderKey.name" unique>
 		                        
-		                        <button type="button" actions="validate(#name), showHide" class="outline" show='#step2,#ava2' hide='#step1,#ava1'>Next</button>
+		                        <button type="button" class="outline" show='#step2,#ava2' hide='#step1,#ava1'>Next</button>
 		                    </div>
 	                  	</section>
 
@@ -255,13 +255,23 @@
 		    </div>
 		</main>
 		
-        <div template_id="validate" class="template card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
-            <span class="{{type}}">{{message}}</span><a actions="removeElement"> X</a>
+		<div class="position:fixed!important bottom:15px right:15px">
+	        <div template_id="validate" class="template card margin:5px padding:10px {{status}}">
+	            <span class="{{type}}">{{message}}</span><a actions="removeElement"> X</a>
+	        </div>
+	        
+	        <div template_id="notification" class="template card margin:5px padding:10px {{status}}">
+	            <span class="{{type}}">{{message}}</span><a actions="removeElement"> X</a>
+	        </div>
         </div>
         
-        <div template_id="notification" class="template card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
-            <span class="{{type}}">{{message}}</span><a actions="removeElement"> X</a>
+        <div toolbar-placent="top" toolbar-target="#test" toolbar-event="" class="position:absolute">
+            <div class="height:100% width:100%"></div>
+            <div class="toolbar width:100%">
+                <span id="bold-button">this is required</span>
+            </div>
         </div>
+
 		
         <script src="./apikey.js"></script>
 		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
