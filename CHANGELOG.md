@@ -1,3 +1,10 @@
+## [1.9.6](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.9.5...v1.9.6) (2021-10-29)
+
+
+### Bug Fixes
+
+* builder right panel and left panel css ([f47602e](https://github.com/CoCreate-app/CoCreate-admin/commit/f47602e32bf2ca468375eee1028f4a8d20833cf1))
+
 ## [1.9.5](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.9.4...v1.9.5) (2021-10-17)
 
 
