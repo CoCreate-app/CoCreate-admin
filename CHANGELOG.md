@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.9.7...v1.10.0) (2021-11-01)
+
+
+### Features
+
+* update to bulder right panel attribute target. can now target other documents.. or same document... great for websitebuilders or richtext editors ([af3560d](https://github.com/CoCreate-app/CoCreate-admin/commit/af3560d452e0d40145a5662c9ede38317dbb5fb9))
+
 ## [1.9.7](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.9.6...v1.9.7) (2021-10-29)
 
 
