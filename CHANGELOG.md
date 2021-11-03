@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.10.0...v1.10.1) (2021-11-03)
+
+
+### Bug Fixes
+
+* added cdn ([45622d7](https://github.com/CoCreate-app/CoCreate-admin/commit/45622d7eefdbc36c834468c1f96b3c3db19120e9))
+
 # [1.10.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.9.7...v1.10.0) (2021-11-01)
 
 
