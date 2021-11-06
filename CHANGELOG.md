@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.10.3...v1.11.0) (2021-11-06)
+
+
+### Features
+
+* sidenav in builder has attribute-trigger='[@0px-768px](https://github.com/0px-768px)' to change value of an attribute at defined screensize ([5f88780](https://github.com/CoCreate-app/CoCreate-admin/commit/5f88780b707115be6539bc2364dfcad9c1bf7f25))
+
 ## [1.10.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.10.2...v1.10.3) (2021-11-04)
 
 
