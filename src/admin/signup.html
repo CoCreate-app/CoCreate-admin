@@ -69,7 +69,7 @@
 	                    			name="name"  
 	                    			placeholder="Full Name"  
 	                    			class="floating-label"
-	                    			autocomplete="off" data-key="renderKey.name" unique>
+	                    			autocomplete="off" data-key="renderKey.name">
 		                        
 		                        <button type="button" class="outline" show='#step2,#ava2' hide='#step1,#ava1'>Next</button>
 		                    </div>
@@ -116,6 +116,8 @@
 						    		placeholder="Domain"
 						    		value-suffix=".cocreate.app"
 						    		unique
+						    		subdomain
+						    		validate="unique, subdomain"
 						    		class="floating-label width:calc(100%_-_90px)!important">
                                 <div class="position:relative top:-34px right:8px float:right padding:5px background:whitesmoke">
                                 	<span>.cocreate.app</span>
@@ -186,7 +188,7 @@
 							    	<small id="errorUpassword" class="text-danger"></small>
 							
 								<input type="password"
-							    	equal_to="#password" 
+							    	equal-to="#password" 
 							    	placeholder="Confirm Password" 
 							    	class="floating-label">
 							    	<small id="errorUconfirmpassword" class="text-danger"></small>
@@ -274,7 +276,7 @@
 
 		
         <script src="./apikey.js"></script>
-		<script src="https://cdn.cocreate.app/latest/CoCreate.min.js" ></script>
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
 
 	</body>
 </html>
