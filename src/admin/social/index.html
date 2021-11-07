@@ -96,26 +96,6 @@
 
 		<sidenav id="menuL" class="position:fixed top:0px left:0px background:whitesmoke height:100vh width:50px width:300px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
 
-			<!-- Select to change organizations  -->
-			<cocreate-select class="org-changer remove-none padding:0 border:none sessionUser_Id" name="current_org" collection="users" document_id="">
-
-				<input placeholder="Search" template_id="connected_orgs">
-
-				<ul class="options cocreate-menu overflow:overlay sessionUser_Id" fetch-collection="users" fetch-document_id="5ee2e3a93e956152355a3443" filter-name="_id" filter-value="" filter-operator="$eq" fetch-name="connected_orgs" template_id="connected_orgs">
-					<li class="template option height:50px margin:0" template_id="connected_orgs" value="{{connected_orgs.--}}">
-						<span class="logo-icon"><img collection="organizations" document_id="{{connected_orgs.--}}" name="logo" src="https://server.cocreate.app/images/cocreate.png" height="40px"alt="..."></span>
-						<span collection="organizations" document_id="{{connected_orgs.--}}" name="name" class="logo-name">Organization Name</span>
-					</li>
-					<li class="line-height:40px height:40px overflow:hidden">
-						<a href="new-org.html">
-							<span><i class="fas fa-plus"></i></span>
-							<span>New Orginaztion</span>
-						</a>
-					</li>
-				</ul>
-
-			</cocreate-select>
-
 			<!-- Search field -->
 			<div class="cocreate-search padding:5px height:50px">
 				<form id='menu-search'>
