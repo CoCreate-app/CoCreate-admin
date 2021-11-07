@@ -1,3 +1,10 @@
+## [1.11.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.11.2...v1.11.3) (2021-11-07)
+
+
+### Bug Fixes
+
+* add overflow aut to builder left panel, typo with resize observer ([fde647c](https://github.com/CoCreate-app/CoCreate-admin/commit/fde647cfdc9fc0e7e41b44ddb4863a24f88c3008))
+
 ## [1.11.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.11.1...v1.11.2) (2021-11-07)
 
 
