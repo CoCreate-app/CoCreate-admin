@@ -1,3 +1,10 @@
+## [1.11.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.11.3...v1.11.4) (2021-11-09)
+
+
+### Bug Fixes
+
+* improved pass- usage to support module_id and module-form ([c222b95](https://github.com/CoCreate-app/CoCreate-admin/commit/c222b95f6cca225d930a51b06e15af2a7d97f42d))
+
 ## [1.11.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.11.2...v1.11.3) (2021-11-07)
 
 
