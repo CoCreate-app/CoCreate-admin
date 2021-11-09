@@ -130,7 +130,7 @@
                             <div class="display:flex">
                                 <input id="qty-{{data._id}}" class="floating-label max-width:70px" name="qty" placeholder="Qty">
                                 <input id="price-{{data._id}}" class="floating-label max-width:100px" name="price" placeholder="Price">
-                                <input id="total-{{data._id}}" realtime="false" class="floating-label max-width:130px" name="total2" placeholder="Total" calculate="{#price-{{data._id}}} * {#qty-{{data._id}}}">
+                                <input id="total-{{data._id}}" realtime="false" class="floating-label max-width:130px item-total" name="total" placeholder="Total" calculate="{#price-{{data._id}}} * {#qty-{{data._id}}}">
                             </div>
                             <div>
                                 <!--<input class="item-description floating-label" document_id="" name="description"  placeholder="Description"/>-->
@@ -167,29 +167,30 @@
                     <div class="padding:20px_0px border-bottom:1px_solid_lightgrey">
                         <div class="display:flex justify-content:space-between">
                             <label class="color-dark-gray">Subtotal</label>
-                            <span>$00.00</span>
+                            <span id="subtotal" claculate="{.item-total}">$00.00</span>
                         </div>
                         <div class="display:flex justify-content:space-between">
                             <label class="color-dark-gray">Discount</label>
-                            <span>-$00.00</span>
+                            <input id="discount" collection="" document_id="" name="discount">
                         </div>
                         <div class="display:flex justify-content:space-between">
                             <label class="color-dark-gray">Tax</label>
-                            <span>0.0%</span>
+                            <input id="tax-precent">
+                            <input type="hidden" id="tax" claculate="{#subtotal} - {#discount} * {#tax-precent}" collection="" document_id="" name="tax">
                         </div>
                     </div>
                     <div class="padding:20px_0px">
                         <div class="display:flex justify-content:space-between">
                             <label class="color-dark-gray">Estimate Total</label>
-                            <span>$00.00</span>
+                            <span claculate="{#subtotal} - {#discount} + {tax}" collection="" document_id="" name="total">$00.00</span>
                         </div>
                         <div class="display:flex justify-content:space-between">
                             <label class="color-dark-gray">Paid to date</label>
-                            <span>-$00.00</span>
+                            <span id="#paid" collection="" document_id="" name="paid">-$00.00</span>
                         </div>
                         <div class="display:flex justify-content:space-between">
                             <label class="color-dark-gray">Balance (USD)</label>
-                            <span>$000</span>
+                            <span claculate="{#total} - {#paid}" collection="" document_id="" name="balance">$000</span>
                         </div>
                     </div>
                 </div>

@@ -65,9 +65,9 @@
 		<!-- Main Content -->
 		<main class="padding:10px" content_id="content">
 
-			<form collection="module_activities">
-
-				<input document_id="" type="text" name="name" placeholder="Choice Type" class="floating-label">
+			<form pass_id="form-fields" collection="module_activities" document_id="">
+                <input type="hidden" name="module_id"  document_id="" pass_id="module_id" value=""/>
+				<input document_id="" type="text" name="type" placeholder="Choice Type" class="floating-label">
 
 				<select document_id="" name="Digital goods types" placeholder="Digital goods types" class="floating-label">
 					<option label="Upload Digital Goods" value="Upload Digital Goods">Upload Digital Goods</option>
@@ -91,17 +91,17 @@
 				</select>
 
 				<!-- CoCreate Select field multiple documents -->
-				<div class="select--field sortable floating-label" name="related_items" collection="module_activities" document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Related Items:">
+				<cocreate-select class="sortable floating-label" name="related_items" collection="module_activities" document_id="5e07c2a43145e2497e494bf0" multiple placeholder="Related Items:">
 					<input class="search-input template-search" placeholder="Search" template_id="idEngine1">
 					<!-- Fetches and displays results using template -->
-					<ul fetch-collection="users" template_id="option1" pass_to="me1234" id="idEngine1" class="template-wrapper options  overflow:overlay">
+					<ul fetch-collection="users" template_id="option1" pass_to="me1234" class="options overflow:overlay">
 						<!-- template -->
 						<li class="option template" id="option1" pass_id="me1234">
-							<h3 collection="users" document_id="" name="name" pass_id="me1234">user name</h3>
-							<h5 collection="users" document_id="" name="email" pass_id="me1234"></h5>
+							<h3 collection="users" document_id="{{data._id}}" name="name">user name</h3>
+							<h5 collection="users" document_id="data._id" name="email"></h5>
 						</li>
 					</ul>
-				</div>
+				</cocreate-select>
 
 				<input document_id="" type="text" name="name" placeholder="Name" class="floating-label">
 
@@ -159,7 +159,6 @@
 
 		</main>
 
-		<script src="../apikey.js"></script>
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
 
 	</body>
