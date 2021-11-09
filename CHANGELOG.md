@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.11.4...v1.12.0) (2021-11-09)
+
+
+### Features
+
+* supports all valid selectors in attribute calculte ([83096fa](https://github.com/CoCreate-app/CoCreate-admin/commit/83096fae520e518dc2577aea0e21516adb450929))
+
 ## [1.11.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.11.3...v1.11.4) (2021-11-09)
 
 
