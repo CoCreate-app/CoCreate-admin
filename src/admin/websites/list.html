@@ -40,7 +40,7 @@
                     <a target="modal" href="../modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
                         <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
-                        <div pass_id="datatable" pass-filter-value="" pass_to="module_id"></div>
+                        <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
                     </a>
                 </li>
 
@@ -106,8 +106,9 @@
                             <a target="modal" href="./form.html" modal-width="320px" modal-color="#229954">
                                 <span collection="{{collection}}" document_id="{{data._id}}" name="name" class="color:white">Site Name</span>
 								<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
-								<div pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
 								<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
+								<div pass-value="{{data.module_id}}" pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
+								<div pass-document_id="{{data.module_id}}" pass_to="module-from"></div>
                                 <div pass-fetch_collection="files" pass-filter-name="website_id" pass-filter-value="{{data._id}}" pass_to="website_id"></div>                  
                             </a>
                         </div>
@@ -123,8 +124,9 @@
 			<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954">
 				<i class="fa fa-plus"></i>
 				<div pass_to="form-fields" pass-document_id=""></div>
-				<div pass_id="module-form" pass-value="" pass-filter-value="" pass_to="module_id"></div>
-                <div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
+				<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
+				<div pass_id="module_id" pass-value="" pass-filter-value="" pass_to="module_id"></div>
+				<div pass_id="module-form" pass-document_id="" pass_to="module-form"></div>
 			</a>
 		</button>
 		

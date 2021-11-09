@@ -47,7 +47,7 @@
                     <a target="modal" href="../modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
                         <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
-                        <div pass_id="datatable" pass-filter-value="" pass_to="module_id"></div>
+                        <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
                     </a>
                 </li>
 
@@ -108,8 +108,9 @@
                             <a target="modal" href="../files/form.html" modal-width="320px" class="flex-grow:1 font-size:16px padding:5px_0">
                                 <p collection="{{collection}}" document_id="{{data._id}}" name="path"></p>
 								<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
-								<div pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
 								<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
+								<div pass-value="{{data.module_id}}" pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
+								<div pass-document_id="{{data.module_id}}" pass_to="module-from"></div>
                                 <!--<div pass-fetch_collection="{{collection}}" pass-filter-name="website_id" pass-filter-value="{{data._id}}" pass_to="website_id"></div>-->
                             </a>
                             <!--<p collection="{{collection}}" document_id="{{data._id}}" name="name" class="flex-grow:1 font-size:16px padding:5px_0">Web Page</p>-->
