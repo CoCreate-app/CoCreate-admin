@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.0...v1.12.1) (2021-11-11)
+
+
+### Bug Fixes
+
+* improvements to invoice, estimate and dashboard ([7a47b62](https://github.com/CoCreate-app/CoCreate-admin/commit/7a47b62fc34819299d9694a4077f5c876e646042))
+
 # [1.12.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.11.4...v1.12.0) (2021-11-09)
 
 
