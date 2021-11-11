@@ -70,7 +70,7 @@
         <!-- Main Content -->
         <main content_id="content">
 
-            <form collection="" class="padding:20px padding:10px@xs">
+            <form pass_id="form-fields" collection="module_activities" document_id="" class="padding:20px padding:10px@xs">
                 <input type="hidden" name="module_id"  document_id="" pass_id="module_id" value=""/>
                 <div class="display:flex flex-wrap:wrap justify-content:space-between padding-bottom:20px border-bottom:1px_solid_lightgrey">
                     <div class="flex-grow:1 max-width:370px margin-right:20px@sm@md@lg@xl">
@@ -153,48 +153,50 @@
                     </form>
                 </div>
             </div>
-
-            <div class="padding:20px display:flex flex-wrap:wrap justify-content:space-between">
-                <div class="min-width:300px max-width:550px flex-grow:1">
-                    <div class="padding-bottom:10px">
-                        <input document_id="" type="text" name="payment-terms" placeholder="Add Payment Terms" class="floating-label">
+            
+            <form pass_id="form-fields" collection="module_activities" document_id="">
+                <div class="padding:20px display:flex flex-wrap:wrap justify-content:space-between">
+                    <div class="min-width:300px max-width:550px flex-grow:1">
+                        <div class="padding-bottom:10px">
+                            <input document_id="" type="text" name="payment-terms" placeholder="Add Payment Terms" class="floating-label">
+                        </div>
+                        <div class="padding-bottom:10px">
+                            <input document_id="" type="text" name="clite-note" placeholder="Add client Note" class="floating-label">
+                        </div>
                     </div>
-                    <div class="padding-bottom:10px">
-                        <input document_id="" type="text" name="clite-note" placeholder="Add client Note" class="floating-label">
+                    <div class="flex-grow:1 width:225px max-width:400px">
+                        <div class="padding:20px_0px border-bottom:1px_solid_lightgrey">
+                            <div class="display:flex justify-content:space-between">
+                                <label class="color-dark-gray">Subtotal</label>
+                                <span id="subtotal" calculate="{.item-total}">$00.00</span>
+                            </div>
+                            <div class="display:flex justify-content:space-between">
+                                <label class="color-dark-gray">Discount</label>
+                                <input id="discount" document_id="" name="discount">
+                            </div>
+                            <div class="display:flex justify-content:space-between">
+                                <label class="color-dark-gray">Tax</label>
+                                <input id="tax-precent" document_id="" name="tax-rate">
+                                <input type="hidden" id="tax" calculate="({#subtotal} - {#discount}) * {#tax-precent}">
+                            </div>
+                        </div>
+                        <div class="padding:20px_0px">
+                            <div class="display:flex justify-content:space-between">
+                                <label class="color-dark-gray">Estimate Total</label>
+                                <span id="total" calculate="{#subtotal} - {#discount} + {#tax}" document_id="" name="total" read="false">$00.00</span>
+                            </div>
+                            <div class="display:flex justify-content:space-between">
+                                <label class="color-dark-gray">Paid to date</label>
+                                <span id="paid" document_id="" name="paid">0</span>
+                            </div>
+                            <div class="display:flex justify-content:space-between">
+                                <label class="color-dark-gray">Balance (USD)</label>
+                                <span calculate="{#total} - {#paid}" document_id="" name="balance" read="false"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="flex-grow:1 width:225px max-width:400px">
-                    <div class="padding:20px_0px border-bottom:1px_solid_lightgrey">
-                        <div class="display:flex justify-content:space-between">
-                            <label class="color-dark-gray">Subtotal</label>
-                            <span id="subtotal" claculate="{.item-total}">$00.00</span>
-                        </div>
-                        <div class="display:flex justify-content:space-between">
-                            <label class="color-dark-gray">Discount</label>
-                            <input id="discount" collection="" document_id="" name="discount">
-                        </div>
-                        <div class="display:flex justify-content:space-between">
-                            <label class="color-dark-gray">Tax</label>
-                            <input id="tax-precent">
-                            <input type="hidden" id="tax" claculate="{#subtotal} - {#discount} * {#tax-precent}" collection="" document_id="" name="tax">
-                        </div>
-                    </div>
-                    <div class="padding:20px_0px">
-                        <div class="display:flex justify-content:space-between">
-                            <label class="color-dark-gray">Estimate Total</label>
-                            <span claculate="{#subtotal} - {#discount} + {tax}" collection="" document_id="" name="total">$00.00</span>
-                        </div>
-                        <div class="display:flex justify-content:space-between">
-                            <label class="color-dark-gray">Paid to date</label>
-                            <span id="#paid" collection="" document_id="" name="paid">-$00.00</span>
-                        </div>
-                        <div class="display:flex justify-content:space-between">
-                            <label class="color-dark-gray">Balance (USD)</label>
-                            <span claculate="{#total} - {#paid}" collection="" document_id="" name="balance">$000</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </form>
 
         </main>
 
