@@ -1,3 +1,10 @@
+## [1.12.5](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.4...v1.12.5) (2021-11-17)
+
+
+### Bug Fixes
+
+* add apikeys/ form and datatatable ([6f76999](https://github.com/CoCreate-app/CoCreate-admin/commit/6f7699988ad086a886f746c55ac8927832c0c60a))
+
 ## [1.12.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.3...v1.12.4) (2021-11-16)
 
 
