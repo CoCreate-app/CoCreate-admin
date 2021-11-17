@@ -44,6 +44,44 @@ module.exports = {
             }
         },
         {
+            "entry": "./src/admin/apikeys/datatable.html",
+            "collection": "files",
+            "document_id": "6195549bcbf74500119d4165",
+            "key": "src",
+            "data": {
+                "name": "datatable.html",
+                "domains": [
+                    "cocreate.app",
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/apikeys/datatable.html",
+                "directory": "/admin/apikeys",
+                "content-type": "text/html",
+                "public": "true",
+                "module_id": "6195533ccbf74500119d4115",
+                "website_id": "5ffa235ff11d2d00103c4520"
+            }
+        },
+        {
+            "entry": "./src/admin/apikeys/form.html",
+            "collection": "files",
+            "document_id": "61955495cbf74500119d4164",
+            "key": "src",
+            "data": {
+                "name": "form.html",
+                "domains": [
+                    "cocreate.app",
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/apikeys/form.html",
+                "directory": "/admin/apikeys",
+                "content-type": "text/html",
+                "public": "true",
+                "module_id": "6195533ccbf74500119d4115",
+                "website_id": "5ffa235ff11d2d00103c4520"
+            }
+        },
+        {
             "entry": "./src/admin/apikey.js",
             "collection": "files",
             "document_id": "60de467b14b5ab0c2dd30098",

@@ -321,7 +321,7 @@
 				</div>
 	
 				<!--<input type="hidden" filter-name="module-view" filter-value="module-view" template_id="files">-->
-				<div fetch-collection="files" filter-name="module_id" filter-value="" order-by="name" order-type="asc" template_id="files" pass_id="module_id" class="sortable background:whitesmoke padding:10px" dnd-group-name="files">
+				<div fetch-collection="" filter-name="module_id" filter-value="" order-by="name" order-type="asc" template_id="files" pass_id="module_id" class="sortable background:whitesmoke padding:10px" dnd-group-name="files">
 	
 					<div template_id="files" class="template card padding:10px_5px background:white collapsed margin-bottom:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
                         <div class="display:flex padding-left:10px">
@@ -344,7 +344,7 @@
 							</a>
 							<a target="modal" href="../code-editor/index.html" class="float:right padding:5px">
 									<i class="fas fa-code"></i>
-								 <div pass-document_id="{{data._id}}" pass-name="src" pass_to="code-editor"></div>
+								 <div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass-name="src" pass_to="code-editor"></div>
 							</a>
 						</div>
 					</div>

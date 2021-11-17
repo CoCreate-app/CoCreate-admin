@@ -6,27 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-        <title>Module Activity Form View | CoCreate</title>
+        <title>ApiKeys Form View</title>
         <link rel="stylesheet" href="../index.css" collection="files" document_id="60e4f9714792bff869f1bde5" name="src" type="text/css"/>
     </head>
-
-    <style type="text/css">
-        .code-editor {
-            display: none;
-        }
-        .code-editor.active {
-            display:block;
-            width: 100%;
-            /*border:none;*/
-            outline:none;
-            padding:10px;
-            border-color: rgba(0,0,0,.24);
-            border-radius: 0px 0px 4px 4px;
-        }
-        .tab[selected] {
-            background: whitesmoke;
-        }
-    </style>
 
     <body>
         <!-- Modal Viewport -->
@@ -82,34 +64,16 @@
 
         <main class="padding:10px" content_id="content">
 
-            <form pass_id="form-fields" collection="files" document_id="" class="margin-bottom:75px">
+            <form pass_id="form-fields" collection="apiKeys" document_id="">
 
-                <input type="hidden" name="tags" value="template"/>
-                <input type="text" name="name" id="name" placeholder="Name" class="floating-label" />
-                <input type="text" name="description" id="description" placeholder="Description" class="floating-label" />
-                <input type="text" name="image" id="image" placeholder="Image" class="floating-label" />
+                <input type="hidden" name="module_id"  document_id="" pass_id="module_id" value=""/>
+                
+                <input type="text" name="name" class="floating-label" placeholder="Name" pass_id="form-fields" />
 
-                <div class="margin-top:10px display:flex tabs border-bottom:5px_solid_whitesmoke">
-                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#html" selected-group="code-editor" selected>HTML</div>
-                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#css" selected-group="code-editor">CSS</div>
-                    <div class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#js" selected-group="code-editor">JS</div>
-                </div>
-                <textarea id="html" name="html" class="code-editor active"></textarea>
-                <textarea id="css" name="css" class="code-editor"></textarea>
-                <textarea id="js" name="js" class="code-editor"></textarea>
+                <input type="text" name="apikey" class="floating-label" placeholder="apiKey" pass_id="form-fields" />
 
-				<cocreate-select class="sortable floating-label" name="module_id" placeholder="Module">
-					<input placeholder="Search" template_id="module_id">
-					<cc-options fetch-collection="modules" template_id="module_id" class="overflow:auto">
-						<cc-option class="template" template_id="module_id" value="{{data._id}}">
-							<div class="display:flex padding:5px">
-								<span class="width:25px" collection="{{collection}}" document_id="{{data._id}}" name="icon"></span>
-								<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Name</h4>
-							</div>
-						</cc-option>
-					</cc-options>
-				</cocreate-select>
-				
+                <textarea class="floating-label" name="api-snippet" placeholder="Api Snippet" pass_id="form-fields" rows="6"></textarea>
+
 				<button actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>
 				</button>
@@ -118,7 +82,6 @@
 
         </main>
 
-        <!-- CoCreateJS -->
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
 
     </body>
