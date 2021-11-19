@@ -51,7 +51,7 @@
                 </div>
                
                 <div class="flex-grow:1 height:fit-content width:35% min-width:370px max-width:400px margin:10px align-self:flex-end">
-                	<form  realtime="false" autocomplete="false">
+                	<form  realtime="false" autocomplete="off">
                 		
 	            		<section id="step1">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
@@ -69,9 +69,11 @@
 	                    			name="name"  
 	                    			placeholder="Full Name"  
 	                    			class="floating-label"
-	                    			autocomplete="off" data-key="renderKey.name">
+	                    			autocomplete="off" 
+	                    			data-key="renderKey.name" 
+	                    			required>
 		                        
-		                        <button type="button" class="outline" show='#step2,#ava2' hide='#step1,#ava1'>Next</button>
+		                        <button type="button" actions="validate(#name), showHide" class="outline" show='#step2,#ava2' hide='#step1,#ava1'>Next</button>
 		                    </div>
 	                  	</section>
 
@@ -90,10 +92,11 @@
 						    		document_id=""  
 						    		name="name" 
 						    		placeholder="Organization Name" 
-						    		class="floating-label">
+						    		class="floating-label"
+						    		required>
 								<div class="display:flex">
 							        <button type="button" class="outline white-blue margin-right:15px" show='#step1,#ava1' hide='#step2,#ava2'>Previous</button>
-							        <button type="button" class="outline" show='#step3,#ava3' hide='#step2,#ava2'>Next</button>
+							        <button type="button" actions="validate(#org-name), showHide" class="outline" show='#step3,#ava3' hide='#step2,#ava2'>Next</button>
 						   		</div>
 						    </div>
 						</section>
@@ -116,8 +119,8 @@
 						    		placeholder="Domain"
 						    		value-suffix=".cocreate.app"
 						    		unique
+						    		required
 						    		subdomain
-						    		validate="unique, subdomain"
 						    		class="floating-label width:calc(100%_-_90px)!important">
                                 <div class="position:relative top:-34px right:8px float:right padding:5px background:whitesmoke">
                                 	<span>.cocreate.app</span>
@@ -143,8 +146,8 @@
 	                        <div class="padding:25px background:gainsboro text-align:left">
 	
 	                           <!-- Industry select -->
-	                            <cocreate-select class="floating-label" collection="organizations" name="industry" placeholder="Industry" realtime="false" save="false">
-	  					          	  <input class="template-search" placeholder="Search" template_id="industries">
+	                            <cocreate-select id="industries" class="floating-label" collection="organizations" name="industry" placeholder="Industry" realtime="false" save="false" required>
+	  					          	  <input placeholder="Search" template_id="industries">
 									<cc-options fetch-collection="industries" 
 									    template_id="industries"
 									    class="options overflow:overlay">
@@ -155,7 +158,7 @@
 	                            </cocreate-select>
 								<div class="display:flex">
 			                        <button type="button" class="outline white-blue margin-right:15px" show='#step3,#ava3' hide='#step4,#ava4'>Previous</button>
-			                        <button type="button" class="outline" show='#step5,#ava5' hide='#step4,#ava4'>Next</button>
+			                        <button type="button" actions="validate(#industries), showHide" class="outline" show='#step5,#ava5' hide='#step4,#ava4'>Next</button>
 			                    </div>
 		                    </div>
 	                    </section>
@@ -176,7 +179,8 @@
 									document_id="" 
 									name='email'  
 									placeholder="Email" 
-									class="floating-label">
+									class="floating-label"
+									required>
 							 		<small id="errorUemail" class="text-danger"></small>
 							
 								<input type="password" id="password"
@@ -184,13 +188,15 @@
 							    	document_id=""
 							    	name="password" 
 							    	placeholder="Password" 
-							    	class="floating-label">
+							    	class="floating-label" 
+							    	required>
 							    	<small id="errorUpassword" class="text-danger"></small>
 							
 								<input type="password"
-							    	equal-to="#password" 
+							    	matches="#password" 
 							    	placeholder="Confirm Password" 
-							    	class="floating-label">
+							    	class="floating-label"
+							    	required>
 							    	<small id="errorUconfirmpassword" class="text-danger"></small>
 									
 								<!-- User _id  -->
@@ -270,5 +276,6 @@
         <script src="./apikey.js"></script>
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
         <!--<script src="../../../CoCreateJS/dist/CoCreate.js"></script>-->
+        
 	</body>
 </html>

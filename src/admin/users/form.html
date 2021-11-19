@@ -71,7 +71,7 @@
 				<input type="text" name="profile_image" placeholder="Profile Image" class="floating-label" />
 
 				<cocreate-select class="floating-label sortable" name="connected_orgs" placeholder="Connected Org" multiple>
-					<input class="search-input" placeholder="Search" template_id="connect">
+					<input placeholder="Search" template_id="connect">
 					<ul fetch-collection="organizations" template_id="connectn" class="options overflow:overlay">
 						<li class="template option" collection="organizations" template_id="connectn">
 							<span class="logo-icon"><img collection="organizations" document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>
@@ -84,7 +84,7 @@
 				</cocreate-select>
 
 				<cocreate-select class="floating-label sortable" name="current_org" placeholder="Current Org">
-					<input class="search-input" placeholder="Search" template_id="connect">
+					<input placeholder="Search" template_id="connect">
 					<ul fetch-collection="users" fetch-document="" fetch-name="connected_orgs" template_id="connect" class="options overflow:overlay">
 
 						<li class="template option" collection="organizations" template_id="connect">
