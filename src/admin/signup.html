@@ -188,15 +188,13 @@
 							    	document_id=""
 							    	name="password" 
 							    	placeholder="Password" 
-							    	class="floating-label" 
-							    	required>
+							    	class="floating-label">
 							    	<small id="errorUpassword" class="text-danger"></small>
 							
 								<input type="password"
 							    	matches="#password" 
 							    	placeholder="Confirm Password" 
-							    	class="floating-label"
-							    	required>
+							    	class="floating-label">
 							    	<small id="errorUconfirmpassword" class="text-danger"></small>
 									
 								<!-- User _id  -->
@@ -247,7 +245,7 @@
 
 									<div class="display:flex">
 										<button type="button" class="outline white-blue margin-right:15px" show='#step4,#ava4' hide='#step5,#ava5'>Previous</button>
-										<button type="button" class="outline red-white startAnimation" show='#step6,#ava6' hide='#step5,#ava5' actions="validate, showHide, createOrg, createUser, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">
+										<button type="button" class="outline red-white startAnimation" show='#step6,#ava6' hide='#step5,#ava5' actions="validate, animateSignup, showHide, createOrg, createUser, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">
 											Launch
 										</button>
 									</div>
@@ -274,8 +272,8 @@
         </div>
 		
         <script src="./apikey.js"></script>
-        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
-        <!--<script src="../../../CoCreateJS/dist/CoCreate.js"></script>-->
+        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>-->
+        <script src="../../../CoCreateJS/dist/CoCreate.js"></script>
         
 	</body>
 </html>
