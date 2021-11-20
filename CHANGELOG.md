@@ -1,3 +1,10 @@
+## [1.12.11](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.10...v1.12.11) (2021-11-20)
+
+
+### Bug Fixes
+
+* updated script tags and link tags ([ec4153a](https://github.com/CoCreate-app/CoCreate-admin/commit/ec4153a0a148ccd35daad54ad2bef47c847c3298))
+
 ## [1.12.10](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.9...v1.12.10) (2021-11-20)
 
 
