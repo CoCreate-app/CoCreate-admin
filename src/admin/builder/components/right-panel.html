@@ -787,7 +787,7 @@
                             </cocreate-select>
                         </div>
                         <div class="margin:0_5px">
-                            <input attribute="name" type="text" class="floating-label" placeholder="Name" id="name" pass_id="builder" attribute-target="iframe; *" collection="" document_id="" crud="false" save="false" read="false" active>
+                            <input attribute="name" type="text" class="floating-label" placeholder="name" id="name" pass_id="builder" attribute-target="iframe; *" collection="" document_id="" crud="false" save="false" read="false" active>
                         </div>
                         <div class="margin:0_5px">
                             <textarea attribute="value" type="text" class="floating-label" placeholder="value" id="value" pass_id="builder" attribute-target="iframe; *" collection="" document_id="" crud="false" save="false" read="false" active></textarea>
@@ -797,12 +797,6 @@
                         </div>
                         <div class="margin:0_5px">
                             <input attribute="value-suffix" type="text" class="floating-label" placeholder="value-suffix" id="value-suffix" pass_id="builder" attribute-target="iframe; *" collection="" document_id="" crud="false" save="false" read="false" active>
-                        </div>
-                        <div class="margin:0_5px">
-                            <input attribute="value" type="text" class="floating-label" placeholder="value" id="value" pass_id="builder" attribute-target="iframe; *" collection="" document_id="" crud="false" save="false" read="false" active>
-                        </div>
-                        <div class="margin:0_5px">
-                            <input attribute="name" type="text" class="floating-label" placeholder="Name" id="name" pass_id="builder" attribute-target="iframe; *" collection="" document_id="" crud="false" save="false" read="false" active>
                         </div>
                         <div class="display:flex height:50px">
                             <div class="width:50% margin:0_5px">
@@ -816,6 +810,26 @@
                             </div>
                             <div class="width:50% margin:0_5px">
                                  <cocreate-select class="floating-label" id="save" placeholder="save:" attribute="save"  pass_id="builder" attribute-target="iframe; *" collection="" document_id="" crud="false" save="false" read="false" active>
+                                    <ul class="options z-index:7 margin-top:5px">
+                                        <cc-option value=""><span>none</span></cc-option>
+                                        <cc-option value="true"><span>true</span></cc-option>
+                                        <cc-option value="false"><span>false</span></cc-option>
+                                    </ul>
+                                </cocreate-select>
+                            </div>
+                        </div>
+                        <div class="display:flex height:50px">
+                            <div class="width:50% margin:0_5px">
+                                <cocreate-select class="floating-label" id="crud" placeholder="crud:" attribute="crud"  pass_id="builder" attribute-target="iframe; *" collection="" document_id="" crud="false" save="false" read="false" active>
+                                    <ul class="options z-index:7 margin-top:5px">
+                                        <cc-option value=""><span>none</span></cc-option>
+                                        <cc-option value="true"><span>true</span></cc-option>
+                                        <cc-option value="false"><span>false</span></cc-option>
+                                    </ul>
+                                </cocreate-select>
+                            </div>
+                            <div class="width:50% margin:0_5px">
+                                 <cocreate-select class="floating-label" id="crdt" placeholder="crdt:" attribute="crdt"  pass_id="builder" attribute-target="iframe; *" collection="" document_id="" crud="false" save="false" read="false" active>
                                     <ul class="options z-index:7 margin-top:5px">
                                         <cc-option value=""><span>none</span></cc-option>
                                         <cc-option value="true"><span>true</span></cc-option>
