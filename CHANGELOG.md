@@ -1,3 +1,10 @@
+## [1.12.15](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.14...v1.12.15) (2021-11-26)
+
+
+### Bug Fixes
+
+* settings navbar with 100% ([715cbd9](https://github.com/CoCreate-app/CoCreate-admin/commit/715cbd9bfa240173759a885c0c1ba4ecb0f99082))
+
 ## [1.12.14](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.13...v1.12.14) (2021-11-26)
 
 
