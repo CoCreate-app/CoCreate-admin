@@ -89,10 +89,10 @@
         </main>
 
         <!-- SideNav Left -->
-        <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:260px width:0px@xs@sm@md z-index:8" resizable resize-target="[content_id='canvas']" resize-property="margin-left" resize-value="width">
-            <div class="domEditor" collection="files" document_id="60de0fae14b5ab0c2dd2feba" name="src"></div>
-            <div resize="right"></div>
-        </sidenav>
+        <!--<sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:260px width:0px@xs@sm@md z-index:8" resizable resize-target="[content_id='canvas']" resize-property="margin-left" resize-value="width">-->
+        <!--    <div class="domEditor" collection="files" document_id="60de0fae14b5ab0c2dd2feba" name="src"></div>-->
+        <!--    <div resize="right"></div>-->
+        <!--</sidenav>-->
 
         <!-- SideNav Right -->
         <sidenav id="menuR" class="position:fixed top:0px right:0px overflow:hidden background:whitesmoke height:100vh width:310px width:0px@xs@sm@md z-index:8" resizable resize-target="[content_id='canvas']" resize-property="margin-right" resize-value="width">
@@ -171,6 +171,7 @@
                 { selector: "div.floating-label_field", draggable: true },
                 { selector: "a.menu_icon", tagName: "icon", draggable: true, selectable: true, hoverable: true },
                 { selector: "a.menu_icon span", selectable: false },
+                { selector: "[collection], [document_id], [name], [fetch-collection]", label: "{{tagName}} <i class='fas fa-database'></i>", draggable: true, droppable: true, selectable: true, hoverable: true },
             ];
         </script>
         
@@ -181,8 +182,8 @@
         <!--</element-config>-->
 
        
-        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
-        <!--<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>-->
+        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>-->
+        <script src="../../../../CoCreateJS/dist/CoCreate.js"></script>
 
     </body>
 
