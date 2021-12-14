@@ -1,3 +1,12 @@
+## [1.12.18](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.17...v1.12.18) (2021-12-14)
+
+
+### Bug Fixes
+
+* add cdn to builer and uncomment sidenavs ([9a02916](https://github.com/CoCreate-app/CoCreate-admin/commit/9a02916b1e82a9694d5b230a749885b5b19f3e0b))
+* add coming soon to components that are not production ready ([1cc5e41](https://github.com/CoCreate-app/CoCreate-admin/commit/1cc5e41d666e4c1c734803a1f579e44ed8846133))
+* update dependencies ([eb4599c](https://github.com/CoCreate-app/CoCreate-admin/commit/eb4599c44d399c1e93c7669a2c0a1ec8c5d205ad))
+
 ## [1.12.17](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.16...v1.12.17) (2021-11-27)
 
 
