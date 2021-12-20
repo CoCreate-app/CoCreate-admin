@@ -1,3 +1,10 @@
+## [1.12.21](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.20...v1.12.21) (2021-12-20)
+
+
+### Bug Fixes
+
+* name='_id' was creating a loop. fixed by adding crdt='false' ([463bda5](https://github.com/CoCreate-app/CoCreate-admin/commit/463bda538f527315b0743c33984cad184ced790c))
+
 ## [1.12.20](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.19...v1.12.20) (2021-12-20)
 
 
