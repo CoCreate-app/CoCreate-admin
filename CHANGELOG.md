@@ -1,3 +1,10 @@
+## [1.12.20](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.19...v1.12.20) (2021-12-20)
+
+
+### Bug Fixes
+
+* update html to cdn ([60e85ab](https://github.com/CoCreate-app/CoCreate-admin/commit/60e85ab64cb0e7ecb305168c8ac91cc171670076))
+
 ## [1.12.19](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.18...v1.12.19) (2021-12-15)
 
 
