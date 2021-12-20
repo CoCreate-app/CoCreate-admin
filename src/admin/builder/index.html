@@ -103,7 +103,7 @@
 
         <!-- Selected Toolbar -->
         <toolbar toolbar-placement="top" toolbar-target="iframe;" toolbar-event="click" config-key="selectable" class="position:absolute pointer-events:none display:none">
-            <tools class="display:flex justify-content:space-between width:100% color:white font-size:11px">
+            <tools class="display:flex justify-content:space-between width:100% color:white font-size:11px z-index:7">
                 <span class="padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid" tagName></span>
                 <!--<span class="padding:3px background:dodgerblue pointer-events:auto"><i class="fas fa-arrows-alt"></i></span>-->
                 <div class="display:flex align-items:center padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid pointer-events:auto">
@@ -118,7 +118,7 @@
 
         <!-- Hover Toolbar -->
         <toolbar toolbar-placent="top" toolbar-target="iframe;" toolbar-event="mouseover" config-key="hoverable" class="position:absolute pointer-events:none display:none">
-            <tools class="tools display:flex align-items:center color:white font-size:11px">
+            <tools class="tools display:flex align-items:center color:white font-size:11px z-index:7">
                 <span class="padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid" tagName></span>
             </tools>
             <div class="height:100% width:100% border:1px_dodgerblue_solid"></div>
@@ -127,7 +127,7 @@
 
         <!-- Collaboration Toolbar -->
         <div toolbar-placent="top" toolbar-target="iframe;" toolbar-event="mouseup" config-key="editable" class="toolbar position:absolute pointer-events:none display:none">
-            <tools class="display:flex align-items:center width:fit-content background:gainsboro border-radius:5px pointer-events:auto">
+            <tools class="display:flex align-items:center width:fit-content background:gainsboro border-radius:5px pointer-events:auto z-index:7">
                 <div actions="nodeName" nodeName="b" nodeTarget="#canvas;" classname="rte-btn" class="padding:5px" id="bold-button"><i class="fa fa-bold"></i></div>
                 <div actions="nodeName" nodeName="i" nodeTarget="#canvas;" class="rte-btn" id="italic-button"><i class="fa fa-italic"></i></div>
                 <div class="rte-btn" id="link-button" show="#link" hide="#link"><i class="fa fa-link"></i></div>
@@ -166,7 +166,7 @@
                 { selector: "body", droppable: true, selectable: true, hoverable: true },
                 { selector: "h1, h2, h3, h4, h5, h6, p, span, blockquote", editable: true, draggable: true, selectable: true, hoverable: true, mouseover: true },
                 { selector: "input, textarea, select", draggable: true, selectable: true, hoverable: true },
-                { selector: "div.quill", draggable: true, selectable: true, hoverable: true },
+                { selector: "cursor-flag", selectable: false, hoverable: false },
                 { selector: "div.nav", tagName: "navbar", draggable: true, droppable: true, selectable: true, hoverable: true },
                 { selector: "div.floating-label_field", draggable: true },
                 { selector: "a.menu_icon", tagName: "icon", draggable: true, selectable: true, hoverable: true },
