@@ -74,7 +74,7 @@
                 <input type="hidden" name="module_id"  document_id="" pass_id="module_id" value=""/>
                 <div class="display:flex flex-wrap:wrap justify-content:space-between padding-bottom:20px border-bottom:1px_solid_lightgrey">
                     <div class="flex-grow:1 max-width:370px margin-right:20px@sm@md@lg@xl">
-                        <input type="text" document_id="" name="_id" placeholder="Invoice#" id="invoice_id" class="floating-label" readonly>
+                        <input type="text" document_id="" name="_id" placeholder="Invoice#" id="invoice_id" class="floating-label" crdt="false" readonly>
                     </div>
                     <div class="display:flex flex-wrap:wrap">
                         <div class="flex-grow:1 width:175px margin-right:20px">
@@ -111,7 +111,7 @@
                     <form class="display:flex" collection="{{collection}}" document_id="{{data._id}}">
                         <div class="display:flex flex-wrap:wrap flex-grow:1 align-items:center justify-content:space-around padding-bottom:10px border-right:1px_solid_lightgrey">
 
-                            <!--<div style="float:right;"><a clone_id="item-row" class="deleteBtn noDrag"><i class="fas fa-times"></i></a></div>-->
+                            <div style="float:right;"><a clone_id="item-row" class="deleteBtn noDrag"><i class="fas fa-times"></i></a></div>
                             <div class="display:flex flex-grow:1">
                                 <input class="floating-label max-width:70px" name="Item-n" placeholder="Item#" />
                                 <div class="flex-grow:1 height:40px">
@@ -133,7 +133,7 @@
                                 <input id="total-{{data._id}}" realtime="false" class="floating-label max-width:130px item-total" name="total" placeholder="Total" calculate="{#price-{{data._id}}} * {#qty-{{data._id}}}">
                             </div>
                             <div>
-                                <!--<input class="item-description floating-label" document_id="" name="description"  placeholder="Description"/>-->
+                                <input class="item-description floating-label" document_id="" name="description"  placeholder="Description"/>
                             </div>
 
                         </div>
