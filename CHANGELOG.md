@@ -1,3 +1,11 @@
+## [1.12.23](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.22...v1.12.23) (2021-12-21)
+
+
+### Bug Fixes
+
+* add cdn to invoice form ([8f55e4a](https://github.com/CoCreate-app/CoCreate-admin/commit/8f55e4a7833049c7de278ea4341447ee662478c1))
+* invoice and estimate fetch items ([d7bd92c](https://github.com/CoCreate-app/CoCreate-admin/commit/d7bd92c2deea6ff38fadfcf41da1ad5615faceb2))
+
 ## [1.12.22](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.21...v1.12.22) (2021-12-21)
 
 
