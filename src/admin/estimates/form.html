@@ -71,36 +71,36 @@
         <main content_id="content">
 
             <form pass_id="form-fields" collection="module_activities" document_id="" class="padding:20px padding:10px@xs">
-                <input type="hidden" name="module_id"  document_id="" pass_id="module_id" value=""/>
+                <input type="hidden" name="module_id" pass_id="module_id" value/>
                 <div class="display:flex flex-wrap:wrap justify-content:space-between padding-bottom:20px border-bottom:1px_solid_lightgrey">
                     <div class="flex-grow:1 max-width:370px margin-right:20px@sm@md@lg@xl">
-                        <input type="text" document_id="" name="_id" placeholder="Estimate#" id="estimate_id" class="floating-label" readonly>
+                        <input type="text" name="_id" placeholder="Estimate#" id="estimate_id" crdt="false" class="floating-label" readonly>
                     </div>
                     <div class="display:flex flex-wrap:wrap">
                         <div class="flex-grow:1 width:175px margin-right:20px">
-                            <input document_id="" type="date" name="date-issue" placeholder="Date Issue" class="floating-label">
+                            <input type="date" name="date-issue" placeholder="Date Issue" class="floating-label">
                         </div>
                         <div class="flex-grow:1 width:175px">
-                            <input document_id="" type="date" name="date-due" placeholder="Date Due" class="floating-label">
+                            <input type="date" name="date-due" placeholder="Date Due" class="floating-label">
                         </div>
                     </div>
                 </div>
                 <div class="max-width:370px padding:20px_0px border-bottom:1px_solid_lightgrey">
-                    <input document_id="" type="text" name="name" placeholder="Estimate Name" class="floating-label">
+                    <input type="text" name="name" placeholder="Estimate Name" class="floating-label">
                 </div>
                 <div class="padding:20px_0px border-bottom:1px_solid_lightgrey max-width:370px">
                     <label class="padding-bottom:10px">Bill To</label>
                     <div class="padding-bottom:10px">
-                        <input document_id="" type="text" name="house-no" placeholder="House No." class="floating-label">
+                        <input type="text" name="house-no" placeholder="House No." class="floating-label">
                     </div>
                     <div class="padding-bottom:10px">
-                        <textarea ddocument_id="" name="street" placeholder="Landmark/Street" class="floating-label"></textarea>
+                        <textarea name="street" placeholder="Landmark/Street" class="floating-label"></textarea>
                     </div>
                     <div class="padding-bottom:10px">
-                        <input document_id="" type="text" name="city" placeholder="City" class="floating-label">
+                        <input type="text" name="city" placeholder="City" class="floating-label">
                     </div>
                     <div>
-                        <input document_id="" type="text" name="pincode" placeholder="Pincode" class="floating-label">
+                        <input type="text" name="pincode" placeholder="Pincode" class="floating-label">
                     </div>
                 </div>
             </form>
@@ -158,10 +158,10 @@
                 <div class="padding:20px display:flex flex-wrap:wrap justify-content:space-between">
                     <div class="min-width:300px max-width:550px flex-grow:1">
                         <div class="padding-bottom:10px">
-                            <input document_id="" type="text" name="payment-terms" placeholder="Add Payment Terms" class="floating-label">
+                            <input type="text" name="payment-terms" placeholder="Add Payment Terms" class="floating-label">
                         </div>
                         <div class="padding-bottom:10px">
-                            <input document_id="" type="text" name="clite-note" placeholder="Add client Note" class="floating-label">
+                            <input type="text" name="clite-note" placeholder="Add client Note" class="floating-label">
                         </div>
                     </div>
                     <div class="flex-grow:1 width:225px max-width:400px">
@@ -172,26 +172,26 @@
                             </div>
                             <div class="display:flex justify-content:space-between">
                                 <label class="color-dark-gray">Discount</label>
-                                <input id="discount" document_id="" name="discount">
+                                <input id="discount" name="discount">
                             </div>
                             <div class="display:flex justify-content:space-between">
                                 <label class="color-dark-gray">Tax</label>
-                                <input id="tax-precent" document_id="" name="tax-rate">
+                                <input id="tax-precent" name="tax-rate">
                                 <input type="hidden" id="tax" calculate="({#subtotal} - {#discount}) * {#tax-precent}">
                             </div>
                         </div>
                         <div class="padding:20px_0px">
                             <div class="display:flex justify-content:space-between">
                                 <label class="color-dark-gray">Estimate Total</label>
-                                <span id="total" calculate="{#subtotal} - {#discount} + {#tax}" document_id="" name="total" read="false">$00.00</span>
+                                <span id="total" calculate="{#subtotal} - {#discount} + {#tax}" name="total" read="false">$00.00</span>
                             </div>
                             <div class="display:flex justify-content:space-between">
                                 <label class="color-dark-gray">Paid to date</label>
-                                <span id="paid" document_id="" name="paid">0</span>
+                                <span id="paid" name="paid">0</span>
                             </div>
                             <div class="display:flex justify-content:space-between">
                                 <label class="color-dark-gray">Balance (USD)</label>
-                                <span calculate="{#total} - {#paid}" document_id="" name="balance" read="false"></span>
+                                <span calculate="{#total} - {#paid}" name="balance" read="false"></span>
                             </div>
                         </div>
                     </div>
