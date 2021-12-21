@@ -105,13 +105,12 @@
                 </div>
             </form>
 
-            <div class="Sortable margin:0px_20px padding:20px_0px border-bottom:1px_solid_lightgrey" fetch-collection="items-ordered" filter-name="invoice_id" filter-value="" get-value="invoice_id" template_id="item-row" dnd-group-name="item-row">
+            <div class="Sortable margin:0px_20px padding:20px_0px border-bottom:1px_solid_lightgrey" fetch-collection="items-ordered" filter-name="invoice_id" filter-value="" pass_id="form-fields" filter-operator="$eq" template_id="item-row" dnd-group-name="item-row">
                 <div id="item-row" class="template border-color:medium-gray margin-bottom:10px" template_id="item-row" document_id="{{data._id}}">
 
                     <form class="display:flex" collection="{{collection}}" document_id="{{data._id}}">
                         <div class="display:flex flex-wrap:wrap flex-grow:1 align-items:center justify-content:space-around padding-bottom:10px border-right:1px_solid_lightgrey">
 
-                            <div style="float:right;"><a clone_id="item-row" class="deleteBtn noDrag"><i class="fas fa-times"></i></a></div>
                             <div class="display:flex flex-grow:1">
                                 <input class="floating-label max-width:70px" name="Item-n" placeholder="Item#" />
                                 <div class="flex-grow:1 height:40px">
@@ -120,7 +119,7 @@
                                         <ul class="options overflow:auto" fetch-collection="items" template_id="items">
                                             <li class="option template" template_id="items" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
                                                 <h3 name="name" value="{{data.name}}">Item Name</h3>
-                                                <h5>{{data._id}}</h5>>
+                                                <h5>{{data._id}}</h5>
                                             </li>
                                         </ul>
 
@@ -200,7 +199,8 @@
 
         </main>
 
-        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>-->
+        <script src="../../../../CoCreateJS/dist/CoCreate.js"></script>
 
     </body>
 
