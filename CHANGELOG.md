@@ -1,3 +1,11 @@
+## [1.12.24](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.23...v1.12.24) (2021-12-21)
+
+
+### Bug Fixes
+
+* add cdn to code-editor.html ([9e35036](https://github.com/CoCreate-app/CoCreate-admin/commit/9e35036296e311b28d3cc28c96f4ad4e2d8d6e0c))
+* update invoice and estimate date widths ([0223201](https://github.com/CoCreate-app/CoCreate-admin/commit/0223201330069719de96905e52964a041d663ecb))
+
 ## [1.12.23](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.22...v1.12.23) (2021-12-21)
 
 
