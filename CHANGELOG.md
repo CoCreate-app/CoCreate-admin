@@ -1,3 +1,10 @@
+## [1.12.22](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.21...v1.12.22) (2021-12-21)
+
+
+### Bug Fixes
+
+* pass value to input module_id require attribute value ([d39563a](https://github.com/CoCreate-app/CoCreate-admin/commit/d39563ace32a27063e3858427139bf576ab11b22))
+
 ## [1.12.21](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.20...v1.12.21) (2021-12-20)
 
 
