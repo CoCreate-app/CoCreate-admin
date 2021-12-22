@@ -66,10 +66,10 @@
         <main class="padding:10px" content_id="content">
 
             <form pass_id="form-fields" collection="tags" document_id="">
-                <input type="text" name="name" class="floating-label" placeholder="Name">
-                <input type="text" name="description" class="floating-label" placeholder="Description">
-				<input type="number" name="position" class="floating-label" placeholder="Position">
-				<cocreate-select class="sortable floating-label" name="type" placeholder="Type">
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="description" placeholder="Description" class="floating-label">
+				<input type="number" name="position" placeholder="Position" class="floating-label">
+				<cocreate-select name="type" placeholder="Type" class="sortable floating-label">
 					<input placeholder="Search" template_id="type">
 					<cc-options fetch-collection="tags" template_id="type" filter-name="module_id" filter-value="60eb8361b979b4001744b339" class="overflow:auto">
 						<cc-option class="template" template_id="type" value="{{data._id}}">
@@ -77,7 +77,7 @@
 						</cc-option>
 					</cc-options>
 				</cocreate-select>
-				<cocreate-select class="sortable floating-label" name="module_id" placeholder="Module">
+				<cocreate-select name="module_id" placeholder="Module" class="sortable floating-label">
 					<input placeholder="Search" template_id="module_id">
 					<cc-options fetch-collection="modules" order-by="name" template_id="module_id" class="overflow:auto">
 						<cc-option class="template" template_id="module_id" value="{{data._id}}">

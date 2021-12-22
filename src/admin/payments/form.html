@@ -66,24 +66,22 @@
 		<main class="padding:10px" content_id="content">
 
 			<form collection="" document_id="" pass_id="form-fields">
-                <input type="hidden" name="module_id"  document_id="" pass_id="module_id" value/>
-				<input type="text" name="name" class="floating-label" placeholder="Name" />
+                <input type="hidden" name="module_id" pass_id="module_id" value/>
+				<input type="text" name="name" placeholder="Name" class="floating-label" />
 
-				<input type="text" name="description" class="floating-label" placeholder="Description" />
+				<input type="text" name="description" placeholder="Description" class="floating-label" />
 
-				<input type="text" name="name" class="floating-label" placeholder="Payment Name" />
+				<input type="number" name="amount" placeholder="Amount" class="floating-label" />
 
-				<input type="number" amount="null" name="amount" class="floating-label" placeholder="Amount" />
-
-				<select name="status" class="floating-label" placeholder="Status" />
-				<option label="Succesful" value="succesful">Succesful</option>
-				<option label="Refunded" value="refunded">Refunded</option>
-				<option label="Disputed" value="disputed">Disputed</option>
+				<select name="status" placeholder="Status" class="floating-label"/>
+					<option label="Succesful" value="succesful">Succesful</option>
+					<option label="Refunded" value="refunded">Refunded</option>
+					<option label="Disputed" value="disputed">Disputed</option>
 				</select>
 
-				<input type="text" name="description" class="floating-label" placeholder="Description" />
+				<input type="text" name="description" placeholder="Description" class="floating-label" />
 
-				<select class="floating-label" name="contact_id" />
+				<select name="contact_id" class="floating-label" />
 				<option label="Option1" value="option-1">Option1</option>
 				<option label="Option2" value="option-2">Option2</option>
 				<option label="Option3" value="option-3">Option3</option>
@@ -93,20 +91,20 @@
 
 				<div>data-url="modules/module_windows/html_elements/payments.php"</div>
 
-				<input type="number" name="app_fee" class="floating-label" placeholder="App Fee" />
+				<input type="number" name="app_fee" placeholder="App Fee" class="floating-label" />
 
-				<input type="text" name="destination" class="floating-label" placeholder="Destination" />
+				<input type="text" name="destination" placeholder="Destination" class="floating-label" />
 
-				<input type="text" name="charge_id" class="floating-label" placeholder="Charge Id">
+				<input type="text" name="charge_id" placeholder="Charge Id" class="floating-label">
 
-				<select name="vendor_id" class="floating-label" placeholder="Vendor">
+				<select name="vendor_id" placeholder="Vendor" class="floating-label">
 					<option label="Option 1" value="option-1">Option 1</option>
 					<option label="Option 2" value="option-2">Option 2</option>
 					<option label="Option 3" value="option-3">Option 3</option>
 					<option label="Option 4" value="option-4">Option 4</option>
 				</select>
 
-				<select name="related_to" class="floating-label" placeholder="Related To">
+				<select name="related_to" placeholder="Related To" class="floating-label">
 					<option label="Option 1" value="option-1">Option 1</option>
 					<option label="Option 2" value="option-2">Option 2</option>
 					<option label="Option 3" value="option-3">Option 3</option>

@@ -131,7 +131,7 @@
 						<div class="padding:5px background:whitesmoke">
 							<div id='navbar-menu' class="menu-item overflow:hidden height:0px active">
 								<div id="navbar-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
-									<cocreate-select class="floating-label sortable" placeholder="Primary View" name="navbar-menu-primary">
+									<cocreate-select name="navbar-menu-primary" placeholder="Primary View" class="floating-label sortable">
 										<input placeholder="Search" template_id="navbar-menu-primary">
 										<cc-options pass_id="module_id" fetch-collection="files" filter-name="" filter-value="" filter-operator="$eq" template_id="navbar-menu-primary" class="overflow:auto">
 											<cc-option class="template" template_id="navbar-menu-primary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
@@ -143,26 +143,26 @@
 									<!--<input type="text" pass_id="form-fields" name="navbar-menu-primary-href" placeholder="href" class="floating-label" />-->
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="number" pass_id="form-fields" name="navbar-menu-position" placeholder="Menu Position" class="floating-label" />
+											<input type="number" name="navbar-menu-position" placeholder="Menu Position" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="color" pass_id="form-fields" name="navbar-modal-primary-color" placeholder="Modal Color" class="floating-label" />
-										</div>
-									</div>
-									<div class="display:flex justify-content:space-between">
-										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="navbar-modal-primary-width" placeholder="Modal Width" class="floating-label" />
-										</div>
-										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="navbar-modal-primary-height" placeholder="Modal Height" class="floating-label" />
+											<input type="color" name="navbar-modal-primary-color" placeholder="Modal Color" class="floating-label" />
 										</div>
 									</div>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="navbar-modal-primary-x" placeholder="Modal x" class="floating-label" />
+											<input type="text" name="navbar-modal-primary-width" placeholder="Modal Width" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="navbar-modal-primary-y" placeholder="Modal y" class="floating-label" />
+											<input type="text" name="navbar-modal-primary-height" placeholder="Modal Height" class="floating-label" />
+										</div>
+									</div>
+									<div class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input type="text" name="navbar-modal-primary-x" placeholder="Modal x" class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input type="text" name="navbar-modal-primary-y" placeholder="Modal y" class="floating-label" />
 										</div>
 									</div>
 								</div>
@@ -184,26 +184,26 @@
 									</cocreate-select>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="number" pass_id="form-fields" name="main-menu-position" placeholder="Menu Position" class="floating-label" />
+											<input type="number" name="main-menu-position" placeholder="Menu Position" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="color" pass_id="form-fields" name="main-modal-primary-color" placeholder="Modal Color" class="floating-label" />
-										</div>
-									</div>
-									<div class="display:flex justify-content:space-between">
-										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="main-modal-primary-width" placeholder="Modal Width" class="floating-label" />
-										</div>
-										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="main-modal-primary-height" placeholder="Modal Height" class="floating-label" />
+											<input type="color" name="main-modal-primary-color" placeholder="Modal Color" class="floating-label" />
 										</div>
 									</div>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="main-modal-primary-x" placeholder="Modal x" class="floating-label" />
+											<input type="text" name="main-modal-primary-width" placeholder="Modal Width" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="main-modal-primary-y" placeholder="Modal y" class="floating-label" />
+											<input type="text" name="main-modal-primary-height" placeholder="Modal Height" class="floating-label" />
+										</div>
+									</div>
+									<div class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input type="text" name="main-modal-primary-x" placeholder="Modal x" class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input type="text" name="main-modal-primary-y" placeholder="Modal y" class="floating-label" />
 										</div>
 									</div>
 								</div>
@@ -217,21 +217,21 @@
 											</cc-option>
 										</cc-options>
 									</cocreate-select>
-									<input type="color" pass_id="form-fields" name="main-modal-secondary-color" placeholder="Modal Color" class="floating-label" />
+									<input type="color" name="main-modal-secondary-color" placeholder="Modal Color" class="floating-label" />
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="main-modal-secondary-width" placeholder="Modal Width" class="floating-label" />
+											<input type="text" name="main-modal-secondary-width" placeholder="Modal Width" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="main-modal-secondary-height" placeholder="Modal Height" class="floating-label" />
+											<input type="text" name="main-modal-secondary-height" placeholder="Modal Height" class="floating-label" />
 										</div>
 									</div>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="main-modal-secondary-x" placeholder="Modal x" class="floating-label" />
+											<input type="text" name="main-modal-secondary-x" placeholder="Modal x" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="main-modal-secondary-y" placeholder="Modal y" class="floating-label" />
+											<input type="text" name="main-modal-secondary-y" placeholder="Modal y" class="floating-label" />
 										</div>
 									</div>
 								</div>
@@ -253,26 +253,26 @@
 									</cocreate-select>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="number" pass_id="form-fields" name="settings-menu-position" placeholder="Menu Position" class="floating-label" />
+											<input type="number" name="settings-menu-position" placeholder="Menu Position" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="color" pass_id="form-fields" name="settings-modal-primary-color" placeholder="Modal Color" class="floating-label" />
-										</div>
-									</div>
-									<div class="display:flex justify-content:space-between">
-										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="settings-modal-primary-width" placeholder="Modal Width" class="floating-label" />
-										</div>
-										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="settings-modal-primary-height" placeholder="Modal Height" class="floating-label" />
+											<input type="color" name="settings-modal-primary-color" placeholder="Modal Color" class="floating-label" />
 										</div>
 									</div>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="settings-modal-primary-x" placeholder="Modal x" class="floating-label" />
+											<input type="text" name="settings-modal-primary-width" placeholder="Modal Width" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="settings-modal-primary-y" placeholder="Modal y" class="floating-label" />
+											<input type="text" name="settings-modal-primary-height" placeholder="Modal Height" class="floating-label" />
+										</div>
+									</div>
+									<div class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input type="text" name="settings-modal-primary-x" placeholder="Modal x" class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input type="text" name="settings-modal-primary-y" placeholder="Modal y" class="floating-label" />
 										</div>
 									</div>
 								</div>
@@ -286,21 +286,21 @@
 											</cc-option>
 										</cc-options>
 									</cocreate-select>
-									<input type="color" pass_id="form-fields" name="settings-modal-secondary-color" placeholder="Modal Color" class="floating-label" />
+									<input type="color" name="settings-modal-secondary-color" placeholder="Modal Color" class="floating-label" />
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="settings-modal-secondary-width" placeholder="Modal Width" class="floating-label" />
+											<input type="text" name="settings-modal-secondary-width" placeholder="Modal Width" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="settings-modal-secondary-height" placeholder="Modal Height" class="floating-label" />
+											<input type="text" name="settings-modal-secondary-height" placeholder="Modal Height" class="floating-label" />
 										</div>
 									</div>
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="settings-modal-secondary-x" placeholder="Modal x" class="floating-label" />
+											<input type="text" name="settings-modal-secondary-x" placeholder="Modal x" class="floating-label" />
 										</div>
 										<div class="width:48%">
-											<input type="text" pass_id="form-fields" name="settings-modal-secondary-y" placeholder="Modal y" class="floating-label" />
+											<input type="text" name="settings-modal-secondary-y" placeholder="Modal y" class="floating-label" />
 										</div>
 									</div>
 								</div>

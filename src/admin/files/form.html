@@ -74,11 +74,11 @@
     						</cc-option>
     					</cc-options>
                     </cocreate-select> 
-                    <input type="text" name="path" class="floating-label" placeholder="path">
-                    <input type="text" name="directory" class="floating-label" placeholder="directory">
-                    <textarea name="src" class="floating-label" placeholder="src"></textarea>
-                    <input type="text" name="content-type" class="floating-label" placeholder="content-type">
-    				<cocreate-select class="sortable floating-label" name="tags" multiple placeholder="Tags">
+                    <input type="text" name="path" placeholder="path" class="floating-label">
+                    <input type="text" name="directory" placeholder="directory" class="floating-label">
+                    <textarea name="src" placeholder="src" class="floating-label" ></textarea>
+                    <input type="text" name="content-type" placeholder="content-type" class="floating-label">
+    				<cocreate-select name="tags" placeholder="Tags" class="sortable floating-label" multiple>
     					<input placeholder="Search" template_id="tags">
     				    <div template_id="datatable" filter-name="type" filter-value="type"></div>
     					<cc-options fetch-collection="tags" filter-name="module_id" filter-value="5ff747727005da1c2727419a" pass_id="module_id" template_id="tags" class="overflow:auto">
@@ -90,7 +90,7 @@
                     <!--<input type="text" name="collection" class="floating-label" placeholder="collection"> -->
                     <!--<input type="text" name="module_id" class="floating-label" placeholder="document_id">-->
                     <!--<input type="text" name="name" class="floating-label" placeholder="name">-->
-    				<cocreate-select class="sortable floating-label" name="module_id" placeholder="Module">
+    				<cocreate-select name="module_id" placeholder="Module" class="sortable floating-label">
     					<input placeholder="Search" template_id="module_id">
     					<cc-options fetch-collection="modules" order-by="name" template_id="module_id" class="overflow:auto">
     						<cc-option class="template" template_id="module_id" value="{{data._id}}">
@@ -101,7 +101,7 @@
     						</cc-option>
     					</cc-options>
     				</cocreate-select>
-    				<cocreate-select class="sortable floating-label" name="website_id" placeholder="Website">
+    				<cocreate-select name="website_id" placeholder="Website" class="sortable floating-label">
     					<input placeholder="Search" template_id="website_id">
     					<cc-options fetch-collection="module_activities" filter-name="module_id" filter-value="5ff747727005da1c27274185" order-by="name" template_id="website_id" class="overflow:auto">
     						<cc-option class="template" template_id="website_id" value="{{data._id}}">

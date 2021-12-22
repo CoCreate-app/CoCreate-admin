@@ -66,11 +66,11 @@
 	  
 			<form pass_id="form-fields" collection="blocks" document_id="">
 				<input type="hidden" name="module_id" pass_id="module_id">
-				<input type="text" name="name" class="floating-label" placeholder="Name">
-				<input type="text" name="icon" class="floating-label" placeholder="Icon">
-				<input type="number" name="position" class="floating-label" placeholder="Position">
+				<input type="text" name="name" placeholder="Name" class="floating-label">
+				<input type="text" name="icon" placeholder="Icon" class="floating-label">
+				<input type="number" name="position" placeholder="Position" class="floating-label">
 
-				<cocreate-select class="sortable floating-label" name="category" placeholder="Category">
+				<cocreate-select name="category" placeholder="Category" class="sortable floating-label">
 					<input placeholder="Search" template_id="category">
 					<div template_id="category" filter-name="type" filter-value="611829a9c0e9580010ea589d"></div>
 					<cc-options fetch-collection="tags" template_id="category" filter-name="module_id" filter-value="5ff747727005da1c27274194" class="overflow:auto">
@@ -90,7 +90,7 @@
 				<!--	</cc-options>-->
 				<!--</cocreate-select>-->
 				
-				<textarea name="html" class="floating-label" placeholder="html" pass_id="form-fields"></textarea>
+				<textarea name="html" placeholder="html" class="floating-label"></textarea>
 				
 				<button actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>

@@ -63,14 +63,14 @@
 
 		<!-- Main Content -->
 		<main class="padding:10px" content_id="content">
-			<form pass_id="form-fields" collection="users" document_id="" auto-complete="off" class="sessionUser_Id">
+			<form pass_id="form-fields" collection="users" document_id="" auto-complete="off">
 				<input type="text" name="name" id="name" placeholder="Name" class="floating-label" />
-				<input type="text" name="email" id="email" placeholder="Email" class="floating-label" autocomplete="off" />
+				<input type="text" name="email" id="email" placeholder="Email" class="floating-label" />
 				<input type="password" name="password" placeholder="password" class="floating-label" />
 				<input type="text" name="description" placeholder="Description" class="floating-label" />
 				<input type="text" name="profile_image" placeholder="Profile Image" class="floating-label" />
 
-				<cocreate-select class="floating-label sortable" name="connected_orgs" placeholder="Connected Org" multiple>
+				<cocreate-select name="connected_orgs" placeholder="Connected Org" class="sortable floating-label" multiple>
 					<input placeholder="Search" template_id="connect">
 					<ul fetch-collection="organizations" template_id="connectn" class="options overflow:overlay">
 						<li class="template option" collection="organizations" template_id="connectn">
@@ -83,7 +83,7 @@
 					</ul>
 				</cocreate-select>
 
-				<cocreate-select class="floating-label sortable" name="current_org" placeholder="Current Org">
+				<cocreate-select name="current_org" placeholder="Current Org" class="sortable floating-label">
 					<input placeholder="Search" template_id="connect">
 					<ul fetch-collection="users" fetch-document="" fetch-name="connected_orgs" template_id="connect" class="options overflow:overlay">
 
@@ -99,7 +99,7 @@
 				</cocreate-select>
 
 				<!-- current-org -->
-				<input type="text" name="current_org" class="floating-label" placeholder="Current Org">
+				<input type="text" name="current_org" placeholder="Current Org" class="floating-label">
 
 				<button actions="saveDocument" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50%"><i class="far fa-save"></i></button>
 			</form>

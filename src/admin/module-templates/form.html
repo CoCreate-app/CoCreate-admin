@@ -98,7 +98,7 @@
                 <textarea id="css" name="css" class="code-editor"></textarea>
                 <textarea id="js" name="js" class="code-editor"></textarea>
 
-				<cocreate-select class="sortable floating-label" name="module_id" placeholder="Module">
+				<cocreate-select name="module_id" placeholder="Module" class="sortable floating-label">
 					<input placeholder="Search" template_id="module_id">
 					<cc-options fetch-collection="modules" template_id="module_id" class="overflow:auto">
 						<cc-option class="template" template_id="module_id" value="{{data._id}}">
