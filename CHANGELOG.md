@@ -1,3 +1,10 @@
+## [1.12.25](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.24...v1.12.25) (2021-12-22)
+
+
+### Bug Fixes
+
+* filter and fetch module-views in module form ([77cb416](https://github.com/CoCreate-app/CoCreate-admin/commit/77cb416ed4ef4e8e3b8218ce00684520a63cf712))
+
 ## [1.12.24](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.23...v1.12.24) (2021-12-21)
 
 
