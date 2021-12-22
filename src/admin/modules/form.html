@@ -320,8 +320,8 @@
 					<a show="#module-templates" hide="#form, #module-views" pass-collection="files" pass_to="module-templates"><i class="far fa-plus-square"></i></a>
 				</div>
 	
-				<!--<input type="hidden" filter-name="module-view" filter-value="module-view" template_id="files">-->
-				<div fetch-collection="" filter-name="module_id" filter-value="" order-by="name" order-type="asc" template_id="files" pass_id="module_id" class="sortable background:whitesmoke padding:10px" dnd-group-name="files">
+				<input type="hidden" filter-name="module_id" filter-value="" filter-operator="$ne" template_id="files">
+				<div fetch-collection="files" filter-name="module_id" filter-value="" filter-operator="$eq" order-by="name" order-type="asc" template_id="files" pass_id="module_id" class="sortable background:whitesmoke padding:10px" dnd-group-name="files">
 	
 					<div template_id="files" class="template card padding:10px_5px background:white collapsed margin-bottom:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
                         <div class="display:flex padding-left:10px">
