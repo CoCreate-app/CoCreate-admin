@@ -63,9 +63,9 @@
 
 		<!-- Main Content -->
 		<main class="padding:10px" content_id="content">
-			<form pass_id="form-fields" collection="users" document_id="" auto-complete="off">
+			<form pass_id="form-fields" collection="users" document_id="" autocomplete="off">
 				<input type="text" name="name" id="name" placeholder="Name" class="floating-label" />
-				<input type="text" name="email" id="email" placeholder="Email" class="floating-label" />
+				<input type="text" name="email" id="email" placeholder="Email" class="floating-label" autocomplete="off"/>
 				<input type="password" name="password" placeholder="password" class="floating-label" />
 				<input type="text" name="description" placeholder="Description" class="floating-label" />
 				<input type="text" name="profile_image" placeholder="Profile Image" class="floating-label" />
@@ -77,7 +77,7 @@
 							<span class="logo-icon"><img collection="organizations" document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>
 							<div class="display:block line-height:1 padding:5px_0px " style="width: calc(100% - 15px);">
 								<h3 collection="organizations" document_id="{{data._id}}" name="name">Organization Name</h3>
-								<h5 value="{{data._id}}">id</h5>
+								<h5>{{data._id}}</h5>
 							</div>
 						</li>
 					</ul>
@@ -91,7 +91,7 @@
 							<span class="logo-icon"><img collection="organizations" document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>
 							<div class="display:block line-height:1 padding:5px_0px " style="width: calc(100% - 15px);">
 								<h3 collection="organizations" document_id="{{data._id}}" name="name">Organization Name</h3>
-								<h5 value="{{data._id}}">id</h5>
+								<h5>{{data._id}}</h5>
 							</div>
 						</li>
 
