@@ -1,3 +1,11 @@
+## [1.12.26](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.25...v1.12.26) (2021-12-22)
+
+
+### Bug Fixes
+
+* attribute value typo 'module-form' ([46aff6e](https://github.com/CoCreate-app/CoCreate-admin/commit/46aff6e332947045c37ce325a7f99bc600d3c8ef))
+* clean up forms ([95313f6](https://github.com/CoCreate-app/CoCreate-admin/commit/95313f648536549876c778d10acee62dd8a6659b))
+
 ## [1.12.25](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.24...v1.12.25) (2021-12-22)
 
 
