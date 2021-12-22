@@ -1,3 +1,12 @@
+## [1.12.27](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.26...v1.12.27) (2021-12-22)
+
+
+### Bug Fixes
+
+* add pass_to module_id ([c07db4e](https://github.com/CoCreate-app/CoCreate-admin/commit/c07db4ee3473e7e0e2700f9f1b99414a8ad2086f))
+* autocomplete off in user form ([b480b3b](https://github.com/CoCreate-app/CoCreate-admin/commit/b480b3b0b15e36a070ffcfb46558b6fa3be1f522))
+* comment admin_id frm organization form ([e5bf05c](https://github.com/CoCreate-app/CoCreate-admin/commit/e5bf05c5a06e45193c2ad10dec21173ef33e9368))
+
 ## [1.12.26](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.25...v1.12.26) (2021-12-22)
 
 
