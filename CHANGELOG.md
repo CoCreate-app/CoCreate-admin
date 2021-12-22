@@ -1,3 +1,10 @@
+## [1.12.28](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.27...v1.12.28) (2021-12-22)
+
+
+### Bug Fixes
+
+* added items to business development checklist ([b9865a5](https://github.com/CoCreate-app/CoCreate-admin/commit/b9865a5e679be57538524242fe599780334ae2f5))
+
 ## [1.12.27](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.26...v1.12.27) (2021-12-22)
 
 
