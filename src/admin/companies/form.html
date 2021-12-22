@@ -64,13 +64,13 @@
 
         <main class="padding:10px" content_id="content">
 
-            <form collection="module_activities">
+            <form pass_id="form-fields" collection="module_activities" document_id="">
 
-                <input type="hidden" collection="" document_id="" name="module_id" pass_id="module_id" value/>
+                <input type="hidden" name="module_id" pass_id="module_id" value />
 
 				<div class="display:flex">
 					<div class="width:50% padding-right:5px z-index:7">
-						<cocreate-select class="sortable floating-label" name="type" document_id="" multiple placeholder="Type">
+						<cocreate-select class="sortable floating-label" name="type" multiple placeholder="Type">
 							<input placeholder="Search" template_id="type">
 						    <div template_id="type" filter-name="type" filter-value="60edaf79b979b4001744c6fe"></div>
 							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="type" class="overflow:auto">
@@ -81,7 +81,7 @@
 						</cocreate-select>
 					</div>
 					<div class="width:50% padding-left:5px">
-						<cocreate-select class="sortable floating-label z-index:7" name="status" document_id="status" placeholder="Status">
+						<cocreate-select class="sortable floating-label z-index:7" name="status" placeholder="Status">
 							<input placeholder="Search" template_id="status">
 						    <div template_id="status" filter-name="type" filter-value="5ff747727005da1c272740ab"></div>
 							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="status" class="overflow:auto">
@@ -93,11 +93,11 @@
 					</div>
 				</div>
 
-                <input type="text" document_id="" name="name" class="floating-label" placeholder="Name" pass_id="form-fields" />
+                <input type="text" name="name" placeholder="Name" class="floating-label" />
 
-                <input type="text" name="email" class="floating-label" placeholder="Email" document_id="" pass_id="form-fields" />
+                <input type="text" name="email" placeholder="Email" class="floating-label" />
 
-                <input type="text" class="floating-label" name="profile_photo" placeholder="Logo" document_id="" pass_id="form-fields" />
+                <input type="text" name="profile_photo" placeholder="Logo" class="floating-label" />
 
 				<button actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>
