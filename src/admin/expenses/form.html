@@ -61,10 +61,12 @@
         </nav>
 
         <!-- Main Content -->
-        <main content_id="content">
+        <main class="padding:10px" content_id="content">
 
-            <form  pass_id="form-fields" collection="" document_id="">
-
+            <form pass_id="form-fields" collection="module_activities" document_id="">
+                
+                <input type="hidden" name="module_id" pass_id="module_id" value>
+                
                 <input type="text" name="name" placeholder="Name" class="floating-label">
 
                 <textarea name="description" placeholder="Description" class="floating-label"></textarea>

@@ -131,14 +131,16 @@
 									<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954" class="display:flex">
 										<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Name</h4>
 										<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
-										<div pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
 										<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
+										<div pass-value="{{data.module_id}}" pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
+										<div pass-document_id="{{data.module_id}}" pass_to="module-form"></div>
 									</a>
 									<a target="modal" href="../modules/form.html" modal-width="320px" modal-color="#229954" class="cocreate-badge margin-left:5px success">
 										<span collection="modules" document_id="{{data.module_id}}" name="name"></span>
 										<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
 										<div pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
 										<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
+										<div pass-document_id="{{data.module_id}}" pass_to="module-form"></div>
 									</a>
 									<span class="cocreate-badge margin-left:5px warning" collection="{{collection}}" document_id="{{data.type}}" name="name"></span>
 								</div>

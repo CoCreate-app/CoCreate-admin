@@ -10,25 +10,6 @@
 		<link rel="stylesheet" href="../index.css" collection="files" document_id="60e4f9714792bff869f1bde5" name="src" type="text/css" />
 	</head>
 
-	<style type="text/css">
-		.collapsed>.code-editor {
-			height: 0px;
-			overflow: hidden
-		}
-
-		.tab[selected] {
-			background: whitesmoke;
-		}
-
-		.codemirror.active {
-			height: 100%
-		}
-
-		.CodeMirror {
-			height: 90vh
-		}
-	</style>
-
 	<body>
 		<!-- Modal Viewport -->
 		<div id="modal-viewport" class="hidden"></div>
@@ -86,6 +67,7 @@
 			<form pass_id="form-fields" realtime="false" collection="industries" document_id="" class="margin-bottom:75px">
 
 				<input type="text" name="name" id="name" placeholder="Industry Name" class="floating-label" />
+				
 				<input type="text" name="description" id="description" placeholder="Description" class="floating-label" />
 
 				<button actions="createIndustry" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
