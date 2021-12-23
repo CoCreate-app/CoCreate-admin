@@ -1,3 +1,10 @@
+## [1.12.29](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.28...v1.12.29) (2021-12-23)
+
+
+### Bug Fixes
+
+* add collection to deleteDocument in modules from views ([c111723](https://github.com/CoCreate-app/CoCreate-admin/commit/c11172333fdacd24e8192c1be56a7f0a027643fc))
+
 ## [1.12.28](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.27...v1.12.28) (2021-12-22)
 
 
