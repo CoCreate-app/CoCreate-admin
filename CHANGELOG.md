@@ -1,3 +1,10 @@
+## [1.12.30](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.29...v1.12.30) (2021-12-23)
+
+
+### Bug Fixes
+
+* renamed filter-value_type to filter-value-type ([bcbb3e8](https://github.com/CoCreate-app/CoCreate-admin/commit/bcbb3e8da1758d6f52442b73389647bbaeb61d54))
+
 ## [1.12.29](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.28...v1.12.29) (2021-12-23)
 
 
