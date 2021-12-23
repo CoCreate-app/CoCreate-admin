@@ -106,12 +106,12 @@
 				</form>
 			</div>
 
-			<!--<input type="hidden" template_id="main-menu" filter-name="menu-position" filter-value="3,4" filter-value_type="number" filter-operator="nin">-->
-			<!--<div template_id="main-menu" filter-name="menu-position" filter-value="0" filter-value_type="number" filter-operator="ne"></div>-->
+			<!--<input type="hidden" template_id="main-menu" filter-name="menu-position" filter-value="3,4" filter-value-type="number" filter-operator="nin">-->
+			<!--<div template_id="main-menu" filter-name="menu-position" filter-value="0" filter-value-type="number" filter-operator="ne"></div>-->
 			<div class="padding-right:5px padding-bottom:5px">
 
 				<ul class="overflow:overlay display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
-					<div fetch-collection="modules" order-by="main-menu-position" order-type="asc" filter-name="main-menu-position" filter-value="0" filter-value_type="number" filter-operator="$ne" template_id="main-menu">
+					<div fetch-collection="modules" order-by="main-menu-position" order-type="asc" filter-name="main-menu-position" filter-value="0" filter-value-type="number" filter-operator="$ne" template_id="main-menu">
 
 						<li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template_id="main-menu">
 							<a target="modal" pass-collection="files" pass-document_id="{{data.main-menu-primary}}" pass_to="render" pass-name="src" modal-width="600px" modal-color="{{data.main-modal-color}}"
