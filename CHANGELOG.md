@@ -1,3 +1,10 @@
+## [1.12.32](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.31...v1.12.32) (2021-12-24)
+
+
+### Bug Fixes
+
+* update modules, and module templates ([cd0b3af](https://github.com/CoCreate-app/CoCreate-admin/commit/cd0b3af4b4cf8d70f3956e4a47819c4f9dd0718a))
+
 ## [1.12.31](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.30...v1.12.31) (2021-12-24)
 
 
