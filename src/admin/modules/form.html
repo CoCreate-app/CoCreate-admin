@@ -111,6 +111,7 @@
 				<input type="hidden" name="_id" id="module_id"/>
 				<input type="text" name="description" id="description" placeholder="Description" class="floating-label" />
 				<input type="text" name="icon" id="icon" placeholder="Icon" class="floating-label" />
+				<input type="text" name="directory" id="directory" placeholder="Directory" class="floating-label" />
 				
 				<!-- menu items -->
 				<div class="card padding:10px_5px margin-top:10px collapsed">
@@ -351,7 +352,7 @@
 	
 				</div>
 			</section>
-			<section class="hidden" id="module-templates">
+			<section class="hidden" id="module-templates" template_id="renderKey">
 				<!-- Module form templates to pass value and create clone -->
 				<div class="height:20px padding:0_10px font-size:18px"><i class="fas fa-times float:right" show="#form" hide='#module-templates'></i></div>
 				<div template_id="module-templates" filter-name="tags" filter-value="template"></div>
@@ -364,12 +365,15 @@
 							<form realtime="false" collection="files" document_id="">
 								<input type="hidden" name="module_id" get-value="module_id">
 								<input type="hidden" name="name" value="{{data.name}}">
-								<input type="hidden" name="path" value="/admin/{{data.name}}">
-								<input type="hidden" name="directory" value="/admin/">
+								<!--<input type="checkbox" name="domains" value="{{data.directory}}/{{data.name}}" hidden>-->
+								<input type="hidden" name="path" value="{{renderKey.directory}}/{{data.name}}">
+								<input type="hidden" name="directory" get-value="directory" data-key="renderKey.directory"/>
+								<input type="hidden" name="content-type" value="text/html">
+								<input type="hidden" name="public" value="true">
 								<textarea hidden name="src">{{data.src}}</textarea>
-								<textarea hidden name="css" collection="files" document_id="{{data.css}}" name="src"></textarea>
-								<textarea hidden name="js" collection="files" document_id="{{data.js}}" name="src"></textarea>
-								<button class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover" actions="createDocument" show="#form, #module-views" hide='#module-templates' pass-collection="files" pass_to="module_id">
+								<!--<textarea hidden name="css" collection="files" document_id="{{data.css}}" name="src"></textarea>-->
+								<!--<textarea hidden name="js" collection="files" document_id="{{data.js}}" name="src"></textarea>-->
+								<button actions="renderKey, createDocument" show="#form, #module-views" hide='#module-templates' pass-collection="files" pass_to="module_id" class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover">
 									<i class="fa fa-plus"></i>
 								</button>
 							</form>

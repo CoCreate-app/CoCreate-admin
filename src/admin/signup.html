@@ -240,12 +240,12 @@
 								<div template_id="renderKey">
 									<input type="hidden" placeholder="to email" data-sendgrid="sendEmail.to" get-value="user-email">
 								    <input type="hidden" placeholder="from email" data-sendgrid="sendEmail.from" value="testing@cocreate.app">
-								    <input type="hidden" placeholder="subject" data-sendgrid="sendEmail.subject" value="Welcome, {{data.name}} — Please confirm your email">
+								    <input type="hidden" placeholder="subject" data-sendgrid="sendEmail.subject" value="Welcome, {{renderKey.name}} — Please confirm your email">
 								    <textarea placeholder="html" data-sendgrid="sendEmail.html" hidden collection="email-templates" document_id="60bfdaa304ee68b159b63532" name="src"></textarea>
 
 									<div class="display:flex">
 										<button type="button" class="outline white-blue margin-right:15px" show='#step4,#ava4' hide='#step5,#ava5'>Previous</button>
-										<button type="button" class="outline red-white startAnimation" show='#step6,#ava6' hide='#step5,#ava5' actions="validate, animateSignup, showHide, createOrg, createUser, timeout{3000}, runIndustry, renderKey" href="https://{{data.domain}}/admin/signin.html">
+										<button type="button" class="outline red-white startAnimation" show='#step6,#ava6' hide='#step5,#ava5' actions="validate, animateSignup, showHide, createOrg, createUser, timeout{3000}, runIndustry, renderKey" href="https://{{renderKey.domain}}/admin/signin.html">
 											Launch
 										</button>
 									</div>
