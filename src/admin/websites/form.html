@@ -112,12 +112,12 @@
 								<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
 								<div pass-value="{{data.module_id}}" pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
 								<div pass-document_id="{{data.module_id}}" pass_to="module-form"></div>
-                                <!--<div pass-fetch_collection="{{collection}}" pass-filter-name="website_id" pass-filter-value="{{data._id}}" pass_to="website_id"></div>-->
+                                <!--<div pass-fetch-collection="{{collection}}" pass-filter-name="website_id" pass-filter-value="{{data._id}}" pass_to="website_id"></div>-->
                             </a>
                             <!--<p collection="{{collection}}" document_id="{{data._id}}" name="name" class="flex-grow:1 font-size:16px padding:5px_0">Web Page</p>-->
                             <!--<input collection="{{collection}}" document_id="{{data._id}}" name="name" class="flex-grow:1 min-width:100px border:none outline:none font-size:16px" placeholder="View Name">-->
                             <!--<input type="hidden" collection="{{collection}}" document_id="{{data._id}}" name="module_id">-->
-                            <a collection="{{collection}}" document_id="{{data._id}}" class="delete-document float:right padding:5px">    
+                            <a actions="deleteDocument" collection="{{collection}}" document_id="{{data._id}}" class="float:right padding:5px">    
                                 <i class="fas fa-trash"></i>                
                             </a> 
                             <a target="modal" href="../builder/index.html" class="float:right padding:5px">  

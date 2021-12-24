@@ -1070,6 +1070,25 @@ module.exports = {
             }
         },
         {
+            "entry": "./src/admin/marketplace/form.html",
+            "collection": "files",
+            "document_id": "61c520b0a8b6b4001aaeac5f",
+            "key": "src",
+            "data": {
+                "name": "form.html",
+                "domains": [
+                    "cocreate.app",
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/marketplace/form.html",
+                "directory": "/admin/marketplace",
+                "content-type": "text/html",
+                "public": "true",
+                "module_id": "60e7483fb979b40017448d13",
+                "website_id": "5ffa235ff11d2d00103c4520"
+            }
+        },
+        {
             "entry": "./src/admin/module-templates/datatable.html",
             "collection": "files",
             "document_id": "60de3a9814b5ab0c2dd30033",
