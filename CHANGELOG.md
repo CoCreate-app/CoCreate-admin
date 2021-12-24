@@ -1,3 +1,10 @@
+## [1.12.31](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.30...v1.12.31) (2021-12-24)
+
+
+### Bug Fixes
+
+* modules form deleteDocument action ([db2201a](https://github.com/CoCreate-app/CoCreate-admin/commit/db2201a9ec787cc85112c252cd82dc1d5025932a))
+
 ## [1.12.30](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.29...v1.12.30) (2021-12-23)
 
 
