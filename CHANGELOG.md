@@ -1,3 +1,10 @@
+## [1.12.33](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.32...v1.12.33) (2021-12-25)
+
+
+### Bug Fixes
+
+* removed  data-search_type=or ([0d18861](https://github.com/CoCreate-app/CoCreate-admin/commit/0d1886191245e25735fcf1e8de17beda1499c083))
+
 ## [1.12.32](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.31...v1.12.32) (2021-12-24)
 
 
