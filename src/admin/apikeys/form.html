@@ -67,12 +67,16 @@
             <form pass_id="form-fields" collection="apiKeys" document_id="">
 
                 <input type="hidden" name="module_id" pass_id="module_id" value=""/>
-                
-                <input type="text" name="name" placeholder="Name" pass_id="form-fields" class="floating-label" />
-
-                <input type="text" name="apikey" placeholder="apiKey" pass_id="form-fields" class="floating-label" />
-
-                <textarea name="api-snippet" placeholder="Api Snippet" pass_id="form-fields" rows="6" class="floating-label"></textarea>
+	            
+	            <floating-label>
+                    <input type="text" name="name" placeholder="Name" pass_id="form-fields" class="floating-label" />
+	            </floating-label>
+	            <floating-label>
+                    <input type="text" name="apikey" placeholder="apiKey" pass_id="form-fields" class="floating-label" />
+	            </floating-label>
+	            <floating-label>
+                    <textarea name="api-snippet" placeholder="Api Snippet" pass_id="form-fields" rows="6" class="floating-label"></textarea>
+	            </floating-label>
 
 				<button actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>

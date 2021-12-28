@@ -63,8 +63,9 @@
 	                    		</div>
 	                        </div>
 	                        <div class="padding:25px background:gainsboro text-align:left">
-	                    		<input type="text" id="name" 
-	                    			collection="users" 
+	                    		<floating-label>
+	                    			<input type="text" id="name" 
+	                				collection="users" 
 	                    			document_id="" 
 	                    			name="name"  
 	                    			placeholder="Full Name"  
@@ -72,7 +73,7 @@
 	                    			autocomplete="off" 
 	                    			data-key="renderKey.name" 
 	                    			required>
-		                        
+	                    		</floating-label>
 		                        <button type="button" actions="validate(#name), showHide" class="outline" show='#step2,#ava2' hide='#step1,#ava1'>Next</button>
 		                    </div>
 	                  	</section>
@@ -87,13 +88,15 @@
 								</div>
 						    </div>
 						    <div class="padding:25px background:gainsboro text-align:left">
-						    	<input type="text" id="org-name"
-						    		collection="organizations"
-						    		document_id=""  
-						    		name="name" 
-						    		placeholder="Organization Name" 
-						    		class="floating-label"
-						    		required>
+	                    		<floating-label>
+							    	<input type="text" id="org-name"
+							    		collection="organizations"
+							    		document_id=""  
+							    		name="name" 
+							    		placeholder="Organization Name" 
+							    		class="floating-label"
+							    		required>
+	                    		</floating-label>
 								<div class="display:flex">
 							        <button type="button" class="outline white-blue margin-right:15px" show='#step1,#ava1' hide='#step2,#ava2'>Previous</button>
 							        <button type="button" actions="validate(#org-name), showHide" class="outline" show='#step3,#ava3' hide='#step2,#ava2'>Next</button>
@@ -111,17 +114,19 @@
 								</div>
 						    </div>
 						    <div class="padding:25px background:gainsboro text-align:left">
-						    	<input type="text" id="subdomain"
-						    		data-type="array"
-						    		collection="organizations"
-						    		document_id=""  
-						    		name="domains" 
-						    		placeholder="Domain"
-						    		value-suffix=".cocreate.app"
-						    		unique
-									subdomain
-									required
-						    		class="floating-label width:calc(100%_-_90px)!important">
+	                    		<floating-label>
+							    	<input type="text" id="subdomain"
+							    		data-type="array"
+							    		collection="organizations"
+							    		document_id=""  
+							    		name="domains" 
+							    		placeholder="Domain"
+							    		value-suffix=".cocreate.app"
+							    		unique
+										subdomain
+										required
+							    		class="floating-label width:calc(100%_-_90px)!important">
+	                    		</floating-label>
                                 <div class="position:relative top:-34px right:8px float:right padding:5px background:whitesmoke">
                                 	<span>.cocreate.app</span>
                                 </div>
@@ -145,17 +150,18 @@
 	                        </div>
 	                        <div class="padding:25px background:gainsboro text-align:left">
 	
-	                           <!-- Industry select -->
-	                            <cocreate-select id="industries" class="floating-label" collection="organizations" name="industry" placeholder="Industry" realtime="false" save="false" required>
-	  					          	  <input placeholder="Search" template_id="industries">
-									<cc-options fetch-collection="industries" 
-									    template_id="industries"
-									    class="options overflow:overlay">
-										<cc-option class="template" template_id="industries" value="{{data._id}}">
-											<h4 collection="industries" document_id="{{data._id}}" name="name" realtime="false">industry name</h4>
-										</cc-option>
-									</cc-options>
-	                            </cocreate-select>
+	                    		<floating-label>
+		                            <cocreate-select id="industries" class="floating-label" collection="organizations" name="industry" placeholder="Industry" realtime="false" save="false" required>
+		  					          	  <input placeholder="Search" template_id="industries">
+										<cc-options fetch-collection="industries" 
+										    template_id="industries"
+										    class="options overflow:overlay">
+											<cc-option class="template" template_id="industries" value="{{data._id}}">
+												<h4 collection="industries" document_id="{{data._id}}" name="name" realtime="false">industry name</h4>
+											</cc-option>
+										</cc-options>
+		                            </cocreate-select>
+	                    		</floating-label>
 								<div class="display:flex">
 			                        <button type="button" class="outline white-blue margin-right:15px" show='#step3,#ava3' hide='#step4,#ava4'>Previous</button>
 			                        <button type="button" actions="validate(#industries), showHide" class="outline" show='#step5,#ava5' hide='#step4,#ava4'>Next</button>
@@ -173,29 +179,35 @@
 								</div>
 							</div>
 							<div class="padding:25px background:gainsboro text-align:left">
-								<input type="email" id="email"
-									collection="users"
-									unique
-									document_id="" 
-									name='email'  
-									placeholder="Email" 
-									class="floating-label"
-									required>
-							 		<small id="errorUemail" class="text-danger"></small>
+	                    		<floating-label>
+									<input type="email" id="email"
+										collection="users"
+										unique
+										document_id="" 
+										name='email'  
+										placeholder="Email" 
+										class="floating-label"
+										required>
+	                    		</floating-label>
+							 	<small id="errorUemail" class="text-danger"></small>
 							
-								<input type="password" id="password"
-									collection="users"
-							    	document_id=""
-							    	name="password" 
-							    	placeholder="Password" 
-							    	class="floating-label">
-							    	<small id="errorUpassword" class="text-danger"></small>
+	                    		<floating-label>
+									<input type="password" id="password"
+										collection="users"
+								    	document_id=""
+								    	name="password" 
+								    	placeholder="Password" 
+								    	class="floating-label">
+	                    		</floating-label>
+							    <small id="errorUpassword" class="text-danger"></small>
 							
-								<input type="password"
-							    	matches="#password" 
-							    	placeholder="Confirm Password" 
-							    	class="floating-label">
-							    	<small id="errorUconfirmpassword" class="text-danger"></small>
+	                    		<floating-label>
+									<input type="password"
+								    	matches="#password" 
+								    	placeholder="Confirm Password" 
+								    	class="floating-label">
+	                    		</floating-label>
+							    <small id="errorUconfirmpassword" class="text-danger"></small>
 									
 								<!-- User _id  -->
 								<input type="hidden" id="user_id"

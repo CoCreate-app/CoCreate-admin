@@ -68,36 +68,43 @@
 
 				<div class="display:flex height:50px">
 					<div class="width:50% padding-right:5px z-index:7">
-						<cocreate-select class="sortable floating-label" name="type" multiple placeholder="Type">
-							<input placeholder="Search" template_id="type">
-						    <div template_id="type" filter-name="type" filter-value="60edaf79b979b4001744c6fe"></div>
-							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="type" class="overflow:auto">
-								<cc-option class="template" template_id="type" value="{{data._id}}">
-									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Type Name</h4>
-								</cc-option>
-							</cc-options>
-						</cocreate-select>
+                        <floating-label>
+    						<cocreate-select class="sortable floating-label" name="type" multiple placeholder="Type">
+    							<input placeholder="Search" template_id="type">
+    						    <div template_id="type" filter-name="type" filter-value="60edaf79b979b4001744c6fe"></div>
+    							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="type" class="overflow:auto">
+    								<cc-option class="template" template_id="type" value="{{data._id}}">
+    									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Type Name</h4>
+    								</cc-option>
+    							</cc-options>
+    						</cocreate-select>
+                        </floating-label>
 					</div>
 					<div class="width:50% padding-left:5px z-index:7">
-						<cocreate-select class="sortable floating-label" name="status" placeholder="Status">
-							<input placeholder="Search" template_id="status">
-						    <div template_id="status" filter-name="type" filter-value="5ff747727005da1c272740ab"></div>
-							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="status" class="overflow:auto">
-								<cc-option class="template" template_id="status" value="{{data._id}}">
-									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Stage Name</h4>
-								</cc-option>
-							</cc-options>
-						</cocreate-select>
+                        <floating-label>
+    						<cocreate-select class="sortable floating-label" name="status" placeholder="Status">
+    							<input placeholder="Search" template_id="status">
+    						    <div template_id="status" filter-name="type" filter-value="5ff747727005da1c272740ab"></div>
+    							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="status" class="overflow:auto">
+    								<cc-option class="template" template_id="status" value="{{data._id}}">
+    									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Stage Name</h4>
+    								</cc-option>
+    							</cc-options>
+    						</cocreate-select>
+                        </floating-label>
 					</div>
 				</div>
 				
                 <input type="hidden" name="module_id" pass_id="module_id" value />
-                
-                <input type="text" name="name" placeholder="Name" class="floating-label" />
-
-                <input type="text" name="email" placeholder="Email" class="floating-label" />
-
-                <input type="text" name="profile_photo" placeholder="Profile Photo" class="floating-label" />
+                <floating-label>
+                    <input type="text" name="name" placeholder="Name" class="floating-label" />
+                </floating-label>
+                <floating-label>
+                    <input type="text" name="email" placeholder="Email" class="floating-label" />
+                </floating-label>
+                <floating-label>
+                    <input type="text" name="profile_photo" placeholder="Profile Photo" class="floating-label" />
+                </floating-label>
 
 				<button actions="saveDocument" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>
