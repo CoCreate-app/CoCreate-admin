@@ -1,3 +1,10 @@
+## [1.12.34](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.33...v1.12.34) (2021-12-28)
+
+
+### Bug Fixes
+
+* add tag floating-label and added set-value to module-form ([0432baf](https://github.com/CoCreate-app/CoCreate-admin/commit/0432baff54c545ee97391572e1a6062f9a64a1b1))
+
 ## [1.12.33](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.32...v1.12.33) (2021-12-25)
 
 
