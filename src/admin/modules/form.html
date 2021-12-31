@@ -134,7 +134,7 @@
 								<div id="navbar-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
 									<cocreate-select name="navbar-menu-primary" placeholder="Primary View" class="floating-label sortable">
 										<input placeholder="Search" template_id="navbar-menu-primary">
-										<div type="hidden" filter-name="module_id" filter-value="" filter-operator="$ne" template_id="navbar-menu-primary"></div>
+										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="navbar-menu-primary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="navbar-menu-primary" class="overflow:auto module_id">
 											<cc-option class="template" template_id="navbar-menu-primary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
 												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
@@ -177,8 +177,8 @@
 								<div id="main-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
 									<cocreate-select class="floating-label sortable" placeholder="Primary View" name="main-menu-primary">
 										<input placeholder="Search" template_id="main-menu-primary">
-										<div type="hidden" filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-primary"></div>
-										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="" filter-operator="$eq" template_id="main-menu-primary" class="overflow:auto">
+										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-primary"></div>
+										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-primary" class="overflow:auto module_id">
 											<cc-option class="template" template_id="main-menu-primary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
 												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
@@ -213,8 +213,8 @@
 								<div id="main-menu-secondary" class="menu-item-type overflow:hidden height:0px">
 									<cocreate-select class="floating-label sortable" placeholder="Secondary View" name="main-menu-secondary">
 										<input placeholder="Search" template_id="main-menu-secondary" tags="true">
-										<div type="hidden" filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-secondary"></div>
-										<cc-options pass_id="module_id" fetch-collection="" filter-name="" filter-value="" filter-operator="$eq" template_id="main-menu-secondary" class="overflow:auto">
+										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-secondary"></div>
+										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-secondary" class="overflow:auto module_id">
 											<cc-option class="template" template_id="main-menu-secondary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
 												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
@@ -248,8 +248,8 @@
 								<div id="settings-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
 									<cocreate-select class="floating-label sortable" placeholder="Primary View" name="settings-menu-primary">
 										<input placeholder="Search" template_id="settings-menu-primary">
-										<div type="hidden" filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-primary"></div>
-										<cc-options pass_id="module_id" fetch-collection="" filter-name="" filter-value="" filter-operator="$eq" template_id="settings-menu-primary" class="overflow:auto">
+										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-primary"></div>
+										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-primary" class="overflow:auto module_id">
 											<cc-option class="template" template_id="settings-menu-primary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
 												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
@@ -284,8 +284,8 @@
 								<div id="settings-menu-secondary" class="menu-item-type overflow:hidden height:0px">
 									<cocreate-select class="floating-label sortable" placeholder="Secondary View" name="settings-menu-secondary">
 										<input placeholder="Search" template_id="settings-menu-secondary" tags="true">
-										<div type="hidden" filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-secondary"></div>
-										<cc-options pass_id="module_id" fetch-collection="" filter-name="" filter-value="" filter-operator="$eq" template_id="settings-menu-secondary" class="overflow:auto">
+										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-secondary"></div>
+										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-secondary" class="overflow:auto module_id">
 											<cc-option class="template" template_id="settings-menu-secondary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
 												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
 												<h5>{{data._id}}</h5>
