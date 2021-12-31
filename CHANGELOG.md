@@ -1,3 +1,10 @@
+## [1.12.35](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.34...v1.12.35) (2021-12-31)
+
+
+### Bug Fixes
+
+* modules menu-items was missing filter-name. Update chart attributes ([47b9893](https://github.com/CoCreate-app/CoCreate-admin/commit/47b9893b93a93c8e055e869699831ca7fc6d5a52))
+
 ## [1.12.34](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.33...v1.12.34) (2021-12-28)
 
 
