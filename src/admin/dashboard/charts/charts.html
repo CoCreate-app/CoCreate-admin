@@ -104,7 +104,7 @@
 				<div class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))" dnd-group-name="dashboard" fetch-collection="module_activities" fetch-count="20" template_id="card" droppable="true">
 
 					<div template_id="card" class="card template resize padding:20px align-items:center grid-column-end:span_3 grid-row-end:span_2" element_id="card">
-						<canvas class="cocreate-chart" chart-type="bar" chart-options="" chart-labels="January, February, March, April, May, June, July" chart-title="Combine Charts">
+						<canvas chart="chartjs" chart-type="bar" chart-options="" chart-labels="January, February, March, April, May, June, July" chart-title="Combine Charts">
                             <div class="chart-dataset" chart-dataset-type="line" chart-dataset-label="um Chart">
                                 <div fetch-collection="chart" fetch-name="Jan" chart-operator="sum">
                                     <div filter-name="Jan" filter-value="0, 10" filter-value-type="number" filter-operator="$range"></div>
