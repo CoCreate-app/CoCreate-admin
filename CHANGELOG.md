@@ -1,3 +1,10 @@
+## [1.12.38](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.37...v1.12.38) (2022-01-01)
+
+
+### Bug Fixes
+
+* removed data- from attributes ([1512776](https://github.com/CoCreate-app/CoCreate-admin/commit/1512776a1b61eb2f514d9d410777ef772214b3a4))
+
 ## [1.12.37](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.36...v1.12.37) (2021-12-31)
 
 
