@@ -1,3 +1,10 @@
+## [1.12.37](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.36...v1.12.37) (2021-12-31)
+
+
+### Bug Fixes
+
+* removed class chart-dataset ([8c2ff87](https://github.com/CoCreate-app/CoCreate-admin/commit/8c2ff874543e7a204c7b890f6fac0b4a812124ff))
+
 ## [1.12.36](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.35...v1.12.36) (2021-12-31)
 
 
