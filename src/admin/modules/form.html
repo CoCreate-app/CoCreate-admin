@@ -368,12 +368,12 @@
 						<div class="position:relative">
 							<img collection="{{collection}}" document_id="{{data._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
 							<form realtime="false" collection="files" document_id="">
-								<input type="hidden" name="module_id" get-value="module_id">
+								<input type="hidden" name="module_id" get-value="#module_id">
 								<input type="hidden" name="website_id" value="5ffa235ff11d2d00103c4520">
 								<input type="hidden" name="name" value="{{data.name}}">
 								<input type="checkbox" name="domains" value="general.cocreate.app" hidden checked>
 								<input type="checkbox" name="domains" value="cocreate.app" hidden checked>
-								<input type="hidden" get-value="name" render-key="renderKey.name"/>
+								<input type="hidden" get-value="#name" render-key="renderKey.name"/>
 								<input type="hidden" name="directory" value="/admin/{{renderKey.name}}"/>
 								<input type="hidden" name="path" value="/admin/{{renderKey.name}}/{{data.name}}">
 								<input type="hidden" name="content-type" value="text/html">

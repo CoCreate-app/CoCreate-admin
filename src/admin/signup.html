@@ -30,18 +30,18 @@
                             	Your Artificial Virtual Assistant. Together we will CoCreate your business! Enter your name so I will know what to call my <strong>new boss...</strong>
                         	</p>
                             <p id="ava2" class="hidden">
-                        		Hi, <span get-value="name">First Name</span>!
+                        		Hi, <span get-value="#name">First Name</span>!
                             	Let's get started. Enter your business or organization's name. Don't worry if you are not sure, you can allways update it later.<!-- and create a subdomain. The subdomain will be used for your website's address until you choose a custom domain.-->
                         	</p>
                         	<p id="ava3" class="hidden">
-                        		Choose a domain for <span get-value="org-name">Organization Name</span>, this will be the url where you can access your website and admin panel.
+                        		Choose a domain for <span get-value="#org-name">Organization Name</span>, this will be the url where you can access your website and admin panel.
                         	</p>
                         	<p id="ava4" class="hidden">
-                        		Great, <span get-value="name">First Name</span>!
+                        		Great, <span get-value="#name">First Name</span>!
                             	Let’s choose an industry so I can begin to understand what we will be doing.
                         	</p>
                         	<p id="ava5" class="hidden">
-                        		Awesome! Enter your email and password and we will get <span get-value="org-name">Organization Name</span> off the ground!
+                        		Awesome! Enter your email and password and we will get <span get-value="#org-name">Organization Name</span> off the ground!
                         	</p>
 							<p id="ava6" class="hidden">
                         		Here we go! Preparing your new business!
@@ -250,7 +250,7 @@
 									
 								<!-- Send Email -->
 								<div template_id="renderKey">
-									<input type="hidden" placeholder="to email" sendgrid="sendEmail.to" get-value="user-email">
+									<input type="hidden" placeholder="to email" sendgrid="sendEmail.to" get-value="#user-email">
 								    <input type="hidden" placeholder="from email" sendgrid="sendEmail.from" value="testing@cocreate.app">
 								    <input type="hidden" placeholder="subject" sendgrid="sendEmail.subject" value="Welcome, {{renderKey.name}} — Please confirm your email">
 								    <textarea placeholder="html" sendgrid="sendEmail.html" hidden collection="email-templates" document_id="60bfdaa304ee68b159b63532" name="src"></textarea>
