@@ -133,17 +133,17 @@
                                     <button class="hangup hidden" actions='hangupCall' title="End Call"><i class="fas fa-phone-slash"></i></button>
                                     <!--<button class="voicemail hidden" title="Send to Voicemail"><i class="mdi mdi-48 mdi-voicemail"></i></button>-->
 
-                                    <input type="hidden" data-twilio="dialConference.friendlyName" value="{{data._id}}">
-                                    <input type="hidden" data-twilio="dialConference.CallSid" value="{{data.CallSid}}">
-                                    <input type="hidden" data-twilio="dialConference.holdUrl" value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic">
+                                    <input type="hidden" twilio="dialConference.friendlyName" value="{{data._id}}">
+                                    <input type="hidden" twilio="dialConference.CallSid" value="{{data.CallSid}}">
+                                    <input type="hidden" twilio="dialConference.holdUrl" value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic">
                                 </div>
 
                                 <!-- Conference -->
                                 <div class="conference display:flex" collection="{{collection}}" document_id="{{data._id}}" name="status" value="">
-                                    <!--<input type="hidden" data-twilio="joinConference.friendlyName" value="{{data.From}}">-->
-                                    <div type="hidden" data-twilio="endConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
-                                    <div type="hidden" data-twilio="holdConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
-                                    <div type="hidden" data-twilio="unholdConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
+                                    <!--<input type="hidden" twilio="joinConference.friendlyName" value="{{data.From}}">-->
+                                    <div type="hidden" twilio="endConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
+                                    <div type="hidden" twilio="holdConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
+                                    <div type="hidden" twilio="unholdConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
 
                                     <button class="join hidden" actions='joinConference' title="Resume Call" data-friendlyName="{{data._id}}"><i class="fas fa-pause"></i></button>
                                     <button class="hold-conference hidden" actions='holdConference' title="Put Call on Hold"><i class="fas fa-pause"></i></button>
@@ -152,43 +152,43 @@
                                 </div>
 
                                 <!-- Transfer -->
-                                <input type="hidden" data-twilio="dialTransfer.CallSid" value="{{render2.parameters.CallSid}}">
+                                <input type="hidden" twilio="dialTransfer.CallSid" value="{{render2.parameters.CallSid}}">
                                 <button class="transfer" actions='dialTransfer' title="Transfer Call"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABlUlEQVRIiZ3VMWsUQRjG8V8ukSCiELGxsjFFimgpGEELLQUJWoj5DoFU+QpW2likMm2wyAeIomghYqEEoqSQiGCjKZKYIrmol2LnzLju7Mz5wMLx3vN/n9l3hh3+1iieYRWTBtMonuJzG7uIXni+DRiSZa/id2QaJORGjfuHHcaHBlMPXzPNO/iYY+8lDD08zARMl7CvE4ZV1ea1KcuOt6xgOtP8Qgk7mzC8UM23TfMl7FL0x3WMqTY91kQiYLmAtRYMe9Lz3sGdhvp6AWsrmNZThmiVCzgW1bcLWAfB9CbRtP68xFkM4WeC/aNOCICRtlU0qD+aLLsRzBuZZk0j+lTAeh5MBzU4VmqTV3JsB+/D7xFcTARcwpOG+rscO4xT0erGcRk3cQ5vQ30zEXwcdzOsk6rNqp+WXy1vFAfslrCPG0w9vJI/XY9K2MmQ+j+f6/PoJtgHsXEhYeriTCbkfoLdiU2n8b1m2MetTHM4obrsY/YHrtSNtx3dy93C5n1dczSqXdUd36g5fFEdt0E1o/ouTfULh60e2n2ht7rUAAAAAElFTkSuQmCC" height="24px"></button>
 
                                 <!-- Enqueue -->
                                 <div class="hidden">
-                                    <input data-twilio="dialEnqueue.nameEnqueue" data-old="{{data.From}}" value="cocreateEnqueue">
-                                    <input data-twilio="dialEnqueue.CallSid" value="{{data.CallSid}}">
-                                    <input data-twilio="dialEnqueue.waitUrl" value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic">
+                                    <input twilio="dialEnqueue.nameEnqueue" data-old="{{data.From}}" value="cocreateEnqueue">
+                                    <input twilio="dialEnqueue.CallSid" value="{{data.CallSid}}">
+                                    <input twilio="dialEnqueue.waitUrl" value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic">
                                     <button actions='dialEnqueue, getListQueues'>dialEnqueue</button>
                                 </div>
 
                             </form>
                             <!--<div template_id="getParticipantsConferences_{{data.idconference}}">-->
                             <!--    <form>-->
-                            <!--        <input type="hidden"  data-twilio="getParticipantsConference.CallSid" value="{{data.idconference}}">-->
+                            <!--        <input type="hidden"  twilio="getParticipantsConference.CallSid" value="{{data.idconference}}">-->
                             <!--            <button actions='getParticipantsConference' -->
                             <!--                data-friendlyName="{{data.friendlyName}}"-->
                             <!--                data-idconference="{{data.idconference}}"-->
                             <!--            >GetPart</button>-->
                             <!--    </form>-->
-                            <!--    <div class="template margin:10px;" data-value="{{participant.id}}" render-array="participant">-->
+                            <!--    <div class="template margin:10px;" value="{{participant.id}}" render-array="participant">-->
                             <!--        <form class="padding:5px">-->
 
-                            <!--            <input type="hidden" data-twilio="delParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
-                            <!--            <input type="hidden" data-twilio="delParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
+                            <!--            <input type="hidden" twilio="delParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
+                            <!--            <input type="hidden" twilio="delParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
 
-                            <!--            <input type="hidden" data-twilio="muteParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
-                            <!--            <input type="hidden" data-twilio="muteParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
+                            <!--            <input type="hidden" twilio="muteParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
+                            <!--            <input type="hidden" twilio="muteParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
 
-                            <!--            <input type="hidden" data-twilio="unmuteParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
-                            <!--            <input type="hidden" data-twilio="unmuteParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
+                            <!--            <input type="hidden" twilio="unmuteParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
+                            <!--            <input type="hidden" twilio="unmuteParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
 
-                            <!--            <input type="hidden" data-twilio="holdParticipantConference.idconference" value="{{participant.conferenceSid}}">-->
-                            <!--            <input type="hidden" data-twilio="holdParticipantConference.idparticipant" value="{{participant.callSid}}">-->
+                            <!--            <input type="hidden" twilio="holdParticipantConference.idconference" value="{{participant.conferenceSid}}">-->
+                            <!--            <input type="hidden" twilio="holdParticipantConference.idparticipant" value="{{participant.callSid}}">-->
 
-                            <!--            <input type="hidden" data-twilio="unholdParticipantConference.idconference" value="{{participant.conferenceSid}}">-->
-                            <!--            <input type="hidden" data-twilio="unholdParticipantConference.idparticipant" value="{{participant.callSid}}">-->
+                            <!--            <input type="hidden" twilio="unholdParticipantConference.idconference" value="{{participant.conferenceSid}}">-->
+                            <!--            <input type="hidden" twilio="unholdParticipantConference.idparticipant" value="{{participant.callSid}}">-->
 
 
                             <!--            <li> <span value="{{participant.call.sid}}"></span>  - TO: <span value="{{participant.call.to}}"></span> - from :<span value="{{participant.call.from}}"></span></span></li>-->
@@ -362,7 +362,7 @@
                         <floating-label>
                             <cocreate-select class="floating-label sortable" collection="test" collection="module_activities" document_id="5e9531b3a762440eed55c2ed" name="selectField0" data-limit_option="3" placeholder="Call as">
     
-                                <input type="hidden" data-twilio="dial.From" value="+16027372368">
+                                <input type="hidden" twilio="dial.From" value="+16027372368">
                                 <input template_id="option0">
     
                                 <ul fetch-collection="use" template_id="option0" class="options overflow:auto height:300px">
@@ -388,7 +388,7 @@
                             <floating-label>
                                 <cocreate-select class="floating-label sortable" placeholder="Enter a name or number">
     
-                                    <input data-twilio="dial.To" class="draw_digits" template_id="option0" value="+19703735168">
+                                    <input twilio="dial.To" class="draw_digits" template_id="option0" value="+19703735168">
     
                                     <ul fetch-collection="users" template_id="number" class="options overflow:auto">
                                         <li class="option template display:flex padding:5px" template_id="number" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
@@ -452,18 +452,18 @@
                         </div>
                         <div class="display:flex margin-top:10px">
                             <div class="display:flex justify-content:center width:33%">
-                                <input type="hidden" data-twilio="dialConference.friendlyName" value="{{render2.parameters.To}}">
-                                <input type="hidden" data-twilio="dialConference.CallSid" value="{{render2.parameters.CallSid}}">
-                                <input type="hidden" data-twilio="dialConference.holdUrl" value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic">
+                                <input type="hidden" twilio="dialConference.friendlyName" value="{{render2.parameters.To}}">
+                                <input type="hidden" twilio="dialConference.CallSid" value="{{render2.parameters.CallSid}}">
+                                <input type="hidden" twilio="dialConference.holdUrl" value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic">
                                 <button actions='dialConference' data-id="dialConference" class="hold " title="Put Call on Hold">
         					        <i class="fas fa-pause"></i>
         				        </button>
                                 <!-- Conference -->
                                 <div>
-                                    <input type="hidden" data-twilio="joinConference.friendlyName" value="{{data.friendlyName}}">
-                                    <input type="hidden" data-twilio="endConference.CallSid" value="{{data.idconference}}">
-                                    <input type="hidden" data-twilio="holdConference.CallSid" value="{{data.idconference}}">
-                                    <input type="hidden" data-twilio="unholdConference.CallSid" value="{{data.idconference}}">
+                                    <input type="hidden" twilio="joinConference.friendlyName" value="{{data.friendlyName}}">
+                                    <input type="hidden" twilio="endConference.CallSid" value="{{data.idconference}}">
+                                    <input type="hidden" twilio="holdConference.CallSid" value="{{data.idconference}}">
+                                    <input type="hidden" twilio="unholdConference.CallSid" value="{{data.idconference}}">
                                     <button class="hidden" actions='joinConference' data-friendlyName="{{data.friendlyName}}" title="Resume Call">
                                         <i class="fas fa-pause"></i>
                                     </button>
@@ -477,7 +477,7 @@
             					</button>
                                 <button id="#end-call" class="decline hidden" actions='hangupCall' title="End Call"><i class="fas fa-phone-slash"></i></button>
                                 <!-- End Conference -->
-                                <input type="hidden" data-twilio="endConference.CallSid" value="{{data.idconference}}">
+                                <input type="hidden" twilio="endConference.CallSid" value="{{data.idconference}}">
                                 <button class="hidden" actions='endConference'><i class="fas fa-phone-slash"></i></button>
                             </div>
                             <div class="display:flex justify-content:center width:33%">

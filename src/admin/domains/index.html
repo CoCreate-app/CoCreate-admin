@@ -95,12 +95,12 @@
 			  
 				<form>
 					<div class="">
-						<label class="padding:5px"><input data-domain="tlds[]" type="checkbox" value="net"/> net</label>
-						<label><input data-domain="tlds[]" type="checkbox" value="com"/> com</label>
+						<label class="padding:5px"><input domain="tlds[]" type="checkbox" value="net"/> net</label>
+						<label><input domain="tlds[]" type="checkbox" value="com"/> com</label>
 					</div>
 					<div class="">
 		            	<floating-label>
-							<input data-domain="domain-name" type="text" name="domain_name" class="floating-label" placeholder="Find your perfect domain" value="">
+							<input domain="domain-name" type="text" name="domain_name" class="floating-label" placeholder="Find your perfect domain" value="">
 		            	<floating-label>
 						<a class="position:relative bottom:30px right:12px float:right z-index:5 font-size:20px padding:0px">
 							<i class="searchDomainRecordBtn fas fa-search"></i>
@@ -131,7 +131,7 @@
 					</div>
 					<!--<h3 value="test.hey.name"></h3>-->
 					<form id="customer-form" collection="modules">
-						<input type="hidden" name="domain-name" data-domain="domain-name" value="name" placeholder="domain-name"/>
+						<input type="hidden" name="domain-name" domain="domain-name" value="name" placeholder="domain-name"/>
 					</form>
 				</div>
 			</div>
@@ -141,7 +141,7 @@
 					<div  class="display:flex flex-wrap:wrap">
 						<div Class="flex-grow:1 padding:5px">
 		            		<floating-label>
-								<input type="text" class="floating-label" name="domain-name"  data-domain="domain-name" placeholder="Domain Name" required="">
+								<input type="text" class="floating-label" name="domain-name"  domain="domain-name" placeholder="Domain Name" required="">
 		            		</floating-label>
 						</div>
 						<div class="flex-grow:1 padding:5px">
@@ -166,26 +166,26 @@
 			</div>
 				
 			<form class="hidden">
-				<input type="text" name="domain-name" data-domain="domain-name" value="name" placeholder="domain-name"/>
-				<select  name="years" data-domain="years" >
+				<input type="text" name="domain-name" domain="domain-name" value="name" placeholder="domain-name"/>
+				<select  name="years" domain="years" >
 					<option value="1">1 year</option>
 					<option value="2">2 year</option>
 				</select>
-				purchase-privacy <input type="checkbox" name="purchase-privacy" data-domain="purchase-privacy" placeholder="purchase-privacy"/><br>
-				protect-privacy <input type="checkbox" name="protect-privacy" data-domain="protect-privacy" placeholder="protect-privacy"/>
+				purchase-privacy <input type="checkbox" name="purchase-privacy" domain="purchase-privacy" placeholder="purchase-privacy"/><br>
+				protect-privacy <input type="checkbox" name="protect-privacy" domain="protect-privacy" placeholder="protect-privacy"/>
 				
-				<input type="text" name="ns" data-domain="ns" value="ns1.onlyfordemo.net,ns2.onlyfordemo.net" placeholder="ns"/>
-				<input type="text" name="customer-id" data-domain="customer-id" value="22216052" placeholder="customer-id"/>
-				<input type="text" name="contact-id" data-domain="contact-id" value="91369147" placeholder="contact-id"/>
-				<input type="text" name="reg-contact-id" data-domain="reg-contact-id" get-value="contact-id" placeholder="reg-contact-id"/>
-				<input type="text" name="admin-contact-id" data-domain="admin-contact-id" get-value="contact-id" placeholder="admin-contact-id"/>
-				<input type="text" name="tech-contact-id" data-domain="tech-contact-id" get-value="contact-id" placeholder="tech-contact-id"/>
-				<input type="text" name="billing-contact-id" data-domain="billing-contact-id" get-value="contact-id" placeholder="billing-contact-id"/>
-				<input type="text" name="invoice-option" data-domain="invoice-option" value="NoInvoice" placeholder="invoice-option"/>
-				<input type="text" name="auto-renew" data-domain="auto-renew" placeholder="auto-renew"/>
-				<input type="text" name="attr-name" data-domain="attr-name" placeholder="attr-name"/>
-				<input type="text" name="attr-value" data-domain="attr-value" placeholder="attr-value"/>
-				<input type="text" name="discount-amount" data-domain="discount-amount" placeholder="discount-amount"/>
+				<input type="text" name="ns" domain="ns" value="ns1.onlyfordemo.net,ns2.onlyfordemo.net" placeholder="ns"/>
+				<input type="text" name="customer-id" domain="customer-id" value="22216052" placeholder="customer-id"/>
+				<input type="text" name="contact-id" domain="contact-id" value="91369147" placeholder="contact-id"/>
+				<input type="text" name="reg-contact-id" domain="reg-contact-id" get-value="contact-id" placeholder="reg-contact-id"/>
+				<input type="text" name="admin-contact-id" domain="admin-contact-id" get-value="contact-id" placeholder="admin-contact-id"/>
+				<input type="text" name="tech-contact-id" domain="tech-contact-id" get-value="contact-id" placeholder="tech-contact-id"/>
+				<input type="text" name="billing-contact-id" domain="billing-contact-id" get-value="contact-id" placeholder="billing-contact-id"/>
+				<input type="text" name="invoice-option" domain="invoice-option" value="NoInvoice" placeholder="invoice-option"/>
+				<input type="text" name="auto-renew" domain="auto-renew" placeholder="auto-renew"/>
+				<input type="text" name="attr-name" domain="attr-name" placeholder="attr-name"/>
+				<input type="text" name="attr-value" domain="attr-value" placeholder="attr-value"/>
+				<input type="text" name="discount-amount" domain="discount-amount" placeholder="discount-amount"/>
 				
 				<button class="btn btn-primary registerRecordBtn">Buy</button>
 			
