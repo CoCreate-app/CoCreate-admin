@@ -72,7 +72,8 @@
                     template_id="navbar-menu" class="display:inline-flex">
                   
                     <li class="template margin-right:15px" template_id="navbar-menu" document_id="{{data._id}}">
-                        <a target="modal" fetch-for href='..{"collection":"files", "document_id":"{{data.navbar-menu-primary}}","name":"path"}'
+                        <input type="hidden" collection="files" document_id="{{data.navbar-menu-primary}}" name="path" set-value="#a{{data._id}}" set-value-key="navbar-url">
+                        <a target="modal" id="a{{data._id}}" href='..{{navbar-url}}'
                             modal-width="{{data.navbar-modal-primary-width}}"
                             modal-height="{{data.navbar-modal-primary-height}}"
                             modal-color="{{data.navbar-modal-primary-color}}">
@@ -159,7 +160,8 @@
                         
                         <!-- Template -->
                         <li class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" template_id="main-menu" document_id="{{data._id}}">
-                            <a target="modal" fetch-for href='..{"collection":"files", "document_id":"{{data.main-menu-primary}}","name":"path"}'
+                            <input type="hidden" collection="files" document_id="{{data.main-menu-primary}}" name="path" set-value="#a{{data._id}}" set-value-key="primary-url">
+                            <a target="modal" id="a{{data._id}}" href='..{{primary-url}}'
                                 modal-width="{{data.main-modal-primary-width}}"
                                 modal-color="{{data.main-modal-color}}"
                                 class="display:inline-block">
@@ -172,7 +174,8 @@
                                 <div pass-document_id="{{data._id}}" pass_to="module-form"></div>
                             </a>
                             <div class="float:right width:50px text-align:center">
-                                <a target="modal" fetch-for href='..{"collection":"files", "document_id":"{{data.main-menu-secondary}}","name":"path"}'
+                                <input type="hidden" collection="files" document_id="{{data.main-menu-secondary}}" name="path" set-value="#a{{data._id}}" set-value-key="secondary-url">
+                                <a target="modal" id="a{{data._id}}" href='..{{secondary-url}}'
                                     modal-width="{{data.main-modal-secondary-width}}"
                                     modal-color="{{data.main-modal-secondary-color}}">
                                     <i class="fas fa-plus"></i>
@@ -214,12 +217,12 @@
         
 		<div class="position:fixed!important bottom:15px right:15px">
 	        <div template_id="notification" class="template card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
-	            <span class="{{type}}">{{message}}</span><a actions="removeElement"> X</a>
+	            <span class="{{type}}">{{message}}</span><a actions="removeElement" remove-closest="[templateid]" remove-target="[templateid]"> X</a>
 	        </div>
 		</div>
        
-        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
-        <!--<script src="../../../CoCreateJS/dist/CoCreate.js"></script>-->
+        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>-->
+        <script src="../../../CoCreateJS/dist/CoCreate.js"></script>
         
     </body>
 </html>

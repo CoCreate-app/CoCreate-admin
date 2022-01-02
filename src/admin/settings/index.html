@@ -61,7 +61,8 @@
 				<div fetch-collection="modules" order-by="settings-menu-position" order-type="asc" filter-name="settings-menu-position" filter-value="0" filter-value-type="number" filter-operator="$ne" template_id="settings-menu">
 
 					<li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template_id="settings-menu">
-						<a target="modal" fetch-for href='../..{"collection":"files", "document_id":"{{data.settings-menu-primary}}","name":"path"}' modal-width="{{data.settings-modal-primary-width}}" modal-color="{{data.settings-modal-primary-color}}" class="display:inline-block">
+                        <input type="hidden" collection="files" document_id="{{data.settings-menu-primary}}" name="path" set-value="#a{{data._id}}" set-value-key="primary-url">
+                        <a target="modal" id="a{{data._id}}" href='..{{primary-url}}' modal-width="{{data.settings-modal-primary-width}}" modal-color="{{data.settings-modal-primary-color}}" class="display:inline-block">
 							<span class="display:inline-block width:50px text-align:center" document_id="{{data._id}}" collection="modules" name="icon" value="icon"></span>
 							<span collection="modules" document_id="{{data._id}}" name="name"></span>
 							<div pass-filter-name="module_id" pass-filter-value="{{data._id}}" pass_to="datatable"></div>
@@ -71,7 +72,8 @@
 							<div pass-collection="files" pass-document_id="{{data.settings-menu-primary}}" pass-name="src" pass_to="render"></div>
 						</a>
 						<div class="float:right width:50px text-align:center {{data.settings-menu-secondary}}">
-							<a target="modal" fetch-for href='../..{"collection":"files", "document_id":"{{data.settings-menu-secondary}}","name":"path"}' modal-width="{{data.settings-modal-secondary-width}}" modal-color="{{data.settings-modal-secondary-color}}">
+                            <input type="hidden" collection="files" document_id="{{data.settings-menu-secondary}}" name="path" set-value="#a{{data._id}}" set-value-key="secondary-url">
+                            <a target="modal" id="a{{data._id}}" href='..{{secondary-url}}' modal-width="{{data.settings-modal-secondary-width}}" modal-color="{{data.settings-modal-secondary-color}}">
 								<i class="fas fa-plus"></i>
                                 <div pass-collection="files" pass-document_id="{{data.main-menu-secondary}}" pass-name="src" pass_to="render"></div>
                                 <div pass-document_id="{{data._id}}" pass_to="module-form"></div>
