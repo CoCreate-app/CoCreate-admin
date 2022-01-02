@@ -174,8 +174,8 @@
                                 <div pass-document_id="{{data._id}}" pass_to="module-form"></div>
                             </a>
                             <div class="float:right width:50px text-align:center">
-                                <input type="hidden" collection="files" document_id="{{data.main-menu-secondary}}" name="path" set-value="#a{{data._id}}" set-value-key="secondary-url">
-                                <a target="modal" id="a{{data._id}}" href='..{{secondary-url}}'
+                                <input type="hidden" id="b{{data._id}}" collection="files" document_id="{{data.main-menu-secondary}}" name="path">
+                                <a target="modal" href='..{{secondary-url}}' get-value="#b{{data._id}}" get-value-key="secondary-url"
                                     modal-width="{{data.main-modal-secondary-width}}"
                                     modal-color="{{data.main-modal-secondary-color}}">
                                     <i class="fas fa-plus"></i>
@@ -221,8 +221,8 @@
 	        </div>
 		</div>
        
-        <!--<script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>-->
-        <script src="../../../CoCreateJS/dist/CoCreate.js"></script>
+        <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+        <!--<script src="../../../CoCreateJS/dist/CoCreate.js"></script>-->
         
     </body>
 </html>
