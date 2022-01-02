@@ -1,3 +1,11 @@
+## [1.12.40](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.39...v1.12.40) (2022-01-02)
+
+
+### Bug Fixes
+
+* removed fetch-for ([196f937](https://github.com/CoCreate-app/CoCreate-admin/commit/196f9371a13fd99584a3c04da4c1960cc88c18f4))
+* use get-value-key and setvalue-key instead of render-json ([09f8ebf](https://github.com/CoCreate-app/CoCreate-admin/commit/09f8ebff51ebc3e6cca617091d10771181aead1f))
+
 ## [1.12.39](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.38...v1.12.39) (2022-01-01)
 
 
