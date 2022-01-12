@@ -1,3 +1,10 @@
+## [1.12.42](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.41...v1.12.42) (2022-01-12)
+
+
+### Bug Fixes
+
+* module-form missing selector on show and hide ([665c7c7](https://github.com/CoCreate-app/CoCreate-admin/commit/665c7c730c34c0eaebe7737b6a392b4711b4f8b2))
+
 ## [1.12.41](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.40...v1.12.41) (2022-01-09)
 
 
