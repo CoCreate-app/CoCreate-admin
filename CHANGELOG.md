@@ -1,3 +1,10 @@
+## [1.12.41](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.40...v1.12.41) (2022-01-09)
+
+
+### Bug Fixes
+
+* files/datatable missing floating-label end tag, add cdn to files, update element-config in builder, setting url typo ([8075bfc](https://github.com/CoCreate-app/CoCreate-admin/commit/8075bfcfdecdd5f24ae224b1fcad7f422c5c7f30))
+
 ## [1.12.40](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.39...v1.12.40) (2022-01-02)
 
 
