@@ -139,7 +139,7 @@
                         <div class="margin:0px_15px padding:15px_0px">
                             <form collection="{{collection}}">
                                 <input type="hidden" document_id="" name="stage" value="{{stage._id}}" />
-                                <a actions="createDocument"><i class="fas fa-plus"></i> New Card</a>
+                                <a actions="save, reset"><i class="fas fa-plus"></i> New Card</a>
                             </form>
                         </div>
                     </div>
@@ -149,7 +149,7 @@
 
             <form>
                 <input type="hidden" pass_id="module_id" collection="" document_id="" name="module_id"/>
-                <button actions="createDocument" class="position:fixed bottom:15px right:15px background:dodgerblue border-radius:50% grow-hover">
+                <button actions="save, reset" class="position:fixed bottom:15px right:15px background:dodgerblue border-radius:50% grow-hover">
                     <i class="fas fa-plus"></i>
                	</button>
             </form>
