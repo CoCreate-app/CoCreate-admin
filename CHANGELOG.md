@@ -1,3 +1,10 @@
+## [1.12.44](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.43...v1.12.44) (2022-01-16)
+
+
+### Bug Fixes
+
+* updated saveDocument to save and createDocument replaced with save, reset ([3cd4c76](https://github.com/CoCreate-app/CoCreate-admin/commit/3cd4c761868fa7b009acedc7d03da16c7d606e63))
+
 ## [1.12.43](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.42...v1.12.43) (2022-01-16)
 
 
