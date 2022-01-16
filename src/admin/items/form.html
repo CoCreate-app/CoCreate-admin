@@ -18,7 +18,7 @@
 		<nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
 			<!-- Horizontal Scroll Nav/Tabs -->
-			<ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
+			<ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
 
 				<!-- Modal Controls -->
 				<li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
@@ -94,7 +94,7 @@
 				<cocreate-select name="related_items" placeholder="Related Items:" class="sortable floating-label" multiple>
 					<input placeholder="Search" template_id="idEngine1">
 					<!-- Fetches and displays results using template -->
-					<ul fetch-collection="users" template_id="option1" class="options overflow:overlay">
+					<ul fetch-collection="users" template_id="option1" class="options overflow:auto">
 						<!-- template -->
 						<li class="option template" id="option1">
 							<h3 collection="users" document_id="{{data._id}}" name="name">user name</h3>

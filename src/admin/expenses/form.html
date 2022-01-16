@@ -16,7 +16,7 @@
         <nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
             <!-- Horizontal Scroll Nav/Tabs -->
-            <ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
+            <ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
 
                 <!-- Modal Controls -->
                 <li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
@@ -90,7 +90,7 @@
                 <cocreate-select name="contact" placeholder="Contact" class="sortable floating-label" multiple>
                     <input placeholder="Search" template_id="contact">
                     <!-- Fetches and displays results using template -->
-                    <cc-options fetch-collection="users" template_id="contact" class="overflow:overlay">
+                    <cc-options fetch-collection="users" template_id="contact" class="overflow:auto">
                         <!-- template -->
                         <cc-option class="option template" template_id="contact">
                             <h3 collection="users" document_id="{{data._id}}" name="name">user name</h3>
@@ -103,7 +103,7 @@
                 <cocreate-select name="company" placeholder="Company" class="sortable floating-label" multiple>
                     <input placeholder="Search" template_id="company">
                     <!-- Fetches and displays results using template -->
-                    <cc-options fetch-collection="users" template_id="company" class="overflow:overlay">
+                    <cc-options fetch-collection="users" template_id="company" class="overflow:auto">
                         <!-- template -->
                         <cc-option class="option template" template_id="company">
                             <h3 collection="users" document_id="{{data._id}}" name="name">user name</h3>
@@ -116,7 +116,7 @@
                 <cocreate-select name="related_to" placeholder="Related To" class="sortable floating-label" multiple>
                     <input placeholder="Search" template_id="related_to">
                     <!-- Fetches and displays results using template -->
-                    <cc-options fetch-collection="users" template_id="related_to" class="overflow:overlay">
+                    <cc-options fetch-collection="users" template_id="related_to" class="overflow:auto">
                         <!-- template -->
                         <cc-option class="option template" template_id="related_to">
                             <h3 collection="users" document_id="{{data._id}}" name="name">user name</h3>

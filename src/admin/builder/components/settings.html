@@ -19,7 +19,7 @@
 		<nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
 
 			<!-- Horizontal Scroll Nav/Tabs -->
-			<ul class="display:inline-flex direction:rtl overflow:overlay font-size:20px align-items:center list-style-type:none width:100% height:50px">
+			<ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
 
 				<!-- Modal Controls -->
 				<li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
@@ -75,7 +75,7 @@
 
 					<input placeholder="Search" search_id="search-units" search-selector=".option">
 
-					<ul class="options overflow:overlay" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units" search_id="search-units">
+					<ul class="options overflow:auto" fetch-collection="modules" filter-value="5f94ff945412e75f9b414a3e" filter-name="_id" filter-operator="$eq" fetch-name="units" template_id="units" search_id="search-units">
 						<li class="template option" template_id="units" value="{{units.--}}">
 							<h3 value="{{units.--}}">Unit Name</h3>
 						</li>
