@@ -1,3 +1,10 @@
+## [1.12.45](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.44...v1.12.45) (2022-01-20)
+
+
+### Bug Fixes
+
+* update to templates and builder css ([ca596cd](https://github.com/CoCreate-app/CoCreate-admin/commit/ca596cd81bf7503f631982a90d3c3627fa88ab43))
+
 ## [1.12.44](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.43...v1.12.44) (2022-01-16)
 
 
