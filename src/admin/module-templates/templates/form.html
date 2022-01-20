@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-        <title>Form View | CoCreate</title>
+        <title>Contact Form View</title>
         <link rel="stylesheet" href="../index.css" collection="files" document_id="60e4f9714792bff869f1bde5" name="src" type="text/css"/>
     </head>
 
@@ -62,85 +62,60 @@
             </ul>
         </nav>
 
-        <!-- Main Content -->
         <main class="padding:10px" content_id="content">
 
             <form pass_id="form-fields" collection="module_activities" document_id="">
-                <input type="hidden" name="module_id" pass_id="module_id" value>
-                <input type="text" name="name" class="floating-label" placeholder="Name">
-                <input type="text" name="description" class="floating-label" placeholder="Description">
-				
-				<div class="display:flex">
-					<div class="flex-grow:1 padding-right:5px">
-						<cocreate-select class="sortable floating-label" name="status" document_id="" multiple placeholder="Status">
-							<input placeholder="Search" template_id="status">
-						    <div template_id="status" filter-name="type" filter-value="5ff747727005da1c272740ab"></div>
-							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="status" class="overflow:auto">
-								<cc-option class="template" template_id="status" value="{{data._id}}">
-									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Status Name</h4>
-								</cc-option>
-							</cc-options>
-						</cocreate-select>
+
+				<div class="display:flex height:50px">
+					<div class="width:50% padding-right:5px z-index:7">
+                        <floating-label>
+    						<cocreate-select class="sortable floating-label" name="type" multiple placeholder="Type">
+    							<input placeholder="Search" template_id="type">
+    						    <div template_id="type" filter-name="type" filter-value="60edaf79b979b4001744c6fe"></div>
+    							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="type" class="overflow:auto">
+    								<cc-option class="template" template_id="type" value="{{data._id}}">
+    									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Type Name</h4>
+    								</cc-option>
+    							</cc-options>
+    						</cocreate-select>
+                        </floating-label>
 					</div>
-					<div class="flex-grow:1 padding-left:5px">
-						<cocreate-select class="sortable floating-label flex-grow:1" name="stage" document_id="stage" multiple placeholder="Stage">
-							<input placeholder="Search" template_id="stage">
-						    <div template_id="stage" filter-name="type" filter-value="60eb93a2b979b4001744b445"></div>
-							<cc-options fetch-collection="tags" filter-name="module_id" pass_id="module_id" filter-value="" template_id="stage" class="overflow:auto">
-								<cc-option class="template" template_id="stage" value="{{data._id}}">
-									<h4 collection="collection" document_id="{{data._id}}" name="name">Stage Name</h4>
-								</cc-option>
-							</cc-options>
-						</cocreate-select>
+					<div class="width:50% padding-left:5px z-index:7">
+                        <floating-label>
+    						<cocreate-select class="sortable floating-label" name="status" placeholder="Status">
+    							<input placeholder="Search" template_id="status">
+    						    <div template_id="status" filter-name="type" filter-value="5ff747727005da1c272740ab"></div>
+    							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="status" class="overflow:auto">
+    								<cc-option class="template" template_id="status" value="{{data._id}}">
+    									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Stage Name</h4>
+    								</cc-option>
+    							</cc-options>
+    						</cocreate-select>
+                        </floating-label>
 					</div>
 				</div>
 				
-				<cocreate-select class="sortable floating-label" name="related_to" document_id="" multiple placeholder="Related To:">
-					<input placeholder="Search" template_id="related_to">
-					<cc-options fetch-collection="module_activities" template_id="related_to" class="overflow:auto">
-						<cc-option class="template display:flex padding:5px" template_id="related_to" value="{{data._id}}">
-							<div class="display:flex justify-content:center width:25px">
-								<span collection="modules" document_id="{{data.module_id}}" name="icon"></span>
-							</div>
-							<div class="margin-left:10px">
-								<span collection="{{collection}}" document_id="{{data._id}}" name="name"></span>
-								<h5 collection="{{collection}}" document_id="{{data._id}}" name="description"></h5>
-							</div>
-						</cc-option>
-					</cc-options>
-				</cocreate-select>
-				
-				<cocreate-select class="sortable floating-label" name="team" document_id="" multiple placeholder="Team">
-					<input placeholder="Search" template_id="team">
-					<cc-options fetch-collection="users" template_id="team" class="overflow:auto">
-						<cc-option class="template display:flex padding:5px" template_id="team" value="{{data._id}}">
-							<div class="display:flex justify-content:center">
-					            <div class="avatar-wrapper margin:5px">
-					                <a class="avatar round" target="modal" href="../users/profile.html" modal-width="300px"  modal-height="375px"  modal-color="#229954">
-					                    <span collection="{{collection}}" document_id="{{data._id}}" name="name" class="avatar-name"></span>
-					                    <span class="avatar-image">
-					                        <img collection="users" document_id="{{collection}}" name="avatar" onerror="this.style.display='none'" width="40px"/>
-					                    </span>
-					                </a>
-					                <div class="avatar-status"  collection="{{collection}}" document_id="{{data._id}}" user-status='{"name":"status"}'></div>
-					            </div>
-							</div>
-							<div class="margin-left:5px diaplay:flex">
-								<h3 collection="{{collection}}" document_id="{{data._id}}" name="name"></h3>
-								<h5 collection="{{collection}}" document_id="{{data._id}}" name="email"></h5>
-							</div>
-						</cc-option>
-					</cc-options>
-				</cocreate-select>
-				
+                <input type="hidden" name="module_id" pass_id="module_id" value />
+                <floating-label>
+                    <input type="text" name="name" placeholder="Name" class="floating-label" />
+                </floating-label>
+                <floating-label>
+                    <input type="text" name="email" placeholder="Email" class="floating-label" />
+                </floating-label>
+                <floating-label>
+                    <input type="text" name="profile_photo" placeholder="Profile Photo" class="floating-label" />
+                </floating-label>
+
 				<button actions="save" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
 				    <i class="far fa-save"></i>
 				</button>
+
             </form>
 
         </main>
 
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+        <!--<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>-->
 
     </body>
 
