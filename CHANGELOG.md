@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.45...v1.13.0) (2022-01-22)
+
+
+### Features
+
+* builder inut to update input placeholder attribute ([7c4d803](https://github.com/CoCreate-app/CoCreate-admin/commit/7c4d803324bb149e5061126cad125c735eeb4a5f))
+
 ## [1.12.45](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.44...v1.12.45) (2022-01-20)
 
 
