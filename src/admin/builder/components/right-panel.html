@@ -769,20 +769,20 @@
                             </div>
                         </div>
                         <div class="margin:0_5px">
-                             <cocreate-select class="floating-label" id="collection" placeholder="collection:" attribute="collection"  pass_id="builder" attribute-target="iframe; *" collection="" document_id="" crud="false" save="false" read="false" active>
-                                    <ul class="options z-index:7 margin-top:5px">
-                                        <cc-option value=""><span>none</span></cc-option>
-                                        <cc-option value="true"><span>true</span></cc-option>
-                                        <cc-option value="false"><span>false</span></cc-option>
-                                    </ul>
+                             <cocreate-select class="floating-label" id="collection" placeholder="collection:" attribute="collection" pass_id="builder" attribute-target="iframe; *" collection="" document_id="" crud="false" save="false" read="false" set-value="#document_id" set-value-key="setcollection" active>
+                                <ul fetch-collections template_id="collection" class="options z-index:7 margin-top:5px">
+                      				<cc-option class="option template" template_id="collection" value="{{data.name}}">
+                      				    <span>{{data.name}}</span>
+                      				</cc-option>
+                                </ul>
                             </cocreate-select>
                         </div>
                         <div class="margin:0_5px">
                             <cocreate-select class="floating-label" id="document_id" placeholder="document_id:" attribute="document_id" pass_id="builder" attribute-target="iframe; *" collection="" document_id="" crud="false" save="false" read="false" active>
-                                <ul class="options z-index:7 margin-top:5px">
-                                    <cc-option value=""><span>none</span></cc-option>
-                                    <cc-option value="true"><span>true</span></cc-option>
-                                    <cc-option value="false"><span>false</span></cc-option>
+                                <ul fetch-collection="{{setcollection}}" template_id="document_id" class="options z-index:7 margin-top:5px">
+                      				<cc-option class="option template" template_id="document_id" value="{{data._id}}">
+                      				    <span>{{data._id}}</span>
+                      				</cc-option>
                                 </ul>
                             </cocreate-select>
                         </div>
