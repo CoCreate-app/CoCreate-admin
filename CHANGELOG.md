@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.0...v1.13.1) (2022-01-28)
+
+
+### Bug Fixes
+
+* set-value for collections and document_id ([a0fe840](https://github.com/CoCreate-app/CoCreate-admin/commit/a0fe840a828b6862d9347e6912481de474cff629))
+
 # [1.13.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.45...v1.13.0) (2022-01-22)
 
 
