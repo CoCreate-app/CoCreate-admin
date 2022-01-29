@@ -1,3 +1,10 @@
+## [1.13.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.1...v1.13.2) (2022-01-29)
+
+
+### Bug Fixes
+
+* update selected toolbar to use action remove ([3a98a3d](https://github.com/CoCreate-app/CoCreate-admin/commit/3a98a3d0ce226d2ea66835e464b818e94d9ca354))
+
 ## [1.13.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.0...v1.13.1) (2022-01-28)
 
 
