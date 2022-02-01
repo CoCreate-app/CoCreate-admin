@@ -1,3 +1,10 @@
+## [1.13.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.2...v1.13.3) (2022-02-01)
+
+
+### Bug Fixes
+
+* updated marketplace to use block form.html ([be3ac23](https://github.com/CoCreate-app/CoCreate-admin/commit/be3ac2361239bcb31a3d995a169269752612a44d))
+
 ## [1.13.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.1...v1.13.2) (2022-01-29)
 
 
