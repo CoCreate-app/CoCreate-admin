@@ -37,8 +37,8 @@
                 <li class="margin-right:15px">
                     <a target="modal" href="../modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
-                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
-                        <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
+                        <div pass_id="module-form" pass-collection="modules" pass-document_id="60e7483fb979b40017448d13" pass_to="form-fields"></div>
+                        <div pass_id="module_id" pass-filter-value="60e7483fb979b40017448d13" pass_to="module_id"></div>
                     </a>
                 </li>
 
@@ -46,7 +46,7 @@
                 <li class="margin-right:15px">
                     <a target="modal" href="../code-editor/index.html">
                         <i class="fas fa-code"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
+                        <div pass_id="render"  pass-collection="files" pass-document_id="60de0fb414b5ab0c2dd2febf" pass-name="src" pass_to="code-editor"></div>
                     </a>
                 </li>
 
@@ -54,16 +54,16 @@
                 <li class="margin-right:15px">
                     <a target="modal" href="../builder/index.html">
                         <i class="fas fa-palette"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
+                        <div pass_id="render" pass-collection="files" pass-document_id="60de0fb414b5ab0c2dd2febf" pass-name="src" pass_to="builder"></div>
                     </a>
                 </li>
                 
                 <!-- Render Form -->
                 <li class="margin-right:15px"> 
-                    <a target="modal" href="./form.html" pass_to="form-field" modal-width="320px">
+                    <a target="modal" href="../blocks/form.html" pass_to="form-field" modal-width="320px">
                         <i class="fas fa-plus"></i>                      
                         <div pass_id="datatable" pass-collection="" pass_to="form-fields"></div>
-                        <div pass_id="module_id" pass-value="" pass_to="module_id"></div>	
+                        <div pass_id="module_id" pass-value="60e7483fb979b40017448d13" pass_to="module_id"></div>	
                     </a>
                 </li>
             </ul>
@@ -76,7 +76,7 @@
         <main class="padding:20px" content_id="content">
 
             <!-- Fetch and Render Product list -->
-            <div class="display:flex flex-wrap:wrap" fetch-collection="modules" fetch-count="12" order-by="name" order-type="asc" template_id="filter_test">
+            <div class="display:flex flex-wrap:wrap" fetch-collection="blocks" fetch-count="12" order-by="name" order-type="asc" template_id="filter_test">
 
                 <!-- Product Template -->
                 <div class="card template margin:10px flex-grow:1 width:250px" template_id="filter_test">
@@ -108,7 +108,7 @@
                     </div>
                 </div>
 
-
+                <div template_id="filter_test" fetch-type="scroll" class="opacity:0 height:30px"></div>
             </div>
 
         </main>
@@ -117,8 +117,8 @@
         <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:240px width:240px:hover width:0px@0px-826px" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
 
             <div class="padding:5px">
-                <button class="width:100% btn-modal-close" target="modal" href="./form.html" pass_to="form-field" modal-width="320px">
-    			    Custom
+                <button class="width:100% height:40px btn-modal-close">
+                    <a target="modal" href="../blocks/form.html" pass_to="form-field" modal-width="320px">Custom</a>
     			</button>
             </div>
             <!-- Search -->
@@ -144,6 +144,7 @@
         </sidenav>
 
         <script src="https://cdn.cocreate.app/latest/CoCreate.min.js"></script>
+        <!--<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>-->
         
     </body>
 

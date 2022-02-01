@@ -117,7 +117,7 @@
 					</td>
 				</tr>
 
-				<tbody template_id="datatable" fetch-collection="files" order-by="path" order-type="asc" pass_id="datatable">
+				<tbody template_id="datatable" fetch-collection="files" fetch-count="20" order-by="path" order-type="asc" pass_id="datatable">
 
 					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{data._id}}" toggle="selected">
 						<td class="padding:10px">
@@ -130,8 +130,8 @@
 										<h4 collection="{{collection}}" document_id="{{data._id}}" name="path">Name</h4>
 										<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
 										<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
-									<div pass-value="{{data.module_id}}" pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
-									<div pass-document_id="{{data.module_id}}" pass_to="module-form"></div>
+										<div pass-value="{{data.module_id}}" pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
+										<div pass-document_id="{{data.module_id}}" pass_to="module-form"></div>
 									</a>
 									<h5 name="description" value="description"></h5>
 								</div>
@@ -147,9 +147,9 @@
 							</a>
 						</td>
 					</tr>
-
 				</tbody>
 			</table>
+			<div template_id="datatable" fetch-type="scroll" class="opacity:0 height:30px"></div>
 		</main>
 
 		<button class="position:fixed bottom:15px right:15px width:50px height:50px background:dodgerblue grow-hover border-radius:50% z-index:8 color:white">
