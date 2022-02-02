@@ -1,3 +1,10 @@
+## [1.13.5](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.4...v1.13.5) (2022-02-02)
+
+
+### Bug Fixes
+
+* added cdn to index and modules/form ([6bef8b4](https://github.com/CoCreate-app/CoCreate-admin/commit/6bef8b4122fdc257f3007f6d304f57f1614a30d7))
+
 ## [1.13.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.3...v1.13.4) (2022-02-01)
 
 
