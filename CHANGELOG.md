@@ -1,3 +1,10 @@
+## [1.13.9](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.8...v1.13.9) (2022-02-03)
+
+
+### Bug Fixes
+
+* updated cocreate.min version ([1c26a4b](https://github.com/CoCreate-app/CoCreate-admin/commit/1c26a4bd29d73c3b79837bbf427e264b3bbb9f86))
+
 ## [1.13.8](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.7...v1.13.8) (2022-02-03)
 
 
