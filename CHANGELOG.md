@@ -1,3 +1,11 @@
+## [1.13.6](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.5...v1.13.6) (2022-02-03)
+
+
+### Bug Fixes
+
+* remove value='icon' ([ba32a20](https://github.com/CoCreate-app/CoCreate-admin/commit/ba32a204192f27b3894f8fa5268835ccebe9be1d))
+* replaced show and hide class hidden with attribute hidden ([8888bdf](https://github.com/CoCreate-app/CoCreate-admin/commit/8888bdfe2e5c2b3bf4eed386de97971d049e8244))
+
 ## [1.13.5](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.4...v1.13.5) (2022-02-02)
 
 
