@@ -34,7 +34,7 @@
                          <!-- Block Categories Template -->
                         <div class="template" template_id="block-categories" document_id="{{tag._id}}">
                             <div class="padding:5px background:gainsboro" show=".category{{tag._id}}" hide=".category{{tag._id}}">
-                                <span class="category{{tag._id}} hidden"><i class="fas fa-plus"></i></span>
+                                <span class="category{{tag._id}}" hidden><i class="fas fa-plus"></i></span>
                                 <span class="category{{tag._id}}"><i class="fas fa-minus"></i></span>
                                 <span collection="{{tag.collection}}" document_id="{{tag._id}}" name="name">Category Name</span>
                             </div>
@@ -62,7 +62,7 @@
                          <!-- Components Categories Template -->
                         <div class="template" template_id="component-categories" document_id="{{tag._id}}">
                             <div class="padding:5px background:gainsboro" show=".category{{tag._id}}" hide=".category{{tag._id}}">
-                                <span class="category{{tag._id}} hidden"><i class="fas fa-plus"></i></span>
+                                <span class="category{{tag._id}}" hidden><i class="fas fa-plus"></i></span>
                                 <span class="category{{tag._id}}"><i class="fas fa-minus"></i></span>
                                 <span collection="{{tag.collection}}" document_id="{{tag._id}}" name="name">Category Name</span>
                             </div>
@@ -118,7 +118,7 @@
                                 <span class="margin-left:5px" collection="files" document_id="{{$auto._id}}" name="name"></span>
                                 
                                 <!-- fetches folder and file template. This loops until tree ends -->
-                                <div id="directory{{$auto._id}}" class="domEditor margin-left:10px hidden" collection="files" document_id="611ab5d9251afa96bd20f6cc" name="src" filter-value="{{$auto.path}}"></div>
+                                <div id="directory{{$auto._id}}" class="domEditor margin-left:10px" hidden collection="files" document_id="611ab5d9251afa96bd20f6cc" name="src" filter-value="{{$auto.path}}"></div>
                             </div>
                         </div>
                         <div class="fetch-files margin-left:10px sortable" template_id="$auto" fetch-collection="" filter-name="directory" filter-value="/"  filter-operator="$eq" order-by="name" render_id="auto">

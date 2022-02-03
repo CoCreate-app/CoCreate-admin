@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <div id="modal-viewport" class="hidden"></div>
+        <div id="modal-viewport" hidden></div>
 
         <!-- Navbar -->
         <div class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
@@ -128,10 +128,10 @@
 
                                 <!-- Answer and end call -->
                                 <div class="callbtns display:flex {{data.direction}}" collection="{{collection}}" document_id="{{data._id}}" name="status" value="">
-                                    <button class="answer hidden" actions='answerCall' title="Accept Call"><i class="fas fa-phone"></i></button>
-                                    <button class="hold hidden" actions='dialConference' title="Hold"><i class="fas fa-pause"></i></button>
-                                    <button class="hangup hidden" actions='hangupCall' title="End Call"><i class="fas fa-phone-slash"></i></button>
-                                    <!--<button class="voicemail hidden" title="Send to Voicemail"><i class="mdi mdi-48 mdi-voicemail"></i></button>-->
+                                    <button class="answer" hidden actions='answerCall' title="Accept Call"><i class="fas fa-phone"></i></button>
+                                    <button class="hold" hidden actions='dialConference' title="Hold"><i class="fas fa-pause"></i></button>
+                                    <button class="hangup" hidden actions='hangupCall' title="End Call"><i class="fas fa-phone-slash"></i></button>
+                                    <!--<button class="voicemail" hidden title="Send to Voicemail"><i class="mdi mdi-48 mdi-voicemail"></i></button>-->
 
                                     <input type="hidden" twilio="dialConference.friendlyName" value="{{data._id}}">
                                     <input type="hidden" twilio="dialConference.CallSid" value="{{data.CallSid}}">
@@ -145,10 +145,10 @@
                                     <div type="hidden" twilio="holdConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
                                     <div type="hidden" twilio="unholdConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
 
-                                    <button class="join hidden" actions='joinConference' title="Resume Call" data-friendlyName="{{data._id}}"><i class="fas fa-pause"></i></button>
-                                    <button class="hold-conference hidden" actions='holdConference' title="Put Call on Hold"><i class="fas fa-pause"></i></button>
-                                    <button class="unhold hidden" actions='unholdConference' title="Resume Call"><i class="fas fa-pause"></i></button>
-                                    <button class="end hidden" actions='endConference' class="decline" title="End Call con"><i class="fas fa-phone-slash"></i></button>
+                                    <button class="join" hidden actions='joinConference' title="Resume Call" data-friendlyName="{{data._id}}"><i class="fas fa-pause"></i></button>
+                                    <button class="hold-conference" hidden actions='holdConference' title="Put Call on Hold"><i class="fas fa-pause"></i></button>
+                                    <button class="unhold" hidden actions='unholdConference' title="Resume Call"><i class="fas fa-pause"></i></button>
+                                    <button class="end" hidden actions='endConference' class="decline" title="End Call con"><i class="fas fa-phone-slash"></i></button>
                                 </div>
 
                                 <!-- Transfer -->
@@ -156,7 +156,7 @@
                                 <button class="transfer" actions='dialTransfer' title="Transfer Call"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABlUlEQVRIiZ3VMWsUQRjG8V8ukSCiELGxsjFFimgpGEELLQUJWoj5DoFU+QpW2likMm2wyAeIomghYqEEoqSQiGCjKZKYIrmol2LnzLju7Mz5wMLx3vN/n9l3hh3+1iieYRWTBtMonuJzG7uIXni+DRiSZa/id2QaJORGjfuHHcaHBlMPXzPNO/iYY+8lDD08zARMl7CvE4ZV1ea1KcuOt6xgOtP8Qgk7mzC8UM23TfMl7FL0x3WMqTY91kQiYLmAtRYMe9Lz3sGdhvp6AWsrmNZThmiVCzgW1bcLWAfB9CbRtP68xFkM4WeC/aNOCICRtlU0qD+aLLsRzBuZZk0j+lTAeh5MBzU4VmqTV3JsB+/D7xFcTARcwpOG+rscO4xT0erGcRk3cQ5vQ30zEXwcdzOsk6rNqp+WXy1vFAfslrCPG0w9vJI/XY9K2MmQ+j+f6/PoJtgHsXEhYeriTCbkfoLdiU2n8b1m2MetTHM4obrsY/YHrtSNtx3dy93C5n1dczSqXdUd36g5fFEdt0E1o/ouTfULh60e2n2ht7rUAAAAAElFTkSuQmCC" height="24px"></button>
 
                                 <!-- Enqueue -->
-                                <div class="hidden">
+                                <div hidden>
                                     <input twilio="dialEnqueue.nameEnqueue" data-old="{{data.From}}" value="cocreateEnqueue">
                                     <input twilio="dialEnqueue.CallSid" value="{{data.CallSid}}">
                                     <input twilio="dialEnqueue.waitUrl" value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic">
@@ -464,21 +464,21 @@
                                     <input type="hidden" twilio="endConference.CallSid" value="{{data.idconference}}">
                                     <input type="hidden" twilio="holdConference.CallSid" value="{{data.idconference}}">
                                     <input type="hidden" twilio="unholdConference.CallSid" value="{{data.idconference}}">
-                                    <button class="hidden" actions='joinConference' data-friendlyName="{{data.friendlyName}}" title="Resume Call">
+                                    <button hidden actions='joinConference' data-friendlyName="{{data.friendlyName}}" title="Resume Call">
                                         <i class="fas fa-pause"></i>
                                     </button>
-                                    <button class="hidden" actions='holdConference'><i class="fas fa-pause"></i></button>
-                                    <button class="hidden" actions='unholdConference'><i class="fas fa-pause"></i></button>
+                                    <button hidden actions='holdConference'><i class="fas fa-pause"></i></button>
+                                    <button hidden actions='unholdConference'><i class="fas fa-pause"></i></button>
                                 </div>
                             </div>
                             <div class="display:flex justify-content:center width:33%">
                                 <button actions='createCall' class="answer is-animating" title="Answer Call" show="#end-call" hide="">
             					    <i class="fas fa-phone"></i>
             					</button>
-                                <button id="#end-call" class="decline hidden" actions='hangupCall' title="End Call"><i class="fas fa-phone-slash"></i></button>
+                                <button id="#end-call" class="decline" hidden actions='hangupCall' title="End Call"><i class="fas fa-phone-slash"></i></button>
                                 <!-- End Conference -->
                                 <input type="hidden" twilio="endConference.CallSid" value="{{data.idconference}}">
-                                <button class="hidden" actions='endConference'><i class="fas fa-phone-slash"></i></button>
+                                <button hidden actions='endConference'><i class="fas fa-phone-slash"></i></button>
                             </div>
                             <div class="display:flex justify-content:center width:33%">
                                 <button class="transfer" actions='dialTransfer' title="Transfer Call"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABlUlEQVRIiZ3VMWsUQRjG8V8ukSCiELGxsjFFimgpGEELLQUJWoj5DoFU+QpW2likMm2wyAeIomghYqEEoqSQiGCjKZKYIrmol2LnzLju7Mz5wMLx3vN/n9l3hh3+1iieYRWTBtMonuJzG7uIXni+DRiSZa/id2QaJORGjfuHHcaHBlMPXzPNO/iYY+8lDD08zARMl7CvE4ZV1ea1KcuOt6xgOtP8Qgk7mzC8UM23TfMl7FL0x3WMqTY91kQiYLmAtRYMe9Lz3sGdhvp6AWsrmNZThmiVCzgW1bcLWAfB9CbRtP68xFkM4WeC/aNOCICRtlU0qD+aLLsRzBuZZk0j+lTAeh5MBzU4VmqTV3JsB+/D7xFcTARcwpOG+rscO4xT0erGcRk3cQ5vQ30zEXwcdzOsk6rNqp+WXy1vFAfslrCPG0w9vJI/XY9K2MmQ+j+f6/PoJtgHsXEhYeriTCbkfoLdiU2n8b1m2MetTHM4obrsY/YHrtSNtx3dy93C5n1dczSqXdUd36g5fFEdt0E1o/ouTfULh60e2n2ht7rUAAAAAElFTkSuQmCC" height="24px"></button>

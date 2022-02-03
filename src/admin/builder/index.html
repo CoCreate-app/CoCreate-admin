@@ -55,7 +55,7 @@
                 </li>
 
                 <li actions="disableLinks" link-target="#canvas;" class="margin-right:15px" show="[actions='enableLinks']" hide="[actions='disableLinks']"><i class="fas fa-link"></i></li>
-                <li actions="enableLinks" link-target="#canvas;" class="margin-right:15px color:red hidden" show="[actions='disableLinks']" hide="[actions='enableLinks']"><i class="fas fa-unlink"></i></li>
+                <li actions="enableLinks" link-target="#canvas;" class="margin-right:15px color:red" hidden show="[actions='disableLinks']" hide="[actions='enableLinks']"><i class="fas fa-unlink"></i></li>
 
                 <li class="margin-right:15px" show="iframe; .template, iframe; [templateid]" hide="iframe; [templateid], iframe; .template">Q</li>
 
@@ -133,7 +133,7 @@
                 <div actions="nodeName" nodeName="b" nodeTarget="#canvas;" classname="rte-btn" class="padding:5px" id="bold-button"><i class="fa fa-bold"></i></div>
                 <div actions="nodeName" nodeName="i" nodeTarget="#canvas;" class="rte-btn" id="italic-button"><i class="fa fa-italic"></i></div>
                 <div class="rte-btn" id="link-button" show="#link" hide="#link"><i class="fa fa-link"></i></div>
-                <div id="link" class="position:absolute display:flex align-items:center transition:0.4s background:gainsboro height:28px border-radius:5px hidden">
+                <div id="link" class="position:absolute display:flex align-items:center transition:0.4s background:gainsboro height:28px border-radius:5px" hidden>
                     <input type="text" name="" />
                     <div actions="nodeName" nodeName="a" nodeTarget="#canvas;" class="rte-btn" id="link-button"><i class="fa fa-link"></i></div>
                     <div hide="#link"><i class="fa fa-times"></i></div>
@@ -149,7 +149,7 @@
                     <div actions="nodeName" nodeName="h6" nodeTarget="#canvas;" class="rte-btn" id="header-2-button"><i class="fas fa-heading"></i><sub>6</sub></div>
                 </div>
                 <div class="rte-btn" id="show-controls" show="#sidebar-controls" hide="#sidebar-controls"><i class="fa fa-plus"></i></div>
-                <div id="sidebar-controls" class="display:flex align-items:center hidden">
+                <div id="sidebar-controls" class="display:flex align-items:center" hidden>
                     <div class="rte-btn" id="image-button"><i class="fa fa-camera"></i></div>
                     <div class="rte-btn" id="video-button"><i class="fa fa-play"></i></div>
                     <div class="rte-btn" id="tweet-button"><i class="fa fa-twitter"></i></div>
