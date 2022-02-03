@@ -116,7 +116,7 @@
 						<li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template_id="main-menu">
 							<a target="modal" pass-collection="files" pass-document_id="{{data.main-menu-primary}}" pass_to="render" pass-name="src" modal-width="600px" modal-color="{{data.main-modal-color}}"
 							 class="display:inline-block">
-								<span class="display:inline-block width:50px text-align:center" document_id="{{data._id}}" collection="modules" name="icon" value="icon"></span>
+								<span class="display:inline-block width:50px text-align:center" document_id="{{data._id}}" collection="modules" name="icon"></span>
 								<span collection="modules" document_id="{{data._id}}" name="name" ></span>
 								<div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{data._id}}" pass_to="datatable"></div>
 								<div pass-collection="module_activities" pass-value="{{data._id}}" pass_to="module_id"></div>

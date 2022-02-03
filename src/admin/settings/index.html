@@ -63,7 +63,7 @@
 					<li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template_id="settings-menu">
                         <input type="hidden" collection="files" document_id="{{data.settings-menu-primary}}" name="path" set-value="#a{{data._id}}" set-value-key="primary-url">
                         <a target="modal" id="a{{data._id}}" href='../..{{primary-url}}' modal-width="{{data.settings-modal-primary-width}}" modal-color="{{data.settings-modal-primary-color}}" class="display:inline-block">
-							<span class="display:inline-block width:50px text-align:center" document_id="{{data._id}}" collection="modules" name="icon" value="icon"></span>
+							<span class="display:inline-block width:50px text-align:center" document_id="{{data._id}}" collection="modules" name="icon"></span>
 							<span collection="modules" document_id="{{data._id}}" name="name"></span>
 							<div pass-filter-name="module_id" pass-filter-value="{{data._id}}" pass_to="datatable"></div>
 							<div pass-value="{{data._id}}" pass-filter-value="{{data._id}}" pass_to="module_id"></div>
