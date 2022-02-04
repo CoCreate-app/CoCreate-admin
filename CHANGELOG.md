@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.9...v1.14.0) (2022-02-04)
+
+
+### Features
+
+* ability to update filter-operator, order-by, order-type attributes ([814feef](https://github.com/CoCreate-app/CoCreate-admin/commit/814feefba065e8a5cc661ca0db44475b0901ac21))
+
 ## [1.13.9](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.8...v1.13.9) (2022-02-03)
 
 
