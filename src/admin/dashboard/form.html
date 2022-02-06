@@ -85,10 +85,10 @@
 					<div class="flex-grow:1 padding-left:5px">
 						<cocreate-select class="sortable floating-label flex-grow:1" name="stage" document_id="stage" multiple placeholder="Stage">
 							<input placeholder="Search" template_id="stage">
-						    <div template_id="stage" filter-name="type" filter-value="60eb93a2b979b4001744b445"></div>
+						    <div template_id="stage" filter-name="type" filter-value="5ff747727005da1c272740ab"></div>
 							<cc-options fetch-collection="tags" filter-name="module_id" pass_id="module_id" filter-value="" template_id="stage" class="overflow:auto">
 								<cc-option class="template" template_id="stage" value="{{data._id}}">
-									<h4 collection="collection" document_id="{{data._id}}" name="name">Stage Name</h4>
+									<h4 collection="{{collection}}}" document_id="{{data._id}}" name="name">Stage Name</h4>
 								</cc-option>
 							</cc-options>
 						</cocreate-select>
