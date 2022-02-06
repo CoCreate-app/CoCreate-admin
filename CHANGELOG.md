@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.14.0...v1.14.1) (2022-02-06)
+
+
+### Bug Fixes
+
+* update fiters using component document_id ([440b6a1](https://github.com/CoCreate-app/CoCreate-admin/commit/440b6a1877855872590e32858a80ae59865823c8))
+
 # [1.14.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.13.9...v1.14.0) (2022-02-04)
 
 
