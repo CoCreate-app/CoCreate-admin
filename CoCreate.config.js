@@ -13,7 +13,7 @@ module.exports = {
             "data": {
                 "name": "signin.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/signin.html",
@@ -32,7 +32,7 @@ module.exports = {
             "data": {
                 "name": "signup.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/signup.html",
@@ -51,7 +51,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/apikeys/datatable.html",
@@ -70,7 +70,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/apikeys/form.html",
@@ -89,7 +89,7 @@ module.exports = {
             "data": {
                 "name": "apikey.js",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/apikey.js",
@@ -108,7 +108,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/index.html",
@@ -127,7 +127,7 @@ module.exports = {
             "data": {
                 "name": "index.css",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/index.css",
@@ -146,7 +146,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/activities/datatable.html",
@@ -165,7 +165,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/blocks/datatable.html",
@@ -184,7 +184,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/blocks/form.html",
@@ -203,7 +203,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/blog/datatable.html",
@@ -222,7 +222,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/blog/form.html",
@@ -241,7 +241,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/builder/index.html",
@@ -260,7 +260,7 @@ module.exports = {
             "data": {
                 "name": "index.css",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/builder/index.css",
@@ -279,7 +279,7 @@ module.exports = {
             "data": {
                 "name": "right-panel.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/builder/right-panel.html",
@@ -298,7 +298,7 @@ module.exports = {
             "data": {
                 "name": "left-panel.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/builder/left-panel.html",
@@ -317,7 +317,7 @@ module.exports = {
             "data": {
                 "name": "filetree.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/builder/filetree.html",
@@ -336,7 +336,7 @@ module.exports = {
             "data": {
                 "name": "index.css",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/calendar/index.css",
@@ -355,7 +355,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/calendar/index.html",
@@ -374,7 +374,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/calendar/form.html",
@@ -393,7 +393,7 @@ module.exports = {
             "data": {
                 "name": "index.css",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/call-center/index.css",
@@ -412,7 +412,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/call-center/index.html",
@@ -431,7 +431,7 @@ module.exports = {
             "data": {
                 "name": "index.css",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/code-editor/index.css",
@@ -450,7 +450,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/code-editor/index.html",
@@ -469,7 +469,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/companies/datatable.html",
@@ -488,7 +488,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/companies/form.html",
@@ -507,7 +507,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/components/datatable.html",
@@ -526,7 +526,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/components/form.html",
@@ -545,7 +545,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/contacts/datatable.html",
@@ -564,7 +564,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/contacts/form.html",
@@ -583,7 +583,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/dashboard/index.html",
@@ -602,7 +602,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/dashboard/form.html",
@@ -621,7 +621,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/domains/index.html",
@@ -640,7 +640,7 @@ module.exports = {
             "data": {
                 "name": "compose.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/compose.html",
@@ -659,7 +659,7 @@ module.exports = {
             "data": {
                 "name": "settings.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/email/settings.html",
@@ -678,7 +678,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/email/index.html",
@@ -697,7 +697,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/estimates/index.html",
@@ -716,7 +716,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/estimates/datatable.html",
@@ -735,7 +735,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/estimates/form.html",
@@ -754,7 +754,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/expenses/datatable.html",
@@ -773,7 +773,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/expenses/form.html",
@@ -792,7 +792,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/files/datatable.html",
@@ -811,7 +811,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/files/form.html",
@@ -830,7 +830,7 @@ module.exports = {
             "data": {
                 "name": "index.css",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/fleet-tracking/index.css",
@@ -849,7 +849,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/fleet-tracking/index.html",
@@ -868,7 +868,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/image-editor/index.html",
@@ -887,7 +887,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/industries/datatable.html",
@@ -906,7 +906,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/industries/form.html",
@@ -925,7 +925,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/invoices/datatable.html",
@@ -944,7 +944,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/invoices/form.html",
@@ -963,7 +963,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/invoices/index.html",
@@ -982,7 +982,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/items/datatable.html",
@@ -1001,7 +1001,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/items/form.html",
@@ -1020,7 +1020,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/marketplace/form.html",
@@ -1039,7 +1039,7 @@ module.exports = {
             "data": {
                 "name": "list.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/marketplace/list.html",
@@ -1058,7 +1058,7 @@ module.exports = {
             "data": {
                 "name": "item.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/marketplace/item.html",
@@ -1077,7 +1077,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/marketplace/form.html",
@@ -1096,7 +1096,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/module-templates/datatable.html",
@@ -1115,7 +1115,7 @@ module.exports = {
             "data": {
                 "name": "orm.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/module-templates/form.html",
@@ -1134,7 +1134,7 @@ module.exports = {
             "data": {
                 "name": "blank.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/module-templates/templates/blank.html",
@@ -1154,7 +1154,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/module-templates/templates/datatable.html",
@@ -1174,7 +1174,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/module-templates/templates/form.html",
@@ -1194,7 +1194,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/modules/datatable.html",
@@ -1213,7 +1213,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/modules/form.html",
@@ -1232,7 +1232,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/module-views/datatable.html",
@@ -1251,7 +1251,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/module-views/form.html",
@@ -1270,7 +1270,7 @@ module.exports = {
             "data": {
                 "name": "creator.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/organizations/creator.html",
@@ -1289,7 +1289,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/organizations/datatable.html",
@@ -1308,7 +1308,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/organizations/form.html",
@@ -1327,7 +1327,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/payments/datatable.html",
@@ -1346,7 +1346,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/payments/form.html",
@@ -1365,7 +1365,7 @@ module.exports = {
             "data": {
                 "name": "settings.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/payments/settings.html",
@@ -1384,7 +1384,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/potentials/datatable.html",
@@ -1403,7 +1403,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/potentials/form.html",
@@ -1422,7 +1422,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/projects/datatable.html",
@@ -1441,7 +1441,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/projects/form.html",
@@ -1460,7 +1460,7 @@ module.exports = {
             "data": {
                 "name": "kanban.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/projects/kanban.html",
@@ -1479,7 +1479,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/settings/index.html",
@@ -1498,7 +1498,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/social/index.html",
@@ -1517,7 +1517,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/tags/datatable.html",
@@ -1536,7 +1536,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/tags/form.html",
@@ -1555,7 +1555,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/tasklists/datatable.html",
@@ -1574,7 +1574,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/tasklists/form.html",
@@ -1593,7 +1593,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/users/form.html",
@@ -1612,7 +1612,7 @@ module.exports = {
             "data": {
                 "name": "profile.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/users/profile.html",
@@ -1631,7 +1631,7 @@ module.exports = {
             "data": {
                 "name": "datatable.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/users/datatable.html",
@@ -1650,7 +1650,7 @@ module.exports = {
             "data": {
                 "name": "index.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/wallet/index.html",
@@ -1669,7 +1669,7 @@ module.exports = {
             "data": {
                 "name": "list.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/websites/list.html",
@@ -1688,7 +1688,7 @@ module.exports = {
             "data": {
                 "name": "form.html",
                 "domains": [
-                    "cocreate.app",
+                    "*",
                     "general.cocreate.app"
                 ],
                 "path": "/admin/websites/form.html",
