@@ -70,7 +70,7 @@
 				<input type="text" name="description" placeholder="Description" class="floating-label" />
 				<input type="text" name="profile_image" placeholder="Profile Image" class="floating-label" />
 
-				<cocreate-select name="connected_orgs" placeholder="Connected Org" class="sortable floating-label" multiple>
+				<cocreate-select name="connected_orgs" placeholder="Connected Org" sortable class="floating-label" multiple>
 					<input placeholder="Search" template_id="connect">
 					<ul fetch-collection="organizations" template_id="connectn" class="options overflow:auto">
 						<li class="template option" collection="organizations" template_id="connectn">
@@ -83,7 +83,7 @@
 					</ul>
 				</cocreate-select>
 
-				<cocreate-select name="current_org" placeholder="Current Org" class="sortable floating-label">
+				<cocreate-select name="current_org" placeholder="Current Org" sortable class="floating-label">
 					<input placeholder="Search" template_id="connect">
 					<ul fetch-collection="users" fetch-document="" fetch-name="connected_orgs" template_id="connect" class="options overflow:auto">
 

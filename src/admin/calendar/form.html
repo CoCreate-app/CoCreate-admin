@@ -66,7 +66,7 @@
 				<div class="display:flex height:50px">
 					<div class="width:50% padding-right:5px z-index:7">
 		                <floating-label>
-    						<cocreate-select class="sortable floating-label" name="stage" document_id="" multiple placeholder="Stage">
+    						<cocreate-select sortable class="floating-label" name="stage" document_id="" multiple placeholder="Stage">
     							<input placeholder="Search" template_id="stage">
     						    <div template_id="stage" filter-name="stage" filter-value="5ff747727005da1c272740ab"></div>
     							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="stage" class="overflow:auto">
@@ -79,7 +79,7 @@
 					</div>
 					<div class="width:50% padding-left:5px">
 		                <floating-label>
-    						<cocreate-select class="sortable floating-label z-index:7" name="status" document_id="status" placeholder="Status">
+    						<cocreate-select sortable class="floating-label z-index:7" name="status" document_id="status" placeholder="Status">
     							<input placeholder="Search" template_id="status">
     						    <div template_id="status" filter-name="type" filter-value="5ff747727005da1c272740ab"></div>
     							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="status" class="overflow:auto">
@@ -117,7 +117,7 @@
                 </div>
                 </floating-label>
                 <floating-label>
-    				<cocreate-select class="sortable floating-label" name="related_to" document_id="" multiple placeholder="Related To:">
+    				<cocreate-select sortable class="floating-label" name="related_to" document_id="" multiple placeholder="Related To:">
     					<input placeholder="Search" template_id="related_to">
     					<cc-options fetch-collection="module_activities" template_id="related_to" class="overflow:auto">
     						<cc-option class="template display:flex padding:5px" template_id="related_to" value="{{data._id}}">
@@ -133,7 +133,7 @@
     				</cocreate-select>
                 </floating-label>
                 <floating-label>
-    				<cocreate-select class="sortable floating-label" name="team" document_id="" multiple placeholder="Team">
+    				<cocreate-select sortable class="floating-label" name="team" document_id="" multiple placeholder="Team">
     					<input placeholder="Search" template_id="team">
     					<cc-options fetch-collection="users" template_id="team" class="overflow:auto">
     						<cc-option class="template display:flex padding:5px" template_id="team" value="{{data._id}}">

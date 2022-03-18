@@ -90,7 +90,7 @@
                 <input type="text" name="description" id="description" placeholder="Description" class="floating-label" />
                 <input type="text" name="image" id="image" placeholder="Image" class="floating-label" />
 
-				<cocreate-select class="sortable floating-label" name="module_id" placeholder="Module">
+				<cocreate-select sortable class="floating-label" name="module_id" placeholder="Module">
 					<input placeholder="Search" template_id="module_id">
 					<cc-options fetch-collection="modules" template_id="module_id" class="overflow:auto">
 						<cc-option class="template" template_id="module_id" value="{{data._id}}">

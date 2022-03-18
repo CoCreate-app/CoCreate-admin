@@ -132,7 +132,7 @@
 						<div class="padding:5px background:whitesmoke">
 							<div id='navbar-menu' class="menu-item overflow:hidden height:0px active">
 								<div id="navbar-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
-									<cocreate-select name="navbar-menu-primary" placeholder="Primary View" class="floating-label sortable">
+									<cocreate-select name="navbar-menu-primary" placeholder="Primary View" class="floating-label " sortable>
 										<input placeholder="Search" template_id="navbar-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="navbar-menu-primary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="navbar-menu-primary" class="overflow:auto module_id">
@@ -175,7 +175,7 @@
 									<div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" selected-value="active" selected-target="#main-menu-secondary" selected-group="main-menu-item">Secondary</div>
 								</div>
 								<div id="main-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
-									<cocreate-select class="floating-label sortable" placeholder="Primary View" name="main-menu-primary">
+									<cocreate-select class="floating-label " sortable placeholder="Primary View" name="main-menu-primary">
 										<input placeholder="Search" template_id="main-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-primary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-primary" class="overflow:auto module_id">
@@ -211,7 +211,7 @@
 									</div>
 								</div>
 								<div id="main-menu-secondary" class="menu-item-type overflow:hidden height:0px">
-									<cocreate-select class="floating-label sortable" placeholder="Secondary View" name="main-menu-secondary">
+									<cocreate-select class="floating-label " sortable placeholder="Secondary View" name="main-menu-secondary">
 										<input placeholder="Search" template_id="main-menu-secondary" tags="true">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-secondary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-secondary" class="overflow:auto module_id">
@@ -246,7 +246,7 @@
 									<div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" selected-value="active" selected-target="#settings-menu-secondary" selected-group="settings-menu-item">Secondary</div>
 								</div>
 								<div id="settings-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
-									<cocreate-select class="floating-label sortable" placeholder="Primary View" name="settings-menu-primary">
+									<cocreate-select class="floating-label " sortable placeholder="Primary View" name="settings-menu-primary">
 										<input placeholder="Search" template_id="settings-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-primary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-primary" class="overflow:auto module_id">
@@ -282,7 +282,7 @@
 									</div>
 								</div>
 								<div id="settings-menu-secondary" class="menu-item-type overflow:hidden height:0px">
-									<cocreate-select class="floating-label sortable" placeholder="Secondary View" name="settings-menu-secondary">
+									<cocreate-select class="floating-label " sortable placeholder="Secondary View" name="settings-menu-secondary">
 										<input placeholder="Search" template_id="settings-menu-secondary" tags="true">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-secondary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-secondary" class="overflow:auto module_id">
@@ -327,7 +327,7 @@
 				</div>
 	
 				<input type="hidden" filter-name="module_id" filter-value="" filter-operator="$ne" template_id="files">
-				<div fetch-collection="files" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" order-by="name" order-type="asc" template_id="files" pass_id="module_id" class="sortable background:whitesmoke padding:10px module_id" dnd-group-name="files">
+				<div fetch-collection="files" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" order-by="name" order-type="asc" template_id="files" pass_id="module_id" sortable class="background:whitesmoke padding:10px module_id" dnd-group-name="files">
 	
 					<div template_id="files" class="template card padding:10px_5px background:white collapsed margin-bottom:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
                         <div class="display:flex padding-left:10px">

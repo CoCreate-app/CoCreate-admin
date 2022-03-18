@@ -83,7 +83,7 @@
                 <input type="hidden" name="_id" id="website_id">
                 <input type="text" name="description" id="description" placeholder="Description" class="floating-label">
                 <input type="text" name="image" placeholder="Preview" class="floating-label">
-				<cocreate-select class="sortable floating-label" name="home" placeholder="Home Page">
+				<cocreate-select sortable class="floating-label" name="home" placeholder="Home Page">
 					<input placeholder="Search" template_id="home">
 					<cc-options fetch-collection="" filter-name="" filter-value="" order-by="name" order-type="asc" template_id="home" pass_id="website_id" class="overflow:auto">
 						<cc-option class="template" template_id="home" value="{{data._id}}">
@@ -103,7 +103,7 @@
                     <a show="#page-templates" hide="#form, #website-pages" pass-collection="files" pass_to="page-templates"><i class="far fa-plus-square"></i></a>
                 </div>
                 <!--<input type="hidden" filter-name="module-view" filter-value="module-view" template_id="module-views">-->
-                <div fetch-collection="" filter-name="" filter-value="" order-by="name" order-type="asc" template_id="website-pages" pass_id="website_id" class="sortable background:whitesmoke padding:10px" dnd-group-name="website-pages">
+                <div fetch-collection="" filter-name="" filter-value="" order-by="name" order-type="asc" template_id="website-pages" pass_id="website_id" sortable class="background:whitesmoke padding:10px" dnd-group-name="website-pages">
                     <div template_id="website-pages" class="template card padding:10px_5px background:white collapsed margin-bottom:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
                         <div class="display:flex padding-left:10px">
                             <a target="modal" href="../files/form.html" modal-width="320px" class="flex-grow:1 font-size:16px padding:5px_0">

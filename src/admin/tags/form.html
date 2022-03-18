@@ -69,7 +69,7 @@
                 <input type="text" name="name" placeholder="Name" class="floating-label">
                 <input type="text" name="description" placeholder="Description" class="floating-label">
 				<input type="number" name="position" placeholder="Position" class="floating-label">
-				<cocreate-select name="type" placeholder="Type" class="sortable floating-label">
+				<cocreate-select name="type" placeholder="Type" sortable class="floating-label">
 					<input placeholder="Search" template_id="type">
 					<cc-options fetch-collection="tags" template_id="type" filter-name="module_id" filter-value="60eb8361b979b4001744b339" class="overflow:auto">
 						<cc-option class="template" template_id="type" value="{{data._id}}">
@@ -77,7 +77,7 @@
 						</cc-option>
 					</cc-options>
 				</cocreate-select>
-				<cocreate-select name="module_id" placeholder="Module" class="sortable floating-label" set-value="#tags" set-value-key="module_id">
+				<cocreate-select name="module_id" placeholder="Module" sortable class="floating-label" set-value="#tags" set-value-key="module_id">
 					<input placeholder="Search" template_id="module_id">
 					<cc-options fetch-collection="modules" order-by="name" template_id="module_id" class="overflow:auto">
 						<cc-option class="template" template_id="module_id" value="{{data._id}}">
@@ -88,7 +88,7 @@
 						</cc-option>
 					</cc-options>
 				</cocreate-select>
-				<cocreate-select name="tags" placeholder="Tags" class="sortable floating-label" multiple>
+				<cocreate-select name="tags" placeholder="Tags" sortable class="floating-label" multiple>
 					<input placeholder="Search" template_id="tags">
 					<cc-options id="tags" fetch-collection="tags" template_id="tags" filter-name="module_id" filter-value="{{module_id}}" class="overflow:auto">
 						<cc-option class="template" template_id="tags" value="{{data._id}}">
