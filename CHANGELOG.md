@@ -1,3 +1,15 @@
+# [1.15.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.14.15...v1.15.0) (2022-04-01)
+
+
+### Bug Fixes
+
+* bump cdn verison to 1.13.6 ([20a0f69](https://github.com/CoCreate-app/CoCreate-admin/commit/20a0f6995b658594055ae4b14f84a02c59cbd4d2))
+
+
+### Features
+
+* dtatabase ui for viewing and editing data stored in db ([bd3d088](https://github.com/CoCreate-app/CoCreate-admin/commit/bd3d0887453886850aace57f8897d5fc693d7753))
+
 ## [1.14.15](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.14.14...v1.14.15) (2022-03-24)
 
 
