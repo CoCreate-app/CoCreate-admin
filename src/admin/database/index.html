@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Database | CoCreate</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
+        <link rel="stylesheet" href="./index.css" collection="files" document_id="60e4f9714792bff869f1bde5" name="src" parse="true" type="text/css"/>
+    </head>
+
+    <style type="text/css">
+        .cocreate-search .floating-label_field{margin-top:0px;}
+    </style> 
+    
+    <style type="text/css">
+        div[user-status="on"] {background-color:yellowgreen;}
+        div[user-status="off"] {background-color:red;}
+        div[user-status="idle"] {background-color:orange;}
+        ul::-webkit-scrollbar-thumb, ul::-webkit-scrollbar-track{background-color:rgba(0,0,0,0.01)}
+    </style>
+    <body>
+        <a href="./signin.html" session="false" hidden></a>
+        <!-- Navbar  -->
+        <nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll=", hide-nav" scroll-up="5" scroll-down="5">
+      
+			<!-- Menu Icon -->
+			<a class="menu_icon" click="active" toggle="width:275px," toggle-target="#menuL" toggle-attribute="style">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+        
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+            			
+            	<!-- Fullscreen toogle -->
+				<li class="margin-right:15px"><a fullscreen><i toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+              
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="./modules/form.html" modal-width="320px">
+                        <i class="fas fa-cog"></i>
+                        <div pass-collection="modules" pass-document_id="5ff747727005da1c2727419c" pass_to="form-fields"></div>
+                        <div pass-filter-value="5ff747727005da1c2727419c" pass_to="module_id"></div>
+                    </a>
+                </li>
+                
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="./code-editor/index.html">
+                        <i class="fas fa-code"></i>
+                        <div pass_id="render" pass-collection="files" pass-document_id="60bea334b25613e8da1b4bdf" pass-name="src" pass_to="code-editor"></div>
+                    </a>
+                </li>
+                
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a target="modal" href="./builder/index.html" class="sessionBuilderUI_Id">
+                        <i class="fas fa-palette"></i>
+                        <div pass_id="render" pass-collection="files" pass-document_id="60bea334b25613e8da1b4bdf" pass-name="src" pass_to="builder"></div>
+                    </a>
+                </li>
+                
+            </ul>
+        </nav>
+    
+        <!-- Modal Viewport  -->
+        <div class="position:fixed margin-top:50px" content_id="content" id="modal-viewport"></div>
+       
+        <!-- Main container  -->
+        <main class="height:100vh padding:10px" content_id="content">
+			<table class="width:100% border-collapse:collapse">
+				<tr class="border-bottom:1px_solid_darkgray">
+					<td class="position:sticky top:0 background:white padding-top:0 padding:10px ">
+	            		<floating-label>
+							<input type="text" class="floating-label" filter-name="name" template_id="datatable" placeholder="Name">
+						</floating-label>
+						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
+							<a order-by="name" toggle-order="asc" template_id="datatable"></a>
+						</span>
+					</td>
+					<td class="position:sticky top:0 background:white padding:10px padding-top:0">
+	            		<floating-label>
+							<input type="text" class="floating-label" filter-name="_id" template_id="datatable" placeholder="Document_id" />
+						</floating-label>
+						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
+							<a order-by="_id" toggle-order="asc" template_id="datatable"></a>
+						</span>
+					</td>
+				</tr>
+
+				<tbody template_id="datatable" fetch-collection="" filter-name="" filter-value="" order-by="name" order-type="asc" pass-refresh pass_id="datatable" fetch-count="20">
+
+					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{data._id}}" toggle="selected">
+						<td class="padding:5px display:flex min-width:200px align-items:center">
+							<div class="margin-left:10px">
+								<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954">
+									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Name</h4>
+									<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
+									<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
+									<div pass-value="{{data.module_id}}" pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
+									<div pass-document_id="{{data.module_id}}" pass_to="module-form"></div>
+								</a>
+								<h5 collection="{{collection}}" document_id="{{data._id}}" name="email"></h5>
+							</div>
+						</td>
+						<td class="padding:10px">
+							<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954">
+								<b>{{data._id}}</b>
+								<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
+								<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
+								<div pass-value="{{data.module_id}}" pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
+								<div pass-document_id="{{data.module_id}}" pass_to="module-form"></div>
+							</a>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+        </main>
+        
+        <!-- SideNav  -->
+        <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:275px width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
+        
+			<!-- Search -->
+			<form class="padding:5px">
+				<input type="text" class="floating-label" pass-value_to="results">
+				<span class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">
+					<a target="modal" pass_to="render" collection="website-pages" document_id="" pass-name="src" modal-width="900px" modal-color="#229954">
+						<i class="fas fa-search"></i>
+					</a>
+				</span>
+			</form>
+        	
+        	<div class="padding-right:5px padding-bottom:5px">
+                <!-- Fetch and Render-->
+                <ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_90px) bottom:10px margin-right:5px">
+                    <div fetch-collections template_id="collections">
+                        
+                        <!-- Template -->
+                        <li template_id="collections" class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover">
+                            <a pass-collection="{{data.name}}" pass_to="datatable" class="display:inline-block padding-left:15px">
+                                
+                                <span>{{data.name}}</span>
+                                <div pass-collection="{{data.name}}" pass_to="datatable"></div>
+                            </a>
+                            <div class="float:right width:50px text-align:center">
+                                <a target="modal" href='..{{secondary-url}}' get-value="#b{{data._id}}" get-value-key="secondary-url"
+                                    modal-width="{{data.main-modal-secondary-width}}"
+                                    modal-color="{{data.main-modal-secondary-color}}">
+                                    <i class="fas fa-plus"></i>
+                                    <div pass-collection="{{data.name}}" pass_to="datatable"></div>
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+			</div>
+            <div resize="right"></div>
+        </sidenav>
+        
+		<div class="position:fixed!important bottom:15px right:15px">
+	        <div template_id="notification" class="template card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
+	            <span class="{{type}}">{{message}}</span><a actions="remove" remove-closest="[templateid]"> X</a>
+	        </div>
+		</div>
+
+        <!-- <script src="https://cdn.cocreate.app/1.13.5/CoCreate.min.js"></script> -->
+        <script src="../../../../CoCreateJS/dist/CoCreate.js"></script>
+        
+    </body>
+</html>
