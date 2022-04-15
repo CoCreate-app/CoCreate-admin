@@ -1,3 +1,11 @@
+## [1.15.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.15.0...v1.15.1) (2022-04-15)
+
+
+### Bug Fixes
+
+* removed [] from placeholder {{...}} ([15ac0f0](https://github.com/CoCreate-app/CoCreate-admin/commit/15ac0f096c221a7ae37d23590329d92676d4e013))
+* typo copy-target="tbody" ([7120a42](https://github.com/CoCreate-app/CoCreate-admin/commit/7120a42333fd2ccde11ad05f441adfafe820a009))
+
 # [1.15.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.14.15...v1.15.0) (2022-04-01)
 
 
