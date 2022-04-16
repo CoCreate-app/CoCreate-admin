@@ -1,3 +1,10 @@
+## [1.15.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.15.2...v1.15.3) (2022-04-16)
+
+
+### Bug Fixes
+
+* bump version to 1.14.1. contains modal message bug fixes ([56ca9f4](https://github.com/CoCreate-app/CoCreate-admin/commit/56ca9f4fbeb136f0d0d95f1685a2899362e4f8b8))
+
 ## [1.15.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.15.1...v1.15.2) (2022-04-15)
 
 
