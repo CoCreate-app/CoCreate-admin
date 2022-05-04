@@ -1,3 +1,11 @@
+## [1.15.5](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.15.4...v1.15.5) (2022-05-04)
+
+
+### Bug Fixes
+
+* added apiKey directly to signin page ([458a0ad](https://github.com/CoCreate-app/CoCreate-admin/commit/458a0ad69a79352baa1154684181d0c6ae8e4d6f))
+* bump cdn version to 1.14.3 ([14c4b24](https://github.com/CoCreate-app/CoCreate-admin/commit/14c4b248a71f17d53aedc4faa5873d4d75955298))
+
 ## [1.15.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.15.3...v1.15.4) (2022-04-30)
 
 
