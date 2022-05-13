@@ -1,3 +1,10 @@
+## [1.15.9](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.15.8...v1.15.9) (2022-05-13)
+
+
+### Bug Fixes
+
+* update super_admin to admin ([7c2c3b2](https://github.com/CoCreate-app/CoCreate-admin/commit/7c2c3b281f280a355471a31d107bc84a1d6f9814))
+
 ## [1.15.8](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.15.7...v1.15.8) (2022-05-11)
 
 
