@@ -1,3 +1,11 @@
+## [1.15.11](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.15.10...v1.15.11) (2022-05-17)
+
+
+### Bug Fixes
+
+* renmaed removeElement to remove ([3d8498a](https://github.com/CoCreate-app/CoCreate-admin/commit/3d8498a00d8596863df854022793df39f4226554))
+* update document_id on link index.css ([63c07cb](https://github.com/CoCreate-app/CoCreate-admin/commit/63c07cbc8a9846b8bc4131453313e79f1e3acd93))
+
 ## [1.15.10](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.15.9...v1.15.10) (2022-05-14)
 
 
