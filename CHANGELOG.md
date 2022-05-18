@@ -1,3 +1,10 @@
+## [1.15.12](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.15.11...v1.15.12) (2022-05-18)
+
+
+### Bug Fixes
+
+* removed duplicate current_org field from users form ([51b83a3](https://github.com/CoCreate-app/CoCreate-admin/commit/51b83a3d80e7fa43c62e8f904beb3ee9234df9fa))
+
 ## [1.15.11](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.15.10...v1.15.11) (2022-05-17)
 
 
