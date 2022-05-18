@@ -65,8 +65,8 @@
 		<main class="padding:10px" content_id="content">
 			<form pass_id="form-fields" collection="users" document_id="" autocomplete="off">
 				<input type="text" name="name" id="name" placeholder="Name" class="floating-label" />
-				<input type="text" name="email" id="email" placeholder="Email" class="floating-label" autocomplete="off"/>
-				<input type="password" name="password" placeholder="password" class="floating-label"  autocomplete="off"/>
+				<input type="text" name="email" id="email" placeholder="Email" class="floating-label" autocomplete="new-password"/>
+				<input type="password" name="password" placeholder="password" class="floating-label"  autocomplete="new-password"/>
 				<input type="text" name="description" placeholder="Description" class="floating-label" />
 				<input type="text" name="profile_image" placeholder="Profile Image" class="floating-label" />
 
@@ -97,9 +97,6 @@
 
 					</ul>
 				</cocreate-select>
-
-				<!-- current-org -->
-				<input type="text" name="current_org" placeholder="Current Org" class="floating-label">
 
 				<button actions="save" class="position:fixed bottom:15px right:15px padding:15px background:dodgerblue grow-hover border-radius:50%"><i class="far fa-save"></i></button>
 			</form>
