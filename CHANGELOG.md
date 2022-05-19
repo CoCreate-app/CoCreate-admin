@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.15.13...v1.16.0) (2022-05-19)
+
+
+### Features
+
+* university module for managing content displayed on website university section ([8d135e4](https://github.com/CoCreate-app/CoCreate-admin/commit/8d135e4d0572013854bab8c0333943ad5d111692))
+
 ## [1.15.13](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.15.12...v1.15.13) (2022-05-19)
 
 
