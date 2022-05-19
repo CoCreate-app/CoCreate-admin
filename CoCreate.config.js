@@ -1586,6 +1586,44 @@ module.exports = {
             }
         },
         {
+            "entry": "./src/admin/university/datatable.html",
+            "collection": "files",
+            "document_id": "62842a175b660d9424e34d20",
+            "key": "src",
+            "data": {
+                "name": "datatable.html",
+                "domains": [
+                    "*",
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/university/datatable.html",
+                "directory": "/admin/university",
+                "content-type": "text/html",
+                "public": "true",
+                "module_id": "60e7416eb979b40017448c76",
+                "website_id": "5ffa235ff11d2d00103c4520"
+            }
+        },
+        {
+            "entry": "./src/admin/university/form.html",
+            "collection": "files",
+            "document_id": "62842a1c5b660d9424e34d21",
+            "key": "src",
+            "data": {
+                "name": "form.html",
+                "domains": [
+                    "*",
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/university/form.html",
+                "directory": "/admin/university",
+                "content-type": "text/html",
+                "public": "true",
+                "module_id": "60e7416eb979b40017448c76",
+                "website_id": "5ffa235ff11d2d00103c4520"
+            }
+        },
+        {
             "entry": "./src/admin/users/form.html",
             "collection": "files",
             "document_id": "60ddfdc114b5ab0c2dd2fe1c",
