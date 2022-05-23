@@ -1,5 +1,5 @@
 /**
-* The keys below have login permission only.
+* The keys below have limited permissions.
 * Signup at https://cocreate.app to retrieve your 
 * credintials and unlock admin privliges.
 **/
