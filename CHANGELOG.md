@@ -1,3 +1,12 @@
+## [1.16.5](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.16.4...v1.16.5) (2022-05-27)
+
+
+### Bug Fixes
+
+* add floating-label tagname, filter-name and fiter-value ([dba6ab0](https://github.com/CoCreate-app/CoCreate-admin/commit/dba6ab0453341ade08ee396490e7144c29e9f6f3))
+* bump cdn version to 1.15.8 ([0f474a4](https://github.com/CoCreate-app/CoCreate-admin/commit/0f474a4ca4eece5f781a5b301c2a65a4f1589154))
+* bump cdn version to 1.15.9 ([7d7ba57](https://github.com/CoCreate-app/CoCreate-admin/commit/7d7ba574edb3d99692c408bab91b9e0ebe1f966e))
+
 ## [1.16.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.16.3...v1.16.4) (2022-05-23)
 
 
