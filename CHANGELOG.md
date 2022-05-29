@@ -1,3 +1,10 @@
+## [1.17.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.0...v1.17.1) (2022-05-29)
+
+
+### Bug Fixes
+
+* bump cdn version to 1.15.10 ([40a9072](https://github.com/CoCreate-app/CoCreate-admin/commit/40a907287de1ca71d746960a917f1fe9658728db))
+
 # [1.17.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.16.5...v1.17.0) (2022-05-29)
 
 
