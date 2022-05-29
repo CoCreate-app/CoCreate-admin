@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.16.5...v1.17.0) (2022-05-29)
+
+
+### Features
+
+* deleteOrg from datatable or form view ([24b2771](https://github.com/CoCreate-app/CoCreate-admin/commit/24b2771321ccf70bba8a46fa0e38923ffc5e6412))
+
 ## [1.16.5](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.16.4...v1.16.5) (2022-05-27)
 
 
