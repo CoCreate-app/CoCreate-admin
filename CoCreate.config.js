@@ -1588,7 +1588,7 @@ module.exports = {
         {
             "entry": "./src/admin/university/datatable.html",
             "collection": "files",
-            "document_id": "62842a175b660d9424e34d20",
+            "document_id": "61c69f7ea8b6b4001aaf856d",
             "key": "src",
             "data": {
                 "name": "datatable.html",
@@ -1607,7 +1607,7 @@ module.exports = {
         {
             "entry": "./src/admin/university/form.html",
             "collection": "files",
-            "document_id": "62842a1c5b660d9424e34d21",
+            "document_id": "6293fccae6dfc91d5819a94a",
             "key": "src",
             "data": {
                 "name": "form.html",
