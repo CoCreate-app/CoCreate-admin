@@ -1,3 +1,13 @@
+## [1.17.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.1...v1.17.2) (2022-06-02)
+
+
+### Bug Fixes
+
+* addCoCreate.min.css ([6cc7341](https://github.com/CoCreate-app/CoCreate-admin/commit/6cc73416deb705d4388a7b22082f585a01b22dea))
+* floating-label typo ([a791479](https://github.com/CoCreate-app/CoCreate-admin/commit/a791479dbb86e84c9086767d3b48855c79d4100f))
+* update padding of datables td element ([4d110e4](https://github.com/CoCreate-app/CoCreate-admin/commit/4d110e4e5198b7b240eb6b76086bee01a5c57258))
+* Update select template with crud attributes to solve render _id issue ([9f69e0f](https://github.com/CoCreate-app/CoCreate-admin/commit/9f69e0f08f99e958e6818840bbb26c3d5a796d7d))
+
 ## [1.17.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.0...v1.17.1) (2022-05-29)
 
 
