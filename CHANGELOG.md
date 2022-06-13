@@ -1,3 +1,11 @@
+## [1.17.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.3...v1.17.4) (2022-06-13)
+
+
+### Bug Fixes
+
+* bupm cdn version to 1.16.2 ([ec31bc8](https://github.com/CoCreate-app/CoCreate-admin/commit/ec31bc8ea966acba5e445fc3e8f0cfa5087b7ead))
+* update modal btn to actions ([4766693](https://github.com/CoCreate-app/CoCreate-admin/commit/476669378088dc9f2d33ab498369b78d828b8bcb))
+
 ## [1.17.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.2...v1.17.3) (2022-06-02)
 
 
