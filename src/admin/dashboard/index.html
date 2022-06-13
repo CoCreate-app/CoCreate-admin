@@ -56,9 +56,9 @@
 			<ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
 
 				<!-- Modal Controls -->
-				<li class="margin-right:15px"><a class="btn-modal-close"><i class="fas fa-times"></i></a></li>
-				<li class="margin-right:15px"><a class="btn-modal-maximize"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
-				<li class="margin-right:15px"><a class="btn-modal-minimize"><i class="far fa-window-minimize"></i></a></li>
+				<li class="margin-right:15px"><a actions="closeModal"><i class="fas fa-times"></i></a></li>
+				<li class="margin-right:15px"><a actions="minMaxModal"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+				<li class="margin-right:15px"><a actions="parkModal"><i class="far fa-window-minimize"></i></a></li>
 
 				<!-- fullscreen toogle and icon transform-->
 				<li class="margin-right:15px"><a fullscreen><i toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
@@ -90,7 +90,7 @@
 
 				<!-- deleteDocument-->
 				<li class="margin-right:15px">
-					<a actions="deleteDocument" collection="" document_id="" pass_id="form-fields" class="btn-modal-close">
+					<a actions="deleteDocument, closeModal" collection="" document_id="" pass_id="form-fields">
                         <i class="far fa-trash-alt"></i>
                     </a>
 				</li>
