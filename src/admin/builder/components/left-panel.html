@@ -48,7 +48,8 @@
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
                                     </div>
-                                    <div cloneable="true" cloneable-html='{{data.html}}' class="height:65px padding:5px">
+                                    <div cloneable="true" class="height:65px padding:5px">
+                                        <cloneable-html collection="{{collection}}" document_id="{{data._id}}" name="html" rendered>{{data.html}}</cloneable-html>
                                         <i collection="{{collection}}" document_id="{{data._id}}" name="icon"></i>
                                         <p class="font-size:11px" collection="{{collection}}" document_id="{{data._id}}" name="name">Block</p>
                                     </div>
