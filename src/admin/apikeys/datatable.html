@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
 		<title>Datatables | CoCreate</title>
+		<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreateCSS.min.css">
         <link rel="stylesheet" href="../index.css" collection="files" document_id="60e4f9714792bff869f1bde5" name="src" type="text/css"/>
 	</head>
 
@@ -123,7 +124,7 @@
 						<td class="padding:10px display:flex min-width:200px align-items:center">
 							<div class="margin-left:10px">
 								<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954">
-									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Name</h4>
+									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name" rendered>{{data.name}}</h4>
 									<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
 									<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
 									<div pass-value="{{data.module_id}}" pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>

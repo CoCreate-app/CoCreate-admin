@@ -79,7 +79,7 @@
                             modal-width="{{data.navbar-modal-primary-width}}"
                             modal-height="{{data.navbar-modal-primary-height}}"
                             modal-color="{{data.navbar-modal-primary-color}}">
-                            <span document_id="{{data._id}}" collection="modules" name="icon"></span>
+                            <span document_id="{{data._id}}" collection="modules" name="icon" rendered>{{data.icon}}</span>
                             <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{data._id}}" pass_to="datatable"></div>
                             <div pass-collection="files" pass-document_id="{{data.main-menu-secondary}}" pass-name="src" pass_to="form"></div>
                             <div pass-collection="files" pass-document_id="{{data.navbar-menu-primary}}" pass-name="src" pass_to="render"></div>
@@ -126,7 +126,7 @@
                     template_id="connected_orgs">
                     <cc-option class="template display:flex height:50px margin:0!important padding:4px_12px!important" template_id="connected_orgs" value="{{connected_orgs}}">
                         <span class="logo-icon"><img collection="organizations" document_id="{{connected_orgs}}" name="logo" src="/assets/icon.png" height="40px" alt="..." class="margin-top:3px"></span>
-                        <span collection="organizations" document_id="{{connected_orgs}}" name="name" class="margin-left:12px font-size:1.5em">Organization Name</span>
+                        <span collection="organizations" document_id="{{connected_orgs}}" name="name" class="margin-left:12px font-size:1.5em"></span>
                     </cc-option>
                     <li class="line-height:40px height:40px overflow:hidden">
                         <a href="./organizations/creator.html">
@@ -167,8 +167,8 @@
                                 modal-width="{{data.main-modal-primary-width}}"
                                 modal-color="{{data.main-modal-color}}"
                                 class="display:inline-block">
-                                <span class="display:inline-block width:50px text-align:center" document_id="{{data._id}}" collection="modules" name="icon"></span>
-                                <span collection="modules" document_id="{{data._id}}" name="name" ></span>
+                                <span class="display:inline-block width:50px text-align:center" document_id="{{data._id}}" collection="modules" name="icon" rendered>{{data.icon}}</span>
+                                <span collection="modules" document_id="{{data._id}}" name="name"></span>
                                 <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{data._id}}" pass_to="datatable"></div>
                                 <div pass-collection="files" pass-document_id="{{data.main-menu-secondary}}" pass-name="src" pass_to="form"></div>
                                 <div pass-collection="files" pass-document_id="{{data.main-menu-primary}}" pass-name="src" pass_to="render"></div>
