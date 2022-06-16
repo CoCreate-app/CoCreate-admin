@@ -1,3 +1,10 @@
+## [1.17.5](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.4...v1.17.5) (2022-06-14)
+
+
+### Bug Fixes
+
+* remove action closeModal ([5f99e67](https://github.com/CoCreate-app/CoCreate-admin/commit/5f99e6720b72c3d2edeed9b3fa66918fe5d123cc))
+
 ## [1.17.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.3...v1.17.4) (2022-06-13)
 
 
