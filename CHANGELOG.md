@@ -1,3 +1,11 @@
+## [1.17.7](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.6...v1.17.7) (2022-06-18)
+
+
+### Bug Fixes
+
+* added CoCreateCSS.min.css cdn ([9815ebc](https://github.com/CoCreate-app/CoCreate-admin/commit/9815ebcdc1752d8d8fbd1aa97238c43b1fd74acc))
+* update template placeholders and bump cdn version to 1.18.0 ([02e15ae](https://github.com/CoCreate-app/CoCreate-admin/commit/02e15aee75c0a9cde07760e80664ba7c89b385b5))
+
 ## [1.17.6](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.5...v1.17.6) (2022-06-16)
 
 
