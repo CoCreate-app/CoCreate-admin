@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Module Form | CoCreate</title>
 		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreateCSS.min.css">
 		<link rel="stylesheet" href="../index.css" collection="files" document_id="60e4f9714792bff869f1bde5" name="src" type="text/css"/>
 	</head>
 	<style type="text/css">
@@ -136,9 +137,8 @@
 										<input placeholder="Search" template_id="navbar-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="navbar-menu-primary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="navbar-menu-primary" class="overflow:auto module_id">
-											<cc-option class="template" template_id="navbar-menu-primary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
-												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
-												<h5 collection="{{collection}}" document_id="{{data._id}}" name="_id"></h5>
+											<cc-option class="template" template_id="navbar-menu-primary" value='{{data.path}}' document_id="{{data._id}}">
+												<span>{{data.path}}</span>
 											</cc-option>
 										</cc-options>
 									</cocreate-select>
@@ -179,9 +179,8 @@
 										<input placeholder="Search" template_id="main-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-primary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-primary" class="overflow:auto module_id">
-											<cc-option class="template" template_id="main-menu-primary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
-												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name">View Name</h3>
-												<h5 collection="{{collection}}" document_id="{{data._id}}" name="_id"></h5>
+											<cc-option class="template" template_id="main-menu-primary" value='{{data.path}}' document_id="{{data._id}}">
+												<span>{{data.path}}</span>
 											</cc-option>
 										</cc-options>
 									</cocreate-select>
@@ -215,9 +214,8 @@
 										<input placeholder="Search" template_id="main-menu-secondary" tags="true">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-secondary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-secondary" class="overflow:auto module_id">
-											<cc-option class="template" template_id="main-menu-secondary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
-												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
-												<h5 collection="{{collection}}" document_id="{{data._id}}" name="_id"></h5>
+											<cc-option class="template" template_id="main-menu-secondary" value='{{data.path}}' document_id="{{data._id}}">
+												<span>{{data.path}}</span>
 											</cc-option>
 										</cc-options>
 									</cocreate-select>
@@ -250,9 +248,8 @@
 										<input placeholder="Search" template_id="settings-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-primary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-primary" class="overflow:auto module_id">
-											<cc-option class="template" template_id="settings-menu-primary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
-												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
-												<h5 collection="{{collection}}" document_id="{{data._id}}" name="_id"></h5>
+											<cc-option class="template" template_id="settings-menu-primary" value='{{data.path}}' document_id="{{data._id}}">
+												<span>{{data.path}}</span>
 											</cc-option>
 										</cc-options>
 									</cocreate-select>
@@ -286,9 +283,8 @@
 										<input placeholder="Search" template_id="settings-menu-secondary" tags="true">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-secondary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-secondary" class="overflow:auto module_id">
-											<cc-option class="template" template_id="settings-menu-secondary" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
-												<h3 collection="{{collection}}" document_id="{{data._id}}" name="name" value="{{data.name}}">View Name</h3>
-												<h5 collection="{{collection}}" document_id="{{data._id}}" name="_id"></h5>
+											<cc-option class="template" template_id="settings-menu-secondary" value='{{data.path}}' document_id="{{data._id}}">
+												<span>{{data.path}}</span>
 											</cc-option>
 										</cc-options>
 									</cocreate-select>
@@ -332,7 +328,7 @@
 					<div template_id="files" class="template card padding:10px_5px background:white collapsed margin-bottom:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
                         <div class="display:flex padding-left:10px">
                             <a target="modal" href="../files/form.html" modal-width="320px" class="flex-grow:1 font-size:16px padding:5px_0">
-                                <p collection="{{collection}}" document_id="{{data._id}}" name="name"></p>
+                                <p>{{data.name}}</p>
 								<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
 								<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
 								<div pass-value="{{data.module_id}}" pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
@@ -386,12 +382,12 @@
 								</button>
 							</form>
 							<div class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">
-								<span collection="{{collection}}" document_id="{{data._id}}" name="name">Template Name</span>
+								<span>{{data.name}}</span>
 							</div>
 						</div>
 
 						<div class="padding:10px">
-							<p collection="{{collection}}" document_id="{{data._id}}" name="description">Description</p>
+							<p>{{data.description}}</p>
 						</div>
 					</div>
 
@@ -400,7 +396,7 @@
 
 		</main>
 
-        <script src="https://cdn.cocreate.app/1.17.1/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.18.0/CoCreate.min.js"></script>
         <!-- <script src="../../../../CoCreateJS/dist/CoCreate.js"></script> -->
 
 	</body>

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>admin | CoCreate</title>
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/1.17.1/CoCreateCSS.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/1.18.0/CoCreateCSS.min.css">
         <link rel="stylesheet" href="./index.css" collection="files" document_id="60e4f9714792bff869f1bde5" name="src" type="text/css"/>
     </head>
 
@@ -74,12 +74,12 @@
                     template_id="navbar-menu" class="display:inline-flex">
                   
                     <li class="template margin-right:15px" template_id="navbar-menu" document_id="{{data._id}}">
-                        <input type="hidden" collection="files" document_id="{{data.navbar-menu-primary}}" name="path" set-value="#a{{data._id}}" set-value-key="navbar-url">
-                        <a target="modal" id="a{{data._id}}" href='..{{navbar-url}}'
+                        <!-- <input type="hidden" collection="files" document_id="{{data.navbar-menu-primary}}" name="path" set-value="#a{{data._id}}" set-value-key="navbar-url"> -->
+                        <a target="modal" id="a{{data._id}}" href='..{{data.navbar-menu-primary}}'
                             modal-width="{{data.navbar-modal-primary-width}}"
                             modal-height="{{data.navbar-modal-primary-height}}"
                             modal-color="{{data.navbar-modal-primary-color}}">
-                            <span document_id="{{data._id}}" collection="modules" name="icon" rendered>{{data.icon}}</span>
+                            <span>{{data.icon}}</span>
                             <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{data._id}}" pass_to="datatable"></div>
                             <div pass-collection="files" pass-document_id="{{data.main-menu-secondary}}" pass-name="src" pass_to="form"></div>
                             <div pass-collection="files" pass-document_id="{{data.navbar-menu-primary}}" pass-name="src" pass_to="render"></div>
@@ -162,13 +162,13 @@
                         
                         <!-- Template -->
                         <li class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" template_id="main-menu" document_id="{{data._id}}">
-                            <input type="hidden" collection="files" document_id="{{data.main-menu-primary}}" name="path" set-value="#a{{data._id}}" set-value-key="primary-url">
-                            <a target="modal" id="a{{data._id}}" href='..{{primary-url}}'
+                            <!-- <input type="hidden" collection="files" document_id="{{data.main-menu-primary}}" name="path" set-value="#a{{data._id}}" set-value-key="primary-url"> -->
+                            <a target="modal" id="a{{data._id}}" href='..{{data.main-menu-primary}}'
                                 modal-width="{{data.main-modal-primary-width}}"
                                 modal-color="{{data.main-modal-color}}"
                                 class="display:inline-block">
-                                <span class="display:inline-block width:50px text-align:center" document_id="{{data._id}}" collection="modules" name="icon" rendered>{{data.icon}}</span>
-                                <span collection="modules" document_id="{{data._id}}" name="name"></span>
+                                <span class="display:inline-block width:50px text-align:center">{{data.icon}}</span>
+                                <span>{{data.name}}</span>
                                 <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{data._id}}" pass_to="datatable"></div>
                                 <div pass-collection="files" pass-document_id="{{data.main-menu-secondary}}" pass-name="src" pass_to="form"></div>
                                 <div pass-collection="files" pass-document_id="{{data.main-menu-primary}}" pass-name="src" pass_to="render"></div>
@@ -176,8 +176,8 @@
                                 <div pass-document_id="{{data._id}}" pass_to="module-form"></div>
                             </a>
                             <div class="float:right width:50px text-align:center">
-                                <input type="hidden" id="b{{data._id}}" collection="files" document_id="{{data.main-menu-secondary}}" name="path">
-                                <a target="modal" href='..{{secondary-url}}' get-value="#b{{data._id}}" get-value-key="secondary-url"
+                                <!-- <input type="hidden" id="b{{data._id}}" collection="files" document_id="{{data.main-menu-secondary}}" name="path"> -->
+                                <a target="modal" href='..{{data.main-menu-secondary}}' get-value="#b{{data._id}}" get-value-key="secondary-url"
                                     modal-width="{{data.main-modal-secondary-width}}"
                                     modal-color="{{data.main-modal-secondary-color}}">
                                     <i class="fas fa-plus"></i>
@@ -223,7 +223,7 @@
 	        </div>
 		</div>
 
-        <script src="https://cdn.cocreate.app/1.17.1/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.18.0/CoCreate.min.js"></script>
         <!-- <script src="../../../CoCreateJS/dist/CoCreate.js"></script> -->
         
     </body>
