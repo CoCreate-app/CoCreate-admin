@@ -77,7 +77,7 @@
 						    <div template_id="status" filter-name="type" filter-value="5ff747727005da1c272740ab"></div>
 							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="status" class="overflow:auto">
 								<cc-option class="template" template_id="status" value="{{data._id}}">
-									<h4 collection="{{collection}}" document_id="{{data._id}}" name="name">Status Name</h4>
+									<h4>{{data.name}}</h4>
 								</cc-option>
 							</cc-options>
 						</cocreate-select>
@@ -103,8 +103,8 @@
 								<span collection="modules" document_id="{{data.module_id}}" name="icon"></span>
 							</div>
 							<div class="margin-left:10px">
-								<span collection="{{collection}}" document_id="{{data._id}}" name="name"></span>
-								<h5 collection="{{collection}}" document_id="{{data._id}}" name="description"></h5>
+								<span>{{data.name}}</span>
+								<h4>{{data.description}}</h4>
 							</div>
 						</cc-option>
 					</cc-options>
@@ -117,7 +117,7 @@
 							<div class="display:flex justify-content:center">
 					            <div class="avatar-wrapper margin:5px">
 					                <a class="avatar round" target="modal" href="../users/profile.html" modal-width="300px"  modal-height="375px"  modal-color="#229954">
-					                    <span collection="{{collection}}" document_id="{{data._id}}" name="name" class="avatar-name"></span>
+					                    <span class="avatar-name">{{data.name}}</span>
 					                    <span class="avatar-image">
 					                        <img collection="users" document_id="{{collection}}" name="avatar" onerror="this.style.display='none'" width="40px"/>
 					                    </span>
@@ -126,8 +126,8 @@
 					            </div>
 							</div>
 							<div class="margin-left:5px diaplay:flex">
-								<h3 collection="{{collection}}" document_id="{{data._id}}" name="name"></h3>
-								<h5 collection="{{collection}}" document_id="{{data._id}}" name="email"></h5>
+								<h3>{{data.name}}</h3>
+								<h5>{{data.email}}</h5>
 							</div>
 						</cc-option>
 					</cc-options>
