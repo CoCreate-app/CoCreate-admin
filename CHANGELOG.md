@@ -1,3 +1,11 @@
+## [1.17.10](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.9...v1.17.10) (2022-06-19)
+
+
+### Bug Fixes
+
+* bump cdn version to 1.18.3 ([e50ad0b](https://github.com/CoCreate-app/CoCreate-admin/commit/e50ad0b52106f5d572f453e62d4419d823ed15a3))
+* update templates to use placeholder ([9481835](https://github.com/CoCreate-app/CoCreate-admin/commit/94818357087fef7644ffe86dd329ae9cf23db0a3))
+
 ## [1.17.9](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.8...v1.17.9) (2022-06-18)
 
 
