@@ -1,16 +1,20 @@
         <div class="padding:5px min-width:260px">
             
             <div class="display:flex margin-bottom:5px font-size:16px tabs">
-                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#vdom" selected-group="left-panels" toggle="#canvas" toggle-target="#vdom" toggle-attribute="vdom-target"><i class="fas fa-stream"></i></div>
-                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#assets" selected-group="left-panels" toggle="files" toggle-target="#fetch-assets" toggle-attribute="fetch-collection">
+                <div className="builder-tab-round" class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover" selected-value="active" selected-target="#vdom" selected-group="left-panels" toggle="#canvas" toggle-target="#vdom" toggle-attribute="vdom-target">
+                    <i class="fas fa-stream"></i>
+                </div>
+                <div class="builder-tab-round" selected-value="active" selected-target="#assets" selected-group="left-panels" toggle="files" toggle-target="#fetch-assets" toggle-attribute="fetch-collection">
                     <i class="fas fa-photo-video"></i>
                 </div>
-                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#files" selected-group="left-panels" toggle="files" toggle-target=".fetch-files" toggle-attribute="fetch-collection">
+                <div class="builder-tab-round" selected-value="active" selected-target="#files" selected-group="left-panels" toggle="files" toggle-target=".fetch-files" toggle-attribute="fetch-collection">
                     <i class="fas fa-folder"></i></div>
-                <div class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#uploader" selected-group="left-panels"  toggle="uppy" toggle-target="#uppy" toggle-attribute="uploader">
+                <div class="builder-tab-round" selected-value="active" selected-target="#uploader" selected-group="left-panels"  toggle="uppy" toggle-target="#uppy" toggle-attribute="uploader">
                     <i class="fas fa-cloud-upload-alt"></i>
                 </div>
-                <div className="left-tabs" class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover tab" selected-value="active" selected-target="#blocks" selected-group="left-panels" selected><i class="fas fa-th-large"></i></div>
+                <div class="builder-tab-round" selected-value="active" selected-target="#blocks" selected-group="left-panels" selected>
+                    <i class="fas fa-th-large"></i>
+                </div>
             </div>
             
             <div class="overflow:auto height:90vh">

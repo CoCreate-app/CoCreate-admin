@@ -133,16 +133,18 @@
 						<div class="padding:5px background:whitesmoke">
 							<div id='navbar-menu' class="menu-item overflow:hidden height:0px active">
 								<div id="navbar-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
-									<cocreate-select name="navbar-menu-primary" placeholder="Primary View" class="floating-label " sortable>
+									<cocreate-select name="navbar-menu-primary" placeholder="Primary View" class="floating-label " sortable value-type="object">
 										<input placeholder="Search" template_id="navbar-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="navbar-menu-primary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="navbar-menu-primary" class="overflow:auto module_id">
-											<cc-option class="template" template_id="navbar-menu-primary" value='{{data.path}}' document_id="{{data._id}}">
+											<cc-option class="template" template_id="navbar-menu-primary" value='{"_id":"{{data._id}}","path":"{{data.path}}"}' document_id="{{data._id}}">
 												<span>{{data.path}}</span>
 											</cc-option>
 										</cc-options>
 									</cocreate-select>
-									<!--<input type="text" pass_id="form-fields" name="navbar-menu-primary-href" placeholder="href" class="floating-label" />-->
+									<!-- <input type="hidden" collection="files" document_id="{{data.navbar-menu-primary}}" name="path" set-value="#navbar-menu-primary">
+									<input id="navbar-menu-primary" type="text" pass_id="form-fields" collection document_id name="navbar-menu-primary-path"/> -->
+
 									<div class="display:flex justify-content:space-between">
 										<div class="width:48%">
 											<input type="number" name="navbar-menu-position" placeholder="Menu Position" class="floating-label" />
@@ -175,11 +177,11 @@
 									<div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" selected-value="active" selected-target="#main-menu-secondary" selected-group="main-menu-item">Secondary</div>
 								</div>
 								<div id="main-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
-									<cocreate-select class="floating-label " sortable placeholder="Primary View" name="main-menu-primary">
+									<cocreate-select class="floating-label " sortable placeholder="Primary View" name="main-menu-primary" value-type="object">
 										<input placeholder="Search" template_id="main-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-primary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-primary" class="overflow:auto module_id">
-											<cc-option class="template" template_id="main-menu-primary" value='{{data.path}}' document_id="{{data._id}}">
+											<cc-option class="template" template_id="main-menu-primary" value='{"_id":"{{data._id}}","path":"{{data.path}}"}' document_id="{{data._id}}">
 												<span>{{data.path}}</span>
 											</cc-option>
 										</cc-options>
@@ -210,11 +212,11 @@
 									</div>
 								</div>
 								<div id="main-menu-secondary" class="menu-item-type overflow:hidden height:0px">
-									<cocreate-select class="floating-label " sortable placeholder="Secondary View" name="main-menu-secondary">
+									<cocreate-select class="floating-label " sortable placeholder="Secondary View" name="main-menu-secondary" value-type="object">
 										<input placeholder="Search" template_id="main-menu-secondary" tags="true">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-secondary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-secondary" class="overflow:auto module_id">
-											<cc-option class="template" template_id="main-menu-secondary" value='{{data.path}}' document_id="{{data._id}}">
+											<cc-option class="template" template_id="main-menu-secondary" value='{"_id":"{{data._id}}","path":"{{data.path}}"}' document_id="{{data._id}}">
 												<span>{{data.path}}</span>
 											</cc-option>
 										</cc-options>
@@ -244,11 +246,11 @@
 									<div class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type" selected-value="active" selected-target="#settings-menu-secondary" selected-group="settings-menu-item">Secondary</div>
 								</div>
 								<div id="settings-menu-primary" class="menu-item-type overflow:hidden  height:0px active">
-									<cocreate-select class="floating-label " sortable placeholder="Primary View" name="settings-menu-primary">
+									<cocreate-select class="floating-label " sortable placeholder="Primary View" name="settings-menu-primary" value-type="object">
 										<input placeholder="Search" template_id="settings-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-primary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-primary" class="overflow:auto module_id">
-											<cc-option class="template" template_id="settings-menu-primary" value='{{data.path}}' document_id="{{data._id}}">
+											<cc-option class="template" template_id="settings-menu-primary" value='{"_id":"{{data._id}}","path":"{{data.path}}"}' document_id="{{data._id}}">
 												<span>{{data.path}}</span>
 											</cc-option>
 										</cc-options>
@@ -279,11 +281,11 @@
 									</div>
 								</div>
 								<div id="settings-menu-secondary" class="menu-item-type overflow:hidden height:0px">
-									<cocreate-select class="floating-label " sortable placeholder="Secondary View" name="settings-menu-secondary">
+									<cocreate-select class="floating-label " sortable placeholder="Secondary View" name="settings-menu-secondary" value-type="object">
 										<input placeholder="Search" template_id="settings-menu-secondary" tags="true">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-secondary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-secondary" class="overflow:auto module_id">
-											<cc-option class="template" template_id="settings-menu-secondary" value='{{data.path}}' document_id="{{data._id}}">
+											<cc-option class="template" template_id="settings-menu-secondary" value='{"_id":"{{data._id}}","path":"{{data.path}}"}' document_id="{{data._id}}">
 												<span>{{data.path}}</span>
 											</cc-option>
 										</cc-options>
@@ -396,7 +398,7 @@
 
 		</main>
 
-        <script src="https://cdn.cocreate.app/1.18.3/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.20.1/CoCreate.min.js"></script>
         <!-- <script src="../../../../CoCreateJS/dist/CoCreate.js"></script> -->
 
 	</body>
