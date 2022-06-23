@@ -1,3 +1,11 @@
+## [1.17.13](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.12...v1.17.13) (2022-06-23)
+
+
+### Bug Fixes
+
+* bump cdn version to 1.21.0 ([94334ad](https://github.com/CoCreate-app/CoCreate-admin/commit/94334ad25ff588cc8c573e3eeb41e562abf89b73))
+* fetch-collections requires uniqe template_id ([e4738a6](https://github.com/CoCreate-app/CoCreate-admin/commit/e4738a66cb5072d3e206e86f389592eb55e555e8))
+
 ## [1.17.12](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.11...v1.17.12) (2022-06-22)
 
 
