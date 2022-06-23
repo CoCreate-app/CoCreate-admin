@@ -188,7 +188,7 @@
 		<main class="padding:10px" content_id="content">
 			<!--<div class="domEditor main-height" name='cards1' collection="test" pass_id="me1234">-->
 
-			<div class="display:grid grid-auto-rows:50px gap:10px grid-template-columns:repeat(auto-fill,minmax(50px,1fr))" dnd-group-name="dashboard" fetch-collection="files" template_id="card" droppable>
+			<div class="display:grid grid-auto-rows:50px gap:10px grid-template-columns:repeat(auto-fill,minmax(50px,1fr))" dnd-group-name="dashboard" fetch-collection="files" template_id="card" fetch-count="20" droppable>
 
 				<div template_id="card" class="card template display:flex position:relative padding:20px align-items:center grid-column-end:span_6 grid-row-end:span_2" draggable resizable>
 					<!-- dashboard template-->
@@ -209,6 +209,9 @@
 					<div resize="right"></div>
 					<div resize="bottom"></div>
 				</div>
+
+				<div template_id="card" fetch-type="scroll" class="visibility:hidden height:30px"></div>
+
 			</div>
 			
 			<button class="position:fixed bottom:15px right:15px width:50px height:50px background:dodgerblue grow-hover border-radius:50% z-index:8 color:white">
@@ -228,9 +231,8 @@
             <h2>Coming Soon <a actions="remove" remove-closest=".card"> X</a></h2>
         </div>
         
-		<script src="https://cdn.cocreate.app/1.20.2/CoCreate.min.js"></script>
+		<script src="https://cdn.cocreate.app/1.21.0/CoCreate.min.js"></script>
         <!--<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>-->
-		<!--<script src="https://server.cocreate.app/CoCreate-plugins/CoCreate-progress-bar/dist/CoCreate-progress-bar.js"></script>-->
 
 	</body>
 
