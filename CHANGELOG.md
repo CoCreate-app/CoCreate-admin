@@ -1,3 +1,11 @@
+## [1.17.14](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.13...v1.17.14) (2022-06-27)
+
+
+### Bug Fixes
+
+* add modal container ([2650b4b](https://github.com/CoCreate-app/CoCreate-admin/commit/2650b4b20d11dc9cb70aa5b9d1d7d7274c38393b))
+* bump cdn version to 1.22.1 ([61fd1c1](https://github.com/CoCreate-app/CoCreate-admin/commit/61fd1c1d18c0fe8ce9d948d39b26f7d6c820bb5a))
+
 ## [1.17.13](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.12...v1.17.13) (2022-06-23)
 
 
