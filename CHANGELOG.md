@@ -690,7 +690,7 @@
 
 ### Bug Fixes
 
-* removed fetch-document_id... it is now handeled by fetch-name and fetch-value ([4819700](https://github.com/CoCreate-app/CoCreate-admin/commit/48197002b9d5ff338453cec8f3e8294bf8d77b4c))
+* removed fetch-document_id... it is now handeled by fetch-name and filter-value ([4819700](https://github.com/CoCreate-app/CoCreate-admin/commit/48197002b9d5ff338453cec8f3e8294bf8d77b4c))
 * updated crud attribute editor ([9d71ad9](https://github.com/CoCreate-app/CoCreate-admin/commit/9d71ad9ac4e4754f790b85a103ebf834b6a57d3c))
 
 ## [1.12.11](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.12.10...v1.12.11) (2021-11-20)
