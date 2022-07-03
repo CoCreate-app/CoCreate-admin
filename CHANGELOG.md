@@ -1,3 +1,17 @@
+# [1.18.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.14...v1.18.0) (2022-07-03)
+
+
+### Bug Fixes
+
+* add attribute dnd-exclude to resize handles ([63104bb](https://github.com/CoCreate-app/CoCreate-admin/commit/63104bbae7e3ee81501c1888a293b9a796280c84))
+* update attribute-target selector for assets ([8a8ba5b](https://github.com/CoCreate-app/CoCreate-admin/commit/8a8ba5bb0a309088ba32ac2a4e6f02ed42e5cfeb))
+* update pass-fetch and pass-filter attributes ([76aa359](https://github.com/CoCreate-app/CoCreate-admin/commit/76aa35918577c961e593daee304637701846e6d8))
+
+
+### Features
+
+* add form.html for database GUI module ([b68c50e](https://github.com/CoCreate-app/CoCreate-admin/commit/b68c50e42c916fd0efa73a1d552d64ff25d59c88))
+
 ## [1.17.14](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.17.13...v1.17.14) (2022-06-27)
 
 
