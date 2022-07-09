@@ -1,3 +1,10 @@
+## [1.18.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.18.1...v1.18.2) (2022-07-09)
+
+
+### Bug Fixes
+
+* add modal aaction to database and add database to CoCreate.config.js ([ae8e29b](https://github.com/CoCreate-app/CoCreate-admin/commit/ae8e29b87e1e8ab3a28eccf2615c6fd7cbab0c7b))
+
 ## [1.18.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.18.0...v1.18.1) (2022-07-08)
 
 
