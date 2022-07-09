@@ -614,6 +614,25 @@ module.exports = {
             }
         },
         {
+            "entry": "./src/admin/database/index.html",
+            "collection": "files",
+            "document_id": "62c4e212de9a46c8744523c7",
+            "key": "src",
+            "data": {
+                "name": "index.html",
+                "domains": [
+                    "*",
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/database/index.html",
+                "directory": "/admin/database",
+                "content-type": "text/html",
+                "public": "true",
+                "module_id": "62c4e1c7de9a46c8744523a0",
+                "website_id": "5ffa235ff11d2d00103c4520"
+            }
+        },
+        {
             "entry": "./src/admin/domains/index.html",
             "collection": "files",
             "document_id": "60e72af6ab74b22c0064e008",
