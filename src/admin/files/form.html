@@ -70,7 +70,8 @@
                         <input type="text" name="name" class="floating-label" placeholder="File Name"> 
                     </floating-label>
                     <floating-label>
-                        <cocreate-select name="domains" class="floating-label" placeholder="domains" multiple> <input placeholder="Search" template_id="domains">
+                        <cocreate-select name="domains" class="floating-label" placeholder="domains" multiple>
+                            <input placeholder="Search" template_id="domains" tags="true">
                             <cc-options fetch-collection="organizations" fetch-name="domains" filter-name="_id" filter-value="5ff747727005da1c272740ab" filter-operator="$eq" template_id="domains" class="overflow:auto">
                                 <cc-option class="template display:flex" template_id="domains" value="{{domains}}">
                                     <h4>{{domains}}</h4>
@@ -151,7 +152,7 @@
             </form>
         </main>
 
-        <script src="https://cdn.cocreate.app/1.23.2/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.23.3/CoCreate.min.js"></script>
         <!-- <script src="../../../../CoCreateJS/dist/CoCreate.js"></script> -->
 
     </body>
