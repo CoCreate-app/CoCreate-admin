@@ -1,3 +1,12 @@
+## [1.18.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.18.2...v1.18.3) (2022-07-25)
+
+
+### Bug Fixes
+
+* bump cdn to version 1.23.3 ([3e9394c](https://github.com/CoCreate-app/CoCreate-admin/commit/3e9394c6d5c67e67e67eeb74c30fbbac21c33687))
+* bump cdn version to 1.23.4 ([37f26a3](https://github.com/CoCreate-app/CoCreate-admin/commit/37f26a3a76919fcb1388d2d879d0d3bd3c89d9c7))
+* use template to create fetch loop ([31c0ee2](https://github.com/CoCreate-app/CoCreate-admin/commit/31c0ee23774130755b951ff4b5546dabc3bfa8ee))
+
 ## [1.18.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.18.1...v1.18.2) (2022-07-09)
 
 
