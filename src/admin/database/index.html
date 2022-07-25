@@ -13,13 +13,7 @@
     <style type="text/css">
         .cocreate-search .floating-label_field{margin-top:0px;}
     </style> 
-    <!-- 62c4e212de9a46c8744523c7 -->
-    <style type="text/css">
-        div[user-status="on"] {background-color:yellowgreen;}
-        div[user-status="off"] {background-color:red;}
-        div[user-status="idle"] {background-color:orange;}
-        ul::-webkit-scrollbar-thumb, ul::-webkit-scrollbar-track{background-color:rgba(0,0,0,0.01)}
-    </style>
+
     <body>
         <a href="./signin.html" session="false" hidden></a>
         <!-- Navbar  -->
@@ -75,52 +69,25 @@
        
         <!-- Main container  -->
         <main class="height:100vh padding:10px" content_id="content">
-			<!-- <input collection="views" document_id="61e700e2a8b6b4001acaa448" name="test" value-type="object"> -->
+
             <table class="width:100% border-collapse:collapse">
 				<tr class="border-bottom:1px_solid_darkgray">
 					<td class="position:sticky top:0 background:white padding:15px  z-index:7">
 	            		<floating-label>
 							<input type="text" class="floating-label" template_id="datatable" placeholder="Search">
 						</floating-label>
-						<!-- <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-							<a order-by="name" toggle-order="asc" template_id="datatable"></a>
-						</span> -->
 					</td>
 				</tr>
 
-				<tbody template_id="datatable" fetch-collection="" pass-refresh pass_id="datatable" fetch-count="20">
+				<tbody template_id="datatable" fetch-collection="" pass-refresh pass_id="datatable" fetch-count="5">
 
 					<tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{data._id}}" toggle="selected">
 						<td class="padding:5px min-width:300px align-items:center">
-                            <div class="template" render-object="data" render-key="one">
-                                <span>{{one.key}}: </span><span value-type="string">{{one.value}}</span>
-                                <!-- <span>{{one.key}}: </span><span collection="{{collection}}" document_id="{{data._id}}" name="{{one.key}}" value-type="string" selected-value="true" selected-attribute="contenteditable"></span> -->
+                            <div class="template display:flex" render-object="data" render-key="one">
                                
-                                <!-- <span>{{one.key}}: </span>
-                                <input value="{{one.key}}" hidden>
-                                <div collection="files" document_id="62c4bffcde9a46c87445173a" name="{{one.type}}" class="domEditor margin-left:10px">
-                                    <div get-value="#testing" get-value-key="ty"></div>
-                                    <floating-label class="hidden {{one.key}}">
-                                        <textarea rows="1" collection="files" document_id="files" name="{{one.key}}" crdt="false" class="floating-label"></textarea>
-                                    </floating-label>
-                                    <div class="hidden {{one.key}}">
-                                        <span>{{one.key}}: </span>
-                                        <div collection="files" document_id="62c4bffcde9a46c87445173a" name="src" class="domEditor margin-left:10px"></div>    
-                                    </div> 
-                                </div> -->
+                                <span class="padding:10px">{{one.key}}: </span>
+                                <div get-value=".{{one.type}}" class="width:100%" parentKey="{{one.key}}" parentType="{{one.type}}"></div>
                                 
-                                <!-- <span>{{one.key}}: </span>
-                                <div fetch-collection="files" filter-name="tags" filter-value="{{one.type}}" filter-operator="$eq" class="margin-left:10px" template_id="$auto" render_id="$auto">
-                                    <div class="template" template_id="$auto" test="$auto">{{$auto.src}}</div>
-                                </div> -->
-
-                                <!-- <value-template collection="" document_id="" name="{{one.key}}"> -->
-                                    <!-- <floating-label class="hidden {{one.key}}"><textarea rows="1" collection="files" document_id="files" name="{{one.key}}" crdt="false" class="floating-label"></textarea></floating-label>
-                                    <div class="hidden {{one.key}}">
-                                        <span>{{one.key}}: </span>
-                                        <div collection="files" document_id="5ff747727005da1c2727419a" name="src" class="domEditor margin-left:10px"></div>    
-                                    </div> -->
-                                <!-- </value-template> -->
                             </div>
 						</td>
 					</tr>
@@ -134,7 +101,9 @@
         
 			<!-- Search -->
 			<form class="padding:5px">
-				<input type="text" class="floating-label" pass-value_to="results">
+                <floating-label>
+                    <input type="text" class="floating-label" pass-value_to="results">
+                </floating-label>
 				<span class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">
 					<a target="modal" pass_to="render" collection="website-pages" document_id="" pass-name="src" modal-width="900px" modal-color="#229954">
 						<i class="fas fa-search"></i>
@@ -145,23 +114,14 @@
         	<div class="padding-right:5px padding-bottom:5px">
                 <!-- Fetch and Render-->
                 <ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_90px) bottom:10px margin-right:5px">
-                    <div fetch-collections template_id="collections">
+                    <div fetch-collections order-by="name" order-type="asc" template_id="collections">
                         
                         <!-- Template -->
                         <li template_id="collections" class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover">
                             <a pass-collection="{{data.name}}" pass_to="datatable" class="display:inline-block padding-left:15px">
-                                
                                 <span>{{data.name}}</span>
                                 <div pass-collection="{{data.name}}" pass_to="datatable"></div>
                             </a>
-                            <div class="float:right width:50px text-align:center">
-                                <a target="modal" href='..{{secondary-url}}' get-value="#b{{data._id}}" get-value-key="secondary-url"
-                                    modal-width="{{data.main-modal-secondary-width}}"
-                                    modal-color="{{data.main-modal-secondary-color}}">
-                                    <i class="fas fa-plus"></i>
-                                    <div pass-collection="{{data.name}}" pass_to="datatable"></div>
-                                </a>
-                            </div>
                         </li>
                     </div>
                 </ul>
@@ -174,6 +134,24 @@
 	            <span class="{{type}}">{{message}}</span><a actions="remove" remove-closest="[templateid]"> X</a>
 	        </div>
 		</div>
+
+        <template class="string" hidden>
+            <floating-label render>
+                <textarea rows="1" collection="{{collection}}" document_id="{{data._id}}" name="$parents" class="floating-label"></textarea>
+            </floating-label>
+        </template>
+
+        <!-- <template id="string" hidden readonly>
+            <span collection="{{collection}}" document_id="{{data._id}}" name="$parents" value-type="string" selected-value="true" selected-attribute="contenteditable" render></span>
+        </template> -->
+        <template class="object array" hidden>
+            <div render-object="data.$parents" render-key="$auto" class="template margin-top:20px" render>
+                <div class="display:flex padding-top:10px">
+                    <span class="padding:10px">{{$auto.key}}: </span>
+                    <div get-value=".{{$auto.type}}" parentKey="{{$auto.key}}" parentType="{{$auto.type}}"></div>
+                </div>
+            </div>
+        </template>
 
         <script src="https://cdn.cocreate.app/1.23.4/CoCreate.min.js"></script>
         <!-- <script src="../../../../CoCreateJS/dist/CoCreate.js"></script> -->
