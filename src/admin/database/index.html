@@ -12,6 +12,9 @@
 
     <style type="text/css">
         .cocreate-search .floating-label_field{margin-top:0px;}
+        .active [actions]{
+            display:block;
+        }
     </style> 
 
     <body>
@@ -102,11 +105,11 @@
 			<!-- Search -->
 			<form class="padding:5px">
                 <floating-label>
-                    <input type="text" class="floating-label" pass-value_to="results">
+                    <input type="text" class="floating-label" name="collection">
                 </floating-label>
 				<span class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">
-					<a target="modal" pass_to="render" collection="website-pages" document_id="" pass-name="src" modal-width="900px" modal-color="#229954">
-						<i class="fas fa-search"></i>
+					<a actions="createCollection, reset">
+						<i class="fas fa-plus"></i>
 					</a>
 				</span>
 			</form>
@@ -117,11 +120,17 @@
                     <div fetch-collections order-by="name" order-type="asc" template_id="collections">
                         
                         <!-- Template -->
-                        <li template_id="collections" class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover">
+                        <li template_id="collections" class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" hover="active" document_id="{{data.name}}">
                             <a pass-collection="{{data.name}}" pass_to="datatable" class="display:inline-block padding-left:15px">
                                 <span>{{data.name}}</span>
                                 <div pass-collection="{{data.name}}" pass_to="datatable"></div>
                             </a>
+                            <div class="float:right width:50px text-align:center">
+                                <a actions="deleteCollection" collection="{{data.name}}" class="display:none">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+
                         </li>
                     </div>
                 </ul>
