@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.18.3...v1.19.0) (2022-07-29)
+
+
+### Features
+
+* database - show delete btn on hover ([2ceab2c](https://github.com/CoCreate-app/CoCreate-admin/commit/2ceab2cd9f784be6be6adb881b07026fa20f93a5))
+
 ## [1.18.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.18.2...v1.18.3) (2022-07-25)
 
 
