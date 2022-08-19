@@ -34,7 +34,7 @@
                      <!-- Block Categories -->
 					<!--<div template_id="block-categories" filter-name="type" filter-value="611829a9c0e9580010ea589d"></div>-->
                     <div template_id="block-categories" filter-name="tags" filter-value="6200378ea8b6b4001ae57821" filter-operator="$ne"></div>
-                    <div  id="elements" class="components display:none active" template_id="block-categories" fetch-collection="tags" filter-name="module_id" filter-value="5ff747727005da1c27274194" order-by="position" order-type="asc" render_id="tag">
+                    <div  id="elements" class="components display:none active" template_id="block-categories" fetch-collection="tags" filter-name="module_id" filter-value="5ff747727005da1c27274194" filter-order-name="position" filter-order-type="asc" render_id="tag">
                             
                          <!-- Block Categories Template -->
                         <div class="template" template_id="block-categories" document_id="{{tag._id}}">
@@ -44,7 +44,7 @@
                                 <span collection="{{tag.collection}}" document_id="{{tag._id}}" name="name">Category Name</span>
                             </div>
                              <!-- Blocks  -->
-                            <div class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px" template_id="{{tag._id}}" fetch-collection="blocks" filter-name="category" filter-value="{{tag._id}}" order-by="position" order-type="asc">
+                            <div class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px" template_id="{{tag._id}}" fetch-collection="blocks" filter-name="category" filter-value="{{tag._id}}" filter-order-name="position" filter-order-type="asc">
                                  <!-- Blocks Template -->
                                 <div template_id="{{tag._id}}" class="template card position:relative flex-grow:1 width:70px height:75px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}" document_id="{{data._id}}">
                                     <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
@@ -64,7 +64,7 @@
                     
                     <!-- Component Categories -->
                     <div template_id="component-categories" filter-name="tags" filter-value="6200378ea8b6b4001ae57821"></div>
-                    <div id="components" class="components display:none" template_id="component-categories" fetch-collection="tags" filter-name="module_id" filter-value="5ff747727005da1c27274194" order-by="position" order-type="asc" render_id="tag">
+                    <div id="components" class="components display:none" template_id="component-categories" fetch-collection="tags" filter-name="module_id" filter-value="5ff747727005da1c27274194" filter-order-name="position" filter-order-type="asc" render_id="tag">
                             
                          <!-- Components Categories Template -->
                         <div class="template" template_id="component-categories" document_id="{{tag._id}}">
@@ -74,7 +74,7 @@
                                 <span collection="{{tag.collection}}" document_id="{{tag._id}}" name="name">Category Name</span>
                             </div>
                              <!-- Components -->
-                            <div class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px" template_id="{{tag._id}}" fetch-collection="blocks" filter-name="category" filter-value="{{tag._id}}" order-by="position" order-type="asc">
+                            <div class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px" template_id="{{tag._id}}" fetch-collection="blocks" filter-name="category" filter-value="{{tag._id}}" filter-order-name="position" filter-order-type="asc">
                                  <!-- Components Template -->
                                 <div template_id="{{tag._id}}" class="template card position:relative flex-grow:1 width:70px height:125px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}" document_id="{{data._id}}">
                                     <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
@@ -115,7 +115,7 @@
                     <div class="padding:5px">
                         <span class=""><i class="fa fa-caret-down" toggle="fa-caret-right, fa-caret-down"></i></span>
                         <span class="margin-left:5px" collection="websites" document_id="" name="name">Project name</span>
-                        <div id="fetch-files" class="fetch-files margin-left:10px " sortable template_id="$auto" fetch-collection="" filter-name="directory" filter-value="/" filter-operator="$eq" order-by="name" order-type="asc" render_id="$auto">
+                        <div id="fetch-files" class="fetch-files margin-left:10px " sortable template_id="$auto" fetch-collection="" filter-name="directory" filter-value="/" filter-operator="$eq" filter-order-name="name" filter-order-type="asc" render_id="$auto">
                             <div template_id="$auto" filter-name="content-type" filter-value="text/directory"></div>
                             <!--Folder Template -->
                             <div class="template padding:5px" template_id="$auto" document_id="{{$auto._id}}">
@@ -128,7 +128,7 @@
                                 <div id="directory{{$auto._id}}" class="domEditor margin-left:10px" hidden collection="files" document_id="611ab5d9251afa96bd20f6cc" name="src" filter-value="{{$auto.path}}"></div>
                             </div>
                         </div>
-                        <div class="fetch-files margin-left:10px " sortable template_id="$auto" fetch-collection="" filter-name="directory" filter-value="/"  filter-operator="$eq" order-by="name" render_id="auto">
+                        <div class="fetch-files margin-left:10px " sortable template_id="$auto" fetch-collection="" filter-name="directory" filter-value="/"  filter-operator="$eq" filter-order-name="name" render_id="auto">
                             <div template_id="$auto" filter-name="content-type" filter-value="text/directory" filter-operator="$ne"></div>
 
                              <!-- File Template -->
@@ -152,7 +152,7 @@
         				</span>
                     </form>
                     <!-- Assets -->
-                    <div id="fetch-assets" class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px" template_id="assets" fetch-collection="" filter-name="content-type" filter-value="image, video" order-by="position" order-type="asc">
+                    <div id="fetch-assets" class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px" template_id="assets" fetch-collection="" filter-name="content-type" filter-value="image, video" filter-order-name="position" filter-order-type="asc">
                          <!-- Asset Template -->
                         <div template_id="assets" class="template card position:relative flex-grow:1 width:105px height:90px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{data._id}}">
                             <div id="editblock{{data._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">

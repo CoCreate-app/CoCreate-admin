@@ -325,7 +325,7 @@
 				</div>
 	
 				<input type="hidden" filter-name="module_id" filter-value="" filter-operator="$ne" template_id="files">
-				<div fetch-collection="files" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" order-by="name" order-type="asc" template_id="files" pass_id="module_id" sortable class="background:whitesmoke padding:10px module_id" dnd-group-name="files">
+				<div fetch-collection="files" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" filter-order-name="name" filter-order-type="asc" template_id="files" pass_id="module_id" sortable class="background:whitesmoke padding:10px module_id" dnd-group-name="files">
 	
 					<div template_id="files" class="template card padding:10px_5px background:white collapsed margin-bottom:10px" document_id="{{data._id}}" id="module-view{{data._id}}">
                         <div class="display:flex padding-left:10px">
@@ -359,7 +359,7 @@
 				<!-- Module form templates to pass value and create clone -->
 				<div class="height:20px padding:0_10px font-size:18px"><i class="fas fa-times float:right" show="#form, #module-views" hide='#module-templates'></i></div>
 				<div template_id="module-templates" filter-name="tags" filter-value="template"></div>
-				<div class="display:flex flex-wrap:wrap" fetch-collection="" pass-refresh="true" order-by="name" order-type="asc" template_id="module-templates" pass_id="module-templates">
+				<div class="display:flex flex-wrap:wrap" fetch-collection="" pass-refresh="true" filter-order-name="name" filter-order-type="asc" template_id="module-templates" pass_id="module-templates">
 
 					<div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" template_id="module-templates">
 
@@ -398,7 +398,7 @@
 
 		</main>
 
-        <script src="https://cdn.cocreate.app/1.25.2/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.25.3/CoCreate.min.js"></script>
         <!-- <script src="../../../../CoCreateJS/dist/CoCreate.js"></script> -->
 
 	</body>

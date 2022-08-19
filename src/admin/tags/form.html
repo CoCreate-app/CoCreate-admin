@@ -81,7 +81,7 @@
 				</cocreate-select>
 				<cocreate-select name="module_id" placeholder="Module" sortable class="floating-label" set-value="#tags" set-value-key="module_id">
 					<input placeholder="Search" template_id="module_id">
-					<cc-options fetch-collection="modules" order-by="name" template_id="module_id" class="overflow:auto">
+					<cc-options fetch-collection="modules" filter-order-name="name" template_id="module_id" class="overflow:auto">
 						<cc-option class="template" template_id="module_id" value="{{data._id}}">
 							<div class="display:flex padding:5px">
 								<span class="width:25px" collection="{{collection}}" document_id="{{data._id}}" name="icon"></span>
@@ -106,7 +106,7 @@
 
         </main>
 
-		<script src="https://cdn.cocreate.app/1.25.2/CoCreate.min.js" ></script>
+		<script src="https://cdn.cocreate.app/1.25.3/CoCreate.min.js" ></script>
         <!--<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>-->
         
     </body>

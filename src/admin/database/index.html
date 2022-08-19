@@ -16,7 +16,6 @@
         .active [actions]{
             display:block;
         }
-        .template {display: none !important;}
     </style> 
 
     <body>
@@ -119,7 +118,7 @@
         	<div class="padding-right:5px padding-bottom:5px">
                 <!-- Fetch and Render-->
                 <ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_90px) bottom:10px margin-right:5px">
-                    <div fetch-collections order-by="name" order-type="asc" template_id="collections">
+                    <div fetch-collections filter-order-name="name" filter-order-type="asc" template_id="collections">
                         
                         <!-- Template -->
                         <li template_id="collections" class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" hover="active" document_id="{{data.name}}">
@@ -164,8 +163,8 @@
             </div>
         </template>
 
-        <script src="https://cdn.cocreate.app/1.25.2/CoCreate.min.js"></script>
-        <!-- <script src="../../../../CoCreateJS/dist/CoCreate.js"></script> -->
+        <!-- <script src="https://cdn.cocreate.app/1.25.3/CoCreate.min.js"></script> -->
+        <script src="../../../../CoCreateJS/dist/CoCreate.js"></script>
         
     </body>
 </html>

@@ -117,7 +117,7 @@
                     <floating-label>
                         <cocreate-select name="module_id" placeholder="Modules" sortable class="floating-label" multiple>
                             <input placeholder="Search" template_id="module_id">
-                            <cc-options fetch-collection="modules" order-by="name" template_id="module_id" class="overflow:auto">
+                            <cc-options fetch-collection="modules" filter-order-name="name" template_id="module_id" class="overflow:auto">
                                 <cc-option class="template" template_id="module_id" value="{{data._id}}">
                                     <div class="display:flex padding:5px">
                                         <span class="width:25px">{{data.icon}}</span>
@@ -130,7 +130,7 @@
                     <floating-label>
                         <cocreate-select name="website_id" placeholder="Website" sortable class="floating-label">
                             <input placeholder="Search" template_id="website_id">
-                            <cc-options fetch-collection="module_activities" filter-name="module_id" filter-value="5ff747727005da1c27274185" order-by="name" template_id="website_id" class="overflow:auto">
+                            <cc-options fetch-collection="module_activities" filter-name="module_id" filter-value="5ff747727005da1c27274185" filter-order-name="name" template_id="website_id" class="overflow:auto">
                                 <cc-option class="template" template_id="website_id" value="{{data._id}}">
                                     <div class="display:flex padding:5px">
                                         <span class="width:25px">{{data.icon}}</span>
@@ -154,7 +154,7 @@
             </form>
         </main>
 
-        <script src="https://cdn.cocreate.app/1.25.2/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.25.3/CoCreate.min.js"></script>
         <!-- <script src="../../../../CoCreateJS/dist/CoCreate.js"></script> -->
 
     </body>

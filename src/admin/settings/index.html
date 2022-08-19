@@ -59,7 +59,7 @@
 		<!-- Main Content -->
 		<main class="padding:5px" content_id="content">
 			<ul class="display:flex flex-direction:column overflow:auto width:100% bottom:10px margin-top:20px">
-				<div fetch-collection="modules" order-by="settings-menu-position" order-type="asc" filter-name="settings-menu-position" filter-value="0" filter-value-type="number" filter-operator="$ne" template_id="settings-menu">
+				<div fetch-collection="modules" filter-order-name="settings-menu-position" filter-order-type="asc" filter-name="settings-menu-position" filter-value="0" filter-value-type="number" filter-operator="$ne" template_id="settings-menu">
 
 					<li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template_id="settings-menu" document_id="{{data._id}}">
                         <!-- <input type="hidden" collection="files" document_id="{{data.settings-menu-primary}}" name="path" set-value="#a{{data._id}}" set-value-key="primary-url"> -->
@@ -87,7 +87,7 @@
 			</ul>
 		</main>
 
-        <script src="https://cdn.cocreate.app/1.25.2/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.25.3/CoCreate.min.js"></script>
         <!--<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>-->
 
 	</body>

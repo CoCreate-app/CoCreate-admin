@@ -255,7 +255,7 @@
 
                             <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
 								<!-- need a solution to update toggle value="desc|asc" and define and upadte icons... show hide works great but to much html and orderby only has 2 values -->
-								<a order-by="name" toggle-order template_id="datatable">
+								<a filter-order-name="name" toggle-order template_id="datatable">
 									<i></i>
 								</a>
 							</span>
@@ -266,7 +266,7 @@
                         <!--		template_id="datatable" -->
                         <!--		placeholder="Participants"/>-->
                         <!--		<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6" >-->
-                        <!--			<a order-by="_id" value="" toggle-order="true" template_id="datatable">-->
+                        <!--			<a filter-order-name="_id" value="" toggle-order="true" template_id="datatable">-->
                         <!--			</a>-->
                         <!--		</span>-->
                         <!--</td>-->
@@ -275,13 +275,13 @@
                                 <input type="text" class="floating-label" filter-name="duration" template_id="datatable" placeholder="duration" />
                             </floating-label>
                             <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-								<a order-by="_id" value="" toggle-order="true" template_id="datatable"></a>
+								<a filter-order-name="_id" value="" toggle-order="true" template_id="datatable"></a>
 							</span>
                         </td>
                     </tr>
 
                     <!-- Datatable Fetch and Render Rows -->
-                    <tbody template_id="datatable" fetch-collection="testtwillio" fetch-count="15" order-by="" order-type="asc">
+                    <tbody template_id="datatable" fetch-collection="testtwillio" fetch-count="15" filter-order-name="" filter-order-type="asc">
 
                         <!-- Datatable Row Template -->
                         <tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{data._id}}" template_id="datatable" document_id="{{data._id}}" toggle="selected">
@@ -501,7 +501,7 @@
             <h2>Coming Soon <a actions="remove" remove-closest=".card"> X</a></h2>
         </div>
 
-        <script src="https://cdn.cocreate.app/1.25.2/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.25.3/CoCreate.min.js"></script>
 
         <script>
             document.querySelectorAll('.number-dig').forEach((number) => {

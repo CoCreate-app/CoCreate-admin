@@ -1,4 +1,4 @@
-<div class="margin-left:10px " sortable template_id="$auto" fetch-collection="files" filter-name="directory" filter-value="parent" filter-operator="$eq" order-by="directory" order_type="asc" render_id="$auto">
+<div class="margin-left:10px " sortable template_id="$auto" fetch-collection="files" filter-name="directory" filter-value="parent" filter-operator="$eq" filter-order-name="directory" order_type="asc" render_id="$auto">
     <div template_id="$auto" filter-name="content-type" filter-value="directory"></div>
     <!--Folder Template -->
     <div class="template padding:5px" template_id="$auto" document_id="{{$auto._id}}">
@@ -9,7 +9,7 @@
         <div id="directory{{$auto._id}}" class="domEditor margin-left:10px" hidden collection="files" document_id="611ab5d9251afa96bd20f6cc" name="src" filter-value="{{$auto.path}}"></div>
     </div>
 </div>
-<div class="margin-left:10px " sortable template_id="$auto" fetch-collection="files" filter-name="directory" filter-value="parent" filter-operator="$eq" order-by="directory" render_id="$auto">
+<div class="margin-left:10px " sortable template_id="$auto" fetch-collection="files" filter-name="directory" filter-value="parent" filter-operator="$eq" filter-order-name="directory" render_id="$auto">
     <div template_id="$auto" filter-name="content-type" filter-value="text/directory" filter-operator="$ne"></div>
 
     <!--File Template -->
