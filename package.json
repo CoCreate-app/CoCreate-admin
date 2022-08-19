@@ -1,6 +1,6 @@
 {
   "name": "@cocreate/admin",
-  "version": "1.19.2",
+  "version": "1.19.3",
   "description": "A No Code Admin, CRM, CMS, Website Builder platform. Powered by CoCreateJS to provide Realtime and Collaborative CRUD functionality. ",
   "keywords": [
     "admin",
