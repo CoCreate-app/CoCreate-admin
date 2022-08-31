@@ -82,22 +82,42 @@
 						</floating-label>
 					</td>
 				</tr>
-
 				<tbody template_id="datatable" fetch-collection="" pass-refresh pass_id="datatable" fetch-count="5">
-
-					<tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{data._id}}" toggle="selected">
+					<tr  template_id="datatable" class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{data._id}}" toggle="selected" hover="visibility:visible!important" hover-target=".tools{{data._id}}">
 						<td class="padding:5px min-width:300px align-items:center">
-                            <div class="template display:flex" render-object="data" render-key="one">
-                               
-                                <span class="padding:10px">{{one.key}}: </span>
+                            <div class="display:flex justify-content:flex-end transition:0.3s padding-left:10px" >
+                                <div class="visibility:hidden tools{{data._id}}">
+                                    <a class="float:right margin-right:15px" actions="deleteDocument" collection="{{collection}}" document_id=""><i class="fas fa-trash"></i></a>
+                                </div>
+                            </div>
+                            <div class="template display:flex" render-object="data" render-key="one" hover="visibility:visible!important" hover-target=".tools{{data._id}}{{one.key}}">
+                                <span class="visibility:hidden tools{{data._id}}{{one.key}}">
+                                    <form realtime="false" class="margin-top:10px">
+                                        <input type="hidden" collection="{{collection}}" document_id="{{data._id}}" name="{{one.key}}.untitled" value="untitiled"/>
+                                        <a actions="save, reset"><i class="fas fa-plus"></i></a>
+                                    </form>
+                                    <form realtime="false" class="margin-top:10px">
+                                        <a actions="deleteName" collection="{{collection}}" document_id="{{data._id}}" deleteName="{{one.key}}"><i class="fas fa-trash"></i></a>
+                                    </form>
+            
+                                </span>
+                                <span class="padding:10px"><span collection="{{collection}}" document_id="{{data._id}}" updateName="{{one.key}}" contenteditable>{{one.key}}</span>: </span>
                                 <div get-value=".{{one.type}}" class="width:100%" parentKey="{{one.key}}" parentType="{{one.type}}"></div>
                                 
                             </div>
 						</td>
 					</tr>
-
 				</tbody>
 			</table>
+            <div template_id="datatable" fetch-type="scroll" class="opacity:0 height:30px"></div>
+            
+            <button class="position:fixed bottom:15px right:15px width:50px height:50px background:dodgerblue grow-hover border-radius:50% z-index:8 color:white">
+                <form collection="" document_id="" pass_id="datatable">
+                    <input type="hidden" document_id="" name="name" value="untitled" pass_id="module_id"/>
+                    <a actions="save, reset"><i class="fas fa-plus"></i></a>
+                </form>
+            </button>
+
         </main>
         
         <!-- SideNav  -->
@@ -106,7 +126,7 @@
 			<!-- Search -->
 			<form class="padding:5px">
                 <floating-label>
-                    <input type="text" class="floating-label" name="collection">
+                    <input type="text" class="floating-label" name="collection" filter-name="name" template_id="collections">
                 </floating-label>
 				<span class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">
 					<a actions="createCollection, reset">
@@ -118,7 +138,7 @@
         	<div class="padding-right:5px padding-bottom:5px">
                 <!-- Fetch and Render-->
                 <ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_90px) bottom:10px margin-right:5px">
-                    <div fetch-collections filter-order-name="name" filter-order-type="asc" template_id="collections">
+                    <div fetch-collections filter-order-name="name" filter-order-type="asc" filter-name="name" filter-value="permissions" filter-operator="$ne" template_id="collections">
                         
                         <!-- Template -->
                         <li template_id="collections" class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" hover="active" document_id="{{data.name}}">
@@ -156,8 +176,17 @@
         </template> -->
         <template class="object array" hidden>
             <div render-object="data.$parents" render-key="$auto" class="template margin-top:20px" render>
-                <div class="display:flex padding-top:10px">
-                    <span class="padding:10px">{{$auto.key}}: </span>
+                <div class="display:flex padding-top:10px" hover="visibility:visible!important" hover-target="[tools='$parents{{$auto.key}}']">
+                    <span class="visibility:hidden tools$parents{{$auto.key}}" tools="$parents{{$auto.key}}">
+                        <form realtime="false" class="margin-top:10px">
+                            <input type="hidden" collection="{{collection}}" document_id="{{data._id}}" name="$parents.untitled" value="untitiled"/>
+                            <a actions="save, reset"><i class="fas fa-plus"></i></a>
+                        </form>
+                        <form realtime="false" class="margin-top:10px">
+                            <a actions="deleteName" collection="{{collection}}" document_id="{{data._id}}" deleteName="$parents.{{$auto.key}}"><i class="fas fa-trash"></i></a>
+                        </form>
+                    </span>
+                    <span class="padding:10px"><span collection="{{collection}}" document_id="{{data._id}}" value-prefix="$parents." updateName="$parents.{{$auto.key}}" contenteditable>{{$auto.key}}</span>: </span>
                     <div get-value=".{{$auto.type}}" parentKey="{{$auto.key}}" parentType="{{$auto.type}}"></div>
                 </div>
             </div>
