@@ -1,3 +1,16 @@
+# [1.20.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.19.4...v1.20.0) (2022-09-28)
+
+
+### Bug Fixes
+
+* bump cdn version to 1.27.1 ([73fae2c](https://github.com/CoCreate-app/CoCreate-admin/commit/73fae2c137a74f377d777f2837741d75acae4c4b))
+
+
+### Features
+
+* filter and sort collection list ([350acb2](https://github.com/CoCreate-app/CoCreate-admin/commit/350acb2cf2ea1c61f0eee9548f9071b438ac1337))
+* works offline when back online will sync changes, PWA Installable ([031826b](https://github.com/CoCreate-app/CoCreate-admin/commit/031826be1551bf1a4cb199556c3b54a151207c79))
+
 ## [1.19.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.19.3...v1.19.4) (2022-08-23)
 
 
