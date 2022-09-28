@@ -9,6 +9,8 @@
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreateCSS.min.css">
         <link rel="stylesheet" href="./index.css" collection="files" document_id="60e4f9714792bff869f1bde5" name="src" type="text/css"/>
+        <link rel="manifest" href="./manifest.json" />
+
     </head>
 
     <style type="text/css">
@@ -120,8 +122,9 @@
                 <input placeholder="Search" template_id="connected_orgs">
                 <cc-options class="options cocreate-menu overflow:auto sessionUser_Id"
                     fetch-collection="users"
-                    fetch-document_id=""
-                    fetch-name="connected_orgs" 
+                    fetch-name="connected_orgs"
+                    filter-name="_id"
+                    filter-value=""
                     filter-operator="$eq"
                     template_id="connected_orgs">
                     <cc-option class="template display:flex height:50px margin:0!important padding:4px_12px!important" template_id="connected_orgs" value="{{connected_orgs}}">
@@ -223,8 +226,11 @@
 			</div>
             <div resize="right"></div>
         </sidenav>
-        
+
 		<div class="position:fixed!important bottom:15px right:15px">
+            
+            <button actions="install" type="button" hidden>Install</button>
+        
 	        <div template_id="notification" class="template card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
 	            <span class="{{type}}">{{message}}</span><a actions="remove" remove-closest="[templateid]"> X</a>
 	        </div>
