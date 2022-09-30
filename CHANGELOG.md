@@ -1,3 +1,12 @@
+## [1.20.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.20.0...v1.20.1) (2022-09-30)
+
+
+### Bug Fixes
+
+* add cdn ([cc427ac](https://github.com/CoCreate-app/CoCreate-admin/commit/cc427ac57d543fd672ec115f38955135af7a1586))
+* bump dependencies ([bc5d286](https://github.com/CoCreate-app/CoCreate-admin/commit/bc5d2861834a28c8a2e91b1a9b31a89e20679c5b))
+* config renameed to CoCreateConfig ([1c30e6f](https://github.com/CoCreate-app/CoCreate-admin/commit/1c30e6f750f3ae67a60f66cc214384b07057b83f))
+
 # [1.20.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.19.4...v1.20.0) (2022-09-28)
 
 
