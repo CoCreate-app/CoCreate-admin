@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.20.4...v1.21.0) (2022-10-01)
+
+
+### Features
+
+* Installable, cacheable, works offline ([3f19147](https://github.com/CoCreate-app/CoCreate-admin/commit/3f19147cdb9ed5873e31c21f1f14b868139918da))
+
 ## [1.20.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.20.3...v1.20.4) (2022-09-30)
 
 
