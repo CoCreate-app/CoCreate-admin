@@ -157,8 +157,8 @@
 										<cc-options fetch-collection="industries" 
 										    template_id="industries"
 										    class="options overflow:auto">
-											<cc-option class="template" template_id="industries" value="{{data._id}}">
-												<h4>{{data.name}}</h4>
+											<cc-option class="template" template_id="industries" value="{{document._id}}">
+												<h4>{{document.name}}</h4>
 											</cc-option>
 										</cc-options>
 		                            </cocreate-select>
@@ -286,7 +286,6 @@
 		
         <script src="./apikey.js"></script>
         <script src="https://cdn.cocreate.app/1.28.8/CoCreate.min.js"></script>
-        <!-- <script src="../../../CoCreateJS/dist/CoCreate.js"></script> -->
         
 	</body>
 </html>

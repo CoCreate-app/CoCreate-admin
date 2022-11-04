@@ -102,10 +102,10 @@
 				<cocreate-select name="module_id" placeholder="Module" sortable class="floating-label">
 					<input placeholder="Search" template_id="module_id">
 					<cc-options fetch-collection="modules" template_id="module_id" class="overflow:auto">
-						<cc-option class="template" template_id="module_id" value="{{data._id}}">
+						<cc-option class="template" template_id="module_id" value="{{document._id}}">
 							<div class="display:flex padding:5px">
-								<span class="width:25px" collection="{{collection}}" document_id="{{data._id}}" name="icon"></span>
-								<h4>{{data.name}}</h4>
+								<span class="width:25px" collection="{{document.collection}}" document_id="{{document._id}}" name="icon"></span>
+								<h4>{{document.name}}</h4>
 							</div>
 						</cc-option>
 					</cc-options>

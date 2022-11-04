@@ -108,9 +108,9 @@
             </form>
 
             <div sortable class="margin:0px_20px padding:20px_0px border-bottom:1px_solid_lightgrey" fetch-collection="items-ordered" filter-name="estimate_id" filter-value="" filter-operator="$eq" pass_id="form-fields" template_id="item-row" dnd-group-name="item-row">
-                <div id="item-row" class="template border-color:medium-gray margin-bottom:10px" template_id="item-row" document_id="{{data._id}}">
+                <div id="item-row" class="template border-color:medium-gray margin-bottom:10px" template_id="item-row" document_id="{{document._id}}">
 
-                    <form class="display:flex" collection="{{collection}}" document_id="{{data._id}}">
+                    <form class="display:flex" collection="{{document.collection}}" document_id="{{document._id}}">
                         <div class="display:flex flex-wrap:wrap flex-grow:1 align-items:center justify-content:space-around padding-bottom:10px border-right:1px_solid_lightgrey">
 
                             <div class="display:flex flex-grow:1">
@@ -119,9 +119,9 @@
                                     <cocreate-select class="floating-label" name="Item" placeholder="Item">
                                         <input placeholder="Search" template_id="items">
                                         <ul class="options overflow:auto" fetch-collection="items" template_id="items">
-                                            <li class="option template" template_id="items" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
-                                                <h3 name="name" value="{{data.name}}">Item Name</h3>
-                                                <h5>{{data._id}}</h5>
+                                            <li class="option template" template_id="items" value='{{document._id}}' document_id="{{document._id}}" render-array="data">
+                                                <h3 name="name" value="{{document.name}}">Item Name</h3>
+                                                <h5>{{document._id}}</h5>
                                             </li>
                                         </ul>
 
@@ -129,9 +129,9 @@
                                 </div>
                             </div>
                             <div class="display:flex">
-                                <input id="qty-{{data._id}}" class="floating-label max-width:70px" name="qty" placeholder="Qty">
-                                <input id="price-{{data._id}}" class="floating-label max-width:100px" name="price" placeholder="Price">
-                                <input id="total-{{data._id}}" realtime="false" class="floating-label max-width:130px item-total" name="total" placeholder="Total" calculate="{#price-{{data._id}}} * {#qty-{{data._id}}}">
+                                <input id="qty-{{document._id}}" class="floating-label max-width:70px" name="qty" placeholder="Qty">
+                                <input id="price-{{document._id}}" class="floating-label max-width:100px" name="price" placeholder="Price">
+                                <input id="total-{{document._id}}" realtime="false" class="floating-label max-width:130px item-total" name="total" placeholder="Total" calculate="{#price-{{document._id}}} * {#qty-{{document._id}}}">
                             </div>
                             <div>
                                 <!--<input class="item-description floating-label" document_id="" name="description"  placeholder="Description"/>-->
@@ -140,7 +140,7 @@
                         </div>
 
                         <div class="padding:10px display:flex justify-content:space-between flex-direction:column">
-                            <a actions="deleteDocument, closeModal" collection="{{collection}}" document_id="{{data._id}}" class="text-align-center"><i class="fas fa-times"></i></a>
+                            <a actions="deleteDocument, closeModal" collection="{{document.collection}}" document_id="{{document._id}}" class="text-align-center"><i class="fas fa-times"></i></a>
                             <a><i class="fas fa-cog"></i></a>
                         </div>
                     </form>

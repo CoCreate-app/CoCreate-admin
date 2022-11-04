@@ -104,7 +104,7 @@
 							<input type="text" class="floating-label" filter-name="name" template_id="datatable" placeholder="Name">
 						</floating-label>
 						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-							<a filter-order-name="name" toggle-order="asc" template_id="datatable"></a>
+							<a filter-sort-name="name" toggle-order="asc" template_id="datatable"></a>
 						</span>
 					</td>
 					<td class="position:sticky top:0 background:white padding:0px_10px_10px">
@@ -112,27 +112,27 @@
 							<input type="text" class="floating-label" filter-name="_id" template_id="datatable" placeholder="Document_id" />
 						</floating-label>
 						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-							<a filter-order-name="_id" toggle-order="asc" template_id="datatable"></a>
+							<a filter-sort-name="_id" toggle-order="asc" template_id="datatable"></a>
 						</span>
 					</td>
 				</tr>
 
 				<div template_id="datatable" filter-name="tags" filter-value="template"></div>
-				<tbody template_id="datatable" fetch-collection="files" filter-name="" filter-value="" filter-order-name="name" filter-order-type="asc" pass_id="datatable">
+				<tbody template_id="datatable" fetch-collection="files" filter-name="" filter-value="" filter-sort-name="name" filter-sort-type="asc" pass_id="datatable">
 
-					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{data._id}}" toggle="selected">
+					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{document._id}}" toggle="selected">
 						<td class="padding:10px">
 							<div class="display:flex min-width:200px">
 								<div class="display:flex justify-content:center width:25px">
-									<span>{{data.icon}}</span>
+									<span>{{document.icon}}</span>
 								</div>
 								<div class="margin-left:10px">
 									<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954">
-										<h4>{{data.name}}</h4>
-										<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
+										<h4>{{document.name}}</h4>
+										<div pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields"></div>
 										<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
-									<div pass-value="{{data.module_id}}" pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
-									<div pass-document_id="{{data.module_id}}" pass_to="module-form"></div>
+									<div pass-value="{{document.module_id}}" pass-filter-value="{{document.module_id}}" pass_to="module_id"></div>
+									<div pass-document_id="{{document.module_id}}" pass_to="module-form"></div>
 									</a>
 									<h5 name="description" value="description"></h5>
 								</div>
@@ -140,11 +140,11 @@
 						</td>
 						<td class="padding:10px">
 							<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954">
-								<b>{{data._id}}</b>
-								<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
+								<b>{{document._id}}</b>
+								<div pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields"></div>
 								<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
-								<div pass-value="{{data.module_id}}" pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
-								<div pass-document_id="{{data.module_id}}" pass_to="module-form"></div>
+								<div pass-value="{{document.module_id}}" pass-filter-value="{{document.module_id}}" pass_to="module_id"></div>
+								<div pass-document_id="{{document.module_id}}" pass_to="module-form"></div>
 							</a>
 						</td>
 					</tr>

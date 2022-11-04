@@ -91,12 +91,12 @@
                 <div class="margin-top:10px" fetch-collection="testtwillio" filter-name="status" filter-value="completed" filter-operator="$ne" fetch-count="10" template_id="active-calls">
 
                     <!-- Call Template -->
-                    <div class="template card call padding:20px_10px margin-bottom:15px background:white margin-right:10px" template_id="active-calls" collection="{{collection}}" document_id="{{data._id}}" name="status" value="">
+                    <div class="template card call padding:20px_10px margin-bottom:15px background:white margin-right:10px" template_id="active-calls" collection="{{document.collection}}" document_id="{{document._id}}" name="status" value="">
 
                         <!-- Call Header -->
                         <div class="display:flex border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px margin-bottom:10px font-size:22px color:#333333 font-weight:600">
-                            <div class="status margin-right:5px" collection="{{collection}}" document_id="{{data._id}}" name="status" value=""></div>
-                            <span class="loader height:24px width:100px" collection="{{collection}}" document_id="{{data._id}}" name="status" value=""></span>
+                            <div class="status margin-right:5px" collection="{{document.collection}}" document_id="{{document._id}}" name="status" value=""></div>
+                            <span class="loader height:24px width:100px" collection="{{document.collection}}" document_id="{{document._id}}" name="status" value=""></span>
                             <div class="width:100%">
                                 <span class="font-size:16px margin-top:5px float:right">0:00</span>
                             </div>
@@ -119,7 +119,7 @@
 
                             <!-- Call Details -->
                             <div class="margin-right:10px">
-                                <span class="font-size:17px font-weight:600">{{data.name}}</span>
+                                <span class="font-size:17px font-weight:600">{{document.name}}</span>
                                 <div class="font-size:15px">Dyanmic Contact Phone</div>
                                 <div class="font-size:12px color:#0ba3e1">Dynamic Contact Job Title</div>
                             </div>
@@ -128,25 +128,25 @@
                             <form class="display:flex margin-top:10px">
 
                                 <!-- Answer and end call -->
-                                <div class="callbtns display:flex {{data.direction}}" collection="{{collection}}" document_id="{{data._id}}" name="status" value="">
+                                <div class="callbtns display:flex {{document.direction}}" collection="{{document.collection}}" document_id="{{document._id}}" name="status" value="">
                                     <button class="answer" hidden actions='answerCall' title="Accept Call"><i class="fas fa-phone"></i></button>
                                     <button class="hold" hidden actions='dialConference' title="Hold"><i class="fas fa-pause"></i></button>
                                     <button class="hangup" hidden actions='hangupCall' title="End Call"><i class="fas fa-phone-slash"></i></button>
                                     <!--<button class="voicemail" hidden title="Send to Voicemail"><i class="mdi mdi-48 mdi-voicemail"></i></button>-->
 
-                                    <input type="hidden" twilio="dialConference.friendlyName" value="{{data._id}}">
-                                    <input type="hidden" twilio="dialConference.CallSid" value="{{data.CallSid}}">
+                                    <input type="hidden" twilio="dialConference.friendlyName" value="{{document._id}}">
+                                    <input type="hidden" twilio="dialConference.CallSid" value="{{document.CallSid}}">
                                     <input type="hidden" twilio="dialConference.holdUrl" value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic">
                                 </div>
 
                                 <!-- Conference -->
-                                <div class="conference display:flex" collection="{{collection}}" document_id="{{data._id}}" name="status" value="">
-                                    <!--<input type="hidden" twilio="joinConference.friendlyName" value="{{data.From}}">-->
-                                    <div type="hidden" twilio="endConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
-                                    <div type="hidden" twilio="holdConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
-                                    <div type="hidden" twilio="unholdConference.CallSid" collection="{{collection}}" document_id="{{data._id}}" name="ConferenceSid" value=""></div>
+                                <div class="conference display:flex" collection="{{document.collection}}" document_id="{{document._id}}" name="status" value="">
+                                    <!--<input type="hidden" twilio="joinConference.friendlyName" value="{{document.From}}">-->
+                                    <div type="hidden" twilio="endConference.CallSid" collection="{{document.collection}}" document_id="{{document._id}}" name="ConferenceSid" value=""></div>
+                                    <div type="hidden" twilio="holdConference.CallSid" collection="{{document.collection}}" document_id="{{document._id}}" name="ConferenceSid" value=""></div>
+                                    <div type="hidden" twilio="unholdConference.CallSid" collection="{{document.collection}}" document_id="{{document._id}}" name="ConferenceSid" value=""></div>
 
-                                    <button class="join" hidden actions='joinConference' title="Resume Call" data-friendlyName="{{data._id}}"><i class="fas fa-pause"></i></button>
+                                    <button class="join" hidden actions='joinConference' title="Resume Call" data-friendlyName="{{document._id}}"><i class="fas fa-pause"></i></button>
                                     <button class="hold-conference" hidden actions='holdConference' title="Put Call on Hold"><i class="fas fa-pause"></i></button>
                                     <button class="unhold" hidden actions='unholdConference' title="Resume Call"><i class="fas fa-pause"></i></button>
                                     <button class="end" hidden actions='endConference' class="decline" title="End Call con"><i class="fas fa-phone-slash"></i></button>
@@ -158,19 +158,19 @@
 
                                 <!-- Enqueue -->
                                 <div hidden>
-                                    <input twilio="dialEnqueue.nameEnqueue" data-old="{{data.From}}" value="cocreateEnqueue">
-                                    <input twilio="dialEnqueue.CallSid" value="{{data.CallSid}}">
+                                    <input twilio="dialEnqueue.nameEnqueue" data-old="{{document.From}}" value="cocreateEnqueue">
+                                    <input twilio="dialEnqueue.CallSid" value="{{document.CallSid}}">
                                     <input twilio="dialEnqueue.waitUrl" value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic">
                                     <button actions='dialEnqueue, getListQueues'>dialEnqueue</button>
                                 </div>
 
                             </form>
-                            <!--<div template_id="getParticipantsConferences_{{data.idconference}}">-->
+                            <!--<div template_id="getParticipantsConferences_{{document.idconference}}">-->
                             <!--    <form>-->
-                            <!--        <input type="hidden"  twilio="getParticipantsConference.CallSid" value="{{data.idconference}}">-->
+                            <!--        <input type="hidden"  twilio="getParticipantsConference.CallSid" value="{{document.idconference}}">-->
                             <!--            <button actions='getParticipantsConference' -->
-                            <!--                data-friendlyName="{{data.friendlyName}}"-->
-                            <!--                data-idconference="{{data.idconference}}"-->
+                            <!--                data-friendlyName="{{document.friendlyName}}"-->
+                            <!--                data-idconference="{{document.idconference}}"-->
                             <!--            >GetPart</button>-->
                             <!--    </form>-->
                             <!--    <div class="template margin:10px;" value="{{participant.id}}" render-array="participant">-->
@@ -255,7 +255,7 @@
 
                             <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
 								<!-- need a solution to update toggle value="desc|asc" and define and upadte icons... show hide works great but to much html and orderby only has 2 values -->
-								<a filter-order-name="name" toggle-order template_id="datatable">
+								<a filter-sort-name="name" toggle-order template_id="datatable">
 									<i></i>
 								</a>
 							</span>
@@ -266,7 +266,7 @@
                         <!--		template_id="datatable" -->
                         <!--		placeholder="Participants"/>-->
                         <!--		<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6" >-->
-                        <!--			<a filter-order-name="_id" value="" toggle-order="true" template_id="datatable">-->
+                        <!--			<a filter-sort-name="_id" value="" toggle-order="true" template_id="datatable">-->
                         <!--			</a>-->
                         <!--		</span>-->
                         <!--</td>-->
@@ -275,16 +275,16 @@
                                 <input type="text" class="floating-label" filter-name="duration" template_id="datatable" placeholder="duration" />
                             </floating-label>
                             <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-								<a filter-order-name="_id" value="" toggle-order="true" template_id="datatable"></a>
+								<a filter-sort-name="_id" value="" toggle-order="true" template_id="datatable"></a>
 							</span>
                         </td>
                     </tr>
 
                     <!-- Datatable Fetch and Render Rows -->
-                    <tbody template_id="datatable" fetch-collection="testtwillio" fetch-count="15" filter-order-name="" filter-order-type="asc">
+                    <tbody template_id="datatable" fetch-collection="testtwillio" fetch-count="15" filter-sort-name="" filter-sort-type="asc">
 
                         <!-- Datatable Row Template -->
-                        <tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{data._id}}" template_id="datatable" document_id="{{data._id}}" toggle="selected">
+                        <tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{document._id}}" template_id="datatable" document_id="{{document._id}}" toggle="selected">
                             <td class="padding:10px">
                                 <div class="display:flex min-width:200px">
                                     <div class="display:flex justify-content:center width:40px">
@@ -300,15 +300,15 @@
                                         </div>
                                     </div>
                                     <div class="margin-left:10px">
-                                        <a target="modal" href="https://server.cocreate.app/CoCreate-admin/src/modules/module-views/module_form.html" pass-collection="modules" pass-document_id="{{data._id}}" pass-name="src" pass_to="render" modal-width="320px" modal-color="#229954"
+                                        <a target="modal" href="https://server.cocreate.app/CoCreate-admin/src/modules/module-views/module_form.html" pass-collection="modules" pass-document_id="{{document._id}}" pass-name="src" pass_to="render" modal-width="320px" modal-color="#229954"
                                            >
-                                            <div class="display:none to-{{data.direction}}">
-                                                <h4><span collection="{{collection}}" document_id="{{data._id}}" name="To">To</span></h4>
+                                            <div class="display:none to-{{document.direction}}">
+                                                <h4><span collection="{{document.collection}}" document_id="{{document._id}}" name="To">To</span></h4>
                                             </div>
-                                            <div class="display:none from-{{data.direction}}">
-                                                <h4><span collection="{{collection}}" document_id="{{data._id}}" name="From">From</span></h4>
+                                            <div class="display:none from-{{document.direction}}">
+                                                <h4><span collection="{{document.collection}}" document_id="{{document._id}}" name="From">From</span></h4>
                                             </div>
-                                            <span class="icon-{{data.direction}}" collection="{{collection}}" document_id="{{data._id}}" name="status" value=""></span>
+                                            <span class="icon-{{document.direction}}" collection="{{document.collection}}" document_id="{{document._id}}" name="status" value=""></span>
                                         </a>
                                     </div>
                                 </div>
@@ -334,11 +334,11 @@
                             <!--                      </div>			-->
                             <!--</td>-->
                             <td class="padding:10px">
-                                <a target="modal" href="https://server.cocreate.app/CoCreate-admin/src/modules/module-views/module_form.html" pass-document_id="{{data._id}}" pass-collection="modules" pass-name="src" pass_to="render" modal-width="320px" modal-color="#229954"
+                                <a target="modal" href="https://server.cocreate.app/CoCreate-admin/src/modules/module-views/module_form.html" pass-document_id="{{document._id}}" pass-collection="modules" pass-name="src" pass_to="render" modal-width="320px" modal-color="#229954"
                                    >
-    								<b collection="{{collection}}" document_id="{{data._id}}" name="duration">Duration</b>
+    								<b collection="{{document.collection}}" document_id="{{document._id}}" name="duration">Duration</b>
     								<div pass-collection="modules"
-    									pass-document_id="{{data._id}}"
+    									pass-document_id="{{document._id}}"
     									pass_to="form-fields">
     								</div>
     							</a>
@@ -367,16 +367,16 @@
                                 <input template_id="option0">
     
                                 <ul fetch-collection="use" template_id="option0" class="options overflow:auto height:300px">
-                                    <li class="option templat display:flex padding:5px" template_id="option0" value='+13472189814' document_id="{{data._id}}" render-array="data">
+                                    <li class="option templat display:flex padding:5px" template_id="option0" value='+13472189814' document_id="{{document._id}}" render-array="data">
                                         <div>
-                                            <h3 name="name" value="{{data.name}}">+13472189814</h3>
-                                            <h5>{{data._id}}</h5>
+                                            <h3 name="name" value="{{document.name}}">+13472189814</h3>
+                                            <h5>{{document._id}}</h5>
                                         </div>
                                     </li>
-                                    <li class="option templat display:flex padding:5px" template_id="option0" value='+13472189814' document_id="{{data._id}}" render-array="data">
+                                    <li class="option templat display:flex padding:5px" template_id="option0" value='+13472189814' document_id="{{document._id}}" render-array="data">
                                         <div>
-                                            <h3 name="name" value="{{data.name}}">+16027372368</h3>
-                                            <h5>{{data._id}}</h5>
+                                            <h3 name="name" value="{{document.name}}">+16027372368</h3>
+                                            <h5>{{document._id}}</h5>
                                         </div>
                                     </li>
                                 </ul>
@@ -392,7 +392,7 @@
                                     <input twilio="dial.To" class="draw_digits" template_id="option0" value="+19703735168">
     
                                     <ul fetch-collection="users" template_id="number" class="options overflow:auto">
-                                        <li class="option template display:flex padding:5px" template_id="number" value='{{data._id}}' document_id="{{data._id}}" render-array="data">
+                                        <li class="option template display:flex padding:5px" template_id="number" value='{{document._id}}' document_id="{{document._id}}" render-array="data">
                                             <!-- Avatar -->
                                             <div class="avatar-wrapper margin:5px_0px margin-right:10px">
                                                 <a class="avatar round" target="modal" href="https://server.cocreate.app/CoCreate-admin/user-profile/user-profile.html" pass-collection="modules" pass-prefix="" pass-document_id="5dd010bccbc25f0cdb1a4d9f" pass_to="render" modal-width="300px"
@@ -405,8 +405,8 @@
                                                 <div class="avatar-status sessionUser_Id" collection="users" document_id="" user-status='{"name":"status"}'></div>
                                             </div>
                                             <div>
-                                                <h3 name="name" value="{{data.name}}">No Name</h3>
-                                                <h5>{{data._id}}</h5>
+                                                <h3 name="name" value="{{document.name}}">No Name</h3>
+                                                <h5>{{document._id}}</h5>
                                             </div>
                                         </li>
                                     </ul>
@@ -461,11 +461,11 @@
         				        </button>
                                 <!-- Conference -->
                                 <div>
-                                    <input type="hidden" twilio="joinConference.friendlyName" value="{{data.friendlyName}}">
-                                    <input type="hidden" twilio="endConference.CallSid" value="{{data.idconference}}">
-                                    <input type="hidden" twilio="holdConference.CallSid" value="{{data.idconference}}">
-                                    <input type="hidden" twilio="unholdConference.CallSid" value="{{data.idconference}}">
-                                    <button hidden actions='joinConference' data-friendlyName="{{data.friendlyName}}" title="Resume Call">
+                                    <input type="hidden" twilio="joinConference.friendlyName" value="{{document.friendlyName}}">
+                                    <input type="hidden" twilio="endConference.CallSid" value="{{document.idconference}}">
+                                    <input type="hidden" twilio="holdConference.CallSid" value="{{document.idconference}}">
+                                    <input type="hidden" twilio="unholdConference.CallSid" value="{{document.idconference}}">
+                                    <button hidden actions='joinConference' data-friendlyName="{{document.friendlyName}}" title="Resume Call">
                                         <i class="fas fa-pause"></i>
                                     </button>
                                     <button hidden actions='holdConference'><i class="fas fa-pause"></i></button>
@@ -478,7 +478,7 @@
             					</button>
                                 <button id="#end-call" class="decline" hidden actions='hangupCall' title="End Call"><i class="fas fa-phone-slash"></i></button>
                                 <!-- End Conference -->
-                                <input type="hidden" twilio="endConference.CallSid" value="{{data.idconference}}">
+                                <input type="hidden" twilio="endConference.CallSid" value="{{document.idconference}}">
                                 <button hidden actions='endConference'><i class="fas fa-phone-slash"></i></button>
                             </div>
                             <div class="display:flex justify-content:center width:33%">

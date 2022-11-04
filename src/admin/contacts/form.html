@@ -75,8 +75,8 @@
     							<input placeholder="Search" template_id="type">
     						    <div template_id="type" filter-name="type" filter-value="60edaf79b979b4001744c6fe"></div>
     							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="type" class="overflow:auto">
-    								<cc-option class="template" template_id="type" value="{{data._id}}">
-    									<h4>{{data.name}}</h4>
+    								<cc-option class="template" template_id="type" value="{{document._id}}">
+    									<h4>{{document.name}}</h4>
     								</cc-option>
     							</cc-options>
     						</cocreate-select>
@@ -88,8 +88,8 @@
     							<input placeholder="Search" template_id="status">
     						    <div template_id="status" filter-name="type" filter-value="5ff747727005da1c272740ab"></div>
     							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="status" class="overflow:auto">
-    								<cc-option class="template" template_id="status" value="{{data._id}}">
-    									<h4>{{data.name}}</h4>
+    								<cc-option class="template" template_id="status" value="{{document._id}}">
+    									<h4>{{document.name}}</h4>
     								</cc-option>
     							</cc-options>
     						</cocreate-select>
@@ -117,7 +117,7 @@
         </main>
 
         <script src="https://cdn.cocreate.app/1.28.8/CoCreate.min.js"></script>
-        <!-- <script src="../../../../CoCreateJS/dist/CoCreate.js"></script> -->
+        
 
     </body>
 

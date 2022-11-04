@@ -78,8 +78,8 @@
 							<input placeholder="Search" template_id="status">
 						    <div template_id="status" filter-name="type" filter-value="5ff747727005da1c272740ab"></div>
 							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="status" class="overflow:auto">
-								<cc-option class="template" template_id="status" value="{{data._id}}">
-									<h4>{{data.name}}</h4>
+								<cc-option class="template" template_id="status" value="{{document._id}}">
+									<h4>{{document.name}}</h4>
 								</cc-option>
 							</cc-options>
 						</cocreate-select>
@@ -89,8 +89,8 @@
 							<input placeholder="Search" template_id="stage">
 						    <div template_id="stage" filter-name="type" filter-value="5ff747727005da1c272740ab"></div>
 							<cc-options fetch-collection="tags" filter-name="module_id" pass_id="module_id" filter-value="" template_id="stage" class="overflow:auto">
-								<cc-option class="template" template_id="stage" value="{{data._id}}">
-									<h4 collection="{{collection}}}" document_id="{{data._id}}" name="name">Stage Name</h4>
+								<cc-option class="template" template_id="stage" value="{{document._id}}">
+									<h4 collection="{{document.collection}}}" document_id="{{document._id}}" name="name">Stage Name</h4>
 								</cc-option>
 							</cc-options>
 						</cocreate-select>
@@ -100,13 +100,13 @@
 				<cocreate-select sortable class="floating-label" name="related_to" document_id="" multiple placeholder="Related To:">
 					<input placeholder="Search" template_id="related_to">
 					<cc-options fetch-collection="module_activities" template_id="related_to" class="overflow:auto">
-						<cc-option class="template display:flex padding:5px" template_id="related_to" value="{{data._id}}">
+						<cc-option class="template display:flex padding:5px" template_id="related_to" value="{{document._id}}">
 							<div class="display:flex justify-content:center width:25px">
-								<span collection="modules" document_id="{{data.module_id}}" name="icon"></span>
+								<span collection="modules" document_id="{{document.module_id}}" name="icon"></span>
 							</div>
 							<div class="margin-left:10px">
-								<span>{{data.name}}</span>
-								<h4>{{data.description}}</h4>
+								<span>{{document.name}}</span>
+								<h4>{{document.description}}</h4>
 							</div>
 						</cc-option>
 					</cc-options>
@@ -115,21 +115,21 @@
 				<cocreate-select sortable class="floating-label" name="team" document_id="" multiple placeholder="Team">
 					<input placeholder="Search" template_id="team">
 					<cc-options fetch-collection="users" template_id="team" class="overflow:auto">
-						<cc-option class="template display:flex padding:5px" template_id="team" value="{{data._id}}">
+						<cc-option class="template display:flex padding:5px" template_id="team" value="{{document._id}}">
 							<div class="display:flex justify-content:center">
 					            <div class="avatar-wrapper margin:5px">
 					                <a class="avatar round" target="modal" href="../users/profile.html" modal-width="300px"  modal-height="375px"  modal-color="#229954">
-					                    <span class="avatar-name">{{data.name}}</span>
+					                    <span class="avatar-name">{{document.name}}</span>
 					                    <span class="avatar-image">
-					                        <img collection="users" document_id="{{collection}}" name="avatar" onerror="this.style.display='none'" width="40px"/>
+					                        <img collection="users" document_id="{{document.collection}}" name="avatar" onerror="this.style.display='none'" width="40px"/>
 					                    </span>
 					                </a>
-					                <div class="avatar-status"  collection="{{collection}}" document_id="{{data._id}}" user-status='{"name":"status"}'></div>
+					                <div class="avatar-status"  collection="{{document.collection}}" document_id="{{document._id}}" user-status='{"name":"status"}'></div>
 					            </div>
 							</div>
 							<div class="margin-left:5px diaplay:flex">
-								<h3>{{data.name}}</h3>
-								<h5>{{data.email}}</h5>
+								<h3>{{document.name}}</h3>
+								<h5>{{document.email}}</h5>
 							</div>
 						</cc-option>
 					</cc-options>

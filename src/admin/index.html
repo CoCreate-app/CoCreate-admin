@@ -66,27 +66,29 @@
                     </a>
                 </li>
                 
-                <div fetch-collection="modules" 
-                    filter-order-name="navbar-menu-position" 
-                    filter-order-type="asc"
+                <div class="display:inline-flex"
+                    fetch-collection="modules" 
+                    fetch-document
+                    filter-sort-name="navbar-menu-position" 
+                    filter-sort-type="asc"
                     filter-name="navbar-menu-position" 
                     filter-value="0" 
                     filter-value-type="number"
                     filter-operator="$ne"
-                    template_id="navbar-menu" class="display:inline-flex">
+                    template_id="navbar-menu">
                   
-                    <li class="template margin-right:15px" template_id="navbar-menu" document_id="{{data._id}}">
-                        <!-- <input type="hidden" collection="files" document_id="{{data.navbar-menu-primary}}" name="path" set-value="#a{{data._id}}" set-value-key="navbar-url"> -->
-                        <a target="modal" id="a{{data._id}}" href='..{{data.navbar-menu-primary.path}}'
-                            modal-width="{{data.navbar-modal-primary-width}}"
-                            modal-height="{{data.navbar-modal-primary-height}}"
-                            modal-color="{{data.navbar-modal-primary-color}}">
-                            <span>{{data.icon}}</span>
-                            <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{data._id}}" pass_to="datatable"></div>
-                            <div pass-collection="files" pass-document_id="{{data.main-menu-secondary}}" pass-name="src" pass_to="form"></div>
-                            <div pass-collection="files" pass-document_id="{{data.navbar-menu-primary._id}}" pass-name="src" pass_to="render"></div>
-                            <div pass-value="{{data._id}}" pass-filter-value="{{data._id}}" pass_to="module_id"></div>
-                            <div pass-document_id="{{data._id}}" pass_to="module-form"></div>
+                    <li class="template margin-right:15px" template_id="navbar-menu">
+                        <!-- <input type="hidden" collection="files" document_id="{{document.navbar-menu-primary}}" name="path" set-value="#a{{document._id}}" set-value-key="navbar-url"> -->
+                        <a target="modal" id="a{{document._id}}" href='..{{document.navbar-menu-primary.path}}'
+                            modal-width="{{document.navbar-modal-primary-width}}"
+                            modal-height="{{document.navbar-modal-primary-height}}"
+                            modal-color="{{document.navbar-modal-primary-color}}">
+                            <span>{{document.icon}}</span>
+                            <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
+                            <div pass-collection="files" pass-document_id="{{document.main-menu-secondary}}" pass-name="src" pass_to="form"></div>
+                            <div pass-collection="files" pass-document_id="{{document.navbar-menu-primary._id}}" pass-name="src" pass_to="render"></div>
+                            <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>
+                            <div pass-document_id="{{document._id}}" pass_to="module-form"></div>
                         </a>
                     </li>
                 </div>
@@ -152,9 +154,9 @@
         	<div class="padding-right:5px padding-bottom:5px">
                 <!-- Fetch and Render-->
               	<ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_165px) bottom:10px margin-right:5px">
-              	    <div fetch-collection="modules" 
-                        filter-order-name="main-menu-position" 
-                        filter-order-type="asc"
+              	    <div fetch-collection="modules"
+                        filter-sort-name="main-menu-position" 
+                        filter-sort-type="asc"
                         filter-name="main-menu-position" 
                         filter-value="0"
                         filter-value-type="number"
@@ -162,28 +164,28 @@
                         template_id="main-menu">
                         
                         <!-- Template -->
-                        <li class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" template_id="main-menu" document_id="{{data._id}}">
-                            <a target="modal" id="a{{data._id}}" href='..{{data.main-menu-primary.path}}'
-                                modal-width="{{data.main-modal-primary-width}}"
-                                modal-color="{{data.main-modal-color}}"
+                        <li class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" template_id="main-menu">
+                            <a target="modal" id="a{{document._id}}" href='..{{document.main-menu-primary.path}}'
+                                modal-width="{{document.main-modal-primary-width}}"
+                                modal-color="{{document.main-modal-color}}"
                                 class="display:inline-block">
-                                <span class="display:inline-block width:50px text-align:center">{{data.icon}}</span>
-                                <span>{{data.name}}</span>
-                                <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{data._id}}" pass_to="datatable"></div>
-                                <div pass-collection="files" pass-document_id="{{data.main-menu-secondary._id}}" pass-name="src" pass_to="form"></div>
-                                <div pass-collection="files" pass-document_id="{{data.main-menu-primary._id}}" pass-name="src" pass_to="render"></div>
-                                <div pass-value="{{data._id}}" pass-filter-value="{{data._id}}" pass_to="module_id"></div>
-                                <div pass-document_id="{{data._id}}" pass_to="module-form"></div>
+                                <span class="display:inline-block width:50px text-align:center">{{document.icon}}</span>
+                                <span>{{document.name}}</span>
+                                <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
+                                <div pass-collection="files" pass-document_id="{{document.main-menu-secondary._id}}" pass-name="src" pass_to="form"></div>
+                                <div pass-collection="files" pass-document_id="{{document.main-menu-primary._id}}" pass-name="src" pass_to="render"></div>
+                                <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>
+                                <div pass-document_id="{{document._id}}" pass_to="module-form"></div>
                             </a>
                             <div class="float:right width:50px text-align:center">
-                                <a target="modal" href='..{{data.main-menu-secondary.path}}' get-value="#b{{data._id}}" get-value-key="secondary-url"
-                                    modal-width="{{data.main-modal-secondary-width}}"
-                                    modal-color="{{data.main-modal-secondary-color}}">
+                                <a target="modal" href='..{{document.main-menu-secondary.path}}' get-value="#b{{document._id}}" get-value-key="secondary-url"
+                                    modal-width="{{document.main-modal-secondary-width}}"
+                                    modal-color="{{document.main-modal-secondary-color}}">
                                     <i class="fas fa-plus"></i>
-                                    <div pass-collection="files" pass-document_id="{{data.main-menu-secondary._id}}" pass-name="src" pass_to="render"></div>
+                                    <div pass-collection="files" pass-document_id="{{document.main-menu-secondary._id}}" pass-name="src" pass_to="render"></div>
 				                    <div pass-document_id="" pass_to="form-fields"></div>
-                                    <div pass-value="{{data._id}}" pass-filter-value="{{data._id}}" pass_to="module_id"></div>
-                                    <div pass-document_id="{{data._id}}" pass_to="module-form"></div>
+                                    <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>
+                                    <div pass-document_id="{{document._id}}" pass_to="module-form"></div>
                                 </a>
                             </div>
                         </li>
@@ -235,9 +237,8 @@
 	            <span class="{{type}}">{{message}}</span><a actions="remove" remove-closest="[templateid]"> X</a>
 	        </div>
 		</div>
-
+        
         <script src="https://cdn.cocreate.app/1.28.8/CoCreate.min.js"></script>
-        <!-- <script src="../../../CoCreateJS/dist/CoCreate.js"></script> -->
         
     </body>
 </html>

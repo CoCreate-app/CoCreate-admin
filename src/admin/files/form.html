@@ -98,8 +98,8 @@
                             <input placeholder="Search" template_id="tags">
                             <div template_id="datatable" filter-name="type" filter-value="type"></div>
                             <cc-options fetch-collection="tags" filter-name="module_id" filter-value="5ff747727005da1c2727419a" pass_id="module_id" template_id="tags" class="overflow:auto">
-                                <cc-option class="template display:flex" template_id="tags" value="{{data._id}}">
-                                    <h4>{{data.name}}</h4>
+                                <cc-option class="template display:flex" template_id="tags" value="{{document._id}}">
+                                    <h4>{{document.name}}</h4>
                                 </cc-option>
                             </cc-options>
                         </cocreate-select>
@@ -117,11 +117,11 @@
                     <floating-label>
                         <cocreate-select name="module_id" placeholder="Modules" sortable class="floating-label" multiple>
                             <input placeholder="Search" template_id="module_id">
-                            <cc-options fetch-collection="modules" filter-order-name="name" template_id="module_id" class="overflow:auto">
-                                <cc-option class="template" template_id="module_id" value="{{data._id}}">
+                            <cc-options fetch-collection="modules" filter-sort-name="name" template_id="module_id" class="overflow:auto">
+                                <cc-option class="template" template_id="module_id" value="{{document._id}}">
                                     <div class="display:flex padding:5px">
-                                        <span class="width:25px">{{data.icon}}</span>
-                                        <h4 collection="{{collection}}">{{data.name}}</h4>
+                                        <span class="width:25px">{{document.icon}}</span>
+                                        <h4 collection="{{document.collection}}">{{document.name}}</h4>
                                     </div>
                                 </cc-option>
                             </cc-options>
@@ -130,11 +130,11 @@
                     <floating-label>
                         <cocreate-select name="website_id" placeholder="Website" sortable class="floating-label">
                             <input placeholder="Search" template_id="website_id">
-                            <cc-options fetch-collection="module_activities" filter-name="module_id" filter-value="5ff747727005da1c27274185" filter-order-name="name" template_id="website_id" class="overflow:auto">
-                                <cc-option class="template" template_id="website_id" value="{{data._id}}">
+                            <cc-options fetch-collection="module_activities" filter-name="module_id" filter-value="5ff747727005da1c27274185" filter-sort-name="name" template_id="website_id" class="overflow:auto">
+                                <cc-option class="template" template_id="website_id" value="{{document._id}}">
                                     <div class="display:flex padding:5px">
-                                        <span class="width:25px">{{data.icon}}</span>
-                                        <h4 collection="{{collection}}">{{data.name}}</h4>
+                                        <span class="width:25px">{{document.icon}}</span>
+                                        <h4 collection="{{document.collection}}">{{document.name}}</h4>
                                     </div>
                                 </cc-option>
                             </cc-options>
@@ -155,7 +155,7 @@
         </main>
 
         <script src="https://cdn.cocreate.app/1.28.8/CoCreate.min.js"></script>
-        <!-- <script src="../../../../CoCreateJS/dist/CoCreate.js"></script> -->
+        
 
     </body>
 

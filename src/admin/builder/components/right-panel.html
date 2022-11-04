@@ -770,9 +770,9 @@
                         </div>
                         <div class="margin:0_5px">
                              <cocreate-select class="floating-label" id="collection" placeholder="collection:" attribute="collection" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" set-value="#document_id" set-value-key="setcollection" active>
-                                <ul fetch-collections template_id="collection" class="options z-index:7 margin-top:5px">
-                      				<cc-option class="option template" template_id="collection" value="{{data.name}}">
-                      				    <span>{{data.name}}</span>
+                                <ul fetch-collection template_id="collection" class="options z-index:7 margin-top:5px">
+                      				<cc-option class="option template" template_id="collection" value="{{collection.name}}">
+                      				    <span>{{collection.name}}</span>
                       				</cc-option>
                                 </ul>
                             </cocreate-select>
@@ -780,8 +780,8 @@
                         <div class="margin:0_5px">
                             <cocreate-select class="floating-label" id="document_id" placeholder="document_id:" attribute="document_id" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
                                 <ul fetch-collection="{{setcollection}}" template_id="document_id" class="options z-index:7 margin-top:5px">
-                      				<cc-option class="option template" template_id="document_id" value="{{data._id}}">
-                      				    <span>{{data._id}}</span>
+                      				<cc-option class="option template" template_id="document_id" value="{{document._id}}">
+                      				    <span>{{document._id}}</span>
                       				</cc-option>
                                 </ul>
                             </cocreate-select>
@@ -855,9 +855,9 @@
                     </div>
                     <div class="fetchlist padding-bottom:20px margin:0_5px">
                         <cocreate-select class="floating-label" id="fetch-collection" placeholder="fetch-collection:" attribute="fetch-collection"  pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
-                            <ul fetch-collections template_id="fetch-collection" class="options z-index:7 margin-top:5px">
-                              	<cc-option class="option template" template_id="fetch-collection" value="{{data.name}}">
-                              	    <span>{{data.name}}</span>
+                            <ul fetch-collection template_id="fetch-collection" class="options z-index:7 margin-top:5px">
+                              	<cc-option class="option template" template_id="fetch-collection" value="{{collection.name}}">
+                              	    <span>{{collection.name}}</span>
                               	</cc-option>
                             </ul>
                         </cocreate-select>
@@ -866,8 +866,8 @@
                         <input attribute="filter-value" type="text" class="floating-label" placeholder="filter-value"  id="filter-value" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
                         <input attribute="filter-value-type" type="text" class="floating-label" placeholder="filter-value-type"  id="filter-value-type" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
                         <input attribute="filter-operator" type="text" class="floating-label" placeholder="filter-operator"  id="filter-operator" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
-                        <input attribute="filter-order-name" type="text" class="floating-label" placeholder="filter-order-name"  id="filter-order-name" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
-                        <input attribute="filter-order-type" type="text" class="floating-label" placeholder="filter-order-type"  id="filter-order-type" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
+                        <input attribute="filter-sort-name" type="text" class="floating-label" placeholder="filter-sort-name"  id="filter-sort-name" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
+                        <input attribute="filter-sort-type" type="text" class="floating-label" placeholder="filter-sort-type"  id="filter-sort-type" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
                         <input attribute="template_id" type="text" class="floating-label" placeholder="template_id"  id="template_id" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>    
                     </div>
                 </div>

@@ -76,7 +76,7 @@
         <main class="padding:20px" content_id="content">
 
             <!-- Fetch and Render Product list -->
-            <div class="display:flex flex-wrap:wrap" fetch-collection="blocks" fetch-count="12" filter-order-name="name" filter-order-type="asc" template_id="filter_test">
+            <div class="display:flex flex-wrap:wrap" fetch-collection="blocks" fetch-count="12" filter-sort-name="name" filter-sort-type="asc" template_id="filter_test">
 
                 <!-- Product Template -->
                 <div class="card template margin:10px flex-grow:1 width:250px" template_id="filter_test">
@@ -91,7 +91,7 @@
 
                     </div>
                     <div class="padding:15px">
-                        <h5>{{data.name}}</h5>
+                        <h5>{{document.name}}</h5>
                         <!-- ratings-container Start -->
                         <div class="margin:4px_0">
                             <span class="color:#555"><i class="fas fa-star"></i></span>
@@ -100,8 +100,8 @@
                             <span class="color:#555"><i class="fas fa-star"></i></span>
                             <span class="color:#555"><i class="fas fa-star"></i></span>
                         </div>
-                        <p class="margin:4px_0" collection="{{collection}}" document_id="{{data._id}}" name="color">blue</p>
-                        <p class="" value="{{data.price}}">$59</p>
+                        <p class="margin:4px_0" collection="{{document.collection}}" document_id="{{document._id}}" name="color">blue</p>
+                        <p class="" value="{{document.price}}">$59</p>
                         <p class="" document_id="_id" name="description" value="description"></p>
 
                         <a href="#" class="btn padding:10px_10px border:1px_solid_#0DA9EF background:#0DA9EF:hover color:#0DA9EF color:#fff:hover display:block width:60% margin:auto border-radius:30px margin-top:15px">More details</a>
@@ -144,7 +144,7 @@
         </sidenav>
 
         <script src="https://cdn.cocreate.app/1.28.8/CoCreate.min.js"></script>
-        <!--<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>-->
+        <!--<script src="https://cdn.cocreate.app/1.28.8/CoCreate.min.js"></script>-->
         
     </body>
 

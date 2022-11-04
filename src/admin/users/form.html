@@ -74,10 +74,10 @@
 					<input placeholder="Search" template_id="connect">
 					<ul fetch-collection="organizations" template_id="connectn" class="options overflow:auto">
 						<li class="template option" collection="organizations" template_id="connectn">
-							<span class="logo-icon"><img collection="organizations" document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>
+							<span class="logo-icon"><img collection="organizations" document_id="{{document._id}}" name="logo" src="" height="40px" alt="..."></span>
 							<div class="display:block line-height:1 padding:5px_0px " style="width: calc(100% - 15px);">
-								<h3 collection="organizations" document_id="{{data._id}}" name="name">Organization Name</h3>
-								<h5>{{data._id}}</h5>
+								<h3 collection="organizations" document_id="{{document._id}}" name="name">Organization Name</h3>
+								<h5>{{document._id}}</h5>
 							</div>
 						</li>
 					</ul>
@@ -88,10 +88,10 @@
 					<ul fetch-collection="users" fetch-document="" fetch-name="connected_orgs" template_id="connect" class="options overflow:auto">
 
 						<li class="template option" collection="organizations" template_id="connect">
-							<span class="logo-icon"><img collection="organizations" document_id="{{data._id}}" name="logo" src="" height="40px" alt="..."></span>
+							<span class="logo-icon"><img collection="organizations" document_id="{{document._id}}" name="logo" src="" height="40px" alt="..."></span>
 							<div class="display:block line-height:1 padding:5px_0px " style="width: calc(100% - 15px);">
-								<h3 collection="organizations" document_id="{{data._id}}" name="name">Organization Name</h3>
-								<h5>{{data._id}}</h5>
+								<h3 collection="organizations" document_id="{{document._id}}" name="name">Organization Name</h3>
+								<h5>{{document._id}}</h5>
 							</div>
 						</li>
 

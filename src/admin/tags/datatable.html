@@ -105,13 +105,13 @@
 							<input type="text" class="floating-label" filter-name="name" template_id="datatable" placeholder="Name">
 						</floating-label>
 						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-							<a filter-order-name="name" toggle-order="asc" template_id="datatable"></a>
+							<a filter-sort-name="name" toggle-order="asc" template_id="datatable"></a>
 						</span>
 					</td>
 					<!--<td class="position:sticky top:0 background:white padding:0px_10px_10px">-->
 					<!--	<input type="text" class="floating-label" filter-name="_id" template_id="datatable" placeholder="Type" />-->
 					<!--	<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">-->
-					<!--		<a filter-order-name="_id" toggle-order="asc" template_id="datatable"></a>-->
+					<!--		<a filter-sort-name="_id" toggle-order="asc" template_id="datatable"></a>-->
 					<!--	</span>-->
 					<!--</td>-->
 					<td class="position:sticky top:0 background:white padding:0px_10px_10px">
@@ -119,48 +119,48 @@
 							<input type="text" class="floating-label" filter-name="Document Id" template_id="datatable" placeholder="Type" />
 	            		</floating-label>
 						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-							<a filter-order-name="_id" toggle-order="asc" template_id="datatable"></a>
+							<a filter-sort-name="_id" toggle-order="asc" template_id="datatable"></a>
 						</span>
 					</td>
 				</tr>
 
-				<tbody template_id="datatable" fetch-collection="tags" filter-order-name="name" filter-order-type="asc" pass_id="datatable">
+				<tbody template_id="datatable" fetch-collection="tags" filter-sort-name="name" filter-sort-type="asc" pass_id="datatable">
 
-					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{data._id}}" toggle="selected">
+					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{document._id}}" toggle="selected">
 						<td class="padding:10px">
 							<div class="display:flex">
 								<div class="display:flex justify-content:center width:25px">
-									<span collection="modules" document_id="{{data.module_id}}" name="icon"></span>
+									<span collection="modules" document_id="{{document.module_id}}" name="icon"></span>
 								</div>
 								<div class="display:flex align-items:center margin-left:10px">
 									<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954" class="display:flex">
-										<h4>{{data.name}}</h4>
-										<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
+										<h4>{{document.name}}</h4>
+										<div pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields"></div>
 										<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
-										<div pass-value="{{data.module_id}}" pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
-										<div pass-document_id="{{data.module_id}}" pass_to="module-form"></div>
+										<div pass-value="{{document.module_id}}" pass-filter-value="{{document.module_id}}" pass_to="module_id"></div>
+										<div pass-document_id="{{document.module_id}}" pass_to="module-form"></div>
 									</a>
 									<a target="modal" href="../modules/form.html" modal-width="320px" modal-color="#229954" class="cocreate-badge margin-left:5px success">
-										<span collection="modules" document_id="{{data.module_id}}" name="name"></span>
-										<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
-										<div pass-filter-value="{{data.module_id}}" pass_to="module_id"></div>
+										<span collection="modules" document_id="{{document.module_id}}" name="name"></span>
+										<div pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields"></div>
+										<div pass-filter-value="{{document.module_id}}" pass_to="module_id"></div>
 										<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
-										<div pass-document_id="{{data.module_id}}" pass_to="module-form"></div>
+										<div pass-document_id="{{document.module_id}}" pass_to="module-form"></div>
 									</a>
-									<span class="cocreate-badge margin-left:5px warning" collection="{{collection}}" document_id="{{data.type}}" name="name"></span>
+									<span class="cocreate-badge margin-left:5px warning" collection="{{document.collection}}" document_id="{{document.type}}" name="name"></span>
 								</div>
 							</div>
 						</td>
 						<!--<td class="padding:10px">-->
 						<!--	<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954">-->
-						<!--		<b collection="{{collection}}" document_id="{{data.type}}" name="name"></b>-->
-						<!--		<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>-->
+						<!--		<b collection="{{document.collection}}" document_id="{{document.type}}" name="name"></b>-->
+						<!--		<div pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields"></div>-->
 						<!--	</a>-->
 						<!--</td>-->
 						<td class="padding:10px">
 							<a target="modal" href="./form.html" modal-width="320px" modal-color="#229954">
-								<b>{{data._id}}</b>
-								<div pass-collection="{{collection}}" pass-document_id="{{data._id}}" pass_to="form-fields"></div>
+								<b>{{document._id}}</b>
+								<div pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields"></div>
 							</a>
 						</td>
 					</tr>
@@ -181,7 +181,7 @@
 		</button>
 
         <script src="https://cdn.cocreate.app/1.28.8/CoCreate.min.js"></script>
-        <!--<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>-->
+        <!--<script src="https://cdn.cocreate.app/1.28.8/CoCreate.min.js"></script>-->
 
 	</body>
 

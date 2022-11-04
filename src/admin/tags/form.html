@@ -74,18 +74,18 @@
 				<cocreate-select name="type" placeholder="Type" sortable class="floating-label">
 					<input placeholder="Search" template_id="type">
 					<cc-options fetch-collection="tags" template_id="type" filter-name="module_id" filter-value="60eb8361b979b4001744b339" class="overflow:auto">
-						<cc-option class="template" template_id="type" value="{{data._id}}">
-							<h4>{{data.name}}</h4>
+						<cc-option class="template" template_id="type" value="{{document._id}}">
+							<h4>{{document.name}}</h4>
 						</cc-option>
 					</cc-options>
 				</cocreate-select>
 				<cocreate-select name="module_id" placeholder="Module" sortable class="floating-label" set-value="#tags" set-value-key="module_id">
 					<input placeholder="Search" template_id="module_id">
-					<cc-options fetch-collection="modules" filter-order-name="name" template_id="module_id" class="overflow:auto">
-						<cc-option class="template" template_id="module_id" value="{{data._id}}">
+					<cc-options fetch-collection="modules" filter-sort-name="name" template_id="module_id" class="overflow:auto">
+						<cc-option class="template" template_id="module_id" value="{{document._id}}">
 							<div class="display:flex padding:5px">
-								<span class="width:25px" collection="{{collection}}" document_id="{{data._id}}" name="icon"></span>
-								<h4>{{data.name}}</h4>
+								<span class="width:25px" collection="{{document.collection}}" document_id="{{document._id}}" name="icon"></span>
+								<h4>{{document.name}}</h4>
 							</div>
 						</cc-option>
 					</cc-options>
@@ -93,8 +93,8 @@
 				<cocreate-select name="tags" placeholder="Tags" sortable class="floating-label" multiple>
 					<input placeholder="Search" template_id="tags">
 					<cc-options id="tags" fetch-collection="tags" template_id="tags" filter-name="module_id" filter-value="{{module_id}}" class="overflow:auto">
-						<cc-option class="template" template_id="tags" value="{{data._id}}">
-							<h3 collection="{{collection}}" document_id="{{data._id}}" name="name">Type Name</h3>
+						<cc-option class="template" template_id="tags" value="{{document._id}}">
+							<h3 collection="{{document.collection}}" document_id="{{document._id}}" name="name">Type Name</h3>
 						</cc-option>
 					</cc-options>
 				</cocreate-select>
@@ -107,7 +107,7 @@
         </main>
 
 		<script src="https://cdn.cocreate.app/1.28.8/CoCreate.min.js" ></script>
-        <!--<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>-->
+        <!--<script src="https://cdn.cocreate.app/1.28.8/CoCreate.min.js"></script>-->
         
     </body>
 
