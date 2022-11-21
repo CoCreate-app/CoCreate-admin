@@ -136,7 +136,7 @@
 									<cocreate-select name="navbar-menu-primary" placeholder="Primary View" class="floating-label " sortable value-type="object">
 										<input placeholder="Search" template_id="navbar-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="navbar-menu-primary"></div>
-										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="navbar-menu-primary" class="overflow:auto module_id">
+										<cc-options pass_id="module_id" fetch-collection="" fetch-document filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="navbar-menu-primary" class="overflow:auto module_id">
 											<cc-option class="template" template_id="navbar-menu-primary" value='{"_id":"{{document._id}}","path":"{{document.path}}"}' document_id="{{document._id}}">
 												<span>{{document.path}}</span>
 											</cc-option>
@@ -180,7 +180,7 @@
 									<cocreate-select class="floating-label " sortable placeholder="Primary View" name="main-menu-primary" value-type="object">
 										<input placeholder="Search" template_id="main-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-primary"></div>
-										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-primary" class="overflow:auto module_id">
+										<cc-options pass_id="module_id" fetch-collection="" fetch-document filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-primary" class="overflow:auto module_id">
 											<cc-option class="template" template_id="main-menu-primary" value='{"_id":"{{document._id}}","path":"{{document.path}}"}' document_id="{{document._id}}">
 												<span>{{document.path}}</span>
 											</cc-option>
@@ -215,7 +215,7 @@
 									<cocreate-select class="floating-label " sortable placeholder="Secondary View" name="main-menu-secondary" value-type="object">
 										<input placeholder="Search" template_id="main-menu-secondary" tags="true">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-secondary"></div>
-										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-secondary" class="overflow:auto module_id">
+										<cc-options pass_id="module_id" fetch-collection="" fetch-document filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-secondary" class="overflow:auto module_id">
 											<cc-option class="template" template_id="main-menu-secondary" value='{"_id":"{{document._id}}","path":"{{document.path}}"}' document_id="{{document._id}}">
 												<span>{{document.path}}</span>
 											</cc-option>
@@ -249,7 +249,7 @@
 									<cocreate-select class="floating-label " sortable placeholder="Primary View" name="settings-menu-primary" value-type="object">
 										<input placeholder="Search" template_id="settings-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-primary"></div>
-										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-primary" class="overflow:auto module_id">
+										<cc-options pass_id="module_id" fetch-collection="" fetch-document filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-primary" class="overflow:auto module_id">
 											<cc-option class="template" template_id="settings-menu-primary" value='{"_id":"{{document._id}}","path":"{{document.path}}"}' document_id="{{document._id}}">
 												<span>{{document.path}}</span>
 											</cc-option>
@@ -284,7 +284,7 @@
 									<cocreate-select class="floating-label " sortable placeholder="Secondary View" name="settings-menu-secondary" value-type="object">
 										<input placeholder="Search" template_id="settings-menu-secondary" tags="true">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-secondary"></div>
-										<cc-options pass_id="module_id" fetch-collection="" filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-secondary" class="overflow:auto module_id">
+										<cc-options pass_id="module_id" fetch-collection="" fetch-document filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-secondary" class="overflow:auto module_id">
 											<cc-option class="template" template_id="settings-menu-secondary" value='{"_id":"{{document._id}}","path":"{{document.path}}"}' document_id="{{document._id}}">
 												<span>{{document.path}}</span>
 											</cc-option>
@@ -358,8 +358,8 @@
 			<section hidden id="module-templates" template_id="renderKey">
 				<!-- Module form templates to pass value and create clone -->
 				<div class="height:20px padding:0_10px font-size:18px"><i class="fas fa-times float:right" show="#form, #module-views" hide='#module-templates'></i></div>
-				<div template_id="module-templates" filter-name="tags" filter-value="template"></div>
-				<div class="display:flex flex-wrap:wrap" fetch-collection="" pass-refresh="true" filter-sort-name="name" filter-sort-type="asc" template_id="module-templates" pass_id="module-templates">
+				<div template_id="module-templates" filter-name="tags" filter-value="template" filter-operator="$eq"></div>
+				<div class="display:flex flex-wrap:wrap" fetch-collection="" fetch-document pass-refresh="true" filter-sort-name="name" filter-sort-type="asc" template_id="module-templates" pass_id="module-templates">
 
 					<div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" template_id="module-templates">
 
@@ -376,7 +376,7 @@
 								<input type="hidden" name="path" value="/admin/{{renderKey.name}}/{{document.name}}">
 								<input type="hidden" name="content-type" value="text/html">
 								<input type="hidden" name="public" value="true">
-								<textarea hidden name="src">{{document.src}}</textarea>
+								<textarea hidden name="src" value="{{document.src}}"></textarea>
 								<!--<textarea hidden name="css" collection="files" document_id="{{document.css}}" name="src"></textarea>-->
 								<!--<textarea hidden name="js" collection="files" document_id="{{document.js}}" name="src"></textarea>-->
 								<button actions="renderKey, save, reset" show="#form, #module-views" hide='#module-templates' pass-collection="files" pass_to="module_id" class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover">
@@ -398,7 +398,7 @@
 
 		</main>
 
-        <script src="https://cdn.cocreate.app/1.28.8/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.29.0/CoCreate.min.js"></script>
         
 
 	</body>

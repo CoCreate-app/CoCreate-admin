@@ -82,7 +82,7 @@
 						</floating-label>
 					</td>
 				</tr>
-				<tbody template_id="datatable" fetch-collection="" pass-refresh pass_id="datatable" fetch-count="5">
+				<tbody template_id="datatable" fetch-collection="" fetch-document pass-refresh pass_id="datatable" fetch-count="5">
 					<tr  template_id="datatable" class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{document._id}}" toggle="selected" hover="visibility:visible!important" hover-target=".tools{{document._id}}">
 						<td class="padding:5px min-width:300px align-items:center">
                             <div class="display:flex justify-content:flex-end transition:0.3s padding-left:10px" >
@@ -147,7 +147,7 @@
                                 <div pass-collection="{{collection.name}}" pass_to="datatable"></div>
                             </a>
                             <div class="float:right width:50px text-align:center">
-                                <a actions="deleteCollection" collection="{{document.name}}" class="display:none">
+                                <a actions="deleteCollection" collection="{{collection.name}}" class="display:none">
                                     <i class="fas fa-trash"></i>
                                 </a>
                             </div>
@@ -192,7 +192,7 @@
             </div>
         </template>
 
-        <script src="https://cdn.cocreate.app/1.28.8/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.29.0/CoCreate.min.js"></script>
         
         
     </body>

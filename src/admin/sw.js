@@ -4,7 +4,8 @@ const CACHE_INMUTABLE_NAME = "inmutable-v1";
 const CACHE_TEMP = 'temp-cache';
 const CACHE_DYNAMIC_LIMIT = 50;
 const fetchedMap = []
-
+const cacheType = 'cache'
+const requestMap = new Map()
 
 function deleteCache(key) {
     return caches.delete(key);
@@ -31,7 +32,7 @@ self.addEventListener("activate", async (e) => {
 
     // e.waitUntil(updateCache())
         // updateCache() 
-
+        e.waitUntil(clients.claim());
 });
 
 self.addEventListener("fetch", (e) => {
@@ -40,23 +41,35 @@ self.addEventListener("fetch", (e) => {
         caches
         .match(e.request)
         .then((cachesObj) => {
-            if (!navigator.onLine && !!cachesObj) {
+            if (!navigator.onLine && !!cachesObj)
                 return cachesObj;
-            }
-            return fetch(e.request)
-                .then((newResp) => {
-                    caches
-                        .open(CACHE_DYNAMIC_NAME)
-                        .then((cache) => {
+            
+            if (cacheType == 'cache' && !!cachesObj) {
+                // console.log('returned from cache')
+                requestMap.set(cachesObj, '')
+                fetch(e.request).then((newResp) => {
+                    caches.open(CACHE_DYNAMIC_NAME).then((cache) => {
                             cache.put(e.request, newResp);
                             // cleanCache(CACHE_DYNAMIC_NAME, CACHE_DYNAMIC_LIMIT);
-                        })
-                        .catch(() => {});
-                    return newResp.clone();
-                })
-                .catch(() => {
+                    }).catch(() => {
+
+                    });
+                }).catch(() => {
                     return caches.match('./offline.html');
                 })
+                return cachesObj;
+            } else {
+                return fetch(e.request).then((newResp) => {
+                        caches.open(CACHE_DYNAMIC_NAME).then((cache) => {
+                            cache.put(e.request, newResp);
+                            // cleanCache(CACHE_DYNAMIC_NAME, CACHE_DYNAMIC_LIMIT);
+                        }).catch(() => {});
+                        return newResp.clone();
+                    })
+                    .catch(() => {
+                        return caches.match('./offline.html');
+                    })
+                }
         })
         .catch(function() {
             console.log('Fetch failed retuned offline page! ')

@@ -2,15 +2,15 @@ module.exports = {
     "config": {
         "apiKey": "2061acef-0451-4545-f754-60cf8160",
         "organization_id": "5ff747727005da1c272740ab",
-        "host": "general.cocreate.app"
+        "host": "server.cocreate.app"
     },
     "sources": [
         {
             "entry": "./src/admin/signin.html",
             "collection": "files",
-            "document_id": "5ff747727005da1c272740fb",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315d3",
                 "name": "signin.html",
                 "domains": [
                     "*",
@@ -27,9 +27,9 @@ module.exports = {
         {
             "entry": "./src/admin/signup.html",
             "collection": "files",
-            "document_id": "60bea0c3b25613e8da1b4bde",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315d4",
                 "name": "signup.html",
                 "domains": [
                     "*",
@@ -46,9 +46,9 @@ module.exports = {
         {
             "entry": "./src/admin/apikeys/datatable.html",
             "collection": "files",
-            "document_id": "6195549bcbf74500119d4165",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315d5",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -65,9 +65,9 @@ module.exports = {
         {
             "entry": "./src/admin/apikeys/form.html",
             "collection": "files",
-            "document_id": "61955495cbf74500119d4164",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315d6",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -84,9 +84,9 @@ module.exports = {
         {
             "entry": "./src/admin/apikey.js",
             "collection": "files",
-            "document_id": "60de467b14b5ab0c2dd30098",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315d7",
                 "name": "apikey.js",
                 "domains": [
                     "*",
@@ -103,9 +103,9 @@ module.exports = {
         {
             "entry": "./src/admin/index.html",
             "collection": "files",
-            "document_id": "60bea334b25613e8da1b4bdf",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315d8",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -122,9 +122,9 @@ module.exports = {
         {
             "entry": "./src/admin/index.css",
             "collection": "files",
-            "document_id": "60e4f9714792bff869f1bde5",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315d9",
                 "name": "index.css",
                 "domains": [
                     "*",
@@ -141,9 +141,9 @@ module.exports = {
         {
             "entry": "./src/admin/activities/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdbd14b5ab0c2dd2fdf1",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315da",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -160,9 +160,9 @@ module.exports = {
         {
             "entry": "./src/admin/blocks/datatable.html",
             "collection": "files",
-            "document_id": "60e5172eb865a60c74e0e5dc",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315db",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -179,9 +179,9 @@ module.exports = {
         {
             "entry": "./src/admin/blocks/form.html",
             "collection": "files",
-            "document_id": "60de0faf14b5ab0c2dd2febc",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315dc",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -198,9 +198,9 @@ module.exports = {
         {
             "entry": "./src/admin/blog/datatable.html",
             "collection": "files",
-            "document_id": "60be9e27b25613e8da1b4bdc",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315dd",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -217,9 +217,9 @@ module.exports = {
         {
             "entry": "./src/admin/blog/form.html",
             "collection": "files",
-            "document_id": "60ddfdbd14b5ab0c2dd2fdf2",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315de",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -236,9 +236,9 @@ module.exports = {
         {
             "entry": "./src/admin/builder/index.html",
             "collection": "files",
-            "document_id": "60de0fae14b5ab0c2dd2feb8",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315df",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -255,9 +255,9 @@ module.exports = {
         {
             "entry": "./src/admin/builder/index.css",
             "collection": "files",
-            "document_id": "610cb468c0e9580010e5ba50",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315e0",
                 "name": "index.css",
                 "domains": [
                     "*",
@@ -274,9 +274,9 @@ module.exports = {
         {
             "entry": "./src/admin/builder/components/right-panel.html",
             "collection": "files",
-            "document_id": "60de0fae14b5ab0c2dd2febb",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315e1",
                 "name": "right-panel.html",
                 "domains": [
                     "*",
@@ -293,9 +293,9 @@ module.exports = {
         {
             "entry": "./src/admin/builder/components/left-panel.html",
             "collection": "files",
-            "document_id": "60de0fae14b5ab0c2dd2feba",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315e2",
                 "name": "left-panel.html",
                 "domains": [
                     "*",
@@ -312,9 +312,9 @@ module.exports = {
         {
             "entry": "./src/admin/builder/components/filetree.html",
             "collection": "files",
-            "document_id": "611ab5d9251afa96bd20f6cc",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315e3",
                 "name": "filetree.html",
                 "domains": [
                     "*",
@@ -331,9 +331,9 @@ module.exports = {
         {
             "entry": "./src/admin/calendar/index.css",
             "collection": "files",
-            "document_id": "61631f3716b39f00108f7380",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315e4",
                 "name": "index.css",
                 "domains": [
                     "*",
@@ -350,9 +350,9 @@ module.exports = {
         {
             "entry": "./src/admin/calendar/index.html",
             "collection": "files",
-            "document_id": "60de3a9114b5ab0c2dd3002d",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315e5",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -369,9 +369,9 @@ module.exports = {
         {
             "entry": "./src/admin/calendar/form.html",
             "collection": "files",
-            "document_id": "60de3a9114b5ab0c2dd3002e",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8fe91249e639db315e6",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -388,9 +388,9 @@ module.exports = {
         {
             "entry": "./src/admin/call-center/index.css",
             "collection": "files",
-            "document_id": "60ddfdbd14b5ab0c2dd2fdf3",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315e7",
                 "name": "index.css",
                 "domains": [
                     "*",
@@ -407,9 +407,9 @@ module.exports = {
         {
             "entry": "./src/admin/call-center/index.html",
             "collection": "files",
-            "document_id": "60ddfdbe14b5ab0c2dd2fdf4",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315e8",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -426,9 +426,9 @@ module.exports = {
         {
             "entry": "./src/admin/code-editor/index.css",
             "collection": "files",
-            "document_id": "6163165716b39f00108f7201",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315e9",
                 "name": "index.css",
                 "domains": [
                     "*",
@@ -445,9 +445,9 @@ module.exports = {
         {
             "entry": "./src/admin/code-editor/index.html",
             "collection": "files",
-            "document_id": "60ddfdbe14b5ab0c2dd2fdf5",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315ea",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -464,9 +464,9 @@ module.exports = {
         {
             "entry": "./src/admin/companies/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdbe14b5ab0c2dd2fdf6",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315eb",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -483,9 +483,9 @@ module.exports = {
         {
             "entry": "./src/admin/companies/form.html",
             "collection": "files",
-            "document_id": "60ddfdbe14b5ab0c2dd2fdf7",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315ec",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -502,9 +502,9 @@ module.exports = {
         {
             "entry": "./src/admin/components/datatable.html",
             "collection": "files",
-            "document_id": "60e5014eb865a60c74e0e51b",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315ed",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -521,9 +521,9 @@ module.exports = {
         {
             "entry": "./src/admin/components/form.html",
             "collection": "files",
-            "document_id": "60e5014eb865a60c74e0e51c",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315ee",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -540,9 +540,9 @@ module.exports = {
         {
             "entry": "./src/admin/contacts/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdbe14b5ab0c2dd2fdf8",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315ef",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -559,9 +559,9 @@ module.exports = {
         {
             "entry": "./src/admin/contacts/form.html",
             "collection": "files",
-            "document_id": "60ddfdbe14b5ab0c2dd2fdf9",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315f0",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -578,9 +578,9 @@ module.exports = {
         {
             "entry": "./src/admin/dashboard/index.html",
             "collection": "files",
-            "document_id": "60ddfdbe14b5ab0c2dd2fdfa",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315f1",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -597,9 +597,9 @@ module.exports = {
         {
             "entry": "./src/admin/dashboard/form.html",
             "collection": "files",
-            "document_id": "60edb93bb979b4001744c77e",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315f2",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -616,9 +616,9 @@ module.exports = {
         {
             "entry": "./src/admin/database/index.html",
             "collection": "files",
-            "document_id": "62c4e212de9a46c8744523c7",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315f3",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -635,9 +635,9 @@ module.exports = {
         {
             "entry": "./src/admin/database/form.html",
             "collection": "files",
-            "document_id": "62c9d1a3de9a46c87446eb53",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315f4",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -654,9 +654,9 @@ module.exports = {
         {
             "entry": "./src/admin/domains/index.html",
             "collection": "files",
-            "document_id": "60e72af6ab74b22c0064e008",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315f5",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -673,9 +673,9 @@ module.exports = {
         {
             "entry": "./src/admin/email/compose.html",
             "collection": "files",
-            "document_id": "60e5014fb865a60c74e0e51d",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315f6",
                 "name": "compose.html",
                 "domains": [
                     "*",
@@ -692,9 +692,9 @@ module.exports = {
         {
             "entry": "./src/admin/email/settings.html",
             "collection": "files",
-            "document_id": "60e72b3bab74b22c0064e00d",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315f7",
                 "name": "settings.html",
                 "domains": [
                     "*",
@@ -711,9 +711,9 @@ module.exports = {
         {
             "entry": "./src/admin/email/index.html",
             "collection": "files",
-            "document_id": "60ddfdbe14b5ab0c2dd2fdfd",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315f8",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -730,9 +730,9 @@ module.exports = {
         {
             "entry": "./src/admin/estimates/index.html",
             "collection": "files",
-            "document_id": "60de3a9414b5ab0c2dd3002f",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315f9",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -749,9 +749,9 @@ module.exports = {
         {
             "entry": "./src/admin/estimates/datatable.html",
             "collection": "files",
-            "document_id": "60e8c660b979b40017449b5a",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315fa",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -768,9 +768,9 @@ module.exports = {
         {
             "entry": "./src/admin/estimates/form.html",
             "collection": "files",
-            "document_id": "60de3a9414b5ab0c2dd30030",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315fb",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -787,9 +787,9 @@ module.exports = {
         {
             "entry": "./src/admin/expenses/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdbe14b5ab0c2dd2fdfe",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315fc",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -806,9 +806,9 @@ module.exports = {
         {
             "entry": "./src/admin/expenses/form.html",
             "collection": "files",
-            "document_id": "60ddfdbe14b5ab0c2dd2fdff",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315fd",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -825,9 +825,9 @@ module.exports = {
         {
             "entry": "./src/admin/files/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe15",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315fe",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -844,9 +844,9 @@ module.exports = {
         {
             "entry": "./src/admin/files/form.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe16",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db315ff",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -863,9 +863,9 @@ module.exports = {
         {
             "entry": "./src/admin/fleet-tracking/index.css",
             "collection": "files",
-            "document_id": "60ddfdbe14b5ab0c2dd2fe00",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db31600",
                 "name": "index.css",
                 "domains": [
                     "*",
@@ -882,9 +882,9 @@ module.exports = {
         {
             "entry": "./src/admin/fleet-tracking/index.html",
             "collection": "files",
-            "document_id": "60ddfdbe14b5ab0c2dd2fe01",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db31601",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -901,9 +901,9 @@ module.exports = {
         {
             "entry": "./src/admin/image-editor/index.html",
             "collection": "files",
-            "document_id": "61302d1a8ed7b00013653215",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc8ff91249e639db31602",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -920,9 +920,9 @@ module.exports = {
         {
             "entry": "./src/admin/industries/datatable.html",
             "collection": "files",
-            "document_id": "61186f46c0e9580010ea640a",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31603",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -939,9 +939,9 @@ module.exports = {
         {
             "entry": "./src/admin/industries/form.html",
             "collection": "files",
-            "document_id": "61186f46c0e9580010ea640b",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31604",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -958,9 +958,9 @@ module.exports = {
         {
             "entry": "./src/admin/invoices/datatable.html",
             "collection": "files",
-            "document_id": "60e50150b865a60c74e0e51e",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31605",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -977,9 +977,9 @@ module.exports = {
         {
             "entry": "./src/admin/invoices/form.html",
             "collection": "files",
-            "document_id": "60ddfdbf14b5ab0c2dd2fe02",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31606",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -996,9 +996,9 @@ module.exports = {
         {
             "entry": "./src/admin/invoices/index.html",
             "collection": "files",
-            "document_id": "60e50151b865a60c74e0e51f",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31607",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -1015,9 +1015,9 @@ module.exports = {
         {
             "entry": "./src/admin/items/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdbf14b5ab0c2dd2fe03",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31608",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -1034,9 +1034,9 @@ module.exports = {
         {
             "entry": "./src/admin/items/form.html",
             "collection": "files",
-            "document_id": "60ddfdbf14b5ab0c2dd2fe04",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31609",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1053,9 +1053,9 @@ module.exports = {
         {
             "entry": "./src/admin/marketplace/form.html",
             "collection": "files",
-            "document_id": "60de0fb414b5ab0c2dd2febf",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db3160a",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1072,9 +1072,9 @@ module.exports = {
         {
             "entry": "./src/admin/marketplace/list.html",
             "collection": "files",
-            "document_id": "60de0fb414b5ab0c2dd2febf",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db3160b",
                 "name": "list.html",
                 "domains": [
                     "*",
@@ -1091,9 +1091,9 @@ module.exports = {
         {
             "entry": "./src/admin/marketplace/item.html",
             "collection": "files",
-            "document_id": "60de0fb414b5ab0c2dd2fec0",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db3160c",
                 "name": "item.html",
                 "domains": [
                     "*",
@@ -1110,9 +1110,9 @@ module.exports = {
         {
             "entry": "./src/admin/marketplace/form.html",
             "collection": "files",
-            "document_id": "61c520b0a8b6b4001aaeac5f",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db3160d",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1129,9 +1129,9 @@ module.exports = {
         {
             "entry": "./src/admin/module-templates/datatable.html",
             "collection": "files",
-            "document_id": "60de3a9814b5ab0c2dd30033",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db3160e",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -1148,9 +1148,9 @@ module.exports = {
         {
             "entry": "./src/admin/module-templates/form.html",
             "collection": "files",
-            "document_id": "60ddfdbf14b5ab0c2dd2fe05",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db3160f",
                 "name": "orm.html",
                 "domains": [
                     "*",
@@ -1167,9 +1167,9 @@ module.exports = {
         {
             "entry": "./src/admin/module-templates/templates/blank.html",
             "collection": "files",
-            "document_id": "60e8bbf9b979b40017449ac3",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31610",
                 "name": "blank.html",
                 "domains": [
                     "*",
@@ -1187,9 +1187,9 @@ module.exports = {
         {
             "entry": "./src/admin/module-templates/templates/datatable.html",
             "collection": "files",
-            "document_id": "60e8bbfab979b40017449ac4",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31611",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -1207,9 +1207,9 @@ module.exports = {
         {
             "entry": "./src/admin/module-templates/templates/form.html",
             "collection": "files",
-            "document_id": "60e8bbfab979b40017449ac5",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31612",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1227,9 +1227,9 @@ module.exports = {
         {
             "entry": "./src/admin/modules/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdbf14b5ab0c2dd2fe08",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31613",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -1246,9 +1246,9 @@ module.exports = {
         {
             "entry": "./src/admin/modules/form.html",
             "collection": "files",
-            "document_id": "60ddfdbf14b5ab0c2dd2fe09",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31614",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1265,9 +1265,9 @@ module.exports = {
         {
             "entry": "./src/admin/module-views/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe0b",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31615",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -1284,9 +1284,9 @@ module.exports = {
         {
             "entry": "./src/admin/module-views/form.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe0a",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31616",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1303,9 +1303,9 @@ module.exports = {
         {
             "entry": "./src/admin/organizations/creator.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe0c",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31617",
                 "name": "creator.html",
                 "domains": [
                     "*",
@@ -1322,9 +1322,9 @@ module.exports = {
         {
             "entry": "./src/admin/organizations/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe0d",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31618",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -1341,9 +1341,9 @@ module.exports = {
         {
             "entry": "./src/admin/organizations/form.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe0e",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db31619",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1360,9 +1360,9 @@ module.exports = {
         {
             "entry": "./src/admin/payments/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe0f",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db3161a",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -1379,9 +1379,9 @@ module.exports = {
         {
             "entry": "./src/admin/payments/form.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe10",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db3161b",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1398,9 +1398,9 @@ module.exports = {
         {
             "entry": "./src/admin/payments/settings.html",
             "collection": "files",
-            "document_id": "60972231624235187e4d6979",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db3161c",
                 "name": "settings.html",
                 "domains": [
                     "*",
@@ -1417,9 +1417,9 @@ module.exports = {
         {
             "entry": "./src/admin/potentials/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe11",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db3161d",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -1436,9 +1436,9 @@ module.exports = {
         {
             "entry": "./src/admin/potentials/form.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe12",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db3161e",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1455,9 +1455,9 @@ module.exports = {
         {
             "entry": "./src/admin/projects/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe13",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90091249e639db3161f",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -1474,9 +1474,9 @@ module.exports = {
         {
             "entry": "./src/admin/projects/form.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe14",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db31620",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1493,9 +1493,9 @@ module.exports = {
         {
             "entry": "./src/admin/projects/kanban.html",
             "collection": "files",
-            "document_id": "60e9f699b979b4001744a5f6",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db31621",
                 "name": "kanban.html",
                 "domains": [
                     "*",
@@ -1512,9 +1512,9 @@ module.exports = {
         {
             "entry": "./src/admin/settings/index.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe18",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db31622",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -1531,9 +1531,9 @@ module.exports = {
         {
             "entry": "./src/admin/social/index.html",
             "collection": "files",
-            "document_id": "60ddfdc014b5ab0c2dd2fe19",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db31623",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -1550,9 +1550,9 @@ module.exports = {
         {
             "entry": "./src/admin/tags/datatable.html",
             "collection": "files",
-            "document_id": "60eb8562b979b4001744b39a",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db31624",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -1569,9 +1569,9 @@ module.exports = {
         {
             "entry": "./src/admin/tags/form.html",
             "collection": "files",
-            "document_id": "60eb8562b979b4001744b39b",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db31625",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1588,9 +1588,9 @@ module.exports = {
         {
             "entry": "./src/admin/tasklists/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdc114b5ab0c2dd2fe1a",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db31626",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -1607,9 +1607,9 @@ module.exports = {
         {
             "entry": "./src/admin/tasklists/form.html",
             "collection": "files",
-            "document_id": "60ddfdc114b5ab0c2dd2fe1b",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db31627",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1626,9 +1626,9 @@ module.exports = {
         {
             "entry": "./src/admin/university/datatable.html",
             "collection": "files",
-            "document_id": "61c69f7ea8b6b4001aaf856d",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db31628",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -1645,9 +1645,9 @@ module.exports = {
         {
             "entry": "./src/admin/university/form.html",
             "collection": "files",
-            "document_id": "6293fccae6dfc91d5819a94a",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db31629",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1664,9 +1664,9 @@ module.exports = {
         {
             "entry": "./src/admin/users/form.html",
             "collection": "files",
-            "document_id": "60ddfdc114b5ab0c2dd2fe1c",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db3162a",
                 "name": "form.html",
                 "domains": [
                     "*",
@@ -1683,9 +1683,9 @@ module.exports = {
         {
             "entry": "./src/admin/users/profile.html",
             "collection": "files",
-            "document_id": "60ddfdc114b5ab0c2dd2fe1d",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db3162b",
                 "name": "profile.html",
                 "domains": [
                     "*",
@@ -1702,9 +1702,9 @@ module.exports = {
         {
             "entry": "./src/admin/users/datatable.html",
             "collection": "files",
-            "document_id": "60ddfdc114b5ab0c2dd2fe1e",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db3162c",
                 "name": "datatable.html",
                 "domains": [
                     "*",
@@ -1721,9 +1721,9 @@ module.exports = {
         {
             "entry": "./src/admin/wallet/index.html",
             "collection": "files",
-            "document_id": "60ddfdc114b5ab0c2dd2fe1f",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db3162d",
                 "name": "index.html",
                 "domains": [
                     "*",
@@ -1740,9 +1740,9 @@ module.exports = {
         {
             "entry": "./src/admin/websites/list.html",
             "collection": "files",
-            "document_id": "60e50154b865a60c74e0e520",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db3162e",
                 "name": "list.html",
                 "domains": [
                     "*",
@@ -1759,9 +1759,9 @@ module.exports = {
         {
             "entry": "./src/admin/websites/form.html",
             "collection": "files",
-            "document_id": "60e50154b865a60c74e0e521",
             "key": "src",
-            "data": {
+            "document": {
+                "_id": "637bc90191249e639db3162f",
                 "name": "form.html",
                 "domains": [
                     "*",

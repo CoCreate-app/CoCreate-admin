@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
         <title>Website Form | CoCreate</title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreateCSS.min.css">
         <link rel="stylesheet" href="../index.css" collection="files" document_id="60e4f9714792bff869f1bde5" name="src" type="text/css"/>
         <style type="text/css">
             .collapsed>.menu-items {
@@ -85,13 +86,13 @@
                 <input type="text" name="image" placeholder="Preview" class="floating-label">
 				<cocreate-select sortable class="floating-label" name="home" placeholder="Home Page">
 					<input placeholder="Search" template_id="home">
-					<cc-options fetch-collection="" filter-name="" filter-value="" filter-sort-name="name" filter-sort-type="asc" template_id="home" pass_id="website_id" class="overflow:auto">
+					<cc-options fetch-collection="" fetch-document filter-name="" filter-value="" filter-sort-name="name" filter-sort-type="asc" template_id="home" pass_id="website_id" class="overflow:auto">
 						<cc-option class="template" template_id="home" value="{{document._id}}">
 							<h3 collection="{{document.collection}}" document_id="{{document._id}}" name="path"></h3>
 						</cc-option>
 					</cc-options>
 				</cocreate-select>
-                <button actions="save" class="position:fixed bottom:15px right:15px bg:blue grow-hover border-radius:50% padding:15px">
+                <button actions="save" class="position:fixed bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
                     <i class="far fa-save"></i>
                 </button>
             </form>
@@ -103,7 +104,7 @@
                     <a show="#page-templates" hide="#form, #website-pages" pass-collection="files" pass_to="page-templates"><i class="far fa-plus-square"></i></a>
                 </div>
                 <!--<input type="hidden" filter-name="module-view" filter-value="module-view" template_id="module-views">-->
-                <div fetch-collection="" filter-name="" filter-value="" filter-sort-name="name" filter-sort-type="asc" template_id="website-pages" pass_id="website_id" sortable class="background:whitesmoke padding:10px" dnd-group-name="website-pages">
+                <div fetch-collection="" fetch-document filter-name="" filter-value="" filter-operator="$eq" filter-sort-name="name" filter-sort-type="asc" template_id="website-pages" pass_id="website_id" sortable class="background:whitesmoke padding:10px" dnd-group-name="website-pages">
                     <div template_id="website-pages" class="template card padding:10px_5px background:white collapsed margin-bottom:10px" document_id="{{document._id}}" id="module-view{{document._id}}">
                         <div class="display:flex padding-left:10px">
                             <a target="modal" href="../files/form.html" modal-width="320px" class="flex-grow:1 font-size:16px padding:5px_0">
@@ -133,8 +134,8 @@
             </section>
             <!-- Website Page templates -->
             <div hidden id="page-templates">
-				<div template_id="module-templates" filter-name="tags" filter-value="template"></div>
-                <div class="display:flex flex-wrap:wrap" fetch-collection="" pass-refresh="true" filter-sort-name="name" filter-sort-type="asc" template_id="module-templates" pass_id="page-templates">
+				<div template_id="module-templates" filter-name="tags" filter-value="template" filter-operator="$eq"></div>
+                <div class="display:flex flex-wrap:wrap" fetch-collection="" fetch-document pass-refresh="true" filter-sort-name="name" filter-sort-type="asc" template_id="module-templates" pass_id="page-templates">
                     <div class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover" template_id="module-templates">
                         <div class="position:relative"> 
                             <img collection="{{document.collection}}" document_id="{{document._id}}" name="image" src="https://via.placeholder.com/150" width="100%">
@@ -160,7 +161,7 @@
             </div>
         </main>
         
-        <script src="https://cdn.cocreate.app/1.28.8/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.29.0/CoCreate.min.js"></script>
 
     </body>
 
