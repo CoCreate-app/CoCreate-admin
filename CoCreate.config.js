@@ -139,6 +139,63 @@ module.exports = {
             }
         },
         {
+            "entry": "./src/admin/manifest.json",
+            "collection": "files",
+            "document": {
+                "_id": "637e7ff326a3abb659d8aefb",
+                "name": "manifest.json",
+                "src": "{{source}}",
+                "domains": [
+                    "*",
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/manifest.json",
+                "directory": "/admin",
+                "content-type": "application/json",
+                "public": "true",
+                "module_id": "5ff747727005da1c2727419c",
+                "website_id": "5ffa235ff11d2d00103c4520"
+            }
+        },
+        {
+            "entry": "./src/admin/offline.html",
+            "collection": "files",
+            "document": {
+                "_id": "637e7ff326a3abb659d8aefc",
+                "name": "offline.html",
+                "src": "{{source}}",
+                "domains": [
+                    "*",
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/offline.html",
+                "directory": "/admin",
+                "content-type": "text/html",
+                "public": "true",
+                "module_id": "60e74055b979b40017448c60",
+                "website_id": "5ffa235ff11d2d00103c4520"
+            }
+        },
+        {
+            "entry": "./src/admin/sw.js",
+            "collection": "files",
+            "document": {
+                "_id": "637e7ff326a3abb659d8aefd",
+                "name": "sw.js",
+                "src": "{{source}}",
+                "domains": [
+                    "*",
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/sw.js",
+                "directory": "/admin",
+                "content-type": "text/javascript",
+                "public": "true",
+                "module_id": "60e74055b979b40017448c60",
+                "website_id": "5ffa235ff11d2d00103c4520"
+            }
+        },
+        {
             "entry": "./src/admin/activities/datatable.html",
             "collection": "files",
             "document": {
