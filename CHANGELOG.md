@@ -1,3 +1,20 @@
+# [1.22.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.21.0...v1.22.0) (2022-11-23)
+
+
+### Bug Fixes
+
+* bump cdn to 1.28.7 ([ac897f0](https://github.com/CoCreate-app/CoCreate-admin/commit/ac897f0b76d948c9de11e8d95680aeb8a98b4bac))
+* bump cdn to 1.28.8 ([7492c1a](https://github.com/CoCreate-app/CoCreate-admin/commit/7492c1abae5a7efece9bc0957b1b1c6d76e557e1))
+* renamed {{data.key}} to {{document.key}} ([04a1bb0](https://github.com/CoCreate-app/CoCreate-admin/commit/04a1bb00741238e5856e4f121bf85947e60b81b6))
+* replaced document_id with document._id ([a7cd5f1](https://github.com/CoCreate-app/CoCreate-admin/commit/a7cd5f19899be238c503203386db967598429e29))
+* typo cdn ([7c16033](https://github.com/CoCreate-app/CoCreate-admin/commit/7c16033e23207e894dc016ad10790e65b945b22f))
+* update crud functions to receive an array of objects as the response ([31a615e](https://github.com/CoCreate-app/CoCreate-admin/commit/31a615e03dd17527f9e17ce6eeff0115d30aa5c7))
+
+
+### Features
+
+* bump cdn to v1.29.1 ([2ca57f9](https://github.com/CoCreate-app/CoCreate-admin/commit/2ca57f9a18d4c705d7382df640901b97ef1974ba))
+
 # [1.21.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.20.4...v1.21.0) (2022-10-01)
 
 
