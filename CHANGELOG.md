@@ -1,3 +1,10 @@
+# [1.23.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.22.0...v1.23.0) (2022-11-23)
+
+
+### Features
+
+* added manifest.json, sw.js and offline.html to CoCreate.config ([068ffe7](https://github.com/CoCreate-app/CoCreate-admin/commit/068ffe718ee3f2b0a84a031feac93ee93de5c6d2))
+
 # [1.22.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.21.0...v1.22.0) (2022-11-23)
 
 
