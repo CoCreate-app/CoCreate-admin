@@ -105,7 +105,7 @@
 							<input type="text" class="floating-label" filter-name="path" template_id="datatable" placeholder="Path">
 						</floating-label>
 						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-							<a filter-sort-name="name" toggle-order="asc" template_id="datatable"></a>
+							<a filter-sort-name="path" toggle-order="asc" template_id="datatable"></a>
 						</span>
 					</td>
 					<td class="position:sticky top:0 background:white padding:0px_10px_10px">
@@ -118,7 +118,7 @@
 					</td>
 				</tr>
 
-				<tbody template_id="datatable" fetch-collection="files" fetch-count="20" filter-sort-name="path" filter-sort-type="asc" pass_id="datatable">
+				<tbody template_id="datatable" fetch-collection="files"  filter-sort-name="path" filter-sort-type="asc" pass_id="datatable">
 
 					<tr template_id="datatable" class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" document_id="{{document._id}}" toggle="selected">
 						<td class="padding:10px">
@@ -160,7 +160,7 @@
 			</a>
 		</button>
 
-        <script src="https://cdn.cocreate.app/1.29.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.29.1/CoCreate.min.js"></script>
 		
 
 
