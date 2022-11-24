@@ -2,7 +2,7 @@ module.exports = {
     "config": {
         "apiKey": "2061acef-0451-4545-f754-60cf8160",
         "organization_id": "5ff747727005da1c272740ab",
-        "host": "general.cocreate.app"
+        "host": "server.cocreate.app"
     },
     "sources": [
         {
@@ -149,8 +149,8 @@ module.exports = {
                     "*",
                     "general.cocreate.app"
                 ],
-                "path": "/admin/manifest.json",
-                "directory": "/admin",
+                "path": "/manifest.json",
+                "directory": "/",
                 "content-type": "application/json",
                 "public": "true",
                 "module_id": "5ff747727005da1c2727419c",
@@ -168,8 +168,8 @@ module.exports = {
                     "*",
                     "general.cocreate.app"
                 ],
-                "path": "/admin/offline.html",
-                "directory": "/admin",
+                "path": "/offline.html",
+                "directory": "/",
                 "content-type": "text/html",
                 "public": "true",
                 "module_id": "60e74055b979b40017448c60",
@@ -187,8 +187,8 @@ module.exports = {
                     "*",
                     "general.cocreate.app"
                 ],
-                "path": "/admin/sw.js",
-                "directory": "/admin",
+                "path": "/sw.js",
+                "directory": "/",
                 "content-type": "text/javascript",
                 "public": "true",
                 "module_id": "60e74055b979b40017448c60",
