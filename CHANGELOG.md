@@ -1,3 +1,11 @@
+## [1.23.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.23.1...v1.23.2) (2022-11-26)
+
+
+### Bug Fixes
+
+* bump dependencies ([53d4672](https://github.com/CoCreate-app/CoCreate-admin/commit/53d4672cb596c490814197465898e0124e9d9047))
+* toggle-order renamed to filter-sort-toggle ([a662663](https://github.com/CoCreate-app/CoCreate-admin/commit/a6626639f099d578ec868ef89bbced0c178b8dd0))
+
 ## [1.23.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.23.0...v1.23.1) (2022-11-25)
 
 
