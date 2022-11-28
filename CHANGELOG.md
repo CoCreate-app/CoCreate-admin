@@ -1,3 +1,10 @@
+# [1.24.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.23.2...v1.24.0) (2022-11-28)
+
+
+### Features
+
+* export fetched data, improved support, performance improvement to sync ([8cee770](https://github.com/CoCreate-app/CoCreate-admin/commit/8cee7705b0c0d168a17766ea66683e2ed3543d26))
+
 ## [1.23.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.23.1...v1.23.2) (2022-11-26)
 
 
