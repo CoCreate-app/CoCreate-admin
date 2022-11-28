@@ -98,6 +98,7 @@
 
 		<!-- Main Content -->
 		<main content_id="content" class="padding:5px overflow:auto">
+			<input type="text" class="floating-label" template_id="datatable" placeholder="Search">
 			<table class="width:100% border-collapse:collapse">
 				<tr class="border-bottom:1px_solid_darkgray">
 					<td class="position:sticky top:0 background:white padding:0px_10px_10px">
@@ -118,7 +119,7 @@
 					</td>
 				</tr>
 
-				<tbody template_id="datatable" fetch-collection="files" fetch-count="10" filter-sort-name="path" filter-sort-type="asc" pass_id="datatable">
+				<tbody template_id="datatable" fetch-collection="files" fetch-limit="20" filter-sort-name="path" filter-sort-type="asc" pass_id="datatable">
 
 					<tr template_id="datatable" class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" document_id="{{document._id}}" toggle="selected">
 						<td class="padding:10px">
@@ -148,7 +149,7 @@
 				</tbody>
 			</table>
 			<span template_id="datatable" fetch-type="fetched" class="height:30px"></span> /
-			<span template_id="datatable" fetch-type="total" class="height:30px"></span>
+			<span template_id="datatable" fetch-type="count" class="height:30px"></span>
 			<!-- <div template_id="datatable" fetch-type="loadmore" class="height:30px">Load More</div> -->
 			<div template_id="datatable" fetch-type="scroll" class="opacity:0 height:30px"></div>
 		</main>
@@ -163,7 +164,7 @@
 			</a>
 		</button>
 
-        <script src="https://cdn.cocreate.app/1.29.4/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.31.0/CoCreate.min.js"></script>
 		
 
 
