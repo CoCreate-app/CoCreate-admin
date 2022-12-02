@@ -70,7 +70,7 @@
                     fetch-collection="modules" 
                     fetch-document
                     filter-sort-name="navbar-menu-position" 
-                    filter-sort-type="asc"
+                    filter-sort-direction="asc"
                     filter-name="navbar-menu-position" 
                     filter-value="0" 
                     filter-value-type="number"
@@ -156,7 +156,7 @@
               	<ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_165px) bottom:10px margin-right:5px">
               	    <div fetch-collection="modules"
                         filter-sort-name="main-menu-position" 
-                        filter-sort-type="asc"
+                        filter-sort-direction="asc"
                         filter-name="main-menu-position" 
                         filter-value="0"
                         filter-value-type="number"
@@ -221,7 +221,7 @@
                         <div pass-value="5ff747727005da1c2727419a" pass-filter-value="5ff747727005da1c2727419a" pass_to="module_id"></div>
                         <div pass-document_id="5ff747727005da1c2727419a" pass_to="module-form"></div>
                     </a>
-					<a actions="logout" href="./signin.html" pass_to class="width:50px text-align:center display:inline-block">
+					<a actions="signOut" href="./signin.html" pass_to class="width:50px text-align:center display:inline-block">
 					  <span class="padding:10px width:50px text-align:center"><i class="fas fa-sign-out-alt"></i></span>
 					</a>
 				</div>
@@ -238,7 +238,7 @@
 	        </div>
 		</div>
         
-        <script src="https://cdn.cocreate.app/1.31.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.31.2/CoCreate.min.js"></script>
         
     </body>
 </html>

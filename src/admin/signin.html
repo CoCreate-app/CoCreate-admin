@@ -42,7 +42,7 @@
 							<input type="password" name='password' placeholder="Password" class="floating-label">
 	                    </floating-label>
 	                    
-						<button actions="login" href="index.html" class="outline">Login</button>
+						<button actions="signIn" href="index.html" class="outline">Sign In</button>
 
 						<a show='#forgotpass' hide='#signin'>Forgot Password</a>
 					</div>
@@ -66,7 +66,7 @@
 							<a>Send Email</a>
 						</button>
 						
-						<a show='#signin' hide='#forgotpass'>login</a>
+						<a show='#signin' hide='#forgotpass'>Sign In</a>
 					</div>
 				</form> 
 					
@@ -74,7 +74,7 @@
 		</div>
 		
 		<div class="position:fixed!important bottom:15px right:15px">
-	        <div template_id="login" class="template card margin:5px padding:10px {{status}}">
+	        <div template_id="signIn" class="template card margin:5px padding:10px {{status}}">
 	            <span class="{{type}}">{{message}}</span><a actions="remove"> X</a>
 	        </div>
 	        
@@ -84,7 +84,7 @@
 		</div>
 		
         <script src="./apikey.js"></script>
-        <script src="https://cdn.cocreate.app/1.31.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.31.2/CoCreate.min.js"></script>
 
     </body>
 </html>

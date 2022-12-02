@@ -92,7 +92,7 @@
 
         <!-- Main Content -->
         <main content_id="content" class="padding:15px">
-			<div class="display:grid gap:15px grid-template-columns:repeat(auto-fill,minmax(290px,1fr))" template_id="datatable" fetch-collection="" fetch-document filter-name="module_id" filter-value="" filter-sort-name="name" filter-sort-type="asc" pass_id="datatable">
+			<div class="display:grid gap:15px grid-template-columns:repeat(auto-fill,minmax(290px,1fr))" template_id="datatable" fetch-collection="" fetch-document filter-name="module_id" filter-value="" filter-sort-name="name" filter-sort-direction="asc" pass_id="datatable">
 				<div template_id="datatable" class="card template align-items:center grid-column-end:span_1 box-shadow-hover" document_id="{{document._id}}" toggle="selected">
                     <div class="position:relative">
                         <img src="/assets/website-preview.png" collection="{{document.collection}}" document_id="{{document._id}}" name="image" width="100%">
@@ -131,7 +131,7 @@
 			</a>
 		</button>
 		
-        <script src="https://cdn.cocreate.app/1.31.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.31.2/CoCreate.min.js"></script>
 
     </body>
 
