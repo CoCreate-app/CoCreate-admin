@@ -1,12 +1,11 @@
 /**
-* The keys below have limited permissions.
-* Signup at https://cocreate.app to retrieve your 
-* credintials and unlock admin privliges.
+* organization_id required if the files are servered over network using CoCreateWS
+* inorder to sync databases
 **/
 var CoCreateConfig = {                 
-    apiKey: '2061acef-0451-4545-f754-60cf8160', // Your apiKey can be retrived after signing up at https://cocreate.app              
-    organization_id: '5ff747727005da1c272740ab', // Your organization_id can be retrived after signing up at https://cocreate.app              
-    host: 'general.cocreate.app',
-    serviceWorker: '/sw.js' // Points to socket server. If not defined it will use the url in web browser by default
+    apiKey: '', // Your apiKey can be retrived from your browsers localStorage           
+    organization_id: '', // Your organization_id can be retrived from your browsers localStorage       
+    host: '', // Points to socket server. If not defined it will use the url in web browser by default
+    serviceWorker: '/sw.js' 
 } 
     

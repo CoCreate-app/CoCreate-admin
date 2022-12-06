@@ -1,0 +1,1027 @@
+[
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "60e74055b979b40017448c60",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "Activities",
+        "icon": "<i class=\"far fa-clock\"></i>",
+        "main-menu-position": 0,
+        "settings-menu-position": 0,
+        "navbar-menu-primary-position": 4,
+        "navbar-menu-primary": {
+            "_id": "60ddfdbd14b5ab0c2dd2fdf1",
+            "path": "/admin/activities/datatable.html"
+        },
+        "navbar-menu-primary-test": {
+            "_id": "60ddfdbd14b5ab0c2dd2fdf1",
+            "path": "/admin/activities/datatable.html"
+        },
+        "navbar-menu-position": 6
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "6195533ccbf74500119d4115",
+        "description": "",
+        "icon": "<i class=\"fas fa-key\"></i>",
+        "navbar-menu-primary": {
+            "_id": "6195549bcbf74500119d4165",
+            "path": "/admin/apikeys/datatable.html"
+        },
+        "navbar-menu-position": 5,
+        "navbar-modal-primary-color": "#000000",
+        "navbar-modal-primary-width": "640px",
+        "navbar-modal-primary-height": "",
+        "navbar-modal-primary-x": "",
+        "navbar-modal-primary-y": "",
+        "main-menu-primary": "",
+        "main-menu-position": 0,
+        "main-modal-primary-color": "#000000",
+        "main-modal-primary-width": "",
+        "main-modal-primary-height": "",
+        "main-modal-primary-x": "",
+        "main-modal-primary-y": "",
+        "main-menu-secondary": {
+            "_id": "61955495cbf74500119d4164",
+            "path": "/admin/apikeys/form.html"
+        },
+        "main-modal-secondary-color": "#000000",
+        "main-modal-secondary-width": "",
+        "main-modal-secondary-height": "",
+        "main-modal-secondary-x": "",
+        "main-modal-secondary-y": "",
+        "settings-menu-primary": {
+            "_id": "6195549bcbf74500119d4165",
+            "path": "/admin/apikeys/datatable.html"
+        },
+        "settings-menu-position": 4,
+        "settings-modal-primary-color": "#000000",
+        "settings-modal-primary-width": "640px",
+        "settings-modal-primary-height": "",
+        "settings-modal-primary-x": "",
+        "settings-modal-primary-y": "",
+        "settings-menu-secondary": "",
+        "settings-modal-secondary-color": "#000000",
+        "settings-modal-secondary-width": "320px",
+        "settings-modal-secondary-height": "",
+        "settings-modal-secondary-x": "",
+        "settings-modal-secondary-y": "",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "ApiKeys"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c2727418e",
+        "icon": "<i class=\"fa fa-credit-card\"></i>",
+        "main-menu-position": 0,
+        "main-menu-primary": "",
+        "main-menu-secondary": "",
+        "name": "Billing Methods",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 15,
+        "settings-menu-primary": "",
+        "settings-menu-secondary": ""
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274194",
+        "description": "",
+        "icon": "<i class=\"fas fa-cubes\"></i>",
+        "main-menu-position": 0,
+        "main-menu-primary": "60e5172eb865a60c74e0e5dc",
+        "main-menu-secondary": "60de0faf14b5ab0c2dd2febc",
+        "main-modal-color": "#bc2f2f",
+        "name": "Blocks",
+        "navbar-menu-position": 0,
+        "navbar-menu-primary": "",
+        "navbar-menu-secondary": "",
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 10,
+        "settings-menu-primary": {
+            "_id": "60e5172eb865a60c74e0e5dc",
+            "path": "/admin/blocks/datatable.html"
+        },
+        "settings-menu-secondary": {
+            "_id": "60de0faf14b5ab0c2dd2febc",
+            "path": "/admin/blocks/form.html"
+        },
+        "main-modal-primary-width": "640px",
+        "main-modal-primary-height": "100%",
+        "settings-modal-primary-width": "640px"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "60e7416eb979b40017448c76",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "Blog",
+        "icon": "<i class=\"fas fa-blog\"></i>",
+        "navbar-menu-primary-position": 0,
+        "settings-menu-position": 0,
+        "navbar-menu-position": 0,
+        "main-menu-position": 12,
+        "main-modal-primary-width": "640px",
+        "navbar-menu-primary": "",
+        "main-menu-primary": {
+            "_id": "60be9e27b25613e8da1b4bdc",
+            "path": "/admin/blog/datatable.html"
+        },
+        "main-menu-secondary": {
+            "_id": "60ddfdbd14b5ab0c2dd2fdf2",
+            "path": "/admin/blog/form.html"
+        },
+        "main-modal-secondary-width": "320px",
+        "navbar-modal-primary-width": ""
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274193",
+        "icon": "<i class=\"fas fa-palette\"></i>",
+        "main-menu-position": 0,
+        "main-menu-primary": "",
+        "name": "Builder",
+        "navbar-menu-position": 0,
+        "navbar-menu-primary": "60de0fae14b5ab0c2dd2feb8",
+        "navbar-modal-primary-width": "100%",
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 9,
+        "units": [
+            "px",
+            "%",
+            "em",
+            "ch",
+            "vw",
+            "vh",
+            "auto"
+        ],
+        "settings-modal-primary-width": "100%",
+        "settings-menu-secondary": "hidden",
+        "settings-menu-primary": {
+            "_id": "60de0fae14b5ab0c2dd2feb8",
+            "path": "/admin/builder/index.html"
+        }
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274197",
+        "icon": "<i class=\"far fa-calendar-alt\"></i>",
+        "main-menu-position": 0,
+        "main-menu-primary": "",
+        "name": "Calendar",
+        "navbar-menu-primary": {
+            "_id": "60de3a9114b5ab0c2dd3002d",
+            "path": "/admin/calendar/index.html"
+        },
+        "navbar-modal-primary-width": "100%",
+        "navbar-modal-width": "100%",
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 0,
+        "navbar-modal-primary-height": "100%",
+        "timeStamp": "2022-12-01T21:05:16.475Z"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274199",
+        "icon": "<i class=\"fas fa-phone\"></i>",
+        "main-menu-position": 0,
+        "name": "Call Center",
+        "navbar-menu-position": 1,
+        "navbar-menu-primary": {
+            "_id": "60ddfdbe14b5ab0c2dd2fdf4",
+            "path": "/admin/call-center/index.html"
+        },
+        "navbar-modal-primary-width": "100%",
+        "navbar-modal-width": "100%",
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 14,
+        "settings-modal-primary-width": "100%",
+        "settings-menu-secondary": "hidden",
+        "settings-menu-primary": {
+            "_id": "60ddfdbe14b5ab0c2dd2fdf4",
+            "path": "/admin/call-center/index.html"
+        }
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274191",
+        "icon": "<i class=\"fas fa-code\"></i>",
+        "main-menu-position": 0,
+        "main-menu-primary": "",
+        "name": "Code Editor",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 0
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274183",
+        "icon": "<i class=\"fas fa-city\"></i>",
+        "main-menu-position": 2,
+        "main-menu-primary": {
+            "_id": "60ddfdbe14b5ab0c2dd2fdf6",
+            "path": "/admin/companies/datatable.html"
+        },
+        "main-modal-primary-width": "640px",
+        "menu-position": 0,
+        "name": "Companies",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 0,
+        "main-menu-secondary": {
+            "_id": "60ddfdbe14b5ab0c2dd2fdf7",
+            "path": "/admin/companies/form.html"
+        },
+        "main-modal-secondary-width": "320px",
+        "kanban-filter": "60edaf79b979b4001744c6fe"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c2727419d",
+        "description": "",
+        "icon": "<i class=\"far fa-address-book\"></i>",
+        "main-menu-position": 3,
+        "main-menu-primary": {
+            "_id": "60ddfdbe14b5ab0c2dd2fdf8",
+            "path": "/admin/contacts/datatable.html"
+        },
+        "main-menu-secondary": {
+            "_id": "60ddfdbe14b5ab0c2dd2fdf9",
+            "path": "/admin/contacts/form.html"
+        },
+        "main-modal-primary-width": "640px",
+        "name": "Contacts",
+        "navbar-menu-position": 0,
+        "navbar-menu-primary": "",
+        "navbar-menu-secondary": "",
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 0,
+        "settings-menu-secondary": "",
+        "kanban-filter": "5ff747727005da1c272740ab"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c2727418a",
+        "icon": "<i class=\"fas fa-tachometer-alt\"></i>",
+        "main-menu-position": 1,
+        "main-menu-primary": {
+            "_id": "60ddfdbe14b5ab0c2dd2fdfa",
+            "path": "/admin/dashboard/index.html"
+        },
+        "main-modal-primary-width": "100%",
+        "menu-position": 0,
+        "name": "Dashboard",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 0,
+        "main-menu-secondary": {
+            "_id": "60edb93bb979b4001744c77e",
+            "path": "/admin/dashboard/form.html"
+        },
+        "timeStamp": "2022-12-01T21:05:16.466Z"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "62c4e1c7de9a46c8744523a0",
+        "name": "Database",
+        "navbar-modal-primary-color": "#000000",
+        "main-modal-primary-color": "#000000",
+        "main-modal-secondary-color": "#000000",
+        "settings-modal-primary-color": "#000000",
+        "settings-modal-secondary-color": "#000000",
+        "organization_id": "5ff747727005da1c272740ab",
+        "icon": "<i class=\"fas fa-database\"></i>",
+        "main-menu-primary": {
+            "_id": "62c4e212de9a46c8744523c7",
+            "path": "/admin/database/index.html"
+        },
+        "navbar-menu-position": 0,
+        "main-menu-secondary": {
+            "_id": "62c9d1a3de9a46c87446eb53",
+            "path": "/admin/database/form.html"
+        },
+        "main-modal-secondary-width": "320px",
+        "settings-menu-position": 0,
+        "main-menu-position": 1
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c2727418d",
+        "icon": "<i class=\"fas fa-book\"></i>",
+        "main-menu-position": 0,
+        "name": "Documentation",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 0
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c2727418b",
+        "icon": "<i class=\"fa fa-globe\"></i>",
+        "main-menu-position": 0,
+        "name": "Domains",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 11,
+        "settings-menu-secondary": "hidden",
+        "settings-menu-primary": {
+            "_id": "60e72af6ab74b22c0064e008",
+            "path": "/admin/domains/index.html"
+        }
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274186",
+        "icon": "<i class=\"fa fa-envelope\"></i>",
+        "main-menu-position": 0,
+        "name": "Email",
+        "navbar-menu-position": 3,
+        "navbar-menu-primary": {
+            "_id": "60ddfdbe14b5ab0c2dd2fdfd",
+            "path": "/admin/email/index.html"
+        },
+        "navbar-modal-primary-width": "100%",
+        "navbar-modal-width": "100%",
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 12,
+        "main-menu-primary": {
+            "_id": "60ddfdbe14b5ab0c2dd2fdfd",
+            "path": "/admin/email/index.html"
+        },
+        "settings-menu-primary": {
+            "_id": "60e72b3bab74b22c0064e00d",
+            "path": "/admin/email/settings.html"
+        }
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274184",
+        "icon": "<i class=\"fas fa-file-invoice\"></i>",
+        "main-menu-position": 5,
+        "menu-position": 0,
+        "name": "Estimates",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 0,
+        "main-menu-primary": {
+            "_id": "60e8c660b979b40017449b5a",
+            "path": "/admin/estimates/datatable.html"
+        },
+        "main-modal-primary-width": "640px",
+        "main-menu-secondary": {
+            "_id": "60de3a9414b5ab0c2dd30030",
+            "path": "/admin/estimates/form.html"
+        },
+        "main-modal-secondary-width": "840px",
+        "main-modal-secondary-height": "100%",
+        "navbar-modal-primary-width": "640px"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "60e7435ab979b40017448c90",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "Expenses",
+        "icon": "<i class=\"fas fa-funnel-dollar\"></i>",
+        "navbar-menu-position": 0,
+        "settings-menu-position": 0,
+        "main-menu-position": 7,
+        "main-menu-primary": {
+            "_id": "60ddfdbe14b5ab0c2dd2fdfe",
+            "path": "/admin/expenses/datatable.html"
+        },
+        "main-modal-primary-width": "640px",
+        "main-menu-secondary": {
+            "_id": "60ddfdbe14b5ab0c2dd2fdff",
+            "path": "/admin/expenses/form.html"
+        },
+        "main-modal-secondary-width": "320px"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c2727419a",
+        "icon": "<i class=\"far fa-folder\"></i>",
+        "main-menu-position": 0,
+        "main-menu-primary": "",
+        "main-menu-secondary": "",
+        "main-modal-color": "#000000",
+        "name": "Files",
+        "navbar-menu-position": 0,
+        "navbar-menu-primary": "",
+        "navbar-modal-color": "#000000",
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 13,
+        "settings-menu-secondary": {
+            "_id": "60ddfdc014b5ab0c2dd2fe16",
+            "path": "/admin/files/form.html"
+        },
+        "settings-modal-color": "#000000",
+        "settings-modal-primary-width": "640px",
+        "settings-menu-primary": {
+            "_id": "60ddfdc014b5ab0c2dd2fe15",
+            "path": "/admin/files/datatable.html"
+        }
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "60e7444eb979b40017448ca8",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "Fleet Tracking",
+        "icon": "<i class=\"fas fa-map-marker-alt\"></i>",
+        "navbar-menu-primary-position": 5,
+        "main-menu-position": 0,
+        "settings-menu-position": 0,
+        "navbar-menu-primary": {
+            "_id": "60ddfdbe14b5ab0c2dd2fe01",
+            "path": "/admin/fleet-tracking/index.html"
+        },
+        "navbar-modal-primary-width": "100%"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "61302bae8ed7b000136531d0",
+        "name": "Image-editor",
+        "description": "",
+        "icon": "<i class=\"fas fa-image\"></i>",
+        "navbar-menu-position": 0,
+        "navbar-modal-primary-color": "#000000",
+        "navbar-modal-primary-width": "",
+        "navbar-modal-primary-height": "",
+        "navbar-modal-primary-x": "",
+        "navbar-modal-primary-y": "",
+        "main-menu-position": 0,
+        "main-modal-primary-color": "#000000",
+        "main-modal-primary-width": "",
+        "main-modal-primary-height": "",
+        "main-modal-primary-x": "",
+        "main-modal-primary-y": "",
+        "main-modal-secondary-color": "#000000",
+        "main-modal-secondary-width": "",
+        "main-modal-secondary-height": "",
+        "main-modal-secondary-x": "",
+        "main-modal-secondary-y": "",
+        "settings-menu-position": 0,
+        "settings-modal-primary-color": "#000000",
+        "settings-modal-primary-width": "",
+        "settings-modal-primary-height": "",
+        "settings-modal-primary-x": "",
+        "settings-modal-primary-y": "",
+        "settings-modal-secondary-color": "#000000",
+        "settings-modal-secondary-width": "",
+        "settings-modal-secondary-height": "",
+        "settings-modal-secondary-x": "",
+        "settings-modal-secondary-y": "",
+        "navbar-menu-primary": [],
+        "main-menu-primary": [],
+        "main-menu-secondary": [],
+        "settings-menu-primary": [],
+        "settings-menu-secondary": [],
+        "organization_id": "5ff747727005da1c272740ab"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "611d97fdc0e9580010eb9028",
+        "settings-menu-secondary": {
+            "_id": "61186f46c0e9580010ea640b",
+            "path": "/admin/industries/form.html"
+        },
+        "name": "Industries",
+        "description": "",
+        "icon": "<i class=\"fas fa-industry\"></i>",
+        "navbar-menu-position": 0,
+        "main-menu-position": 0,
+        "settings-menu-position": 13,
+        "settings-modal-primary-color": "#000000",
+        "settings-modal-primary-width": "640px",
+        "settings-modal-secondary-color": "#000000",
+        "settings-modal-secondary-width": "320px",
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-primary": {
+            "_id": "61186f46c0e9580010ea640a",
+            "path": "/admin/industries/datatable.html"
+        }
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "60e7452eb979b40017448cd2",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "Invoices",
+        "icon": "<i class=\"fas fa-file-invoice-dollar\"></i>",
+        "navbar-menu-primary-position": 0,
+        "main-menu-position": 6,
+        "settings-menu-position": 0,
+        "navbar-menu-position": 0,
+        "main-menu-primary": {
+            "_id": "60e50150b865a60c74e0e51e",
+            "path": "/admin/invoices/datatable.html"
+        },
+        "main-modal-primary-width": "640px",
+        "main-modal-secondary-width": "840px",
+        "main-menu-secondary": {
+            "_id": "60ddfdbf14b5ab0c2dd2fe02",
+            "path": "/admin/invoices/form.html"
+        }
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "60e74739b979b40017448d03",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "Items",
+        "icon": "<i class=\"fas fa-boxes\"></i>",
+        "navbar-menu-primary-position": 0,
+        "settings-menu-position": 0,
+        "navbar-menu-position": 0,
+        "main-menu-position": 7,
+        "main-menu-primary": {
+            "_id": "60ddfdbf14b5ab0c2dd2fe03",
+            "path": "/admin/items/datatable.html"
+        },
+        "main-modal-primary-width": "640px",
+        "main-menu-secondary": {
+            "_id": "60ddfdbf14b5ab0c2dd2fe04",
+            "path": "/admin/items/form.html"
+        },
+        "main-modal-secondary-width": "320px"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "60e7483fb979b40017448d13",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "Marketplace",
+        "icon": "<i class=\"fas fa-store\"></i>",
+        "navbar-menu-primary-position": 0,
+        "main-menu-position": 0,
+        "navbar-menu-position": 0,
+        "settings-menu-position": 10,
+        "settings-menu-secondary": {
+            "_id": "61c520b0a8b6b4001aaeac5f",
+            "path": "/admin/marketplace/form.html"
+        },
+        "settings-modal-primary-width": "840px",
+        "settings-menu-primary": {
+            "_id": "60de0fb414b5ab0c2dd2febf",
+            "path": "/admin/marketplace/list.html"
+        }
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274192",
+        "icon": "<i class=\"far fa-clone\"></i>",
+        "main-menu-position": 0,
+        "main-menu-primary": "",
+        "main-menu-secondary": "",
+        "main-modal-color": "#000000",
+        "name": "Module Templates",
+        "navbar-menu-position": 0,
+        "navbar-menu-primary": "",
+        "navbar-modal-color": "#000000",
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 7,
+        "settings-menu-primary": {
+            "_id": "60de3a9814b5ab0c2dd30033",
+            "path": "/admin/module-templates/datatable.html"
+        },
+        "settings-menu-secondary": {
+            "_id": "60ddfdbf14b5ab0c2dd2fe05",
+            "path": "/admin/module-templates/form.html"
+        },
+        "settings-modal-color": "#000000",
+        "settings-modal-primary-width": "640px"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274187",
+        "icon": "<i class=\"fas fa-shapes\"></i>",
+        "main-menu-position": 0,
+        "name": "Module Views",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 6,
+        "settings-menu-primary": {
+            "_id": "60ddfdc014b5ab0c2dd2fe0b",
+            "path": "/admin/module-views/datatable.html"
+        },
+        "settings-menu-secondary": {
+            "_id": "60ddfdc014b5ab0c2dd2fe0a",
+            "path": "/admin/module-views/form.html"
+        },
+        "settings-modal-primary-width": "640px"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274190",
+        "icon": "<i class=\"fas fa-project-diagram\"></i>",
+        "main-menu-position": 0,
+        "main-menu-primary": "",
+        "main-menu-secondary": "",
+        "menu-position": 4,
+        "name": "Modules",
+        "navbar-menu-position": 0,
+        "navbar-menu-primary": "/admin/modules/datatable.html",
+        "navbar-menu-primary-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 5,
+        "settings-menu-primary": {
+            "_id": "60ddfdbf14b5ab0c2dd2fe08",
+            "path": "/admin/modules/datatable.html"
+        },
+        "settings-menu-secondary": {
+            "_id": "60ddfdbf14b5ab0c2dd2fe09",
+            "path": "/admin/modules/form.html"
+        },
+        "settings-modal-primary-width": "640px",
+        "settings-modal-secondary-width": "320px"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274182",
+        "icon": "<i class=\"far fa-user\"></i>",
+        "main-menu-position": 0,
+        "menu-position": "0",
+        "name": "My Profile",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 2,
+        "settings-menu-secondary": "hidden",
+        "settings-menu-primary": {
+            "_id": "60ddfdc114b5ab0c2dd2fe1c",
+            "path": "/admin/users/form.html"
+        },
+        "timeStamp": "2022-12-01T21:39:07.207Z"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c2727418c",
+        "icon": "<i class=\"far fa-building\"></i>",
+        "main-menu-position": 0,
+        "menu-position": 1,
+        "name": "Organizations",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 2,
+        "settings-menu-primary": {
+            "_id": "60ddfdc014b5ab0c2dd2fe0d",
+            "path": "/admin/organizations/datatable.html"
+        },
+        "settings-menu-secondary": "hidden",
+        "settings-modal-primary-width": "640px",
+        "settings-modal-primary-height": "100%"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274189",
+        "icon": "<i class=\"fas fa-money-bill-wave\"></i>",
+        "main-menu-position": 7,
+        "name": "Payments",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 11,
+        "navbar-menu-primary": "",
+        "settings-menu-secondary": {
+            "_id": "5ff747727005da1c272740fb",
+            "path": "/admin/signin.html"
+        },
+        "main-menu-primary": {
+            "_id": "60ddfdc014b5ab0c2dd2fe0f",
+            "path": "/admin/payments/datatable.html"
+        },
+        "main-menu-secondary": {
+            "_id": "60ddfdc014b5ab0c2dd2fe10",
+            "path": "/admin/payments/form.html"
+        },
+        "main-modal-secondary-width": "320px",
+        "main-modal-primary-width": "640px",
+        "settings-menu-primary": {
+            "_id": "60972231624235187e4d6979",
+            "path": "/admin/payments/settings.html"
+        }
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c2727419b",
+        "description": "",
+        "icon": "<i class=\"fas fa-balance-scale\"></i>",
+        "main-menu-position": 4,
+        "name": "Potentials",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 0,
+        "main-menu-primary": {
+            "_id": "60ddfdc014b5ab0c2dd2fe11",
+            "path": "/admin/potentials/datatable.html"
+        },
+        "main-menu-secondary": {
+            "_id": "60ddfdc014b5ab0c2dd2fe12",
+            "path": "/admin/potentials/form.html"
+        },
+        "main-modal-primary-width": "640px"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "60e73c8eb979b40017448c1b",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "Projects",
+        "icon": "<i class=\"fas fa-clipboard-list\"></i>",
+        "navbar-menu-primary-position": 0,
+        "main-menu-position": 9,
+        "settings-menu-position": 0,
+        "navbar-menu-position": 0,
+        "main-menu-primary": "60ddfdc014b5ab0c2dd2fe13",
+        "main-modal-primary-width": "640px",
+        "main-modal-secondary-width": "320px",
+        "main-menu-secondary": "60ddfdc014b5ab0c2dd2fe14",
+        "modified": {
+            "on": "2022-10-03T08:40:29.958Z",
+            "by": "current user"
+        }
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c2727418f",
+        "icon": "<i class=\"fas fa-cogs\"></i>",
+        "main-menu-position": 0,
+        "menu-position": "0",
+        "name": "Settings",
+        "navbar-menu-position": 0,
+        "navbar-menu-primary": "",
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 0
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274185",
+        "icon": "<i class=\"fas fa-desktop\"></i>",
+        "main-menu-position": 144,
+        "main-menu-primary": {
+            "_id": "60e50154b865a60c74e0e520",
+            "path": "/admin/websites/list.html"
+        },
+        "main-menu-secondary": {
+            "_id": "60e50154b865a60c74e0e521",
+            "path": "/admin/websites/form.html"
+        },
+        "main-modal-primary-width": "640px",
+        "main-modal-width": "640px",
+        "name": "Sites & Apps",
+        "navbar-menu-position": 0,
+        "navbar-menu-primary": "",
+        "navbar-menu-secondary": "",
+        "navbar-modal-width": "",
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 0,
+        "settings-menu-primary": "60e50154b865a60c74e0e520"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "60e73d29b979b40017448c2b",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "Social Dashboard",
+        "icon": "<i class=\"fas fa-share-alt\"></i>",
+        "main-menu-position": 0,
+        "settings-menu-position": 0,
+        "navbar-menu-primary": {
+            "_id": "60ddfdc014b5ab0c2dd2fe19",
+            "path": "/admin/social/index.html"
+        },
+        "navbar-modal-primary-width": "100%"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274198",
+        "icon": "<i class=\"fas fa-hat-wizard\"></i>",
+        "main-menu-position": 0,
+        "main-menu-primary": "",
+        "main-menu-secondary": "",
+        "name": "Subscriptions",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 14,
+        "settings-menu-primary": "",
+        "settings-menu-secondary": "hidden"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "60eb8361b979b4001744b339",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "Tags",
+        "icon": "<i class=\"fas fa-tags\"></i>",
+        "navbar-menu-position": 0,
+        "main-menu-position": 0,
+        "settings-menu-position": 12,
+        "settings-menu-secondary": {
+            "_id": "60eb8562b979b4001744b39b",
+            "path": "/admin/tags/form.html"
+        },
+        "settings-modal-secondary-width": "320px",
+        "settings-modal-primary-width": "640px",
+        "settings-menu-primary": {
+            "_id": "60eb8562b979b4001744b39a",
+            "path": "/admin/tags/datatable.html"
+        }
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "60e73eefb979b40017448c4c",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "Tasklists",
+        "icon": "<i class=\"fas fa-tasks\"></i>",
+        "navbar-menu-primary-position": 0,
+        "main-menu-position": 10,
+        "settings-menu-position": 0,
+        "navbar-menu-position": 0,
+        "main-menu-primary": {
+            "_id": "60ddfdc114b5ab0c2dd2fe1a",
+            "path": "/admin/tasklists/datatable.html"
+        },
+        "main-modal-primary-width": "640px",
+        "main-menu-secondary": {
+            "_id": "60ddfdc114b5ab0c2dd2fe1b",
+            "path": "/admin/tasklists/form.html"
+        },
+        "main-modal-secondary-width": "320px"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c27274188",
+        "icon": "<i class=\"fas fa-history\"></i>",
+        "main-menu-position": 0,
+        "main-menu-primary": "",
+        "main-menu-secondary": "",
+        "name": "Transaction History",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 13,
+        "settings-menu-primary": "",
+        "settings-menu-secondary": "hidden"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "61c69ddea8b6b4001aaf847c",
+        "description": "",
+        "icon": "<i class=\"fas fa-graduation-cap\"></i>",
+        "directory": "/admin/university",
+        "navbar-menu-primary": "",
+        "navbar-menu-position": 0,
+        "navbar-modal-primary-color": "#000000",
+        "navbar-modal-primary-width": "",
+        "navbar-modal-primary-height": "",
+        "navbar-modal-primary-x": "",
+        "navbar-modal-primary-y": "",
+        "main-menu-primary": {
+            "_id": "61c69f7ea8b6b4001aaf856d",
+            "path": "/admin/university/datatable.html"
+        },
+        "main-menu-position": 13,
+        "main-modal-primary-color": "#000000",
+        "main-modal-primary-width": "640px",
+        "main-modal-primary-height": "",
+        "main-modal-primary-x": "",
+        "main-modal-primary-y": "",
+        "main-menu-secondary": {
+            "_id": "6293fccae6dfc91d5819a94a",
+            "path": "/admin/university/form.html"
+        },
+        "main-modal-secondary-color": "#000000",
+        "main-modal-secondary-width": "320px",
+        "main-modal-secondary-height": "",
+        "main-modal-secondary-x": "",
+        "main-modal-secondary-y": "",
+        "settings-menu-primary": "",
+        "settings-menu-position": 0,
+        "settings-modal-primary-color": "#000000",
+        "settings-modal-primary-width": "",
+        "settings-modal-primary-height": "",
+        "settings-modal-primary-x": "",
+        "settings-modal-primary-y": "",
+        "settings-menu-secondary": "",
+        "settings-modal-secondary-color": "#000000",
+        "settings-modal-secondary-width": "",
+        "settings-modal-secondary-height": "",
+        "settings-modal-secondary-x": "",
+        "settings-modal-secondary-y": "",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "University"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "5ff747727005da1c2727419e",
+        "icon": "<i class=\"fas fa-users\"></i>",
+        "main-menu-position": 0,
+        "menu-position": "0",
+        "name": "Users",
+        "navbar-menu-position": 0,
+        "organization_id": "5ff747727005da1c272740ab",
+        "settings-menu-position": 4,
+        "settings-menu-primary": {
+            "_id": "60ddfdc114b5ab0c2dd2fe1e",
+            "path": "/admin/users/datatable.html"
+        },
+        "settings-menu-secondary": {
+            "_id": "60ddfdc114b5ab0c2dd2fe1c",
+            "path": "/admin/users/form.html"
+        },
+        "settings-modal-secondary-width": "320px",
+        "settings-modal-primary-width": "640px"
+    },
+    {
+        "db": "indexeddb",
+        "database": "5ff747727005da1c272740ab",
+        "collection": "modules",
+        "_id": "60e74833b979b40017448d12",
+        "organization_id": "5ff747727005da1c272740ab",
+        "name": "Wallet",
+        "icon": "<i class=\"fas fa-wallet\"></i>",
+        "main-menu-position": 0,
+        "settings-menu-position": 12,
+        "navbar-menu-primary": {
+            "_id": "60ddfdc114b5ab0c2dd2fe1f",
+            "path": "/admin/wallet/index.html"
+        },
+        "navbar-modal-primary-width": "320px",
+        "settings-menu-primary": {
+            "_id": "60ddfdc114b5ab0c2dd2fe1f",
+            "path": "/admin/wallet/index.html"
+        }
+    }
+]

@@ -339,8 +339,8 @@ module.exports = {
                     "*",
                     "general.cocreate.app"
                 ],
-                "path": "/admin/builder/right-panel.html",
-                "directory": "/admin/builder",
+                "path": "/admin/builder/components/right-panel.html",
+                "directory": "/admin/builder/components",
                 "content-type": "text/html",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274193",
@@ -358,8 +358,8 @@ module.exports = {
                     "*",
                     "general.cocreate.app"
                 ],
-                "path": "/admin/builder/left-panel.html",
-                "directory": "/admin/builder",
+                "path": "/admin/builder/components/left-panel.html",
+                "directory": "/admin/builder/components",
                 "content-type": "text/html",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274193",
@@ -377,8 +377,8 @@ module.exports = {
                     "*",
                     "general.cocreate.app"
                 ],
-                "path": "/admin/builder/filetree.html",
-                "directory": "/admin/builder",
+                "path": "/admin/builder/components/filetree.html",
+                "directory": "/admin/builder/components",
                 "content-type": "text/html",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274193",
@@ -1827,6 +1827,42 @@ module.exports = {
                 "path": "/admin/websites/form.html",
                 "directory": "/admin/websites",
                 "content-type": "text/html",
+                "public": "true",
+                "module_id": "5ff747727005da1c27274185",
+                "website_id": "5ffa235ff11d2d00103c4520"
+            }
+        }
+    ],
+    "crud": [
+        {
+            "collection": "files",
+            "document": {
+                "_id": "6134733b8ed7b00013657ecf",
+                "name":"admin",
+                "domains": [
+                    "*",
+                    "general.cocreate.app"
+                ],
+                "path": "/admin",
+                "directory": "/",
+                "content-type": "text/directory",
+                "public": "true",
+                "module_id": "5ff747727005da1c27274185",
+                "website_id": "5ffa235ff11d2d00103c4520"
+            }
+        },
+        {
+            "collection": "files",
+            "document": {
+                "_id": "6135c2218ed7b00013658b77",
+                "name":"builder",
+                "domains": [
+                    "*",
+                    "general.cocreate.app"
+                ],
+                "path": "/admin/builder",
+                "directory": "/admin",
+                "content-type": "text/directory",
                 "public": "true",
                 "module_id": "5ff747727005da1c27274185",
                 "website_id": "5ffa235ff11d2d00103c4520"
