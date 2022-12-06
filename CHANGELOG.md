@@ -1,3 +1,16 @@
+# [1.25.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.24.0...v1.25.0) (2022-12-06)
+
+
+### Bug Fixes
+
+* bump cdn to 1.31.3 ([f95a65c](https://github.com/CoCreate-app/CoCreate-admin/commit/f95a65c9951d1ce8c80c4602829b11ad0254a4ef))
+* renamed filter-sort-type to filter-sort-direction ([e0ac9a6](https://github.com/CoCreate-app/CoCreate-admin/commit/e0ac9a6eae67c6d29bd486d5edc0530f064cc850))
+
+
+### Features
+
+* improved offline support ([b31e690](https://github.com/CoCreate-app/CoCreate-admin/commit/b31e6900ae29d7e8c64892a10e7dd6c18dbbfb59))
+
 # [1.24.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.23.2...v1.24.0) (2022-11-28)
 
 
