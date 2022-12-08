@@ -1838,7 +1838,7 @@ module.exports = {
             "collection": "files",
             "document": {
                 "_id": "6134733b8ed7b00013657ecf",
-                "name":"admin",
+                "name": "admin",
                 "domains": [
                     "*",
                     "general.cocreate.app"
@@ -1855,7 +1855,7 @@ module.exports = {
             "collection": "files",
             "document": {
                 "_id": "6135c2218ed7b00013658b77",
-                "name":"builder",
+                "name": "builder",
                 "domains": [
                     "*",
                     "general.cocreate.app"

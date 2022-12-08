@@ -59,7 +59,6 @@
   },
   "dependencies": {
     "@cocreate/docs": "^1.4.6",
-    "@cocreate/hosting": "^1.6.5",
-    "node-html-parser": "^2.1.0"
+    "@cocreate/hosting": "^1.6.5"
   }
 }
