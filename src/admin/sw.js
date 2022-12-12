@@ -49,7 +49,7 @@ self.addEventListener("fetch", (e) => {
                 requestMap.set(cachesObj, '')
                 fetch(e.request).then((newResp) => {
                     caches.open(CACHE_DYNAMIC_NAME).then((cache) => {
-                        if (newResp.status == 200)
+                        if (newResp.status !== 206)
                             cache.put(e.request, newResp);
                             // cleanCache(CACHE_DYNAMIC_NAME, CACHE_DYNAMIC_LIMIT);
                     }).catch(() => {
@@ -62,7 +62,7 @@ self.addEventListener("fetch", (e) => {
             } else {
                 return fetch(e.request).then((newResp) => {
                         caches.open(CACHE_DYNAMIC_NAME).then((cache) => {
-                            if (newResp.status == 200)
+                            if (newResp.status !== 206)
                                 cache.put(e.request, newResp);
                             // cleanCache(CACHE_DYNAMIC_NAME, CACHE_DYNAMIC_LIMIT);
                         }).catch(() => {});

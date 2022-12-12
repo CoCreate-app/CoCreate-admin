@@ -8,7 +8,7 @@
         <title>Database | CoCreate</title>
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
         <link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreateCSS.min.css">
-        <link rel="stylesheet" href="./index.css" collection="files" document_id="60e4f9714792bff869f1bde5" name="src" parse="true" type="text/css"/>
+        <link rel="stylesheet" href="../index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src" type="text/css"/>
     </head>
 
     <style type="text/css">
@@ -82,7 +82,7 @@
 						</floating-label>
 					</td>
 				</tr>
-				<tbody template_id="datatable" fetch-collection="" fetch-document pass-refresh pass_id="datatable" fetch-limit="5">
+				<tbody template_id="datatable" fetch-collection="" fetch-document fetch-limit="5"  pass-refresh pass_id="datatable">
 					<tr  template_id="datatable" class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{document._id}}" toggle="selected" hover="visibility:visible!important" hover-target=".tools{{document._id}}">
 						<td class="padding:5px min-width:300px align-items:center">
                             <div class="display:flex justify-content:flex-end transition:0.3s padding-left:10px" >
@@ -90,7 +90,7 @@
                                     <a class="float:right margin-right:15px" actions="deleteDocument" collection="{{document.collection}}" document_id=""><i class="fas fa-trash"></i></a>
                                 </div>
                             </div>
-                            <div class="template display:flex" render-object="data" render-key="one" hover="visibility:visible!important" hover-target=".tools{{document._id}}{{one.key}}">
+                            <div class="template display:flex" render-object="document" render-key="one" render-exclude="db, database, collection" hover="visibility:visible!important" hover-target=".tools{{document._id}}{{one.key}}">
                                 <span class="visibility:hidden tools{{document._id}}{{one.key}}">
                                     <form realtime="false" class="margin-top:10px">
                                         <input type="hidden" collection="{{document.collection}}" document_id="{{document._id}}" name="{{one.key}}.untitled" value="untitiled"/>
@@ -118,6 +118,30 @@
                 </form>
             </button>
 
+            <template class="string" hidden>
+                <floating-label render>
+                    <textarea rows="1" collection="{{document.collection}}" document_id="{{document._id}}" name="$parents" class="floating-label"></textarea>
+                </floating-label>
+            </template>
+    
+            <template class="object array" hidden>
+                <div render-object="document.$parents" render-exclude="db, database, collection" render-key="$auto" class="template margin-top:20px" render>
+                    <div class="display:flex padding-top:10px" hover="visibility:visible!important" hover-target="[tools='$parents{{$auto.key}}']">
+                        <span class="visibility:hidden tools$parents{{$auto.key}}" tools="$parents{{$auto.key}}">
+                            <form realtime="false" class="margin-top:10px">
+                                <input type="hidden" collection="{{document.collection}}" document_id="{{document._id}}" name="$parents.untitled" value="untitiled"/>
+                                <a actions="save, reset"><i class="fas fa-plus"></i></a>
+                            </form>
+                            <form realtime="false" class="margin-top:10px">
+                                <a actions="deleteName" collection="{{document.collection}}" document_id="{{document._id}}" deleteName="$parents.{{$auto.key}}"><i class="fas fa-trash"></i></a>
+                            </form>
+                        </span>
+                        <span class="padding:10px"><span collection="{{document.collection}}" document_id="{{document._id}}" value-prefix="$parents." updateName="$parents.{{$auto.key}}" contenteditable>{{$auto.key}}</span>: </span>
+                        <div get-value=".{{$auto.type}}" parentKey="{{$auto.key}}" parentType="{{$auto.type}}"></div>
+                    </div>
+                </div>
+            </template>    
+
         </main>
         
         <!-- SideNav  -->
@@ -138,7 +162,7 @@
         	<div class="padding-right:5px padding-bottom:5px">
                 <!-- Fetch and Render-->
                 <ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_90px) bottom:10px margin-right:5px">
-                    <div fetch-collection filter-sort-name="name" filter-sort-direction="asc" filter-name="name" filter-value="permissions" filter-operator="$ne" template_id="collections">
+                    <div fetch-collection filter-sort-name="name" filter-sort-direction="asc" template_id="collections">
                         
                         <!-- Template -->
                         <li template_id="collections" class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" hover="active">
@@ -165,35 +189,7 @@
 	        </div>
 		</div>
 
-        <template class="string" hidden>
-            <floating-label render>
-                <textarea rows="1" collection="{{document.collection}}" document_id="{{document._id}}" name="$parents" class="floating-label"></textarea>
-            </floating-label>
-        </template>
-
-        <!-- <template id="string" hidden readonly>
-            <span collection="{{document.collection}}" document_id="{{document._id}}" name="$parents" value-type="string" selected-value="true" selected-attribute="contenteditable" render></span>
-        </template> -->
-        <template class="object array" hidden>
-            <div render-object="data.$parents" render-key="$auto" class="template margin-top:20px" render>
-                <div class="display:flex padding-top:10px" hover="visibility:visible!important" hover-target="[tools='$parents{{$auto.key}}']">
-                    <span class="visibility:hidden tools$parents{{$auto.key}}" tools="$parents{{$auto.key}}">
-                        <form realtime="false" class="margin-top:10px">
-                            <input type="hidden" collection="{{document.collection}}" document_id="{{document._id}}" name="$parents.untitled" value="untitiled"/>
-                            <a actions="save, reset"><i class="fas fa-plus"></i></a>
-                        </form>
-                        <form realtime="false" class="margin-top:10px">
-                            <a actions="deleteName" collection="{{document.collection}}" document_id="{{document._id}}" deleteName="$parents.{{$auto.key}}"><i class="fas fa-trash"></i></a>
-                        </form>
-                    </span>
-                    <span class="padding:10px"><span collection="{{document.collection}}" document_id="{{document._id}}" value-prefix="$parents." updateName="$parents.{{$auto.key}}" contenteditable>{{$auto.key}}</span>: </span>
-                    <div get-value=".{{$auto.type}}" parentKey="{{$auto.key}}" parentType="{{$auto.type}}"></div>
-                </div>
-            </div>
-        </template>
-
-        <script src="https://cdn.cocreate.app/1.32.4/CoCreate.min.js"></script>
-        
+        <script src="https://cdn.cocreate.app/1.33.9/CoCreate.min.js"></script>
         
     </body>
 </html>

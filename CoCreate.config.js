@@ -313,7 +313,7 @@ module.exports = {
             "entry": "./src/admin/builder/index.css",
             "collection": "files",
             "document": {
-                "_id": "637bc8fe91249e639db315e0",
+                "_id": "610cb468c0e9580010e5ba50",
                 "name": "index.css",
                 "src": "{{source}}",
                 "domains": [
