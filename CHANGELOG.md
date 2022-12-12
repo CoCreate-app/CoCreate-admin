@@ -1,3 +1,12 @@
+## [1.25.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.25.1...v1.25.2) (2022-12-12)
+
+
+### Bug Fixes
+
+* bump cdn to 1.32.4 ([8c8c66d](https://github.com/CoCreate-app/CoCreate-admin/commit/8c8c66d66941b1da912e9e30da334d9fc495ffb5))
+* bump cdn to 1.33.9 ([2a5f0ed](https://github.com/CoCreate-app/CoCreate-admin/commit/2a5f0ed7030cf677a61213eb854057e0c6e7ee0e))
+* replaceText will overwirte current changeLog ([a1b0d8d](https://github.com/CoCreate-app/CoCreate-admin/commit/a1b0d8df2535dab148db1a47ddb8c413f18059ba))
+
 ## [1.25.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.25.0...v1.25.1) (2022-12-08)
 
 
