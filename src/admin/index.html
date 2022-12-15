@@ -10,17 +10,9 @@
 		<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreate.min.css">
         <link rel="stylesheet" href="./index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src" type="text/css"/>
         <link rel="manifest" href="/manifest.json" />
-
     </head>
-
-    <style type="text/css">
-        .cocreate-search .floating-label_field{margin-top:0px;}
-    </style> 
     
     <style type="text/css">
-        div[user-status="on"] {background-color:yellowgreen;}
-        div[user-status="off"] {background-color:red;}
-        div[user-status="idle"] {background-color:orange;}
         ul::-webkit-scrollbar-thumb, ul::-webkit-scrollbar-track{background-color:rgba(0,0,0,0.01)}
     </style>
 
@@ -123,7 +115,7 @@
             <!-- Select to change organizations  -->
             <cocreate-select class="org-changer remove-none border:none sessionUser_Id padding:0" name="current_org" collection="users" document_id="">
                 <input placeholder="Search" filter-search template_id="connected_orgs">
-                <cc-options class="options cocreate-menu overflow:auto sessionUser_Id"
+                <cc-options class="options overflow:auto sessionUser_Id"
                     fetch-collection="users"
                     fetch-name="connected_orgs"
                     filter-name="_id"
@@ -134,18 +126,20 @@
                         <span class="logo-icon"><img collection="organizations" document_id="{{connected_orgs}}" name="logo" src="/assets/icon.png" height="40px" alt="..." class="margin-top:3px"></span>
                         <span collection="organizations" document_id="{{connected_orgs}}" name="name" class="margin-left:12px font-size:1.5em"></span>
                     </cc-option>
-                    <li class="line-height:40px height:40px overflow:hidden">
+                    <div class="line-height:40px height:40px overflow:hidden">
                         <a href="./organizations/creator.html">
                             <span class="padding:13px"><i class="fas fa-plus"></i></span>
                             <span>New Orginaztion</span>
                         </a>
-                    </li>
+                    </div>
                 </cc-options>
             </cocreate-select>
             
 			<!-- Search -->
 			<form class="padding:5px">
-				<input type="text" class="floating-label" pass-value_to="results">
+                <floating-label>
+                    <input type="text" class="floating-label" pass-value_to="results">
+                </floating-label>
 				<span class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">
 					<a target="modal" pass_to="render" collection="website-pages" document_id="" pass-name="src" modal-width="900px" modal-color="#229954">
 						<i class="fas fa-search"></i>
@@ -240,7 +234,7 @@
 	        </div>
 		</div>
         
-        <script src="https://cdn.cocreate.app/1.33.11/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.33.16/CoCreate.min.js"></script>
         
     </body>
 </html>
