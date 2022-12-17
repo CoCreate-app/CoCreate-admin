@@ -1,3 +1,15 @@
+# [1.26.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.25.4...v1.26.0) (2022-12-17)
+
+
+### Bug Fixes
+
+* bump cdn to 1.34.0 ([f8d234d](https://github.com/CoCreate-app/CoCreate-admin/commit/f8d234dc1e12e7cfc0f4ff0ce6e11a5e8d336241))
+
+
+### Features
+
+* codearea a textrea with syntax hihlighting and collaborative cursors ([5ad4bee](https://github.com/CoCreate-app/CoCreate-admin/commit/5ad4beed02853e751188dba6dc8d6a437c71ba2b))
+
 ## [1.25.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.25.3...v1.25.4) (2022-12-15)
 
 
