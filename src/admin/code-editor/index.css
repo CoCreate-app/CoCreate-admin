@@ -7,10 +7,6 @@
     background: whitesmoke;
 }
 
-.codemirror.active {
-    height: 100%
-}
-
 textarea.active {
     display:block;
     height: 100vh;
@@ -18,8 +14,4 @@ textarea.active {
     border:none;
     outline:none;
     padding:10px;
-}
-
-.CodeMirror {
-    height: 90vh
 }
