@@ -110,9 +110,6 @@
                                 <!-- API key  -->
                                 <input type="hidden" id="apiKey" collection="organizations" document_id="" name="apiKey" placeholder="API Key" uuid="32" readonly>
 
-                                <!-- Security key  -->
-                                <input type="hidden" id="securityKey" collection="organizations" document_id="" name="securityKey" placeholder="security Key" uuid="32" readonly>
-
                                 <button type="button" class="outline white-blue" show='#step2,#ava2' hide='#step3,#ava3'>Previous</button>
                                 <button type="button" class="outline red-white registerBtn industryBtn"><a href="index.html">Launch</a></button>
 
@@ -127,12 +124,11 @@
 
         <!--CoCreateJS-->
         <script src="../apikey.js"></script>
-        <script src="https://cdn.cocreate.app/1.34.3/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.34.4/CoCreate.min.js"></script>
 
         <script>
             localStorage.removeItem('organization_id');
             localStorage.removeItem('apiKey');
-            localStorage.removeItem('securityKey');
         </script>
 
         <script>
@@ -160,19 +156,6 @@
                 }, 100)
             })
 
-            // socket.on('userCurrentOrg', function(data) {
-            //     console.log(data);
-
-                getCurrentOrgForDashboardLink = true;
-
-                localStorage.setItem('apiKey', data['apiKey']);
-                localStorage.setItem('securityKey', data['securityKey']);
-                localStorage.setItem('organization_id', data['current_org']);
-
-                localStorage.setItem('admin_id', data['admin_id']);
-                localStorage.setItem('builderUI_id', data['builderUI_id']);
-
-            })
         </script>
 
     </body>
