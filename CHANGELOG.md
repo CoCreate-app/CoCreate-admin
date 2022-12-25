@@ -1,3 +1,18 @@
+# [1.27.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.26.1...v1.27.0) (2022-12-25)
+
+
+### Bug Fixes
+
+* add filter-search to database table ([05b773c](https://github.com/CoCreate-app/CoCreate-admin/commit/05b773c2988c8f0253637ba21c89d378891e891b))
+* apply cdn ([4ff828b](https://github.com/CoCreate-app/CoCreate-admin/commit/4ff828b71a63ce3f2c2d0b5dd4567816740cbb9b))
+* bumpcdn to 1.34.4 ([f044588](https://github.com/CoCreate-app/CoCreate-admin/commit/f044588d9d68881f5f658df79500817afaf85805))
+* type="modal" and pass_to updated to action="pass, openModal" ([2968f9b](https://github.com/CoCreate-app/CoCreate-admin/commit/2968f9b2b508ee85c0008d60cc415e9b97176e29))
+
+
+### Features
+
+* bump cdn to 1.35.0 ([b7c4acb](https://github.com/CoCreate-app/CoCreate-admin/commit/b7c4acbe7ada5edd810f7c7444cd624829e7e1f0))
+
 ## [1.26.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.26.0...v1.26.1) (2022-12-21)
 
 
