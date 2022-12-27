@@ -36,7 +36,7 @@
               
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" href="./modules/form.html" modal-width="320px">
+                    <a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
                         <div pass-collection="modules" pass-document_id="5ff747727005da1c2727419c" pass_to="form-fields"></div>
                         <div pass-filter-value="5ff747727005da1c2727419c" pass_to="module_id"></div>
@@ -45,7 +45,7 @@
                 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" href="./code-editor/index.html">
+                    <a actions="pass, openModal" modal-src="./code-editor/index.html">
                         <i class="fas fa-code"></i>
                         <div pass-collection="files" pass-document_id="637bc8fe91249e639db315d8" pass-name="src" pass_to="code-editor"></div>
                     </a>
@@ -53,7 +53,7 @@
                 
                 <!-- Render Builder -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" href="./builder/index.html" class="sessionBuilderUI_Id">
+                    <a actions="pass, openModal" modal-src="./builder/index.html" class="sessionBuilderUI_Id">
                         <i class="fas fa-palette"></i>
                         <div pass-collection="files" pass-document_id="637bc8fe91249e639db315d8" pass-name="src" pass_to="builder"></div>
                     </a>
@@ -71,8 +71,7 @@
                     template_id="navbar-menu">
                   
                     <li class="template margin-right:15px" template_id="navbar-menu">
-                        <!-- <input type="hidden" collection="files" document_id="{{document.navbar-menu-primary}}" name="path" set-value="#a{{document._id}}" set-value-key="navbar-url"> -->
-                        <a actions="pass, openModal" id="a{{document._id}}" href='..{{document.navbar-menu-primary.path}}'
+                        <a actions="pass, openModal" modal-src='..{{document.navbar-menu-primary.path}}'
                             modal-width="{{document.navbar-modal-primary-width}}"
                             modal-height="{{document.navbar-modal-primary-height}}"
                             modal-color="{{document.navbar-modal-primary-color}}">
@@ -89,7 +88,7 @@
             
             <!-- Avatar -->
             <div class="avatar-wrapper margin:5px">
-                <a class="avatar round" actions="pass, openModal" href="./users/profile.html" modal-width="300px"  modal-height="375px"  modal-color="#229954">
+                <a class="avatar round" actions="pass, openModal" modal-src="./users/profile.html" modal-width="300px"  modal-height="375px"  modal-color="#229954">
                     <span collection="users" document_id="" name="name" class="sessionUser_Id avatar-name"></span>
                     <span class="sessionUser_Id avatar-image">
                         <img collection="users" document_id="" name="avatar" onerror="this.style.display='none'" class="sessionUser_Id" width="40px"/>
@@ -161,27 +160,27 @@
                         
                         <!-- Template -->
                         <li class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" template_id="main-menu">
-                            <a actions="pass, openModal" id="a{{document._id}}" href='..{{document.main-menu-primary.path}}'
+                            <a actions="pass, openModal" modal-src='..{{document.main-menu-primary.path}}'
                                 modal-width="{{document.main-modal-primary-width}}"
                                 modal-color="{{document.main-modal-color}}"
                                 class="display:inline-block">
                                 <span class="display:inline-block width:50px text-align:center">{{document.icon}}</span>
                                 <span>{{document.name}}</span>
-                                <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
+                                <div pass-collection="module_activities" pass-template_id="{{document._id}}" pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
                                 <div pass-collection="files" pass-document_id="{{document.main-menu-secondary._id}}" pass-name="src" pass_to="form"></div>
                                 <div pass-collection="files" pass-document_id="{{document.main-menu-primary._id}}" pass-name="src" pass_to="render"></div>
                                 <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>
                                 <div pass-document_id="{{document._id}}" pass_to="module-form"></div>
                             </a>
                             <div class="float:right width:50px text-align:center">
-                                <a actions="pass, openModal" href='..{{document.main-menu-secondary.path}}' get-value="#b{{document._id}}" get-value-key="secondary-url"
+                                <a actions="pass, openModal" modal-src='..{{document.main-menu-secondary.path}}' get-value="#b{{document._id}}" get-value-key="secondary-url"
                                     modal-width="{{document.main-modal-secondary-width}}"
                                     modal-color="{{document.main-modal-secondary-color}}">
                                     <i class="fas fa-plus"></i>
-                                    <div pass-collection="files" pass-document_id="{{document.main-menu-secondary._id}}" pass-name="src" pass_to="render"></div>
+                                    <div pass-collection="file" pass-document_id="{{document.main-menu-secondary._id}}" pass-name="src" pass_to="render"></div>
 				                    <div pass-document_id="" pass_to="form-fields"></div>
                                     <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>
-                                    <div pass-document_id="{{document._id}}" pass_to="module-form"></div>
+                                    <div pass-document_id="{{docusment._id}}" pass_to="module-form"></div>
                                 </a>
                             </div>
                         </li>
@@ -190,34 +189,34 @@
                 
                 <!-- sidenav Footer -->
 				<div class="display:flex justify-content:space-between flex-wrap:wrap position:absolute bottom:0px background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
-					<a actions="pass, openModal" href="../admin/settings/index.html" modal-width="275px" modal-color="#229954" modal-x="0" modal-y="0" class="width:50px text-align:center display:inline-block">
+					<a actions="pass, openModal" modal-src="../admin/settings/index.html" modal-width="275px" modal-color="#229954" modal-x="0" modal-y="0" class="width:50px text-align:center display:inline-block">
 					    <span class="padding:10px width:50px text-align:center"><i class="fas fa-cogs"></i></span>
                         <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe18" pass-name="src" pass_to="render"></div>
                         <div pass-value="5ff747727005da1c2727418f" pass-filter-value="5ff747727005da1c2727418f" pass_to="module_id"></div>
                         <div pass-document_id="5ff747727005da1c2727418f" pass_to="module-form"></div>
 					</a>
-					<a actions="pass, openModal" href="../admin/modules/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">
+					<a actions="pass, openModal" modal-src="../admin/modules/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">
 					    <span class="padding:10px width:50px text-align:center"><i class="fas fa-project-diagram"></i></span>
                         <div pass-collection="files" pass-document_id="60ddfdbf14b5ab0c2dd2fe09" pass-name="src" pass_to="form"></div>
                         <div pass-collection="files" pass-document_id="60ddfdbf14b5ab0c2dd2fe08" pass-name="src" pass_to="render"></div>
                         <div pass-value="5ff747727005da1c27274190" pass-filter-value="5ff747727005da1c27274190" pass_to="module_id"></div>
                         <div pass-document_id="5ff747727005da1c27274190" pass_to="module-form"></div>
                     </a>
-					<a actions="pass, openModal" href="../admin/module-views/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">
+					<a actions="pass, openModal" modal-src="../admin/module-views/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">
 					    <span class="padding:10px width:50px text-align:center"><i class="fas fa-shapes"></i></span>
                         <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe0a" pass-name="src" pass_to="form"></div>
                         <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe0b" pass-name="src" pass_to="render"></div>
                         <div pass-value="5ff747727005da1c27274187" pass-filter-value="5ff747727005da1c27274187" pass_to="module_id"></div>
                         <div pass-document_id="5ff747727005da1c27274187" pass_to="module-form"></div>
                     </a>
-					<a actions="pass, openModal" href="../admin/files/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">
+					<a actions="pass, openModal" modal-src="../admin/files/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">
 					    <span class="padding:10px width:50px text-align:center"><i class="far fa-folder"></i></span>
                         <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe16" pass-name="src" pass_to="form"></div>
                         <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe15" pass-name="src" pass_to="render"></div>
                         <div pass-value="5ff747727005da1c2727419a" pass-filter-value="5ff747727005da1c2727419a" pass_to="module_id"></div>
                         <div pass-document_id="5ff747727005da1c2727419a" pass_to="module-form"></div>
                     </a>
-					<a actions="signOut" href="./signin.html" pass_to class="width:50px text-align:center display:inline-block">
+					<a actions="signOut" href="./signin.html" class="width:50px text-align:center display:inline-block">
 					  <span class="padding:10px width:50px text-align:center"><i class="fas fa-sign-out-alt"></i></span>
 					</a>
 				</div>

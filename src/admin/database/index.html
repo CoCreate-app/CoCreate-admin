@@ -44,7 +44,7 @@
 
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
-					<a actions="pass, openModal" href="../modules/form.html" modal-width="320px">
+					<a actions="pass, openModal" modal-src="../modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
                         <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
                         <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
@@ -53,7 +53,7 @@
 
 				<!-- Render Code Editor -->
 				<li class="margin-right:15px">
-					<a actions="pass, openModal" href="../code-editor/index.html">
+					<a actions="pass, openModal" modal-src="../code-editor/index.html">
                         <i class="fas fa-code"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
@@ -61,7 +61,7 @@
 
 				<!-- Render Builder -->
 				<li class="margin-right:15px">
-					<a actions="pass, openModal" href="../builder/index.html">
+					<a actions="pass, openModal" modal-src="../builder/index.html">
                         <i class="fas fa-palette"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
@@ -107,7 +107,7 @@
 						</floating-label>
 					</td>
 				</tr>
-				<tbody template_id="datatable" fetch-collection="" fetch-document fetch-limit="5"  pass-refresh pass_id="datatable">
+				<tbody template_id="datatable" fetch-collection="" fetch-document fetch-limit="5" pass-refresh pass_id="datatable">
 					<tr  template_id="datatable" class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{document._id}}" toggle="selected" hover="visibility:visible!important" hover-target=".tools{{document._id}}">
 						<td class="padding:5px min-width:300px align-items:center">
                             <div class="display:flex justify-content:flex-end transition:0.3s padding-left:10px" >
@@ -191,7 +191,7 @@
                         
                         <!-- Template -->
                         <li template_id="collections" class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" hover="active">
-                            <a pass-collection="{{collection.name}}" pass_to="datatable" class="display:inline-block padding-left:15px">
+                            <a actions="pass" pass-collection="{{collection.name}}" pass_to="datatable" class="display:inline-block padding-left:15px">
                                 <span>{{collection.name}}</span>
                                 <div pass-collection="{{collection.name}}" pass_to="datatable"></div>
                             </a>

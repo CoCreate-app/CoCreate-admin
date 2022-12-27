@@ -17,22 +17,22 @@
 		}
 
 		a[filter-sort-direction]:before {
-    font-family: 'Font Awesome 5 Free';
-    content: "\f0dc";
-    font-weight: 900;
-}
+			font-family: 'Font Awesome 5 Free';
+			content: "\f0dc";
+			font-weight: 900;
+		}
 
-a[filter-sort-direction=asc]:before {
-    font-family: 'Font Awesome 5 Free';
-    content: "\f0de";
-    font-weight: 900;
-}
+		a[filter-sort-direction=asc]:before {
+			font-family: 'Font Awesome 5 Free';
+			content: "\f0de";
+			font-weight: 900;
+		}
 
-a[filter-sort-direction=desc]:before {
-    font-family: 'Font Awesome 5 Free';
-    content: "\f0dd";
-    font-weight: 900;
-}
+		a[filter-sort-direction=desc]:before {
+			font-family: 'Font Awesome 5 Free';
+			content: "\f0dd";
+			font-weight: 900;
+		}
 
 	</style>
 
@@ -63,7 +63,7 @@ a[filter-sort-direction=desc]:before {
 
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
-					<a actions="pass, openModal" href="../modules/form.html" modal-width="320px">
+					<a actions="pass, openModal" modal-src="../modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
                         <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
                         <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
@@ -72,7 +72,7 @@ a[filter-sort-direction=desc]:before {
 
 				<!-- Render Code Editor -->
 				<li class="margin-right:15px">
-					<a actions="pass, openModal" href="../code-editor/index.html">
+					<a actions="pass, openModal" modal-src="../code-editor/index.html">
                         <i class="fas fa-code"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
@@ -80,7 +80,7 @@ a[filter-sort-direction=desc]:before {
 
 				<!-- Render Builder -->
 				<li class="margin-right:15px">
-					<a actions="pass, openModal" href="../builder/index.html">
+					<a actions="pass, openModal" modal-src="../builder/index.html">
                         <i class="fas fa-palette"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
@@ -121,29 +121,29 @@ a[filter-sort-direction=desc]:before {
 				<tr class="border-bottom:1px_solid_darkgray">
 					<td class="position:sticky top:0 background:white padding:0px_10px_10px">
 	            		<floating-label>
-							<input type="text" class="floating-label" filter-name="name" template_id="datatable" placeholder="Name">
+							<input type="text" filter-name="name" template_id="" pass_id="datatable" placeholder="Name" class="floating-label" />
 						</floating-label>
 						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-							<a filter-sort-name="name" filter-sort-toggle="asc" template_id="datatable"></a>
+							<a filter-sort-name="name" filter-sort-toggle="asc" template_id="" pass_id="datatable"></a>
 						</span>
 					</td>
 					<td class="position:sticky top:0 background:white padding:0px_10px_10px">
 	            		<floating-label>
-							<input type="text" class="floating-label" filter-name="_id" template_id="datatable" placeholder="Document_id" />
+							<input type="text" filter-name="_id" template_id="" pass_id="datatable" placeholder="Document_id" class="floating-label"/>
 						</floating-label>
 						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-							<a filter-sort-name="_id" filter-sort-toggle="asc" template_id="datatable"></a>
+							<a filter-sort-name="_id" filter-sort-toggle="asc" template_id="" pass_id="datatable"></a>
 						</span>
 					</td>
 				</tr>
 
-				<tbody template_id="datatable" fetch-collection="" fetch-document filter-name="" filter-value="" filter-operator="$eq" filter-sort-name="name" filter-sort-direction="asc" pass_id="datatable">
+				<tbody template_id="" fetch-collection="" fetch-document filter-name="" filter-value="" filter-operator="$eq" filter-sort-name="name" filter-sort-direction="asc" pass_id="datatable">
 
-					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{document._id}}" toggle="selected">
+					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="" pass_id="datatable" document_id="{{document._id}}" toggle="selected">
 						<td class="padding:5px display:flex min-width:200px align-items:center">
 							<div class="display:flex justify-content:center">
 					            <div class="avatar-wrapper">
-					                <a class="avatar round" actions="pass, openModal" href="./form.html" modal-width="320px" modal-color="#229954">
+					                <a class="avatar round" actions="pass, openModal" modal-src="./form.html" modal-width="320px" modal-color="#229954">
 					                    <span class="avatar-name" rendered>{{document.name}}</span>
 					                    <span class="avatar-image">
 					                        <img collection="{{document.collection}}" document_id="{{document._id}}" name="avatar" onerror="this.style.display='none'" width="40px"/>
@@ -153,7 +153,7 @@ a[filter-sort-direction=desc]:before {
 					            </div>
 							</div>
 							<div class="margin-left:10px">
-								<a actions="pass, openModal" href="./form.html" modal-width="320px" modal-color="#229954">
+								<a actions="pass, openModal" modal-src="./form.html" modal-width="320px" modal-color="#229954">
 									<h4>{{document.name}}</h4>
 									<div pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields"></div>
 									<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
@@ -164,7 +164,7 @@ a[filter-sort-direction=desc]:before {
 							</div>
 						</td>
 						<td class="padding:10px">
-							<a actions="pass, openModal" href="./form.html" modal-width="320px" modal-color="#229954">
+							<a actions="pass, openModal" modal-src="./form.html" modal-width="320px" modal-color="#229954">
 								<b>{{document._id}}</b>
 								<div pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields"></div>
 								<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
@@ -180,7 +180,7 @@ a[filter-sort-direction=desc]:before {
 		</main>
 
 		<button class="position:fixed bottom:15px right:15px width:50px height:50px background:dodgerblue grow-hover border-radius:50% z-index:8 color:white">
-			<a actions="pass, openModal" href="./form.html" modal-width="320px" modal-color="#229954">
+			<a actions="pass, openModal" modal-src="./form.html" modal-width="320px" modal-color="#229954">
 				<i class="fa fa-plus"></i>
 				<div pass_to="form-fields" pass-document_id=""></div>
 				<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
