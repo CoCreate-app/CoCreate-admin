@@ -1,3 +1,13 @@
+## [1.27.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.27.1...v1.27.2) (2022-12-29)
+
+
+### Bug Fixes
+
+* bump cdn to 1.36.0 ([61095af](https://github.com/CoCreate-app/CoCreate-admin/commit/61095aff91b3ee314976331ceb652da8f6a6912d))
+* bump dependencies ([2ab70d6](https://github.com/CoCreate-app/CoCreate-admin/commit/2ab70d60397871f2a2e30178d5d66d84bd8f387c))
+* bump dependencies ([7544b98](https://github.com/CoCreate-app/CoCreate-admin/commit/7544b9859f2bdab67ad8b7a2852c87b8d1c5d371))
+* modal href updated to modal-src ([4ef0ad7](https://github.com/CoCreate-app/CoCreate-admin/commit/4ef0ad76ee93a0396962df796a4ec1beff93cf7d))
+
 ## [1.27.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.27.0...v1.27.1) (2022-12-27)
 
 
