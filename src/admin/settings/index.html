@@ -62,8 +62,7 @@
 				<div fetch-collection="modules" filter-sort-name="settings-menu-position" filter-sort-direction="asc" filter-name="settings-menu-position" filter-value="0" filter-value-type="number" filter-operator="$ne" template_id="settings-menu">
 
 					<li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template_id="settings-menu" document_id="{{document._id}}">
-                        <!-- <input type="hidden" collection="files" document_id="{{document.settings-menu-primary}}" name="path" set-value="#a{{document._id}}" set-value-key="primary-url"> -->
-                        <a actions="pass, openModal" id="a{{document._id}}" href='../..{{document.settings-menu-primary.path}}' modal-width="{{document.settings-modal-primary-width}}" modal-color="{{document.settings-modal-primary-color}}" class="display:inline-block">
+                        <a actions="pass, openModal" href='../..{{document.settings-menu-primary.path}}' modal-width="{{document.settings-modal-primary-width}}" modal-color="{{document.settings-modal-primary-color}}" class="display:inline-block">
 							<span class="display:inline-block width:50px text-align:center">{{document.icon}}</span>
 							<span>{{document.name}}</span>
 							<div pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
@@ -73,8 +72,7 @@
 							<div pass-collection="files" pass-document_id="{{document.settings-menu-primary._id}}" pass-name="src" pass_to="render"></div>
 						</a>
 						<div class="float:right width:50px text-align:center {{document.settings-menu-secondary}}">
-                            <!-- <input type="hidden" id="b{{document._id}}" collection="files" document_id="{{document.settings-menu-secondary}}" name="path"> -->
-                            <a actions="pass, openModal" modal-src='../..{{document.settings-menu-secondary.path}}' get-value="#b{{document._id}}" get-value-key="secondary-url" modal-width="{{document.settings-modal-secondary-width}}" modal-color="{{document.settings-modal-secondary-color}}">
+                            <a actions="pass, openModal" modal-src='../..{{document.settings-menu-secondary.path}}' modal-width="{{document.settings-modal-secondary-width}}" modal-color="{{document.settings-modal-secondary-color}}">
 								<i class="fas fa-plus"></i>
                                 <div pass-collection="files" pass-document_id="{{document.main-menu-secondary._id}}" pass-name="src" pass_to="render"></div>
                                 <div pass-document_id="{{document._id}}" pass_to="module-form"></div>
@@ -87,7 +85,7 @@
 			</ul>
 		</main>
 
-        <script src="https://cdn.cocreate.app/1.35.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.36.0/CoCreate.min.js"></script>
         
 
 	</body>

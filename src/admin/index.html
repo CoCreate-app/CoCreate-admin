@@ -166,14 +166,14 @@
                                 class="display:inline-block">
                                 <span class="display:inline-block width:50px text-align:center">{{document.icon}}</span>
                                 <span>{{document.name}}</span>
-                                <div pass-collection="module_activities" pass-template_id="{{document._id}}" pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
+                                <div pass-collection="module_activities" pass-template_id="$uid" pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
                                 <div pass-collection="files" pass-document_id="{{document.main-menu-secondary._id}}" pass-name="src" pass_to="form"></div>
                                 <div pass-collection="files" pass-document_id="{{document.main-menu-primary._id}}" pass-name="src" pass_to="render"></div>
                                 <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>
                                 <div pass-document_id="{{document._id}}" pass_to="module-form"></div>
                             </a>
                             <div class="float:right width:50px text-align:center">
-                                <a actions="pass, openModal" modal-src='..{{document.main-menu-secondary.path}}' get-value="#b{{document._id}}" get-value-key="secondary-url"
+                                <a actions="pass, openModal" modal-src='secondary-url..{{document.main-menu-secondary.path}}'
                                     modal-width="{{document.main-modal-secondary-width}}"
                                     modal-color="{{document.main-modal-secondary-color}}">
                                     <i class="fas fa-plus"></i>
@@ -233,7 +233,7 @@
 	        </div>
 		</div>
         
-        <script src="https://cdn.cocreate.app/1.35.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.36.0/CoCreate.min.js"></script>
         
     </body>
 </html>
