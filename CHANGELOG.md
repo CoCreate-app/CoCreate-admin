@@ -1,3 +1,10 @@
+## [1.27.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.27.2...v1.27.3) (2022-12-30)
+
+
+### Bug Fixes
+
+* update config to use new directories, bump cdn to 1.37.0 ([266cb23](https://github.com/CoCreate-app/CoCreate-admin/commit/266cb23db53187ae02deebc00a8c6b6cd7856809))
+
 ## [1.27.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.27.1...v1.27.2) (2022-12-29)
 
 
