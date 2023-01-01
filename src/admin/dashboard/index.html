@@ -65,7 +65,7 @@
 
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="../modules/form.html" modal-width="320px">
+					<a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
                         <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
                         <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
@@ -74,7 +74,7 @@
 
 				<!-- Render Code Editor -->
 				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="../code-editor/index.html">
+					<a actions="pass, openModal" modal-src="./code-editor/index.html">
                         <i class="fas fa-code"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
@@ -82,7 +82,7 @@
 
 				<!-- Render Builder -->
 				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="../builder/index.html">
+					<a actions="pass, openModal" modal-src="./builder/index.html">
                         <i class="fas fa-palette"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
@@ -98,7 +98,7 @@
 		</nav>
 		
 		<!-- SideNav  -->
-   <!--     <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:50px width:275px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">-->
+   <!--     <sidenav id="menuL" class="position:absolute top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:50px width:275px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">-->
         
 			<!-- Search -->
 			<!--<form class="padding:5px">-->
@@ -157,19 +157,19 @@
                 
                 <!-- sidenav Footer -->
 			<!--	<div class="display:flex justify-content:space-between flex-wrap:wrap position:absolute bottom:0px background:gainsboro line-height:40px height:40px width:100% overflow:hidden">-->
-			<!--		<a actions="pass, openModal" modal-src="../admin/settings/index.html" modal-width="275px" modal-color="#229954" modal-x="0" modal-y="0" class="width:50px text-align:center display:inline-block">-->
+			<!--		<a actions="pass, openModal" modal-src="./settings/index.html" modal-width="275px" modal-color="#229954" modal-x="0" modal-y="0" class="width:50px text-align:center display:inline-block">-->
 			<!--		    <span class="padding:10px width:50px text-align:center"><i class="fas fa-cogs"></i></span>-->
 			<!--		    <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe18" pass-name="src" pass_to="render"></div>-->
 			<!--		</a>-->
-			<!--		<a actions="pass, openModal" modal-src="../admin/modules/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">-->
+			<!--		<a actions="pass, openModal" modal-src="./modules/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">-->
 			<!--		    <span class="padding:10px width:50px text-align:center"><i class="fas fa-project-diagram"></i></span>-->
 			<!--		    <div pass-collection="files" pass-document_id="60ddfdbf14b5ab0c2dd2fe08" pass-name="src" pass_to="render"></div>-->
 			<!--		</a>-->
-			<!--		<a actions="pass, openModal" modal-src="../admin/module-views/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">-->
+			<!--		<a actions="pass, openModal" modal-src="./module-views/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">-->
 			<!--		    <span class="padding:10px width:50px text-align:center"><i class="fas fa-shapes"></i></span>-->
 			<!--		    <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe0b" pass-name="src" pass_to="render"></div>-->
 			<!--		</a>-->
-			<!--		<a actions="pass, openModal" modal-src="../admin/files/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">-->
+			<!--		<a actions="pass, openModal" modal-src="./files/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">-->
 			<!--		    <span class="padding:10px width:50px text-align:center"><i class="far fa-folder"></i></span>-->
 			<!--		    <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe15" pass-name="src" pass_to="render"></div>-->
 			<!--		</a>-->
@@ -231,7 +231,7 @@
             <h2>Coming Soon <a actions="remove" remove-closest=".card"> X</a></h2>
         </div>
         
-		<script src="https://cdn.cocreate.app/1.37.1/CoCreate.min.js"></script>
+		<script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>
         
 
 	</body>

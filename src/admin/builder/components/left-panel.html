@@ -25,7 +25,7 @@
                         <div class="card background:gainsboro width:50% text-align:center padding:5px" selected-value="active" selected-target="#elements" selected-group="components" selected>Elements</div>
                         <div class="card background:gainsboro width:50% text-align:center padding:5px" selected-value="active" selected-target="#components" selected-group="components" selected>Components</div>
                         <button class="position:absolute top:13px padding:5px background:gainsboro color:#505050 grow-hover border-radius:50%">
-                            <a actions="pass, openModal" modal-src="../marketplace/list.html" modal-width="840px">
+                            <a actions="pass, openModal" modal-src="./marketplace/list.html" modal-width="840px">
                                 <i class="fas fa-plus"></i>
                             </a>
                         </button>
@@ -48,7 +48,7 @@
                                  <!-- Blocks Template -->
                                 <div template_id="block{{tag._id}}" class="template card position:relative flex-grow:1 width:70px height:75px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{document._id}}" document_id="{{document._id}}">
                                     <div id="editblock{{document._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
-                                        <a actions="pass, openModal" modal-src="../blocks/form.html" pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields" modal-width="320px">
+                                        <a actions="pass, openModal" modal-src="./blocks/form.html" pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields" modal-width="320px">
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
                                     </div>
@@ -78,7 +78,7 @@
                                  <!-- Components Template -->
                                 <div template_id="component{{tag._id}}" class="template card position:relative flex-grow:1 width:70px height:125px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{document._id}}">
                                     <div id="editblock{{document._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
-                                        <a actions="pass, openModal" modal-src="../blocks/form.html" pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields" modal-width="320px">
+                                        <a actions="pass, openModal" modal-src="./blocks/form.html" pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields" modal-width="320px">
                                             <i class="fas fa-pencil-alt"></i>
                                         </a>
                                     </div>
@@ -97,6 +97,14 @@
                 
                 <!-- uploader -->
                 <div id="uploader" class="left-panel display:none">
+                    <style>
+                        .uppy-Dashboard-inner {
+                            background-color: whitesmoke!important;
+                        }
+                        .uppy-DashboardTab-btn {
+                            justify-content: flex-start;
+                        }
+                    </style>
                     <div id="uppy" uploader="uppy" collection="files"></div> 
                 </div>
                 
@@ -153,7 +161,16 @@
                     </form>
                     <!-- Assets -->
                     <div id="fetch-assets" class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px" template_id="assets" fetch-collection="" fetch-document filter-name="content-type" filter-value="image, video" filter-sort-name="path" filter-sort-direction="asc">
-                         <!-- Asset Template -->
+                        <style>
+                            [image-type*="image"] {
+                                display: block!important; 
+                            }
+
+                            [video-type*="video"] {
+                                display: block!important; 
+                            }
+                        </style>
+                        <!-- Asset Template -->
                         <div template_id="assets" class="template card position:relative flex-grow:1 width:105px height:90px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{document._id}}">
                             <div id="editblock{{document._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                 <a actions="pass, openModal" modal-src="https://server.cocreate.app/CoCreate-plugins/CoCreate-tui-image-editor/demo/index.html" pass-collection="files" pass-document_id="{{document._id}}" pass_to="form-fields" modal-width="900px">

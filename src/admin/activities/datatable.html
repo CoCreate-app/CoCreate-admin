@@ -44,7 +44,7 @@
 
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="../modules/form.html" modal-width="320px">
+					<a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
                         <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
                         <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
@@ -53,7 +53,7 @@
 
 				<!-- Render Code Editor -->
 				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="../code-editor/index.html">
+					<a actions="pass, openModal" modal-src="./code-editor/index.html">
                         <i class="fas fa-code"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
@@ -61,7 +61,7 @@
 
 				<!-- Render Builder -->
 				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="../builder/index.html">
+					<a actions="pass, openModal" modal-src="./builder/index.html">
                         <i class="fas fa-palette"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
@@ -69,16 +69,16 @@
 
 				<!-- Datatable Controls -->
 				<li class="margin-right:15px">
-					<a actions="deleteDocuments" collection="" pass_id="datatable" template_id="datatable"><i class="far fa-trash-alt"></i></a>
+					<a actions="deleteDocuments" collection="" pass_id="datatable" template_id=""><i class="far fa-trash-alt"></i></a>
 				</li>
 				<li class="margin-right:15px">
 					<a toggle="hidden" toogle-target="#column-visibility"><i class="far fa-eye"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="export" export-type="csv" template_id="datatable"><i class="fas fa-file-csv"></i></a>
+					<a actions="export" export-type="csv" template_id="" pass_id="datatable"><i class="fas fa-file-csv"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="export" template_id="datatable"><i class="fas fa-file-download"></i></a>
+					<a actions="export" template_id="" pass_id="datatable"><i class="fas fa-file-download"></i></a>
 				</li>
 				<li class="margin-right:15px">
 					<a actions="import" collection="" pass_id="datatable"><i class="fas fa-file-upload"></i></a>
@@ -102,10 +102,10 @@
 				<tr class="border-bottom:1px_solid_darkgray">
 					<td class="position:sticky top:0 background:white padding:0px_10px_10px">
 	            		<floating-label>
-							<input type="text" class="floating-label" filter-name="name" template_id="datatable" placeholder="Name">
+							<input type="text" class="floating-label" filter-name="_id" template_id="" pass_id="datatable" placeholder="Name">
 						</floating-label>
 						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-							<a filter-sort-name="name" filter-sort-toggle="asc" template_id="datatable"></a>
+							<a filter-sort-name="name" filter-sort-toggle="asc" template_id="" pass_id="datatable"></a>
 						</span>
 					</td>
 					<td class="position:sticky top:0 background:white padding:0px_10px_10px">
@@ -113,14 +113,14 @@
 							<input type="text" class="floating-label" filter-name="_id" template_id="datatable" placeholder="Document_id" />
 						</floating-label>
 						<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-							<a filter-sort-name="_id" filter-sort-toggle="asc" template_id="datatable"></a>
+							<a filter-sort-name="_id" filter-sort-toggle="asc" template_id="" pass_id="datatable"></a>
 						</span>
 					</td>
 				</tr>
 
-				<tbody template_id="datatable" fetch-collection="" fetch-document filter-name="" filter-value="" filter-sort-name="name" filter-sort-direction="asc" pass_id="datatable">
+				<tbody template_id="" fetch-collection="" fetch-document filter-name="" filter-value="" filter-sort-name="name" filter-sort-direction="asc" pass_id="datatable">
 
-					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="datatable" document_id="{{document._id}}" toggle="selected">
+					<tr class="template background:gainsboro:hover border-bottom:1px_solid_darkgray" template_id="" pass_id="datatable" document_id="{{document._id}}" toggle="selected">
 						<td class="padding:10px">
 							<div class="display:flex min-width:200px">
 								<div class="display:flex justify-content:center width:25px">
@@ -163,7 +163,7 @@
             <h2>Coming Soon <a actions="remove" remove-closest=".card"> X</a></h2>
         </div>
 
-        <script src="https://cdn.cocreate.app/1.37.1/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>
 
 	</body>
 

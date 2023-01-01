@@ -35,7 +35,7 @@
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="../modules/form.html" modal-width="320px">
+                    <a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
                         <i class="fas fa-cog"></i>
                         <div pass_id="module-form" pass-collection="modules" pass-document_id="60e7483fb979b40017448d13" pass_to="form-fields"></div>
                         <div pass_id="module_id" pass-filter-value="60e7483fb979b40017448d13" pass_to="module_id"></div>
@@ -44,7 +44,7 @@
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="../code-editor/index.html">
+                    <a actions="pass, openModal" modal-src="./code-editor/index.html">
                         <i class="fas fa-code"></i>
                         <div pass_id="render"  pass-collection="files" pass-document_id="60de0fb414b5ab0c2dd2febf" pass-name="src" pass_to="code-editor"></div>
                     </a>
@@ -52,7 +52,7 @@
 
                 <!-- Render Builder -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="../builder/index.html">
+                    <a actions="pass, openModal" modal-src="./builder/index.html">
                         <i class="fas fa-palette"></i>
                         <div pass_id="render" pass-collection="files" pass-document_id="60de0fb414b5ab0c2dd2febf" pass-name="src" pass_to="builder"></div>
                     </a>
@@ -60,7 +60,7 @@
                 
                 <!-- Render Form -->
                 <li class="margin-right:15px"> 
-                    <a actions="pass, openModal" modal-src="../blocks/form.html" pass_to="form-field" modal-width="320px">
+                    <a actions="pass, openModal" modal-src="./blocks/form.html" pass_to="form-field" modal-width="320px">
                         <i class="fas fa-plus"></i>                      
                         <div pass_id="datatable" pass-collection="" pass_to="form-fields"></div>
                         <div pass_id="module_id" pass-value="60e7483fb979b40017448d13" pass_to="module_id"></div>	
@@ -114,11 +114,11 @@
         </main>
 
         <!-- SideNav Left -->
-        <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:240px width:240px:hover width:0px@0px-826px" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
+        <sidenav id="menuL" class="position:absolute top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:240px width:240px:hover width:0px@0px-826px" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
 
             <div class="padding:5px">
                 <button class="width:100% height:40px btn-modal-close">
-                    <a actions="pass, openModal" modal-src="../blocks/form.html" pass_to="form-field" modal-width="320px">Custom</a>
+                    <a actions="pass, openModal" modal-src="./blocks/form.html" pass_to="form-field" modal-width="320px">Custom</a>
     			</button>
             </div>
             <!-- Search -->
@@ -143,8 +143,8 @@
             <div resize="right"></div>
         </sidenav>
 
-        <script src="https://cdn.cocreate.app/1.37.1/CoCreate.min.js"></script>
-        <!--<script src="https://cdn.cocreate.app/1.37.1/CoCreate.min.js"></script>-->
+        <script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>
+        <!--<script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>-->
         
     </body>
 

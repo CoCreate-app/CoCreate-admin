@@ -9,6 +9,23 @@
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
         <link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreate.min.css">
         <link rel="stylesheet" href="./index.css" collection="files" document_id="610cb468c0e9580010e5ba50" name="src" type="text/css" />
+        <style>
+            .left-panel.active, .right-panel.active, .blocks.active, .components.active, .editor-panel.active {
+                display: block
+            }
+
+            .builder-tab-round[selected] {
+                background: darkgrey;
+            }
+            
+            li[selected-group="screen-size"][selected] {
+                background: gainsboro;
+            }
+            
+            .card:hover {
+                background: rgba(0, 0, 0, 0.2);
+            }
+        </style>
     </head>
 
     <body>
@@ -62,7 +79,7 @@
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="../code-editor/index.html" modal-width="900px" modal-color="#229954">
+                    <a actions="pass, openModal" modal-src="./code-editor/index.html" modal-width="900px" modal-color="#229954">
                         <i class="fa fa-code"></i>
                         <div pass_id="builder" pass-collection="" pass-document_id="" name="" pass_to="code-editor"></div>
                     </a>
@@ -92,17 +109,17 @@
         </main>
 
         <!-- SideNav Left -->
-        <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:260px width:0px@xs@sm@md z-index:8" resizable resize-target="[content_id='canvas']" resize-property="margin-left" resize-value="width">
+        <sidenav id="menuL" class="position:absolute top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:260px width:0px@xs@sm@md z-index:8" resizable resize-target="[content_id='canvas']" resize-property="margin-left" resize-value="width">
             <!-- <div class="domEditor" collection="files" document_id="637bc8fe91249e639db315e2" name="src"></div> -->
-            <div src="./components/left-panel.html"></div>
+            <div src="./builder/components/left-panel.html"></div>
             <div resize="right"></div>
         </sidenav>
 
         <!-- SideNav Right -->
-        <sidenav id="menuR" class="position:fixed top:0px right:0px overflow:hidden background:whitesmoke height:100vh width:310px width:0px@xs@sm@md z-index:8" resizable resize-target="[content_id='canvas']" resize-property="margin-right" resize-value="width">
+        <sidenav id="menuR" class="position:absolute top:0px right:0px overflow:hidden background:whitesmoke height:100vh width:310px width:0px@xs@sm@md z-index:8" resizable resize-target="[content_id='canvas']" resize-property="margin-right" resize-value="width">
             <input type="hidden" attribute="eid"/>
             <!-- <div class="domEditor" collection="files" document_id="637bc8fe91249e639db315e1" name="src"></div> -->
-            <div src="./components/right-panel.html"></div>
+            <div src="./builder/components/right-panel.html"></div>
             <div resize="left"></div>
         </sidenav>
 
@@ -188,7 +205,7 @@
         <!--</element-config>-->
 
        
-        <script src="https://cdn.cocreate.app/1.37.1/CoCreate.min.js"></script>        
+        <script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>        
 
     </body>
 
