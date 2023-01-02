@@ -73,7 +73,7 @@
 				<cocreate-select name="connected_orgs" placeholder="Connected Org" sortable class="floating-label" multiple>
 					<input placeholder="Search" template_id="connect">
 					<ul fetch-collection="organizations" template_id="connectn" class="options overflow:auto">
-						<li class="template option" collection="organizations" template_id="connectn">
+						<li class="option" collection="organizations" template="connectn">
 							<span class="logo-icon"><img collection="organizations" document_id="{{document._id}}" name="logo" src="" height="40px" alt="..."></span>
 							<div class="display:block line-height:1 padding:5px_0px " style="width: calc(100% - 15px);">
 								<h3 collection="organizations" document_id="{{document._id}}" name="name">Organization Name</h3>
@@ -87,7 +87,7 @@
 					<input placeholder="Search" template_id="connect">
 					<ul fetch-collection="users" fetch-document="" fetch-name="connected_orgs" template_id="connect" class="options overflow:auto">
 
-						<li class="template option" collection="organizations" template_id="connect">
+						<li class="option" collection="organizations" template="connect">
 							<span class="logo-icon"><img collection="organizations" document_id="{{document._id}}" name="logo" src="" height="40px" alt="..."></span>
 							<div class="display:block line-height:1 padding:5px_0px " style="width: calc(100% - 15px);">
 								<h3 collection="organizations" document_id="{{document._id}}" name="name">Organization Name</h3>
@@ -102,7 +102,7 @@
 			</form>
 		</main>
 
-        <script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.38.1/CoCreate.min.js"></script>
 
 	</body>
 

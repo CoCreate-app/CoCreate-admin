@@ -91,7 +91,7 @@
                 <div class="margin-top:10px" fetch-collection="testtwillio" filter-name="status" filter-value="completed" filter-operator="$ne" fetch-limit="10" template_id="active-calls">
 
                     <!-- Call Template -->
-                    <div class="template card call padding:20px_10px margin-bottom:15px background:white margin-right:10px" template_id="active-calls" collection="{{document.collection}}" document_id="{{document._id}}" name="status" value="">
+                    <div class="card call padding:20px_10px margin-bottom:15px background:white margin-right:10px" template="active-calls" collection="{{document.collection}}" document_id="{{document._id}}" name="status" value="">
 
                         <!-- Call Header -->
                         <div class="display:flex border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px margin-bottom:10px font-size:22px color:#333333 font-weight:600">
@@ -284,7 +284,7 @@
                     <tbody template_id="datatable" fetch-collection="testtwillio" fetch-limit="15" filter-sort-name="" filter-sort-direction="asc">
 
                         <!-- Datatable Row Template -->
-                        <tr class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{document._id}}" template_id="" pass_id="datatable" document_id="{{document._id}}" toggle="selected">
+                        <tr class="background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{document._id}}" template="" pass_id="datatable" document_id="{{document._id}}" toggle="selected">
                             <td class="padding:10px">
                                 <div class="display:flex min-width:200px">
                                     <div class="display:flex justify-content:center width:40px">
@@ -500,7 +500,7 @@
             <h2>Coming Soon <a actions="remove" remove-closest=".card"> X</a></h2>
         </div>
 
-        <script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.38.1/CoCreate.min.js"></script>
 
         <script>
             document.querySelectorAll('.number-dig').forEach((number) => {

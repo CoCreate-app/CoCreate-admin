@@ -157,7 +157,7 @@
 										<cc-options fetch-collection="industries" 
 										    template_id="industries"
 										    class="options overflow:auto">
-											<cc-option class="template" template_id="industries" value="{{document._id}}">
+											<cc-option template="industries" value="{{document._id}}">
 												<h4>{{document.name}}</h4>
 											</cc-option>
 										</cc-options>
@@ -250,7 +250,7 @@
 									name="current_org">
 									
 								<!-- Send Email -->
-								<div template_id="renderKey">
+								<div template="renderKey" class="display:block!important">
 									<input type="hidden" placeholder="to email" sendgrid="sendEmail.to" get-value="#user-email">
 								    <input type="hidden" placeholder="from email" sendgrid="sendEmail.from" value="testing@cocreate.app">
 								    <input type="hidden" placeholder="subject" sendgrid="sendEmail.subject" value="Welcome, {{renderKey.name}} — Please confirm your email">
@@ -275,17 +275,17 @@
 		</main>
 		
 		<div class="position:fixed!important bottom:15px right:15px">
-	        <div template_id="validate" class="template card margin:5px padding:10px {{status}}">
+	        <div template="validate" class="card margin:5px padding:10px {{status}}">
 	            <span class="{{type}}">{{message}}</span><a actions="remove"> X</a>
 	        </div>
 	        
-	        <div template_id="notification" class="template card margin:5px padding:10px {{status}}">
+	        <div template="notification" class="card margin:5px padding:10px {{status}}">
 	            <span class="{{type}}">{{message}}</span><a actions="remove"> X</a>
 	        </div>
         </div>
 		
         <script src="./apikey.js"></script>
-        <script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.38.1/CoCreate.min.js"></script>
         
 	</body>
 </html>

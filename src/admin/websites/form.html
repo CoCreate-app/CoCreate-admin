@@ -87,7 +87,7 @@
 				<cocreate-select sortable class="floating-label" name="home" placeholder="Home Page">
 					<input placeholder="Search" template_id="home">
 					<cc-options fetch-collection="" fetch-document filter-name="" filter-value="" filter-sort-name="name" filter-sort-direction="asc" template_id="home" pass_id="website_id" class="overflow:auto">
-						<cc-option class="template" template_id="home" value="{{document._id}}">
+						<cc-option template="home" value="{{document._id}}">
 							<h3 collection="{{document.collection}}" document_id="{{document._id}}" name="path"></h3>
 						</cc-option>
 					</cc-options>
@@ -105,7 +105,7 @@
                 </div>
                 <!--<input type="hidden" filter-name="module-view" filter-value="module-view" template_id="module-views">-->
                 <div fetch-collection="" fetch-document filter-name="" filter-value="" filter-operator="$eq" filter-sort-name="name" filter-sort-direction="asc" template_id="website-pages" pass_id="website_id" sortable class="background:whitesmoke padding:10px" dnd-group-name="website-pages">
-                    <div template_id="website-pages" class="template card padding:10px_5px background:white collapsed margin-bottom:10px" document_id="{{document._id}}" id="module-view{{document._id}}">
+                    <div template="website-pages" class="card padding:10px_5px background:white collapsed margin-bottom:10px" document_id="{{document._id}}" id="module-view{{document._id}}">
                         <div class="display:flex padding-left:10px">
                             <a actions="pass, openModal" modal-src="./files/form.html" modal-width="320px" class="flex-grow:1 font-size:16px padding:5px_0">
                                 <p collection="{{document.collection}}" document_id="{{document._id}}" name="path"></p>
@@ -161,7 +161,7 @@
             </div>
         </main>
         
-        <script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.38.1/CoCreate.min.js"></script>
 
     </body>
 

@@ -102,7 +102,7 @@
 				<cocreate-select name="module_id" placeholder="Module" sortable class="floating-label">
 					<input placeholder="Search" template_id="module_id">
 					<cc-options fetch-collection="modules" template_id="module_id" class="overflow:auto">
-						<cc-option class="template" template_id="module_id" value="{{document._id}}">
+						<cc-option template="module_id" value="{{document._id}}">
 							<div class="display:flex padding:5px">
 								<span class="width:25px" collection="{{document.collection}}" document_id="{{document._id}}" name="icon"></span>
 								<h4>{{document.name}}</h4>
@@ -120,7 +120,7 @@
         </main>
 
         <!-- CoCreateJS -->
-        <script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.38.1/CoCreate.min.js"></script>
 
     </body>
 

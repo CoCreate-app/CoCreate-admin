@@ -70,7 +70,7 @@
                     filter-operator="$ne"
                     template_id="navbar-menu">
                   
-                    <li class="template margin-right:15px" template_id="navbar-menu">
+                    <li class="margin-right:15px" template="navbar-menu">
                         <a actions="pass, openModal" modal-src='..{{document.navbar-menu-primary.path}}'
                             modal-width="{{document.navbar-modal-primary-width}}"
                             modal-height="{{document.navbar-modal-primary-height}}"
@@ -121,7 +121,7 @@
                     filter-value=""
                     filter-operator="$eq"
                     template_id="connected_orgs">
-                    <cc-option class="template display:flex height:50px margin:0!important padding:4px_12px!important" template_id="connected_orgs" value="{{connected_orgs}}">
+                    <cc-option class="display:flex height:50px margin:0!important padding:4px_12px!important" template="connected_orgs" value="{{connected_orgs}}">
                         <span class="logo-icon"><img collection="organizations" document_id="{{connected_orgs}}" name="logo" src="/assets/icon.png" height="40px" alt="..." class="margin-top:3px"></span>
                         <span collection="organizations" document_id="{{connected_orgs}}" name="name" class="margin-left:12px font-size:1.5em"></span>
                     </cc-option>
@@ -159,14 +159,14 @@
                         template_id="main-menu">
                         
                         <!-- Template -->
-                        <li class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" template_id="main-menu">
+                        <li class="line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" template="main-menu">
                             <a actions="pass, openModal" modal-src='..{{document.main-menu-primary.path}}'
                                 modal-width="{{document.main-modal-primary-width}}"
                                 modal-color="{{document.main-modal-color}}"
                                 class="display:inline-block">
                                 <span class="display:inline-block width:50px text-align:center">{{document.icon}}</span>
                                 <span>{{document.name}}</span>
-                                <div pass-collection="module_activities" pass-template_id="$uid" pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
+                                <div pass-collection="module_activities" pass-template="$uid" pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
                                 <div pass-collection="files" pass-document_id="{{document.main-menu-secondary._id}}" pass-name="src" pass_to="form"></div>
                                 <div pass-collection="files" pass-document_id="{{document.main-menu-primary._id}}" pass-name="src" pass_to="render"></div>
                                 <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>
@@ -179,7 +179,7 @@
                                     <i class="fas fa-plus"></i>
                                     <div pass-collection="file" pass-document_id="{{document.main-menu-secondary._id}}" pass-name="src" pass_to="render"></div>
 				                    <div pass-document_id="" pass_to="form-fields"></div>
-                                    <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>
+                                    <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass-template="$uid" pass_to="module_id"></div>
                                     <div pass-document_id="{{docusment._id}}" pass_to="module-form"></div>
                                 </a>
                             </div>
@@ -228,12 +228,12 @@
             
             <button actions="install" type="button" hidden>Install</button>
         
-	        <div template_id="notification" class="template card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
+	        <div template="notification" class="card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
 	            <span class="{{type}}">{{message}}</span><a actions="remove" remove-closest="[templateid]"> X</a>
 	        </div>
 		</div>
         
-        <script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.38.1/CoCreate.min.js"></script>
         
     </body>
 </html>

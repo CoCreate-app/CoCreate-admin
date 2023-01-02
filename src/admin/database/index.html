@@ -108,7 +108,7 @@
 					</td>
 				</tr>
 				<tbody template_id="" fetch-collection="" fetch-document fetch-limit="5" pass-refresh pass_id="datatable">
-					<tr  template_id="datatable" class="template background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{document._id}}" toggle="selected" hover="visibility:visible!important" hover-target=".tools{{document._id}}">
+					<tr  template="datatable" class="background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{document._id}}" toggle="selected" hover="visibility:visible!important" hover-target=".tools{{document._id}}">
 						<td class="padding:5px min-width:300px align-items:center">
                             <div class="display:flex justify-content:flex-end transition:0.3s padding-left:10px" >
                                 <div class="visibility:hidden tools{{document._id}}">
@@ -190,7 +190,7 @@
                     <div fetch-collection filter-sort-name="name" filter-sort-direction="asc" template_id="collections">
                         
                         <!-- Template -->
-                        <li template_id="collections" class="template line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" hover="active">
+                        <li template="collections" class="line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" hover="active">
                             <a actions="pass" pass-collection="{{collection.name}}" pass_to="datatable" class="display:inline-block padding-left:15px">
                                 <span>{{collection.name}}</span>
                                 <div pass-collection="{{collection.name}}" pass_to="datatable"></div>
@@ -209,12 +209,12 @@
         </sidenav>
         
 		<div class="position:fixed!important bottom:15px right:15px">
-	        <div template_id="notification" class="template card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
+	        <div template="notification" class="card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
 	            <span class="{{type}}">{{message}}</span><a actions="remove" remove-closest="[templateid]"> X</a>
 	        </div>
 		</div>
 
-        <script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.38.1/CoCreate.min.js"></script>
         
     </body>
 </html>

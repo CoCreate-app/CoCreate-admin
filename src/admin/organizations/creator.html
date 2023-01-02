@@ -84,8 +84,8 @@
                                 <!-- Industry select -->
                                 <cocreate-select sortable class="floating-label" collection="organizations" document_id="" name="industry" placeholder="Industry">
                                     <input placeholder="Search" template_id="template1">
-                                    <ul fetch-collection="industries" template_id="template1" pass_to="me1234" class="template-wrapper options overflow:auto">
-                                        <li class="template option" pass_id="me1234">
+                                    <ul fetch-collection="industries" template_id="template1" pass_to="me1234" class="options overflow:auto">
+                                        <li template="templa1" class="option" pass_id="me1234">
                                             <h5 collection="industries" document_id="" name="industry_name" pass_id="me1234">industry name</h5>
                                         </li>
                                     </ul>
@@ -124,7 +124,7 @@
 
         <!--CoCreateJS-->
         <script src="../apikey.js"></script>
-        <script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.38.1/CoCreate.min.js"></script>
 
         <script>
             localStorage.removeItem('organization_id');

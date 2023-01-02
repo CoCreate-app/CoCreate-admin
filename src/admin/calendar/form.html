@@ -70,7 +70,7 @@
     							<input placeholder="Search" template_id="stage">
     						    <div template_id="stage" filter-name="stage" filter-value="5ff747727005da1c272740ab"></div>
     							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="stage" class="overflow:auto">
-    								<cc-option class="template" template_id="stage" value="{{document._id}}">
+    								<cc-option template="stage" value="{{document._id}}">
     									<h4>{{document.name}}</h4>
     								</cc-option>
     							</cc-options>
@@ -83,7 +83,7 @@
     							<input placeholder="Search" template_id="status">
     						    <div template_id="status" filter-name="type" filter-value="5ff747727005da1c272740ab"></div>
     							<cc-options fetch-collection="tags" pass_id="module_id" filter-name="module_id" filter-value="" template_id="status" class="overflow:auto">
-    								<cc-option class="template" template_id="status" value="{{document._id}}">
+    								<cc-option template="status" value="{{document._id}}">
     									<h4>{{document.name}}</h4>
     								</cc-option>
     							</cc-options>
@@ -120,7 +120,7 @@
     				<cocreate-select sortable class="floating-label" name="related_to" document_id="" multiple placeholder="Related To:">
     					<input placeholder="Search" template_id="related_to">
     					<cc-options fetch-collection="module_activities" template_id="related_to" class="overflow:auto">
-    						<cc-option class="template display:flex padding:5px" template_id="related_to" value="{{document._id}}">
+    						<cc-option class="display:flex padding:5px" template="related_to" value="{{document._id}}">
     							<div class="display:flex justify-content:center width:25px">
     								<span collection="modules" document_id="{{document.module_id}}" name="icon"></span>
     							</div>
@@ -136,7 +136,7 @@
     				<cocreate-select sortable class="floating-label" name="team" document_id="" multiple placeholder="Team">
     					<input placeholder="Search" template_id="team">
     					<cc-options fetch-collection="users" template_id="team" class="overflow:auto">
-    						<cc-option class="template display:flex padding:5px" template_id="team" value="{{document._id}}">
+    						<cc-option class="display:flex padding:5px" template="team" value="{{document._id}}">
     							<div class="display:flex justify-content:center">
     					            <div class="avatar-wrapper margin:5px">
     					                <a class="avatar round" actions="pass, openModal" modal-src="./users/profile.html" modal-width="300px"  modal-height="375px"  modal-color="#229954">
@@ -164,7 +164,7 @@
             </form>
         </main>
 
-        <script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.38.1/CoCreate.min.js"></script>
 
     </body>
 

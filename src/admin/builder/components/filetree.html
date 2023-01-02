@@ -1,7 +1,7 @@
 <div class="margin-left:10px " sortable template_id="$auto" fetch-collection="files" filter-name="directory" filter-value="parent" filter-operator="$eq" filter-sort-name="directory" order_type="asc" render_id="$auto">
     <div template_id="$auto" filter-name="content-type" filter-value="directory"></div>
     <!--Folder Template -->
-    <div class="template padding:5px" template_id="$auto" document_id="{{$auto._id}}">
+    <div class="padding:5px" template="$auto" document_id="{{$auto._id}}">
         <span class="" show="#directory{{$auto._id}}" hide="#directory{{$auto._id}}" toggle="fa-caret-down, fa-caret-right" toggle-target="#icon{{$auto._id}}">
             <i id="icon{{$auto._id}}" class="fa fa-caret-right" ></i>
         </span>
@@ -13,7 +13,7 @@
     <div template_id="$auto" filter-name="content-type" filter-value="text/directory" filter-operator="$ne"></div>
 
     <!--File Template -->
-    <div class="template padding:5px" template_id="$auto" document_id="{{$auto._id}}">
+    <div class="padding:5px" template="$auto" document_id="{{$auto._id}}">
         <span class=""><i class="fab fa-html5"></i></span>
         <span class="margin-left:5px" collection="files" document_id="{{$auto._id}}" name="name"></span>
     </div>

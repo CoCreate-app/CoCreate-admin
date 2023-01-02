@@ -37,7 +37,7 @@
                     <div id="elements" class="components display:none active" template_id="block-categories" fetch-collection="tags" filter-name="module_id" filter-value="5ff747727005da1c27274194" filter-sort-name="position" filter-sort-direction="asc" render_id="tag">
                             
                          <!-- Block Categories Template -->
-                        <div class="template" template_id="block-categories" document_id="{{tag._id}}">
+                        <div template="block-categories" document_id="{{tag._id}}">
                             <div class="padding:5px background:gainsboro" show=".category{{tag._id}}" hide=".category{{tag._id}}">
                                 <span class="category{{tag._id}}" hidden><i class="fas fa-plus"></i></span>
                                 <span class="category{{tag._id}}"><i class="fas fa-minus"></i></span>
@@ -46,7 +46,7 @@
                              <!-- Blocks  -->
                             <div class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px" template_id="block{{tag._id}}" fetch-collection="blocks" filter-name="category" filter-value="{{tag._id}}" filter-sort-name="position" filter-sort-direction="asc">
                                  <!-- Blocks Template -->
-                                <div template_id="block{{tag._id}}" class="template card position:relative flex-grow:1 width:70px height:75px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{document._id}}" document_id="{{document._id}}">
+                                <div template="block{{tag._id}}" class="card position:relative flex-grow:1 width:70px height:75px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{document._id}}" document_id="{{document._id}}">
                                     <div id="editblock{{document._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                         <a actions="pass, openModal" modal-src="./blocks/form.html" pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields" modal-width="320px">
                                             <i class="fas fa-pencil-alt"></i>
@@ -67,7 +67,7 @@
                     <div id="components" class="components display:none" template_id="component-categories" fetch-collection="tags" filter-name="module_id" filter-value="5ff747727005da1c27274194" filter-sort-name="position" filter-sort-direction="asc" render_id="tag">
                             
                          <!-- Components Categories Template -->
-                        <div class="template" template_id="component-categories" document_id="{{tag._id}}">
+                        <div template="component-categories" document_id="{{tag._id}}">
                             <div class="padding:5px background:gainsboro" show=".category{{tag._id}}" hide=".category{{tag._id}}">
                                 <span class="category{{tag._id}}" hidden><i class="fas fa-plus"></i></span>
                                 <span class="category{{tag._id}}"><i class="fas fa-minus"></i></span>
@@ -75,8 +75,8 @@
                             </div>
                              <!-- Components -->
                             <div class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px" template_id="component{{tag._id}}" fetch-collection="blocks" filter-name="category" filter-value="{{tag._id}}" filter-sort-name="position" filter-sort-direction="asc">
-                                 <!-- Components Template -->
-                                <div template_id="component{{tag._id}}" class="template card position:relative flex-grow:1 width:70px height:125px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{document._id}}">
+                                <!-- Components Template -->
+                                <div template="component{{tag._id}}" class="card position:relative flex-grow:1 width:70px height:125px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{document._id}}">
                                     <div id="editblock{{document._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                         <a actions="pass, openModal" modal-src="./blocks/form.html" pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields" modal-width="320px">
                                             <i class="fas fa-pencil-alt"></i>
@@ -126,7 +126,7 @@
                         <div id="fetch-files" class="fetch-files margin-left:10px " sortable template_id="$auto" fetch-collection="" fetch-document filter-name="directory" filter-value="/" filter-operator="$eq" filter-sort-name="name" filter-sort-direction="asc" render_id="$auto">
                             <div template_id="$auto" filter-name="content-type" filter-value="text/directory"></div>
                             <!--Folder Template -->
-                            <div class="template padding:5px" template_id="$auto" document_id="{{$auto._id}}">
+                            <div class="padding:5px" template="$auto" document_id="{{$auto._id}}">
                                 <span class="" show="#directory{{$auto._id}}" hide="#directory{{$auto._id}}" toggle="fa-caret-down, fa-caret-right" toggle-target="#icon{{$auto._id}}">
                                     <i id="icon{{$auto._id}}" class="fa fa-caret-right" ></i>
                                 </span>
@@ -140,7 +140,7 @@
                             <div template_id="$auto" filter-name="content-type" filter-value="text/directory" filter-operator="$ne"></div>
 
                              <!-- File Template -->
-                            <div class="template padding:5px" template_id="$auto" document_id="{{$auto._id}}">
+                            <div class="padding:5px" template="$auto" document_id="{{$auto._id}}">
                                 <span class="{{$auto.content-type}}"><i class="fab fa-html5"></i></span>
                                 <span class="margin-left:5px" collection="files" document_id="{{$auto._id}}" name="name"></span>
                             </div>
@@ -171,7 +171,7 @@
                             }
                         </style>
                         <!-- Asset Template -->
-                        <div template_id="assets" class="template card position:relative flex-grow:1 width:105px height:90px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{document._id}}">
+                        <div template="assets" class="card position:relative flex-grow:1 width:105px height:90px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{document._id}}">
                             <div id="editblock{{document._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                 <a actions="pass, openModal" modal-src="https://server.cocreate.app/CoCreate-plugins/CoCreate-tui-image-editor/demo/index.html" pass-collection="files" pass-document_id="{{document._id}}" pass_to="form-fields" modal-width="900px">
                                     <i class="fas fa-pencil-alt"></i>

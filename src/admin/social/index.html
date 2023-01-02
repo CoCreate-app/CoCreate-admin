@@ -113,7 +113,7 @@
 				<ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
 					<div fetch-collection="modules" filter-sort-name="main-menu-position" filter-sort-direction="asc" filter-name="main-menu-position" filter-value="0" filter-value-type="number" filter-operator="$ne" template_id="main-menu">
 
-						<li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template_id="main-menu">
+						<li class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template="main-menu">
 							<a actions="pass, openModal" pass-collection="files" pass-document_id="{{document.main-menu-primary}}" pass_to="render" pass-name="src" modal-width="600px" modal-color="{{document.main-modal-color}}"
 							 class="display:inline-block">
 								<span class="display:inline-block width:50px text-align:center" document_id="{{document._id}}" collection="modules" name="icon"></span>
@@ -154,7 +154,7 @@
 		<main content_id="content" class="height:100vh">
 			<div class="display:flex flex-wrap:wrap padding:20px" fetch-collection="module_activities" fetch-limit="12" filter-sort-name="name" filter-sort-direction="asc" template_id="filter_test" operator="or">
 
-				<div class="template card position:relative flex-grow:1 margin:10px background:#ffffff height:470px width:250px max-width:350px" template_id="filter_test">
+				<div class="card position:relative flex-grow:1 margin:10px background:#ffffff height:470px width:250px max-width:350px" template="filter_test">
 					<div class="height:400px overflow:hidden">
 						<div class="position:absolute top:0px right:0px width:30px height:30px background:#3b5998  color:#ffffff font-weight:700 text-align:center opacity:0.7">
 							<div class="padding:5px font-size:18px"><i class="fab fa-facebook-f"></i></div>
@@ -205,7 +205,7 @@
             <h2>Coming Soon <a actions="remove" remove-closest=".card"> X</a></h2>
         </div>
 
-        <script src="https://cdn.cocreate.app/1.38.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.38.1/CoCreate.min.js"></script>
 
 	</body>
 
