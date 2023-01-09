@@ -66,33 +66,33 @@
 
         <!-- Main Content -->
         <main class="padding:10px" content_id="content">
+            
+            <a actions="pass">
+                <span>run</span>
+                <div pass_to="column" pass-collection="tags" pass-filter-name="type" pass-filter-value="60edaf79b979b4001744c6fe" pass-refresh></div>
+                <div pass_to="card" pass-collection="module_activities" pass-filter-name="type" pass-refresh></div>
+            </a>
 
             <div id="board" class="display:flex overflow:auto height:90vh">
 
-                <div class="display:flex flex-wrap:nowrap flex-direction:row " sortable dnd-group-name="stage" fetch-collection="" fetch-document filter-name="module_id" filter-value="" filter-operator="$eq" filter-sort-name="stage_position" filter-sort-direction="asc" template_id="stage" render_id="stage" pass_id="datatable" droppable="true">
+                <div fetch-collection="xsw2" fetch-document filter-name="" filter-value="" filter-operator="$eq" filter-sort-name="position" template_id="column" render_id="column" class="display:flex flex-wrap:nowrap flex-direction:row" sortable dnd-group-name="column" droppable="true" pass_id="column">
 
-                    <!-- Stage Column -->
-                    <div class="margin:10px background:whitesmoke max-width:300px" template="stage" eid="{{stage._id}}" document_id="{{stage._id}}">
+                    <!-- Column -->
+                    <div template="column" document_id="{{column._id}}" class="width:300px margin:10px background:whitesmoke">
                         <div class="margin:15px font-size:18px color-dark-gray">
                             <span class="display:inline-block">
-                              <input class="input_field"
-                                collection="{{document.collection}}" 
-                                document_id="{{stage._id}}" 
-                                name="name" 
-                                id="stage-name"  
-                                placeholder="Stage">
+                              <input collection="{{column.collection}}" document_id="{{column._id}}" name="name" placeholder="Name">
                             </span>
                             <span class="float:right display:inline-block">
-                                <a actions="deleteDocument" collection="{{document.collection}}" document_id="{{stage._id}}"><i class="fas fa-times"></i></a>
+                                <a actions="deleteDocument" collection="{{column.collection}}" document_id="{{column._id}}"><i class="fas fa-times"></i></a>
                             </span>
                         </div>
                         <div class="height:70vh padding:10px overflow:auto">
 
-                            <div class="display:flex flex-direction:column height:100% " sortable dnd-group-name="card" fetch-collection="{{document.collection}}" filter-name="stage" filter-value="{{stage._id}}" filter-operator="$eq" fetch-limit="" filter-sort-name="stage-index_position"
-                                filter-sort-direction="asc" template_id="{{stage._id}}">
+                            <div fetch-collection="" filter-name="" filter-value="{{column._id}}" filter-operator="$eq" filter-sort-name="position" filter-sort-direction="asc" template_id="{{column._id}}" class="display:flex flex-direction:column height:100%" sortable dnd-group-name="card" pass_id="card">
 
                                 <!-- Card -->
-                                <div class="card margin-bottom:10px padding:10px background:white" template="{{stage._id}}" value="{{document._id}}" document_id="{{document._id}}">
+                                <div class="card margin-bottom:10px padding:10px background:white" template="{{column._id}}" value="{{document._id}}" document_id="{{document._id}}">
                                     <div class="width:100%">
                                         <img collection="{{document.collection}}" document_id="{{document._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
                                     </div>
@@ -140,7 +140,7 @@
                         </div>
                         <div class="margin:0px_15px padding:15px_0px">
                             <form collection="{{document.collection}}">
-                                <input type="hidden" document_id="" name="stage" value="{{stage._id}}" />
+                                <input type="hidden" document_id="" name="column" value="{{column._id}}" />
                                 <a actions="save, reset"><i class="fas fa-plus"></i> New Card</a>
                             </form>
                         </div>
@@ -151,7 +151,7 @@
 
             <form>
                 <input type="hidden" pass_id="module_id" collection="" document_id="" name="module_id"/>
-                <button actions="save, reset" class="position:fixed bottom:15px right:15px background:dodgerblue border-radius:50% grow-hover">
+                <button actions="save, reset" class="position:fixed bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
                     <i class="fas fa-plus"></i>
                	</button>
             </form>
@@ -159,7 +159,6 @@
         </main>
 
         <script src="https://cdn.cocreate.app/1.41.1/CoCreate.min.js"></script>
-
 
     </body>
 
