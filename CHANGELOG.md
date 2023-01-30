@@ -1,3 +1,10 @@
+## [1.28.9](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.28.8...v1.28.9) (2023-01-30)
+
+
+### Bug Fixes
+
+* bump dependencies ([c4d7a3e](https://github.com/CoCreate-app/CoCreate-admin/commit/c4d7a3ebaad323f93e4cd3c89488048e697294cc))
+
 ## [1.28.8](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.28.7...v1.28.8) (2023-01-29)
 
 
