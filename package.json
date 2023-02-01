@@ -22,18 +22,14 @@
     "html5-framework",
     "javascript-framework"
   ],
-  "publishConfig": {
-    "access": "private"
-  },
+  "publishConfig": { "access": "private" },
   "author": "CoCreate LLC",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CoCreate-app/CoCreate-admin.git"
   },
-  "bugs": {
-    "url": "https://github.com/CoCreate-app/CoCreate-admin/issues"
-  },
+  "bugs": { "url": "https://github.com/CoCreate-app/CoCreate-admin/issues" },
   "homepage": "https://cocreate.app",
   "funding": {
     "type": "GitHub Sponsors ❤",
@@ -57,7 +53,7 @@
     "webpack-log": "^3.0.1"
   },
   "dependencies": {
-    "@cocreate/docs": "^1.5.12",
-    "@cocreate/hosting": "^1.7.12"
+    "@cocreate/docs": "^1.5.13",
+    "@cocreate/hosting": "^1.7.13"
   }
 }
