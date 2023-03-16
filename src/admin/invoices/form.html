@@ -76,7 +76,7 @@
                 <input type="hidden" name="module_id"  pass_id="module_id" value/>
                 <div class="display:flex flex-wrap:wrap justify-content:space-between padding-bottom:20px border-bottom:1px_solid_lightgrey">
                     <div class="flex-grow:1 max-width:370px margin-right:20px@sm@md@lg@xl">
-                        <input type="text" name="_id" placeholder="Invoice#" id="invoice_id" class="floating-label" crdt="false" readonly>
+                        <input type="text" name="_id" placeholder="Invoice#"  input-target="[name='invoice_id']" input-attribute="value" input-events="input, onload" class="floating-label" crdt="false" readonly>
                     </div>
                     <div class="display:flex flex-wrap:wrap max-width:370px">
                         <div class="flex-grow:1 width:185px">
@@ -149,7 +149,7 @@
 
                 <div class="noDrag padding-top:10px">
                     <form realtime="false" collection="items-ordered" document_id="">
-                        <input type="hidden" name="invoice_id" get-value="#invoice_id">
+                        <input type="hidden" name="invoice_id">
                         <a actions="save, reset" class="noDrag padding:10px background:gainsboro"><i class="fas fa-plus"></i> Add Item</a>
                     </form>
                 </div>
@@ -201,8 +201,8 @@
 
         </main>
 
-        <script src="https://cdn.cocreate.app/1.47.1/CoCreate.min.js"></script>
-        <!--<script src="https://cdn.cocreate.app/1.47.1/CoCreate.min.js"></script>-->
+        <script src="../../../../CoCreateJS/dist/CoCreate.js"></script>
+        <!--<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>-->
 
     </body>
 

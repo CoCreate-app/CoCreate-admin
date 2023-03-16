@@ -108,8 +108,8 @@
 		<main class="padding:10px" content_id="content">
 
 			<form pass_id="form-fields" collection="modules" document_id="" id="form">
-				<input type="text" name="name" id="name" placeholder="Module Name" class="floating-label" />
-				<input type="hidden" name="_id" id="module_id" set-value=".module_id" set-value-key="module_id" />
+				<input type="text" name="name" input-target=".name" input-attribute="value" input-events="input, onload" placeholder="Module Name" class="floating-label" />
+				<input type="hidden" name="_id" input-target=".module_id" input-key="module_id" />
 				<input type="text" name="description" id="description" placeholder="Description" class="floating-label" />
 				<input type="text" name="icon" id="icon" placeholder="Icon" class="floating-label" />
 				<!--<input type="text" name="directory" id="directory" placeholder="Directory" class="floating-label" />-->
@@ -142,7 +142,7 @@
 											</cc-option>
 										</cc-options>
 									</cocreate-select>
-									<!-- <input type="hidden" collection="files" document_id="{{document.navbar-menu-primary}}" name="path" set-value="#navbar-menu-primary">
+									<!-- <input type="hidden" collection="files" document_id="{{document.navbar-menu-primary}}" name="path" input-target="#navbar-menu-primary">
 									<input id="navbar-menu-primary" type="text" pass_id="form-fields" collection document_id name="navbar-menu-primary-path"/> -->
 
 									<div class="display:flex justify-content:space-between">
@@ -366,12 +366,12 @@
 						<div class="position:relative">
 							<img collection="{{document.collection}}" document_id="{{document._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
 							<form realtime="false" collection="files" document_id="">
-								<input type="hidden" name="module_id" get-value="#module_id">
+								<input type="hidden" name="module_id" class="module_id" value="{{module_id}}">
 								<input type="hidden" name="website_id" value="5ffa235ff11d2d00103c4520">
 								<input type="hidden" name="name" value="{{document.name}}">
 								<input type="checkbox" name="domains" value="general.cocreate.app" hidden checked>
 								<input type="checkbox" name="domains" value="cocreate.app" hidden checked>
-								<input type="hidden" get-value="#name" render-key="renderKey.name"/>
+								<input type="hidden" class="name" render-key="renderKey.name"/>
 								<input type="hidden" name="directory" value="/admin/{{renderKey.name}}"/>
 								<input type="hidden" name="path" value="/admin/{{renderKey.name}}/{{document.name}}">
 								<input type="hidden" name="content-type" value="text/html">
@@ -398,7 +398,7 @@
 
 		</main>
 
-        <script src="https://cdn.cocreate.app/1.47.1/CoCreate.min.js"></script>
+        <script src="../../../../CoCreateJS/dist/CoCreate.js"></script>
         
 
 	</body>

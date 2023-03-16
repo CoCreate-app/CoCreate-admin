@@ -79,7 +79,7 @@
 						</cc-option>
 					</cc-options>
 				</cocreate-select>
-				<cocreate-select name="module_id" placeholder="Module" sortable class="floating-label" set-value="#tags" set-value-key="module_id">
+				<cocreate-select name="module_id" placeholder="Module" sortable class="floating-label" input-target="#tags" input-attribute="filter-value">
 					<input placeholder="Search" template_id="module_id">
 					<cc-options fetch-collection="modules" filter-sort-name="name" template_id="module_id" class="overflow:auto">
 						<cc-option template="module_id" value="{{document._id}}">
@@ -92,7 +92,7 @@
 				</cocreate-select>
 				<cocreate-select name="tags" placeholder="Tags" sortable class="floating-label" multiple>
 					<input placeholder="Search" template_id="tags">
-					<cc-options id="tags" fetch-collection="tags" template_id="tags" filter-name="module_id" filter-value="{{module_id}}" class="overflow:auto">
+					<cc-options id="tags" fetch-collection="tags" template_id="tags" filter-name="module_id" filter-value="" class="overflow:auto">
 						<cc-option template="tags" value="{{document._id}}">
 							<h3 collection="{{document.collection}}" document_id="{{document._id}}" name="name">Type Name</h3>
 						</cc-option>
@@ -106,8 +106,8 @@
 
         </main>
 
-		<script src="https://cdn.cocreate.app/1.47.1/CoCreate.min.js"></script>
-        <!--<script src="https://cdn.cocreate.app/1.47.1/CoCreate.min.js"></script>-->
+		<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>
+        <!--<script src="../../../../CoCreateJS/dist/CoCreate.js"></script>-->
         
     </body>
 
