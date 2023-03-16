@@ -1,3 +1,16 @@
+# [1.29.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.28.12...v1.29.0) (2023-03-16)
+
+
+### Bug Fixes
+
+* depreciated filter-sort-toggle in favor of using filter-sort-direction and handling the toggle using @cocreate/events ([d15ed37](https://github.com/CoCreate-app/CoCreate-admin/commit/d15ed37600c8064e2a253e94a7fa5469f2f84000))
+
+
+### Features
+
+* replaced get-value and set-value with a super charged version of CoCreate-events ([215b5fd](https://github.com/CoCreate-app/CoCreate-admin/commit/215b5fd5e48ac1c32689fef9614904603bd21344))
+* replaced get-value and set-value with a super charged version of CoCreate-events ([e9cf077](https://github.com/CoCreate-app/CoCreate-admin/commit/e9cf077c30bb5d762170e2bb8ff1005c7088f310))
+
 ## [1.28.12](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.28.11...v1.28.12) (2023-02-03)
 
 
