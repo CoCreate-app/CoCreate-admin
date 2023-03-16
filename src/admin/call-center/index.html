@@ -266,7 +266,7 @@
                         <!--		template_id="datatable" -->
                         <!--		placeholder="Participants"/>-->
                         <!--		<span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6" >-->
-                        <!--			<a filter-sort-name="_id" value="" filter-sort-toggle="true" template_id="datatable">-->
+                        <!--			<a filter-sort-name="_id" value="" filter-sort-direction="asc" icon click-value="desc, asc" click-attribute="filter-sort-direction" template_id="datatable">-->
                         <!--			</a>-->
                         <!--		</span>-->
                         <!--</td>-->
@@ -275,7 +275,7 @@
                                 <input type="text" class="floating-label" filter-name="duration" template_id="datatable" placeholder="duration" />
                             </floating-label>
                             <span class="position:absolute bottom:18px right:20px float:right font-size:18px z-index:6">
-								<a filter-sort-name="_id" value="" filter-sort-toggle="true" template_id="datatable"></a>
+								<a filter-sort-name="_id" value="" filter-sort-direction="asc" icon click-value="desc, asc" click-attribute="filter-sort-direction" template_id="datatable"></a>
 							</span>
                         </td>
                     </tr>
@@ -500,7 +500,7 @@
             <h2>Coming Soon <a actions="remove" remove-closest=".card"> X</a></h2>
         </div>
 
-        <script src="../../../../CoCreateJS/dist/CoCreate.js"></script>
+        <script src="https://cdn.cocreate.app/1.48.1/CoCreate.min.js"></script>
 
         <script>
             document.querySelectorAll('.number-dig').forEach((number) => {

@@ -115,7 +115,7 @@
                                     <a class="float:right margin-right:15px" actions="deleteDocument" collection="{{document.collection}}" document_id=""><i class="fas fa-trash"></i></a>
                                 </div>
                             </div>
-                            <div class="template display:flex" render-object="document" render-key="one" render-exclude="db, database, collection">
+                            <div class="template display:flex" render-object="document" render-key="one" render-exclude="db, database, collection" hover="visibility:visible!important" hover-target=".tools{{document._id}}{{one.key}}">
                                 <span class="visibility:hidden tools{{document._id}}{{one.key}}">
                                     <form realtime="false" class="margin-top:10px">
                                         <input type="hidden" collection="{{document.collection}}" document_id="{{document._id}}" name="{{one.key}}.untitled" value="untitiled"/>
@@ -143,13 +143,13 @@
                 </form>
             </button>
 
-            <template class="string" hidden observe-target=".string" observe-attribute="value">
+            <template hidden observe-target=".string" observe-attribute="value">
                 <floating-label render>
                     <textarea rows="1" collection="{{document.collection}}" document_id="{{document._id}}" name="$parents" class="floating-label"></textarea>
                 </floating-label>
             </template>
     
-            <template class="object array" hidden observe-target=".object, .array" observe-attribute="value">
+            <template hidden observe-target=".object, .array" observe-attribute="value">
                 <div render-object="document.$parents" render-exclude="db, database, collection" render-key="$auto" class="template margin-top:20px" render>
                     <div class="display:flex padding-top:10px" id="testtemplate2" hover="visibility:visible!important" hover-target="[tools='$parents{{$auto.key}}']">
                         <span class="visibility:hidden tools$parents{{$auto.key}}" tools="$parents{{$auto.key}}">
@@ -213,7 +213,7 @@
 	        </div>
 		</div>
 
-        <script src="../../../../CoCreateJS/dist/CoCreate.js"></script>
+        <script src="https://cdn.cocreate.app/1.48.1/CoCreate.min.js"></script>
         
     </body>
 </html>
