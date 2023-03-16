@@ -176,11 +176,11 @@
 				
 				<input type="text" name="ns" domain="ns" value="ns1.onlyfordemo.net,ns2.onlyfordemo.net" placeholder="ns"/>
 				<input type="text" name="customer-id" domain="customer-id" value="22216052" placeholder="customer-id"/>
-				<input type="text" name="contact-id" domain="contact-id" value="91369147" placeholder="contact-id"/>
-				<input type="text" name="reg-contact-id" domain="reg-contact-id" get-value="#contact-id" placeholder="reg-contact-id"/>
-				<input type="text" name="admin-contact-id" domain="admin-contact-id" get-value="#contact-id" placeholder="admin-contact-id"/>
-				<input type="text" name="tech-contact-id" domain="tech-contact-id" get-value="#contact-id" placeholder="tech-contact-id"/>
-				<input type="text" name="billing-contact-id" domain="billing-contact-id" get-value="#contact-id" placeholder="billing-contact-id"/>
+				<input type="text" name="contact-id" domain="contact-id" value="91369147" input-target=".contact-id" input-attribute="value" input-events="input, onload" placeholder="contact-id"/>
+				<input type="text" name="reg-contact-id" domain="reg-contact-id" class="contact-id" placeholder="reg-contact-id"/>
+				<input type="text" name="admin-contact-id" domain="admin-contact-id" class="contact-id" placeholder="admin-contact-id"/>
+				<input type="text" name="tech-contact-id" domain="tech-contact-id" class="contact-id" placeholder="tech-contact-id"/>
+				<input type="text" name="billing-contact-id" domain="billing-contact-id" class="contact-id" placeholder="billing-contact-id"/>
 				<input type="text" name="invoice-option" domain="invoice-option" value="NoInvoice" placeholder="invoice-option"/>
 				<input type="text" name="auto-renew" domain="auto-renew" placeholder="auto-renew"/>
 				<input type="text" name="attr-name" domain="attr-name" placeholder="attr-name"/>
@@ -192,7 +192,7 @@
 			</form>
 		</main>
 
-        <script src="https://cdn.cocreate.app/1.47.1/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.48.1/CoCreate.min.js"></script>
 
 	</body>
 </html>

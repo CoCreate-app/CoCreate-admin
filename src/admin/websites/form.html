@@ -81,7 +81,7 @@
             <form pass_id="form-fields" collection="module_activities" document_id="" id="form">
                 <input type="text" name="name" id="name" placeholder="Website Name" class="floating-label">
                 <input type="hidden" name="module_id" pass_id="module_id" value>
-                <input type="hidden" name="_id" id="website_id">
+                <input type="hidden" name="_id" input-target=".website_id" input-attribute="value" input-events="input, onload"  >
                 <input type="text" name="description" id="description" placeholder="Description" class="floating-label">
                 <input type="text" name="image" placeholder="Preview" class="floating-label">
 				<cocreate-select sortable class="floating-label" name="home" placeholder="Home Page">
@@ -141,7 +141,7 @@
                             <img collection="{{document.collection}}" document_id="{{document._id}}" name="image" src="https://via.placeholder.com/150" width="100%">
                             <form realtime="false" collection="files" document_id=""> 
                                 <input type="hidden" name="name" placeholder="View Name" value="{{document.name}}"> 
-                                <input type="hidden" name="website_id" get-value="#website_id"> 
+                                <input type="hidden" name="website_id" class="website_id"> 
                                 <textarea hidden name="html" value="{{document.html}}"></textarea>
                                 <textarea hidden name="css" value="{{document.css}}"></textarea> 
                                 <textarea hidden name="js" value="{{document.js}}"></textarea>
@@ -161,7 +161,7 @@
             </div>
         </main>
         
-        <script src="https://cdn.cocreate.app/1.47.1/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.48.1/CoCreate.min.js"></script>
 
     </body>
 

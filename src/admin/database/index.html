@@ -108,7 +108,7 @@
 					</td>
 				</tr>
 				<tbody template_id="" fetch-collection="" fetch-document fetch-limit="5" pass-refresh pass_id="collection-view">
-					<tr  template="collection-view" class="background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{document._id}}" toggle="selected" hover="visibility:visible!important" hover-target=".tools{{document._id}}">
+					<tr  template="collection-view" class="background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{document._id}}" toggle="selected" hover="visibility:visible!important" hover-target=".tools{{document._id}}" id="testtemplate1" >
 						<td class="padding:5px min-width:300px align-items:center">
                             <div class="display:flex justify-content:flex-end transition:0.3s padding-left:10px" >
                                 <div class="visibility:hidden tools{{document._id}}">
@@ -127,7 +127,7 @@
             
                                 </span>
                                 <span class="padding:10px"><span collection="{{document.collection}}" document_id="{{document._id}}" updateName="{{one.key}}" contenteditable>{{one.key}}</span>: </span>
-                                <div get-value=".{{one.type}}" class="width:100%" parentKey="{{one.key}}" parentType="{{one.type}}"></div>
+                                <div class="{{one.type}} width:100%" parentKey="{{one.key}}" parentType="{{one.type}}"></div>
                                 
                             </div>
 						</td>
@@ -143,15 +143,15 @@
                 </form>
             </button>
 
-            <template class="string" hidden>
+            <template hidden observe-target=".string" observe-attribute="value">
                 <floating-label render>
                     <textarea rows="1" collection="{{document.collection}}" document_id="{{document._id}}" name="$parents" class="floating-label"></textarea>
                 </floating-label>
             </template>
     
-            <template class="object array" hidden>
+            <template hidden observe-target=".object, .array" observe-attribute="value">
                 <div render-object="document.$parents" render-exclude="db, database, collection" render-key="$auto" class="template margin-top:20px" render>
-                    <div class="display:flex padding-top:10px" hover="visibility:visible!important" hover-target="[tools='$parents{{$auto.key}}']">
+                    <div class="display:flex padding-top:10px" id="testtemplate2" hover="visibility:visible!important" hover-target="[tools='$parents{{$auto.key}}']">
                         <span class="visibility:hidden tools$parents{{$auto.key}}" tools="$parents{{$auto.key}}">
                             <form realtime="false" class="margin-top:10px">
                                 <input type="hidden" collection="{{document.collection}}" document_id="{{document._id}}" name="$parents.untitled" value="untitiled"/>
@@ -162,7 +162,7 @@
                             </form>
                         </span>
                         <span class="padding:10px"><span collection="{{document.collection}}" document_id="{{document._id}}" value-prefix="$parents." updateName="$parents.{{$auto.key}}" contenteditable>{{$auto.key}}</span>: </span>
-                        <div get-value=".{{$auto.type}}" parentKey="{{$auto.key}}" parentType="{{$auto.type}}"></div>
+                        <div class="{{$auto.type}}" parentKey="{{$auto.key}}" parentType="{{$auto.type}}"></div>
                     </div>
                 </div>
             </template>    
@@ -213,7 +213,7 @@
 	        </div>
 		</div>
 
-        <script src="https://cdn.cocreate.app/1.47.1/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.48.1/CoCreate.min.js"></script>
         
     </body>
 </html>

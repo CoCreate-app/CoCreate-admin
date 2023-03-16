@@ -76,7 +76,7 @@
                 <input type="hidden" name="module_id" pass_id="module_id" value/>
                 <div class="display:flex flex-wrap:wrap justify-content:space-between padding-bottom:20px border-bottom:1px_solid_lightgrey">
                     <div class="flex-grow:1 max-width:370px margin-right:20px@sm@md@lg@xl">
-                        <input type="text" name="_id" placeholder="Estimate#" id="estimate_id" crdt="false" class="floating-label" readonly>
+                        <input type="text" name="_id" placeholder="Estimate#" input-target="[name='estimate_id']" input-attribute="value" input-events="input, onload" crdt="false" class="floating-label" readonly>
                     </div>
                     <div class="display:flex flex-wrap:wrap max-width:370px">
                         <div class="flex-grow:1 width:185px">
@@ -149,7 +149,7 @@
 
                 <div class="noDrag padding-top:10px">
                     <form realtime="false" collection="items-ordered" document_id="">
-                        <input type="hidden" name="estimate_id" get-value="#estimate_id">
+                        <input type="hidden" name="estimate_id">
                         <a actions="save, reset" class="noDrag padding:10px background:gainsboro"><i class="fas fa-plus"></i> Add Item</a>
                     </form>
                 </div>
@@ -201,7 +201,7 @@
 
         </main>
 
-        <script src="https://cdn.cocreate.app/1.47.1/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.48.1/CoCreate.min.js"></script>
 
     </body>
 

@@ -773,7 +773,7 @@
                             </div>
                         </div>
                         <div class="margin:0_5px">
-                             <cocreate-select class="floating-label" id="collection" placeholder="collection:" attribute="collection" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" set-value="#document_id" set-value-key="setcollection" active>
+                             <cocreate-select class="floating-label" id="collection" placeholder="collection:" attribute="collection" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" change change-target="#document_id" change-attribute="fetch-collection" active>
                                 <ul fetch-collection template_id="collection" class="options z-index:7 margin-top:5px">
                       				<cc-option class="option template" template_id="collection" value="{{collection.name}}">
                       				    <span>{{collection.name}}</span>
@@ -783,7 +783,7 @@
                         </div>
                         <div class="margin:0_5px">
                             <cocreate-select class="floating-label" id="document_id" placeholder="document_id:" attribute="document_id" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
-                                <ul fetch-collection="{{setcollection}}" template_id="document_id" class="options z-index:7 margin-top:5px">
+                                <ul fetch-collection="" template_id="document_id" class="options z-index:7 margin-top:5px">
                       				<cc-option class="option template" template_id="document_id" value="{{document._id}}">
                       				    <span>{{document._id}}</span>
                       				</cc-option>
@@ -969,7 +969,6 @@
                                 <cc-option value="false"><span>false</span></cc-option>
                             </ul>
                         </cocreate-select>
-                        <input attribute="get-value" type="text" class="floating-label" placeholder="get-value"  id="get-value" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
                     </div>
                     <div class="padding:5px background:gainsboro" show=".datavisible" hide=".datavisible">
                         <span class="datavisible" hidden><i class="fas fa-plus"></i></span>
