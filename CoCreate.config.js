@@ -38,10 +38,10 @@ module.exports = {
                     "general.cocreate.app"
                 ],
                 "directory": "/",
-                "path": "/src/sw.js",
+                "path": "/sw.js",
                 "content-type": "text/javascript",
                 "public": "true",
-                "_id": "6423dca459e1f44b417af1d6"
+                "_id": "637e7ff326a3abb659d8aefd"
             }
         }
     ]
