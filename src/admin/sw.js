@@ -1,11 +1,15 @@
-const CACHE_STATIC_NAME = "static-v1";
 const CACHE_DYNAMIC_NAME = "dynamic-v2";
-const CACHE_INMUTABLE_NAME = "inmutable-v1";
-const CACHE_TEMP = 'temp-cache';
-const CACHE_DYNAMIC_LIMIT = 50;
-const fetchedMap = []
-const cacheType = 'cache'
-const requestMap = new Map()
+
+let cacheType = true
+
+// ToDo: use indexeddb to store cache type as localstorage not supported and cocreateConfig does not exist whn service worker runs
+// let cacheType
+// const CoCreateConfig = globalThis['CoCreateConfig']
+// if (CoCreateConfig)
+//     cacheType = CoCreateConfig.cache
+// if (cacheType === undefined || cacheType === null)
+//     cacheType = true
+//     cacheType = localStorage.getItem('cache') || true
 
 function deleteCache(key) {
     return caches.delete(key);
@@ -13,26 +17,11 @@ function deleteCache(key) {
 
 self.addEventListener("install", (e) => {
     console.log('Service Worker Installing')
-
     self.skipWaiting();
-    // caches.open(CACHE_DYNAMIC_NAME).then((cache) => {
-    //     cache.keys().then((keys) => {
-    //         keys.forEach(key => {
-    //             fetchedMap.push(key.url)
-    //         })
-    //         deleteCache()
-    //     })
-    // })
 });
 
 self.addEventListener("activate", async (e) => {
-    // console.log('sw activate Event!')
-    // const bgFetch = await self.registration.backgroundFetch.fetch(new Date().toISOString(), fetchedMap);
-    // console.log('backgfetch', bgFetch)
-
-    // e.waitUntil(updateCache())
-        // updateCache() 
-        e.waitUntil(clients.claim());
+    e.waitUntil(clients.claim());
 });
 
 self.addEventListener("fetch", (e) => {
@@ -44,14 +33,11 @@ self.addEventListener("fetch", (e) => {
             if (!navigator.onLine && !!cachesObj)
                 return cachesObj;
             
-            if (cacheType == 'cache' && !!cachesObj) {
-                // console.log('returned from cache')
-                requestMap.set(cachesObj, '')
+            if (cacheType && cacheType !== 'false' && !!cachesObj) {
                 fetch(e.request).then((newResp) => {
                     caches.open(CACHE_DYNAMIC_NAME).then((cache) => {
-                        if (newResp.status !== 206)
+                        if (newResp.status !== 206 && newResp.status !== 404 && newResp.status !== 502)
                             cache.put(e.request, newResp);
-                            // cleanCache(CACHE_DYNAMIC_NAME, CACHE_DYNAMIC_LIMIT);
                     }).catch(() => {
 
                     });
@@ -64,7 +50,6 @@ self.addEventListener("fetch", (e) => {
                         caches.open(CACHE_DYNAMIC_NAME).then((cache) => {
                             if (newResp.status !== 206)
                                 cache.put(e.request, newResp);
-                            // cleanCache(CACHE_DYNAMIC_NAME, CACHE_DYNAMIC_LIMIT);
                         }).catch(() => {});
                         return newResp.clone();
                     })
@@ -80,35 +65,26 @@ self.addEventListener("fetch", (e) => {
     );
 });
 
-async function updateCache(){
-    console.log('updateCache!')
-    caches.open(CACHE_DYNAMIC_NAME)
-        .then((cache) => {
-            console.log('added', fetchedMap)
-            cache.addAll(fetchedMap)
-        }
-    )
-}
 
-self.addEventListener('backgroundfetchsuccess', (event) => {
-    const bgFetch = event.registration;
+// self.addEventListener('backgroundfetchsuccess', (event) => {
+//     const bgFetch = event.registration;
   
-    event.waitUntil(async function() {
-      // Create/open a cache.
-      const cache = await caches.open(CACHE_DYNAMIC_NAME);
-      // Get all the records.
-      const records = await bgFetch.matchAll();
-      // Copy each request/response across.
-      const promises = records.map(async (record) => {
-        const response = await record.responseReady;
-        console.log('putting ')
-        await cache.put(record.request, response);
-      });
+//     event.waitUntil(async function() {
+//       // Create/open a cache.
+//       const cache = await caches.open(CACHE_DYNAMIC_NAME);
+//       // Get all the records.
+//       const records = await bgFetch.matchAll();
+//       // Copy each request/response across.
+//       const promises = records.map(async (record) => {
+//         const response = await record.responseReady;
+//         console.log('putting ')
+//         await cache.put(record.request, response);
+//       });
   
-      // Wait for the copying to complete
-      await Promise.all(promises);
+//       // Wait for the copying to complete
+//       await Promise.all(promises);
   
-      // Update the progress notification.
-    //   event.updateUI({ title: 'Episode 5 ready to listen!' });
-    }());
-  });
+//       // Update the progress notification.
+//     //   event.updateUI({ title: 'Episode 5 ready to listen!' });
+//     }());
+//   });
