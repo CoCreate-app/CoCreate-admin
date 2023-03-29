@@ -36,7 +36,7 @@ self.addEventListener("fetch", (e) => {
             if (cacheType && cacheType !== 'false' && !!cachesObj) {
                 fetch(e.request).then((newResp) => {
                     caches.open(CACHE_DYNAMIC_NAME).then((cache) => {
-                        if (newResp.status !== 206 && newResp.status !== 404 && newResp.status !== 502)
+                        if (newResp.status !== 206 && newResp.status !== 502)
                             cache.put(e.request, newResp);
                     }).catch(() => {
 
