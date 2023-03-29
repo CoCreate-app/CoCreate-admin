@@ -2,7 +2,8 @@ module.exports = {
     "config": {
         "apiKey": "2061acef-0451-4545-f754-60cf8160",
         "organization_id": "5ff747727005da1c272740ab",
-        "host": "general.cocreate.app"
+        "host": "general.cocreate.app",
+        "url": "wss://general.cocreate.app/ws/5ff747727005da1c272740ab"
     },
     "directories": [
         {
@@ -31,7 +32,7 @@ module.exports = {
             "collection": "files",
             "document": {
                 "name": "sw.js",
-                "src": "{{.src/sw.js}}",
+                "src": "{{./src/admin/sw.js}}",
                 "domains": [
                     "*",
                     "general.cocreate.app"
@@ -39,9 +40,9 @@ module.exports = {
                 "directory": "/",
                 "path": "/src/sw.js",
                 "content-type": "text/javascript",
-                "public": "true"
+                "public": "true",
+                "_id": "6423dca459e1f44b417af1d6"
             }
         }
     ]
-
 }
