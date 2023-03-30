@@ -1,3 +1,17 @@
+# [1.30.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.29.0...v1.30.0) (2023-03-30)
+
+
+### Bug Fixes
+
+* bump cdn to 1.48.2 ([5cc6203](https://github.com/CoCreate-app/CoCreate-admin/commit/5cc6203284fd045b969e2c3e991baa63b922d1fc))
+* path and document_id ([67313b0](https://github.com/CoCreate-app/CoCreate-admin/commit/67313b0a9aec355e7600bd5777d5341661721adb))
+* removed 404 file cache excluion ([1f9cfca](https://github.com/CoCreate-app/CoCreate-admin/commit/1f9cfcaf4f5ccb4ef220f9f50af7abb8a1f8c27f))
+
+
+### Features
+
+* serviceWorker will not replace cached files with a 502 status code. ([aa2d8ff](https://github.com/CoCreate-app/CoCreate-admin/commit/aa2d8ff3816b866082c0c14f6e1f5ee2726648b3))
+
 # [1.29.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.28.12...v1.29.0) (2023-03-16)
 
 
