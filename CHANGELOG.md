@@ -1,3 +1,12 @@
+## [1.30.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.30.0...v1.30.1) (2023-04-11)
+
+
+### Bug Fixes
+
+* bump cdn t0 1.49.1 ([7dab668](https://github.com/CoCreate-app/CoCreate-admin/commit/7dab668aa356bc42b43e82f4cf4a699151a151b6))
+* config ([f29588c](https://github.com/CoCreate-app/CoCreate-admin/commit/f29588c2cd8007222aa7642f131beeb5fc4b64f2))
+* renamed domains to hosts. bumped cdn to 1.49.0 ([a03d5bd](https://github.com/CoCreate-app/CoCreate-admin/commit/a03d5bd92c1a78bac9b37192137033612f9420c4))
+
 # [1.30.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.29.0...v1.30.0) (2023-03-30)
 
 
