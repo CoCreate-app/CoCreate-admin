@@ -256,7 +256,7 @@
 									name="current_org">
 									
 								<!-- Send Email -->
-								<div template="renderKey" class="display:block!important">
+								<div template_id="renderKey" class="display:block!important">
 									<input type="hidden" placeholder="to email" sendgrid="sendEmail.to" id="email">
 								    <input type="hidden" placeholder="from email" sendgrid="sendEmail.from" value="testing@cocreate.app">
 								    <input type="hidden" placeholder="subject" sendgrid="sendEmail.subject" value="Welcome, {{renderKey.name}} — Please confirm your email">
@@ -291,7 +291,7 @@
         </div>
 		
         <script src="./apikey.js"></script>
-        <script src="https://cdn.cocreate.app/1.49.2/CoCreate.min.js"></script>
+        <script src="../../../CoCreateJS/dist/CoCreate.js"></script>
         
 	</body>
 </html>

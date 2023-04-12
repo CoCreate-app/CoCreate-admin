@@ -133,7 +133,7 @@
 									<span collection="modules" document_id="{{document.module_id}}" name="icon"></span>
 								</div>
 								<div class="display:flex align-items:center margin-left:10px">
-									<a actions="pass, openModal" modal-src="./form.html" modal-width="320px" modal-color="#229954" class="display:flex">
+									<a actions="pass, openModal" modal-src="./tags/form.html" modal-width="320px" modal-color="#229954" class="display:flex">
 										<h4>{{document.name}}</h4>
 										<div pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields"></div>
 										<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
@@ -152,13 +152,13 @@
 							</div>
 						</td>
 						<!--<td class="padding:10px">-->
-						<!--	<a actions="pass, openModal" modal-src="./form.html" modal-width="320px" modal-color="#229954">-->
+						<!--	<a actions="pass, openModal" modal-src="./tags/form.html" modal-width="320px" modal-color="#229954">-->
 						<!--		<b collection="{{document.collection}}" document_id="{{document.type}}" name="name"></b>-->
 						<!--		<div pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields"></div>-->
 						<!--	</a>-->
 						<!--</td>-->
 						<td class="padding:10px">
-							<a actions="pass, openModal" modal-src="./form.html" modal-width="320px" modal-color="#229954">
+							<a actions="pass, openModal" modal-src="./tags/form.html" modal-width="320px" modal-color="#229954">
 								<b>{{document._id}}</b>
 								<div pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields"></div>
 							</a>
@@ -171,7 +171,7 @@
 		</main>
 
 		<button class="position:absolute bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
-			<a actions="pass, openModal" modal-src="./form.html" modal-width="320px" modal-color="#229954">
+			<a actions="pass, openModal" modal-src="./tags/form.html" modal-width="320px" modal-color="#229954">
 				<i class="fa fa-plus"></i>
 				<div pass_to="form-fields" pass-document_id=""></div>
 				<div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
