@@ -52,7 +52,7 @@
                 </div>
                
                 <div class="flex-grow:1 height:fit-content width:35% min-width:370px max-width:400px margin:10px align-self:flex-end">
-                	<form  realtime="false" autocomplete="off">
+                	<form realtime="false" autocomplete="off" >
                 		
 	            		<section id="step1">
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
@@ -72,7 +72,7 @@
 	                    			placeholder="Full Name"  
 	                    			class="floating-label"
 	                    			autocomplete="off" 
-	                    			render-key="renderKey.name"
+	                    			render-key="name"
 									input-target=".firstname"
 									input-attribute="value"
 	                    			required>
@@ -94,7 +94,7 @@
 	                    		<floating-label>
 							    	<input type="text" id="org-name"
 							    		collection="organizations"
-							    		document_id=""  
+							    		document_id="ObjectId()"  
 							    		name="name" 
 							    		placeholder="Organization Name" 
 							    		class="floating-label"
@@ -120,16 +120,16 @@
 						    </div>
 						    <div class="padding:25px background:gainsboro text-align:left">
 	                    		<floating-label>
-							    	<input type="text" id="subdomain"
-							    		data-type="array"
-							    		collection="organizations"
-							    		document_id=""  
-							    		name="domains" 
+							    	<input type="text"
+										collection="organizations"
+										document_id=""  
+										name="hosts[0]" 
 							    		placeholder="Domain"
 							    		value-suffix=".cocreate.app"
 							    		unique
 										subdomain
 										required
+										render-key="domain"										
 							    		class="floating-label width:calc(100%_-_90px)!important">
 	                    		</floating-label>
                                 <div class="position:relative top:-34px right:8px float:right padding:5px background:whitesmoke">
@@ -144,7 +144,7 @@
 						    </div>
 						</section>
 						
-	                    <section id="step4"  hidden>
+	                    <section id="step4" hidden>
 	                    	<div class="overflow:hidden padding:0px_25px background:white">
 								<div class="float:left width:75% padding-top:25px">
 	                    			<h3>Step 4 / 5</h3>
@@ -156,7 +156,7 @@
 	                        <div class="padding:25px background:gainsboro text-align:left">
 	
 	                    		<floating-label>
-		                            <cocreate-select id="industries" class="floating-label" collection="organizations" name="industry" placeholder="Industry" realtime="false" save="false" required>
+		                            <cocreate-select id="industries" class="floating-label" collection="organizations" document_id="" name="industry" placeholder="Industry" realtime="false" save="false" required>
 		  					          	  <input placeholder="Search" template_id="industries">
 										<cc-options fetch-collection="industries" 
 										    template_id="industries"
@@ -216,17 +216,19 @@
 	                    		</floating-label>
 							    <small id="errorUconfirmpassword" class="text-danger"></small>
 									
-								<!-- User _id  -->
+								<!-- user_id  -->
 								<input type="hidden" id="user_id"
 									collection="users"
 									document_id=""
 									name="_id">
 								
-								<!-- Organiztion _id  -->
+								<!-- organiztion_id  -->
 								<input type="hidden" id="org_id"
 									collection="organizations"
 									document_id=""
-									name="_id">
+									name="_id"
+									input-target=".orgid" 
+									input-attribute="value">
 								
 								<!-- API key  -->
 								<input type="hidden" id="apiKey"
@@ -234,37 +236,29 @@
 									document_id=""
 									name="apiKey" 
 									uuid="32">
-								
-								<!-- Sub Domain -->
-								<input type="hidden" 
-									collection="organizations"
-									document_id="" 
-									name="domains[0]"
-									data-type="array"
-									render-key="renderKey.domain">
-								
+																
 								<!-- Connected Org  -->
-								<input type="hidden" id="connected_orgs"
+								<input type="hidden" id="connected_orgs" class="orgid"
 									collection="users"
 									document_id=""
 									name="connected_orgs[0]">
 
 								<!-- Current Org  -->
-								<input type="hidden" id="current_org"
+								<input type="hidden" id="current_org" class="orgid"
 									collection="users"
 									document_id=""
 									name="current_org">
 									
 								<!-- Send Email -->
-								<div template_id="renderKey" class="display:block!important">
+								<div template_id="render-key" class="display:block!important">
 									<input type="hidden" placeholder="to email" sendgrid="sendEmail.to" id="email">
 								    <input type="hidden" placeholder="from email" sendgrid="sendEmail.from" value="testing@cocreate.app">
-								    <input type="hidden" placeholder="subject" sendgrid="sendEmail.subject" value="Welcome, {{renderKey.name}} — Please confirm your email">
+								    <input type="hidden" placeholder="subject" sendgrid="sendEmail.subject" value="Welcome, {{render-key.name}} — Please confirm your email">
 								    <textarea placeholder="html" sendgrid="sendEmail.html" hidden collection="email-templates" document_id="60bfdaa304ee68b159b63532" name="src"></textarea>
 
 									<div class="display:flex">
 										<button type="button" class="outline white-blue margin-right:15px" show='#step4,#ava4' hide='#step5,#ava5'>Previous</button>
-										<button type="button" class="outline red-white startAnimation" show='#step6,#ava6' hide='#step5,#ava5' actions="validate, animateSignup, showHide, createOrg, signUp, runIndustry, renderKey" href="https://{{renderKey.domain}}/admin/signin.html">
+										<button type="button" class="outline red-white startAnimation" show='#step6,#ava6' hide='#step5,#ava5' actions="validate, animateSignup, showHide, save, runIndustry, renderKey" href="https://{{render-key.domain}}/admin/signin.html">
 											Launch
 										</button>
 									</div>
@@ -272,7 +266,7 @@
 								
 							</div>
 						</section>
-	                    <section id="step6"  hidden>
+	                    <section id="step6" hidden>
         					<div class="animation-wrapper height:224px"></div>
 	                    </section>
 					</form>
@@ -291,7 +285,7 @@
         </div>
 		
         <script src="./apikey.js"></script>
-        <script src="../../../CoCreateJS/dist/CoCreate.js"></script>
+        <script src="https://cdn.cocreate.app/1.49.2/CoCreate.min.js"></script>
         
 	</body>
 </html>

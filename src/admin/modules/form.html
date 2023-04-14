@@ -355,7 +355,7 @@
 	
 				</div>
 			</section>
-			<section hidden id="module-templates" template_id="renderKey">
+			<section hidden id="module-templates" template_id="render-key">
 				<!-- Module form templates to pass value and create clone -->
 				<div class="height:20px padding:0_10px font-size:18px"><i class="fas fa-times float:right" show="#form, #module-views" hide='#module-templates'></i></div>
 				<div template_id="module-templates" filter-name="tags" filter-value="template" filter-operator="$eq"></div>
@@ -371,9 +371,9 @@
 								<input type="hidden" name="name" value="{{document.name}}">
 								<input type="checkbox" name="domains" value="general.cocreate.app" hidden checked>
 								<input type="checkbox" name="domains" value="cocreate.app" hidden checked>
-								<input type="hidden" class="name" render-key="renderKey.name"/>
-								<input type="hidden" name="directory" value="/admin/{{renderKey.name}}"/>
-								<input type="hidden" name="path" value="/admin/{{renderKey.name}}/{{document.name}}">
+								<input type="hidden" class="name" render-key="name"/>
+								<input type="hidden" name="directory" value="/admin/{{render-key.name}}"/>
+								<input type="hidden" name="path" value="/admin/{{render-key.name}}/{{document.name}}">
 								<input type="hidden" name="content-type" value="text/html">
 								<input type="hidden" name="public" value="true">
 								<textarea hidden name="src" value="{{document.src}}"></textarea>
