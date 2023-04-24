@@ -1,3 +1,17 @@
+# [1.31.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.30.3...v1.31.0) (2023-04-24)
+
+
+### Bug Fixes
+
+* bump cdn to 1.50.3 ([99125e2](https://github.com/CoCreate-app/CoCreate-admin/commit/99125e285dca1721d09580c1294c812bbdc81a43))
+* manifest icon sizes ([1a71407](https://github.com/CoCreate-app/CoCreate-admin/commit/1a71407649b319e686de090a4c6d713dc39f3005))
+* updated broken file paths ([58e6d05](https://github.com/CoCreate-app/CoCreate-admin/commit/58e6d05edfc7dcd66b33787ca447fb8b6a0a61ee))
+
+
+### Features
+
+* render-key supports defing custom keys in action renderKey(customkey) ([3007e6a](https://github.com/CoCreate-app/CoCreate-admin/commit/3007e6a01a51a6b3f7ebf627b77f02f31a178296))
+
 ## [1.30.3](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.30.2...v1.30.3) (2023-04-11)
 
 
