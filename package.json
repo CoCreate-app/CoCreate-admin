@@ -23,7 +23,7 @@
     "javascript-framework"
   ],
   "publishConfig": {
-    "access": "private"
+    "access": "restricted"
   },
   "author": "CoCreate LLC",
   "license": "MIT",
@@ -57,7 +57,7 @@
     "webpack-log": "^3.0.1"
   },
   "dependencies": {
-    "@cocreate/docs": "^1.7.0",
+    "@cocreate/docs": "^1.7.1",
     "@cocreate/hosting": "^1.9.2"
   }
 }
