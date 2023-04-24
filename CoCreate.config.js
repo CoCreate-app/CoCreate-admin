@@ -25,23 +25,5 @@ module.exports = {
                 "website_id": "61381ed8829b690010a4f2b2"
             }
         }
-    ],
-    "sources": [
-        {
-            "collection": "files",
-            "document": {
-                "name": "sw.js",
-                "src": "{{./src/admin/sw.js}}",
-                "hosts": [
-                    "*",
-                    "general.cocreate.app"
-                ],
-                "directory": "/",
-                "path": "/sw.js",
-                "content-type": "text/javascript",
-                "public": "true",
-                "_id": "637e7ff326a3abb659d8aefd"
-            }
-        }
     ]
 }
