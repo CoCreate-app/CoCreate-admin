@@ -1,8 +1,9 @@
 # ignore
 node_modules
 dist
-.npmrc
+package-lock.json
 yarn.lock
+pnpm-lock.yaml
 
 logs
 *.log
