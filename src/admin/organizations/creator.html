@@ -38,12 +38,13 @@
                     <img src="https://cdn.cocreate.app/Preloader_2.gif" class="display:block margin:auto-lr margin:20px_0px">
 
                     <hgroup class="speech-bubble position:relative background:white border-radius:4px padding:15px">
+                        <div localstorage-get="user_id" localstorage-key="userId" localstorage-next="div"></div>
                         <div class="color:blue font-size:24px">
                             <p id="ava1">
-                                Hey, <span document_id="" name="name" class="sessionUser_Id" collection="users">First Name</span>! Enter your new organization's name. Don't worry if you are not sure, you can allways update it later.
+                                Hey, <span document_id="{{userId}}" name="name" collection="users">First Name</span>! Enter your new organization's name. Don't worry if you are not sure, you can allways update it later.
                             </p>
                             <p id="ava2" hidden>
-                                Great, <span document_id="" name="name" class="sessionUser_Id" collection="users">First Name</span>! Let’s choose an industry so I can begin to understand what we will be doing.
+                                Great, <span document_id="{{userId}}" name="name" collection="users">First Name</span>! Let’s choose an industry so I can begin to understand what we will be doing.
                             </p>
                             <p id="ava3" hidden>
                                 I could do special animations to impress you. But instead I will build your organization instantly and impress you with my speed!

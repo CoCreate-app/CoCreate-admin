@@ -46,7 +46,7 @@
                 <li class="margin-right:15px"><a actions="parkModal"><i class="far fa-window-minimize"></i></a></li>
 
                 <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px"><a fullscreen><i toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+                <li class="margin-right:15px"><a fullscreen></a></li>
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
@@ -137,8 +137,8 @@
                         <div class="flip-container">
                             <div class="flip-item avatar-selected"><i class="fas fa-check"></i></div>
                             <a class="flip-item avatar round" actions="pass, openModal" modal-src="render.html" pass-collection="modules">
-                                <span collection="users" document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
-                                <span collection="users" document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+                                <span collection="users" document_id="{{userId}}" name="name" class="first-letter avatar-name">B</span>
+                                <span collection="users" document_id="{{userId}}" name="profile_image" class="avatar-image">
                                     <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
                                 </span>
                             </a>
@@ -179,10 +179,11 @@
                         </h2>
                     </div>
                     <div class="display:flex padding:15px_0px">
+                        <div localstorage-get="user_id" localstorage-key="userId" localstorage-target=".avatar-wrapper"></div>
                         <div class="avatar-wrapper">
                             <a class="avatar round" actions="pass, openModal" modal-src="render.html" pass-collection="modules" pass-document_id="5dd010bccbc25f0cdb1a4d9f" pass_to="render" modal-width="300px" modal-height="375px" modal-color="#229954">
-                                <span collection="users" document_id="" name="name" class="sessionUser_Id first-letter avatar-name">B</span>
-                                <span collection="users" document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+                                <span collection="users" document_id="{{userId}}" name="name" class="first-letter avatar-name">B</span>
+                                <span collection="users" document_id="{{userId}}" name="profile_image" class="avatar-image">
                                     <img src="/_static/Velazquez.jpg" onerror="this.style.display='none'"/>
                                 </span>
                             </a>

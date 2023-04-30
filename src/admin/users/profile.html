@@ -34,7 +34,7 @@
 				<li class="margin-right:15px"><a actions="parkModal"><i class="far fa-window-minimize"></i></a></li>
 
 				<!-- fullscreen toogle and icon transform-->
-				<li class="margin-right:15px"><a fullscreen><i toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+				<li class="margin-right:15px"><a fullscreen></a></li>
 
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
@@ -81,7 +81,7 @@
 				  <i class="far fa-save"></i>
 				</button>
 				<div class="position:relative bottom:80px width:100% color:#fff font-size:26px padding:6px_35px background:black opacity:0.4 height:40px">
-					<span class="sessionUser_Id float:right" collection="users" name="name" document_id="">test</span>
+					<span class="float:right" collection="users" name="name" document_id="{{userId}}" localstorage-get="user_id" localstorage-key="userId">test</span>
 				</div>
 			</div>
 			<div class="user-info">

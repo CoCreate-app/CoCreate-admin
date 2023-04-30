@@ -38,7 +38,7 @@
                 <li class="margin-right:15px"><a actions="parkModal"><i class="far fa-window-minimize"></i></a></li>
 
                 <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px"><a fullscreen><i toggle="fa-compress, fa-expand" class="fas fa-expand"></i></a></li>
+                <li class="margin-right:15px"><a fullscreen></a></li>
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
@@ -115,7 +115,7 @@
                                   	  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
                                   	</span>
                                 </a>
-                                <div class="avatar-status sessionUser_Id" collection="users" document_id="" user-status='{"name":"status"}'></div>
+                                <div class="avatar-status" collection="users" document_id="{{userId}}" user-status='{"name":"status"}'></div>
                             </div>
 
                             <!-- Call Details -->
@@ -297,7 +297,7 @@
                                           	  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
                                           	</span>
                                         </a>
-                                            <!--<div class="avatar-status sessionUser_Id" collection="users" document_id="" user-status='{"name":"status"}'></div>-->
+                                            <!--<div class="avatar-status " collection="users" document_id="{{userId}}" user-status='{"name":"status"}'></div>-->
                                         </div>
                                     </div>
                                     <div class="margin-left:10px">
@@ -330,7 +330,7 @@
                             <!--                                  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>-->
                             <!--                              </span>-->
                             <!--                          </a>-->
-                            <!--                          <div class="avatar-status sessionUser_Id" collection="users" document_id="" user-status='{"name":"status"}'></div>-->
+                            <!--                          <div class="avatar-status" collection="users" document_id="{{userId}}" user-status='{"name":"status"}'></div>-->
                             <!--                      </div>			-->
                             <!--</td>-->
                             <td class="padding:10px">
@@ -397,12 +397,12 @@
                                             <div class="avatar-wrapper margin:5px_0px margin-right:10px">
                                                 <a class="avatar round" actions="pass, openModal" modal-src="./user-profile/user-profile.html" pass-collection="modules" pass-document_id="5dd010bccbc25f0cdb1a4d9f" pass_to="render" modal-width="300px"
                                                     modal-height="375px" modal-color="#229954">
-                                                  	<span collection="users" document_id="" name="name" class="sessionUser_Id first-letter avatar-name"></span>
-                                                  	<span collection="users" document_id="" name="profile_image" class="sessionUser_Id avatar-image">
+                                                  	<span collection="users" document_id="{{userId}}" name="name" class="first-letter avatar-name"></span>
+                                                  	<span collection="users" document_id="{{userId}}" name="profile_image" class="avatar-image">
                                                   	  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>
                                                   	</span>
                                                 </a>
-                                                <div class="avatar-status sessionUser_Id" collection="users" document_id="" user-status='{"name":"status"}'></div>
+                                                <div class="avatar-status" collection="users" document_id="{{userId}}" user-status='{"name":"status"}'></div>
                                             </div>
                                             <div>
                                                 <h3 name="name" value="{{document.name}}">No Name</h3>
