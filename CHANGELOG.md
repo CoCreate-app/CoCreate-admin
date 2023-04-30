@@ -1,3 +1,13 @@
+## [1.31.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.31.0...v1.31.1) (2023-04-30)
+
+
+### Bug Fixes
+
+* created collection apps for sites and apps ([aca3b0c](https://github.com/CoCreate-app/CoCreate-admin/commit/aca3b0c629d8c97e63ebdc48fd75a09911aa3c2b))
+* package-lock.json and pnpm-lock.yaml added to .gitignore ([db780ef](https://github.com/CoCreate-app/CoCreate-admin/commit/db780efbf9b57aca498b2aa4dee88f614d9250bc))
+* replaced module_activity collection with individual collection based on module name ([f66fb02](https://github.com/CoCreate-app/CoCreate-admin/commit/f66fb026f63c74262355428233be36cfe043621b))
+* replaced toggle fullscreenicons with css conten and removed toogle fullscreen icons. now using css content ([a3640b3](https://github.com/CoCreate-app/CoCreate-admin/commit/a3640b33a0dd65da31ddb6262aa8486bf36e9061))
+
 # [1.31.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.30.3...v1.31.0) (2023-04-24)
 
 
