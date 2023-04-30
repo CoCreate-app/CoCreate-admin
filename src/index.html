@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>admin | CoCreate</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreate.min.css">
+        <link rel="stylesheet" href="./index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src" type="text/css"/>
+		<link rel="manifest" href="/manifest.json" />
+	</head>
+    
+    <style type="text/css">
+        ul::-webkit-scrollbar-thumb, ul::-webkit-scrollbar-track{background-color:rgba(0,0,0,0.01)}
+    </style>
+
+    <body>
+        <a href="./signin.html" session="false" hidden></a>
+        <!-- Navbar  -->
+        <nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll=", hide-nav" scroll-up="5" scroll-down="5">
+      
+			<!-- Menu Icon -->
+			<a class="menu_icon" click="active" toggle="width:275px," toggle-target="#menuL" toggle-attribute="style">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+        
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+            			
+            	<!-- Fullscreen toogle -->
+				<li class="margin-right:15px"><a fullscreen></a></li>
+              
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
+                        <img width="20" height="20" src="/assets/svg/cogs.svg"/>
+                        <div pass-collection="modules" pass-document_id="5ff747727005da1c2727419c" pass_to="form-fields"></div>
+                        <div pass-filter-value="5ff747727005da1c2727419c" pass_to="module_id"></div>
+                    </a>
+                </li>
+                
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px width:22px height:18px">
+                    <a actions="pass, openModal" modal-src="./code-editor/index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
+                        <div pass-collection="files" pass-document_id="637bc8fe91249e639db315d8" pass-name="src" pass_to="code-editor"></div>
+                    </a>
+                </li>
+                
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a actions="pass, openModal" modal-src="./builder/index.html" class="sessionBuilderUI_Id">
+                        <i class="fas fa-palette"></i>
+                        <div pass-collection="files" pass-document_id="637bc8fe91249e639db315d8" pass-name="src" pass_to="builder"></div>
+                    </a>
+                </li>
+                
+                <div class="display:inline-flex"
+                    fetch-collection="modules" 
+                    fetch-document
+                    filter-sort-name="navbar-menu-position" 
+                    filter-sort-direction="asc"
+                    filter-name="navbar-menu-position" 
+                    filter-value="0" 
+                    filter-value-type="number"
+                    filter-operator="$ne"
+                    template_id="navbar-menu">
+                  
+                    <li class="margin-right:15px" template="navbar-menu">
+                        <a actions="pass, openModal" modal-src='..{{document.navbar-menu-primary.path}}'
+                            modal-width="{{document.navbar-modal-primary-width}}"
+                            modal-height="{{document.navbar-modal-primary-height}}"
+                            modal-color="{{document.navbar-modal-primary-color}}">
+                            <span>{{document.icon}}</span>
+                            <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
+                            <div pass-collection="files" pass-document_id="{{document.main-menu-secondary}}" pass-name="src" pass_to="form"></div>
+                            <div pass-collection="files" pass-document_id="{{document.navbar-menu-primary._id}}" pass-name="src" pass_to="render"></div>
+                            <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>
+                            <div pass-document_id="{{document._id}}" pass_to="module-form"></div>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+            
+            <!-- Avatar -->
+            <div localstorage-get="user_id" localstorage-key="userId" localstorage-target="cocreate-select, .avatar-wrapper"></div>
+            <div class="avatar-wrapper margin:5px">
+                <a class="avatar round" actions="pass, openModal" modal-src="./users/profile.html" modal-width="300px"  modal-height="375px"  modal-color="#229954">
+                    <span collection="users" document_id="{{userId}}" name="name" class="avatar-name"></span>
+                    <span class="avatar-image">
+                        <img collection="users" document_id="{{userId}}" name="avatar" onerror="this.style.display='none'" width="40px"/>
+                    </span>
+					<div pass-collection="modules" document_id="5ff747727005da1c27274182" pass_to="module_id"></div>
+					<div pass-collection="files" pass-document_id="60ddfdc114b5ab0c2dd2fe1c" pass_to="form"></div>
+					<div pass-collection="users" pass-document_id="{{userId}}" pass_to="form-fields"></div>
+					<div pass-collection="files" pass-document_id="60ddfdc114b5ab0c2dd2fe1d" pass-name="src" pass_to="render"></div>
+                </a>
+                <div class="avatar-status"  collection="users" document_id="{{userId}}" user-status='{"name":"status"}' ></div>
+            </div>
+        </nav>
+    
+        <!-- Modal Viewport  -->
+        <div class="position:fixed margin-top:50px" content_id="content" id="modal-viewport"></div>
+       
+        <!-- Main container  -->
+        <main class="height:100vh margin-top:10px" content_id="content"></main>
+        
+        <!-- SideNav  -->
+        <sidenav id="menuL" class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:50px width:275px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
+        
+            <!-- Select to change organizations  -->
+            <cocreate-select class="org-changer remove-none border:none padding:0" name="current_org" collection="users" document_id="{{userId}}">
+                <input placeholder="Search" filter-search template_id="connected_orgs">
+                <cc-options class="options overflow:auto"
+                    fetch-collection="users"
+                    fetch-name="connected_orgs"
+                    filter-name="_id"
+                    filter-value="{{userId}}"
+                    filter-operator="$eq"
+                    template_id="connected_orgs">
+                    <cc-option class="display:flex height:50px margin:0!important padding:4px_12px!important" template="connected_orgs" value="{{connected_orgs}}">
+                        <span class="logo-icon"><img collection="organizations" document_id="{{connected_orgs}}" name="logo" src="/assets/icon.png" height="40px" alt="..." class="margin-top:3px"></span>
+                        <span collection="organizations" document_id="{{connected_orgs}}" name="name" class="margin-left:12px font-size:1.5em"></span>
+                    </cc-option>
+                    <div class="line-height:40px height:40px overflow:hidden">
+                        <a href="./organizations/creator.html">
+                            <span class="padding:13px"><i class="fas fa-plus"></i></span>
+                            <span>New Orginaztion</span>
+                        </a>
+                    </div>
+                </cc-options>
+            </cocreate-select>
+            
+			<!-- Search -->
+			<form class="padding:5px">
+                <floating-label>
+                    <input type="text" class="floating-label" pass_to="results">
+                </floating-label>
+				<span class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">
+					<a actions="pass, openModal" pass_to="render" collection="website-pages" document_id="" pass-name="src" modal-width="900px" modal-color="#229954">
+						<i class="fas fa-search"></i>
+					</a>
+				</span>
+			</form>
+        	
+        	<div class="padding-right:5px padding-bottom:5px">
+                <!-- Fetch and Render-->
+              	<ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_165px) bottom:10px margin-right:5px">
+              	    <div fetch-collection="modules"
+                        filter-sort-name="main-menu-position" 
+                        filter-sort-direction="asc"
+                        filter-name="main-menu-position" 
+                        filter-value="0"
+                        filter-value-type="number"
+                        filter-operator="$ne"
+                        template_id="main-menu">
+                        
+                        <!-- Template -->
+                        <li class="line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" template="main-menu">
+                            <a actions="pass, openModal" modal-src='..{{document.main-menu-primary.path}}'
+                                modal-width="{{document.main-modal-primary-width}}"
+                                modal-color="{{document.main-modal-color}}"
+                                class="display:inline-block">
+                                <span class="display:inline-block width:50px text-align:center">{{document.icon}}</span>
+                                <span>{{document.name}}</span>
+                                <div pass-collection="module_activities" pass-template="$uid" pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
+                                <div pass-collection="files" pass-document_id="{{document.main-menu-secondary._id}}" pass-name="src" pass_to="form"></div>
+                                <div pass-collection="files" pass-document_id="{{document.main-menu-primary._id}}" pass-name="src" pass_to="render"></div>
+                                <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>
+                                <div pass-document_id="{{document._id}}" pass_to="module-form"></div>
+                            </a>
+                            <div class="float:right width:50px text-align:center">
+                                <a actions="pass, openModal" modal-src='..{{document.main-menu-secondary.path}}'
+                                    modal-width="{{document.main-modal-secondary-width}}"
+                                    modal-color="{{document.main-modal-secondary-color}}">
+                                    <i class="fas fa-plus"></i>
+                                    <div pass-collection="file" pass-document_id="{{document.main-menu-secondary._id}}" pass-name="src" pass_to="render"></div>
+				                    <div pass-document_id="" pass_to="form-fields"></div>
+                                    <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass-template="$uid" pass_to="module_id"></div>
+                                    <div pass-document_id="{{docusment._id}}" pass_to="module-form"></div>
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+                
+                <!-- sidenav Footer -->
+				<div class="display:flex justify-content:space-between flex-wrap:wrap position:absolute bottom:0px background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
+					<a actions="pass, openModal" modal-src="./settings/index.html" modal-width="275px" modal-color="#229954" modal-x="0" modal-y="0" class="width:50px text-align:center display:inline-block">
+					    <span class="padding:10px width:50px text-align:center"><i class="fas fa-cogs"></i></span>
+                        <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe18" pass-name="src" pass_to="render"></div>
+                        <div pass-value="5ff747727005da1c2727418f" pass-filter-value="5ff747727005da1c2727418f" pass_to="module_id"></div>
+                        <div pass-document_id="5ff747727005da1c2727418f" pass_to="module-form"></div>
+					</a>
+					<a actions="pass, openModal" modal-src="./modules/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">
+					    <span class="padding:10px width:50px text-align:center"><i class="fas fa-project-diagram"></i></span>
+                        <div pass-template="$uid" pass-fetch-collection="modules" pass_to="datatable"></div>
+                        <div pass-collection="files" pass-document_id="60ddfdbf14b5ab0c2dd2fe09" pass-name="src" pass_to="form"></div>
+                        <div pass-collection="files" pass-document_id="60ddfdbf14b5ab0c2dd2fe08" pass-name="src" pass_to="render"></div>
+                        <div pass-value="5ff747727005da1c27274190" pass-filter-value="5ff747727005da1c27274190" pass_to="module_id"></div>
+                        <div pass-document_id="5ff747727005da1c27274190" pass_to="module-form"></div>
+                    </a>
+					<a actions="pass, openModal" modal-src="./module-views/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">
+					    <span class="padding:10px width:50px text-align:center"><i class="fas fa-shapes"></i></span>
+                        <div pass-template="$uid" pass-fetch-collection="files" pass_to="datatable"></div>
+                        <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe0a" pass-name="src" pass_to="form"></div>
+                        <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe0b" pass-name="src" pass_to="render"></div>
+                        <div pass-value="5ff747727005da1c27274187" pass-filter-value="5ff747727005da1c27274187" pass_to="module_id"></div>
+                        <div pass-document_id="5ff747727005da1c27274187" pass_to="module-form"></div>
+                    </a>
+					<a actions="pass, openModal" modal-src="./files/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">
+					    <span class="padding:10px width:50px text-align:center"><i class="far fa-folder"></i></span>
+                        <div pass-template="$uid" pass-fetch-collection="files" pass_to="datatable"></div>
+                        <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe16" pass-name="src" pass_to="form"></div>
+                        <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe15" pass-name="src" pass_to="render"></div>
+                        <div pass-value="5ff747727005da1c2727419a" pass-filter-value="5ff747727005da1c2727419a" pass_to="module_id"></div>
+                        <div pass-document_id="5ff747727005da1c2727419a" pass_to="module-form"></div>
+                    </a>
+					<a actions="signOut" href="./signin.html" class="width:50px text-align:center display:inline-block">
+					  <span class="padding:10px width:50px text-align:center"><i class="fas fa-sign-out-alt"></i></span>
+					</a>
+				</div>
+			</div>
+            <div resize="right"></div>
+        </sidenav>
+
+		<div class="position:fixed!important bottom:15px right:15px">
+            
+            <button actions="install" type="button" hidden>Install</button>
+        
+	        <div template="notification" class="card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
+	            <span class="{{type}}">{{message}}</span><a actions="remove" remove-closest="[templateid]"> X</a>
+	        </div>
+		</div>
+        
+        <script src="https://cdn.cocreate.app/1.51.0/CoCreate.min.js"></script>
+        
+    </body>
+</html>
