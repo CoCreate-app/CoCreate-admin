@@ -74,7 +74,9 @@
 
 					<li class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template="settings-menu" document_id="{{document._id}}">
                         <a actions="pass, openModal" modal-src='{{document.settings-menu-primary.parentDirectory}}/{{document.settings-menu-primary.name}}' modal-width="{{document.settings-modal-primary-width}}" modal-color="{{document.settings-modal-primary-color}}" class="display:inline-block">
-							<span class="display:inline-block width:50px text-align:center">{{document.icon}}</span>
+							<span class="display:inline-block width:50px text-align:center">
+                                <i class="height:20px fill:#505050" src="/assets/svg/{{document.icon}}.svg"></i>
+							</span>
 							<span>{{document.name}}</span>
 							<div pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
 							<div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>
@@ -96,7 +98,7 @@
 			</ul>
 		</main>
 
-        <script src="https://cdn.cocreate.app/1.52.0/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.53.0/CoCreate.min.js"></script>
         
 
 	</body>

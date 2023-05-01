@@ -87,7 +87,9 @@
                         modal-width="{{document.navbar-modal-primary-width}}"
                         modal-height="{{document.navbar-modal-primary-height}}"
                         modal-color="{{document.navbar-modal-primary-color}}">
-                        <span>{{document.icon}}</span>
+                        <span>
+                            <i class="height:18px fill:#505050" src="/assets/svg/{{document.icon}}.svg"></i>
+                        </span>
                         <div pass-collection="module_activities" pass-filter-name="module_id"
                             pass-filter-value="{{document._id}}" pass_to="datatable"></div>
                         <div pass-collection="files" pass-document_id="{{document.main-menu-secondary}}" pass-name="src"
@@ -184,8 +186,10 @@
                         template="main-menu">
                         <a actions="pass, openModal" modal-src='{{document.main-menu-primary.parentDirectory}}/{{document.main-menu-primary.name}}'
                             modal-width="{{document.main-modal-primary-width}}"
-                            modal-color="{{document.main-modal-color}}" class="display:inline-block">
-                            <span class="display:inline-block width:50px text-align:center">{{document.icon}}</span>
+                            modal-color="{{document.main-modal-color}}" class="display:flex align-items:center">
+                            <span class="display:flex justify-content:center min-width:50px">
+                                <i class="display:flex height:16px fill:#505050" src="/assets/svg/{{document.icon}}.svg"></i>
+                            </span>
                             <span>{{document.name}}</span>
                             <div pass-collection="module_activities" pass-template="$uid" pass-filter-name="module_id"
                                 pass-filter-value="{{document._id}}" pass_to="datatable"></div>
@@ -216,8 +220,7 @@
             </ul>
 
             <!-- sidenav Footer -->
-            <div
-                class="display:flex flex-wrap:nowrap justify-content:space-between position:absolute bottom:0px background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
+            <div class="display:flex flex-wrap:nowrap justify-content:space-between position:absolute bottom:0px background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
                 <a actions="pass, openModal" modal-src="./settings/index.html" modal-width="275px" modal-color="#229954"
                     modal-x="0" modal-y="0"
                     class="min-width:50px display:flex justify-content:center align-items:center">
@@ -283,7 +286,7 @@
         </div>
     </div>
 
-    <script src="https://cdn.cocreate.app/1.52.0/CoCreate.min.js"></script>
+    <script src="https://cdn.cocreate.app/1.53.0/CoCreate.min.js"></script>
 
 </body>
 
