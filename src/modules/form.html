@@ -138,7 +138,7 @@
 										<input placeholder="Search" template_id="navbar-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="navbar-menu-primary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" fetch-document filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="navbar-menu-primary" class="overflow:auto module_id">
-											<cc-option template="navbar-menu-primary" value='{"_id":"{{document._id}}","path":"{{document.path}}"}' document_id="{{document._id}}">
+											<cc-option template="navbar-menu-primary" value='{"_id":"{{document._id}}","name":"{{document.name}}","path":"{{document.path}}","parentDirectory":"{{document.parentDirectory}}"}' document_id="{{document._id}}">
 												<span>{{document.path}}</span>
 											</cc-option>
 										</cc-options>
@@ -182,7 +182,7 @@
 										<input placeholder="Search" template_id="main-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-primary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" fetch-document filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-primary" class="overflow:auto module_id">
-											<cc-option template="main-menu-primary" value='{"_id":"{{document._id}}","path":"{{document.path}}"}' document_id="{{document._id}}">
+											<cc-option template="main-menu-primary" value='{"_id":"{{document._id}}","name":"{{document.name}}","path":"{{document.path}}","parentDirectory":"{{document.parentDirectory}}"}' document_id="{{document._id}}">
 												<span>{{document.path}}</span>
 											</cc-option>
 										</cc-options>
@@ -217,7 +217,7 @@
 										<input placeholder="Search" template_id="main-menu-secondary" tags="true">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="main-menu-secondary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" fetch-document filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="main-menu-secondary" class="overflow:auto module_id">
-											<cc-option template="main-menu-secondary" value='{"_id":"{{document._id}}","path":"{{document.path}}"}' document_id="{{document._id}}">
+											<cc-option template="main-menu-secondary" value='{"_id":"{{document._id}}","name":"{{document.name}}","path":"{{document.path}}","parentDirectory":"{{document.parentDirectory}}"}' document_id="{{document._id}}">
 												<span>{{document.path}}</span>
 											</cc-option>
 										</cc-options>
@@ -251,7 +251,7 @@
 										<input placeholder="Search" template_id="settings-menu-primary">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-primary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" fetch-document filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-primary" class="overflow:auto module_id">
-											<cc-option template="settings-menu-primary" value='{"_id":"{{document._id}}","path":"{{document.path}}"}' document_id="{{document._id}}">
+											<cc-option template="settings-menu-primary" value='{"_id":"{{document._id}}","name":"{{document.name}}","path":"{{document.path}}","parentDirectory":"{{document.parentDirectory}}"}' document_id="{{document._id}}">
 												<span>{{document.path}}</span>
 											</cc-option>
 										</cc-options>
@@ -286,7 +286,7 @@
 										<input placeholder="Search" template_id="settings-menu-secondary" tags="true">
 										<div filter-name="module_id" filter-value="" filter-operator="$ne" template_id="settings-menu-secondary"></div>
 										<cc-options pass_id="module_id" fetch-collection="" fetch-document filter-name="module_id" filter-value="{{module_id}}" filter-operator="$eq" template_id="settings-menu-secondary" class="overflow:auto module_id">
-											<cc-option template="settings-menu-secondary" value='{"_id":"{{document._id}}","path":"{{document.path}}"}' document_id="{{document._id}}">
+											<cc-option template="settings-menu-secondary" value='{"_id":"{{document._id}}","name":"{{document.name}}","path":"{{document.path}}","parentDirectory":"{{document.parentDirectory}}"}' document_id="{{document._id}}">
 												<span>{{document.path}}</span>
 											</cc-option>
 										</cc-options>

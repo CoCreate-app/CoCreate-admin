@@ -13,16 +13,17 @@ module.exports = {
             "collection": "files",
             "document": {
                 "name": "{{name}}",
+                "path": "{{path}}",
                 "src": "{{source}}",
                 "hosts": [
                     "*",
                     "general.cocreate.app"
                 ],
-                "directory": "/admin/{{directory}}",
-                "path": "{{path}}",
+                "parentDirectory": "{{parentDirectory}}",
+                "directory": "/admin{{directory}}",
                 "content-type": "{{content-type}}",
                 "public": "true",
-                "website_id": "61381ed8829b690010a4f2b2"
+                "website_id": "644d4b878036fb9d1d1fd69b"
             }
         }
     ]
