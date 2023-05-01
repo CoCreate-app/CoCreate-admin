@@ -24,11 +24,21 @@
 
 				<!-- Modal Controls -->
 				<li class="margin-right:15px"><a actions="closeModal"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
-				<li class="margin-right:15px"><a actions="minMaxModal"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
 				<li class="margin-right:15px"><a actions="parkModal"><i class="height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
 
 				<!-- fullscreen toogle and icon transform-->
-				<li class="margin-right:15px"><a fullscreen></a></li>
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
+						<i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
+					</a>
+				</li>
+
 
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
@@ -63,7 +73,7 @@
 				<div fetch-collection="modules" filter-sort-name="settings-menu-position" filter-sort-direction="asc" filter-name="settings-menu-position" filter-value="0" filter-value-type="number" filter-operator="$ne" template_id="settings-menu">
 
 					<li class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template="settings-menu" document_id="{{document._id}}">
-                        <a actions="pass, openModal" modal-src='..{{document.settings-menu-primary.path}}' modal-width="{{document.settings-modal-primary-width}}" modal-color="{{document.settings-modal-primary-color}}" class="display:inline-block">
+                        <a actions="pass, openModal" modal-src='{{document.settings-menu-primary.parentDirectory}}/{{document.settings-menu-primary.name}}' modal-width="{{document.settings-modal-primary-width}}" modal-color="{{document.settings-modal-primary-color}}" class="display:inline-block">
 							<span class="display:inline-block width:50px text-align:center">{{document.icon}}</span>
 							<span>{{document.name}}</span>
 							<div pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
@@ -73,7 +83,7 @@
 							<div pass-collection="files" pass-document_id="{{document.settings-menu-primary._id}}" pass-name="src" pass_to="render"></div>
 						</a>
 						<div class="float:right width:50px text-align:center {{document.settings-menu-secondary}}">
-                            <a actions="pass, openModal" modal-src='..{{document.settings-menu-secondary.path}}' modal-width="{{document.settings-modal-secondary-width}}" modal-color="{{document.settings-modal-secondary-color}}">
+                            <a actions="pass, openModal" modal-src='{{document.settings-menu-secondary.parentDirectory}}/{{document.settings-menu-secondary.name}}' modal-width="{{document.settings-modal-secondary-width}}" modal-color="{{document.settings-modal-secondary-color}}">
 								<i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i>
                                 <div pass-collection="files" pass-document_id="{{document.main-menu-secondary._id}}" pass-name="src" pass_to="render"></div>
                                 <div pass-document_id="{{document._id}}" pass_to="module-form"></div>
@@ -86,7 +96,7 @@
 			</ul>
 		</main>
 
-        <script src="https://cdn.cocreate.app/1.51.2/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.52.0/CoCreate.min.js"></script>
         
 
 	</body>

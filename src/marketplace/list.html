@@ -28,11 +28,21 @@
 
                 <!-- Modal Controls -->
                 <li class="margin-right:15px"><a actions="closeModal"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
-                <li class="margin-right:15px"><a actions="minMaxModal"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+                <li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
                 <li class="margin-right:15px"><a actions="parkModal"><i class="height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
 
                 <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px"><a fullscreen></a></li>
+                            <li class="margin-right:15px">
+                <a fullscreen>
+                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
+                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
+                </a>
+            </li>
+
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
@@ -87,7 +97,9 @@
                         <div class="overflow:hidden display:block opacity:0 width:100% position:absolute transition:0.4s left:0 bottom:3px"> <a href="#" class="color:#fff display:block background:#289DCC background:#000:hover padding:13px_0 text-align:center color:#fff:hover">Quick View</a> </div>
                         <!-- Favourite -->
                         <div class="width:40px cursor:pointer height:40px background:#F23A2E background:#289DCC:hover display:block border:1px_solid_#F23A2E border:1px_solid_#289DCC:hover border-radius:50% position:absolute opacity:0 transition:0.4s right:5% top:5%">
-                            <a href="#"><i class="f-link display:block margin-top:10px font-size:20px color:#fff text-align:center far fa-heart"></i></a>
+                            <a href="#" class="margin-top:10px ">
+                                <i class="display:flex height:20px fill:#fff" src="/assets/svg/heart.svg"></i>
+                            </a>
                         </div>
 
                     </div>
@@ -144,8 +156,8 @@
             <div resize="right"></div>
         </sidenav>
 
-        <script src="https://cdn.cocreate.app/1.51.2/CoCreate.min.js"></script>
-        <!--<script src="https://cdn.cocreate.app/1.51.2/CoCreate.min.js"></script>-->
+        <script src="https://cdn.cocreate.app/1.52.0/CoCreate.min.js"></script>
+        <!--<script src="https://cdn.cocreate.app/1.52.0/CoCreate.min.js"></script>-->
         
     </body>
 

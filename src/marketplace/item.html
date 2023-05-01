@@ -27,10 +27,18 @@
 			<ul class="cocreate-scroll display:inline-flex direction:rtl font-size:20px align-items:center list-style-type:none width:100% height:50px">
 				<!-- Modal Controls -->
 				<li class="margin-right:15px"> <a actions="closeModal"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a> </li>
-				<li class="margin-right:15px"><a actions="minMaxModal"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize">					</i></a> </li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
 				<li class="margin-right:15px"><a actions="parkModal"><i class="far fa-window-minimize">					</i></a> </li>
 				<!-- fullscreen toogle and icon transform-->
-				<li class="margin-right:15px"> <a fullscreen></a> </li>
+				<li class="margin-right:15px"> <a fullscreen>
+						<i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
+						<i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
+					</a>
+ </li>
 				<!-- Render Module Form -->
 				<li class="margin-right:15px"> <a actions="pass, openModal" pass-collection="files" pass-document_id="60ddfdbf14b5ab0c2dd2fe09" pass-name="src" pass_to="render" modal-width="320px">							<i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>						 <div pass_id="module-form"							pass-collection="modules"							pass-document_id=""							pass_to="form-fields">						 </div>                      	<div pass_id="datatable" pass-filter-value="" pass_to="module_id">						 </div>					 </a>					</li>
 				<!-- Render Code Editor -->
@@ -291,7 +299,7 @@
 		</sidenav>
 
 		<script src="../apikey.js"></script>
-        <script src="https://cdn.cocreate.app/1.51.2/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.52.0/CoCreate.min.js"></script>
 
 	</body>
 

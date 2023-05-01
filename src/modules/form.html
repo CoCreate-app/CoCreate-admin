@@ -65,11 +65,21 @@
 
 				<!-- Modal Controls -->
 				<li class="margin-right:15px"><a actions="closeModal"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
-				<li class="margin-right:15px"><a actions="minMaxModal"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
 				<li class="margin-right:15px"><a actions="parkModal"><i class="height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
 
 				<!-- fullscreen toogle and icon transform-->
-				<li class="margin-right:15px"><a fullscreen></a></li>
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
+						<i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
+					</a>
+				</li>
+
 
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
@@ -358,7 +368,9 @@
 			</section>
 			<section hidden id="module-templates" template_id="render-key">
 				<!-- Module form templates to pass value and create clone -->
-				<div class="height:20px padding:0_10px font-size:18px"><i class="fas fa-times float:right" show="#form, #module-views" hide='#module-templates'></i></div>
+				<div class="height:20px padding:0_10px font-size:18px">
+					<i class="height:20px fill:#505050 float:right" src="/assets/svg/times.svg" show="#form, #module-views" hide='#module-templates'></i>
+				</div>
 				<div template_id="module-templates" filter-name="tags" filter-value="template" filter-operator="$eq"></div>
 				<div class="display:flex flex-wrap:wrap" fetch-collection="" fetch-document pass-refresh="true" filter-sort-name="name" filter-sort-direction="asc" template_id="module-templates" pass_id="module-templates">
 
@@ -399,7 +411,7 @@
 
 		</main>
 
-        <script src="https://cdn.cocreate.app/1.51.2/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.52.0/CoCreate.min.js"></script>
         
 
 	</body>
