@@ -1,3 +1,15 @@
+# [1.32.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.31.2...v1.32.0) (2023-05-01)
+
+
+### Bug Fixes
+
+* replaced icon toggles with new svg ([d227652](https://github.com/CoCreate-app/CoCreate-admin/commit/d227652f5b1abf32715c9a2cfa6c6f91bd72c0b1))
+
+
+### Features
+
+* parentDirectory support ([511b162](https://github.com/CoCreate-app/CoCreate-admin/commit/511b162599af8ca7ca5d6773c15fec00a41e5d86))
+
 ## [1.31.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.31.1...v1.31.2) (2023-05-01)
 
 
