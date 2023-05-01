@@ -23,6 +23,7 @@
         height: inherit;
         fill: inherit;
     }
+    
 </style>
 
 <body>
@@ -43,7 +44,12 @@
             class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
 
             <!-- Fullscreen toogle -->
-            <li class="margin-right:15px"><a fullscreen></a></li>
+            <li class="margin-right:15px">
+                <a fullscreen>
+                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
+                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
+                </a>
+            </li>
 
             <!-- Render Module Form -->
             <li class="margin-right:15px">
@@ -211,12 +217,10 @@
             </ul>
 
             <!-- sidenav Footer -->
-            <div
-                class="display:flex justify-content:space-between flex-wrap:wrap position:absolute bottom:0px background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
+            <div class="display:flex flex-wrap:nowrap justify-content:space-between position:absolute bottom:0px background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
                 <a actions="pass, openModal" modal-src="./settings/index.html" modal-width="275px" modal-color="#229954"
-                    modal-x="0" modal-y="0" class="width:50px text-align:center display:inline-block">
-                    <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050"
-                            src="/assets/svg/cogs.svg"></i></span>
+                    modal-x="0" modal-y="0" class="min-width:50px display:flex justify-content:center align-items:center">
+                    <i class="display:flex height:16px fill:#505050" src="/assets/svg/cogs.svg"></i>
                     <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe18" pass-name="src"
                         pass_to="render"></div>
                     <div pass-value="5ff747727005da1c2727418f" pass-filter-value="5ff747727005da1c2727418f"
@@ -224,9 +228,8 @@
                     <div pass-document_id="5ff747727005da1c2727418f" pass_to="module-form"></div>
                 </a>
                 <a actions="pass, openModal" modal-src="./modules/datatable.html" modal-width="640px"
-                    modal-color="#229954" class="width:50px text-align:center display:inline-block">
-                    <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050"
-                            src="/assets/svg/project-diagram.svg"></i></span>
+                    modal-color="#229954" class="min-width:50px display:flex justify-content:center align-items:center">
+                    <i class="display:flex height:16px fill:#505050" src="/assets/svg/project-diagram.svg"></i>
                     <div pass-template="$uid" pass-fetch-collection="modules" pass_to="datatable"></div>
                     <div pass-collection="files" pass-document_id="60ddfdbf14b5ab0c2dd2fe09" pass-name="src"
                         pass_to="form"></div>
@@ -237,9 +240,8 @@
                     <div pass-document_id="5ff747727005da1c27274190" pass_to="module-form"></div>
                 </a>
                 <a actions="pass, openModal" modal-src="./module-views/datatable.html" modal-width="640px"
-                    modal-color="#229954" class="width:50px text-align:center display:inline-block">
-                    <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050"
-                            src="/assets/svg/shapes.svg"></i></span>
+                    modal-color="#229954" class="min-width:50px display:flex justify-content:center align-items:center">
+                    <i class="display:flex height:16px fill:#505050" src="/assets/svg/shapes.svg"></i>
                     <div pass-template="$uid" pass-fetch-collection="files" pass_to="datatable"></div>
                     <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe0a" pass-name="src"
                         pass_to="form"></div>
@@ -250,8 +252,8 @@
                     <div pass-document_id="5ff747727005da1c27274187" pass_to="module-form"></div>
                 </a>
                 <a actions="pass, openModal" modal-src="./files/datatable.html" modal-width="640px"
-                    modal-color="#229954" class="width:50px text-align:center display:inline-block">
-                    <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/folder.svg"></i></span>
+                    modal-color="#229954" class="min-width:50px display:flex justify-content:center align-items:center">
+                    <i class="display:flex height:16px fill:#505050" src="/assets/svg/folder.svg"></i>
                     <div pass-template="$uid" pass-fetch-collection="files" pass_to="datatable"></div>
                     <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe16" pass-name="src"
                         pass_to="form"></div>
@@ -261,8 +263,8 @@
                         pass_to="module_id"></div>
                     <div pass-document_id="5ff747727005da1c2727419a" pass_to="module-form"></div>
                 </a>
-                <a actions="signOut" href="./signin.html" class="width:50px text-align:center display:inline-block">
-                    <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/sign-out-alt.svg"></i></span>
+                <a actions="signOut" href="./signin.html" class="min-width:50px display:flex justify-content:center align-items:center">
+                    <i class="display:flex height:16px fill:#505050" src="/assets/svg/sign-out-alt.svg"></i>
                 </a>
             </div>
         </div>
