@@ -1,3 +1,12 @@
+## [1.31.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.31.1...v1.31.2) (2023-05-01)
+
+
+### Bug Fixes
+
+* menu icon positions ([d8ed97c](https://github.com/CoCreate-app/CoCreate-admin/commit/d8ed97ce531ac2ea5c473fa971ef2e093169ef6d))
+* replace fontawesome with svg ([97723ff](https://github.com/CoCreate-app/CoCreate-admin/commit/97723ff9b92d112d8e197f53574e87bdde7e1f46))
+* update manifest.json to manifest.webmanifest ([fa3f447](https://github.com/CoCreate-app/CoCreate-admin/commit/fa3f4470594befced41e87df696fbc0a9ffe0014))
+
 ## [1.31.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.31.0...v1.31.1) (2023-04-30)
 
 
