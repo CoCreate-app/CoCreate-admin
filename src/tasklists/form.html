@@ -35,9 +35,9 @@
 			<ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
 
 				<!-- Modal Controls -->
-				<li class="margin-right:15px"><a actions="closeModal"><i class="fas fa-times"></i></a></li>
+				<li class="margin-right:15px"><a actions="closeModal"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
 				<li class="margin-right:15px"><a actions="minMaxModal"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
-				<li class="margin-right:15px"><a actions="parkModal"><i class="far fa-window-minimize"></i></a></li>
+				<li class="margin-right:15px"><a actions="parkModal"><i class="height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
 
 				<!-- fullscreen toogle and icon transform-->
 				<li class="margin-right:15px"><a fullscreen></a></li>
@@ -45,7 +45,7 @@
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
 					<a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="fas fa-cog"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
                         <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
                         <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
                     </a>
@@ -54,7 +54,7 @@
 				<!-- Render Code Editor -->
 				<li class="margin-right:15px">
 					<a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="fas fa-code"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
 				</li>
@@ -62,32 +62,32 @@
 				<!-- Render Builder -->
 				<li class="margin-right:15px">
 					<a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="fas fa-palette"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
 				</li>
 
 				<!-- Datatable Controls -->
 				<li class="margin-right:15px">
-					<a actions="deleteDocuments" collection="" pass_id="datatable" template_id=""><i class="far fa-trash-alt"></i></a>
+					<a actions="deleteDocuments" collection="" pass_id="datatable" template_id=""><i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a toggle="hidden" toogle-target="#column-visibility"><i class="far fa-eye"></i></a>
+					<a toggle="hidden" toogle-target="#column-visibility"><i class="height:18px fill:#505050" src="/assets/svg/eye.svg"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="export" export-type="csv" template_id="" pass_id="datatable"><i class="fas fa-file-csv"></i></a>
+					<a actions="export" export-type="csv" template_id="" pass_id="datatable"><i class="height:18px fill:#505050" src="/assets/svg/file-csv.svg"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="export" template_id="" pass_id="datatable"><i class="fas fa-file-download"></i></a>
+					<a actions="export" template_id="" pass_id="datatable"><i class="height:18px fill:#505050" src="/assets/svg/file-download.svg"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="import" collection="" pass_id="datatable"><i class="fas fa-file-upload"></i></a>
+					<a actions="import" collection="" pass_id="datatable"><i class="height:18px fill:#505050" src="/assets/svg/file-upload.svg"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="copy" copy-target "tbody"><i class="far fa-copy"></i></a>
+					<a actions="copy" copy-target "tbody"><i class="height:18px fill:#505050" src="/assets/svg/copy.svg"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="print" print-target='tbody[template_id="datatable"]'><i class="fas fa-print"></i></a>
+					<a actions="print" print-target='tbody[template_id="datatable"]'><i class="height:18px fill:#505050" src="/assets/svg/print.svg"></i></a>
 				</li>
 
 			</ul>
@@ -109,7 +109,7 @@
 							<span class="display:inline-block">
 								<input collection="module_activities" pass_id="form-fields" document_id="" name="clone-name" id="stage-name" class="input_field" placeholder="Tasklist">
 							</span>
-							<span class="float:right display:inline-block"><a clone_id="tasklist" class="deleteBtn reset-layout"><i class="fas fa-times"></i></a></span>
+							<span class="float:right display:inline-block"><a clone_id="tasklist" class="deleteBtn reset-layout"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></span>
 						</div>
 						<div class="border-top:1px_solid_lightgray border-bottom:1px_solid_lightgray padding:10px">
 							<div class="display:flex align-items:center margin:0px_15px">
@@ -127,19 +127,19 @@
 									<div class="flex-grow:1">
 										<input class="floating-label" document_id="5d8c79e7e4be424681b5e48d" name="taskname" placeholder="Task Name">
 									</div>
-									<a clone_id="task-item" class="margin-left:15px font-size:20px deleteBtn"><i class="far fa-trash-alt"></i></a>
+									<a clone_id="task-item" class="margin-left:15px font-size:20px deleteBtn"><i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i></a>
 								</div>
 							</form>
 						</div>
 						<div class="margin:15px">
-							<a clone_id="task-item" actions="clone" class="noDrag reset-layout padding:10px" style="display: block"><i class="fas fa-plus"></i> Add Task</a>
+							<a clone_id="task-item" actions="clone" class="noDrag reset-layout padding:10px" style="display: block"><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i> Add Task</a>
 						</div>
 					</div>
 
 				</div>
 				<!-- Sortable Tasklist -->
 
-				<a clone_id="tasklist" class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover round cloneBtn padding:20px" id="addTasklistBtn"><i class="fas fa-plus"></i></a>
+				<a clone_id="tasklist" class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover round cloneBtn padding:20px" id="addTasklistBtn"><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></a>
 
 			</div>
 			<!-- saveFetch -->

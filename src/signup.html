@@ -1,292 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Sign up | CoCreate</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreate.min.css">
-        <link rel="stylesheet" href="./index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src" type="text/css"/>
-		<link rel="manifest" href="/manifest.json" />
-	</head>
-    
-    <style>
-		.speech-bubble:after { content: ''; position: absolute; top: 0; left: 50%; width: 0; height: 0; border: 23px solid transparent; border-bottom-color: #ffffff; border-top: 0; margin-left: -23px; margin-top: -23px;}
-	</style>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign up | CoCreate</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreate.min.css">
+	<link rel="stylesheet" href="./index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src"
+		type="text/css" />
+	<link rel="manifest" href="/manifest.json" />
+</head>
 
-    <body style='background: url("https://cdn.cocreate.app/background.png") no-repeat fixed;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;'>
-		<a href="./index.html" session="true" hidden></a>
+<style>
+	.speech-bubble:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border: 23px solid transparent;
+		border-bottom-color: #ffffff;
+		border-top: 0;
+		margin-left: -23px;
+		margin-top: -23px;
+	}
+</style>
 
-		<a href="./signin.html" title="" class="position:relative z-index:1 float:right margin:15px margin-left:auto color:white">Sign In</a>
+<body
+	style='background: url("https://cdn.cocreate.app/background.png") no-repeat fixed;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;'>
+	<a href="./index.html" session="true" hidden></a>
 
-        <main class="main-container justify-content:center align-items:center overflow:auto display:flex flex-wrap:wrap position:absolute width:100% height:100%">
-        	<div class="display:flex flex-wrap:wrap align-items:flex-end justify-content:center align-items:center">
-                <div class="flex-grow:1 height:fit-content width:55% min-width:300px max-width:600px margin:10px">
-                	<img src="https://cdn.cocreate.app/Preloader_2.gif" class="display:block margin:20px_auto">
-                	<hgroup class="speech-bubble position:relative background:white border-radius:4px padding:15px">
-                        <div class="font-size:24px">
-                        	<p id="ava1">
-                        		<strong>Hi</strong>, My name is <b>Ava</b>.
-                            	Your Artificial Virtual Assistant. Together we will CoCreate your business! Enter your name so I will know what to call my <strong>new boss...</strong>
-                        	</p>
-                            <p id="ava2" hidden>
-                        		Hi, <span class="firstname">First Name</span>!
-                            	Let's get started. Enter your business or organization's name. Don't worry if you are not sure, you can allways update it later.<!-- and create a subdomain. The subdomain will be used for your website's address until you choose a custom domain.-->
-                        	</p>
-                        	<p id="ava3" hidden>
-                        		Choose a domain for <span class="orgname">Organization Name</span>, this will be the url where you can access your website and admin panel.
-                        	</p>
-                        	<p id="ava4" hidden>
-                        		Great, <span class="firstname">First Name</span>!
-                            	Let’s choose an industry so I can begin to understand what we will be doing.
-                        	</p>
-                        	<p id="ava5" hidden>
-                        		Awesome! Enter your email and password and we will get <span class="orgname">Organization Name</span> off the ground!
-                        	</p>
-							<p id="ava6" hidden>
-                        		Here we go! Preparing your new business!
-                        	</p>
-                        </div>
-					</hgroup>
-                </div>
-               
-                <div class="flex-grow:1 height:fit-content width:35% min-width:370px max-width:400px margin:10px align-self:flex-end">
-                	<form realtime="false" autocomplete="off" >
-                		
-	            		<section id="step1">
-	                    	<div class="overflow:hidden padding:0px_25px background:white">
-								<div class="float:left width:75% padding-top:25px">
-	                    			<h3>Step 1 / 5</h3>
-	                    		</div>
-	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
-	                    			<i class="fa fa-user"></i>
-	                    		</div>
-	                        </div>
-	                        <div class="padding:25px background:gainsboro text-align:left">
-	                    		<floating-label>
-	                    			<input type="text" id="name"
-	                				collection="users" 
-	                    			document_id="" 
-	                    			name="name"  
-	                    			placeholder="Full Name"  
-	                    			class="floating-label"
-	                    			autocomplete="off" 
-	                    			render-key="name"
-									input-target=".firstname"
-									input-attribute="value"
-	                    			required>
-	                    		</floating-label>
-		                        <button type="button" actions="validate(#name), showHide" class="outline" show='#step2,#ava2' hide='#step1,#ava1'>Next</button>
-		                    </div>
-	                  	</section>
+	<a href="./signin.html" title=""
+		class="position:relative z-index:1 float:right margin:15px margin-left:auto color:white">Sign In</a>
 
-						<section id="step2" hidden>
-	                    	<div class="overflow:hidden padding:0px_25px background:white">
-								<div class="float:left width:75% padding-top:25px">
-									<h3>Step 2 / 5</h3>
-								</div>
-	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
-									<i class="fas fa-store"></i>
-								</div>
-						    </div>
-						    <div class="padding:25px background:gainsboro text-align:left">
-	                    		<floating-label>
-							    	<input type="text" id="org-name"
-							    		collection="organizations"
-							    		document_id="ObjectId()"  
-							    		name="name" 
-							    		placeholder="Organization Name" 
-							    		class="floating-label"
-										input-target=".orgname"
-										input-attribute="value"	
-							    		required>
-	                    		</floating-label>
+	<main
+		class="main-container justify-content:center align-items:center overflow:auto display:flex flex-wrap:wrap position:absolute width:100% height:100%">
+		<div class="display:flex flex-wrap:wrap align-items:flex-end justify-content:center align-items:center">
+			<div class="flex-grow:1 height:fit-content width:55% min-width:300px max-width:600px margin:10px">
+				<img src="https://cdn.cocreate.app/Preloader_2.gif" class="display:block margin:20px_auto">
+				<hgroup class="speech-bubble position:relative background:white border-radius:4px padding:15px">
+					<div class="font-size:24px">
+						<p id="ava1">
+							<strong>Hi</strong>, My name is <b>Ava</b>.
+							Your Artificial Virtual Assistant. Together we will CoCreate your business! Enter your name
+							so I will know what to call my <strong>new boss...</strong>
+						</p>
+						<p id="ava2" hidden>
+							Hi, <span class="firstname">First Name</span>!
+							Let's get started. Enter your business or organization's name. Don't worry if you are not
+							sure, you can allways update it
+							later.<!-- and create a subdomain. The subdomain will be used for your website's address until you choose a custom domain.-->
+						</p>
+						<p id="ava3" hidden>
+							Choose a domain for <span class="orgname">Organization Name</span>, this will be the url
+							where you can access your website and admin panel.
+						</p>
+						<p id="ava4" hidden>
+							Great, <span class="firstname">First Name</span>!
+							Let’s choose an industry so I can begin to understand what we will be doing.
+						</p>
+						<p id="ava5" hidden>
+							Awesome! Enter your email and password and we will get <span class="orgname">Organization
+								Name</span> off the ground!
+						</p>
+						<p id="ava6" hidden>
+							Here we go! Preparing your new business!
+						</p>
+					</div>
+				</hgroup>
+			</div>
+
+			<div
+				class="flex-grow:1 height:fit-content width:35% min-width:370px max-width:400px margin:10px align-self:flex-end">
+				<form realtime="false" autocomplete="off">
+
+					<section id="step1">
+						<div class="overflow:hidden padding:0px_25px background:white">
+							<div class="float:left width:75% padding-top:25px">
+								<h3>Step 1 / 5</h3>
+							</div>
+							<div
+								class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+								<i class="height:70px fill:#505050" src="/assets/svg/user.svg"></i>
+							</div>
+						</div>
+						<div class="padding:25px background:gainsboro text-align:left">
+							<floating-label>
+								<input type="text" id="name" collection="users" document_id="" name="name"
+									placeholder="Full Name" class="floating-label" autocomplete="off" render-key="name"
+									input-target=".firstname" input-attribute="value" required>
+							</floating-label>
+							<button type="button" actions="validate(#name), showHide" class="outline"
+								show='#step2,#ava2' hide='#step1,#ava1'>Next</button>
+						</div>
+					</section>
+
+					<section id="step2" hidden>
+						<div class="overflow:hidden padding:0px_25px background:white">
+							<div class="float:left width:75% padding-top:25px">
+								<h3>Step 2 / 5</h3>
+							</div>
+							<div
+								class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+								<i class="height:70px fill:#505050" src="/assets/svg/store.svg"></i>
+							</div>
+						</div>
+						<div class="padding:25px background:gainsboro text-align:left">
+							<floating-label>
+								<input type="text" id="org-name" collection="organizations" document_id="ObjectId()"
+									name="name" placeholder="Organization Name" class="floating-label"
+									input-target=".orgname" input-attribute="value" required>
+							</floating-label>
+							<div class="display:flex">
+								<button type="button" class="outline white-blue margin-right:15px" show='#step1,#ava1'
+									hide='#step2,#ava2'>Previous</button>
+								<button type="button" actions="validate(#org-name), showHide" class="outline"
+									show='#step3,#ava3' hide='#step2,#ava2'>Next</button>
+							</div>
+						</div>
+					</section>
+
+					<section id="step3" hidden>
+						<div class="overflow:hidden padding:0px_25px background:white">
+							<div class="float:left width:75% padding-top:25px">
+								<h3>Step 3 / 5</h3>
+							</div>
+							<div
+								class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+								<i class="height:70px fill:#505050" src="/assets/svg/globe.svg"></i>
+							</div>
+						</div>
+						<div class="padding:25px background:gainsboro text-align:left">
+							<floating-label>
+								<input type="text" collection="organizations" document_id="" name="hosts[0]"
+									placeholder="Domain" value-suffix=".cocreate.app" unique subdomain required
+									render-key="domain" class="floating-label width:calc(100%_-_90px)!important">
+							</floating-label>
+							<div
+								class="position:relative top:-34px right:8px float:right padding:5px background:whitesmoke">
+								<span>.cocreate.app</span>
+							</div>
+
+							<small id="Domain is currently in use" class="text-danger"></small>
+							<div class="display:flex">
+								<button type="button" class="outline white-blue margin-right:15px" show='#step2,#ava2'
+									hide='#step3,#ava3'>Previous</button>
+								<button type="button" actions="validate(#subdomain), showHide" class="outline"
+									show='#step4,#ava4' hide='#step3,#ava3'>Next</button>
+							</div>
+						</div>
+					</section>
+
+					<section id="step4" hidden>
+						<div class="overflow:hidden padding:0px_25px background:white">
+							<div class="float:left width:75% padding-top:25px">
+								<h3>Step 4 / 5</h3>
+							</div>
+							<div
+								class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+								<i class="height:70px fill:#505050" src="/assets/svg/industry.svg"></i>
+							</div>
+						</div>
+						<div class="padding:25px background:gainsboro text-align:left">
+
+							<floating-label>
+								<cocreate-select id="industries" class="floating-label" collection="organizations"
+									document_id="" name="industry" placeholder="Industry" realtime="false" save="false"
+									required>
+									<input placeholder="Search" template_id="industries">
+									<cc-options fetch-collection="industries" template_id="industries"
+										class="options overflow:auto">
+										<cc-option template="industries" value="{{document._id}}">
+											<h4>{{document.name}}</h4>
+										</cc-option>
+									</cc-options>
+								</cocreate-select>
+							</floating-label>
+							<div class="display:flex">
+								<button type="button" class="outline white-blue margin-right:15px" show='#step3,#ava3'
+									hide='#step4,#ava4'>Previous</button>
+								<button type="button" actions="validate(#industries), showHide" class="outline"
+									show='#step5,#ava5' hide='#step4,#ava4'>Next</button>
+							</div>
+						</div>
+					</section>
+
+					<section id="step5" hidden>
+						<div class="overflow:hidden padding:0px_25px background:white">
+							<div class="float:left width:75% padding-top:25px">
+								<h3>Step 5 / 5</h3>
+							</div>
+							<div
+								class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+								<i class="height:70px fill:#505050" src="/assets/svg/key.svg"></i>
+							</div>
+						</div>
+						<div class="padding:25px background:gainsboro text-align:left">
+							<floating-label>
+								<input type="email" collection="users" unique document_id="" name='email'
+									placeholder="Email" class="floating-label" input-target="#email"
+									input-attribute="value" required>
+							</floating-label>
+							<small id="errorUemail" class="text-danger"></small>
+
+							<floating-label>
+								<input type="password" id="password" collection="users" document_id="" name="password"
+									placeholder="Password" class="floating-label">
+							</floating-label>
+							<small id="errorUpassword" class="text-danger"></small>
+
+							<floating-label>
+								<input type="password" matches="#password" placeholder="Confirm Password"
+									class="floating-label">
+							</floating-label>
+							<small id="errorUconfirmpassword" class="text-danger"></small>
+
+							<!-- user_id  -->
+							<input type="hidden" id="user_id" collection="users" document_id="" name="_id">
+
+							<!-- organiztion_id  -->
+							<input type="hidden" id="org_id" collection="organizations" document_id="" name="_id"
+								input-target=".orgid" input-attribute="value">
+
+							<!-- API key  -->
+							<input type="hidden" id="apiKey" collection="organizations" document_id="" name="apiKey"
+								uuid="32">
+
+							<!-- Connected Org  -->
+							<input type="hidden" id="connected_orgs" class="orgid" collection="users" document_id=""
+								name="connected_orgs[0]">
+
+							<!-- Current Org  -->
+							<input type="hidden" id="current_org" class="orgid" collection="users" document_id=""
+								name="current_org">
+
+							<!-- Send Email -->
+							<div template_id="render-key" class="display:block!important">
+								<input type="hidden" placeholder="to email" sendgrid="sendEmail.to" id="email">
+								<input type="hidden" placeholder="from email" sendgrid="sendEmail.from"
+									value="testing@cocreate.app">
+								<input type="hidden" placeholder="subject" sendgrid="sendEmail.subject"
+									value="Welcome, {{render-key.name}} — Please confirm your email">
+								<textarea placeholder="html" sendgrid="sendEmail.html" hidden
+									collection="email-templates" document_id="60bfdaa304ee68b159b63532"
+									name="src"></textarea>
+
 								<div class="display:flex">
-							        <button type="button" class="outline white-blue margin-right:15px" show='#step1,#ava1' hide='#step2,#ava2'>Previous</button>
-							        <button type="button" actions="validate(#org-name), showHide" class="outline" show='#step3,#ava3' hide='#step2,#ava2'>Next</button>
-						   		</div>
-						    </div>
-						</section>
-						
-						<section id="step3" hidden>
-	                    	<div class="overflow:hidden padding:0px_25px background:white">
-								<div class="float:left width:75% padding-top:25px">
-									<h3>Step 3 / 5</h3>
-								</div>
-	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
-									<i class="fas fa-globe"></i>
-								</div>
-						    </div>
-						    <div class="padding:25px background:gainsboro text-align:left">
-	                    		<floating-label>
-							    	<input type="text"
-										collection="organizations"
-										document_id=""  
-										name="hosts[0]" 
-							    		placeholder="Domain"
-							    		value-suffix=".cocreate.app"
-							    		unique
-										subdomain
-										required
-										render-key="domain"										
-							    		class="floating-label width:calc(100%_-_90px)!important">
-	                    		</floating-label>
-                                <div class="position:relative top:-34px right:8px float:right padding:5px background:whitesmoke">
-                                	<span>.cocreate.app</span>
-                                </div>
-
-                                <small id="Domain is currently in use" class="text-danger"></small>
-								<div class="display:flex">
-							        <button type="button" class="outline white-blue margin-right:15px" show='#step2,#ava2' hide='#step3,#ava3'>Previous</button>
-							        <button type="button" actions="validate(#subdomain), showHide" class="outline" show='#step4,#ava4' hide='#step3,#ava3'>Next</button>
-						   		</div>
-						    </div>
-						</section>
-						
-	                    <section id="step4" hidden>
-	                    	<div class="overflow:hidden padding:0px_25px background:white">
-								<div class="float:left width:75% padding-top:25px">
-	                    			<h3>Step 4 / 5</h3>
-	                    		</div>
-	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
-	                    			<i class="fas fa-industry"></i>
-	                    		</div>
-	                        </div>
-	                        <div class="padding:25px background:gainsboro text-align:left">
-	
-	                    		<floating-label>
-		                            <cocreate-select id="industries" class="floating-label" collection="organizations" document_id="" name="industry" placeholder="Industry" realtime="false" save="false" required>
-		  					          	  <input placeholder="Search" template_id="industries">
-										<cc-options fetch-collection="industries" 
-										    template_id="industries"
-										    class="options overflow:auto">
-											<cc-option template="industries" value="{{document._id}}">
-												<h4>{{document.name}}</h4>
-											</cc-option>
-										</cc-options>
-		                            </cocreate-select>
-	                    		</floating-label>
-								<div class="display:flex">
-			                        <button type="button" class="outline white-blue margin-right:15px" show='#step3,#ava3' hide='#step4,#ava4'>Previous</button>
-			                        <button type="button" actions="validate(#industries), showHide" class="outline" show='#step5,#ava5' hide='#step4,#ava4'>Next</button>
-			                    </div>
-		                    </div>
-	                    </section>
-
-						<section id="step5" hidden>
-	                    	<div class="overflow:hidden padding:0px_25px background:white">
-								<div class="float:left width:75% padding-top:25px">
-									<h3>Step 5 / 5</h3>
-								</div>
-	                    		<div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
-									<i class="fa fa-key"></i>
+									<button type="button" class="outline white-blue margin-right:15px"
+										show='#step4,#ava4' hide='#step5,#ava5'>Previous</button>
+									<button type="button" class="outline red-white startAnimation" show='#step6,#ava6'
+										hide='#step5,#ava5'
+										actions="validate, animateSignup, showHide, save, runIndustry, renderKey"
+										href="https://{{render-key.domain}}/admin/signin.html">
+										Launch
+									</button>
 								</div>
 							</div>
-							<div class="padding:25px background:gainsboro text-align:left">
-	                    		<floating-label>
-									<input type="email"
-										collection="users"
-										unique
-										document_id="" 
-										name='email'  
-										placeholder="Email" 
-										class="floating-label"
-										input-target="#email"
-										input-attribute="value"	
-										required>
-	                    		</floating-label>
-							 	<small id="errorUemail" class="text-danger"></small>
-							
-	                    		<floating-label>
-									<input type="password" id="password"
-										collection="users"
-								    	document_id=""
-								    	name="password" 
-								    	placeholder="Password" 
-								    	class="floating-label">
-	                    		</floating-label>
-							    <small id="errorUpassword" class="text-danger"></small>
-							
-	                    		<floating-label>
-									<input type="password"
-								    	matches="#password" 
-								    	placeholder="Confirm Password" 
-								    	class="floating-label">
-	                    		</floating-label>
-							    <small id="errorUconfirmpassword" class="text-danger"></small>
-									
-								<!-- user_id  -->
-								<input type="hidden" id="user_id"
-									collection="users"
-									document_id=""
-									name="_id">
-								
-								<!-- organiztion_id  -->
-								<input type="hidden" id="org_id"
-									collection="organizations"
-									document_id=""
-									name="_id"
-									input-target=".orgid" 
-									input-attribute="value">
-								
-								<!-- API key  -->
-								<input type="hidden" id="apiKey"
-									collection="organizations"
-									document_id=""
-									name="apiKey" 
-									uuid="32">
-																
-								<!-- Connected Org  -->
-								<input type="hidden" id="connected_orgs" class="orgid"
-									collection="users"
-									document_id=""
-									name="connected_orgs[0]">
 
-								<!-- Current Org  -->
-								<input type="hidden" id="current_org" class="orgid"
-									collection="users"
-									document_id=""
-									name="current_org">
-									
-								<!-- Send Email -->
-								<div template_id="render-key" class="display:block!important">
-									<input type="hidden" placeholder="to email" sendgrid="sendEmail.to" id="email">
-								    <input type="hidden" placeholder="from email" sendgrid="sendEmail.from" value="testing@cocreate.app">
-								    <input type="hidden" placeholder="subject" sendgrid="sendEmail.subject" value="Welcome, {{render-key.name}} — Please confirm your email">
-								    <textarea placeholder="html" sendgrid="sendEmail.html" hidden collection="email-templates" document_id="60bfdaa304ee68b159b63532" name="src"></textarea>
+						</div>
+					</section>
+					<section id="step6" hidden>
+						<div class="animation-wrapper height:224px"></div>
+					</section>
+				</form>
+			</div>
+		</div>
+	</main>
 
-									<div class="display:flex">
-										<button type="button" class="outline white-blue margin-right:15px" show='#step4,#ava4' hide='#step5,#ava5'>Previous</button>
-										<button type="button" class="outline red-white startAnimation" show='#step6,#ava6' hide='#step5,#ava5' actions="validate, animateSignup, showHide, save, runIndustry, renderKey" href="https://{{render-key.domain}}/admin/signin.html">
-											Launch
-										</button>
-									</div>
-								</div>
-								
-							</div>
-						</section>
-	                    <section id="step6" hidden>
-        					<div class="animation-wrapper height:224px"></div>
-	                    </section>
-					</form>
-				</div>
-		    </div>
-		</main>
-		
-		<div class="position:fixed!important bottom:15px right:15px">
-	        <div template="validate" class="card margin:5px padding:10px {{status}}">
-	            <span class="{{type}}">{{message}}</span><a actions="remove"> X</a>
-	        </div>
-	        
-	        <div template="notification" class="card margin:5px padding:10px {{status}}">
-	            <span class="{{type}}">{{message}}</span><a actions="remove"> X</a>
-	        </div>
-        </div>
-		
-        <script src="./apikey.js"></script>
-        <script src="https://cdn.cocreate.app/1.51.0/CoCreate.min.js"></script>
-        
-	</body>
+	<div class="position:fixed!important bottom:15px right:15px">
+		<div template="validate" class="card margin:5px padding:10px {{status}}">
+			<span class="{{type}}">{{message}}</span><a actions="remove"> X</a>
+		</div>
+
+		<div template="notification" class="card margin:5px padding:10px {{status}}">
+			<span class="{{type}}">{{message}}</span><a actions="remove"> X</a>
+		</div>
+	</div>
+
+	<script src="./apikey.js"></script>
+	<script src="https://cdn.cocreate.app/1.51.0/CoCreate.min.js"></script>
+
+</body>
+
 </html>

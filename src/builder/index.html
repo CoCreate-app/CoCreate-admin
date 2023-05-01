@@ -46,47 +46,47 @@
             <ul class="direction:rtl display:inline-flex align-items:center overflow:auto font-size:20px list-style-type:none width:100% height:50px">
 
                 <!-- Modal Controls -->
-                <li class="margin-right:15px"><a actions="closeModal"><i class="fas fa-times"></i></a></li>
+                <li class="margin-right:15px"><a actions="closeModal"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
                 <li class="margin-right:15px"><a actions="minMaxModal"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
-                <li class="margin-right:15px"><a actions="parkModal"><i class="far fa-window-minimize"></i></a></li>
+                <li class="margin-right:15px"><a actions="parkModal"><i class="height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
 
                 <!-- fullscreen toogle and icon transform-->
                 <li class="margin-right:15px"><a fullscreen></a></li>
 
                 <!-- Save and Make live -->
                 <li class="margin-right:15px">
-                    <a actions="saveDomText" pass_id="builder" collection="" document_id="" name="src"><i class="far fa-save"></i></a>
+                    <a actions="saveDomText" pass_id="builder" collection="" document_id="" name="src"><i class="height:20px fill:#505050" src="/assets/svg/save.svg"></i></a>
                 </li>
 
                 <!-- Builder Controls -->
-                <li class="margin-right:15px"><a actions="redo" pass_id="builder" collection="" document_id="" name="src" class=""><i class="fas fa-redo-alt"></i></a></li>
-                <li class="margin-right:15px"><a actions="undo" pass_id="builder" collection="" document_id="" name="src" class=""><i class="fas fa-undo-alt"></i></a></li>
+                <li class="margin-right:15px"><a actions="redo" pass_id="builder" collection="" document_id="" name="src" class=""><i class="height:20px fill:#505050" src="/assets/svg/redo-alt.svg"></i></a></li>
+                <li class="margin-right:15px"><a actions="undo" pass_id="builder" collection="" document_id="" name="src" class=""><i class="height:20px fill:#505050" src="/assets/svg/undo-alt.svg"></i></a></li>
 
 
                 <li class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke" selected-value="max-width:100%" selected-target=".canvas-container" selected-group="screen-size" selected>
-                    <a id="desktop-view" class=""><i class="fas fa-desktop"></i></a>
+                    <a id="desktop-view" class=""><i class="height:20px fill:#505050" src="/assets/svg/desktop.svg"></i></a>
                 </li>
                 <li class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke" selected-value="max-width:768px" selected-target=".canvas-container" selected-group="screen-size">
-                    <a id="tablet-view" class=""><i class="fas fa-tablet-alt"></i></a>
+                    <a id="tablet-view" class=""><i class="height:20px fill:#505050" src="/assets/svg/tablet-alt.svg"></i></a>
                 </li>
                 <li class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke" selected-value="max-width:375px" selected-target=".canvas-container" selected-group="screen-size">
-                    <a id="mobile-view" class=""><i class="fas fa-mobile-alt"></i></a>
+                    <a id="mobile-view" class=""><i class="height:20px fill:#505050" src="/assets/svg/mobile-alt.svg"></i></a>
                 </li>
 
-                <li actions="disableLinks" link-target="#canvas;" class="margin-right:15px" show="[actions='enableLinks']" hide="[actions='disableLinks']"><i class="fas fa-link"></i></li>
-                <li actions="enableLinks" link-target="#canvas;" class="margin-right:15px color:red" hidden show="[actions='disableLinks']" hide="[actions='enableLinks']"><i class="fas fa-unlink"></i></li>
+                <li actions="disableLinks" link-target="#canvas;" class="margin-right:15px" show="[actions='enableLinks']" hide="[actions='disableLinks']"><i class="height:20px fill:#505050" src="/assets/svg/link.svg"></i></li>
+                <li actions="enableLinks" link-target="#canvas;" class="margin-right:15px color:red" hidden show="[actions='disableLinks']" hide="[actions='enableLinks']"><i class="height:20px fill:#505050" src="/assets/svg/unlink.svg"></i></li>
 
                 <li class="margin-right:15px" show="iframe; .template, iframe; [templateid]" hide="iframe; [templateid], iframe; .template">Q</li>
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
                     <a actions="pass, openModal" modal-src="./code-editor/index.html" modal-width="900px" modal-color="#229954">
-                        <i class="fa fa-code"></i>
+                        <i class="height:20px fill:#505050" src="/assets/svg/code.svg"></i>
                         <div pass_id="builder" pass-collection="" pass-document_id="" name="" pass_to="code-editor"></div>
                     </a>
                 </li>
-                <li class="margin-right:15px"><a id='element-borders' class=""><i class="far fa-square"></i></a></li>
-                <li class="margin-right:15px padding-left:15px"><a id="clean-canvas"><i class="far fa-trash-alt"></i></a></li>
+                <li class="margin-right:15px"><a id='element-borders' class=""><i class="height:20px fill:#505050" src="/assets/svg/square.svg"></i></a></li>
+                <li class="margin-right:15px padding-left:15px"><a id="clean-canvas"><i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i></a></li>
             </ul>
 
             <!-- Menu Icon Arrow Right Animations -->
@@ -128,12 +128,12 @@
         <toolbar toolbar-placement="top" toolbar-target="iframe;" toolbar-event="click" config-key="selectable" class="position:absolute pointer-events:none display:none">
             <tools class="display:flex justify-content:space-between width:100% color:white font-size:11px z-index:7">
                 <span class="padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid" tagName></span>
-                <!--<span class="padding:3px background:dodgerblue pointer-events:auto"><i class="fas fa-arrows-alt"></i></span>-->
+                <!--<span class="padding:3px background:dodgerblue pointer-events:auto"><i class="height:20px fill:#505050" src="/assets/svg/arrows-alt.svg"></i></span>-->
                 <div class="display:flex align-items:center padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid pointer-events:auto">
-                    <span actions="cloneElement" class="margin-right:10px"><i class="far fa-clone"></i></span>
-                    <span actions="remove" remove-target="iframe;" class="margin-right:10px"><i class="fas fa-trash-alt"></i></span>
-                    <span actions="previousElement" class="margin-right:10px"><i class="fas fa-arrow-up"></i></span>
-                    <span actions="nextElement"><i class="fas fa-arrow-down"></i></span>
+                    <span actions="cloneElement" class="margin-right:10px"><i class="height:20px fill:#505050" src="/assets/svg/clone.svg"></i></span>
+                    <span actions="remove" remove-target="iframe;" class="margin-right:10px"><i class="height:20px fill:#505050" src="/assets/svg/trash-alt.svg"></i></span>
+                    <span actions="previousElement" class="margin-right:10px"><i class="height:20px fill:#505050" src="/assets/svg/arrow-up.svg"></i></span>
+                    <span actions="nextElement"><i class="height:20px fill:#505050" src="/assets/svg/arrow-down.svg"></i></span>
                 </div>
             </tools>
             <div class="height:100% width:100% border:2px_dodgerblue_solid"></div>
@@ -151,30 +151,30 @@
         <!-- Collaboration Toolbar -->
         <div toolbar-placent="top" toolbar-target="iframe;" toolbar-event="mouseup" config-key="editable" class="toolbar position:absolute pointer-events:none display:none">
             <tools class="display:flex align-items:center width:fit-content background:gainsboro border-radius:5px pointer-events:auto z-index:7">
-                <div actions="nodeName" nodeName="b" nodeTarget="#canvas;" classname="rte-btn" class="padding:5px" id="bold-button"><i class="fa fa-bold"></i></div>
-                <div actions="nodeName" nodeName="i" nodeTarget="#canvas;" class="rte-btn" id="italic-button"><i class="fa fa-italic"></i></div>
-                <div class="rte-btn" id="link-button" show="#link" hide="#link"><i class="fa fa-link"></i></div>
+                <div actions="nodeName" nodeName="b" nodeTarget="#canvas;" classname="rte-btn" class="padding:5px" id="bold-button"><i class="height:20px fill:#505050" src="/assets/svg/bold.svg"></i></div>
+                <div actions="nodeName" nodeName="i" nodeTarget="#canvas;" class="rte-btn" id="italic-button"><i class="height:20px fill:#505050" src="/assets/svg/italic.svg"></i></div>
+                <div class="rte-btn" id="link-button" show="#link" hide="#link"><i class="height:20px fill:#505050" src="/assets/svg/link.svg"></i></div>
                 <div id="link" class="position:absolute display:flex align-items:center transition:0.4s background:gainsboro height:28px border-radius:5px" hidden>
                     <input type="text" name="" />
-                    <div actions="nodeName" nodeName="a" nodeTarget="#canvas;" class="rte-btn" id="link-button"><i class="fa fa-link"></i></div>
-                    <div hide="#link"><i class="fa fa-times"></i></div>
+                    <div actions="nodeName" nodeName="a" nodeTarget="#canvas;" class="rte-btn" id="link-button"><i class="height:20px fill:#505050" src="/assets/svg/link.svg"></i></div>
+                    <div hide="#link"><i class="height:20px fill:#505050" src="/assets/svg/times.svg"></i></div>
                 </div>
-                <div actions="nodeName" nodeName="q" nodeTarget="#canvas;" class="rte-btn" id="quote-button"><i class="fa fa-quote-right"></i></div>
-                <div class="rte-btn" id="heading-btn" hover="width:fit-content" hover-target="#headings"><i class="fas fa-heading"></i></div>
+                <div actions="nodeName" nodeName="q" nodeTarget="#canvas;" class="rte-btn" id="quote-button"><i class="height:20px fill:#505050" src="/assets/svg/quote-right.svg"></i></div>
+                <div class="rte-btn" id="heading-btn" hover="width:fit-content" hover-target="#headings"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i></div>
                 <div id="headings" hover="width:fit-content" hover-target="#headings" class="position:absolute display:flex align-items:center transition:0.4s width:0px background:gainsboro overflow:hidden height:28px border-radius:5px">
-                    <div actions="nodeName" nodeName="h1" nodeTarget="#canvas;" class="rte-btn" id="header-1-button"><i class="fas fa-heading"></i><sub>1</sub></div>
-                    <div actions="nodeName" nodeName="h2" nodeTarget="#canvas;" class="rte-btn" id="header-2-button"><i class="fas fa-heading"></i><sub>2</sub></div>
-                    <div actions="nodeName" nodeName="h3" nodeTarget="#canvas;" class="rte-btn" id="header-1-button"><i class="fas fa-heading"></i><sub>3</sub></div>
-                    <div actions="nodeName" nodeName="h4" nodeTarget="#canvas;" class="rte-btn" id="header-2-button"><i class="fas fa-heading"></i><sub>4</sub></div>
-                    <div actions="nodeName" nodeName="h5" nodeTarget="#canvas;" class="rte-btn" id="header-1-button"><i class="fas fa-heading"></i><sub>5</sub></div>
-                    <div actions="nodeName" nodeName="h6" nodeTarget="#canvas;" class="rte-btn" id="header-2-button"><i class="fas fa-heading"></i><sub>6</sub></div>
+                    <div actions="nodeName" nodeName="h1" nodeTarget="#canvas;" class="rte-btn" id="header-1-button"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i><sub>1</sub></div>
+                    <div actions="nodeName" nodeName="h2" nodeTarget="#canvas;" class="rte-btn" id="header-2-button"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i><sub>2</sub></div>
+                    <div actions="nodeName" nodeName="h3" nodeTarget="#canvas;" class="rte-btn" id="header-1-button"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i><sub>3</sub></div>
+                    <div actions="nodeName" nodeName="h4" nodeTarget="#canvas;" class="rte-btn" id="header-2-button"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i><sub>4</sub></div>
+                    <div actions="nodeName" nodeName="h5" nodeTarget="#canvas;" class="rte-btn" id="header-1-button"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i><sub>5</sub></div>
+                    <div actions="nodeName" nodeName="h6" nodeTarget="#canvas;" class="rte-btn" id="header-2-button"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i><sub>6</sub></div>
                 </div>
-                <div class="rte-btn" id="show-controls" show="#sidebar-controls" hide="#sidebar-controls"><i class="fa fa-plus"></i></div>
+                <div class="rte-btn" id="show-controls" show="#sidebar-controls" hide="#sidebar-controls"><i class="height:20px fill:#505050" src="/assets/svg/plus.svg"></i></div>
                 <div id="sidebar-controls" class="display:flex align-items:center" hidden>
-                    <div class="rte-btn" id="image-button"><i class="fa fa-camera"></i></div>
-                    <div class="rte-btn" id="video-button"><i class="fa fa-play"></i></div>
-                    <div class="rte-btn" id="tweet-button"><i class="fa fa-twitter"></i></div>
-                    <div class="rte-btn" id="divider-button"><i class="fa fa-minus"></i></div>
+                    <div class="rte-btn" id="image-button"><i class="height:20px fill:#505050" src="/assets/svg/camera.svg"></i></div>
+                    <div class="rte-btn" id="video-button"><i class="height:20px fill:#505050" src="/assets/svg/play.svg"></i></div>
+                    <div class="rte-btn" id="tweet-button"><i class="height:20px fill:#505050" src="/assets/svg/twitter.svg"></i></div>
+                    <div class="rte-btn" id="divider-button"><i class="height:20px fill:#505050" src="/assets/svg/minus.svg"></i></div>
                 </div>
             </tools>
             <div class="height:100% width:100% pointer-events:none"></div>
@@ -195,7 +195,7 @@
                 { selector: ".floating-label", draggable: false, selectable: true, hoverable: true },
                 { selector: "a.menu_icon", tagName: "icon", draggable: true, selectable: true, hoverable: true },
                 { selector: "a.menu_icon span", selectable: false },
-                { selector: "[collection], [document_id], [name], [fetch-collection]", label: "{{tagName}} <i class='fas fa-database'></i>", draggable: true, droppable: true, selectable: true, hoverable: true },
+                { selector: "[collection], [document_id], [name], [fetch-collection]", label: "{{tagName}} <i class='height:20px fill:#505050' src='/assets/svg/database.svg'></i>", draggable: true, droppable: true, selectable: true, hoverable: true },
             ];
         </script>
         

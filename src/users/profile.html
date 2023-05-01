@@ -29,9 +29,9 @@
 			<ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
 
 				<!-- Modal Controls -->
-				<li class="margin-right:15px"><a actions="closeModal"><i class="fas fa-times"></i></a></li>
+				<li class="margin-right:15px"><a actions="closeModal"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
 				<li class="margin-right:15px"><a actions="minMaxModal"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
-				<li class="margin-right:15px"><a actions="parkModal"><i class="far fa-window-minimize"></i></a></li>
+				<li class="margin-right:15px"><a actions="parkModal"><i class="height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
 
 				<!-- fullscreen toogle and icon transform-->
 				<li class="margin-right:15px"><a fullscreen></a></li>
@@ -39,7 +39,7 @@
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
 					<a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="fas fa-cog"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
                         <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
                         <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
                     </a>
@@ -48,7 +48,7 @@
 				<!-- Render Code Editor -->
 				<li class="margin-right:15px">
 					<a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="fas fa-code"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
 				</li>
@@ -56,7 +56,7 @@
 				<!-- Render Builder -->
 				<li class="margin-right:15px">
 					<a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="fas fa-palette"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
 				</li>
@@ -74,11 +74,11 @@
 					</div>
 				</span>
 
-				<!--<a class="add-button blue" id="upload" show='#save' hide='#upload'><i class="fas fa-images"></i></a>-->
-				<button class="imageUpload position:relative left:20px bottom:20px height:40px width:40px background:dodgerblue border-radius:50% color:#fff grow-hover" data-uploader_id="image" id="upload" show='#save,#image' hide='#upload,#profile-image'><i class="fas fa-images"></i>
+				<!--<a class="add-button blue" id="upload" show='#save' hide='#upload'><i class="height:16px fill:#505050" src="/assets/svg/images.svg"></i></a>-->
+				<button class="imageUpload position:relative left:20px bottom:20px height:40px width:40px background:dodgerblue border-radius:50% color:#fff grow-hover" data-uploader_id="image" id="upload" show='#save,#image' hide='#upload,#profile-image'><i class="height:16px fill:#505050" src="/assets/svg/images.svg"></i>
 				</button>
 				<button class="imageSave position:relative left:20px bottom:20px height:40px width:40px background:yellowgreen border-radius:50% color:#fff grow-hover" hidden data-uploader_id="image" id="save" show='#uploaad' hide='#save'>
-				  <i class="far fa-save"></i>
+				  <i class="height:20px fill:#505050" src="/assets/svg/save.svg"></i>
 				</button>
 				<div class="position:relative bottom:80px width:100% color:#fff font-size:26px padding:6px_35px background:black opacity:0.4 height:40px">
 					<span class="float:right" collection="users" name="name" document_id="{{userId}}" localstorage-get="user_id" localstorage-key="userId">test</span>
@@ -94,7 +94,7 @@
 			</div>
 		</div>
 		<button actions="save" class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover border-radius:50%">
-			<i class="fas fa-pencil-alt"></i>
+			<i class="height:20px fill:#505050" src="/assets/svg/pencil-alt.svg"></i>
 		</button>
 
 

@@ -2,18 +2,18 @@
             
             <div class="display:flex margin-bottom:5px font-size:16px tabs">
                 <div className="builder-tab-round" class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover" selected-value="active" selected-target="#vdom" selected-group="left-panels" toggle="#canvas" toggle-target="#vdom" toggle-attribute="vdom-target">
-                    <i class="fas fa-stream"></i>
+                    <i class="height:20px fill:#505050" src="/assets/svg/stream.svg"></i>
                 </div>
                 <div class="builder-tab-round" selected-value="active" selected-target="#assets" selected-group="left-panels" toggle="files" toggle-target="#fetch-assets" toggle-attribute="fetch-collection">
-                    <i class="fas fa-photo-video"></i>
+                    <i class="height:16px fill:#505050" src="/assets/svg/photo-video.svg"></i>
                 </div>
                 <div class="builder-tab-round" selected-value="active" selected-target="#files" selected-group="left-panels" toggle="files" toggle-target=".fetch-files" toggle-attribute="fetch-collection">
-                    <i class="fas fa-folder"></i></div>
+                    <i class="height:16px fill:#505050" src="/assets/svg/folder.svg"></i></div>
                 <div class="builder-tab-round" selected-value="active" selected-target="#uploader" selected-group="left-panels"  toggle="uppy" toggle-target="#uppy" toggle-attribute="uploader">
-                    <i class="fas fa-cloud-upload-alt"></i>
+                    <i class="height:16px fill:#505050" src="/assets/svg/cloud-upload-alt.svg"></i>
                 </div>
                 <div class="builder-tab-round" selected-value="active" selected-target="#blocks" selected-group="left-panels" selected>
-                    <i class="fas fa-th-large"></i>
+                    <i class="height:16px fill:#505050" src="/assets/svg/th-large.svg"></i>
                 </div>
             </div>
             
@@ -26,7 +26,7 @@
                         <div class="card background:gainsboro width:50% text-align:center padding:5px" selected-value="active" selected-target="#components" selected-group="components" selected>Components</div>
                         <button class="position:absolute top:13px padding:5px background:gainsboro color:#505050 grow-hover border-radius:50%">
                             <a actions="pass, openModal" modal-src="./marketplace/list.html" modal-width="840px">
-                                <i class="fas fa-plus"></i>
+                                <i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i>
                             </a>
                         </button>
                     </div>
@@ -39,8 +39,8 @@
                          <!-- Block Categories Template -->
                         <div template="block-categories" document_id="{{tag._id}}">
                             <div class="padding:5px background:gainsboro" show=".category{{tag._id}}" hide=".category{{tag._id}}">
-                                <span class="category{{tag._id}}" hidden><i class="fas fa-plus"></i></span>
-                                <span class="category{{tag._id}}"><i class="fas fa-minus"></i></span>
+                                <span class="category{{tag._id}}" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                                <span class="category{{tag._id}}"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                                 <span>{{tag.name}}</span>
                             </div>
                              <!-- Blocks  -->
@@ -49,7 +49,7 @@
                                 <div template="block{{tag._id}}" class="card position:relative flex-grow:1 width:70px height:75px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{document._id}}" document_id="{{document._id}}">
                                     <div id="editblock{{document._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                         <a actions="pass, openModal" modal-src="./blocks/form.html" pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields" modal-width="320px">
-                                            <i class="fas fa-pencil-alt"></i>
+                                            <i class="height:20px fill:#505050" src="/assets/svg/pencil-alt.svg"></i>
                                         </a>
                                     </div>
                                     <div cloneable="true" class="height:65px padding:5px">
@@ -69,8 +69,8 @@
                          <!-- Components Categories Template -->
                         <div template="component-categories" document_id="{{tag._id}}">
                             <div class="padding:5px background:gainsboro" show=".category{{tag._id}}" hide=".category{{tag._id}}">
-                                <span class="category{{tag._id}}" hidden><i class="fas fa-plus"></i></span>
-                                <span class="category{{tag._id}}"><i class="fas fa-minus"></i></span>
+                                <span class="category{{tag._id}}" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                                <span class="category{{tag._id}}"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                                 <span>{{tag.name}}</span>
                             </div>
                              <!-- Components -->
@@ -79,7 +79,7 @@
                                 <div template="component{{tag._id}}" class="card position:relative flex-grow:1 width:70px height:125px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{document._id}}">
                                     <div id="editblock{{document._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                         <a actions="pass, openModal" modal-src="./blocks/form.html" pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass_to="form-fields" modal-width="320px">
-                                            <i class="fas fa-pencil-alt"></i>
+                                            <i class="height:20px fill:#505050" src="/assets/svg/pencil-alt.svg"></i>
                                         </a>
                                     </div>
                                     <div cloneable="true" cloneable-html='{{document.html}}' class="height:115px padding:5px">
@@ -115,7 +115,7 @@
                         <input type="text" class="floating-label" pass_to="results">
                         <span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
         					<a actions="pass, openModal" pass_to="render" collection="website-pages" document_id="" pass-name="src" modal-width="900px" modal-color="#229954">
-        						<i class="fas fa-search"></i>
+        						<i class="height:20px fill:#505050" src="/assets/svg/search.svg"></i>
         					</a>
         				</span>
                     </form>
@@ -141,7 +141,7 @@
 
                              <!-- File Template -->
                             <div class="padding:5px" template="$auto" document_id="{{$auto._id}}">
-                                <span class="{{$auto.content-type}}"><i class="fab fa-html5"></i></span>
+                                <span class="{{$auto.content-type}}"><i class="height:20px fill:#505050" src="/assets/svg/html5.svg"></i></span>
                                 <span class="margin-left:5px" collection="files" document_id="{{$auto._id}}" name="name"></span>
                             </div>
                         </div>
@@ -155,7 +155,7 @@
                         <input type="text" class="floating-label" pass_to="results">
                         <span class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
         					<a actions="pass, openModal" pass_to="render" collection="website-pages" document_id="" pass-name="src" modal-width="900px" modal-color="#229954">
-        						<i class="fas fa-search"></i>
+        						<i class="height:20px fill:#505050" src="/assets/svg/search.svg"></i>
         					</a>
         				</span>
                     </form>
@@ -174,7 +174,7 @@
                         <div template="assets" class="card position:relative flex-grow:1 width:105px height:90px margin:5px padding:5px" hover="display:block!important" hover-target="#editblock{{document._id}}">
                             <div id="editblock{{document._id}}" class="position:absolute top:8px right:8px font-size:11px display:none">
                                 <a actions="pass, openModal" modal-src="https://server.cocreate.app/CoCreate-plugins/CoCreate-tui-image-editor/demo/index.html" pass-collection="files" pass-document_id="{{document._id}}" pass_to="form-fields" modal-width="900px">
-                                    <i class="fas fa-pencil-alt"></i>
+                                    <i class="height:20px fill:#505050" src="/assets/svg/pencil-alt.svg"></i>
                                 </a>
                             </div>
                             <a actions="attributes" attribute="src" value="{{document.path}}" attribute-target="iframe;">

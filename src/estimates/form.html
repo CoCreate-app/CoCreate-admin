@@ -29,9 +29,9 @@
             <ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
 
                 <!-- Modal Controls -->
-                <li class="margin-right:15px"><a actions="closeModal"><i class="fas fa-times"></i></a></li>
+                <li class="margin-right:15px"><a actions="closeModal"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
                 <li class="margin-right:15px"><a actions="minMaxModal"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
-                <li class="margin-right:15px"><a actions="parkModal"><i class="far fa-window-minimize"></i></a></li>
+                <li class="margin-right:15px"><a actions="parkModal"><i class="height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
 
                 <!-- fullscreen toogle and icon transform-->
                 <li class="margin-right:15px"><a fullscreen></a></li>
@@ -39,7 +39,7 @@
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
                     <a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="fas fa-cog"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
                         <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
                         <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
                     </a>
@@ -48,7 +48,7 @@
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
                     <a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="fas fa-code"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -56,7 +56,7 @@
                 <!-- Render Builder -->
                 <li class="margin-right:15px">
                     <a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="fas fa-palette"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
                 </li>
@@ -64,7 +64,7 @@
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
                     <a actions="deleteDocument, closeModal" collection="module_activities" document_id="" pass_id="form-fields">
-                        <i class="far fa-trash-alt"></i>
+                        <i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i>
                     </a>
                 </li>
             </ul>
@@ -141,8 +141,8 @@
                         </div>
 
                         <div class="padding:10px display:flex justify-content:space-between flex-direction:column">
-                            <a actions="deleteDocument, closeModal" collection="{{document.collection}}" document_id="{{document._id}}" class="text-align-center"><i class="fas fa-times"></i></a>
-                            <a><i class="fas fa-cog"></i></a>
+                            <a actions="deleteDocument, closeModal" collection="{{document.collection}}" document_id="{{document._id}}" class="text-align-center"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a>
+                            <a><i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i></a>
                         </div>
                     </form>
 
@@ -151,7 +151,7 @@
                 <div class="noDrag padding-top:10px">
                     <form realtime="false" collection="items-ordered" document_id="">
                         <input type="hidden" name="estimate_id">
-                        <a actions="save, reset" class="noDrag padding:10px background:gainsboro"><i class="fas fa-plus"></i> Add Item</a>
+                        <a actions="save, reset" class="noDrag padding:10px background:gainsboro"><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i> Add Item</a>
                     </form>
                 </div>
             </div>

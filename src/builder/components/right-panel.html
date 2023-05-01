@@ -24,12 +24,12 @@
     <form id="domEditorPanel" pass_id="builder" collection="" document_id="" crud="false" save="false" read="false" class="min-width:305px">
         <div class="padding-left:5px padding-top:5px">
             <div class="display:flex margin-bottom:5px font-size:16px tabs">
-                <div className="builder-tab-round" class="builder-tab-round width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover" selected-value="active" selected-target="#styles" selected-group="editor-panels" selected><i class="fas fa-paint-brush"></i></div>
-                <div class="builder-tab-round" selected-value="active" selected-target="#database" selected-group="editor-panels"><i class="fas fa-database"></i></div>
-                <div class="builder-tab-round" selected-value="active" selected-target="#broadcast" selected-group="editor-panels"><i class="fas fa-broadcast-tower"></i></div>
-                <div class="builder-tab-round" selected-value="active" selected-target="#logic" selected-group="editor-panels"><i class="fas fa-brain"></i></div>
-                <div class="builder-tab-round" selected-value="active" selected-target="#plugins" selected-group="editor-panels"><i class="fas fa-plug"></i></div>
-                <div class="builder-tab-round" selected-value="active" selected-target="#settings" selected-group="editor-panels"><i class="fas fa-cog"></i></div>
+                <div className="builder-tab-round" class="builder-tab-round width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover" selected-value="active" selected-target="#styles" selected-group="editor-panels" selected><i class="height:20px fill:#505050" src="/assets/svg/paint-brush.svg"></i></div>
+                <div class="builder-tab-round" selected-value="active" selected-target="#database" selected-group="editor-panels"><i class="height:20px fill:#505050" src="/assets/svg/database.svg"></i></div>
+                <div class="builder-tab-round" selected-value="active" selected-target="#broadcast" selected-group="editor-panels"><i class="height:20px fill:#505050" src="/assets/svg/broadcast-tower.svg"></i></div>
+                <div class="builder-tab-round" selected-value="active" selected-target="#logic" selected-group="editor-panels"><i class="height:20px fill:#505050" src="/assets/svg/brain.svg"></i></div>
+                <div class="builder-tab-round" selected-value="active" selected-target="#plugins" selected-group="editor-panels"><i class="height:20px fill:#505050" src="/assets/svg/plug.svg"></i></div>
+                <div class="builder-tab-round" selected-value="active" selected-target="#settings" selected-group="editor-panels"><i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i></div>
             </div>
             <div class="overflow:auto height:90vh">
                 <div class="">
@@ -42,8 +42,8 @@
                     </div>
                     <!--Layout -->
                     <div class="padding:5px background:gainsboro" show=".sizing" hide=".sizing">
-                        <span class="sizing" hidden><i class="fas fa-plus"></i></span>
-                        <span class="sizing"><i class="fas fa-minus"></i></span>
+                        <span class="sizing" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="sizing"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Layout</span>
                     </div>
                     <div class="sizing padding-bottom:20px">
@@ -106,8 +106,8 @@
                     </div>
                      <!--Spacing -->
                     <div class="padding:5px background:gainsboro" show=".spacing" hide=".spacing">
-                        <span class="spacing" hidden><i class="fas fa-plus"></i></span>
-                        <span class="spacing"><i class="fas fa-minus"></i></span>
+                        <span class="spacing" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="spacing"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Spacing</span>
                     </div>
                     <div class="spacing padding-bottom:20px">
@@ -208,8 +208,8 @@
                     </div>
                      <!--Size -->
                     <div class="padding:5px background:gainsboro" show=".size" hide=".size">
-                        <span class="size" hidden><i class="fas fa-plus"></i></span>
-                        <span class="size"><i class="fas fa-minus"></i></span>
+                        <span class="size" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="size"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Size</span>
                     </div>
                     <div class="size padding-bottom:20px">
@@ -288,8 +288,8 @@
                     </div>
                      <!--Position -->
                     <div class="padding:5px background:gainsboro" show=".position" hide=".position">
-                        <span class="position" hidden><i class="fas fa-plus"></i></span>
-                        <span class="position"><i class="fas fa-minus"></i></span>
+                        <span class="position" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="position"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Position</span>
                     </div>
                     <div class="position padding-bottom:20px">
@@ -344,8 +344,8 @@
                     </div>
                      <!--typography -->
                     <div class="padding:5px background:gainsboro" show=".typography" hide=".typography">
-                        <span class="typography" hidden><i class="fas fa-plus"></i></span>
-                        <span class="typography"><i class="fas fa-minus"></i></span>
+                        <span class="typography" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="typography"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Typography</span>
                     </div>
                     <div class="typography padding-bottom:20px">
@@ -394,16 +394,16 @@
                             <cocreate-select id="text-align" class="floating-label" placeholder="text-align:" attribute="classstyle" attribute-property="text-align"  pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
                                 <ul class="options z-index:7 margin-top:5px">
                                     <cc-option value="left">
-                                        <label class="fa fa-align-left"></label>
+                                        <i class="height:16px fill:#505050" src="/assets/svg/align-left.svg"></i>
                                     </cc-option>
                                     <cc-option value="center">
-                                        <label class="fa fa-align-center"></label>
+                                        <i class="height:16px fill:#505050" src="/assets/svg/align-center.svg"></i>
                                     </cc-option>
                                     <cc-option value="right">
-                                        <label class="fa fa-align-right"></label>
+                                        <i class="height:16px fill:#505050" src="/assets/svg/align-right.svg"></i>
                                     </cc-option>
                                     <cc-option value="justify">
-                                        <label class="fa fa-align-justify"></label>
+                                        <i class="height:16px fill:#505050" src="/assets/svg/align-justify.svg"></i>
                                     </cc-option>
                                 </ul>
                             </cocreate-select>
@@ -412,13 +412,13 @@
                                 <cocreate-select id="text-decoration" class="floating-label" placeholder="text-decoration:" attribute="classstyle" attribute-property="text-decoration" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
                                     <ul class="options z-index:7 margin-top:5px">
                                         <cc-option value="x">
-                                            <span class="fa fa-times"></span>
+                                            <i class="height:16px fill:#505050" src="/assets/svg/times.svg"></i>
                                         </cc-option>
                                         <cc-option value="u">
-                                            <span class="fa fa-underline"></span>
+                                            <i class="height:16px fill:#505050" src="/assets/svg/underline.svg"></i>
                                         </cc-option>
                                         <cc-option value="s">
-                                            <span class="fa fa-strikethrough"></span>
+                                            <i class="height:16px fill:#505050" src="/assets/svg/strikethrough.svg"></i>
                                         </cc-option>
                                     </ul>
                                 </cocreate-select>
@@ -427,10 +427,10 @@
                             <cocreate-select class="remove-none floating-label" placeholder="font-style:" attribute="classstyle" attribute-property="font-style"  pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
                                 <ul class="options z-index:7 margin-top:5px">
                                     <cc-option value="a">
-                                        <label class="fa fa-font"></label>
+                                        <i class="height:16px fill:#505050" src="/assets/svg/font.svg"></i>
                                     </cc-option>
                                     <cc-option value="em">
-                                        <label class="fa fa-italic"></label>
+                                        <i class="height:16px fill:#505050" src="/assets/svg/italic.svg"></i>
                                     </cc-option>
                                 </ul>
                             </cocreate-select>
@@ -438,8 +438,8 @@
                     </div>
                      <!--Border -->
                     <div class="padding:5px background:gainsboro" show=".border" hide=".border">
-                        <span class="border" hidden><i class="fas fa-plus"></i></span>
-                        <span class="border"><i class="fas fa-minus"></i></span>
+                        <span class="border" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="border"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Border</span>
                     </div>
                     <div class="border padding-bottom:20px">
@@ -490,8 +490,8 @@
                     </div>
                      <!--Shadow -->
                     <div class="padding:5px background:gainsboro" show=".shadow" hide=".shadow">
-                        <span class="shadow" hidden><i class="fas fa-plus"></i></span>
-                        <span class="shadow"><i class="fas fa-minus"></i></span>
+                        <span class="shadow" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="shadow"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Shadow</span>
                     </div>
                     <div class="shadow padding-bottom:20px">
@@ -552,8 +552,8 @@
                     </div>    
                     <!--Background-->
                     <div class="padding:5px background:gainsboro" show=".backgroundset" hide=".backgroundset">
-                        <span class="backgroundset" hidden><i class="fas fa-plus"></i></span>
-                        <span class="backgroundset"><i class="fas fa-minus"></i></span>
+                        <span class="backgroundset" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="backgroundset"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Background</span>
                     </div>
                     <div class="backgroundset padding-bottom:20px">
@@ -607,8 +607,8 @@
                     </div>
                      <!--Extra -->
                     <div class="padding:5px background:gainsboro" show=".extra" hide=".extra">
-                        <span class="extra" hidden><i class="fas fa-plus"></i></span>
-                        <span class="extra"><i class="fas fa-minus"></i></span>
+                        <span class="extra" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="extra"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Extra</span>
                     </div>
                     <div class="extra padding:10px_0">
@@ -747,8 +747,8 @@
                 <!--dataBase  -->
                 <div id="database" class="editor-panel display:none">
                     <div class="padding:5px background:gainsboro" show=".database" hide=".database">
-                        <span class="database" hidden><i class="fas fa-plus"></i></span>
-                        <span class="database"><i class="fas fa-minus"></i></span>
+                        <span class="database" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="database"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Database</span>
                     </div>
                     <div class="database padding-bottom:20px">
@@ -853,8 +853,8 @@
                         </div>
                     </div>
                     <div class="padding:5px background:gainsboro" show=".fetchlist" hide=".fetchlist">
-                        <span class="fetchlist" hidden><i class="fas fa-plus"></i></span>
-                        <span class="fetchlist"><i class="fas fa-minus"></i></span>
+                        <span class="fetchlist" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="fetchlist"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Fetch List</span>
                     </div>
                     <div class="fetchlist padding-bottom:20px margin:0_5px">
@@ -879,8 +879,8 @@
                 <!--Broadcast -->
                 <div id="broadcast" class="editor-panel display:none">
                     <div class="padding:5px background:gainsboro" show=".broadcast" hide=".broadcast">
-                        <span class="broadcast" hidden><i class="fas fa-plus"></i></span>
-                        <span class="broadcast"><i class="fas fa-minus"></i></span>
+                        <span class="broadcast" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="broadcast"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Broadcast</span>
                     </div>
                     <div class="broadcast padding-bottom:20px margin:0_5px">
@@ -903,8 +903,8 @@
                     </div>
                     <!--Messages -->
                     <div class="padding:5px background:gainsboro" show=".messages" hide=".messages">
-                        <span class="messages" hidden><i class="fas fa-plus"></i></span>
-                        <span class="messages"><i class="fas fa-minus"></i></span>
+                        <span class="messages" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="messages"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>messages</span>
                     </div>
                     <div class="messages padding-bottom:20px margin:0_5px">
@@ -914,8 +914,8 @@
                 <!--Logic -->
                 <div id="logic" class="editor-panel display:none">
                     <div class="padding:5px background:gainsboro" show=".logic" hide=".logic">
-                        <span class="logic" hidden><i class="fas fa-plus"></i></span>
-                        <span class="logic"><i class="fas fa-minus"></i></span>
+                        <span class="logic" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="logic"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Logic</span>
                     </div>
                     <div class="logic padding-bottom:20px margin:0_5px">
@@ -971,8 +971,8 @@
                         </cocreate-select>
                     </div>
                     <div class="padding:5px background:gainsboro" show=".datavisible" hide=".datavisible">
-                        <span class="datavisible" hidden><i class="fas fa-plus"></i></span>
-                        <span class="datavisible"><i class="fas fa-minus"></i></span>
+                        <span class="datavisible" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="datavisible"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Conditional Logic</span>
                     </div>
                     <div class="datavisible padding-bottom:20px margin:0_5px">
@@ -980,8 +980,8 @@
                         <input attribute="hide" type="text" class="floating-label" placeholder="hide"  id="hide" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
                     </div>
                     <div class="padding:5px background:gainsboro" show=".dataselected" hide=".dataselected">
-                        <span class="dataselected" hidden><i class="fas fa-plus"></i></span>
-                        <span class="dataselected"><i class="fas fa-minus"></i></span>
+                        <span class="dataselected" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="dataselected"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Selected</span>
                     </div>
                     <div class="dataselected padding-bottom:20px margin:0_5px">
@@ -992,8 +992,8 @@
                         <input attribute="selected-group" type="text" class="floating-label" placeholder="selected-group"  id="selected-group" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
                     </div>
                     <div class="padding:5px background:gainsboro" show=".toggleattr" hide=".toggleattr">
-                        <span class="toggleattr" hidden><i class="fas fa-plus"></i></span>
-                        <span class="toggleattr"><i class="fas fa-minus"></i></span>
+                        <span class="toggleattr" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="toggleattr"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Toggle</span>
                     </div>
                     <div class="toggleattr padding-bottom:20px margin:0_5px">
@@ -1003,8 +1003,8 @@
                         <input attribute="toggle-closest" type="text" class="floating-label" placeholder="toggle-closest"  id="toggle-closest" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
                     </div>
                     <div class="padding:5px background:gainsboro" show=".hoverattr" hide=".hoverattr">
-                        <span class="hoverattr" hidden><i class="fas fa-plus"></i></span>
-                        <span class="hoverattr"><i class="fas fa-minus"></i></span>
+                        <span class="hoverattr" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="hoverattr"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Hover</span>
                     </div>
                     <div class="hoverattr padding-bottom:20px margin:0_5px">
@@ -1014,8 +1014,8 @@
                         <input type="text" attribute="hover-closest" class="floating-label" placeholder="hover-closest"  id="hover-closest" pass_id="builder" attribute-target="iframe;" collection="" document_id="" crud="false" save="false" read="false" active>
                     </div>
                     <div class="padding:5px background:gainsboro" show=".scroll" hide=".scroll">
-                        <span class="scroll" hidden><i class="fas fa-plus"></i></span>
-                        <span class="scroll"><i class="fas fa-minus"></i></span>
+                        <span class="scroll" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="scroll"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Scroll</span>
                     </div>
                     <div class="scroll padding-bottom:20px">
@@ -1069,8 +1069,8 @@
                     </div>
                      <!--Clone -->
                     <div class="padding:5px background:gainsboro" show=".clone" hide=".clone">
-                        <span class="clone" hidden><i class="fas fa-plus"></i></span>
-                        <span class="clone"><i class="fas fa-minus"></i></span>
+                        <span class="clone" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="clone"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Clone</span>
                     </div>
                     <div class="clone padding-bottom:20px margin:0_5px">
@@ -1078,8 +1078,8 @@
                     </div>
                       <!--Calculations -->
                      <div class="padding:5px background:gainsboro" show=".calculate" hide=".calculate">
-                        <span class="calculate" hidden><i class="fas fa-plus"></i></span>
-                        <span class="calculate"><i class="fas fa-minus"></i></span>
+                        <span class="calculate" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="calculate"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>Calculations</span>
                     </div>
                     <div class="calculate padding-bottom:20px margin:0_5px">
@@ -1089,8 +1089,8 @@
                 <!--Plugins -->
                 <div id="plugins" class="editor-panel display:none">
                     <div class="padding:5px background:gainsboro" show=".plugins" hide=".plugins">
-                        <span class="plugins" hidden><i class="fas fa-plus"></i></span>
-                        <span class="plugins"><i class="fas fa-minus"></i></span>
+                        <span class="plugins" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="plugins"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>stripe</span>
                     </div>
                     <div class="plugins padding-bottom:20px margin:0_5px">
@@ -1111,8 +1111,8 @@
                     </div>
                     <!--sendgrd -->
                     <div class="padding:5px background:gainsboro" show=".sendgrid" hide=".sendgrid">
-                        <span class="sendgrid" hidden><i class="fas fa-plus"></i></span>
-                        <span class="sendgrid"><i class="fas fa-minus"></i></span>
+                        <span class="sendgrid" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="sendgrid"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>sendgrid</span>
                     </div>
                     <div class="sendgrid padding-bottom:20px margin:0_5px">
@@ -1138,8 +1138,8 @@
                 <!--settings -->
                 <div id="settings" class="editor-panel display:none">
                     <div class="padding:5px background:gainsboro" show=".settings" hide=".settings">
-                        <span class="settings" hidden><i class="fas fa-plus"></i></span>
-                        <span class="settings"><i class="fas fa-minus"></i></span>
+                        <span class="settings" hidden><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></span>
+                        <span class="settings"><i class="height:16px fill:#505050" src="/assets/svg/minus.svg"></i></span>
                         <span>settings</span>
                     </div>
                     <div class="settings padding-bottom:20px margin:0_5px">

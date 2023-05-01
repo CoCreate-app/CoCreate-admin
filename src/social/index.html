@@ -52,9 +52,9 @@
 			<ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
 
 				<!-- Modal Controls -->
-				<li class="margin-right:15px"><a actions="closeModal"><i class="fas fa-times"></i></a></li>
+				<li class="margin-right:15px"><a actions="closeModal"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
 				<li class="margin-right:15px"><a actions="minMaxModal"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
-				<li class="margin-right:15px"><a actions="parkModal"><i class="far fa-window-minimize"></i></a></li>
+				<li class="margin-right:15px"><a actions="parkModal"><i class="height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
 
 				<!-- fullscreen toogle and icon transform-->
 				<li class="margin-right:15px"><a fullscreen></a></li>
@@ -62,7 +62,7 @@
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
 					<a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="fas fa-cog"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
                         <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
                         <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
                     </a>
@@ -71,7 +71,7 @@
 				<!-- Render Code Editor -->
 				<li class="margin-right:15px">
 					<a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="fas fa-code"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
 				</li>
@@ -79,7 +79,7 @@
 				<!-- Render Builder -->
 				<li class="margin-right:15px">
 					<a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="fas fa-palette"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
 				</li>
@@ -87,7 +87,7 @@
 				<!-- deleteDocument-->
 				<li class="margin-right:15px">
 					<a actions="deleteDocument, closeModal" collection="" document_id="" pass_id="form-fields">
-                        <i class="far fa-trash-alt"></i>
+                        <i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i>
                     </a>
 				</li>
 			</ul>
@@ -101,7 +101,7 @@
 					<input type="text" class="searchInput floating-label browser-default" pass_to="me1234">
 					<span class="passValueBtn position:relative bottom:28px right:10px float:right font-size:18px">
 						<a  actions="pass, openModal" modal-src="template-engine.html" pass_to="me1234" modal-width="900px" modal-color="#229954">
-							<i class="fas fa-search"></i>
+							<i class="height:20px fill:#505050" src="/assets/svg/search.svg"></i>
 						</a>
 					</span>
 				</form>
@@ -125,7 +125,7 @@
 							</a>
 							<div class="float:right width:50px text-align:center">
 								<a actions="pass, openModal" pass-collection="files" pass-document_id="{{document.main-menu-secondary}}" pass-name="src" pass_to="render" modal-width="320px" modal-color="#229954">
-								<i class="fas fa-plus"></i>
+								<i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i>
 								<div pass-collection="modules" document_id="{{document._id}}" pass_to="module_id"></div>
 							  </a>
 							</div>
@@ -134,18 +134,18 @@
 				</ul>
 				<div class="display:inline:block position:absolute bottom:0 background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
 					<a actions="pass, openModal" pass-collection="files" pass-document_id="5fa849674b4c3e4dea76abe6" pass-name="src" pass_to="render" modal-width="275px" modal-color="#229954" modal-x="0" modal-y="0" class="width:50px text-align:center display:inline-block">
-					  <span class="padding:10px width:50px text-align:center"><i class="fas fa-cogs"></i></span>
+					  <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/cogs.svg"></i></span>
 					</a>
 					<a actions="pass, openModal" modal-src="modules/module-views/module_datatable.html" pass-collection="modules" pass-document_id="" pass_to="render" modal-width="640px" modal-color="#229954" modal-x="0" modal-y="0"
 					 class="width:50px text-align:center display:inline-block">
-					  <span class="padding:10px width:50px text-align:center"><i class="fas fa-project-diagram"></i></span>
+					  <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/project-diagram.svg"></i></span>
 					</a>
 					<a actions="pass, openModal" modal-src="modules/module-templates/module-template_datatable.html" pass-collection="modules" pass-document_id="" pass_to="render" modal-width="640px" modal-color="#229954" modal-x="0"
 					 modal-y="0" class="width:50px text-align:center display:inline-block">
-					  <span class="padding:10px width:50px text-align:center"><i class="fas fa-shapes"></i></span>
+					  <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/shapes.svg"></i></span>
 					</a>
 					<a href="signin.html" class="logoutBtn width:50px text-align:center display:inline-block">
-					  <span class="padding:10px width:50px text-align:center"><i class="fas fa-sign-out-alt"></i></span>
+					  <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/sign-out-alt.svg"></i></span>
 					</a>
 				</div>
 			</div>
@@ -158,7 +158,7 @@
 				<div class="card position:relative flex-grow:1 margin:10px background:#ffffff height:470px width:250px max-width:350px" template="filter_test">
 					<div class="height:400px overflow:hidden">
 						<div class="position:absolute top:0px right:0px width:30px height:30px background:#3b5998  color:#ffffff font-weight:700 text-align:center opacity:0.7">
-							<div class="padding:5px font-size:18px"><i class="fab fa-facebook-f"></i></div>
+							<div class="padding:5px font-size:18px"><i class="height:16px fill:#505050" src="/assets/svg/facebook-f.svg"></i></div>
 						</div>
 						<!-- Image -->
 						<img class="width:120%" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
@@ -178,10 +178,10 @@
 							</div>
 							<div class="margin:30px_0_0 color:#999999">
 								<span class="margin:0_16px_0_0">
-							  <i class="fa fa-clock-">o</i> 6 mins ago
+							  <i class="height:16px fill:#505050" src="/assets/svg/clock.svg"></i> 6 mins ago
 							</span>
 								<span class="">
-							  <i class="fa fa-comments"></i><a class="color:#999999 color:#999999:hover text-decoration:none:hover" href="#"> 39 comments</a>
+							  <i class="height:16px fill:#505050" src="/assets/svg/comments.svg"></i><a class="color:#999999 color:#999999:hover text-decoration:none:hover" href="#"> 39 comments</a>
 							</span>
 							</div>
 						</div>
@@ -197,7 +197,7 @@
 				<div class="padding:5px">
 					<div class="resizeHandler background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
 				</div>
-				<button toggle-sidenav="menuR" class="position:absolute bottom:15px right:15px padding:15px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4) z-index:15"><i class="fas fa-directions"></i></button>
+				<button toggle-sidenav="menuR" class="position:absolute bottom:15px right:15px padding:15px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4) z-index:15"><i class="height:20px fill:#505050" src="/assets/svg/directions.svg"></i></button>
 			</div>
 		</sidenav>
 

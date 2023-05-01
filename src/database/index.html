@@ -36,9 +36,9 @@
 			<ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
 
 				<!-- Modal Controls -->
-				<li class="margin-right:15px"><a actions="closeModal"><i class="fas fa-times"></i></a></li>
+				<li class="margin-right:15px"><a actions="closeModal"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
 				<li class="margin-right:15px"><a actions="minMaxModal"><i toggle="fa-window-restore, fa-window-maximize" class="far fa-window-maximize"></i></a></li>
-				<li class="margin-right:15px"><a actions="parkModal"><i class="far fa-window-minimize"></i></a></li>
+				<li class="margin-right:15px"><a actions="parkModal"><i class="height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
 
 				<!-- fullscreen toogle and icon transform-->
 				<li class="margin-right:15px"><a fullscreen></a></li>
@@ -46,7 +46,7 @@
 				<!-- Render Module Form -->
 				<li class="margin-right:15px">
 					<a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="fas fa-cog"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
                         <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
                         <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
                     </a>
@@ -55,7 +55,7 @@
 				<!-- Render Code Editor -->
 				<li class="margin-right:15px">
 					<a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="fas fa-code"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
                     </a>
 				</li>
@@ -63,32 +63,32 @@
 				<!-- Render Builder -->
 				<li class="margin-right:15px">
 					<a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="fas fa-palette"></i>
+                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
                         <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
                     </a>
 				</li>
 
 				<!-- Datatable Controls -->
 				<li class="margin-right:15px">
-					<a actions="deleteDocuments" collection="" pass_id="collection-view" template_id=""><i class="far fa-trash-alt"></i></a>
+					<a actions="deleteDocuments" collection="" pass_id="collection-view" template_id=""><i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a toggle="hidden" toogle-target="#column-visibility"><i class="far fa-eye"></i></a>
+					<a toggle="hidden" toogle-target="#column-visibility"><i class="height:18px fill:#505050" src="/assets/svg/eye.svg"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="export" export-type="csv" template_id="" pass_id="collection-view"><i class="fas fa-file-csv"></i></a>
+					<a actions="export" export-type="csv" template_id="" pass_id="collection-view"><i class="height:18px fill:#505050" src="/assets/svg/file-csv.svg"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="export" template_id="" pass_id="collection-view"><i class="fas fa-file-download"></i></a>
+					<a actions="export" template_id="" pass_id="collection-view"><i class="height:18px fill:#505050" src="/assets/svg/file-download.svg"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="import" collection="" pass_id="collection-view"><i class="fas fa-file-upload"></i></a>
+					<a actions="import" collection="" pass_id="collection-view"><i class="height:18px fill:#505050" src="/assets/svg/file-upload.svg"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="copy" copy-target="tbody"><i class="far fa-copy"></i></a>
+					<a actions="copy" copy-target="tbody"><i class="height:18px fill:#505050" src="/assets/svg/copy.svg"></i></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="print" print-target='tbody[template_id="collection-view"]'><i class="fas fa-print"></i></a>
+					<a actions="print" print-target='tbody[template_id="collection-view"]'><i class="height:18px fill:#505050" src="/assets/svg/print.svg"></i></a>
 				</li>
 
 			</ul>
@@ -113,17 +113,17 @@
 						<td class="padding:5px min-width:300px align-items:center">
                             <div class="display:flex justify-content:flex-end transition:0.3s padding-left:10px" >
                                 <div class="visibility:hidden tools{{document._id}}">
-                                    <a class="float:right margin-right:15px" actions="deleteDocument" collection="{{document.collection}}" document_id=""><i class="fas fa-trash"></i></a>
+                                    <a class="float:right margin-right:15px" actions="deleteDocument" collection="{{document.collection}}" document_id=""><i class="height:18px fill:#505050" src="/assets/svg/trash.svg"></i></a>
                                 </div>
                             </div>
                             <div class="template display:flex" render-object="document" render-key="one" render-exclude="db, database, collection" hover="visibility:visible!important" hover-target=".tools{{document._id}}{{one.key}}">
                                 <span class="visibility:hidden tools{{document._id}}{{one.key}}">
                                     <form realtime="false" class="margin-top:10px">
                                         <input type="hidden" collection="{{document.collection}}" document_id="{{document._id}}" name="{{one.key}}.untitled" value="untitiled"/>
-                                        <a actions="save, reset"><i class="fas fa-plus"></i></a>
+                                        <a actions="save, reset"><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></a>
                                     </form>
                                     <form realtime="false" class="margin-top:10px">
-                                        <a actions="deleteName" collection="{{document.collection}}" document_id="{{document._id}}" deleteName="{{one.key}}"><i class="fas fa-trash"></i></a>
+                                        <a actions="deleteName" collection="{{document.collection}}" document_id="{{document._id}}" deleteName="{{one.key}}"><i class="height:18px fill:#505050" src="/assets/svg/trash.svg"></i></a>
                                     </form>
             
                                 </span>
@@ -140,7 +140,7 @@
             <button class="position:absolute bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
                 <form collection="" document_id="" pass_id="collection-view">
                     <input type="hidden" document_id="" name="name" value="untitled" pass_id="module_id"/>
-                    <a actions="save, reset"><i class="fas fa-plus"></i></a>
+                    <a actions="save, reset"><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></a>
                 </form>
             </button>
 
@@ -156,10 +156,10 @@
                         <span class="visibility:hidden tools$parents{{$auto.key}}" tools="$parents{{$auto.key}}">
                             <form realtime="false" class="margin-top:10px">
                                 <input type="hidden" collection="{{document.collection}}" document_id="{{document._id}}" name="$parents.untitled" value="untitiled"/>
-                                <a actions="save, reset"><i class="fas fa-plus"></i></a>
+                                <a actions="save, reset"><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></a>
                             </form>
                             <form realtime="false" class="margin-top:10px">
-                                <a actions="deleteName" collection="{{document.collection}}" document_id="{{document._id}}" deleteName="$parents.{{$auto.key}}"><i class="fas fa-trash"></i></a>
+                                <a actions="deleteName" collection="{{document.collection}}" document_id="{{document._id}}" deleteName="$parents.{{$auto.key}}"><i class="height:18px fill:#505050" src="/assets/svg/trash.svg"></i></a>
                             </form>
                         </span>
                         <span class="padding:10px"><span collection="{{document.collection}}" document_id="{{document._id}}" value-prefix="$parents." updateName="$parents.{{$auto.key}}" contenteditable>{{$auto.key}}</span>: </span>
@@ -180,7 +180,7 @@
                 </floating-label>
 				<span class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">
 					<a actions="createCollection, reset">
-						<i class="fas fa-plus"></i>
+						<i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i>
 					</a>
 				</span>
 			</form>
@@ -197,7 +197,7 @@
                             </a>
                             <div class="float:right width:50px text-align:center">
                                 <a actions="deleteCollection" collection="{{collection.name}}" class="display:none">
-                                    <i class="fas fa-trash"></i>
+                                    <i class="height:18px fill:#505050" src="/assets/svg/trash.svg"></i>
                                 </a>
                             </div>
 
