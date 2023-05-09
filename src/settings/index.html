@@ -78,7 +78,7 @@
                                 <i class="height:20px fill:#505050" src="/assets/svg/{{document.icon}}.svg"></i>
 							</span>
 							<span>{{document.name}}</span>
-							<div pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
+							<div pass-template="$uid" pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>
 							<div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>
 							<div pass-collection="files" pass-document_id="{{document.settings-menu-secondary._id}}" pass_to="form"></div>
 							<div pass-document_id="{{document.organization_id}}" pass_to="form-fields" class="session{{document.name}}_Id"></div>
