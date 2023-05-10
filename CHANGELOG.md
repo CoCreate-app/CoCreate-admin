@@ -1,3 +1,14 @@
+## [1.32.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.32.0...v1.32.1) (2023-05-10)
+
+
+### Bug Fixes
+
+* filter-sort icon ([8fc4bef](https://github.com/CoCreate-app/CoCreate-admin/commit/8fc4bef2acc19e5eb3044d19f0515081639e02d1))
+* pass-template $uid ([787af44](https://github.com/CoCreate-app/CoCreate-admin/commit/787af4429284f5c5345f53fefe830c6661525dfa))
+* permissions renamed to keys ([e0364b7](https://github.com/CoCreate-app/CoCreate-admin/commit/e0364b748370e535528546085928780bd01aa1ba))
+* remove class icon ([2cb2dc0](https://github.com/CoCreate-app/CoCreate-admin/commit/2cb2dc00e9712d4d5094c7a4b6e1cfde4e713d25))
+* update icon value ([02da7c5](https://github.com/CoCreate-app/CoCreate-admin/commit/02da7c5b71a7fc2b37fdd94a120b6255bfccb63a))
+
 # [1.32.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.31.2...v1.32.0) (2023-05-01)
 
 
