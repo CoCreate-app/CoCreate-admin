@@ -59,14 +59,10 @@
 							where you can access your website and admin panel.
 						</p>
 						<p id="ava4" hidden>
-							Great, <span class="firstname">First Name</span>!
-							Let’s choose an industry so I can begin to understand what we will be doing.
-						</p>
-						<p id="ava5" hidden>
 							Awesome! Enter your email and password and we will get <span class="orgname">Organization
 								Name</span> off the ground!
 						</p>
-						<p id="ava6" hidden>
+						<p id="ava5" hidden>
 							Here we go! Preparing your new business!
 						</p>
 					</div>
@@ -80,7 +76,7 @@
 					<section id="step1">
 						<div class="overflow:hidden padding:0px_25px background:white">
 							<div class="float:left width:75% padding-top:25px">
-								<h3>Step 1 / 5</h3>
+								<h3>Step 1 / 4</h3>
 							</div>
 							<div
 								class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
@@ -101,7 +97,7 @@
 					<section id="step2" hidden>
 						<div class="overflow:hidden padding:0px_25px background:white">
 							<div class="float:left width:75% padding-top:25px">
-								<h3>Step 2 / 5</h3>
+								<h3>Step 2 / 4</h3>
 							</div>
 							<div
 								class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
@@ -126,7 +122,7 @@
 					<section id="step3" hidden>
 						<div class="overflow:hidden padding:0px_25px background:white">
 							<div class="float:left width:75% padding-top:25px">
-								<h3>Step 3 / 5</h3>
+								<h3>Step 3 / 4</h3>
 							</div>
 							<div
 								class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
@@ -157,41 +153,7 @@
 					<section id="step4" hidden>
 						<div class="overflow:hidden padding:0px_25px background:white">
 							<div class="float:left width:75% padding-top:25px">
-								<h3>Step 4 / 5</h3>
-							</div>
-							<div
-								class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
-								<i class="height:70px fill:#505050" src="/assets/svg/industry.svg"></i>
-							</div>
-						</div>
-						<div class="padding:25px background:gainsboro text-align:left">
-
-							<floating-label>
-								<cocreate-select id="industries" class="floating-label" collection="organizations"
-									document_id="" name="industry" placeholder="Industry" realtime="false" save="false"
-									required>
-									<input placeholder="Search" template_id="industries">
-									<cc-options fetch-collection="industries" template_id="industries"
-										class="options overflow:auto">
-										<cc-option template="industries" value="{{document._id}}">
-											<h4>{{document.name}}</h4>
-										</cc-option>
-									</cc-options>
-								</cocreate-select>
-							</floating-label>
-							<div class="display:flex">
-								<button type="button" class="outline white-blue margin-right:15px" show='#step3,#ava3'
-									hide='#step4,#ava4'>Previous</button>
-								<button type="button" actions="validate(#industries), showHide" class="outline"
-									show='#step5,#ava5' hide='#step4,#ava4'>Next</button>
-							</div>
-						</div>
-					</section>
-
-					<section id="step5" hidden>
-						<div class="overflow:hidden padding:0px_25px background:white">
-							<div class="float:left width:75% padding-top:25px">
-								<h3>Step 5 / 5</h3>
+								<h3>Step 4 / 4</h3>
 							</div>
 							<div
 								class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
@@ -226,7 +188,7 @@
 								input-target=".orgid" input-attribute="value">
 
 							<!-- API key  -->
-							<input type="hidden" id="apiKey" collection="organizations" document_id="" name="apiKey"
+							<input type="hidden" id="apiKey" collection="organizations" document_id="" name="key"
 								uuid="32">
 
 							<!-- Connected Org  -->
@@ -236,6 +198,12 @@
 							<!-- Current Org  -->
 							<input type="hidden" id="current_org" class="orgid" collection="users" document_id=""
 								name="current_org">
+
+							<!-- organization_id  -->
+							<input type="hidden" class="orgid" collection="organizations" document_id=""
+								name="organization_id">
+							<input type="hidden" class="orgid" collection="users" document_id=""
+								name="organization_id">
 
 							<!-- Send Email -->
 							<div template_id="render-key" class="display:block!important">
@@ -250,11 +218,11 @@
 
 								<div class="display:flex">
 									<button type="button" class="outline white-blue margin-right:15px"
-										show='#step4,#ava4' hide='#step5,#ava5'>Previous</button>
+										show='#step4,#ava4' hide='#step4,#ava4'>Previous</button>
 									<button type="button" class="outline red-white" 
-										actions="validate, animateSignup, showHide, save, runIndustry, renderKey"
-										show='#step6,#ava6'
-										hide='#step5,#ava5'
+										actions="validate, animateSignup, showHide, save, renderKey"
+										show='#step5,#ava5'
+										hide='#step4,#ava4'
 										href="https://{{render-key.domain}}/admin/signin.html">
 										Launch
 									</button>
@@ -263,7 +231,7 @@
 
 						</div>
 					</section>
-					<section id="step6" hidden>
+					<section id="step5" hidden>
 						<div class="animation-wrapper height:224px"></div>
 					</section>
 				</form>
