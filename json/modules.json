@@ -25,7 +25,7 @@
         "icon": "key",
         "navbar-menu-primary": {
             "_id": "6195549bcbf74500119d4165",
-            "path": "/admin/apikeys/datatable.html"
+            "path": "/admin/keys/datatable.html"
         },
         "navbar-menu-position": 5,
         "navbar-modal-primary-color": "#000000",
@@ -42,7 +42,7 @@
         "main-modal-primary-y": "",
         "main-menu-secondary": {
             "_id": "61955495cbf74500119d4164",
-            "path": "/admin/apikeys/form.html"
+            "path": "/admin/keys/form.html"
         },
         "main-modal-secondary-color": "#000000",
         "main-modal-secondary-width": "",
@@ -51,7 +51,7 @@
         "main-modal-secondary-y": "",
         "settings-menu-primary": {
             "_id": "6195549bcbf74500119d4165",
-            "path": "/admin/apikeys/datatable.html"
+            "path": "/admin/keys/datatable.html"
         },
         "settings-menu-position": 4,
         "settings-modal-primary-color": "#000000",
@@ -66,7 +66,7 @@
         "settings-modal-secondary-x": "",
         "settings-modal-secondary-y": "",
         "organization_id": "5ff747727005da1c272740ab",
-        "name": "ApiKeys"
+        "name": "keys"
     },
     {
         "db": "indexeddb",
