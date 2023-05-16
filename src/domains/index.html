@@ -1,257 +1,444 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Search Domain</title>
+        <link
+            rel="icon"
+            type="images/png"
+            sizes="32x32"
+            href="https://cocreate.app/images/favicon.ico" />
+        <link
+            rel="stylesheet"
+            href="../index.css"
+            collection="files"
+            document_id="637bc8fe91249e639db315d9"
+            name="src"
+            type="text/css" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Search Domain</title>
-	<link rel="icon" type="images/png" sizes="32x32" href="https://cocreate.app/images/favicon.ico">
-	<link rel="stylesheet" href="../index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src"
-		type="text/css" />
-	<link rel="manifest" href="/manifest.webmanifest" />
-</head>
+    <style type="text/css">
+        .domain-price {
+            visibility: hidden;
+        }
 
-<style type="text/css">
-	.domain-price {
-		visibility: hidden
-	}
+        .domain-price.available {
+            visibility: visible;
+        }
 
-	.domain-price.available {
-		visibility: visible
-	}
+        .icon.available:before {
+            color: green;
+            font-family: "Font Awesome 5 Free";
+            content: "\f058";
+            font-weight: 900;
+        }
 
-	.icon.available:before {
-		color: green;
-		font-family: 'Font Awesome 5 Free';
-		content: "\f058";
-		font-weight: 900;
-	}
+        .icon.Unavailable:before,
+        .icon.unknown:before,
+        .icon.regthroughothers:before,
+        .icon.regthroughus:before {
+            color: red;
+            font-family: "Font Awesome 5 Free";
+            content: "\f05e";
+            font-weight: 900;
+        }
 
-	.icon.Unavailable:before,
-	.icon.unknown:before,
-	.icon.regthroughothers:before,
-	.icon.regthroughus:before {
-		color: red;
-		font-family: 'Font Awesome 5 Free';
-		content: "\f05e";
-		font-weight: 900;
-	}
+        .hidden.false {
+            display: block;
+        }
 
-	.hidden.false {
-		display: block;
-	}
+        .tab.active {
+            background: gainsboro;
+        }
+    </style>
 
-	.tab.active {
-		background: gainsboro;
-	}
-</style>
+    <body>
+        <!-- Modal Viewport -->
+        <div id="modal-viewport" hidden></div>
 
-<body>
-	<!-- Modal Viewport -->
-	<div id="modal-viewport" hidden></div>
+        <!-- Navbar -->
+        <nav
+            class="nav display:flex align-items:center background:whitesmoke"
+            content_id="content"
+            scroll="sticky-nav, hide-nav"
+            scroll-up="5"
+            scroll-down="5">
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul
+                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+                <!-- Modal Controls -->
+                <li class="margin-right:15px">
+                    <a actions="closeModal">
+                        <i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/times.svg"></i>
+                    </a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="minMaxModal">
+                        <i
+                            toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+                            toggle-attribute="src"
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-maximize.svg"></i>
+                    </a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="parkModal">
+                        <i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/window-minimize.svg"></i>
+                    </a>
+                </li>
 
-	<!-- Navbar -->
-	<nav class="nav display:flex align-items:center background:whitesmoke" content_id="content"
-		scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
+                <!-- fullscreen toogle and icon transform-->
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
+                    </a>
+                </li>
 
-		<!-- Horizontal Scroll Nav/Tabs -->
-		<ul
-			class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./modules/form.html"
+                        modal-width="320px">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/cog.svg"></i>
+                        <div
+                            pass_id="module-form"
+                            pass-collection="modules"
+                            pass-document_id=""
+                            pass_to="form-fields"></div>
+                        <div
+                            pass_id="module_id"
+                            pass-filter-value=""
+                            pass_to="module_id"></div>
+                    </a>
+                </li>
 
-			<!-- Modal Controls -->
-			<li class="margin-right:15px">
-				<a actions="closeModal">
-					<i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i>
-				</a>
-			</li>
-			<li class="margin-right:15px">
-				<a actions="minMaxModal">
-					<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
-				</a>
-			</li>
-			<li class="margin-right:15px">
-				<a actions="parkModal">
-					<i class="height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i>
-				</a>
-			</li>
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./code-editor/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/code.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="code-editor"></div>
+                    </a>
+                </li>
 
-			<!-- fullscreen toogle and icon transform-->
-			            <li class="margin-right:15px">
-                <a fullscreen>
-                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-                </a>
-            </li>
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./builder/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/palette.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="builder"></div>
+                    </a>
+                </li>
 
+                <!-- deleteDocument-->
+                <li class="margin-right:15px">
+                    <a
+                        actions="deleteDocument, closeModal"
+                        collection=""
+                        document_id=""
+                        pass_id="form-fields">
+                        <i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/trash-alt.svg"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-			<!-- Render Module Form -->
-			<li class="margin-right:15px">
-				<a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-					<i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
-					<div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields">
-					</div>
-					<div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
-				</a>
-			</li>
+        <main class="padding:20px">
+            <div class="margin-top:20px display:flex">
+                <div
+                    class="padding:14px_21px border-radius:2px_2px_0_0 font-size:20px cursor:pointer background:silver background:darkgrey:hover background:gainsboro tab background:red@sm"
+                    show="#register"
+                    hide="#transfer">
+                    <a href="#register" toggle="active" toggle-target=".tab"
+                        >Register</a
+                    >
+                </div>
+                <div
+                    class="padding:14px_21px border-radius:2px_2px_0_0 font-size:20px cursor:pointer background:silver background:darkgrey:hover tab"
+                    show="#transfer"
+                    hide="#register">
+                    <a href="#transfer" toggle="active" toggle-target=".tab"
+                        >Transfer</a
+                    >
+                </div>
+            </div>
 
-			<!-- Render Code Editor -->
-			<li class="margin-right:15px">
-				<a actions="pass, openModal" modal-src="./code-editor/index.html">
-					<i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
-					<div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor">
-					</div>
-				</a>
-			</li>
+            <div id="register" class="padding:10px background:gainsboro">
+                <form>
+                    <div class="">
+                        <label class="padding:5px"
+                            ><input
+                                domain="tlds[]"
+                                type="checkbox"
+                                value="net" />
+                            net</label
+                        >
+                        <label
+                            ><input
+                                domain="tlds[]"
+                                type="checkbox"
+                                value="com" />
+                            com</label
+                        >
+                    </div>
+                    <div class="">
+                        <floating-label>
+                            <input
+                                domain="domain-name"
+                                type="text"
+                                name="domain_name"
+                                class="floating-label"
+                                placeholder="Find your perfect domain"
+                                value="" />
+                        </floating-label>
+                        <a
+                            class="position:relative bottom:30px right:12px float:right z-index:5 font-size:20px padding:0px">
+                            <i
+                                class="height:16px fill:#505050"
+                                src="/assets/svg/search.svg"></i>
+                        </a>
+                    </div>
+                </form>
 
-			<!-- Render Builder -->
-			<li class="margin-right:15px">
-				<a actions="pass, openModal" modal-src="./builder/index.html">
-					<i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
-					<div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
-				</a>
-			</li>
+                <div
+                    class="card template margin:10px_0 background:white border-radius:5px padding:10px"
+                    template_id="searchdomain">
+                    <div
+                        class="display:flex justify-content:space-between align-items:center width:100%">
+                        <div class="display:flex">
+                            <div class="display:flex align-items:center">
+                                <span
+                                    class="icon status font-size:20px margin-right:10px"></span>
+                            </div>
+                            <div
+                                class="display:flex align-items:center flex-wrap:wrap">
+                                <h3 class="margin-right:10px" value="name">
+                                    Domain.com
+                                </h3>
+                                <div class="display:flex domain-price status">
+                                    <span>$</span><span value="price">0.00</span
+                                    ><span>/year</span>
+                                </div>
+                            </div>
+                        </div>
 
-			<!-- deleteDocument-->
-			<li class="margin-right:15px">
-				<a actions="deleteDocument, closeModal" collection="" document_id="" pass_id="form-fields">
-					<i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i>
-				</a>
-			</li>
-		</ul>
-	</nav>
+                        <div class="display:flex">
+                            <span class="margin-right:10px"
+                                ><i
+                                    class="height:16px fill:#505050"
+                                    src="/assets/svg/heart.svg"></i
+                            ></span>
+                            <span
+                                ><i
+                                    class="height:16px fill:#505050"
+                                    src="/assets/svg/shopping-cart.svg"></i
+                            ></span>
+                        </div>
+                    </div>
+                    <!--<h3 value="test.hey.name"></h3>-->
+                    <form id="customer-form" collection="modules">
+                        <input
+                            type="hidden"
+                            name="domain-name"
+                            domain="domain-name"
+                            value="name"
+                            placeholder="domain-name" />
+                    </form>
+                </div>
+            </div>
 
-	<main class="padding:20px">
-		<div class="margin-top:20px display:flex">
-			<div class="padding:14px_21px border-radius:2px_2px_0_0 font-size:20px cursor:pointer background:silver background:darkgrey:hover background:gainsboro tab background:red@sm"
-				show="#register" hide="#transfer">
-				<a href="#register" toggle="active" toggle-target=".tab">Register</a>
-			</div>
-			<div class="padding:14px_21px border-radius:2px_2px_0_0 font-size:20px cursor:pointer background:silver background:darkgrey:hover tab"
-				show="#transfer" hide="#register">
-				<a href="#transfer" toggle="active" toggle-target=".tab">Transfer</a>
-			</div>
-		</div>
+            <div id="transfer" class="background:gainsboro padding:10px" hidden>
+                <form>
+                    <div class="display:flex flex-wrap:wrap">
+                        <div class="flex-grow:1 padding:5px">
+                            <floating-label>
+                                <input
+                                    type="text"
+                                    class="floating-label"
+                                    name="domain-name"
+                                    domain="domain-name"
+                                    placeholder="Domain Name"
+                                    required="" />
+                            </floating-label>
+                        </div>
+                        <div class="flex-grow:1 padding:5px">
+                            <floating-label>
+                                <input
+                                    type="text"
+                                    name="transfer_auth_code"
+                                    id="transfer_auth_code"
+                                    class="floating-label"
+                                    placeholder="Transfer Auth Code"
+                                    required="" />
+                            </floating-label>
+                        </div>
+                    </div>
+                    <div
+                        class="margin:20px_5px padding:10px background:white border-left:3px_dodgerblue_solid">
+                        <p>The Domain Transfer Auth Code</p>
+                        <small style="font-weight: normal"
+                            >(Also known as: "Transfer Secret" or "EPP Auth
+                            Code")</small
+                        >
+                        <p class="padding-top:10px">
+                            Needs to be obtained from the current Registrar of
+                            the domain name that you wish to transfer.
+                        </p>
+                    </div>
+                    <div class="padding:5px">
+                        <button
+                            type="button"
+                            class="btn checkTransferRecordBtn">
+                            Check Transfer
+                        </button>
 
-		<div id='register' class="padding:10px background:gainsboro">
+                        <div
+                            class="card margin:10px"
+                            template_id="checktransfer">
+                            <button
+                                type="button"
+                                class="btn btn-primary transfer_domain hidden status"
+                                id="transfer_domain">
+                                Transfer
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
 
-			<form>
-				<div class="">
-					<label class="padding:5px"><input domain="tlds[]" type="checkbox" value="net" /> net</label>
-					<label><input domain="tlds[]" type="checkbox" value="com" /> com</label>
-				</div>
-				<div class="">
-					<floating-label>
-						<input domain="domain-name" type="text" name="domain_name" class="floating-label"
-							placeholder="Find your perfect domain" value="">
-						<floating-label>
-							<a
-								class="position:relative bottom:30px right:12px float:right z-index:5 font-size:20px padding:0px">
-								<i class="height:16px fill:#505050" src="/assets/svg/search.svg"></i>
-							</a>
-				</div>
-			</form>
+            <form hidden>
+                <input
+                    type="text"
+                    name="domain-name"
+                    domain="domain-name"
+                    value="name"
+                    placeholder="domain-name" />
+                <select name="years" domain="years">
+                    <option value="1">1 year</option>
+                    <option value="2">2 year</option>
+                </select>
+                purchase-privacy
+                <input
+                    type="checkbox"
+                    name="purchase-privacy"
+                    domain="purchase-privacy"
+                    placeholder="purchase-privacy" /><br />
+                protect-privacy
+                <input
+                    type="checkbox"
+                    name="protect-privacy"
+                    domain="protect-privacy"
+                    placeholder="protect-privacy" />
 
-			<div class="card template margin:10px_0 background:white border-radius:5px padding:10px"
-				template_id="searchdomain">
+                <input
+                    type="text"
+                    name="ns"
+                    domain="ns"
+                    value="ns1.onlyfordemo.net,ns2.onlyfordemo.net"
+                    placeholder="ns" />
+                <input
+                    type="text"
+                    name="customer-id"
+                    domain="customer-id"
+                    value="22216052"
+                    placeholder="customer-id" />
+                <input
+                    type="text"
+                    name="contact-id"
+                    domain="contact-id"
+                    value="91369147"
+                    input-target=".contact-id"
+                    input-attribute="value"
+                    input-events="input, onload"
+                    placeholder="contact-id" />
+                <input
+                    type="text"
+                    name="reg-contact-id"
+                    domain="reg-contact-id"
+                    class="contact-id"
+                    placeholder="reg-contact-id" />
+                <input
+                    type="text"
+                    name="admin-contact-id"
+                    domain="admin-contact-id"
+                    class="contact-id"
+                    placeholder="admin-contact-id" />
+                <input
+                    type="text"
+                    name="tech-contact-id"
+                    domain="tech-contact-id"
+                    class="contact-id"
+                    placeholder="tech-contact-id" />
+                <input
+                    type="text"
+                    name="billing-contact-id"
+                    domain="billing-contact-id"
+                    class="contact-id"
+                    placeholder="billing-contact-id" />
+                <input
+                    type="text"
+                    name="invoice-option"
+                    domain="invoice-option"
+                    value="NoInvoice"
+                    placeholder="invoice-option" />
+                <input
+                    type="text"
+                    name="auto-renew"
+                    domain="auto-renew"
+                    placeholder="auto-renew" />
+                <input
+                    type="text"
+                    name="attr-name"
+                    domain="attr-name"
+                    placeholder="attr-name" />
+                <input
+                    type="text"
+                    name="attr-value"
+                    domain="attr-value"
+                    placeholder="attr-value" />
+                <input
+                    type="text"
+                    name="discount-amount"
+                    domain="discount-amount"
+                    placeholder="discount-amount" />
 
-				<div class="display:flex justify-content:space-between align-items:center width:100%">
+                <button class="btn btn-primary registerRecordBtn">Buy</button>
+            </form>
+        </main>
 
-					<div class="display:flex">
-						<div class="display:flex align-items:center">
-							<span class="icon status font-size:20px margin-right:10px"></span>
-						</div>
-						<div class="display:flex align-items:center  flex-wrap:wrap">
-							<h3 class="margin-right:10px" value="name">Domain.com</h3>
-							<div class="display:flex domain-price status">
-								<span>$</span><span value="price">0.00</span><span>/year</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="display:flex">
-						<span class="margin-right:10px"><i class="height:16px fill:#505050" src="/assets/svg/heart.svg"></i></span>
-						<span><i class="height:16px fill:#505050" src="/assets/svg/shopping-cart.svg"></i></span>
-					</div>
-				</div>
-				<!--<h3 value="test.hey.name"></h3>-->
-				<form id="customer-form" collection="modules">
-					<input type="hidden" name="domain-name" domain="domain-name" value="name"
-						placeholder="domain-name" />
-				</form>
-			</div>
-		</div>
-
-		<div id="transfer" class="background:gainsboro padding:10px" hidden>
-			<form>
-				<div class="display:flex flex-wrap:wrap">
-					<div Class="flex-grow:1 padding:5px">
-						<floating-label>
-							<input type="text" class="floating-label" name="domain-name" domain="domain-name"
-								placeholder="Domain Name" required="">
-						</floating-label>
-					</div>
-					<div class="flex-grow:1 padding:5px">
-						<floating-label>
-							<input type="text" name="transfer_auth_code" id="transfer_auth_code" class="floating-label"
-								placeholder="Transfer Auth Code" required="">
-						</floating-label>
-					</div>
-				</div>
-				<div class="margin:20px_5px padding:10px background:white border-left:3px_dodgerblue_solid">
-					<p>The Domain Transfer Auth Code</p>
-					<small style="font-weight: normal;">(Also known as: "Transfer Secret" or "EPP Auth Code")</small>
-					<p class="padding-top:10px">Needs to be obtained from the current Registrar of the domain name that
-						you wish to transfer.</p>
-				</div>
-				<div class="padding:5px">
-					<button type="button" class="btn checkTransferRecordBtn">Check Transfer</button>
-
-					<div class="card margin:10px" template_id="checktransfer">
-						<button type="button" class="btn btn-primary transfer_domain hidden status"
-							id="transfer_domain">Transfer</button>
-					</div>
-				</div>
-			</form>
-		</div>
-
-		<form hidden>
-			<input type="text" name="domain-name" domain="domain-name" value="name" placeholder="domain-name" />
-			<select name="years" domain="years">
-				<option value="1">1 year</option>
-				<option value="2">2 year</option>
-			</select>
-			purchase-privacy <input type="checkbox" name="purchase-privacy" domain="purchase-privacy"
-				placeholder="purchase-privacy" /><br>
-			protect-privacy <input type="checkbox" name="protect-privacy" domain="protect-privacy"
-				placeholder="protect-privacy" />
-
-			<input type="text" name="ns" domain="ns" value="ns1.onlyfordemo.net,ns2.onlyfordemo.net" placeholder="ns" />
-			<input type="text" name="customer-id" domain="customer-id" value="22216052" placeholder="customer-id" />
-			<input type="text" name="contact-id" domain="contact-id" value="91369147" input-target=".contact-id"
-				input-attribute="value" input-events="input, onload" placeholder="contact-id" />
-			<input type="text" name="reg-contact-id" domain="reg-contact-id" class="contact-id"
-				placeholder="reg-contact-id" />
-			<input type="text" name="admin-contact-id" domain="admin-contact-id" class="contact-id"
-				placeholder="admin-contact-id" />
-			<input type="text" name="tech-contact-id" domain="tech-contact-id" class="contact-id"
-				placeholder="tech-contact-id" />
-			<input type="text" name="billing-contact-id" domain="billing-contact-id" class="contact-id"
-				placeholder="billing-contact-id" />
-			<input type="text" name="invoice-option" domain="invoice-option" value="NoInvoice"
-				placeholder="invoice-option" />
-			<input type="text" name="auto-renew" domain="auto-renew" placeholder="auto-renew" />
-			<input type="text" name="attr-name" domain="attr-name" placeholder="attr-name" />
-			<input type="text" name="attr-value" domain="attr-value" placeholder="attr-value" />
-			<input type="text" name="discount-amount" domain="discount-amount" placeholder="discount-amount" />
-
-			<button class="btn btn-primary registerRecordBtn">Buy</button>
-
-		</form>
-	</main>
-
-	<script src="https://cdn.cocreate.app/1.55.1/CoCreate.min.js"></script>
-
-</body>
-
+        <script src="https://cdn.cocreate.app/1.55.1/CoCreate.min.js"></script>
+    </body>
 </html>

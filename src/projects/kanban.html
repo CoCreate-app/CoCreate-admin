@@ -1,75 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            href="https://cdn.cocreate.app/favicon.ico"
+            type="image/ico"
+            sizes="16x16" />
         <title>Module Activity Kanban View | CoCreate</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreate.min.css">
-        <link rel="stylesheet" href="../index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src" type="text/css"/>
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/favicon.ico" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.cocreate.app/latest/CoCreate.min.css" />
+        <link
+            rel="stylesheet"
+            href="../index.css"
+            collection="files"
+            document_id="637bc8fe91249e639db315d9"
+            name="src"
+            type="text/css" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
     <body>
         <!-- Modal Viewport -->
         <div id="modal-viewport" hidden></div>
 
         <!-- Navbar -->
-        <nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
-
+        <nav
+            class="nav display:flex align-items:center background:whitesmoke"
+            content_id="content"
+            scroll="sticky-nav, hide-nav"
+            scroll-up="5"
+            scroll-down="5">
             <!-- Horizontal Scroll Nav/Tabs -->
-            <ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-
+            <ul
+                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
                 <!-- Modal Controls -->
-                <li class="margin-right:15px"><a actions="closeModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
                 <li class="margin-right:15px">
-					<a actions="minMaxModal">
-						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
-					</a>
-				</li>
-                <li class="margin-right:15px"><a actions="parkModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
+                    <a actions="closeModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/times.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="minMaxModal">
+                        <i
+                            toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+                            toggle-attribute="src"
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-maximize.svg"></i>
+                    </a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="parkModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-minimize.svg"></i
+                    ></a>
+                </li>
 
                 <!-- fullscreen toogle and icon transform-->
-                            <li class="margin-right:15px">
-                <a fullscreen>
-                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-                </a>
-            </li>
-
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
+                    </a>
+                </li>
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
-                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
-                        <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./modules/form.html"
+                        modal-width="320px">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/cog.svg"></i>
+                        <div
+                            pass_id="module-form"
+                            pass-collection="modules"
+                            pass-document_id=""
+                            pass_to="form-fields"></div>
+                        <div
+                            pass_id="module_id"
+                            pass-filter-value=""
+                            pass_to="module_id"></div>
                     </a>
                 </li>
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./code-editor/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/code.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="code-editor"></div>
                     </a>
                 </li>
 
                 <!-- Render Builder -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./builder/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/palette.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="builder"></div>
                     </a>
                 </li>
 
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
-                    <a actions="deleteDocument, closeModal" collection="" document_id="" pass_id="form-fields">
-                        <i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i>
+                    <a
+                        actions="deleteDocument, closeModal"
+                        collection=""
+                        document_id=""
+                        pass_id="form-fields">
+                        <i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/trash-alt.svg"></i>
                     </a>
                 </li>
             </ul>
@@ -77,100 +152,212 @@
 
         <!-- Main Content -->
         <main class="padding:10px" content_id="content">
-            
             <a actions="pass">
                 <span>run</span>
-                <div pass_to="column" pass-collection="tags" pass-filter-name="type" pass-filter-value="60edaf79b979b4001744c6fe" pass-refresh></div>
-                <div pass_to="card" pass-collection="module_activities" pass-filter-name="type" pass-refresh></div>
+                <div
+                    pass_to="column"
+                    pass-collection="tags"
+                    pass-filter-name="type"
+                    pass-filter-value="60edaf79b979b4001744c6fe"
+                    pass-refresh></div>
+                <div
+                    pass_to="card"
+                    pass-collection="module_activities"
+                    pass-filter-name="type"
+                    pass-refresh></div>
             </a>
 
             <div id="board" class="display:flex overflow:auto height:90vh">
-
-                <div fetch-collection="xsw2" fetch-document filter-name="" filter-value="" filter-operator="$eq" filter-sort-name="position" template_id="column" render_id="column" class="display:flex flex-wrap:nowrap flex-direction:row" sortable dnd-group-name="column" droppable="true" pass_id="column">
-
+                <div
+                    fetch-collection="xsw2"
+                    fetch-document
+                    filter-name=""
+                    filter-value=""
+                    filter-operator="$eq"
+                    filter-sort-name="position"
+                    template_id="column"
+                    render_id="column"
+                    class="display:flex flex-wrap:nowrap flex-direction:row"
+                    sortable
+                    dnd-group-name="column"
+                    droppable="true"
+                    pass_id="column">
                     <!-- Column -->
-                    <div template="column" document_id="{{column._id}}" class="width:300px margin:10px background:whitesmoke">
+                    <div
+                        template="column"
+                        document_id="{{column._id}}"
+                        class="width:300px margin:10px background:whitesmoke">
                         <div class="margin:15px font-size:18px color-dark-gray">
                             <span class="display:inline-block">
-                              <input collection="{{column.collection}}" document_id="{{column._id}}" name="name" placeholder="Name">
+                                <input
+                                    collection="{{column.collection}}"
+                                    document_id="{{column._id}}"
+                                    name="name"
+                                    placeholder="Name" />
                             </span>
                             <span class="float:right display:inline-block">
-                                <a actions="deleteDocument" collection="{{column.collection}}" document_id="{{column._id}}"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a>
+                                <a
+                                    actions="deleteDocument"
+                                    collection="{{column.collection}}"
+                                    document_id="{{column._id}}"
+                                    ><i
+                                        class="height:18px fill:#505050"
+                                        src="/assets/svg/times.svg"></i
+                                ></a>
                             </span>
                         </div>
                         <div class="height:70vh padding:10px overflow:auto">
-
-                            <div fetch-collection="" filter-name="" filter-value="{{column._id}}" filter-operator="$eq" filter-sort-name="position" filter-sort-direction="asc" template_id="{{column._id}}" class="display:flex flex-direction:column height:100%" sortable dnd-group-name="card" pass_id="card">
-
+                            <div
+                                fetch-collection=""
+                                filter-name=""
+                                filter-value="{{column._id}}"
+                                filter-operator="$eq"
+                                filter-sort-name="position"
+                                filter-sort-direction="asc"
+                                template_id="{{column._id}}"
+                                class="display:flex flex-direction:column height:100%"
+                                sortable
+                                dnd-group-name="card"
+                                pass_id="card">
                                 <!-- Card -->
-                                <div class="card margin-bottom:10px padding:10px background:white" template="{{column._id}}" value="{{document._id}}" document_id="{{document._id}}">
+                                <div
+                                    class="card margin-bottom:10px padding:10px background:white"
+                                    template="{{column._id}}"
+                                    value="{{document._id}}"
+                                    document_id="{{document._id}}">
                                     <div class="width:100%">
-                                        <img collection="{{document.collection}}" document_id="{{document._id}}" name="image" src="https://via.placeholder.com/150" width="100%"></img>
+                                        <img
+                                            collection="{{document.collection}}"
+                                            document_id="{{document._id}}"
+                                            name="image"
+                                            src="https://via.placeholder.com/150"
+                                            width="100%" />
                                     </div>
-                                    <div class="border-bottom:1px_solid_gray margin:0px_15px">
-                                        <div class="display:flex margin:10px_0px">
-                                            <span class="cocreate-badge round badge-danger margin-right:10px font-size:10px padding:0px_20px"></span>
-                                            <span class="cocreate-badge round margin-right:10px font-size:10px padding:0px_20px"></span>
+                                    <div
+                                        class="border-bottom:1px_solid_gray margin:0px_15px">
+                                        <div
+                                            class="display:flex margin:10px_0px">
+                                            <span
+                                                class="cocreate-badge round badge-danger margin-right:10px font-size:10px padding:0px_20px"></span>
+                                            <span
+                                                class="cocreate-badge round margin-right:10px font-size:10px padding:0px_20px"></span>
                                         </div>
-                                        <p collection="{{document.collection}}" document_id="{{document._id}}" name="name">Card Name</p>
-                                        <div class="display:flex margin:10px_0px">
-                                            <span class="cocreate-badge badge-danger margin-right:10px font-size:14px">
-                                                <i class="height:16px fill:#505050" src="/assets/svg/clock.svg"></i>
+                                        <p
+                                            collection="{{document.collection}}"
+                                            document_id="{{document._id}}"
+                                            name="name">
+                                            Card Name
+                                        </p>
+                                        <div
+                                            class="display:flex margin:10px_0px">
+                                            <span
+                                                class="cocreate-badge badge-danger margin-right:10px font-size:14px">
+                                                <i
+                                                    class="height:16px fill:#505050"
+                                                    src="/assets/svg/clock.svg"></i>
                                                 <span>Aug 29th 17</span>
                                             </span>
-                                            <span class="cocreate-badge margin-right:10px font-size:14px">
-                                                <i class="height:16px fill:#505050" src="/assets/svg/check-circle.svg"></i>
+                                            <span
+                                                class="cocreate-badge margin-right:10px font-size:14px">
+                                                <i
+                                                    class="height:16px fill:#505050"
+                                                    src="/assets/svg/check-circle.svg"></i>
                                                 <span>2/7</span>
                                             </span>
                                         </div>
                                         <div class="display:flex">
-
                                             <!-- Avatar -->
-                                            <div class="avatar-wrapper margin:5px">
-                                                <a class="avatar round" actions="pass, openModal" modal-src="./users/profile.html" modal-width="300px" modal-height="375px"  modal-color="#229954">
-                                                    <span collection="users" document_id="" name="name" class="avatar-name"></span>
+                                            <div
+                                                class="avatar-wrapper margin:5px">
+                                                <a
+                                                    class="avatar round"
+                                                    actions="pass, openModal"
+                                                    modal-src="./users/profile.html"
+                                                    modal-width="300px"
+                                                    modal-height="375px"
+                                                    modal-color="#229954">
+                                                    <span
+                                                        collection="users"
+                                                        document_id=""
+                                                        name="name"
+                                                        class="avatar-name"></span>
                                                     <span class="avatar-image">
-                                                        <img collection="users" document_id="" name="avatar" onerror="this.style.display='none'" width="40px"/>
+                                                        <img
+                                                            collection="users"
+                                                            document_id=""
+                                                            name="avatar"
+                                                            onerror="this.style.display='none'"
+                                                            width="40px" />
                                                     </span>
                                                 </a>
-                                                <div class="avatar-status" collection="users" document_id="" user-status='{"name":"status"}'></div>
+                                                <div
+                                                    class="avatar-status"
+                                                    collection="users"
+                                                    document_id=""
+                                                    user-status="{'name':'status'}"></div>
                                             </div>
-                                            
                                         </div>
                                     </div>
                                     <div class="display:flex margin:15px">
-                                        <span class="float:left"><i class="height:16px fill:#505050" src="/assets/svg/eye.svg"></i></span>
+                                        <span class="float:left"
+                                            ><i
+                                                class="height:16px fill:#505050"
+                                                src="/assets/svg/eye.svg"></i
+                                        ></span>
                                         <div class="display:flex float:right">
-                                            <span class="margin-left:10px"><i class="height:16px fill:#505050" src="/assets/svg/sticky-note.svg"></i><span>0</span></span>
-                                            <span class="margin-left:10px"><i class="height:16px fill:#505050" src="/assets/svg/envelope.svg"></i><span>8</span></span>
+                                            <span class="margin-left:10px"
+                                                ><i
+                                                    class="height:16px fill:#505050"
+                                                    src="/assets/svg/sticky-note.svg"></i
+                                                ><span>0</span></span
+                                            >
+                                            <span class="margin-left:10px"
+                                                ><i
+                                                    class="height:16px fill:#505050"
+                                                    src="/assets/svg/envelope.svg"></i
+                                                ><span>8</span></span
+                                            >
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                         <div class="margin:0px_15px padding:15px_0px">
                             <form collection="{{document.collection}}">
-                                <input type="hidden" document_id="" name="column" value="{{column._id}}" />
-                                <a actions="save, reset"><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i> New Card</a>
+                                <input
+                                    type="hidden"
+                                    document_id=""
+                                    name="column"
+                                    value="{{column._id}}" />
+                                <a actions="save, reset"
+                                    ><i
+                                        class="height:16px fill:#505050"
+                                        src="/assets/svg/plus.svg"></i>
+                                    New Card</a
+                                >
                             </form>
                         </div>
                     </div>
-
                 </div>
             </div>
 
             <form>
-                <input type="hidden" pass_id="module_id" collection="" document_id="" name="module_id"/>
-                <button actions="save, reset" class="position:absolute bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
-                    <i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i>
-               	</button>
+                <input
+                    type="hidden"
+                    pass_id="module_id"
+                    collection=""
+                    document_id=""
+                    name="module_id" />
+                <button
+                    actions="save, reset"
+                    class="position:absolute bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
+                    <i
+                        class="height:16px fill:#505050"
+                        src="/assets/svg/plus.svg"></i>
+                </button>
             </form>
-
         </main>
 
         <script src="https://cdn.cocreate.app/1.55.1/CoCreate.min.js"></script>
-
     </body>
-
 </html>

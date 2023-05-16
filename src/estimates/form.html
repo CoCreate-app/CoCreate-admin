@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            href="https://cdn.cocreate.app/favicon.ico"
+            type="image/ico"
+            sizes="16x16" />
         <title>Estimate Form | CoCreate</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreate.min.css">
-        <link rel="stylesheet" href="../index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src" type="text/css"/>
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/favicon.ico" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.cocreate.app/latest/CoCreate.min.css" />
+        <link
+            rel="stylesheet"
+            href="../index.css"
+            collection="files"
+            document_id="637bc8fe91249e639db315d9"
+            name="src"
+            type="text/css" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
     <style>
         .floating-label_field {
-            margin: 5px
+            margin: 5px;
         }
     </style>
 
@@ -23,58 +39,117 @@
         <div id="modal-viewport" hidden></div>
 
         <!-- Navbar -->
-        <nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
-
+        <nav
+            class="nav display:flex align-items:center background:whitesmoke"
+            content_id="content"
+            scroll="sticky-nav, hide-nav"
+            scroll-up="5"
+            scroll-down="5">
             <!-- Horizontal Scroll Nav/Tabs -->
-            <ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-
+            <ul
+                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
                 <!-- Modal Controls -->
-                <li class="margin-right:15px"><a actions="closeModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
                 <li class="margin-right:15px">
-					<a actions="minMaxModal">
-						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
-					</a>
-				</li>
-                <li class="margin-right:15px"><a actions="parkModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
+                    <a actions="closeModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/times.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="minMaxModal">
+                        <i
+                            toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+                            toggle-attribute="src"
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-maximize.svg"></i>
+                    </a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="parkModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-minimize.svg"></i
+                    ></a>
+                </li>
 
                 <!-- fullscreen toogle and icon transform-->
-                            <li class="margin-right:15px">
-                <a fullscreen>
-                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-                </a>
-            </li>
-
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
+                    </a>
+                </li>
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
-                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
-                        <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./modules/form.html"
+                        modal-width="320px">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/cog.svg"></i>
+                        <div
+                            pass_id="module-form"
+                            pass-collection="modules"
+                            pass-document_id=""
+                            pass_to="form-fields"></div>
+                        <div
+                            pass_id="module_id"
+                            pass-filter-value=""
+                            pass_to="module_id"></div>
                     </a>
                 </li>
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./code-editor/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/code.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="code-editor"></div>
                     </a>
                 </li>
 
                 <!-- Render Builder -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./builder/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/palette.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="builder"></div>
                     </a>
                 </li>
 
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
-                    <a actions="deleteDocument, closeModal" collection="module_activities" document_id="" pass_id="form-fields">
-                        <i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i>
+                    <a
+                        actions="deleteDocument, closeModal"
+                        collection="module_activities"
+                        document_id=""
+                        pass_id="form-fields">
+                        <i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/trash-alt.svg"></i>
                     </a>
                 </li>
             </ul>
@@ -82,138 +157,290 @@
 
         <!-- Main Content -->
         <main content_id="content">
-
-            <form pass_id="form-fields" collection="module_activities" document_id="" class="padding:20px padding:10px@xs">
-                <input type="hidden" name="module_id" pass_id="module_id" value/>
-                <div class="display:flex flex-wrap:wrap justify-content:space-between padding-bottom:20px border-bottom:1px_solid_lightgrey">
-                    <div class="flex-grow:1 max-width:370px margin-right:20px@sm@md@lg@xl">
-                        <input type="text" name="_id" placeholder="Estimate#" input-target="[name='estimate_id']" input-attribute="value" input-events="input, onload" crdt="false" class="floating-label" readonly>
+            <form
+                pass_id="form-fields"
+                collection="module_activities"
+                document_id=""
+                class="padding:20px padding:10px@xs">
+                <input
+                    type="hidden"
+                    name="module_id"
+                    pass_id="module_id"
+                    value />
+                <div
+                    class="display:flex flex-wrap:wrap justify-content:space-between padding-bottom:20px border-bottom:1px_solid_lightgrey">
+                    <div
+                        class="flex-grow:1 max-width:370px margin-right:20px@sm@md@lg@xl">
+                        <input
+                            type="text"
+                            name="_id"
+                            placeholder="Estimate#"
+                            input-target="[name='estimate_id']"
+                            input-attribute="value"
+                            input-events="input, onload"
+                            crdt="false"
+                            class="floating-label"
+                            readonly />
                     </div>
                     <div class="display:flex flex-wrap:wrap max-width:370px">
                         <div class="flex-grow:1 width:185px">
-                            <input type="date" name="date-issue" placeholder="Date Issue" class="floating-label">
+                            <input
+                                type="date"
+                                name="date-issue"
+                                placeholder="Date Issue"
+                                class="floating-label" />
                         </div>
                         <div class="flex-grow:1 width:185px">
-                            <input type="date" name="date-due" placeholder="Date Due" class="floating-label">
+                            <input
+                                type="date"
+                                name="date-due"
+                                placeholder="Date Due"
+                                class="floating-label" />
                         </div>
                     </div>
                 </div>
-                <div class="max-width:370px padding:20px_0px border-bottom:1px_solid_lightgrey">
-                    <input type="text" name="name" placeholder="Estimate Name" class="floating-label">
+                <div
+                    class="max-width:370px padding:20px_0px border-bottom:1px_solid_lightgrey">
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Estimate Name"
+                        class="floating-label" />
                 </div>
-                <div class="padding:20px_0px border-bottom:1px_solid_lightgrey max-width:370px">
+                <div
+                    class="padding:20px_0px border-bottom:1px_solid_lightgrey max-width:370px">
                     <label class="padding-bottom:10px">Bill To</label>
                     <div class="padding-bottom:10px">
-                        <input type="text" name="house-no" placeholder="House No." class="floating-label">
+                        <input
+                            type="text"
+                            name="house-no"
+                            placeholder="House No."
+                            class="floating-label" />
                     </div>
                     <div class="padding-bottom:10px">
-                        <textarea name="street" placeholder="Landmark/Street" class="floating-label"></textarea>
+                        <textarea
+                            name="street"
+                            placeholder="Landmark/Street"
+                            class="floating-label"></textarea>
                     </div>
                     <div class="padding-bottom:10px">
-                        <input type="text" name="city" placeholder="City" class="floating-label">
+                        <input
+                            type="text"
+                            name="city"
+                            placeholder="City"
+                            class="floating-label" />
                     </div>
                     <div>
-                        <input type="text" name="pincode" placeholder="Pincode" class="floating-label">
+                        <input
+                            type="text"
+                            name="pincode"
+                            placeholder="Pincode"
+                            class="floating-label" />
                     </div>
                 </div>
             </form>
 
-            <div sortable class="margin:0px_20px padding:20px_0px border-bottom:1px_solid_lightgrey" fetch-collection="items-ordered" filter-name="estimate_id" filter-value="" filter-operator="$eq" pass_id="form-fields" template_id="item-row" dnd-group-name="item-row">
-                <div id="item-row" class="border-color:medium-gray margin-bottom:10px" template="item-row" document_id="{{document._id}}">
-
-                    <form class="display:flex" collection="{{document.collection}}" document_id="{{document._id}}">
-                        <div class="display:flex flex-wrap:wrap flex-grow:1 align-items:center justify-content:space-around padding-bottom:10px border-right:1px_solid_lightgrey">
-
+            <div
+                sortable
+                class="margin:0px_20px padding:20px_0px border-bottom:1px_solid_lightgrey"
+                fetch-collection="items-ordered"
+                filter-name="estimate_id"
+                filter-value=""
+                filter-operator="$eq"
+                pass_id="form-fields"
+                template_id="item-row"
+                dnd-group-name="item-row">
+                <div
+                    id="item-row"
+                    class="border-color:medium-gray margin-bottom:10px"
+                    template="item-row"
+                    document_id="{{document._id}}">
+                    <form
+                        class="display:flex"
+                        collection="{{document.collection}}"
+                        document_id="{{document._id}}">
+                        <div
+                            class="display:flex flex-wrap:wrap flex-grow:1 align-items:center justify-content:space-around padding-bottom:10px border-right:1px_solid_lightgrey">
                             <div class="display:flex flex-grow:1">
-                                <input class="floating-label max-width:70px" name="Item-n" placeholder="Item#" />
+                                <input
+                                    class="floating-label max-width:70px"
+                                    name="Item-n"
+                                    placeholder="Item#" />
                                 <div class="flex-grow:1 height:40px">
-                                    <cocreate-select class="floating-label" name="Item" placeholder="Item">
-                                        <input placeholder="Search" template_id="items">
-                                        <ul class="options overflow:auto" fetch-collection="items" template_id="items">
-                                            <li class="option template" template_id="items" value='{{document._id}}' document_id="{{document._id}}" render-array="data">
-                                                <h3 name="name" value="{{document.name}}">Item Name</h3>
+                                    <cocreate-select
+                                        class="floating-label"
+                                        name="Item"
+                                        placeholder="Item">
+                                        <input
+                                            placeholder="Search"
+                                            template_id="items" />
+                                        <ul
+                                            class="options overflow:auto"
+                                            fetch-collection="items"
+                                            template_id="items">
+                                            <li
+                                                class="option template"
+                                                template_id="items"
+                                                value="{{document._id}}"
+                                                document_id="{{document._id}}"
+                                                render-array="data">
+                                                <h3
+                                                    name="name"
+                                                    value="{{document.name}}">
+                                                    Item Name
+                                                </h3>
                                                 <h5>{{document._id}}</h5>
                                             </li>
                                         </ul>
-
                                     </cocreate-select>
                                 </div>
                             </div>
                             <div class="display:flex">
-                                <input id="qty-{{document._id}}" class="floating-label max-width:70px" name="qty" placeholder="Qty">
-                                <input id="price-{{document._id}}" class="floating-label max-width:100px" name="price" placeholder="Price">
-                                <input id="total-{{document._id}}" realtime="false" class="floating-label max-width:130px item-total" name="total" placeholder="Total" calculate="{#price-{{document._id}}} * {#qty-{{document._id}}}">
+                                <input
+                                    id="qty-{{document._id}}"
+                                    class="floating-label max-width:70px"
+                                    name="qty"
+                                    placeholder="Qty" />
+                                <input
+                                    id="price-{{document._id}}"
+                                    class="floating-label max-width:100px"
+                                    name="price"
+                                    placeholder="Price" />
+                                <input
+                                    id="total-{{document._id}}"
+                                    realtime="false"
+                                    class="floating-label max-width:130px item-total"
+                                    name="total"
+                                    placeholder="Total"
+                                    calculate="{#price-{{document._id}}} * {#qty-{{document._id}}}" />
                             </div>
                             <div>
                                 <!--<input class="item-description floating-label" document_id="" name="description"  placeholder="Description"/>-->
                             </div>
-
                         </div>
 
-                        <div class="padding:10px display:flex justify-content:space-between flex-direction:column">
-                            <a actions="deleteDocument, closeModal" collection="{{document.collection}}" document_id="{{document._id}}" class="text-align-center"><i class="height:18px fill:#505050" src="/assets/svg/times.svg"></i></a>
-                            <a><i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i></a>
+                        <div
+                            class="padding:10px display:flex justify-content:space-between flex-direction:column">
+                            <a
+                                actions="deleteDocument, closeModal"
+                                collection="{{document.collection}}"
+                                document_id="{{document._id}}"
+                                class="text-align-center"
+                                ><i
+                                    class="height:18px fill:#505050"
+                                    src="/assets/svg/times.svg"></i
+                            ></a>
+                            <a
+                                ><i
+                                    class="display:flex height:18px fill:#505050"
+                                    src="/assets/svg/cog.svg"></i
+                            ></a>
                         </div>
                     </form>
-
                 </div>
 
                 <div class="noDrag padding-top:10px">
-                    <form realtime="false" collection="items-ordered" document_id="">
-                        <input type="hidden" name="estimate_id">
-                        <a actions="save, reset" class="noDrag padding:10px background:gainsboro"><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i> Add Item</a>
+                    <form
+                        realtime="false"
+                        collection="items-ordered"
+                        document_id="">
+                        <input type="hidden" name="estimate_id" />
+                        <a
+                            actions="save, reset"
+                            class="noDrag padding:10px background:gainsboro"
+                            ><i
+                                class="height:16px fill:#505050"
+                                src="/assets/svg/plus.svg"></i>
+                            Add Item</a
+                        >
                     </form>
                 </div>
             </div>
-            
-            <form pass_id="form-fields" collection="module_activities" document_id="">
-                <div class="padding:20px display:flex flex-wrap:wrap justify-content:space-between">
+
+            <form
+                pass_id="form-fields"
+                collection="module_activities"
+                document_id="">
+                <div
+                    class="padding:20px display:flex flex-wrap:wrap justify-content:space-between">
                     <div class="min-width:300px max-width:550px flex-grow:1">
                         <div class="padding-bottom:10px">
-                            <input type="text" name="payment-terms" placeholder="Add Payment Terms" class="floating-label">
+                            <input
+                                type="text"
+                                name="payment-terms"
+                                placeholder="Add Payment Terms"
+                                class="floating-label" />
                         </div>
                         <div class="padding-bottom:10px">
-                            <input type="text" name="clite-note" placeholder="Add client Note" class="floating-label">
+                            <input
+                                type="text"
+                                name="clite-note"
+                                placeholder="Add client Note"
+                                class="floating-label" />
                         </div>
                     </div>
                     <div class="flex-grow:1 width:225px max-width:400px">
-                        <div class="padding:20px_0px border-bottom:1px_solid_lightgrey">
-                            <div class="display:flex justify-content:space-between">
+                        <div
+                            class="padding:20px_0px border-bottom:1px_solid_lightgrey">
+                            <div
+                                class="display:flex justify-content:space-between">
                                 <label class="color-dark-gray">Subtotal</label>
-                                <span id="subtotal" calculate="{.item-total}">$00.00</span>
+                                <span id="subtotal" calculate="{.item-total}"
+                                    >$00.00</span
+                                >
                             </div>
-                            <div class="display:flex justify-content:space-between">
+                            <div
+                                class="display:flex justify-content:space-between">
                                 <label class="color-dark-gray">Discount</label>
-                                <input id="discount" name="discount">
+                                <input id="discount" name="discount" />
                             </div>
-                            <div class="display:flex justify-content:space-between">
+                            <div
+                                class="display:flex justify-content:space-between">
                                 <label class="color-dark-gray">Tax</label>
-                                <input id="tax-precent" name="tax-rate">
-                                <input type="hidden" id="tax" calculate="({#subtotal} - {#discount}) * {#tax-precent}">
+                                <input id="tax-precent" name="tax-rate" />
+                                <input
+                                    type="hidden"
+                                    id="tax"
+                                    calculate="({#subtotal} - {#discount}) * {#tax-precent}" />
                             </div>
                         </div>
                         <div class="padding:20px_0px">
-                            <div class="display:flex justify-content:space-between">
-                                <label class="color-dark-gray">Estimate Total</label>
-                                <span id="total" calculate="{#subtotal} - {#discount} + {#tax}" name="total" read="false">$00.00</span>
+                            <div
+                                class="display:flex justify-content:space-between">
+                                <label class="color-dark-gray"
+                                    >Estimate Total</label
+                                >
+                                <span
+                                    id="total"
+                                    calculate="{#subtotal} - {#discount} + {#tax}"
+                                    name="total"
+                                    read="false"
+                                    >$00.00</span
+                                >
                             </div>
-                            <div class="display:flex justify-content:space-between">
-                                <label class="color-dark-gray">Paid to date</label>
+                            <div
+                                class="display:flex justify-content:space-between">
+                                <label class="color-dark-gray"
+                                    >Paid to date</label
+                                >
                                 <span id="paid" name="paid">0</span>
                             </div>
-                            <div class="display:flex justify-content:space-between">
-                                <label class="color-dark-gray">Balance (USD)</label>
-                                <span calculate="{#total} - {#paid}" name="balance" read="false"></span>
+                            <div
+                                class="display:flex justify-content:space-between">
+                                <label class="color-dark-gray"
+                                    >Balance (USD)</label
+                                >
+                                <span
+                                    calculate="{#total} - {#paid}"
+                                    name="balance"
+                                    read="false"></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
-
         </main>
 
         <script src="https://cdn.cocreate.app/1.55.1/CoCreate.min.js"></script>
-
     </body>
-
 </html>
