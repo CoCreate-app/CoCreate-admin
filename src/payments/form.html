@@ -1,139 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            href="https://cdn.cocreate.app/favicon.ico"
+            type="image/ico"
+            sizes="16x16" />
+        <title>Payment Form | CoCreate</title>
+        <link
+            rel="stylesheet"
+            href="../index.css"
+            collection="files"
+            document_id="637bc8fe91249e639db315d9"
+            name="src"
+            type="text/css" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-		<title>Payment Form | CoCreate</title>
-        <link rel="stylesheet" href="../index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src" type="text/css"/>
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
+    <body>
+        <!-- Modal Viewport -->
+        <div id="modal-viewport" hidden></div>
 
-	<body>
-		<!-- Modal Viewport -->
-		<div id="modal-viewport" hidden></div>
-
-		<!-- Navbar -->
-		<nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
-
-			<!-- Horizontal Scroll Nav/Tabs -->
-			<ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-
-				<!-- Modal Controls -->
-				<li class="margin-right:15px"><a actions="closeModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
-				<li class="margin-right:15px">
-					<a actions="minMaxModal">
-						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
-					</a>
-				</li>
-				<li class="margin-right:15px"><a actions="parkModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
-
-				<!-- fullscreen toogle and icon transform-->
-				<li class="margin-right:15px">
-					<a fullscreen>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-					</a>
-				</li>
-
-
-				<!-- Render Module Form -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
-                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
-                        <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
+        <!-- Navbar -->
+        <nav
+            class="nav display:flex align-items:center background:whitesmoke"
+            content_id="content"
+            scroll="sticky-nav, hide-nav"
+            scroll-up="5"
+            scroll-down="5">
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul
+                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+                <!-- Modal Controls -->
+                <li class="margin-right:15px">
+                    <a actions="closeModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/times.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="minMaxModal">
+                        <i
+                            toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+                            toggle-attribute="src"
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-maximize.svg"></i>
                     </a>
-				</li>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="parkModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-minimize.svg"></i
+                    ></a>
+                </li>
 
-				<!-- Render Code Editor -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
+                <!-- fullscreen toogle and icon transform-->
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
                     </a>
-				</li>
+                </li>
 
-				<!-- Render Builder -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./modules/form.html"
+                        modal-width="320px">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/cog.svg"></i>
+                        <div
+                            pass_id="module-form"
+                            pass-collection="modules"
+                            pass-document_id=""
+                            pass_to="form-fields"></div>
+                        <div
+                            pass_id="module_id"
+                            pass-filter-value=""
+                            pass_to="module_id"></div>
                     </a>
-				</li>
+                </li>
 
-				<!-- deleteDocument-->
-				<li class="margin-right:15px">
-					<a actions="deleteDocument, closeModal" collection="module_activities" document_id="" pass_id="form-fields">
-                        <i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i>
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./code-editor/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/code.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="code-editor"></div>
                     </a>
-				</li>
-			</ul>
-		</nav>
+                </li>
 
-		<!-- Main Content -->
-		<main class="padding:10px" content_id="content">
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./builder/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/palette.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="builder"></div>
+                    </a>
+                </li>
 
-			<form collection="module_activities" document_id="" pass_id="form-fields">
-                
-                <input type="hidden" name="module_id" pass_id="module_id" value/>
-				
-				<input type="text" name="name" placeholder="Name" class="floating-label" />
+                <!-- deleteDocument-->
+                <li class="margin-right:15px">
+                    <a
+                        actions="deleteDocument, closeModal"
+                        collection="module_activities"
+                        document_id=""
+                        pass_id="form-fields">
+                        <i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/trash-alt.svg"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-				<input type="text" name="description" placeholder="Description" class="floating-label" />
+        <!-- Main Content -->
+        <main class="padding:10px" content_id="content">
+            <form
+                collection="module_activities"
+                document_id=""
+                pass_id="form-fields">
+                <input
+                    type="hidden"
+                    name="module_id"
+                    pass_id="module_id"
+                    value />
 
-				<input type="number" name="amount" placeholder="Amount" class="floating-label" />
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    class="floating-label" />
 
-				<select name="status" placeholder="Status" class="floating-label">
-					<option label="Succesful" value="succesful">Succesful</option>
-					<option label="Refunded" value="refunded">Refunded</option>
-					<option label="Disputed" value="disputed">Disputed</option>
-				</select>
+                <input
+                    type="text"
+                    name="description"
+                    placeholder="Description"
+                    class="floating-label" />
 
-				<input type="text" name="description" placeholder="Description" class="floating-label" />
+                <input
+                    type="number"
+                    name="amount"
+                    placeholder="Amount"
+                    class="floating-label" />
 
-				<select name="contact_id" class="floating-label">
-					<option label="Option1" value="option-1">Option1</option>
-					<option label="Option2" value="option-2">Option2</option>
-					<option label="Option3" value="option-3">Option3</option>
-					<option label="Option4" value="option-4">Option4</option>
-				</select>
+                <select
+                    name="status"
+                    placeholder="Status"
+                    class="floating-label">
+                    <option label="Succesful" value="succesful">
+                        Succesful
+                    </option>
+                    <option label="Refunded" value="refunded">Refunded</option>
+                    <option label="Disputed" value="disputed">Disputed</option>
+                </select>
 
+                <input
+                    type="text"
+                    name="description"
+                    placeholder="Description"
+                    class="floating-label" />
 
-				<div>data-url="modules/module_windows/html_elements/payments.php"</div>
+                <select name="contact_id" class="floating-label">
+                    <option label="Option1" value="option-1">Option1</option>
+                    <option label="Option2" value="option-2">Option2</option>
+                    <option label="Option3" value="option-3">Option3</option>
+                    <option label="Option4" value="option-4">Option4</option>
+                </select>
 
-				<input type="number" name="app_fee" placeholder="App Fee" class="floating-label" />
+                <div>
+                    data-url="modules/module_windows/html_elements/payments.php"
+                </div>
 
-				<input type="text" name="destination" placeholder="Destination" class="floating-label" />
+                <input
+                    type="number"
+                    name="app_fee"
+                    placeholder="App Fee"
+                    class="floating-label" />
 
-				<input type="text" name="charge_id" placeholder="Charge Id" class="floating-label">
+                <input
+                    type="text"
+                    name="destination"
+                    placeholder="Destination"
+                    class="floating-label" />
 
-				<select name="vendor_id" placeholder="Vendor" class="floating-label">
-					<option label="Option 1" value="option-1">Option 1</option>
-					<option label="Option 2" value="option-2">Option 2</option>
-					<option label="Option 3" value="option-3">Option 3</option>
-					<option label="Option 4" value="option-4">Option 4</option>
-				</select>
+                <input
+                    type="text"
+                    name="charge_id"
+                    placeholder="Charge Id"
+                    class="floating-label" />
 
-				<select name="related_to" placeholder="Related To" class="floating-label">
-					<option label="Option 1" value="option-1">Option 1</option>
-					<option label="Option 2" value="option-2">Option 2</option>
-					<option label="Option 3" value="option-3">Option 3</option>
-					<option label="Option 4" value="option-4">Option 4</option>
-				</select>
+                <select
+                    name="vendor_id"
+                    placeholder="Vendor"
+                    class="floating-label">
+                    <option label="Option 1" value="option-1">Option 1</option>
+                    <option label="Option 2" value="option-2">Option 2</option>
+                    <option label="Option 3" value="option-3">Option 3</option>
+                    <option label="Option 4" value="option-4">Option 4</option>
+                </select>
 
-				<button actions="save" class="position:absolute bottom:15px right:15px padding:15px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
-					<i class="height:20px fill:#505050" src="/assets/svg/save.svg"></i>
-				</button>
+                <select
+                    name="related_to"
+                    placeholder="Related To"
+                    class="floating-label">
+                    <option label="Option 1" value="option-1">Option 1</option>
+                    <option label="Option 2" value="option-2">Option 2</option>
+                    <option label="Option 3" value="option-3">Option 3</option>
+                    <option label="Option 4" value="option-4">Option 4</option>
+                </select>
 
-			</form>
+                <button
+                    actions="save"
+                    class="position:absolute bottom:15px right:15px padding:15px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
+                    <i
+                        class="height:20px fill:#505050"
+                        src="/assets/svg/save.svg"></i>
+                </button>
+            </form>
+        </main>
 
-		</main>
-
-        <script src="https://cdn.cocreate.app/1.56.0/CoCreate.min.js"></script>
-
-	</body>
-
+        <script src="https://cdn.cocreate.app/1.56.1/CoCreate.min.js"></script>
+    </body>
 </html>

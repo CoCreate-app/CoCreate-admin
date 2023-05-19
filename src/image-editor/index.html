@@ -1,85 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            href="https://cdn.cocreate.app/favicon.ico"
+            type="image/ico"
+            sizes="16x16" />
+        <title>tui-image-editor | CoCreateJS</title>
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-		<title>tui-image-editor | CoCreateJS</title>
+        <link
+            rel="stylesheet"
+            href="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.css" />
 
-		<link rel="stylesheet" href="https://uicdn.toast.com/tui-image-editor/latest/tui-image-editor.css" />
+        <style>
+            .tui-image-editor-header-logo {
+                display: none !important;
+            }
 
-		<style>
-			.tui-image-editor-header-logo {
-				display: none!important;
-			}
+            .tui-image-editor-header-buttons {
+                display: none !important;
+            }
+        </style>
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
-			.tui-image-editor-header-buttons {
-				display: none!important;
-			}
-		</style>
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
-
-	<body>
+    <body>
         <div id="modal-viewport" hidden></div>
         <!-- Navbar -->
-        <nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
-
+        <nav
+            class="nav display:flex align-items:center background:whitesmoke"
+            content_id="content"
+            scroll="sticky-nav, hide-nav"
+            scroll-up="5"
+            scroll-down="5">
             <!-- Horizontal Scroll Nav/Tabs -->
-            <ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-
+            <ul
+                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
                 <!-- Modal Controls -->
-                <li class="margin-right:15px"><a actions="closeModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
                 <li class="margin-right:15px">
-					<a actions="minMaxModal">
-						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
-					</a>
-				</li>
-                <li class="margin-right:15px"><a actions="parkModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
+                    <a actions="closeModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/times.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="minMaxModal">
+                        <i
+                            toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+                            toggle-attribute="src"
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-maximize.svg"></i>
+                    </a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="parkModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-minimize.svg"></i
+                    ></a>
+                </li>
 
                 <!-- fullscreen toogle and icon transform-->
-                            <li class="margin-right:15px">
-                <a fullscreen>
-                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-                </a>
-            </li>
-
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
+                    </a>
+                </li>
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
-                        <div pass-collection="modules" pass-document_id="5ff747727005da1c27274191" pass_to="form-fields"></div>
-                        <div pass-filter-value="5ff747727005da1c27274191" pass_to="module_id"></div>
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./modules/form.html"
+                        modal-width="320px">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/cog.svg"></i>
+                        <div
+                            pass-collection="modules"
+                            pass-document_id="5ff747727005da1c27274191"
+                            pass_to="form-fields"></div>
+                        <div
+                            pass-filter-value="5ff747727005da1c27274191"
+                            pass_to="module_id"></div>
                     </a>
                 </li>
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
-                        <div pass_id="render" pass-collection="files" pass-document_id="60ddfdbe14b5ab0c2dd2fdf5" pass-name="src" pass_to="code-editor"></div>
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./code-editor/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/code.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection="files"
+                            pass-document_id="60ddfdbe14b5ab0c2dd2fdf5"
+                            pass-name="src"
+                            pass_to="code-editor"></div>
                     </a>
                 </li>
 
                 <!-- Render Builder -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./builder/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/palette.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="builder"></div>
                     </a>
                 </li>
             </ul>
         </nav>
 
         <main content_id="content">
-			<div id="tui-image-editor"></div>
-		</main>
-        <script src="https://cdn.cocreate.app/1.56.0/CoCreate.min.js"></script>
-
-	</body>
-
+            <div id="tui-image-editor"></div>
+        </main>
+        <script src="https://cdn.cocreate.app/1.56.1/CoCreate.min.js"></script>
+    </body>
 </html>

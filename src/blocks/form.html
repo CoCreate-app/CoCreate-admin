@@ -1,126 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            href="https://cdn.cocreate.app/favicon.ico"
+            type="image/ico"
+            sizes="16x16" />
+        <title>Block form | CoCreate</title>
+        <link
+            rel="stylesheet"
+            href="../index.css"
+            collection="files"
+            document_id="637bc8fe91249e639db315d9"
+            name="src"
+            type="text/css" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-		<title>Block form | CoCreate</title>
-        <link rel="stylesheet" href="../index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src" type="text/css"/>
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
+    <body>
+        <!-- Modal Viewport -->
+        <div id="modal-viewport" hidden></div>
 
-	<body>
-		<!-- Modal Viewport -->
-		<div id="modal-viewport" hidden></div>
-		
-		<!-- Navbar -->
-        <nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
-
+        <!-- Navbar -->
+        <nav
+            class="nav display:flex align-items:center background:whitesmoke"
+            content_id="content"
+            scroll="sticky-nav, hide-nav"
+            scroll-up="5"
+            scroll-down="5">
             <!-- Horizontal Scroll Nav/Tabs -->
-            <ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-
+            <ul
+                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
                 <!-- Modal Controls -->
-                <li class="margin-right:15px"><a actions="closeModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
                 <li class="margin-right:15px">
-					<a actions="minMaxModal">
-						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
-					</a>
-				</li>
-                <li class="margin-right:15px"><a actions="parkModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
+                    <a actions="closeModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/times.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="minMaxModal">
+                        <i
+                            toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+                            toggle-attribute="src"
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-maximize.svg"></i>
+                    </a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="parkModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-minimize.svg"></i
+                    ></a>
+                </li>
 
                 <!-- fullscreen toogle and icon transform-->
-                            <li class="margin-right:15px">
-                <a fullscreen>
-                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-                </a>
-            </li>
-
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
+                    </a>
+                </li>
 
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
-                        <div pass_id="module-form" pass-collection="modules" pass-document_id="5ff747727005da1c27274194" pass_to="form-fields"></div>
-                        <div pass_id="module_id" pass-filter-value="5ff747727005da1c27274194" pass_to="module_id"></div>
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./modules/form.html"
+                        modal-width="320px">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/cog.svg"></i>
+                        <div
+                            pass_id="module-form"
+                            pass-collection="modules"
+                            pass-document_id="5ff747727005da1c27274194"
+                            pass_to="form-fields"></div>
+                        <div
+                            pass_id="module_id"
+                            pass-filter-value="5ff747727005da1c27274194"
+                            pass_to="module_id"></div>
                     </a>
                 </li>
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
-                        <div pass_id="render" pass-collection="files" pass-document_id="60de0faf14b5ab0c2dd2febc" pass-name="src" pass_to="code-editor"></div>
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./code-editor/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/code.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection="files"
+                            pass-document_id="60de0faf14b5ab0c2dd2febc"
+                            pass-name="src"
+                            pass_to="code-editor"></div>
                     </a>
                 </li>
 
                 <!-- Render Builder -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
-                        <div pass_id="render" pass-collection="files" pass-document_id="60de0faf14b5ab0c2dd2febc" pass-name="src" pass_to="builder"></div>
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./builder/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/palette.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection="files"
+                            pass-document_id="60de0faf14b5ab0c2dd2febc"
+                            pass-name="src"
+                            pass_to="builder"></div>
                     </a>
                 </li>
 
                 <!-- deleteDocument-->
                 <li class="margin-right:15px">
-                    <a actions="deleteDocument, closeModal" collection="blocks" document_id="" pass_id="form-fields">
-                        <i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i>
+                    <a
+                        actions="deleteDocument, closeModal"
+                        collection="blocks"
+                        document_id=""
+                        pass_id="form-fields">
+                        <i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/trash-alt.svg"></i>
                     </a>
                 </li>
             </ul>
         </nav>
-	
-		<!-- Main Content -->
-		<div class="padding:10px" content_id="content">
-	  
-			<form pass_id="form-fields" collection="blocks" document_id="">
-				<input type="hidden" name="module_id" pass_id="module_id">
-		        <floating-label>
-					<input type="text" name="name" placeholder="Name" class="floating-label">
-		        </floating-label>
-		        <floating-label>
-					<input type="text" name="icon" placeholder="Icon" class="floating-label">
-		        </floating-label>
-		        <floating-label>
-					<input type="number" name="position" placeholder="Position" class="floating-label">
-		        </floating-label>
-		        <floating-label>
-					<cocreate-select name="category" placeholder="Category" sortable class="floating-label">
-						<input placeholder="Search" template_id="category">
-						<div template_id="category" filter-name="type" filter-value="611829a9c0e9580010ea589d"></div>
-						<cc-options fetch-collection="tags" template_id="category" filter-name="module_id" filter-value="5ff747727005da1c27274194" class="overflow:auto">
-							<cc-option template="category" value="{{document._id}}">
-								<h3 >{{document.name}}</h3>
-							</cc-option>
-						</cc-options>
-					</cocreate-select>
-		        </floating-label>
-		        <!--<floating-label>-->
-					<!--<cocreate-select sortable class="floating-label" name="type" placeholder="Type">-->
-					<!--	<input placeholder="Search" template_id="type">-->
-					<!--	<div template_id="type" filter-name="type" filter-value="60edaf79b979b4001744c6fe"></div>-->
-					<!--	<cc-options fetch-collection="tags" template_id="type" filter-name="module_id" filter-value="5ff747727005da1c27274194" class="overflow:auto">-->
-					<!--		<cc-option template="type" value="{{document._id}}">-->
-					<!--			<h3>{{document.name}}</h3>-->
-					<!--		</cc-option>-->
-					<!--	</cc-options>-->
-					<!--</cocreate-select>-->
-		        <!--</floating-label>-->
-		        <floating-label>
-					<textarea name="html" placeholder="html" class="floating-label"></textarea>
-		        </floating-label>
 
-				<button actions="save" class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
-				    <i class="height:20px fill:#505050" src="/assets/svg/save.svg"></i>
-				</button>
-			</form>
-	
-		</div>
-  
-		<script src="https://cdn.cocreate.app/1.56.0/CoCreate.min.js"></script>
-		
-	</body>
+        <!-- Main Content -->
+        <div class="padding:10px" content_id="content">
+            <form pass_id="form-fields" collection="blocks" document_id="">
+                <input type="hidden" name="module_id" pass_id="module_id" />
+                <floating-label>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Name"
+                        class="floating-label" />
+                </floating-label>
+                <floating-label>
+                    <input
+                        type="text"
+                        name="icon"
+                        placeholder="Icon"
+                        class="floating-label" />
+                </floating-label>
+                <floating-label>
+                    <input
+                        type="number"
+                        name="position"
+                        placeholder="Position"
+                        class="floating-label" />
+                </floating-label>
+                <floating-label>
+                    <cocreate-select
+                        name="category"
+                        placeholder="Category"
+                        sortable
+                        class="floating-label">
+                        <input placeholder="Search" template_id="category" />
+                        <div
+                            template_id="category"
+                            filter-name="type"
+                            filter-value="611829a9c0e9580010ea589d"></div>
+                        <cc-options
+                            fetch-collection="tags"
+                            template_id="category"
+                            filter-name="module_id"
+                            filter-value="5ff747727005da1c27274194"
+                            class="overflow:auto">
+                            <cc-option
+                                template="category"
+                                value="{{document._id}}">
+                                <h3>{{document.name}}</h3>
+                            </cc-option>
+                        </cc-options>
+                    </cocreate-select>
+                </floating-label>
+                <!--<floating-label>-->
+                <!--<cocreate-select sortable class="floating-label" name="type" placeholder="Type">-->
+                <!--	<input placeholder="Search" template_id="type">-->
+                <!--	<div template_id="type" filter-name="type" filter-value="60edaf79b979b4001744c6fe"></div>-->
+                <!--	<cc-options fetch-collection="tags" template_id="type" filter-name="module_id" filter-value="5ff747727005da1c27274194" class="overflow:auto">-->
+                <!--		<cc-option template="type" value="{{document._id}}">-->
+                <!--			<h3>{{document.name}}</h3>-->
+                <!--		</cc-option>-->
+                <!--	</cc-options>-->
+                <!--</cocreate-select>-->
+                <!--</floating-label>-->
+                <floating-label>
+                    <textarea
+                        name="html"
+                        placeholder="html"
+                        class="floating-label"></textarea>
+                </floating-label>
+
+                <button
+                    actions="save"
+                    class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
+                    <i
+                        class="height:20px fill:#505050"
+                        src="/assets/svg/save.svg"></i>
+                </button>
+            </form>
+        </div>
+
+        <script src="https://cdn.cocreate.app/1.56.1/CoCreate.min.js"></script>
+    </body>
 </html>
