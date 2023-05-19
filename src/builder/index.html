@@ -1,223 +1,670 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Builder | CoCreate</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreate.min.css">
-        <link rel="stylesheet" href="./index.css" collection="files" document_id="610cb468c0e9580010e5ba50" name="src" type="text/css" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/favicon.ico" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.cocreate.app/latest/CoCreate.min.css" />
+        <link
+            rel="stylesheet"
+            href="./index.css"
+            collection="files"
+            document_id="610cb468c0e9580010e5ba50"
+            name="src"
+            type="text/css" />
         <style>
-            .left-panel.active, .right-panel.active, .blocks.active, .components.active, .editor-panel.active {
-                display: block
+            .left-panel.active,
+            .right-panel.active,
+            .blocks.active,
+            .components.active,
+            .editor-panel.active {
+                display: block;
             }
 
             .builder-tab-round[selected] {
                 background: darkgrey;
             }
-            
+
             li[selected-group="screen-size"][selected] {
                 background: gainsboro;
             }
-            
+
             .card:hover {
                 background: rgba(0, 0, 0, 0.2);
             }
         </style>
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
     <body>
         <!--<nav class="nav display:flex position:relative align-items:center box-shadow-bottom" content_id="canvas" scroll=", hide-nav" scroll-up="5" scroll-down="5" collection="files" document_id="60de0fae14b5ab0c2dd2feb9" name="src">-->
-        <nav class="nav display:flex position:relative align-items:center box-shadow-bottom" content_id="canvas" scroll=", hide-nav" scroll-up="5" scroll-down="5">
-            
+        <nav
+            class="nav display:flex position:relative align-items:center box-shadow-bottom"
+            content_id="canvas"
+            scroll=", hide-nav"
+            scroll-up="5"
+            scroll-down="5">
             <!-- Menu Icon Arrow Left Animations -->
-            <div attribute="toggle" attribute-target="#btn-left" value="width:265px,width:0px" attribute-trigger="@0px-987px"></div>
-            <div attribute="toggle" attribute-target="#btn-left" value="width:0px,width:265px" attribute-trigger="@988px-1600px"></div>
-			<a id="btn-left" class="menu_icon arrow-left" click="active" toggle="width:0px,width:265px" toggle-target="#menuL" toggle-attribute="style">
-				<span></span>
-				<span></span>
-				<span></span>
-			</a>
+            <div
+                attribute="toggle"
+                attribute-target="#btn-left"
+                value="width:265px,width:0px"
+                attribute-trigger="@0px-987px"></div>
+            <div
+                attribute="toggle"
+                attribute-target="#btn-left"
+                value="width:0px,width:265px"
+                attribute-trigger="@988px-1600px"></div>
+            <a
+                id="btn-left"
+                class="menu_icon arrow-left"
+                click="active"
+                toggle="width:0px,width:265px"
+                toggle-target="#menuL"
+                toggle-attribute="style">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
 
             <!-- Horizontal Scroll Nav/Tabs -->
-            <ul class="direction:rtl display:inline-flex align-items:center overflow:auto font-size:20px list-style-type:none width:100% height:50px">
-
+            <ul
+                class="direction:rtl display:inline-flex align-items:center overflow:auto font-size:20px list-style-type:none width:100% height:50px">
                 <!-- Modal Controls -->
-                <li class="margin-right:15px"><a actions="closeModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
                 <li class="margin-right:15px">
-					<a actions="minMaxModal">
-						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
-					</a>
-				</li>
-                <li class="margin-right:15px"><a actions="parkModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
+                    <a actions="closeModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/times.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="minMaxModal">
+                        <i
+                            toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+                            toggle-attribute="src"
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-maximize.svg"></i>
+                    </a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="parkModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-minimize.svg"></i
+                    ></a>
+                </li>
 
                 <!-- fullscreen toogle and icon transform-->
-                            <li class="margin-right:15px">
-                <a fullscreen>
-                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-                    <i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-                </a>
-            </li>
-
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
+                    </a>
+                </li>
 
                 <!-- Save and Make live -->
                 <li class="margin-right:15px">
-                    <a actions="saveDomText" pass_id="builder" collection="" document_id="" name="src"><i class="height:20px fill:#505050" src="/assets/svg/save.svg"></i></a>
+                    <a
+                        actions="saveDomText"
+                        pass_id="builder"
+                        collection=""
+                        document_id=""
+                        name="src"
+                        ><i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/save.svg"></i
+                    ></a>
                 </li>
 
                 <!-- Builder Controls -->
-                <li class="margin-right:15px"><a actions="redo" pass_id="builder" collection="" document_id="" name="src" class=""><i class="height:20px fill:#505050" src="/assets/svg/redo-alt.svg"></i></a></li>
-                <li class="margin-right:15px"><a actions="undo" pass_id="builder" collection="" document_id="" name="src" class=""><i class="height:20px fill:#505050" src="/assets/svg/undo-alt.svg"></i></a></li>
-
-
-                <li class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke" selected-value="max-width:100%" selected-target=".canvas-container" selected-group="screen-size" selected>
-                    <a id="desktop-view" class=""><i class="height:20px fill:#505050" src="/assets/svg/desktop.svg"></i></a>
+                <li class="margin-right:15px">
+                    <a
+                        actions="redo"
+                        pass_id="builder"
+                        collection=""
+                        document_id=""
+                        name="src"
+                        class=""
+                        ><i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/redo-alt.svg"></i
+                    ></a>
                 </li>
-                <li class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke" selected-value="max-width:768px" selected-target=".canvas-container" selected-group="screen-size">
-                    <a id="tablet-view" class=""><i class="height:20px fill:#505050" src="/assets/svg/tablet-alt.svg"></i></a>
-                </li>
-                <li class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke" selected-value="max-width:375px" selected-target=".canvas-container" selected-group="screen-size">
-                    <a id="mobile-view" class=""><i class="height:20px fill:#505050" src="/assets/svg/mobile-alt.svg"></i></a>
+                <li class="margin-right:15px">
+                    <a
+                        actions="undo"
+                        pass_id="builder"
+                        collection=""
+                        document_id=""
+                        name="src"
+                        class=""
+                        ><i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/undo-alt.svg"></i
+                    ></a>
                 </li>
 
-                <li actions="disableLinks" link-target="#canvas;" class="margin-right:15px" show="[actions='enableLinks']" hide="[actions='disableLinks']"><i class="height:20px fill:#505050" src="/assets/svg/link.svg"></i></li>
-                <li actions="enableLinks" link-target="#canvas;" class="margin-right:15px color:red" hidden show="[actions='disableLinks']" hide="[actions='enableLinks']"><i class="height:20px fill:#505050" src="/assets/svg/unlink.svg"></i></li>
+                <li
+                    class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke"
+                    selected-value="max-width:100%"
+                    selected-target=".canvas-container"
+                    selected-group="screen-size"
+                    selected>
+                    <a id="desktop-view" class=""
+                        ><i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/desktop.svg"></i
+                    ></a>
+                </li>
+                <li
+                    class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke"
+                    selected-value="max-width:768px"
+                    selected-target=".canvas-container"
+                    selected-group="screen-size">
+                    <a id="tablet-view" class=""
+                        ><i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/tablet-alt.svg"></i
+                    ></a>
+                </li>
+                <li
+                    class="margin-right:15px min-width:40px line-height:40px border-radius:50% text-align:center background:whitesmoke"
+                    selected-value="max-width:375px"
+                    selected-target=".canvas-container"
+                    selected-group="screen-size">
+                    <a id="mobile-view" class=""
+                        ><i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/mobile-alt.svg"></i
+                    ></a>
+                </li>
 
-                <li class="margin-right:15px" show="iframe; .template, iframe; [templateid]" hide="iframe; [templateid], iframe; .template">Q</li>
+                <li
+                    actions="disableLinks"
+                    link-target="#canvas;"
+                    class="margin-right:15px"
+                    show="[actions='enableLinks']"
+                    hide="[actions='disableLinks']">
+                    <i
+                        class="height:20px fill:#505050"
+                        src="/assets/svg/link.svg"></i>
+                </li>
+                <li
+                    actions="enableLinks"
+                    link-target="#canvas;"
+                    class="margin-right:15px color:red"
+                    hidden
+                    show="[actions='disableLinks']"
+                    hide="[actions='enableLinks']">
+                    <i
+                        class="height:20px fill:#505050"
+                        src="/assets/svg/unlink.svg"></i>
+                </li>
+
+                <li
+                    class="margin-right:15px"
+                    show="iframe; .template, iframe; [templateid]"
+                    hide="iframe; [templateid], iframe; .template">
+                    Q
+                </li>
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
-                    <a actions="pass, openModal" modal-src="./code-editor/index.html" modal-width="900px" modal-color="#229954">
-                        <i class="height:20px fill:#505050" src="/assets/svg/code.svg"></i>
-                        <div pass_id="builder" pass-collection="" pass-document_id="" name="" pass_to="code-editor"></div>
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./code-editor/index.html"
+                        modal-width="900px"
+                        modal-color="#229954">
+                        <i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/code.svg"></i>
+                        <div
+                            pass_id="builder"
+                            pass-collection=""
+                            pass-document_id=""
+                            name=""
+                            pass_to="code-editor"></div>
                     </a>
                 </li>
-                <li class="margin-right:15px"><a id='element-borders' class=""><i class="height:20px fill:#505050" src="/assets/svg/square.svg"></i></a></li>
-                <li class="margin-right:15px padding-left:15px"><a id="clean-canvas"><i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i></a></li>
+                <li class="margin-right:15px">
+                    <a id="element-borders" class=""
+                        ><i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/square.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px padding-left:15px">
+                    <a id="clean-canvas"
+                        ><i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/trash-alt.svg"></i
+                    ></a>
+                </li>
             </ul>
 
             <!-- Menu Icon Arrow Right Animations -->
-            <div attribute="toggle" attribute-target="#btn-right" value="width:310px,width:0px" attribute-trigger="@0px-987px"></div>
-            <div attribute="toggle" attribute-target="#btn-right" value="width:0px,width:310px" attribute-trigger="@988px-1600px"></div>
-			<a id="btn-right" class="menu_icon arrow-right" click="active" toggle="width:0px,width:310px" toggle-target="#menuR" toggle-attribute="style">
-				<span></span>
-				<span></span>
-				<span></span>
-			</a>
+            <div
+                attribute="toggle"
+                attribute-target="#btn-right"
+                value="width:310px,width:0px"
+                attribute-trigger="@0px-987px"></div>
+            <div
+                attribute="toggle"
+                attribute-target="#btn-right"
+                value="width:0px,width:310px"
+                attribute-trigger="@988px-1600px"></div>
+            <a
+                id="btn-right"
+                class="menu_icon arrow-right"
+                click="active"
+                toggle="width:0px,width:310px"
+                toggle-target="#menuR"
+                toggle-attribute="style">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
         </nav>
 
         <!-- Modal viewport -->
-        <div id="modal-viewport" class="position:fixed z-index:12!important"></div>
+        <div
+            id="modal-viewport"
+            class="position:fixed z-index:12!important"></div>
 
         <!-- Main Container -->
         <main content_id="canvas" class="height:100vh">
             <div class="canvas-container height:100% margin:auto">
-                <iframe contenteditable sortable id="canvas" pass_id="builder" collection="" document_id="" name="src" update="false" crud="false" frameborder="0" width="100%" height="100%"></iframe>
+                <iframe
+                    contenteditable
+                    sortable
+                    id="canvas"
+                    pass_id="builder"
+                    collection=""
+                    document_id=""
+                    name="src"
+                    update="false"
+                    crud="false"
+                    frameborder="0"
+                    width="100%"
+                    height="100%"></iframe>
             </div>
         </main>
 
         <!-- SideNav Left -->
-        <sidenav id="menuL" class="position:absolute top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:260px width:0px@xs@sm@md z-index:8" resizable resize-target="[content_id='canvas']" resize-property="margin-left" resize-value="width">
+        <sidenav
+            id="menuL"
+            class="position:absolute top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:260px width:0px@xs@sm@md z-index:8"
+            resizable
+            resize-target="[content_id='canvas']"
+            resize-property="margin-left"
+            resize-value="width">
             <!-- <div class="domEditor" collection="files" document_id="637bc8fe91249e639db315e2" name="src"></div> -->
             <div src="./builder/components/left-panel.html"></div>
             <div resize="right"></div>
         </sidenav>
 
         <!-- SideNav Right -->
-        <sidenav id="menuR" class="position:absolute top:0px right:0px overflow:hidden background:whitesmoke height:100vh width:310px width:0px@xs@sm@md z-index:8" resizable resize-target="[content_id='canvas']" resize-property="margin-right" resize-value="width">
-            <input type="hidden" attribute="eid"/>
+        <sidenav
+            id="menuR"
+            class="position:absolute top:0px right:0px overflow:hidden background:whitesmoke height:100vh width:310px width:0px@xs@sm@md z-index:8"
+            resizable
+            resize-target="[content_id='canvas']"
+            resize-property="margin-right"
+            resize-value="width">
+            <input type="hidden" attribute="eid" />
             <!-- <div class="domEditor" collection="files" document_id="637bc8fe91249e639db315e1" name="src"></div> -->
             <div src="./builder/components/right-panel.html"></div>
             <div resize="left"></div>
         </sidenav>
 
         <!-- Selected Toolbar -->
-        <toolbar toolbar-placement="top" toolbar-target="iframe;" toolbar-event="click" config-key="selectable" class="position:absolute pointer-events:none display:none">
-            <tools class="display:flex justify-content:space-between width:100% color:white font-size:11px z-index:7">
-                <span class="padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid" tagName></span>
+        <toolbar
+            toolbar-placement="top"
+            toolbar-target="iframe;"
+            toolbar-event="click"
+            config-key="selectable"
+            class="position:absolute pointer-events:none display:none">
+            <tools
+                class="display:flex justify-content:space-between width:100% color:white font-size:11px z-index:7">
+                <span
+                    class="padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid"
+                    tagname></span>
                 <!--<span class="padding:3px background:dodgerblue pointer-events:auto"><i class="height:20px fill:#505050" src="/assets/svg/arrows-alt.svg"></i></span>-->
-                <div class="display:flex align-items:center padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid pointer-events:auto">
-                    <span actions="cloneElement" class="margin-right:10px"><i class="height:20px fill:#505050" src="/assets/svg/clone.svg"></i></span>
-                    <span actions="remove" remove-target="iframe;" class="margin-right:10px"><i class="height:20px fill:#505050" src="/assets/svg/trash-alt.svg"></i></span>
-                    <span actions="previousElement" class="margin-right:10px"><i class="height:20px fill:#505050" src="/assets/svg/arrow-up.svg"></i></span>
-                    <span actions="nextElement"><i class="height:20px fill:#505050" src="/assets/svg/arrow-down.svg"></i></span>
+                <div
+                    class="display:flex align-items:center padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid pointer-events:auto">
+                    <span actions="cloneElement" class="margin-right:10px"
+                        ><i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/clone.svg"></i
+                    ></span>
+                    <span
+                        actions="remove"
+                        remove-target="iframe;"
+                        class="margin-right:10px"
+                        ><i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/trash-alt.svg"></i
+                    ></span>
+                    <span actions="previousElement" class="margin-right:10px"
+                        ><i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/arrow-up.svg"></i
+                    ></span>
+                    <span actions="nextElement"
+                        ><i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/arrow-down.svg"></i
+                    ></span>
                 </div>
             </tools>
-            <div class="height:100% width:100% border:2px_dodgerblue_solid"></div>
+            <div
+                class="height:100% width:100% border:2px_dodgerblue_solid"></div>
         </toolbar>
 
         <!-- Hover Toolbar -->
-        <toolbar toolbar-placent="top" toolbar-target="iframe;" toolbar-event="mouseover" config-key="hoverable" class="position:absolute pointer-events:none display:none">
-            <tools class="tools display:flex align-items:center color:white font-size:11px z-index:7">
-                <span class="padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid" tagName></span>
+        <toolbar
+            toolbar-placent="top"
+            toolbar-target="iframe;"
+            toolbar-event="mouseover"
+            config-key="hoverable"
+            class="position:absolute pointer-events:none display:none">
+            <tools
+                class="tools display:flex align-items:center color:white font-size:11px z-index:7">
+                <span
+                    class="padding:2px_5px background:dodgerblue border:1px_dodgerblue_solid"
+                    tagname></span>
             </tools>
-            <div class="height:100% width:100% border:1px_dodgerblue_solid"></div>
+            <div
+                class="height:100% width:100% border:1px_dodgerblue_solid"></div>
         </toolbar>
         <!-- End Hover Toolbar -->
 
         <!-- Collaboration Toolbar -->
-        <div toolbar-placent="top" toolbar-target="iframe;" toolbar-event="mouseup" config-key="editable" class="toolbar position:absolute pointer-events:none display:none">
-            <tools class="display:flex align-items:center width:fit-content background:gainsboro border-radius:5px pointer-events:auto z-index:7">
-                <div actions="nodeName" nodeName="b" nodeTarget="#canvas;" classname="rte-btn" class="padding:5px" id="bold-button"><i class="height:20px fill:#505050" src="/assets/svg/bold.svg"></i></div>
-                <div actions="nodeName" nodeName="i" nodeTarget="#canvas;" class="rte-btn" id="italic-button"><i class="height:20px fill:#505050" src="/assets/svg/italic.svg"></i></div>
-                <div class="rte-btn" id="link-button" show="#link" hide="#link"><i class="height:20px fill:#505050" src="/assets/svg/link.svg"></i></div>
-                <div id="link" class="position:absolute display:flex align-items:center transition:0.4s background:gainsboro height:28px border-radius:5px" hidden>
+        <div
+            toolbar-placent="top"
+            toolbar-target="iframe;"
+            toolbar-event="mouseup"
+            config-key="editable"
+            class="toolbar position:absolute pointer-events:none display:none">
+            <tools
+                class="display:flex align-items:center width:fit-content background:gainsboro border-radius:5px pointer-events:auto z-index:7">
+                <div
+                    actions="nodeName"
+                    nodename="b"
+                    nodetarget="#canvas;"
+                    classname="rte-btn"
+                    class="padding:5px"
+                    id="bold-button">
+                    <i
+                        class="height:20px fill:#505050"
+                        src="/assets/svg/bold.svg"></i>
+                </div>
+                <div
+                    actions="nodeName"
+                    nodename="i"
+                    nodetarget="#canvas;"
+                    class="rte-btn"
+                    id="italic-button">
+                    <i
+                        class="height:20px fill:#505050"
+                        src="/assets/svg/italic.svg"></i>
+                </div>
+                <div class="rte-btn" id="link-button" show="#link" hide="#link">
+                    <i
+                        class="height:20px fill:#505050"
+                        src="/assets/svg/link.svg"></i>
+                </div>
+                <div
+                    id="link"
+                    class="position:absolute display:flex align-items:center transition:0.4s background:gainsboro height:28px border-radius:5px"
+                    hidden>
                     <input type="text" name="" />
-                    <div actions="nodeName" nodeName="a" nodeTarget="#canvas;" class="rte-btn" id="link-button"><i class="height:20px fill:#505050" src="/assets/svg/link.svg"></i></div>
-                    <div hide="#link"><i class="height:20px fill:#505050" src="/assets/svg/times.svg"></i></div>
+                    <div
+                        actions="nodeName"
+                        nodename="a"
+                        nodetarget="#canvas;"
+                        class="rte-btn"
+                        id="link-button-1">
+                        <i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/link.svg"></i>
+                    </div>
+                    <div hide="#link">
+                        <i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/times.svg"></i>
+                    </div>
                 </div>
-                <div actions="nodeName" nodeName="q" nodeTarget="#canvas;" class="rte-btn" id="quote-button"><i class="height:20px fill:#505050" src="/assets/svg/quote-right.svg"></i></div>
-                <div class="rte-btn" id="heading-btn" hover="width:fit-content" hover-target="#headings"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i></div>
-                <div id="headings" hover="width:fit-content" hover-target="#headings" class="position:absolute display:flex align-items:center transition:0.4s width:0px background:gainsboro overflow:hidden height:28px border-radius:5px">
-                    <div actions="nodeName" nodeName="h1" nodeTarget="#canvas;" class="rte-btn" id="header-1-button"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i><sub>1</sub></div>
-                    <div actions="nodeName" nodeName="h2" nodeTarget="#canvas;" class="rte-btn" id="header-2-button"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i><sub>2</sub></div>
-                    <div actions="nodeName" nodeName="h3" nodeTarget="#canvas;" class="rte-btn" id="header-1-button"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i><sub>3</sub></div>
-                    <div actions="nodeName" nodeName="h4" nodeTarget="#canvas;" class="rte-btn" id="header-2-button"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i><sub>4</sub></div>
-                    <div actions="nodeName" nodeName="h5" nodeTarget="#canvas;" class="rte-btn" id="header-1-button"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i><sub>5</sub></div>
-                    <div actions="nodeName" nodeName="h6" nodeTarget="#canvas;" class="rte-btn" id="header-2-button"><i class="height:20px fill:#505050" src="/assets/svg/heading.svg"></i><sub>6</sub></div>
+                <div
+                    actions="nodeName"
+                    nodename="q"
+                    nodetarget="#canvas;"
+                    class="rte-btn"
+                    id="quote-button">
+                    <i
+                        class="height:20px fill:#505050"
+                        src="/assets/svg/quote-right.svg"></i>
                 </div>
-                <div class="rte-btn" id="show-controls" show="#sidebar-controls" hide="#sidebar-controls"><i class="height:20px fill:#505050" src="/assets/svg/plus.svg"></i></div>
-                <div id="sidebar-controls" class="display:flex align-items:center" hidden>
-                    <div class="rte-btn" id="image-button"><i class="height:20px fill:#505050" src="/assets/svg/camera.svg"></i></div>
-                    <div class="rte-btn" id="video-button"><i class="height:20px fill:#505050" src="/assets/svg/play.svg"></i></div>
-                    <div class="rte-btn" id="tweet-button"><i class="height:20px fill:#505050" src="/assets/svg/twitter.svg"></i></div>
-                    <div class="rte-btn" id="divider-button"><i class="height:20px fill:#505050" src="/assets/svg/minus.svg"></i></div>
+                <div
+                    class="rte-btn"
+                    id="heading-btn"
+                    hover="width:fit-content"
+                    hover-target="#headings">
+                    <i
+                        class="height:20px fill:#505050"
+                        src="/assets/svg/heading.svg"></i>
+                </div>
+                <div
+                    id="headings"
+                    hover="width:fit-content"
+                    hover-target="#headings"
+                    class="position:absolute display:flex align-items:center transition:0.4s width:0px background:gainsboro overflow:hidden height:28px border-radius:5px">
+                    <div
+                        actions="nodeName"
+                        nodename="h1"
+                        nodetarget="#canvas;"
+                        class="rte-btn"
+                        id="header-1-button">
+                        <i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/heading.svg"></i
+                        ><sub>1</sub>
+                    </div>
+                    <div
+                        actions="nodeName"
+                        nodename="h2"
+                        nodetarget="#canvas;"
+                        class="rte-btn"
+                        id="header-2-button">
+                        <i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/heading.svg"></i
+                        ><sub>2</sub>
+                    </div>
+                    <div
+                        actions="nodeName"
+                        nodename="h3"
+                        nodetarget="#canvas;"
+                        class="rte-btn"
+                        id="header-3-button">
+                        <i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/heading.svg"></i
+                        ><sub>3</sub>
+                    </div>
+                    <div
+                        actions="nodeName"
+                        nodename="h4"
+                        nodetarget="#canvas;"
+                        class="rte-btn"
+                        id="header-4-button">
+                        <i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/heading.svg"></i
+                        ><sub>4</sub>
+                    </div>
+                    <div
+                        actions="nodeName"
+                        nodename="h5"
+                        nodetarget="#canvas;"
+                        class="rte-btn"
+                        id="header-5-button">
+                        <i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/heading.svg"></i
+                        ><sub>5</sub>
+                    </div>
+                    <div
+                        actions="nodeName"
+                        nodename="h6"
+                        nodetarget="#canvas;"
+                        class="rte-btn"
+                        id="header-6-button">
+                        <i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/heading.svg"></i
+                        ><sub>6</sub>
+                    </div>
+                </div>
+                <div
+                    class="rte-btn"
+                    id="show-controls"
+                    show="#sidebar-controls"
+                    hide="#sidebar-controls">
+                    <i
+                        class="height:20px fill:#505050"
+                        src="/assets/svg/plus.svg"></i>
+                </div>
+                <div
+                    id="sidebar-controls"
+                    class="display:flex align-items:center"
+                    hidden>
+                    <div class="rte-btn" id="image-button">
+                        <i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/camera.svg"></i>
+                    </div>
+                    <div class="rte-btn" id="video-button">
+                        <i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/play.svg"></i>
+                    </div>
+                    <div class="rte-btn" id="tweet-button">
+                        <i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/twitter.svg"></i>
+                    </div>
+                    <div class="rte-btn" id="divider-button">
+                        <i
+                            class="height:20px fill:#505050"
+                            src="/assets/svg/minus.svg"></i>
+                    </div>
                 </div>
             </tools>
             <div class="height:100% width:100% pointer-events:none"></div>
         </div>
         <!-- End Collaboration Toolbar -->
-        
+
         <!-- element-config -->
-        <script config-target="iframe; html" collection="" document_id="" name="">
+        <script
+            config-target="iframe; html"
+            collection=""
+            document_id=""
+            name="">
             [
-                { selector: "*", draggable: true, droppable: true, selectable: true, hoverable: true },
+                {
+                    selector: "*",
+                    draggable: true,
+                    droppable: true,
+                    selectable: true,
+                    hoverable: true,
+                },
                 { selector: "html, head", droppable: true },
-                { selector: "body", droppable: true, selectable: true, hoverable: true },
-                { selector: "h1, h2, h3, h4, h5, h6, p, span, blockquote", editable: true, draggable: true, selectable: true, hoverable: true, mouseover: true },
-                { selector: "input, textarea, select", draggable: true, selectable: true, hoverable: true },
-                { selector: "cursor-flag", selectable: false, hoverable: false },
-                { selector: "div.nav", tagName: "navbar", draggable: true, droppable: true, selectable: true, hoverable: true },
-                { selector: ".floating-label_field", draggable: true, selectable: true, hoverable: true },
-                { selector: ".floating-label", draggable: false, selectable: true, hoverable: true },
-                { selector: "a.menu_icon", tagName: "icon", draggable: true, selectable: true, hoverable: true },
+                {
+                    selector: "body",
+                    droppable: true,
+                    selectable: true,
+                    hoverable: true,
+                },
+                {
+                    selector: "h1, h2, h3, h4, h5, h6, p, span, blockquote",
+                    editable: true,
+                    draggable: true,
+                    selectable: true,
+                    hoverable: true,
+                    mouseover: true,
+                },
+                {
+                    selector: "input, textarea, select",
+                    draggable: true,
+                    selectable: true,
+                    hoverable: true,
+                },
+                {
+                    selector: "cursor-flag",
+                    selectable: false,
+                    hoverable: false,
+                },
+                {
+                    selector: "div.nav",
+                    tagname: "navbar",
+                    draggable: true,
+                    droppable: true,
+                    selectable: true,
+                    hoverable: true,
+                },
+                {
+                    selector: ".floating-label_field",
+                    draggable: true,
+                    selectable: true,
+                    hoverable: true,
+                },
+                {
+                    selector: ".floating-label",
+                    draggable: false,
+                    selectable: true,
+                    hoverable: true,
+                },
+                {
+                    selector: "a.menu_icon",
+                    tagname: "icon",
+                    draggable: true,
+                    selectable: true,
+                    hoverable: true,
+                },
                 { selector: "a.menu_icon span", selectable: false },
-                { selector: "[collection], [document_id], [name], [fetch-collection]", label: "{{tagName}} <i class='height:20px fill:#505050' src='/assets/svg/database.svg'></i>", draggable: true, droppable: true, selectable: true, hoverable: true },
+                {
+                    selector:
+                        "[collection], [document_id], [name], [fetch-collection]",
+                    label: "{{tagname}} <i class='height:20px fill:#505050' src='/assets/svg/database.svg'></i>",
+                    draggable: true,
+                    droppable: true,
+                    selectable: true,
+                    hoverable: true,
+                },
             ];
         </script>
-        
+
         <!-- element-config Example using html elements and attributes to define config -->
         <!--<element-config config-target="iframe; html" collection="" document_id="" name="" style="display:none">-->
         <!--    <config selector="*" editable="true" draggable="true" selectable="true" hoverable="true" mouseover="true"></config>-->
         <!--    <config selector="h1, h2, h3, h4, h5, h6, p, span, blockquote" editable="true" draggable="true" selectable="true" hoverable="true" mouseover="true"></config>-->
         <!--</element-config>-->
 
-       
-        <script src="https://cdn.cocreate.app/1.55.1/CoCreate.min.js"></script>        
-
+        <script src="https://cdn.cocreate.app/1.56.0/CoCreate.min.js"></script>
     </body>
-
 </html>

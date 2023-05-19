@@ -1,134 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Calendar | CoCreate</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.cocreate.app/latest/CoCreate.min.css" />
+        <link
+            rel="stylesheet"
+            href="./index.css"
+            collection="files"
+            document_id="637bc8fe91249e639db315e4"
+            name="src"
+            type="text/css" />
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Calendar | CoCreate</title>
-		<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreate.min.css">
-        <link rel="stylesheet" href="./index.css" collection="files" document_id="637bc8fe91249e639db315e4" name="src" type="text/css"/>
+        <!-- Full Calendar -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css"
+            rel="stylesheet" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.css"
+            rel="stylesheet" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.css"
+            rel="stylesheet" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.css"
+            rel="stylesheet" />
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.js"></script>
 
-		<!-- Full Calendar -->
-		<link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css' rel='stylesheet' />
-		<link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.css' rel='stylesheet' />
-		<link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.css' rel='stylesheet' />
-		<link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.css' rel='stylesheet' />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
+    <style>
+        .fc-toolbar.fc-header-toolbar {
+            margin: 10px !important;
+        }
+    </style>
+    <body class="overflow:auto">
+        <!-- Navbar -->
+        <nav
+            class="nav display:flex align-items:center background:whitesmoke"
+            content_id="content"
+            scroll="sticky-nav, hide-nav"
+            scroll-up="5"
+            scroll-down="5">
+            <!-- Menu Icon Animations -->
+            <a class="menu_icon--Vdots" toggle="active" toggle-sidenav="menuL">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </a>
 
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.js'></script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/interaction/main.min.js'></script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.js'></script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.js'></script>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.js'></script>
-
-
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
-	<style>
-		.fc-toolbar.fc-header-toolbar{margin:10px!important}
-	</style>
-	<body class="overflow:auto">
-
-		<!-- Navbar -->
-		<nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
-
-			<!-- Menu Icon Animations -->
-			<a class="menu_icon--Vdots" toggle="active" toggle-sidenav="menuL">
-				<div class="circle"></div>
-				<div class="circle"></div>
-				<div class="circle"></div>
-				<div class="circle"></div>
-				<div class="circle"></div>
-			</a>
-
-			<!-- Horizontal Scroll Nav/Tabs -->
-			<ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-
-				<!-- Modal Controls -->
-				<li class="margin-right:15px"><a actions="closeModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
-				<li class="margin-right:15px">
-					<a actions="minMaxModal">
-						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
-					</a>
-				</li>
-				<li class="margin-right:15px"><a actions="parkModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
-
-				<!-- fullscreen toogle and icon transform-->
-				<li class="margin-right:15px">
-					<a fullscreen>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-					</a>
-				</li>
-
-
-				<!-- Render Module Form -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
-                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
-                        <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul
+                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+                <!-- Modal Controls -->
+                <li class="margin-right:15px">
+                    <a actions="closeModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/times.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="minMaxModal">
+                        <i
+                            toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+                            toggle-attribute="src"
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-maximize.svg"></i>
                     </a>
-				</li>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="parkModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-minimize.svg"></i
+                    ></a>
+                </li>
 
-				<!-- Render Code Editor -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
+                <!-- fullscreen toogle and icon transform-->
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
                     </a>
-				</li>
+                </li>
 
-				<!-- Render Builder -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./modules/form.html"
+                        modal-width="320px">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/cog.svg"></i>
+                        <div
+                            pass_id="module-form"
+                            pass-collection="modules"
+                            pass-document_id=""
+                            pass_to="form-fields"></div>
+                        <div
+                            pass_id="module_id"
+                            pass-filter-value=""
+                            pass_to="module_id"></div>
                     </a>
-				</li>
+                </li>
 
-				<!-- deleteDocument-->
-				<li class="margin-right:15px">
-					<a actions="deleteDocument, closeModal" collection="" document_id="" pass_id="form-fields">
-                        <i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i>
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./code-editor/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/code.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="code-editor"></div>
                     </a>
-				</li>
+                </li>
 
-				<!-- Calendar Controls -->
-				<li class="margin-right:15px">
-					<a calendar-view="timeGridDay" calendar_id="calendar"><i class="height:18px fill:#505050" src="/assets/svg/calendar-day.svg"></i></a>
-				</li>
-				<li class="margin-right:15px">
-					<a calendar-view="timeGridWeek" calendar_id="calendar"><i class="height:18px fill:#505050" src="/assets/svg/calendar-week.svg"></i></a>
-				</li>
-				<li class="margin-right:15px">
-					<a calendar-view="dayGridMonth" calendar_id="calendar"><i class="height:18px fill:#505050" src="/assets/svg/calendar-alt.svg"></i></a>
-				</li>
-				<li class="margin-right:15px">
-					<a calendar-view="today" calendar_id="calendar">T</a>
-				</li>
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./builder/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/palette.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="builder"></div>
+                    </a>
+                </li>
 
-			</ul>
-		</nav>
+                <!-- deleteDocument-->
+                <li class="margin-right:15px">
+                    <a
+                        actions="deleteDocument, closeModal"
+                        collection=""
+                        document_id=""
+                        pass_id="form-fields">
+                        <i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/trash-alt.svg"></i>
+                    </a>
+                </li>
 
-		<div class="position:fixed margin-top:50px" id="modal-viewport" content_id="content"></div>
+                <!-- Calendar Controls -->
+                <li class="margin-right:15px">
+                    <a calendar-view="timeGridDay" calendar_id="calendar"
+                        ><i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/calendar-day.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a calendar-view="timeGridWeek" calendar_id="calendar"
+                        ><i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/calendar-week.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a calendar-view="dayGridMonth" calendar_id="calendar"
+                        ><i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/calendar-alt.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a calendar-view="today" calendar_id="calendar">T</a>
+                </li>
+            </ul>
+        </nav>
 
-		<!-- Define filter-name to define field to filter results for calendar -->
-		<div calendar_id="calendar" filter-name="start_date" filter-value="0" filter-operator="$gt"></div>
+        <div
+            class="position:fixed margin-top:50px"
+            id="modal-viewport"
+            content_id="content"></div>
 
-		<main class="height:100vh position:relative" content_id="content">
-			<div id='calendar-container'>
-				<div id='calendar' class="cal-container" fetch-collection="" event-name="name" calendar_id="calendar" filter-name="" filter-value="" filter-operator="$eq" pass_id="datatable">
-					<a class="eventLink" actions="pass, openModal" modal-src="./calendar/form.html" pass_id="datatable" pass-collection="" pass-document_id="" pass_to="form-fields" modal-width="320px" modal-color="#21618C">
-						<div pass_id="module-form" pass-value="" pass_to="module_id"></div>
-	  				</a>
-				</div>
-			</div>
-		</main>
+        <!-- Define filter-name to define field to filter results for calendar -->
+        <div
+            calendar_id="calendar"
+            filter-name="start_date"
+            filter-value="0"
+            filter-operator="$gt"></div>
 
-        <script src="https://cdn.cocreate.app/1.55.1/CoCreate.min.js"></script>
+        <main class="height:100vh position:relative" content_id="content">
+            <div id="calendar-container">
+                <div
+                    id="calendar"
+                    class="cal-container"
+                    fetch-collection=""
+                    event-name="name"
+                    calendar_id="calendar"
+                    filter-name=""
+                    filter-value=""
+                    filter-operator="$eq"
+                    pass_id="datatable">
+                    <a
+                        class="eventLink"
+                        actions="pass, openModal"
+                        modal-src="./calendar/form.html"
+                        pass_id="datatable"
+                        pass-collection=""
+                        pass-document_id=""
+                        pass_to="form-fields"
+                        modal-width="320px"
+                        modal-color="#21618C">
+                        <div
+                            pass_id="module-form"
+                            pass-value=""
+                            pass_to="module_id"></div>
+                    </a>
+                </div>
+            </div>
+        </main>
 
-	</body>
-
+        <script src="https://cdn.cocreate.app/1.56.0/CoCreate.min.js"></script>
+    </body>
 </html>

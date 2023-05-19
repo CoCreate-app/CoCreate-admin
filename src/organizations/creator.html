@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="32x32">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            href="https://cdn.cocreate.app/favicon.ico"
+            type="image/ico"
+            sizes="32x32" />
         <title>Organiztion Creator | CoCreate</title>
-        <link rel="stylesheet" href="./index.css" collection="files" document_id="60972231624235187e4d6979" name="src" type="text/css" save="true" parse="true"/>
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
+        <link
+            rel="stylesheet"
+            href="./index.css"
+            collection="files"
+            document_id="60972231624235187e4d6979"
+            name="src"
+            type="text/css"
+            save="true"
+            parse="true" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
     <style>
         .speech-bubble:after {
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
             left: 50%;
@@ -27,110 +38,221 @@
         }
     </style>
 
-    <body style='background-image: url("https://cdn.cocreate.app/background.png");'>
+    <body
+        style="
+            background-image: url('https://cdn.cocreate.app/background.png');
+        ">
         <a href="index.html" target="" class="sessionTrue" hidden></a>
 
-        <a href="../../admin/" title="" class="position:relative z-index:1 float:right margin:15px color:white dashboardLink">Dashboard</a>
+        <a
+            href="../../admin/"
+            title=""
+            class="position:relative z-index:1 float:right margin:15px color:white dashboardLink"
+            >Dashboard</a
+        >
 
-        <div class="main-container justify-content:center align-items:center overflow:auto display:flex flex-wrap:wrap position:absolute width:100% height:100%">
-            <div class="display:flex flex-wrap:wrap align-items:flex-end justify-content:center align-items:center">
-                <div class="flex-grow:1 height:fit-content width:55% min-width:300px max-width:600px margin:10px">
-                    <img src="https://cdn.cocreate.app/Preloader_2.gif" class="display:block margin:auto-lr margin:20px_0px">
+        <div
+            class="main-container justify-content:center align-items:center overflow:auto display:flex flex-wrap:wrap position:absolute width:100% height:100%">
+            <div
+                class="display:flex flex-wrap:wrap align-items:flex-end justify-content:center align-items:center">
+                <div
+                    class="flex-grow:1 height:fit-content width:55% min-width:300px max-width:600px margin:10px">
+                    <img
+                        src="https://cdn.cocreate.app/Preloader_2.gif"
+                        class="display:block margin:auto-lr margin:20px_0px" />
 
-                    <hgroup class="speech-bubble position:relative background:white border-radius:4px padding:15px">
-                        <div localstorage-get="user_id" localstorage-key="userId" localstorage-next="div"></div>
+                    <hgroup
+                        class="speech-bubble position:relative background:white border-radius:4px padding:15px">
+                        <div
+                            localstorage-get="user_id"
+                            localstorage-key="userId"
+                            localstorage-next="div"></div>
                         <div class="color:blue font-size:24px">
                             <p id="ava1">
-                                Hey, <span document_id="{{userId}}" name="name" collection="users">First Name</span>! Enter your new organization's name. Don't worry if you are not sure, you can allways update it later.
+                                Hey,
+                                <span
+                                    document_id="{{userId}}"
+                                    name="name"
+                                    collection="users"
+                                    >First Name</span
+                                >! Enter your new organization's name. Don't
+                                worry if you are not sure, you can allways
+                                update it later.
                             </p>
                             <p id="ava2" hidden>
-                                Great, <span document_id="{{userId}}" name="name" collection="users">First Name</span>! Let’s choose an industry so I can begin to understand what we will be doing.
+                                Great,
+                                <span
+                                    document_id="{{userId}}"
+                                    name="name"
+                                    collection="users"
+                                    >First Name</span
+                                >! Let’s choose an industry so I can begin to
+                                understand what we will be doing.
                             </p>
                             <p id="ava3" hidden>
-                                I could do special animations to impress you. But instead I will build your organization instantly and impress you with my speed!
+                                I could do special animations to impress you.
+                                But instead I will build your organization
+                                instantly and impress you with my speed!
                             </p>
                         </div>
                     </hgroup>
                 </div>
 
-                <div class="flex-grow:1 height:fit-content width:35% min-width:300px max-width:400px margin:10px">
+                <div
+                    class="flex-grow:1 height:fit-content width:35% min-width:300px max-width:400px margin:10px">
                     <form realtime="false">
-
                         <div id="step1">
-                            <div class="overflow:hidden padding:0px_25px background:white">
-                                <div class="float:left width:75% padding-top:25px">
+                            <div
+                                class="overflow:hidden padding:0px_25px background:white">
+                                <div
+                                    class="float:left width:75% padding-top:25px">
                                     <h3>Step 1 / 3</h3>
                                 </div>
-                                <div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
-                                    <i class="fill:#505050" src="/assets/svg/store.svg"></i>
+                                <div
+                                    class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+                                    <i
+                                        class="fill:#505050"
+                                        src="/assets/svg/store.svg"></i>
                                 </div>
                             </div>
-                            <div class="padding:25px background:gainsboro text-align:left">
-                                <input type="text" id="org-name" collection="organizations" document_id="" name="name" placeholder="Organization Name" class="floating-label">
+                            <div
+                                class="padding:25px background:gainsboro text-align:left">
+                                <input
+                                    type="text"
+                                    id="org-name"
+                                    collection="organizations"
+                                    document_id=""
+                                    name="name"
+                                    placeholder="Organization Name"
+                                    class="floating-label" />
 
-                                <button type="button" class="outline" show='#step2,#ava2' hide='#step1,#ava1'>Next</button>
+                                <button
+                                    type="button"
+                                    class="outline"
+                                    show="#step2,#ava2"
+                                    hide="#step1,#ava1">
+                                    Next
+                                </button>
                             </div>
                         </div>
 
                         <div id="step2" hidden>
-                            <div class="overflow:hidden padding:0px_25px background:white">
-                                <div class="float:left width:75% padding-top:25px">
+                            <div
+                                class="overflow:hidden padding:0px_25px background:white">
+                                <div
+                                    class="float:left width:75% padding-top:25px">
                                     <h3>Step 2 / 3</h3>
                                 </div>
-                                <div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
-                                    <i class="height:70px fill:#505050" src="/assets/svg/industry.svg"></i>
+                                <div
+                                    class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+                                    <i
+                                        class="height:70px fill:#505050"
+                                        src="/assets/svg/industry.svg"></i>
                                 </div>
                             </div>
-                            <div class="padding:25px background:gainsboro text-align:left">
-
+                            <div
+                                class="padding:25px background:gainsboro text-align:left">
                                 <!-- Industry select -->
-                                <cocreate-select sortable class="floating-label" collection="organizations" document_id="" name="industry" placeholder="Industry">
-                                    <input placeholder="Search" template_id="template1">
-                                    <ul fetch-collection="industries" template_id="template1" pass_to="me1234" class="options overflow:auto">
-                                        <li template="templa1" class="option" pass_id="me1234">
-                                            <h5 collection="industries" document_id="" name="industry_name" pass_id="me1234">industry name</h5>
+                                <cocreate-select
+                                    sortable
+                                    class="floating-label"
+                                    collection="organizations"
+                                    document_id=""
+                                    name="industry"
+                                    placeholder="Industry">
+                                    <input
+                                        placeholder="Search"
+                                        template_id="template1" />
+                                    <ul
+                                        fetch-collection="industries"
+                                        template_id="template1"
+                                        pass_to="me1234"
+                                        class="options overflow:auto">
+                                        <li
+                                            template="templa1"
+                                            class="option"
+                                            pass_id="me1234">
+                                            <h5
+                                                collection="industries"
+                                                document_id=""
+                                                name="industry_name"
+                                                pass_id="me1234">
+                                                industry name
+                                            </h5>
                                         </li>
                                     </ul>
                                 </cocreate-select>
 
-                                <button type="button" class="outline white-blue" show='#step1,#ava1' hide='#step2,#ava2'>Previous</button>
-                                <button type="button" class="outline" show='#step3,#ava3' hide='#step2,#ava2'>Next</button>
+                                <button
+                                    type="button"
+                                    class="outline white-blue"
+                                    show="#step1,#ava1"
+                                    hide="#step2,#ava2">
+                                    Previous
+                                </button>
+                                <button
+                                    type="button"
+                                    class="outline"
+                                    show="#step3,#ava3"
+                                    hide="#step2,#ava2">
+                                    Next
+                                </button>
                             </div>
                         </div>
 
                         <div id="step3" hidden>
-                            <div class="overflow:hidden padding:0px_25px background:white">
-                                <div class="float:left width:75% padding-top:25px">
+                            <div
+                                class="overflow:hidden padding:0px_25px background:white">
+                                <div
+                                    class="float:left width:75% padding-top:25px">
                                     <h3>Step 3 / 3</h3>
                                 </div>
-                                <div class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
-                                    <i class="height:70px fill:#505050" src="/assets/svg/key.svg"></i>
+                                <div
+                                    class="float:right width:25% padding-top:5px font-size:70px line-height:100px text-align:right color:very-light-gray">
+                                    <i
+                                        class="height:70px fill:#505050"
+                                        src="/assets/svg/key.svg"></i>
                                 </div>
                             </div>
-                            <div class="padding:25px background:gainsboro text-align:left">
-
+                            <div
+                                class="padding:25px background:gainsboro text-align:left">
                                 <!-- API key  -->
-                                <input type="hidden" id="key" collection="organizations" document_id="" name="key" placeholder="API Key" uuid="32" readonly>
+                                <input
+                                    type="hidden"
+                                    id="key"
+                                    collection="organizations"
+                                    document_id=""
+                                    name="key"
+                                    placeholder="API Key"
+                                    uuid="32"
+                                    readonly />
 
-                                <button type="button" class="outline white-blue" show='#step2,#ava2' hide='#step3,#ava3'>Previous</button>
-                                <button type="button" class="outline red-white registerBtn industryBtn"><a href="index.html">Launch</a></button>
-
+                                <button
+                                    type="button"
+                                    class="outline white-blue"
+                                    show="#step2,#ava2"
+                                    hide="#step3,#ava3">
+                                    Previous
+                                </button>
+                                <button
+                                    type="button"
+                                    class="outline red-white registerBtn industryBtn">
+                                    <a href="index.html">Launch</a>
+                                </button>
                             </div>
                         </div>
                     </form>
-
                 </div>
-
             </div>
         </div>
 
         <!--CoCreateJS-->
         <script src="../apikey.js"></script>
-        <script src="https://cdn.cocreate.app/1.55.1/CoCreate.min.js"></script>
+        <script src="https://cdn.cocreate.app/1.56.0/CoCreate.min.js"></script>
 
         <script>
-            localStorage.removeItem('organization_id');
-            localStorage.removeItem('key');
+            localStorage.removeItem("organization_id");
+            localStorage.removeItem("key");
         </script>
 
         <script>
@@ -138,28 +260,25 @@
 
             let dashboardLink = document.querySelector(".dashboardLink");
 
-            dashboardLink.addEventListener('click', function(e) {
+            dashboardLink.addEventListener("click", function (e) {
                 e.preventDefault();
 
-                let userId = localStorage.getItem('userId');
+                let userId = localStorage.getItem("userId");
 
                 getCurrentOrg(userId);
 
-                var timer = setInterval(function() {
+                var timer = setInterval(function () {
                     if (getOrg) {
                         if (getCurrentOrgForDashboardLink) {
-                            let href = dashboardLink.getAttribute('href');
+                            let href = dashboardLink.getAttribute("href");
 
                             document.location.href = href;
 
                             clearInterval(timer);
                         }
                     }
-                }, 100)
-            })
-
+                }, 100);
+            });
         </script>
-
     </body>
-
 </html>

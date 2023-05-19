@@ -1,230 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Database | CoCreate</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreate.min.css">
-        <link rel="stylesheet" href="../index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src" type="text/css"/>
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/favicon.ico" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.cocreate.app/latest/CoCreate.min.css" />
+        <link
+            rel="stylesheet"
+            href="../index.css"
+            collection="files"
+            document_id="637bc8fe91249e639db315d9"
+            name="src"
+            type="text/css" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
     <style type="text/css">
-        .cocreate-search .floating-label_field{margin-top:0px;}
-        .active [actions]{
-            display:block;
+        .cocreate-search .floating-label_field {
+            margin-top: 0px;
         }
-    </style> 
+        .active [actions] {
+            display: block;
+        }
+    </style>
 
     <body>
-		<!-- Navbar -->
-		<nav class="nav display:flex align-items:center background:whitesmoke position:sticky" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
+        <!-- Navbar -->
+        <nav
+            class="nav display:flex align-items:center background:whitesmoke position:sticky"
+            content_id="content"
+            scroll="sticky-nav, hide-nav"
+            scroll-up="5"
+            scroll-down="5">
+            <!-- Menu Icon Animations -->
+            <a class="menu_icon--Vdots" toggle="active" toggle-sidenav="menuL">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </a>
 
-			<!-- Menu Icon Animations -->
-			<a class="menu_icon--Vdots" toggle="active" toggle-sidenav="menuL">
-				<div class="circle"></div>
-				<div class="circle"></div>
-				<div class="circle"></div>
-				<div class="circle"></div>
-				<div class="circle"></div>
-			</a>
-
-			<!-- Horizontal Scroll Nav/Tabs -->
-			<ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-
-				<!-- Modal Controls -->
-				<li class="margin-right:15px"><a actions="closeModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
-				<li class="margin-right:15px">
-					<a actions="minMaxModal">
-						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
-					</a>
-				</li>
-				<li class="margin-right:15px"><a actions="parkModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
-
-				<!-- fullscreen toogle and icon transform-->
-				<li class="margin-right:15px">
-					<a fullscreen>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-					</a>
-				</li>
-
-
-				<!-- Render Module Form -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
-                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
-                        <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul
+                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+                <!-- Modal Controls -->
+                <li class="margin-right:15px">
+                    <a actions="closeModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/times.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="minMaxModal">
+                        <i
+                            toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+                            toggle-attribute="src"
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-maximize.svg"></i>
                     </a>
-				</li>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="parkModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-minimize.svg"></i
+                    ></a>
+                </li>
 
-				<!-- Render Code Editor -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
+                <!-- fullscreen toogle and icon transform-->
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
                     </a>
-				</li>
+                </li>
 
-				<!-- Render Builder -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./modules/form.html"
+                        modal-width="320px">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/cog.svg"></i>
+                        <div
+                            pass_id="module-form"
+                            pass-collection="modules"
+                            pass-document_id=""
+                            pass_to="form-fields"></div>
+                        <div
+                            pass_id="module_id"
+                            pass-filter-value=""
+                            pass_to="module_id"></div>
                     </a>
-				</li>
+                </li>
 
-				<!-- Datatable Controls -->
-				<li class="margin-right:15px">
-					<a actions="deleteDocuments" collection="" pass_id="collection-view" template_id=""><i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i></a>
-				</li>
-				<li class="margin-right:15px">
-					<a toggle="hidden" toogle-target="#column-visibility"><i class="height:18px fill:#505050" src="/assets/svg/eye.svg"></i></a>
-				</li>
-				<li class="margin-right:15px">
-					<a actions="export" export-type="csv" template_id="" pass_id="collection-view"><i class="height:18px fill:#505050" src="/assets/svg/file-csv.svg"></i></a>
-				</li>
-				<li class="margin-right:15px">
-					<a actions="export" template_id="" pass_id="collection-view"><i class="height:18px fill:#505050" src="/assets/svg/file-download.svg"></i></a>
-				</li>
-				<li class="margin-right:15px">
-					<a actions="import" collection="" pass_id="collection-view"><i class="height:18px fill:#505050" src="/assets/svg/file-upload.svg"></i></a>
-				</li>
-				<li class="margin-right:15px">
-					<a actions="copy" copy-target="tbody"><i class="height:18px fill:#505050" src="/assets/svg/copy.svg"></i></a>
-				</li>
-				<li class="margin-right:15px">
-					<a actions="print" print-target='tbody[template_id="collection-view"]'><i class="height:18px fill:#505050" src="/assets/svg/print.svg"></i></a>
-				</li>
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./code-editor/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/code.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="code-editor"></div>
+                    </a>
+                </li>
 
-			</ul>
-		</nav>
-    
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./builder/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/palette.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="builder"></div>
+                    </a>
+                </li>
+
+                <!-- Datatable Controls -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="deleteDocuments"
+                        collection=""
+                        pass_id="collection-view"
+                        template_id=""
+                        ><i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/trash-alt.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a toggle="hidden" toogle-target="#column-visibility"
+                        ><i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/eye.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a
+                        actions="export"
+                        export-type="csv"
+                        template_id=""
+                        pass_id="collection-view"
+                        ><i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/file-csv.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="export" template_id="" pass_id="collection-view"
+                        ><i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/file-download.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="import" collection="" pass_id="collection-view"
+                        ><i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/file-upload.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="copy" copy-target="tbody"
+                        ><i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/copy.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a
+                        actions="print"
+                        print-target="tbody[template_id='collection-view']"
+                        ><i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/print.svg"></i
+                    ></a>
+                </li>
+            </ul>
+        </nav>
+
         <!-- Modal Viewport  -->
-        <div class="position:fixed margin-top:50px" content_id="content" id="modal-viewport"></div>
-       
+        <div
+            class="position:fixed margin-top:50px"
+            content_id="content"
+            id="modal-viewport"></div>
+
         <!-- Main container  -->
         <main class="height:100vh padding:10px" content_id="content">
-
             <table class="width:100% border-collapse:collapse">
-				<tr class="border-bottom:1px_solid_darkgray">
-					<td class="position:sticky top:0 background:white padding:15px  z-index:7">
-	            		<floating-label>
-							<input type="text" class="floating-label" template_id="collection-view" filter-search placeholder="Search">
-						</floating-label>
-					</td>
-				</tr>
-				<tbody template_id="" fetch-collection="" fetch-document fetch-limit="5" pass-refresh pass_id="collection-view">
-					<tr  template="collection-view" class="background:whitesmoke:hover border-bottom:1px_solid_darkgray" document_id="{{document._id}}" toggle="selected" hover="visibility:visible!important" hover-target=".tools{{document._id}}" id="testtemplate1" >
-						<td class="padding:5px min-width:300px align-items:center">
-                            <div class="display:flex justify-content:flex-end transition:0.3s padding-left:10px" >
-                                <div class="visibility:hidden tools{{document._id}}">
-                                    <a class="float:right margin-right:15px" actions="deleteDocument" collection="{{document.collection}}" document_id=""><i class="height:18px fill:#505050" src="/assets/svg/trash.svg"></i></a>
+                <tr class="border-bottom:1px_solid_darkgray">
+                    <td
+                        class="position:sticky top:0 background:white padding:15px z-index:7">
+                        <floating-label>
+                            <input
+                                type="text"
+                                class="floating-label"
+                                template_id="collection-view"
+                                filter-search
+                                placeholder="Search" />
+                        </floating-label>
+                    </td>
+                </tr>
+                <tbody
+                    template_id=""
+                    fetch-collection=""
+                    fetch-document
+                    fetch-limit="5"
+                    pass-refresh
+                    pass_id="collection-view">
+                    <tr
+                        template="collection-view"
+                        class="background:whitesmoke:hover border-bottom:1px_solid_darkgray"
+                        document_id="{{document._id}}"
+                        toggle="selected"
+                        hover="visibility:visible!important"
+                        hover-target=".tools{{document._id}}"
+                        id="testtemplate1">
+                        <td
+                            class="padding:5px min-width:300px align-items:center">
+                            <div
+                                class="display:flex justify-content:flex-end transition:0.3s padding-left:10px">
+                                <div
+                                    class="visibility:hidden tools{{document._id}}">
+                                    <a
+                                        class="float:right margin-right:15px"
+                                        actions="deleteDocument"
+                                        collection="{{document.collection}}"
+                                        document_id=""
+                                        ><i
+                                            class="height:18px fill:#505050"
+                                            src="/assets/svg/trash.svg"></i
+                                    ></a>
                                 </div>
                             </div>
-                            <div class="template display:flex" render-object="document" render-key="one" render-exclude="db, database, collection" hover="visibility:visible!important" hover-target=".tools{{document._id}}{{one.key}}">
-                                <span class="visibility:hidden tools{{document._id}}{{one.key}}">
-                                    <form realtime="false" class="margin-top:10px">
-                                        <input type="hidden" collection="{{document.collection}}" document_id="{{document._id}}" name="{{one.key}}.untitled" value="untitiled"/>
-                                        <a actions="save, reset"><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></a>
+                            <div
+                                class="template display:flex"
+                                render-object="document"
+                                render-key="one"
+                                render-exclude="db, database, collection"
+                                hover="visibility:visible!important"
+                                hover-target=".tools{{document._id}}{{one.key}}">
+                                <span
+                                    class="visibility:hidden tools{{document._id}}{{one.key}}">
+                                    <form
+                                        realtime="false"
+                                        class="margin-top:10px">
+                                        <input
+                                            type="hidden"
+                                            collection="{{document.collection}}"
+                                            document_id="{{document._id}}"
+                                            name="{{one.key}}.untitled"
+                                            value="untitiled" />
+                                        <a actions="save, reset"
+                                            ><i
+                                                class="height:16px fill:#505050"
+                                                src="/assets/svg/plus.svg"></i
+                                        ></a>
                                     </form>
-                                    <form realtime="false" class="margin-top:10px">
-                                        <a actions="deleteName" collection="{{document.collection}}" document_id="{{document._id}}" deleteName="{{one.key}}"><i class="height:18px fill:#505050" src="/assets/svg/trash.svg"></i></a>
+                                    <form
+                                        realtime="false"
+                                        class="margin-top:10px">
+                                        <a
+                                            actions="deleteName"
+                                            collection="{{document.collection}}"
+                                            document_id="{{document._id}}"
+                                            deletename="{{one.key}}"
+                                            ><i
+                                                class="height:18px fill:#505050"
+                                                src="/assets/svg/trash.svg"></i
+                                        ></a>
                                     </form>
-            
                                 </span>
-                                <span class="padding:10px"><span collection="{{document.collection}}" document_id="{{document._id}}" updateName="{{one.key}}" contenteditable>{{one.key}}</span>: </span>
-                                <div class="{{one.type}} width:100%" parentKey="{{one.key}}" parentType="{{one.type}}"></div>
-                                
+                                <span class="padding:10px"
+                                    ><span
+                                        collection="{{document.collection}}"
+                                        document_id="{{document._id}}"
+                                        updatename="{{one.key}}"
+                                        contenteditable
+                                        >{{one.key}}</span
+                                    >:
+                                </span>
+                                <div
+                                    class="{{one.type}} width:100%"
+                                    parentkey="{{one.key}}"
+                                    parenttype="{{one.type}}"></div>
                             </div>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-            <div template_id="collection-view" fetch-type="scroll" class="opacity:0 height:30px"></div>
-            
-            <button class="position:absolute bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div
+                template_id="collection-view"
+                fetch-type="scroll"
+                class="opacity:0 height:30px"></div>
+
+            <button
+                class="position:absolute bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
                 <form collection="" document_id="" pass_id="collection-view">
-                    <input type="hidden" document_id="" name="name" value="untitled" pass_id="module_id"/>
-                    <a actions="save, reset"><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></a>
+                    <input
+                        type="hidden"
+                        document_id=""
+                        name="name"
+                        value="untitled"
+                        pass_id="module_id" />
+                    <a actions="save, reset"
+                        ><i
+                            class="height:16px fill:#505050"
+                            src="/assets/svg/plus.svg"></i
+                    ></a>
                 </form>
             </button>
 
             <template hidden observe-target=".string" observe-attribute="value">
                 <floating-label render>
-                    <textarea rows="1" collection="{{document.collection}}" document_id="{{document._id}}" name="$parents" class="floating-label"></textarea>
+                    <textarea
+                        rows="1"
+                        collection="{{document.collection}}"
+                        document_id="{{document._id}}"
+                        name="$parents"
+                        class="floating-label"></textarea>
                 </floating-label>
             </template>
-    
-            <template hidden observe-target=".object, .array" observe-attribute="value">
-                <div render-object="document.$parents" render-exclude="db, database, collection" render-key="$auto" class="template margin-top:20px" render>
-                    <div class="display:flex padding-top:10px" id="testtemplate2" hover="visibility:visible!important" hover-target="[tools='$parents{{$auto.key}}']">
-                        <span class="visibility:hidden tools$parents{{$auto.key}}" tools="$parents{{$auto.key}}">
+
+            <template
+                hidden
+                observe-target=".object, .array"
+                observe-attribute="value">
+                <div
+                    render-object="document.$parents"
+                    render-exclude="db, database, collection"
+                    render-key="$auto"
+                    class="template margin-top:20px"
+                    render>
+                    <div
+                        class="display:flex padding-top:10px"
+                        id="testtemplate2"
+                        hover="visibility:visible!important"
+                        hover-target="[tools='$parents{{$auto.key}}']">
+                        <span
+                            class="visibility:hidden tools$parents{{$auto.key}}"
+                            tools="$parents{{$auto.key}}">
                             <form realtime="false" class="margin-top:10px">
-                                <input type="hidden" collection="{{document.collection}}" document_id="{{document._id}}" name="$parents.untitled" value="untitiled"/>
-                                <a actions="save, reset"><i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i></a>
+                                <input
+                                    type="hidden"
+                                    collection="{{document.collection}}"
+                                    document_id="{{document._id}}"
+                                    name="$parents.untitled"
+                                    value="untitiled" />
+                                <a actions="save, reset"
+                                    ><i
+                                        class="height:16px fill:#505050"
+                                        src="/assets/svg/plus.svg"></i
+                                ></a>
                             </form>
                             <form realtime="false" class="margin-top:10px">
-                                <a actions="deleteName" collection="{{document.collection}}" document_id="{{document._id}}" deleteName="$parents.{{$auto.key}}"><i class="height:18px fill:#505050" src="/assets/svg/trash.svg"></i></a>
+                                <a
+                                    actions="deleteName"
+                                    collection="{{document.collection}}"
+                                    document_id="{{document._id}}"
+                                    deletename="$parents.{{$auto.key}}"
+                                    ><i
+                                        class="height:18px fill:#505050"
+                                        src="/assets/svg/trash.svg"></i
+                                ></a>
                             </form>
                         </span>
-                        <span class="padding:10px"><span collection="{{document.collection}}" document_id="{{document._id}}" value-prefix="$parents." updateName="$parents.{{$auto.key}}" contenteditable>{{$auto.key}}</span>: </span>
-                        <div class="{{$auto.type}}" parentKey="{{$auto.key}}" parentType="{{$auto.type}}"></div>
+                        <span class="padding:10px"
+                            ><span
+                                collection="{{document.collection}}"
+                                document_id="{{document._id}}"
+                                value-prefix="$parents."
+                                updatename="$parents.{{$auto.key}}"
+                                contenteditable
+                                >{{$auto.key}}</span
+                            >:
+                        </span>
+                        <div
+                            class="{{$auto.type}}"
+                            parentkey="{{$auto.key}}"
+                            parenttype="{{$auto.type}}"></div>
                     </div>
                 </div>
-            </template>    
-
+            </template>
         </main>
-        
+
         <!-- SideNav  -->
-        <sidenav id="menuL" class="position:absolute top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:275px width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">
-        
-			<!-- Search -->
-			<form class="padding:5px">
+        <sidenav
+            id="menuL"
+            class="position:absolute top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:275px width:0px@xs"
+            resizable
+            resize-target="[content_id='content']"
+            resize-property="margin-left"
+            resize-value="width">
+            <!-- Search -->
+            <form class="padding:5px">
                 <floating-label>
-                    <input type="text" class="floating-label" name="collection" filter-name="name" template_id="collections">
+                    <input
+                        type="text"
+                        class="floating-label"
+                        name="collection"
+                        filter-name="name"
+                        template_id="collections" />
                 </floating-label>
-				<span class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">
-					<a actions="createCollection, reset">
-						<i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i>
-					</a>
-				</span>
-			</form>
-        	
-        	<div class="padding-right:5px padding-bottom:5px">
+                <span
+                    class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">
+                    <a actions="createCollection, reset">
+                        <i
+                            class="height:16px fill:#505050"
+                            src="/assets/svg/plus.svg"></i>
+                    </a>
+                </span>
+            </form>
+
+            <div class="padding-right:5px padding-bottom:5px">
                 <!-- Fetch and Render-->
-                <ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_90px) bottom:10px margin-right:5px">
-                    <div fetch-collection filter-sort-name="name" filter-sort-direction="asc" template_id="collections">
-                        
+                <ul
+                    class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_90px) bottom:10px margin-right:5px">
+                    <div
+                        fetch-collection
+                        filter-sort-name="name"
+                        filter-sort-direction="asc"
+                        template_id="collections">
                         <!-- Template -->
-                        <li template="collections" class="line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover" hover="active">
-                            <a actions="pass" pass-collection="{{collection.name}}" pass_to="collection-view" class="display:inline-block padding-left:15px">
+                        <li
+                            template="collections"
+                            class="line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover"
+                            hover="active">
+                            <a
+                                actions="pass"
+                                pass-collection="{{collection.name}}"
+                                pass_to="collection-view"
+                                class="display:inline-block padding-left:15px">
                                 <span>{{collection.name}}</span>
                             </a>
-                            <div class="float:right width:50px text-align:center">
-                                <a actions="deleteCollection" collection="{{collection.name}}" class="display:none">
-                                    <i class="height:18px fill:#505050" src="/assets/svg/trash.svg"></i>
+                            <div
+                                class="float:right width:50px text-align:center">
+                                <a
+                                    actions="deleteCollection"
+                                    collection="{{collection.name}}"
+                                    class="display:none">
+                                    <i
+                                        class="height:18px fill:#505050"
+                                        src="/assets/svg/trash.svg"></i>
                                 </a>
                             </div>
-
                         </li>
                     </div>
                 </ul>
-			</div>
+            </div>
             <div resize="right"></div>
         </sidenav>
-        
-		<div class="position:fixed!important bottom:15px right:15px">
-	        <div template="notification" class="card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
-	            <span class="{{type}}">{{message}}</span><a actions="remove" remove-closest="[templateid]"> X</a>
-	        </div>
-		</div>
 
-        <script src="https://cdn.cocreate.app/1.55.1/CoCreate.min.js"></script>
-        
+        <div class="position:fixed!important bottom:15px right:15px">
+            <div
+                template="notification"
+                class="card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
+                <span class="{{type}}">{{message}}</span
+                ><a actions="remove" remove-closest="[templateid]"> X</a>
+            </div>
+        </div>
+
+        <script src="https://cdn.cocreate.app/1.56.0/CoCreate.min.js"></script>
     </body>
 </html>

@@ -1,47 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Permissions Form | CoCreate</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreate.min.css">
-        <link rel="stylesheet" href="../index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src" type="text/css"/>
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/favicon.ico" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.cocreate.app/latest/CoCreate.min.css" />
+        <link
+            rel="stylesheet"
+            href="../index.css"
+            collection="files"
+            document_id="637bc8fe91249e639db315d9"
+            name="src"
+            type="text/css" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
     <body class="padding:20px">
         <form pass_id="form-fields" collection="permissions" document_id="">
-            <input class="floating-label" name="key" placeholder="key">
-            <input class="floating-label" name="type" placeholder="type">
-            <div class="floating-label padding:10px active" placeholder="Super Admin" active>
-                <input type="radio" name="admin" value="true">
+            <input class="floating-label" name="key" placeholder="key" />
+            <input class="floating-label" name="type" placeholder="type" />
+            <div
+                class="floating-label padding:10px active"
+                placeholder="Super Admin"
+                active>
+                <input type="radio" name="admin" value="true" />
             </div>
-            <select class="floating-label" placeholder="Contact" name='collections.contact' multiple> 
+            <select
+                class="floating-label"
+                placeholder="Contact"
+                name="collections.contact"
+                multiple>
                 <option value="create">Create</option>
                 <option value="read">Read</option>
                 <option value="update">Update</option>
                 <option value="delete">Delete</option>
             </select>
 
-            <lable>Test Collection</lable> <br/>
-            <input type="checkbox" name="collections.test" value="create" />Create <br/>
-            <input type="checkbox" name="collections.test" value="read" />Read <br/>
-            <input type="checkbox" name="collections.test" value="update" />Update <br/>
-            <input type="checkbox" name="collections.test" value="delete" />Delete <br/>
+            <lable>Test Collection</lable> <br />
+            <input
+                type="checkbox"
+                name="collections.test"
+                value="create" />Create <br />
+            <input type="checkbox" name="collections.test" value="read" />Read
+            <br />
+            <input
+                type="checkbox"
+                name="collections.test"
+                value="update" />Update <br />
+            <input
+                type="checkbox"
+                name="collections.test"
+                value="delete" />Delete <br />
 
-            <select class="floating-label" placeholder="Stripe" name='plugins.stripe' multiple>
+            <select
+                class="floating-label"
+                placeholder="Stripe"
+                name="plugins.stripe"
+                multiple>
                 <option value="getBalance">getBalance</option>
                 <option value="getCustomer">getCustomers</option>
             </select>
 
-            <button actions="save" class="position:absolute bottom:15px right:15px bg-blue grow-hover round opacity-08"><i class="height:20px fill:#505050" src="/assets/svg/save.svg"></i></button>
+            <button
+                actions="save"
+                class="position:absolute bottom:15px right:15px bg-blue grow-hover round opacity-08">
+                <i
+                    class="height:20px fill:#505050"
+                    src="/assets/svg/save.svg"></i>
+            </button>
         </form>
 
-        <script src="https://cdn.cocreate.app/1.55.1/CoCreate.min.js"></script>
-
+        <script src="https://cdn.cocreate.app/1.56.0/CoCreate.min.js"></script>
     </body>
-
 </html>

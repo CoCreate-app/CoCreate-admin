@@ -1,250 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            href="https://cdn.cocreate.app/favicon.ico"
+            type="image/ico"
+            sizes="16x16" />
+        <title>Dashboard | CoCreate</title>
+        <link
+            rel="stylesheet"
+            href="../index.css"
+            collection="files"
+            document_id="637bc8fe91249e639db315d9"
+            name="src"
+            type="text/css" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
+    <style>
+        .progressbar {
+            flex-grow: 1;
+            height: 4px;
+            border: none;
+            position: relative;
+            background-color: rgb(194, 240, 253);
+            overflow: hidden;
+        }
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-		<title>Dashboard | CoCreate</title>
-		<link rel="stylesheet" href="../index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src" type="text/css"/>
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
-	<style>
-		.progressbar {
-			flex-grow: 1;
-			height: 4px;
-			border: none;
-			position: relative;
-			background-color: rgb(194, 240, 253);
-			overflow: hidden;
-		}
+        .progressbar > div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            transform-origin: left;
+            transition: transform 0.4s linear;
+            background-color: #61dafb;
+        }
 
-		.progressbar>div {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			bottom: 0;
-			transform-origin: left;
-			transition: transform .4s linear;
-			background-color: #61dafb;
-		}
+        .floating-label {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
 
-		.floating-label {
-			margin-top: 0px!important;
-			margin-bottom: 0px!important;
-		}
+        .main-height {
+            height: calc(100vh - 30px);
+        }
 
-		.main-height {
-			height: calc( 100vh - 30px);
-		}
+        .progressbar-text {
+            color: #121212;
+            font-weight: bolder;
+        }
+    </style>
 
-		.progressbar-text {
-			color: #121212;
-			font-weight: bolder;
-		}
-	</style>
+    <body>
+        <!-- Modal Viewport -->
+        <div id="modal-viewport" hidden></div>
 
-	<body>
-		<!-- Modal Viewport -->
-		<div id="modal-viewport" hidden></div>
-
-		<!-- Navbar -->
-		<nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
-
-			<!-- Horizontal Scroll Nav/Tabs -->
-			<ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-
-				<!-- Modal Controls -->
-				<li class="margin-right:15px"><a actions="closeModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
-				<li class="margin-right:15px">
-					<a actions="minMaxModal">
-						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
-					</a>
-				</li>
-				<li class="margin-right:15px"><a actions="parkModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
-
-				<!-- fullscreen toogle and icon transform-->
-				<li class="margin-right:15px">
-					<a fullscreen>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-					</a>
-				</li>
-
-
-				<!-- Render Module Form -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
-                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
-                        <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
+        <!-- Navbar -->
+        <nav
+            class="nav display:flex align-items:center background:whitesmoke"
+            content_id="content"
+            scroll="sticky-nav, hide-nav"
+            scroll-up="5"
+            scroll-down="5">
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul
+                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+                <!-- Modal Controls -->
+                <li class="margin-right:15px">
+                    <a actions="closeModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/times.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="minMaxModal">
+                        <i
+                            toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+                            toggle-attribute="src"
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-maximize.svg"></i>
                     </a>
-				</li>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="parkModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-minimize.svg"></i
+                    ></a>
+                </li>
 
-				<!-- Render Code Editor -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
+                <!-- fullscreen toogle and icon transform-->
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
                     </a>
-				</li>
+                </li>
 
-				<!-- Render Builder -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./modules/form.html"
+                        modal-width="320px">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/cog.svg"></i>
+                        <div
+                            pass_id="module-form"
+                            pass-collection="modules"
+                            pass-document_id=""
+                            pass_to="form-fields"></div>
+                        <div
+                            pass_id="module_id"
+                            pass-filter-value=""
+                            pass_to="module_id"></div>
                     </a>
-				</li>
+                </li>
 
-				<!-- deleteDocument-->
-				<li class="margin-right:15px">
-					<a actions="deleteDocument, closeModal" collection="" document_id="" pass_id="form-fields">
-                        <i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i>
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./code-editor/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/code.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="code-editor"></div>
                     </a>
-				</li>
-			</ul>
-		</nav>
-		
-		<!-- SideNav  -->
-   <!--     <sidenav id="menuL" class="position:absolute top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:50px width:275px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">-->
-        
-			<!-- Search -->
-			<!--<form class="padding:5px">-->
-			<!--	<input type="text" class="floating-label" pass_to="results">-->
-			<!--	<span class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">-->
-			<!--		<a actions="pass, openModal" pass_to="render" collection="website-pages" document_id="" pass-name="src" modal-width="900px" modal-color="#229954">-->
-			<!--			<i class="height:20px fill:#505050" src="/assets/svg/search.svg"></i>-->
-			<!--		</a>-->
-			<!--	</span>-->
-			<!--</form>-->
-        	
-        	<!--<input type="hidden" template_id="main-menu" filter-name="menu-position" filter-value="3,4" filter-value-type="number" filter-operator="nin">-->
-        	<!--<div template_id="main-menu" filter-name="menu-position" filter-value="0" filter-value-type="number" filter-operator="ne"></div>-->
-   <!--     	<div class="padding-right:5px padding-bottom:5px">-->
-                <!-- Fetch and Render-->
-   <!--           	<ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">-->
-   <!--           	    <div fetch-collection="modules" -->
-   <!--                     filter-sort-name="main-menu-position" -->
-   <!--                     filter-sort-direction="asc"-->
-   <!--                     filter-name="main-menu-position" -->
-   <!--                     filter-value="0"-->
-   <!--                     filter-value-type="number"-->
-   <!--                     filter-operator="$ne"-->
-   <!--                     template_id="main-menu">-->
-                        
-                        <!-- Template -->
-   <!--                     <li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template_id="main-menu" document_id="{{document._id}}">-->
-                            <!--<input type="hidden" collection="files" document_id="{{document.main-menu-primary}}" name="path" input-target="#a{{document._id}}" set-value-key="primary-url">-->
-                            <!--<a actions="pass, openModal" id="a{{document._id}}" href='..{{primary-url}}'-->
-   <!--                             modal-width="{{document.main-modal-primary-width}}"-->
-   <!--                             modal-color="{{document.main-modal-color}}"-->
-   <!--                             class="display:inline-block">-->
-   <!--                             <span class="display:inline-block width:50px text-align:center" document_id="{{document._id}}" collection="modules" name="icon"></span>-->
-   <!--                             <span collection="modules" document_id="{{document._id}}" name="name" ></span>-->
-   <!--                             <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>-->
-   <!--                             <div pass-collection="module_activities" pass-value="{{document._id}}" pass_to="module_id"></div>-->
-   <!--                             <div pass-collection="files" pass-document_id="{{document.main-menu-secondary}}" pass-name="src" pass_to="form"></div>-->
-   <!--                             <div pass-collection="files" pass-document_id="{{document.main-menu-primary}}" pass-name="src" pass_to="render"></div>-->
-   <!--                             <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module-form"></div>-->
-   <!--                         </a>-->
-   <!--                         <div class="float:right width:50px text-align:center">-->
-                                <!--<input type="hidden" collection="files" document_id="{{document.main-menu-secondary}}" name="path" input-targt="#a{{document._id}}" input-key="secondary-url">-->
-                                <!--<a actions="pass, openModal" id="a{{document._id}}" href='..{{secondary-url}}'-->
-   <!--                                 modal-width="{{document.main-menu-secondary-width}}"-->
-   <!--                                 modal-color="{{document.main-menu-secondary-color}}">-->
-   <!--                                 <i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i>-->
-   <!--                                 <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>-->
-   <!--                                 <div pass-collection="files" pass-document_id="{{document.main-menu-secondary}}" pass-name="src" pass_to="render"></div>-->
-   <!--                                 <div pass-document_id="{{document._id}}" pass_to="module-form"></div>-->
-			<!--	                    <div pass_to="form-fields" pass-document_id=""></div>-->
-   <!--                             </a>-->
-   <!--                         </div>-->
-   <!--                     </li>-->
-   <!--                 </div>-->
-   <!--             </ul>-->
-                
-                <!-- sidenav Footer -->
-			<!--	<div class="display:flex justify-content:space-between flex-wrap:wrap position:absolute bottom:0px background:gainsboro line-height:40px height:40px width:100% overflow:hidden">-->
-			<!--		<a actions="pass, openModal" modal-src="./settings/index.html" modal-width="275px" modal-color="#229954" modal-x="0" modal-y="0" class="width:50px text-align:center display:inline-block">-->
-			<!--		    <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/cogs.svg"></i></span>-->
-			<!--		    <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe18" pass-name="src" pass_to="render"></div>-->
-			<!--		</a>-->
-			<!--		<a actions="pass, openModal" modal-src="./modules/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">-->
-			<!--		    <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/project-diagram.svg"></i></span>-->
-			<!--		    <div pass-collection="files" pass-document_id="60ddfdbf14b5ab0c2dd2fe08" pass-name="src" pass_to="render"></div>-->
-			<!--		</a>-->
-			<!--		<a actions="pass, openModal" modal-src="./module-views/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">-->
-			<!--		    <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/shapes.svg"></i></span>-->
-			<!--		    <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe0b" pass-name="src" pass_to="render"></div>-->
-			<!--		</a>-->
-			<!--		<a actions="pass, openModal" modal-src="./files/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">-->
-			<!--		    <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/folder.svg"></i></span>-->
-			<!--		    <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe15" pass-name="src" pass_to="render"></div>-->
-			<!--		</a>-->
-			<!--		<a actions="logout" href="./signin.html" pass_to class="width:50px text-align:center display:inline-block">-->
-			<!--		  <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/sign-out-alt.svg"></i></span>-->
-			<!--		</a>-->
-			<!--	</div>-->
-			<!--</div>-->
-   <!--         <div resize="right"></div>-->
-   <!--     </sidenav>-->
-        
-        <!-- Modal Viewport  -->
-        <div class="position:fixed margin-top:50px" content_id="content" id="modal-viewport"></div>
+                </li>
 
-		<!-- Main Content -->
-		<main class="padding:10px" content_id="content">
-			<!--<div class="domEditor main-height" name='cards1' collection="test" pass_id="me1234">-->
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./builder/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/palette.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="builder"></div>
+                    </a>
+                </li>
 
-			<div class="display:grid grid-auto-rows:50px gap:10px grid-template-columns:repeat(auto-fill,minmax(50px,1fr))" dnd-group-name="dashboard" fetch-collection="files" template_id="card" fetch-limit="20" droppable>
+                <!-- deleteDocument-->
+                <li class="margin-right:15px">
+                    <a
+                        actions="deleteDocument, closeModal"
+                        collection=""
+                        document_id=""
+                        pass_id="form-fields">
+                        <i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/trash-alt.svg"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-				<div template_id="card" class="card template display:flex position:relative padding:20px align-items:center grid-column-end:span_6 grid-row-end:span_2" draggable resizable>
-					<!-- dashboard template-->
-					<div class="flex-grow:1 padding-right:20px">
-						<h2 name="name">Visits</h2>
-						<p name="description">Total visits today</p>
-						<div class="display:flex align-items:center">
-							<h2>$<span fetch-collection="" fetch-document filter-name="total" chart-operator="sum">4000</span></h2>
-							<div filter-name="status" filter-value="completed"></div>
-							<!--<i class="fas fa-chart-line color:green font-size:16px padding:0px_15px"></i>-->
-							<span class="cocreate-badge background:green round font-size:12px">7%</span>
-						</div>
-						<a href="#">Detail</a>
-					</div>
-					<div class="width:120px">
-						<div class="progressbar-circle text-align:center width:100%" progressbar-color="#22CCE2" percent-value="85" percent-note="New Visits"></div>
-					</div>
-					<div resize="right" dnd-exclude></div>
-					<div resize="bottom" dnd-exclude></div>
-				</div>
+        <!-- SideNav  -->
+        <!--     <sidenav id="menuL" class="position:absolute top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:50px width:275px:hover width:0px@xs" resizable resize-target="[content_id='content']" resize-property="margin-left" resize-value="width">-->
 
-				<div template_id="card" fetch-type="scroll" class="visibility:hidden height:30px"></div>
+        <!-- Search -->
+        <!--<form class="padding:5px">-->
+        <!--	<input type="text" class="floating-label" pass_to="results">-->
+        <!--	<span class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">-->
+        <!--		<a actions="pass, openModal" pass_to="render" collection="website-pages" document_id="" pass-name="src" modal-width="900px" modal-color="#229954">-->
+        <!--			<i class="height:20px fill:#505050" src="/assets/svg/search.svg"></i>-->
+        <!--		</a>-->
+        <!--	</span>-->
+        <!--</form>-->
 
-			</div>
-			
-			<button class="position:absolute bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
-				<a actions="pass, openModal" modal-src="./dashboard/form.html" modal-width="320px" modal-color="#229954">
-					<i class="height:20px fill:#505050" src="/assets/svg/plus.svg"></i>
-					<div pass_to="form-fields" pass-document_id=""></div>
-					<div pass_id="module_id" pass-document_id="" pass-value="" pass-filter-value="" pass_to="module_id"></div>
-	                <div pass_id="form" pass-collection="" pass-document_id="" pass-name="" pass_to="render"></div>
-				</a>
-			</button>
+        <!--<input type="hidden" template_id="main-menu" filter-name="menu-position" filter-value="3,4" filter-value-type="number" filter-operator="nin">-->
+        <!--<div template_id="main-menu" filter-name="menu-position" filter-value="0" filter-value-type="number" filter-operator="ne"></div>-->
+        <!--     	<div class="padding-right:5px padding-bottom:5px">-->
+        <!-- Fetch and Render-->
+        <!--           	<ul class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">-->
+        <!--           	    <div fetch-collection="modules" -->
+        <!--                     filter-sort-name="main-menu-position" -->
+        <!--                     filter-sort-direction="asc"-->
+        <!--                     filter-name="main-menu-position" -->
+        <!--                     filter-value="0"-->
+        <!--                     filter-value-type="number"-->
+        <!--                     filter-operator="$ne"-->
+        <!--                     template_id="main-menu">-->
 
+        <!-- Template -->
+        <!--                     <li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template_id="main-menu" document_id="{{document._id}}">-->
+        <!--<input type="hidden" collection="files" document_id="{{document.main-menu-primary}}" name="path" input-target="#a{{document._id}}" set-value-key="primary-url">-->
+        <!--<a actions="pass, openModal" id="a{{document._id}}" href='..{{primary-url}}'-->
+        <!--                             modal-width="{{document.main-modal-primary-width}}"-->
+        <!--                             modal-color="{{document.main-modal-color}}"-->
+        <!--                             class="display:inline-block">-->
+        <!--                             <span class="display:inline-block width:50px text-align:center" document_id="{{document._id}}" collection="modules" name="icon"></span>-->
+        <!--                             <span collection="modules" document_id="{{document._id}}" name="name" ></span>-->
+        <!--                             <div pass-collection="module_activities" pass-filter-name="module_id" pass-filter-value="{{document._id}}" pass_to="datatable"></div>-->
+        <!--                             <div pass-collection="module_activities" pass-value="{{document._id}}" pass_to="module_id"></div>-->
+        <!--                             <div pass-collection="files" pass-document_id="{{document.main-menu-secondary}}" pass-name="src" pass_to="form"></div>-->
+        <!--                             <div pass-collection="files" pass-document_id="{{document.main-menu-primary}}" pass-name="src" pass_to="render"></div>-->
+        <!--                             <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module-form"></div>-->
+        <!--                         </a>-->
+        <!--                         <div class="float:right width:50px text-align:center">-->
+        <!--<input type="hidden" collection="files" document_id="{{document.main-menu-secondary}}" name="path" input-targt="#a{{document._id}}" input-key="secondary-url">-->
+        <!--<a actions="pass, openModal" id="a{{document._id}}" href='..{{secondary-url}}'-->
+        <!--                                 modal-width="{{document.main-menu-secondary-width}}"-->
+        <!--                                 modal-color="{{document.main-menu-secondary-color}}">-->
+        <!--                                 <i class="height:16px fill:#505050" src="/assets/svg/plus.svg"></i>-->
+        <!--                                 <div pass-value="{{document._id}}" pass-filter-value="{{document._id}}" pass_to="module_id"></div>-->
+        <!--                                 <div pass-collection="files" pass-document_id="{{document.main-menu-secondary}}" pass-name="src" pass_to="render"></div>-->
+        <!--                                 <div pass-document_id="{{document._id}}" pass_to="module-form"></div>-->
+        <!--	                    <div pass_to="form-fields" pass-document_id=""></div>-->
+        <!--                             </a>-->
+        <!--                         </div>-->
+        <!--                     </li>-->
+        <!--                 </div>-->
+        <!--             </ul>-->
 
-		</main>
-		
+        <!-- sidenav Footer -->
+        <!--	<div class="display:flex justify-content:space-between flex-wrap:wrap position:absolute bottom:0px background:gainsboro line-height:40px height:40px width:100% overflow:hidden">-->
+        <!--		<a actions="pass, openModal" modal-src="./settings/index.html" modal-width="275px" modal-color="#229954" modal-x="0" modal-y="0" class="width:50px text-align:center display:inline-block">-->
+        <!--		    <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/cogs.svg"></i></span>-->
+        <!--		    <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe18" pass-name="src" pass_to="render"></div>-->
+        <!--		</a>-->
+        <!--		<a actions="pass, openModal" modal-src="./modules/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">-->
+        <!--		    <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/project-diagram.svg"></i></span>-->
+        <!--		    <div pass-collection="files" pass-document_id="60ddfdbf14b5ab0c2dd2fe08" pass-name="src" pass_to="render"></div>-->
+        <!--		</a>-->
+        <!--		<a actions="pass, openModal" modal-src="./module-views/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">-->
+        <!--		    <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/shapes.svg"></i></span>-->
+        <!--		    <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe0b" pass-name="src" pass_to="render"></div>-->
+        <!--		</a>-->
+        <!--		<a actions="pass, openModal" modal-src="./files/datatable.html" modal-width="640px" modal-color="#229954" class="width:50px text-align:center display:inline-block">-->
+        <!--		    <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/folder.svg"></i></span>-->
+        <!--		    <div pass-collection="files" pass-document_id="60ddfdc014b5ab0c2dd2fe15" pass-name="src" pass_to="render"></div>-->
+        <!--		</a>-->
+        <!--		<a actions="logout" href="./signin.html" pass_to class="width:50px text-align:center display:inline-block">-->
+        <!--		  <span class="padding:10px width:50px text-align:center"><i class="height:16px fill:#505050" src="/assets/svg/sign-out-alt.svg"></i></span>-->
+        <!--		</a>-->
+        <!--	</div>-->
+        <!--</div>-->
+        <!--         <div resize="right"></div>-->
+        <!--     </sidenav>-->
+
+        <!-- Main Content -->
+        <main class="padding:10px" content_id="content">
+            <!--<div class="domEditor main-height" name='cards1' collection="test" pass_id="me1234">-->
+
+            <div
+                class="display:grid grid-auto-rows:50px gap:10px grid-template-columns:repeat(auto-fill,minmax(50px,1fr))"
+                dnd-group-name="dashboard"
+                fetch-collection="files"
+                template_id="card"
+                fetch-limit="20"
+                droppable>
+                <div
+                    template_id="card"
+                    class="card template display:flex position:relative padding:20px align-items:center grid-column-end:span_6 grid-row-end:span_2"
+                    draggable
+                    resizable>
+                    <!-- dashboard template-->
+                    <div class="flex-grow:1 padding-right:20px">
+                        <h2 name="name">Visits</h2>
+                        <p name="description">Total visits today</p>
+                        <div class="display:flex align-items:center">
+                            <h2>
+                                $<span
+                                    fetch-collection=""
+                                    fetch-document
+                                    filter-name="total"
+                                    chart-operator="sum"
+                                    >4000</span
+                                >
+                            </h2>
+                            <div
+                                filter-name="status"
+                                filter-value="completed"></div>
+                            <!--<i class="fas fa-chart-line color:green font-size:16px padding:0px_15px"></i>-->
+                            <span
+                                class="cocreate-badge background:green round font-size:12px"
+                                >7%</span
+                            >
+                        </div>
+                        <a href="#">Detail</a>
+                    </div>
+                    <div class="width:120px">
+                        <div
+                            class="progressbar-circle text-align:center width:100%"
+                            progressbar-color="#22CCE2"
+                            percent-value="85"
+                            percent-note="New Visits"></div>
+                    </div>
+                    <div resize="right" dnd-exclude></div>
+                    <div resize="bottom" dnd-exclude></div>
+                </div>
+
+                <div
+                    template_id="card"
+                    fetch-type="scroll"
+                    class="visibility:hidden height:30px"></div>
+            </div>
+
+            <button
+                class="position:absolute bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
+                <a
+                    actions="pass, openModal"
+                    modal-src="./dashboard/form.html"
+                    modal-width="320px"
+                    modal-color="#229954">
+                    <i
+                        class="height:20px fill:#505050"
+                        src="/assets/svg/plus.svg"></i>
+                    <div pass_to="form-fields" pass-document_id=""></div>
+                    <div
+                        pass_id="module_id"
+                        pass-document_id=""
+                        pass-value=""
+                        pass-filter-value=""
+                        pass_to="module_id"></div>
+                    <div
+                        pass_id="form"
+                        pass-collection=""
+                        pass-document_id=""
+                        pass-name=""
+                        pass_to="render"></div>
+                </a>
+            </button>
+        </main>
+
         <!-- Comming Soon-->
-        <div class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
-            <h2>Coming Soon <a actions="remove" remove-closest=".card"> X</a></h2>
+        <div
+            class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
+            <h2>
+                Coming Soon <a actions="remove" remove-closest=".card"> X</a>
+            </h2>
         </div>
-        
-		<script src="https://cdn.cocreate.app/1.55.1/CoCreate.min.js"></script>
-        
 
-	</body>
-
+        <script src="https://cdn.cocreate.app/1.56.0/CoCreate.min.js"></script>
+    </body>
 </html>

@@ -1,172 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            href="https://cdn.cocreate.app/favicon.ico"
+            type="image/ico"
+            sizes="16x16" />
+        <title>chart | CoCreate</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.cocreate.app/latest/CoCreate.min.css" />
+        <link
+            rel="stylesheet"
+            href="../index.css"
+            collection="files"
+            document_id="637bc8fe91249e639db315d9"
+            name="src"
+            type="text/css" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
+    <style>
+        .progressbar {
+            flex-grow: 1;
+            height: 4px;
+            border: none;
+            position: relative;
+            background-color: rgb(194, 240, 253);
+            overflow: hidden;
+        }
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-		<title>chart | CoCreate</title>
-		<link rel="stylesheet" type="text/css" href="https://cdn.cocreate.app/latest/CoCreate.min.css">
-        <link rel="stylesheet" href="../index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src" type="text/css"/>
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
-	<style>
-		.progressbar {
-			flex-grow: 1;
-			height: 4px;
-			border: none;
-			position: relative;
-			background-color: rgb(194, 240, 253);
-			overflow: hidden;
-		}
+        .progressbar > div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            transform-origin: left;
+            transition: transform 0.4s linear;
+            background-color: #61dafb;
+        }
 
-		.progressbar>div {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			bottom: 0;
-			transform-origin: left;
-			transition: transform .4s linear;
-			background-color: #61dafb;
-		}
+        .floating-label {
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
 
-		.floating-label {
-			margin-top: 0px!important;
-			margin-bottom: 0px!important;
-		}
+        .main-height {
+            height: calc(100vh - 30px);
+        }
 
-		.main-height {
-			height: calc( 100vh - 30px);
-		}
+        .progressbar-text {
+            color: #121212;
+            font-weight: bolder;
+        }
+    </style>
 
-		.progressbar-text {
-			color: #121212;
-			font-weight: bolder;
-		}
-	</style>
+    <body>
+        <!-- Modal Viewport -->
+        <div id="modal-viewport" hidden></div>
 
-	<body>
-		<!-- Modal Viewport -->
-		<div id="modal-viewport" hidden></div>
-
-		<!-- Navbar -->
-		<nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
-
-			<!-- Horizontal Scroll Nav/Tabs -->
-			<ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-
-				<!-- Modal Controls -->
-				<li class="margin-right:15px"><a actions="closeModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
-				<li class="margin-right:15px">
-					<a actions="minMaxModal">
-						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
-					</a>
-				</li>
-				<li class="margin-right:15px"><a actions="parkModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
-
-				<!-- fullscreen toogle and icon transform-->
-				<li class="margin-right:15px">
-					<a fullscreen>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-					</a>
-				</li>
-
-
-				<!-- Render Module Form -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
-                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
-                        <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
+        <!-- Navbar -->
+        <nav
+            class="nav display:flex align-items:center background:whitesmoke"
+            content_id="content"
+            scroll="sticky-nav, hide-nav"
+            scroll-up="5"
+            scroll-down="5">
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul
+                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+                <!-- Modal Controls -->
+                <li class="margin-right:15px">
+                    <a actions="closeModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/times.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="minMaxModal">
+                        <i
+                            toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+                            toggle-attribute="src"
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-maximize.svg"></i>
                     </a>
-				</li>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="parkModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-minimize.svg"></i
+                    ></a>
+                </li>
 
-				<!-- Render Code Editor -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
+                <!-- fullscreen toogle and icon transform-->
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
                     </a>
-				</li>
+                </li>
 
-				<!-- Render Builder -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./modules/form.html"
+                        modal-width="320px">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/cog.svg"></i>
+                        <div
+                            pass_id="module-form"
+                            pass-collection="modules"
+                            pass-document_id=""
+                            pass_to="form-fields"></div>
+                        <div
+                            pass_id="module_id"
+                            pass-filter-value=""
+                            pass_to="module_id"></div>
                     </a>
-				</li>
+                </li>
 
-				<!-- deleteDocument-->
-				<li class="margin-right:15px">
-					<a actions="deleteDocument, closeModal" collection="" document_id="" pass_id="form-fields">
-                        <i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i>
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./code-editor/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/code.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="code-editor"></div>
                     </a>
-				</li>
-			</ul>
-		</nav>
+                </li>
 
-		<!-- Main Content -->
-		<main class="padding:10px" content_id="content">
-			<div class="domEditor main-height" name='cards1' collection="test" pass_id="me1234">
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./builder/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/palette.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="builder"></div>
+                    </a>
+                </li>
 
-				<div class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))" dnd-group-name="dashboard" fetch-collection="module_activities" fetch-limit="20" template_id="card" droppable="true">
+                <!-- deleteDocument-->
+                <li class="margin-right:15px">
+                    <a
+                        actions="deleteDocument, closeModal"
+                        collection=""
+                        document_id=""
+                        pass_id="form-fields">
+                        <i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/trash-alt.svg"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-					<div template_id="card" class="card template resize padding:20px align-items:center grid-column-end:span_3 grid-row-end:span_2" eid="card">
-						<canvas chart="chartjs" chart-type="bar" chart-options="" chart-labels="January, February, March, April, May, June, July" chart-title="Combine Charts">
-                            <div chart-dataset-type="line" chart-dataset-label="um Chart">
-                                <div fetch-collection="chart" fetch-name="Jan" chart-operator="sum">
-                                    <div filter-name="Jan" filter-value="0, 10" filter-value-type="number" filter-operator="$range"></div>
+        <!-- Main Content -->
+        <main class="padding:10px" content_id="content">
+            <div
+                class="domEditor main-height"
+                name="cards1"
+                collection="test"
+                pass_id="me1234">
+                <div
+                    class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))"
+                    dnd-group-name="dashboard"
+                    fetch-collection="module_activities"
+                    fetch-limit="20"
+                    template_id="card"
+                    droppable="true">
+                    <div
+                        template_id="card"
+                        class="card template resize padding:20px align-items:center grid-column-end:span_3 grid-row-end:span_2"
+                        eid="card">
+                        <canvas
+                            chart="chartjs"
+                            chart-type="bar"
+                            chart-options=""
+                            chart-labels="January, February, March, April, May, June, July"
+                            chart-title="Combine Charts">
+                            <div
+                                chart-dataset-type="line"
+                                chart-dataset-label="um Chart">
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Jan"
+                                    chart-operator="sum">
+                                    <div
+                                        filter-name="Jan"
+                                        filter-value="0, 10"
+                                        filter-value-type="number"
+                                        filter-operator="$range"></div>
                                 </div>
                                 <div fetch-collection="chart" fetch-name="Feb">
-                                    <div filter-name="permission" filter-value="read" filter-operator="$nin"></div>
-                                    <div filter-name="type" filter-value="leader" filter-operator="$in"></div>
+                                    <div
+                                        filter-name="permission"
+                                        filter-value="read"
+                                        filter-operator="$nin"></div>
+                                    <div
+                                        filter-name="type"
+                                        filter-value="leader"
+                                        filter-operator="$in"></div>
                                 </div>
                                 <div fetch-collection="chart" fetch-name="Mar">
-                                    <div filter-name="Mar" filter-value="-7" filter-operator="$eq" filter-value-type="number"></div>
+                                    <div
+                                        filter-name="Mar"
+                                        filter-value="-7"
+                                        filter-operator="$eq"
+                                        filter-value-type="number"></div>
                                 </div>
-                                <div fetch-collection="chart" fetch-name="Apr"></div>
-                                <div fetch-collection="chart" fetch-name="May"></div>
-                                <div fetch-collection="chart" fetch-name="Jun"></div>
-                                <div fetch-collection="chart" fetch-name="Jul"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Apr"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="May"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Jun"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Jul"></div>
                             </div>
-                            <div chart-dataset-label="Average Chart" chart-dataset-type="line">
-                                <div fetch-collection="chart" fetch-name="Jan" chart-operator="average"></div>
-                                <div fetch-collection="chart" fetch-name="Feb" chart-operator="average"></div>
-                                <div fetch-collection="chart" fetch-name="Mar" chart-operator="average"></div>
-                                <div fetch-collection="chart" fetch-name="Apr" chart-operator="average"></div>
-                                <div fetch-collection="chart" fetch-name="May" chart-operator="average"></div>
-                                <div fetch-collection="chart" fetch-name="Jun" chart-operator="average"></div>
-                                <div fetch-collection="chart" fetch-name="Jul" chart-operator="average"></div>
+                            <div
+                                chart-dataset-label="Average Chart"
+                                chart-dataset-type="line">
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Jan"
+                                    chart-operator="average"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Feb"
+                                    chart-operator="average"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Mar"
+                                    chart-operator="average"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Apr"
+                                    chart-operator="average"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="May"
+                                    chart-operator="average"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Jun"
+                                    chart-operator="average"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Jul"
+                                    chart-operator="average"></div>
                             </div>
-                            
-                            <div chart-dataset-label="Data Count" chart-dataset-type="">
-                              <div fetch-collection="chart" fetch-name="Jan" chart-operator="count"></div>
-                              <div fetch-collection="chart" fetch-name="Feb" chart-operator="count"></div>
-                              <div fetch-collection="chart" fetch-name="Mar" chart-operator="count"></div>
-                              <div fetch-collection="chart" fetch-name="Apr" chart-operator="count"></div>
-                              <div fetch-collection="chart" fetch-name="May" chart-operator="count"></div>
-                              <div fetch-collection="chart" fetch-name="Jun" chart-operator="count"></div>
-                              <div fetch-collection="chart" fetch-name="Jul" chart-operator="count"></div>
+
+                            <div
+                                chart-dataset-label="Data Count"
+                                chart-dataset-type="">
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Jan"
+                                    chart-operator="count"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Feb"
+                                    chart-operator="count"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Mar"
+                                    chart-operator="count"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Apr"
+                                    chart-operator="count"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="May"
+                                    chart-operator="count"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Jun"
+                                    chart-operator="count"></div>
+                                <div
+                                    fetch-collection="chart"
+                                    fetch-name="Jul"
+                                    chart-operator="count"></div>
                             </div>
                         </canvas>
-						<div resize="left"></div>
-						<div resize="right"></div>
-						<div resize="top"></div>
-						<div resize="bottom"></div>
+                        <div resize="left"></div>
+                        <div resize="right"></div>
+                        <div resize="top"></div>
+                        <div resize="bottom"></div>
+                    </div>
+                </div>
+                <!-- Sortable card -->
+            </div>
+        </main>
 
-					</div>
-
-				</div>
-				<!-- Sortable card -->
-
-		</main>
-
-        <script src="https://cdn.cocreate.app/1.55.1/CoCreate.min.js"></script>
-	
-	</body>
-
+        <script src="https://cdn.cocreate.app/1.56.0/CoCreate.min.js"></script>
+    </body>
 </html>

@@ -1,135 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="icon"
+            href="https://cdn.cocreate.app/favicon.ico"
+            type="image/ico"
+            sizes="16x16" />
+        <title>Wallet | CoCreate</title>
+        <link
+            rel="stylesheet"
+            href="../index.css"
+            collection="files"
+            document_id="637bc8fe91249e639db315d9"
+            name="src"
+            type="text/css" />
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" href="https://cdn.cocreate.app/favicon.ico" type="image/ico" sizes="16x16">
-		<title>Wallet | CoCreate</title>
-        <link rel="stylesheet" href="../index.css" collection="files" document_id="637bc8fe91249e639db315d9" name="src" type="text/css"/>
+        <link rel="manifest" href="/manifest.webmanifest" />
+    </head>
 
-		<link rel="manifest" href="/manifest.webmanifest" />
-	</head>
+    <body>
+        <!-- Modal Viewport -->
+        <div id="modal-viewport" hidden></div>
 
-	<body>
-		<!-- Modal Viewport -->
-		<div id="modal-viewport" hidden></div>
-
-		<!-- Navbar -->
-		<nav class="nav display:flex align-items:center background:whitesmoke" content_id="content" scroll="sticky-nav, hide-nav" scroll-up="5" scroll-down="5">
-
-			<!-- Horizontal Scroll Nav/Tabs -->
-			<ul class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-
-				<!-- Modal Controls -->
-				<li class="margin-right:15px"><a actions="closeModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/times.svg"></i></a></li>
-				<li class="margin-right:15px">
-					<a actions="minMaxModal">
-						<i toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg" toggle-attribute="src" class="display:flex height:18px fill:#505050" src="/assets/svg/window-maximize.svg"></i>
-					</a>
-				</li>
-				<li class="margin-right:15px"><a actions="parkModal"><i class="display:flex height:18px fill:#505050" src="/assets/svg/window-minimize.svg"></i></a></li>
-
-				<!-- fullscreen toogle and icon transform-->
-				<li class="margin-right:15px">
-					<a fullscreen>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/expand.svg"></i>
-						<i class="display:flex height:18px fill:#505050" src="/assets/svg/compress.svg"></i>
-					</a>
-				</li>
-
-
-				<!-- Render Module Form -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./modules/form.html" modal-width="320px">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/cog.svg"></i>
-                        <div pass_id="module-form" pass-collection="modules" pass-document_id="" pass_to="form-fields"></div>
-                        <div pass_id="module_id" pass-filter-value="" pass_to="module_id"></div>
+        <!-- Navbar -->
+        <nav
+            class="nav display:flex align-items:center background:whitesmoke"
+            content_id="content"
+            scroll="sticky-nav, hide-nav"
+            scroll-up="5"
+            scroll-down="5">
+            <!-- Horizontal Scroll Nav/Tabs -->
+            <ul
+                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+                <!-- Modal Controls -->
+                <li class="margin-right:15px">
+                    <a actions="closeModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/times.svg"></i
+                    ></a>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="minMaxModal">
+                        <i
+                            toggle="/assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+                            toggle-attribute="src"
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-maximize.svg"></i>
                     </a>
-				</li>
+                </li>
+                <li class="margin-right:15px">
+                    <a actions="parkModal"
+                        ><i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/window-minimize.svg"></i
+                    ></a>
+                </li>
 
-				<!-- Render Code Editor -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./code-editor/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/code.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="code-editor"></div>
+                <!-- fullscreen toogle and icon transform-->
+                <li class="margin-right:15px">
+                    <a fullscreen>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/expand.svg"></i>
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/compress.svg"></i>
                     </a>
-				</li>
+                </li>
 
-				<!-- Render Builder -->
-				<li class="margin-right:15px">
-					<a actions="pass, openModal" modal-src="./builder/index.html">
-                        <i class="display:flex height:18px fill:#505050" src="/assets/svg/palette.svg"></i>
-                        <div pass_id="render" pass-collection="" pass-document_id="" pass-name="" pass_to="builder"></div>
+                <!-- Render Module Form -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./modules/form.html"
+                        modal-width="320px">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/cog.svg"></i>
+                        <div
+                            pass_id="module-form"
+                            pass-collection="modules"
+                            pass-document_id=""
+                            pass_to="form-fields"></div>
+                        <div
+                            pass_id="module_id"
+                            pass-filter-value=""
+                            pass_to="module_id"></div>
                     </a>
-				</li>
+                </li>
 
-				<!-- deleteDocument-->
-				<li class="margin-right:15px">
-					<a actions="deleteDocument, closeModal" collection="" document_id="" pass_id="form-fields">
-                        <i class="height:18px fill:#505050" src="/assets/svg/trash-alt.svg"></i>
+                <!-- Render Code Editor -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./code-editor/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/code.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="code-editor"></div>
                     </a>
-				</li>
-			</ul>
-		</nav>
+                </li>
 
-		<!-- Main Content -->
-		<main class="padding:10px" content_id="content">
-			<div class=" balance_input_box">
-				<form collection='module_activity' class="float-labels">
-					<input type="text" name="balance" id="balance" placeholder="Balance" class="floating-label" readonly>
-				</form>
-			</div>
-			<div class="btn-group balance_buttons">
-				<a href="#" class="btn btn-success" id="add_funds" show="#deposit" hide="#deposit"><i class="height:20px fill:#505050" src="/assets/svg/plus.svg"></i></a>
-				<a href="#" class="btn btn-warning" id="wd_funds"><i class="height:20px fill:#505050" src="/assets/svg/minus.svg"></i></a>
-				<a href="#" class="btn btn-primary" show='#transfer' id="exchange_funds"><i class="fas fa-exchange-alt"></i></a>
-			</div>
-			<div id="deposit" hidden>
-				<div class="tagline"><span class="org_name_balance">CoCreate Funds</span></div>
-				<div id="deposit" class="display:flex">
-					<!-- input for amount -->
-					<div class="col-xs-6">
-						<input type="text" name="funds" id="funds" class="floating-label" placeholder="Deposit">
-					</div>
+                <!-- Render Builder -->
+                <li class="margin-right:15px">
+                    <a
+                        actions="pass, openModal"
+                        modal-src="./builder/index.html">
+                        <i
+                            class="display:flex height:18px fill:#505050"
+                            src="/assets/svg/palette.svg"></i>
+                        <div
+                            pass_id="render"
+                            pass-collection=""
+                            pass-document_id=""
+                            pass-name=""
+                            pass_to="builder"></div>
+                    </a>
+                </li>
 
-					<!-- input readonly for new balance-->
-					<div class="col-xs-6">
-						<input type="text" name="new_balance" id="new_balance" class="floating-label" placeholder="New balance" readonly>
-					</div>
-				</div>
+                <!-- deleteDocument-->
+                <li class="margin-right:15px">
+                    <a
+                        actions="deleteDocument, closeModal"
+                        collection=""
+                        document_id=""
+                        pass_id="form-fields">
+                        <i
+                            class="height:18px fill:#505050"
+                            src="/assets/svg/trash-alt.svg"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-				<!-- select for credit cards -->
-				<div>
+        <!-- Main Content -->
+        <main class="padding:10px" content_id="content">
+            <div class="balance_input_box">
+                <form collection="module_activity" class="float-labels">
+                    <input
+                        type="text"
+                        name="balance"
+                        id="balance"
+                        placeholder="Balance"
+                        class="floating-label"
+                        readonly />
+                </form>
+            </div>
+            <div class="btn-group balance_buttons">
+                <a
+                    href="#"
+                    class="btn btn-success"
+                    id="add_funds"
+                    show="#deposit"
+                    hide="#deposit"
+                    ><i
+                        class="height:20px fill:#505050"
+                        src="/assets/svg/plus.svg"></i
+                ></a>
+                <a href="#" class="btn btn-warning" id="wd_funds"
+                    ><i
+                        class="height:20px fill:#505050"
+                        src="/assets/svg/minus.svg"></i
+                ></a>
+                <a
+                    href="#"
+                    class="btn btn-primary"
+                    show="#transfer"
+                    id="exchange_funds"
+                    ><i class="fas fa-exchange-alt"></i
+                ></a>
+            </div>
+            <div id="deposit" hidden>
+                <div class="tagline">
+                    <span class="org_name_balance">CoCreate Funds</span>
+                </div>
+                <div id="deposit2" class="display:flex">
+                    <!-- input for amount -->
+                    <div class="col-xs-6">
+                        <input
+                            type="text"
+                            name="funds"
+                            id="funds"
+                            class="floating-label"
+                            placeholder="Deposit" />
+                    </div>
 
-					<!-- Here is where magic happens -->
-					<a href="#" class="billing_methods"> <small>Add/Edit cards</small> </a>
-					<div class="dropdown">
-						<a id="default_card_box" class="btn-default dropdown-toggle">
-							<div class="select_card"></div>
-						</a>
+                    <!-- input readonly for new balance-->
+                    <div class="col-xs-6">
+                        <input
+                            type="text"
+                            name="new_balance"
+                            id="new_balance"
+                            class="floating-label"
+                            placeholder="New balance"
+                            readonly />
+                    </div>
+                </div>
 
-						<ul class="dropdown-menu" id="credit_cards_dropdown"></ul>
-					</div>
-					<!-- /magic ends -->
-				</div>
+                <!-- select for credit cards -->
+                <div>
+                    <!-- Here is where magic happens -->
+                    <a href="#" class="billing_methods">
+                        <small>Add/Edit cards</small>
+                    </a>
+                    <div class="dropdown">
+                        <a
+                            id="default_card_box"
+                            class="btn-default dropdown-toggle">
+                            <div class="select_card"></div>
+                        </a>
 
-				<div class="form-footer">
-					<button type="button" class="button btn-primary" id="btn_operation">Add Funds</button>
-					<p id="add_funds_message"></p>
-				</div>
-				<!-- end .form-footer section -->
-			</div>
-		</main>
-		
+                        <ul
+                            class="dropdown-menu"
+                            id="credit_cards_dropdown"></ul>
+                    </div>
+                    <!-- /magic ends -->
+                </div>
+
+                <div class="form-footer">
+                    <button
+                        type="button"
+                        class="button btn-primary"
+                        id="btn_operation">
+                        Add Funds
+                    </button>
+                    <p id="add_funds_message"></p>
+                </div>
+                <!-- end .form-footer section -->
+            </div>
+        </main>
+
         <!-- Comming Soon-->
-        <div class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
-            <h2>Coming Soon <a actions="remove" remove-closest=".card"> X</a></h2>
+        <div
+            class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
+            <h2>
+                Coming Soon <a actions="remove" remove-closest=".card"> X</a>
+            </h2>
         </div>
 
-        <script src="https://cdn.cocreate.app/1.55.1/CoCreate.min.js"></script>
-
-	</body>
-
+        <script src="https://cdn.cocreate.app/1.56.0/CoCreate.min.js"></script>
+    </body>
 </html>
