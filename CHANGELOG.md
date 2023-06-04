@@ -1,3 +1,13 @@
+## [1.32.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.32.1...v1.32.2) (2023-06-04)
+
+
+### Bug Fixes
+
+* html formating ([d002cf5](https://github.com/CoCreate-app/CoCreate-admin/commit/d002cf5d916f2bc03cc2eb44d8a570d23bb23265))
+* removed deleteOrgs action use deleteDocuments instead ([ca79886](https://github.com/CoCreate-app/CoCreate-admin/commit/ca79886eacb39d1e6783bb033daa77d337601142))
+* Update dependencies versions for [@cocreate](https://github.com/cocreate) libraries ([ab7f87e](https://github.com/CoCreate-app/CoCreate-admin/commit/ab7f87e18d5f22ba7ad863751d948e0459fe4f8c))
+* Updated CoCreate.js CDN to version 1.56.7 ([d3ed2e9](https://github.com/CoCreate-app/CoCreate-admin/commit/d3ed2e9d8fe25af9b6acfac9fd81cbcb53a6aac2))
+
 ## [1.32.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.32.0...v1.32.1) (2023-05-10)
 
 
