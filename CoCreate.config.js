@@ -1,8 +1,8 @@
 module.exports = {
     "config": {
-        "organization_id": "5ff747727005da1c272740ab",
-        "key": "2061acef-0451-4545-f754-60cf8160",
-        "host": "general.cocreate.app"
+        "organization_id": "",
+        "key": "",
+        "host": ""
     },
     "directories": [
         {
