@@ -1,51 +1,51 @@
 name: Automated
 "on":
-  push:
-    branches:
-      - master
+    push:
+        branches:
+            - master
 jobs:
-  about:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: setup nodejs
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - name: Jaid/action-sync-node-meta
-        uses: jaid/action-sync-node-meta@v1.4.0
-        with:
-          direction: overwrite-github
-          githubToken: "${{ secrets.GITHUB }}"
-  release:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: setup nodejs
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v3
-        id: semantic
-        with:
-          extra_plugins: |
-            @semantic-release/changelog
-            @semantic-release/git
-            @semantic-release/github
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
-    outputs:
-      new_release_published: "${{ steps.semantic.outputs.new_release_published }}"
-      new_release_version: "${{ steps.semantic.outputs.new_release_version }}"
-  # docs:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
+    about:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: setup nodejs
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+            - name: Jaid/action-sync-node-meta
+              uses: jaid/action-sync-node-meta@v1.4.0
+              with:
+                  direction: overwrite-github
+                  githubToken: "${{ secrets.GITHUB }}"
+    release:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: setup nodejs
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 14
+            - name: Semantic Release
+              uses: cycjimmy/semantic-release-action@v3
+              id: semantic
+              with:
+                  extra_plugins: |
+                      @semantic-release/changelog
+                      @semantic-release/git
+                      @semantic-release/github
+              env:
+                  GITHUB_TOKEN: "${{ secrets.GITHUB }}"
+                  NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
+        outputs:
+            new_release_published: "${{ steps.semantic.outputs.new_release_published }}"
+            new_release_version: "${{ steps.semantic.outputs.new_release_version }}"
+    # docs:
+    #   runs-on: ubuntu-latest
+    #   steps:
+    #     - name: Checkout
+    #       uses: actions/checkout@v3
 
-  #     - name: update documentation
-  #       uses: CoCreate-app/CoCreate-docs@master
+    #     - name: update documentation
+    #       uses: CoCreate-app/CoCreate-docs@master

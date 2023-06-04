@@ -57,7 +57,7 @@
     "webpack-log": "^3.0.1"
   },
   "dependencies": {
-    "@cocreate/docs": "^1.7.13",
-    "@cocreate/hosting": "^1.10.5"
+    "@cocreate/docs": "^1.7.15",
+    "@cocreate/hosting": "^1.10.8"
   }
 }
