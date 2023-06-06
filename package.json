@@ -41,8 +41,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "docs": "node ./node_modules/@cocreate/docs/src/index.js",
-    "hosting": "node ./node_modules/@cocreate/hosting/src/index.js"
+    "docs": "node ./node_modules/@cocreate/docs/src/index.js"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -57,7 +56,6 @@
     "webpack-log": "^3.0.1"
   },
   "dependencies": {
-    "@cocreate/docs": "^1.7.15",
-    "@cocreate/hosting": "^1.10.8"
+    "@cocreate/docs": "^1.7.15"
   }
 }

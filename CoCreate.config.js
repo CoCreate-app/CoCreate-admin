@@ -23,7 +23,7 @@ module.exports = {
                 "directory": "/admin{{directory}}",
                 "content-type": "{{content-type}}",
                 "public": "true",
-                "website_id": "644d4b878036fb9d1d1fd69b"
+                "website_id": "644d4b878036fb9d1d1fd69b" // {{document_id}}
             }
         }
     ]
