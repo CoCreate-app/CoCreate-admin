@@ -41,7 +41,6 @@
   },
   "main": "index.js",
   "scripts": {
-    "docs": "node ./node_modules/@cocreate/docs/src/index.js",
     "postinstall": "node ./node_modules/@cocreate/cli/check-coc.js"
   },
   "devDependencies": {
@@ -56,8 +55,5 @@
     "webpack": "^5.24.4",
     "webpack-cli": "^4.5.0",
     "webpack-log": "^3.0.1"
-  },
-  "dependencies": {
-    "@cocreate/docs": "^1.8.13"
   }
 }
