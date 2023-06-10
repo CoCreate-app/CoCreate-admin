@@ -13,7 +13,7 @@ module.exports = {
                 "name": "{{name}}",
                 "path": "{{path}}",
                 "src": "{{source}}",
-                "hosts": [
+                "host": [
                     "*",
                     "general.cocreate.app"
                 ],
