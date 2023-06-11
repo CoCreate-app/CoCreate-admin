@@ -41,7 +41,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "postinstall": "node ./node_modules/@cocreate/cli/check-coc.js"
+    "postinstall": "node $PWD/node_modules/@cocreate/cli/check-coc.js"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
