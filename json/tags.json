@@ -1,6 +1,6 @@
 [
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ef20a8b979b4001744d455",
@@ -11,7 +11,7 @@
         "description": ""
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ef9018b979b4001744d99f",
@@ -21,7 +21,7 @@
         "module_id": "5ff747727005da1c27274183"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6115b5f5442fe32fc88700a6",
@@ -33,7 +33,7 @@
         "type": "611829a9c0e9580010ea589d"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "611829a9c0e9580010ea589d",
@@ -46,7 +46,7 @@
         "timeStamp": "2022-12-03T11:18:18.704Z"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ef209db979b4001744d452",
@@ -56,7 +56,7 @@
         "name": "Client"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ef20a5b979b4001744d454",
@@ -67,7 +67,7 @@
         "stage_position": 2
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ec9b6fb979b4001744bd9b",
@@ -78,7 +78,7 @@
         "position": 3
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "61fee1d5a8b6b4001ae3f4c5",
@@ -91,7 +91,7 @@
         "stage_position": 4
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6200378ea8b6b4001ae57821",
@@ -104,7 +104,7 @@
         "organization_id": "5ff747727005da1c272740ab"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6118422ec0e9580010ea5e25",
@@ -116,7 +116,7 @@
         "organization_id": "5ff747727005da1c272740ab"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6115b5f5442fe32fc88700a7",
@@ -129,7 +129,7 @@
         "tags": "6200378ea8b6b4001ae57821"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6115b5f5442fe32fc88700a8",
@@ -141,7 +141,7 @@
         "type": "611829a9c0e9580010ea589d"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6119c7f5c0e9580010ea879f",
@@ -154,7 +154,7 @@
         "tags": "6200378ea8b6b4001ae57821"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6115b5f5442fe32fc88700a9",
@@ -166,7 +166,7 @@
         "type": "611829a9c0e9580010ea589d"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "62c77888de9a46c874460811",
@@ -177,7 +177,7 @@
         "stage_position": 3
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "62d048e5de9a46c87449f1ee",
@@ -185,7 +185,7 @@
         "organization_id": "5ff747727005da1c272740ab"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ef2098b979b4001744d451",
@@ -196,7 +196,7 @@
         "timeStamp": "2022-12-02T09:42:53.844Z"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ef9045b979b4001744d9aa",
@@ -206,7 +206,7 @@
         "module_id": "5ff747727005da1c27274183"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60edafb8b979b4001744c703",
@@ -217,7 +217,7 @@
         "stage_position": 2
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ef20c0b979b4001744d45d",
@@ -228,7 +228,7 @@
         "stage_position": 0
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ef2ba3b979b4001744d58c",
@@ -238,7 +238,7 @@
         "type": "60edaf79b979b4001744c6fe"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6115b5f5442fe32fc88700aa",
@@ -250,7 +250,7 @@
         "type": "611829a9c0e9580010ea589d"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6115b5f5442fe32fc88700ab",
@@ -262,7 +262,7 @@
         "type": "611829a9c0e9580010ea589d"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6115b5f5442fe32fc88700ac",
@@ -276,7 +276,7 @@
         "timeStamp": "2022-12-01T21:41:43.662Z"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "62c4e163de9a46c87445234a",
@@ -285,7 +285,7 @@
         "module_id": "62c4e1c7de9a46c8744523a0"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ec9b84b979b4001744bd9e",
@@ -295,7 +295,7 @@
         "organization_id": "5ff747727005da1c272740ab"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ec9e33b979b4001744bdd4",
@@ -306,7 +306,7 @@
         "stage_position": 1
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6115b5f5442fe32fc88700ad",
@@ -318,7 +318,7 @@
         "type": "611829a9c0e9580010ea589d"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6115b5f5442fe32fc88700ae",
@@ -330,7 +330,7 @@
         "type": "611829a9c0e9580010ea589d"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6115b5f5442fe32fc88700af",
@@ -343,7 +343,7 @@
         "tags": "6200378ea8b6b4001ae57821"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60eb93a2b979b4001744b445",
@@ -353,7 +353,7 @@
         "type": "60eb9b90b979b4001744b492"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "5ff747727005da1c272740ab",
@@ -364,7 +364,7 @@
         "timeStamp": "2022-12-03T11:19:07.328Z"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6115b5f5442fe32fc88700b0",
@@ -377,7 +377,7 @@
         "timeStamp": "2022-12-01T21:41:42.791Z"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6115b5f5442fe32fc88700b1",
@@ -389,7 +389,7 @@
         "type": "611829a9c0e9580010ea589d"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60eb9b90b979b4001744b492",
@@ -399,7 +399,7 @@
         "type": "60eb9b90b979b4001744b492"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ec6ad7b979b4001744bbd7",
@@ -409,7 +409,7 @@
         "type": "60eb9b90b979b4001744b492"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "61fee140a8b6b4001ae3f3f8",
@@ -422,7 +422,7 @@
         "stage_position": 0
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60edaf79b979b4001744c6fe",
@@ -433,7 +433,7 @@
         "timeStamp": "2022-12-03T11:19:07.306Z"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "6115b5f5442fe32fc88700b2",
@@ -445,7 +445,7 @@
         "type": "611829a9c0e9580010ea589d"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ef20a3b979b4001744d453",
@@ -457,7 +457,7 @@
         "timeStamp": "2022-12-02T09:42:53.851Z"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ef2bc3b979b4001744d597",
@@ -467,7 +467,7 @@
         "module_id": "5ff747727005da1c27274183"
     },
     {
-        "db": "indexeddb",
+        "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
         "collection": "tags",
         "_id": "60ec69d7b979b4001744bbc8",
