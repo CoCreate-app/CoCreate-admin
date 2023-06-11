@@ -1,3 +1,11 @@
+## [1.32.5](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.32.4...v1.32.5) (2023-06-11)
+
+
+### Bug Fixes
+
+* renamed db to storage ([c678f32](https://github.com/CoCreate-app/CoCreate-admin/commit/c678f32a19b83796377520727392876a1b58f57b))
+* renamed hosts to host. the value can be a string or an array of strings ([62c9bf5](https://github.com/CoCreate-app/CoCreate-admin/commit/62c9bf536ac15ff639bd39e6714e7c69c7cba495))
+
 ## [1.32.4](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.32.3...v1.32.4) (2023-06-10)
 
 
