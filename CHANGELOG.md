@@ -1,3 +1,10 @@
+## [1.32.8](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.32.7...v1.32.8) (2023-06-11)
+
+
+### Bug Fixes
+
+* postintall error ([2eca90b](https://github.com/CoCreate-app/CoCreate-admin/commit/2eca90b8d29711dd9dadc26f235b8ce369d8eaa3))
+
 ## [1.32.7](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.32.6...v1.32.7) (2023-06-11)
 
 
