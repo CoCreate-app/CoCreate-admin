@@ -1,3 +1,10 @@
+## [1.32.13](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.32.12...v1.32.13) (2023-06-11)
+
+
+### Bug Fixes
+
+* testing workflow ([dcbbc1e](https://github.com/CoCreate-app/CoCreate-admin/commit/dcbbc1e077acdb30ba780833f4c74e6bea3376a8))
+
 ## [1.32.12](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.32.11...v1.32.12) (2023-06-11)
 
 
