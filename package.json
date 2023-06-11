@@ -41,7 +41,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "postinstall": "node $PWD/node_modules/@cocreate/cli/check-coc.js"
+    "postinstall": "node -e 'const fs = require(\"fs\"); const path = require(\"path\"); if (fs.existsSync(path.resolve(__dirname, \"node_modules/@cocreate/cli/check-coc.js\"))) { require(\"./node_modules/@cocreate/cli/check-coc.js\"); }'"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
