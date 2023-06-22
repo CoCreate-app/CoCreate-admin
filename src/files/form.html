@@ -338,11 +338,25 @@
                     </floating-label>
                 </div>
                 <div id="uploader" class="uploader" hidden>
-                    <div
-                        uploader="uppy"
-                        collection="files"
-                        document_id=""
-                        pass_id="form-fields"></div>
+                    <form>
+                        <input
+                            type="file"
+                            directory
+                            template_id="file-preview"
+                            collection="files" />
+
+                        <button actions="upload">upload</button>
+                    </form>
+
+                    <div template="file-preview">
+                        <input file="name" value="{{name}}" />
+                        <input file="directory" value="{{directory}}" />
+                        <input file="content-type" value="{{content-type}}" />
+
+                        <textarea file="src" value-type="string">
+                            {{src}}
+                        </textarea>
+                    </div>
                 </div>
                 <button
                     show=".uploader, .form-fields"

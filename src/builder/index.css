@@ -30,14 +30,6 @@ a {
     display: block
 }
 
-.uppy-Dashboard-inner {
-    background-color: whitesmoke!important;
-}
-
-.uppy-DashboardTab-btn {
-    justify-content: flex-start;
-}
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     opacity: 1;

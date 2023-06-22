@@ -42,10 +42,7 @@
             class="builder-tab-round"
             selected-value="active"
             selected-target="#uploader"
-            selected-group="left-panels"
-            toggle="uppy"
-            toggle-target="#uppy"
-            toggle-attribute="uploader">
+            selected-group="left-panels">
             <i
                 class="height:16px fill:#505050"
                 src="/assets/svg/cloud-upload-alt.svg"></i>
@@ -265,15 +262,23 @@
 
         <!-- uploader -->
         <div id="uploader" class="left-panel display:none">
-            <style>
-                .uppy-Dashboard-inner {
-                    background-color: whitesmoke !important;
-                }
-                .uppy-DashboardTab-btn {
-                    justify-content: flex-start;
-                }
-            </style>
-            <div id="uppy" uploader="uppy" collection="files"></div>
+            <form>
+                <input
+                    type="file"
+                    directory
+                    template_id="file-preview"
+                    collection="files" />
+
+                <button actions="upload">upload</button>
+            </form>
+
+            <div template="file-preview">
+                <input file="name" value="{{name}}" />
+                <input file="directory" value="{{directory}}" />
+                <input file="content-type" value="{{content-type}}" />
+
+                <textarea file="src" value-type="string">{{src}}</textarea>
+            </div>
         </div>
 
         <!-- Files -->
