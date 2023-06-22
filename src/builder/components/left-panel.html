@@ -5,11 +5,11 @@
             classname="builder-tab-round"
             class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover"
             selected-value="active"
-            selected-target="#vdom"
+            selected-selector="#vdom"
             selected-group="left-panels"
             toggle="#canvas"
-            toggle-target="#vdom"
-            toggle-attribute="vdom-target">
+            toggle-selector="#vdom"
+            toggle-attribute="vdom-selector">
             <i
                 class="height:20px fill:#505050"
                 src="/assets/svg/stream.svg"></i>
@@ -17,10 +17,10 @@
         <div
             class="builder-tab-round"
             selected-value="active"
-            selected-target="#assets"
+            selected-selector="#assets"
             selected-group="left-panels"
             toggle="files"
-            toggle-target="#fetch-assets"
+            toggle-selector="#fetch-assets"
             toggle-attribute="fetch-collection">
             <i
                 class="height:16px fill:#505050"
@@ -29,10 +29,10 @@
         <div
             class="builder-tab-round"
             selected-value="active"
-            selected-target="#files"
+            selected-selector="#files"
             selected-group="left-panels"
             toggle="files"
-            toggle-target=".fetch-files"
+            toggle-selector=".fetch-files"
             toggle-attribute="fetch-collection">
             <i
                 class="height:16px fill:#505050"
@@ -41,7 +41,7 @@
         <div
             class="builder-tab-round"
             selected-value="active"
-            selected-target="#uploader"
+            selected-selector="#uploader"
             selected-group="left-panels">
             <i
                 class="height:16px fill:#505050"
@@ -50,7 +50,7 @@
         <div
             class="builder-tab-round"
             selected-value="active"
-            selected-target="#blocks"
+            selected-selector="#blocks"
             selected-group="left-panels"
             selected>
             <i
@@ -69,7 +69,7 @@
                 <div
                     class="card background:gainsboro width:50% text-align:center padding:5px"
                     selected-value="active"
-                    selected-target="#elements"
+                    selected-selector="#elements"
                     selected-group="components"
                     selected>
                     Elements
@@ -77,7 +77,7 @@
                 <div
                     class="card background:gainsboro width:50% text-align:center padding:5px"
                     selected-value="active"
-                    selected-target="#components"
+                    selected-selector="#components"
                     selected-group="components"
                     selected>
                     Components
@@ -144,7 +144,7 @@
                             template="block{{tag._id}}"
                             class="card position:relative flex-grow:1 width:70px height:75px margin:5px padding:5px"
                             hover="display:block!important"
-                            hover-target="#editblock{{document._id}}"
+                            hover-selector="#editblock{{document._id}}"
                             document_id="{{document._id}}">
                             <div
                                 id="editblock{{document._id}}"
@@ -222,7 +222,7 @@
                             template="component{{tag._id}}"
                             class="card position:relative flex-grow:1 width:70px height:125px margin:5px padding:5px"
                             hover="display:block!important"
-                            hover-target="#editcomponents{{document._id}}">
+                            hover-selector="#editcomponents{{document._id}}">
                             <div
                                 id="editcomponents{{document._id}}"
                                 class="position:absolute top:8px right:8px font-size:11px display:none">
@@ -254,7 +254,7 @@
         <!-- Vdom -->
         <div
             id="vdom"
-            vdom-target=""
+            vdom-selector=""
             dnd-group-name="vdom"
             class="left-panel display:none">
             vdom
@@ -343,7 +343,7 @@
                             show="#directory{{$auto._id}}"
                             hide="#directory{{$auto._id}}"
                             toggle="fa-caret-down, fa-caret-right"
-                            toggle-target="#icon{{$auto._id}}">
+                            toggle-selector="#icon{{$auto._id}}">
                             <i
                                 id="icon{{$auto._id}}"
                                 class="fa fa-caret-right"></i>
@@ -448,7 +448,7 @@
                     template="assets"
                     class="card position:relative flex-grow:1 width:105px height:90px margin:5px padding:5px"
                     hover="display:block!important"
-                    hover-target="#editasstes{{document._id}}">
+                    hover-selector="#editasstes{{document._id}}">
                     <div
                         id="editassets{{document._id}}"
                         class="position:absolute top:8px right:8px font-size:11px display:none">
@@ -468,7 +468,7 @@
                         actions="attributes"
                         attribute="src"
                         value="{{document.path}}"
-                        attribute-target="iframe;">
+                        attribute-selector="iframe;">
                         <!-- image -->
                         <div
                             cloneable="true"

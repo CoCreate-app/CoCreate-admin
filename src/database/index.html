@@ -158,7 +158,7 @@
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a toggle="hidden" toogle-target="#column-visibility"
+                    <a toggle="hidden" toogle-selector="#column-visibility"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/eye.svg"></i
@@ -190,7 +190,7 @@
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a actions="copy" copy-target="tbody"
+                    <a actions="copy" copy-selector="tbody"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/copy.svg"></i
@@ -199,7 +199,7 @@
                 <li class="margin-right:15px">
                     <a
                         actions="print"
-                        print-target="tbody[template_id='collection-view']"
+                        print-selector="tbody[template_id='collection-view']"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/print.svg"></i
@@ -234,7 +234,7 @@
                     template_id=""
                     fetch-collection=""
                     fetch-document
-                    fetch-limit="5"
+                    filter-limit="5"
                     pass-refresh
                     pass_id="collection-view">
                     <tr
@@ -243,7 +243,7 @@
                         document_id="{{document._id}}"
                         toggle="selected"
                         hover="visibility:visible!important"
-                        hover-target=".tools{{document._id}}"
+                        hover-selector=".tools{{document._id}}"
                         id="testtemplate1">
                         <td
                             class="padding:5px min-width:300px align-items:center">
@@ -268,7 +268,7 @@
                                 render-key="one"
                                 render-exclude="db, database, collection"
                                 hover="visibility:visible!important"
-                                hover-target=".tools{{document._id}}{{one.key}}">
+                                hover-selector=".tools{{document._id}}{{one.key}}">
                                 <span
                                     class="visibility:hidden tools{{document._id}}{{one.key}}">
                                     <form
@@ -320,7 +320,7 @@
             </table>
             <div
                 template_id="collection-view"
-                fetch-type="scroll"
+                filter-on="scroll"
                 class="opacity:0 height:30px"></div>
 
             <button
@@ -340,7 +340,10 @@
                 </form>
             </button>
 
-            <template hidden observe-target=".string" observe-attribute="value">
+            <template
+                hidden
+                observe-selector=".string"
+                observe-attribute="value">
                 <floating-label render>
                     <textarea
                         rows="1"
@@ -353,7 +356,7 @@
 
             <template
                 hidden
-                observe-target=".object, .array"
+                observe-selector=".object, .array"
                 observe-attribute="value">
                 <div
                     render-object="document.$parents"
@@ -365,7 +368,7 @@
                         class="display:flex padding-top:10px"
                         id="testtemplate2"
                         hover="visibility:visible!important"
-                        hover-target="[tools='$parents{{$auto.key}}']">
+                        hover-selector="[tools='$parents{{$auto.key}}']">
                         <span
                             class="visibility:hidden tools$parents{{$auto.key}}"
                             tools="$parents{{$auto.key}}">
@@ -418,7 +421,7 @@
             id="menuL"
             class="position:absolute top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:275px width:0px@xs"
             resizable
-            resize-target="[content_id='content']"
+            resize-selector="[content_id='content']"
             resize-property="margin-left"
             resize-value="width">
             <!-- Search -->

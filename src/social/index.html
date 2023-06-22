@@ -174,7 +174,7 @@
             id="menuL"
             class="position:absolute top:0px left:0px background:whitesmoke height:100vh width:50px width:300px:hover width:0px@xs"
             resizable
-            resize-target="[content_id='content']"
+            resize-selector="[content_id='content']"
             resize-property="margin-left"
             resize-value="width">
             <!-- Search field -->
@@ -343,7 +343,7 @@
             <div
                 class="display:flex flex-wrap:wrap padding:20px"
                 fetch-collection="module_activities"
-                fetch-limit="12"
+                filter-limit="12"
                 filter-sort-name="name"
                 filter-sort-direction="asc"
                 template_id="filter_test"
@@ -369,7 +369,7 @@
                             class="position:absolute bottom:0 background:#ffffff width:100% padding:30px">
                             <div
                                 hover="height:100%"
-                                hover-target=".description">
+                                hover-selector=".description">
                                 <h1
                                     class="font-size:18px margin:0 padding:0_0_10px color:#333333 font-weight:700">
                                     City Lights in New York
@@ -414,7 +414,7 @@
             id="menuR"
             class="position:absolute top:0px right:0px direction:rtl overflow:hidden background:white height:100vh width:0px"
             resizable
-            resize-target="[content_id='content']"
+            resize-selector="[content_id='content']"
             resize-property="margin-right"
             resize-value="width">
             <div
