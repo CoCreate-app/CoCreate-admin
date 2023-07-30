@@ -21,7 +21,7 @@
             selected-group="left-panels"
             toggle="files"
             toggle-selector="#fetch-assets"
-            toggle-attribute="fetch-collection">
+            toggle-attribute="collection">
             <i
                 class="height:16px fill:#505050"
                 src="/assets/svg/photo-video.svg"></i>
@@ -33,7 +33,7 @@
             selected-group="left-panels"
             toggle="files"
             toggle-selector=".fetch-files"
-            toggle-attribute="fetch-collection">
+            toggle-attribute="collection">
             <i
                 class="height:16px fill:#505050"
                 src="/assets/svg/folder.svg"></i>
@@ -96,24 +96,27 @@
             </div>
 
             <!-- Block Categories -->
-            <!--<div template_id="block-categories" filter-name="type" filter-value="611829a9c0e9580010ea589d"></div>-->
+            <!--<div filter-parent="[collection]" filter-name="type" filter-value="611829a9c0e9580010ea589d"></div>-->
             <div
-                template_id="block-categories"
+                filter-next
                 filter-name="tags"
                 filter-value="6200378ea8b6b4001ae57821"
                 filter-operator="$ne"></div>
             <div
                 id="elements"
                 class="components display:none active"
-                template_id="block-categories"
-                fetch-collection="tags"
+                collection="tags"
                 filter-name="module_id"
                 filter-value="5ff747727005da1c27274194"
                 filter-sort-name="position"
                 filter-sort-direction="asc"
-                render_id="tag">
+                render-selector=":last-child">
                 <!-- Block Categories Template -->
-                <div template="block-categories" document_id="{{tag._id}}">
+                <div
+                    template
+                    render="document"
+                    render-as="tag"
+                    document_id="{{tag._id}}">
                     <div
                         class="padding:5px background:gainsboro"
                         show=".category{{tag._id}}"
@@ -133,15 +136,15 @@
                     <!-- Blocks  -->
                     <div
                         class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px"
-                        template_id="block{{tag._id}}"
-                        fetch-collection="blocks"
+                        collection="blocks"
                         filter-name="category"
                         filter-value="{{tag._id}}"
                         filter-sort-name="position"
-                        filter-sort-direction="asc">
+                        filter-sort-direction="asc"
+                        render-selector=":last-child">
                         <!-- Blocks Template -->
                         <div
-                            template="block{{tag._id}}"
+                            template
                             class="card position:relative flex-grow:1 width:70px height:75px margin:5px padding:5px"
                             hover="display:block!important"
                             hover-selector="#editblock{{document._id}}"
@@ -177,21 +180,20 @@
 
             <!-- Component Categories -->
             <div
-                template_id="component-categories"
+                filter-next
                 filter-name="tags"
                 filter-value="6200378ea8b6b4001ae57821"></div>
             <div
                 id="components"
                 class="components display:none"
-                template_id="component-categories"
-                fetch-collection="tags"
+                collection="tags"
                 filter-name="module_id"
                 filter-value="5ff747727005da1c27274194"
                 filter-sort-name="position"
                 filter-sort-direction="asc"
-                render_id="tag">
+                render-selector=":lastchild">
                 <!-- Components Categories Template -->
-                <div template="component-categories" document_id="{{tag._id}}">
+                <div template render-as="tag" document_id="{{tag._id}}">
                     <div
                         class="padding:5px background:gainsboro"
                         show=".category{{tag._id}}"
@@ -211,15 +213,15 @@
                     <!-- Components -->
                     <div
                         class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px"
-                        template_id="component{{tag._id}}"
-                        fetch-collection="blocks"
+                        collection="blocks"
                         filter-name="category"
                         filter-value="{{tag._id}}"
                         filter-sort-name="position"
-                        filter-sort-direction="asc">
+                        filter-sort-direction="asc"
+                        render-selector=":last-child">
                         <!-- Components Template -->
                         <div
-                            template="component{{tag._id}}"
+                            template
                             class="card position:relative flex-grow:1 width:70px height:125px margin:5px padding:5px"
                             hover="display:block!important"
                             hover-selector="#editcomponents{{document._id}}">
@@ -266,13 +268,13 @@
                 <input
                     type="file"
                     directory
-                    template_id="file-preview"
-                    collection="files" />
+                    collection="files"
+                    render-closest="#uploader, [template]" />
 
                 <button actions="upload">upload</button>
             </form>
 
-            <div template="file-preview">
+            <div template>
                 <input file="name" value="{{name}}" />
                 <input file="directory" value="{{directory}}" />
                 <input file="content-type" value="{{content-type}}" />
@@ -320,23 +322,23 @@
                     id="fetch-files"
                     class="fetch-files margin-left:10px"
                     sortable
-                    template_id="$auto"
-                    fetch-collection=""
-                    fetch-document
+                    collection
+                    document
                     filter-name="directory"
                     filter-value="/"
                     filter-operator="$eq"
                     filter-sort-name="name"
                     filter-sort-direction="asc"
-                    render_id="$auto">
+                    render-selector=":lastchild">
                     <div
-                        template_id="$auto"
+                        filter-parent
                         filter-name="content-type"
                         filter-value="text/directory"></div>
                     <!--Folder Template -->
                     <div
                         class="padding:5px"
-                        template="$auto"
+                        template
+                        render-as="$auto"
                         document_id="{{$auto._id}}">
                         <span
                             class=""
@@ -368,16 +370,14 @@
                 <div
                     class="fetch-files margin-left:10px"
                     sortable
-                    template_id="$auto"
-                    fetch-collection=""
-                    fetch-document
+                    collection
+                    document
                     filter-name="directory"
                     filter-value="/"
                     filter-operator="$eq"
-                    filter-sort-name="name"
-                    render_id="auto">
+                    filter-sort-name="name">
                     <div
-                        template_id="$auto"
+                        filter-parent
                         filter-name="content-type"
                         filter-value="text/directory"
                         filter-operator="$ne"></div>
@@ -385,7 +385,9 @@
                     <!-- File Template -->
                     <div
                         class="padding:5px"
-                        template="$auto"
+                        template
+                        render="document"
+                        render-as="$auto"
                         document_id="{{$auto._id}}">
                         <span class="{{$auto.content-type}}"
                             ><i
@@ -427,13 +429,13 @@
             <div
                 id="fetch-assets"
                 class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px"
-                template_id="assets"
-                fetch-collection=""
-                fetch-document
+                collection
+                document
                 filter-name="content-type"
                 filter-value="image, video"
                 filter-sort-name="path"
-                filter-sort-direction="asc">
+                filter-sort-direction="asc"
+                render-selector=":last-child">
                 <style>
                     [image-type*="image"] {
                         display: block !important;
@@ -445,7 +447,8 @@
                 </style>
                 <!-- Asset Template -->
                 <div
-                    template="assets"
+                    template
+                    render="document"
                     class="card position:relative flex-grow:1 width:105px height:90px margin:5px padding:5px"
                     hover="display:block!important"
                     hover-selector="#editasstes{{document._id}}">

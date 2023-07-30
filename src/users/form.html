@@ -184,15 +184,15 @@
                     sortable
                     class="floating-label"
                     multiple>
-                    <input placeholder="Search" template_id="connect" />
+                    <input
+                        placeholder="Search"
+                        filter-parent="collection"
+                        filter-search />
                     <ul
-                        fetch-collection="organizations"
-                        template_id="connectn"
+                        collection=".*"
+                        render-selector="[template]"
                         class="options overflow:auto">
-                        <li
-                            class="option"
-                            collection="organizations"
-                            template="connectn">
+                        <li class="option" collection="organizations" template>
                             <span class="logo-icon"
                                 ><img
                                     collection="organizations"
@@ -221,17 +221,14 @@
                     placeholder="Current Org"
                     sortable
                     class="floating-label">
-                    <input placeholder="Search" template_id="connect" />
+                    <input placeholder="Search" filter-next filter-search />
                     <ul
-                        fetch-collection="users"
-                        fetch-document=""
-                        fetch-name="connected_orgs"
-                        template_id="connect"
+                        collection="users"
+                        document=""
+                        name="connected_orgs"
+                        render-selector="[template]"
                         class="options overflow:auto">
-                        <li
-                            class="option"
-                            collection="organizations"
-                            template="connect">
+                        <li class="option" collection="organizations" template>
                             <span class="logo-icon"
                                 ><img
                                     collection="organizations"

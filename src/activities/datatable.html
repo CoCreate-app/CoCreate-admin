@@ -148,7 +148,6 @@
                         actions="deleteDocuments"
                         collection=""
                         pass_id="datatable"
-                        template_id=""
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/trash-alt.svg"></i
@@ -165,7 +164,7 @@
                     <a
                         actions="export"
                         export-type="csv"
-                        template_id=""
+                        export-selector=""
                         pass_id="datatable"
                         ><i
                             class="height:18px fill:#505050"
@@ -173,7 +172,7 @@
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a actions="export" template_id="" pass_id="datatable"
+                    <a actions="export" export-selector="" pass_id="datatable"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/file-download.svg"></i
@@ -194,9 +193,7 @@
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a
-                        actions="print"
-                        print-selector="tbody[template_id='datatable']"
+                    <a actions="print" print-closest="nav; parent; tbody"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/print.svg"></i
@@ -222,7 +219,7 @@
                                 type="text"
                                 class="floating-label"
                                 filter-name="_id"
-                                template_id=""
+                                filter-selector=""
                                 pass_id="datatable"
                                 placeholder="Name" />
                         </floating-label>
@@ -233,7 +230,7 @@
                                 filter-sort-direction="asc"
                                 click-value="desc, asc"
                                 click-attribute="filter-sort-direction"
-                                template_id=""
+                                filter-selector=""
                                 pass_id="datatable">
                                 <i
                                     toggle-attribute="src"
@@ -250,7 +247,7 @@
                                 type="text"
                                 class="floating-label"
                                 filter-name="_id"
-                                template_id="datatable"
+                                filter-closest="table; tbody"
                                 placeholder="Document_id" />
                         </floating-label>
                         <span
@@ -260,7 +257,7 @@
                                 filter-sort-direction=""
                                 click-value="desc, asc"
                                 click-attribute="filter-sort-direction"
-                                template_id=""
+                                filter-selector=""
                                 pass_id="datatable">
                                 <i
                                     toggle-attribute="src"
@@ -273,9 +270,9 @@
                 </tr>
 
                 <tbody
-                    template_id=""
-                    fetch-collection=""
-                    fetch-document
+                    render-selector=""
+                    collection=""
+                    document
                     filter-name=""
                     filter-value=""
                     filter-sort-name="name"
@@ -283,7 +280,7 @@
                     pass_id="datatable">
                     <tr
                         class="background:gainsboro:hover border-bottom:1px_solid_darkgray"
-                        template=""
+                        template
                         pass_id="datatable"
                         document_id="{{document._id}}"
                         toggle="selected">

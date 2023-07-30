@@ -231,14 +231,15 @@
                     placeholder="Module"
                     sortable
                     class="floating-label">
-                    <input placeholder="Search" template_id="module_id" />
+                    <input
+                        placeholder="Search"
+                        filter-parent="collection"
+                        filter-search />
                     <cc-options
-                        fetch-collection="modules"
-                        template_id="module_id"
+                        collection=".*"
+                        render-selector="[template]"
                         class="overflow:auto">
-                        <cc-option
-                            template="module_id"
-                            value="{{document._id}}">
+                        <cc-option template value="{{document._id}}">
                             <div class="display:flex padding:5px">
                                 <span
                                     class="width:25px"

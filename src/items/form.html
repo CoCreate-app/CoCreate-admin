@@ -203,11 +203,14 @@
                     sortable
                     class="floating-label"
                     multiple>
-                    <input placeholder="Search" template_id="idEngine1" />
+                    <input
+                        placeholder="Search"
+                        filter-parent="collection"
+                        filter-search />
                     <!-- Fetches and displays results using template -->
                     <ul
-                        fetch-collection="users"
-                        template_id="option1"
+                        collection=".*"
+                        render-selector="[template]"
                         class="options overflow:auto">
                         <!-- template -->
                         <li class="option template" id="option1">

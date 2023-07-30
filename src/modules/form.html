@@ -283,23 +283,25 @@
                                         value-type="object">
                                         <input
                                             placeholder="Search"
-                                            template_id="navbar-menu-primary" />
+                                            filter-parent="[render-selector]"
+                                            filter-search />
+
                                         <div
+                                            filter-parent="[render-selector]"
                                             filter-name="module_id"
                                             filter-value=""
-                                            filter-operator="$ne"
-                                            template_id="navbar-menu-primary"></div>
+                                            filter-operator="$ne"></div>
                                         <cc-options
                                             pass_id="module_id"
-                                            fetch-collection=""
-                                            fetch-document
+                                            collection=""
+                                            document
                                             filter-name="module_id"
                                             filter-value="{{module_id}}"
                                             filter-operator="$eq"
-                                            template_id="navbar-menu-primary"
+                                            render-selector="[template]"
                                             class="overflow:auto module_id">
                                             <cc-option
-                                                template="navbar-menu-primary"
+                                                template
                                                 value="{'_id':'{{document._id}}','name':'{{document.name}}','path':'{{document.path}}','parentDirectory':'{{document.parentDirectory}}'}"
                                                 document_id="{{document._id}}">
                                                 <span>{{document.path}}</span>
@@ -393,23 +395,24 @@
                                         value-type="object">
                                         <input
                                             placeholder="Search"
-                                            template_id="main-menu-primary" />
+                                            filter-parent="[render-selector]"
+                                            filter-search />
                                         <div
                                             filter-name="module_id"
                                             filter-value=""
                                             filter-operator="$ne"
-                                            template_id="main-menu-primary"></div>
+                                            filter-parent="[render-selector]"></div>
                                         <cc-options
                                             pass_id="module_id"
-                                            fetch-collection=""
-                                            fetch-document
+                                            collection=""
+                                            document
                                             filter-name="module_id"
                                             filter-value="{{module_id}}"
                                             filter-operator="$eq"
-                                            template_id="main-menu-primary"
+                                            render-selector="[template]"
                                             class="overflow:auto module_id">
                                             <cc-option
-                                                template="main-menu-primary"
+                                                template
                                                 value="{'_id':'{{document._id}}','name':'{{document.name}}','path':'{{document.path}}','parentDirectory':'{{document.parentDirectory}}'}"
                                                 document_id="{{document._id}}">
                                                 <span>{{document.path}}</span>
@@ -479,24 +482,25 @@
                                         value-type="object">
                                         <input
                                             placeholder="Search"
-                                            template_id="main-menu-secondary"
+                                            filter-parent="[render-selector]"
+                                            filter-search
                                             tags="true" />
                                         <div
                                             filter-name="module_id"
                                             filter-value=""
                                             filter-operator="$ne"
-                                            template_id="main-menu-secondary"></div>
+                                            filter-parent="[render-selector]"></div>
                                         <cc-options
                                             pass_id="module_id"
-                                            fetch-collection=""
-                                            fetch-document
+                                            collection=""
+                                            document
                                             filter-name="module_id"
                                             filter-value="{{module_id}}"
                                             filter-operator="$eq"
-                                            template_id="main-menu-secondary"
+                                            render-selector="[template]"
                                             class="overflow:auto module_id">
                                             <cc-option
-                                                template="main-menu-secondary"
+                                                template
                                                 value="{'_id':'{{document._id}}','name':'{{document.name}}','path':'{{document.path}}','parentDirectory':'{{document.parentDirectory}}'}"
                                                 document_id="{{document._id}}">
                                                 <span>{{document.path}}</span>
@@ -575,23 +579,24 @@
                                         value-type="object">
                                         <input
                                             placeholder="Search"
-                                            template_id="settings-menu-primary" />
+                                            filter-parent="[render-selector]"
+                                            filter-search />
                                         <div
                                             filter-name="module_id"
                                             filter-value=""
                                             filter-operator="$ne"
-                                            template_id="settings-menu-primary"></div>
+                                            filter-parent="[render-selector]"></div>
                                         <cc-options
                                             pass_id="module_id"
-                                            fetch-collection=""
-                                            fetch-document
+                                            collection=""
+                                            document
                                             filter-name="module_id"
                                             filter-value="{{module_id}}"
                                             filter-operator="$eq"
-                                            template_id="settings-menu-primary"
+                                            render-selector="[template]"
                                             class="overflow:auto module_id">
                                             <cc-option
-                                                template="settings-menu-primary"
+                                                template
                                                 value="{'_id':'{{document._id}}','name':'{{document.name}}','path':'{{document.path}}','parentDirectory':'{{document.parentDirectory}}'}"
                                                 document_id="{{document._id}}">
                                                 <span>{{document.path}}</span>
@@ -661,24 +666,25 @@
                                         value-type="object">
                                         <input
                                             placeholder="Search"
-                                            template_id="settings-menu-secondary"
+                                            filter-parent="[render-selector]"
+                                            filter-search
                                             tags="true" />
                                         <div
                                             filter-name="module_id"
                                             filter-value=""
                                             filter-operator="$ne"
-                                            template_id="settings-menu-secondary"></div>
+                                            filter-parent="[render-selector]"></div>
                                         <cc-options
                                             pass_id="module_id"
-                                            fetch-collection=""
-                                            fetch-document
+                                            collection=""
+                                            document
                                             filter-name="module_id"
                                             filter-value="{{module_id}}"
                                             filter-operator="$eq"
-                                            template_id="settings-menu-secondary"
+                                            render-selector="[template]"
                                             class="overflow:auto module_id">
                                             <cc-option
-                                                template="settings-menu-secondary"
+                                                template
                                                 value="{'_id':'{{document._id}}','name':'{{document.name}}','path':'{{document.path}}','parentDirectory':'{{document.parentDirectory}}'}"
                                                 document_id="{{document._id}}">
                                                 <span>{{document.path}}</span>
@@ -759,21 +765,21 @@
                     filter-name="module_id"
                     filter-value=""
                     filter-operator="$ne"
-                    template_id="files" />
+                    filter-next />
                 <div
-                    fetch-collection="files"
+                    collection="files"
                     filter-name="module_id"
                     filter-value="{{module_id}}"
                     filter-operator="$eq"
                     filter-sort-name="name"
                     filter-sort-direction="asc"
-                    template_id="files"
+                    render-selector="[template]"
                     pass_id="module_id"
                     sortable
                     class="background:whitesmoke padding:10px module_id"
                     dnd-group-name="files">
                     <div
-                        template="files"
+                        template
                         class="card padding:10px_5px background:white collapsed margin-bottom:10px"
                         document_id="{{document._id}}"
                         id="module-view{{document._id}}">
@@ -809,7 +815,7 @@
                                 document_id="{{document._id}}"
                                 name="module_id" />
                             <a
-                                actions="deleteDocument"
+                                actions="deletedocument="
                                 collection="{{document.collection}}"
                                 document_id="{{document._id}}"
                                 class="float:right padding:5px">
@@ -857,22 +863,22 @@
                         hide="#module-templates"></i>
                 </div>
                 <div
-                    template_id="module-templates"
                     filter-name="tags"
                     filter-value="template"
-                    filter-operator="$eq"></div>
+                    filter-operator="$eq"
+                    filter-next></div>
                 <div
                     class="display:flex flex-wrap:wrap"
-                    fetch-collection=""
-                    fetch-document
+                    collection=""
+                    document
                     pass-refresh="true"
                     filter-sort-name="name"
                     filter-sort-direction="asc"
-                    template_id="module-templates"
+                    render-selector="[template]"
                     pass_id="module-templates">
                     <div
-                        class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover"
-                        template_id="module-templates">
+                        class="card min-width:250px flex-grow:1 margin:10px box-shadow-hover"
+                        template>
                         <div class="position:relative">
                             <img
                                 collection="{{document.collection}}"

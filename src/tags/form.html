@@ -173,14 +173,17 @@
                     placeholder="Type"
                     sortable
                     class="floating-label">
-                    <input placeholder="Search" template_id="type" />
+                    <input
+                        placeholder="Search"
+                        filter-parent="collection"
+                        filter-search />
                     <cc-options
-                        fetch-collection="tags"
-                        template_id="type"
+                        collection=".*"
+                        render-selector="[template]"
                         filter-name="module_id"
                         filter-value="60eb8361b979b4001744b339"
                         class="overflow:auto">
-                        <cc-option template="type" value="{{document._id}}">
+                        <cc-option template>
                             <h4>{{document.name}}</h4>
                         </cc-option>
                     </cc-options>
@@ -192,15 +195,13 @@
                     class="floating-label"
                     input-selector="#tags"
                     input-attribute="filter-value">
-                    <input placeholder="Search" template_id="module_id" />
+                    <input placeholder="Search" filter-next filter-search />
                     <cc-options
-                        fetch-collection="modules"
+                        collection="modules"
                         filter-sort-name="name"
-                        template_id="module_id"
+                        render-selector="[template]"
                         class="overflow:auto">
-                        <cc-option
-                            template="module_id"
-                            value="{{document._id}}">
+                        <cc-option template value="{{document._id}}">
                             <div class="display:flex padding:5px">
                                 <span
                                     class="width:25px"
@@ -218,15 +219,18 @@
                     sortable
                     class="floating-label"
                     multiple>
-                    <input placeholder="Search" template_id="tags" />
+                    <input
+                        placeholder="Search"
+                        filter-parent="collection"
+                        filter-search />
                     <cc-options
                         id="tags"
-                        fetch-collection="tags"
-                        template_id="tags"
+                        collection=".*"
+                        render-selector="[template]"
                         filter-name="module_id"
                         filter-value=""
                         class="overflow:auto">
-                        <cc-option template="tags" value="{{document._id}}">
+                        <cc-option template>
                             <h3
                                 collection="{{document.collection}}"
                                 document_id="{{document._id}}"

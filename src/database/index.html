@@ -151,7 +151,7 @@
                         actions="deleteDocuments"
                         collection=""
                         pass_id="collection-view"
-                        template_id=""
+                        filter-selector="#collection-view"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/trash-alt.svg"></i
@@ -168,7 +168,7 @@
                     <a
                         actions="export"
                         export-type="csv"
-                        template_id=""
+                        filter-selector="#collection-view"
                         pass_id="collection-view"
                         ><i
                             class="height:18px fill:#505050"
@@ -176,7 +176,10 @@
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a actions="export" template_id="" pass_id="collection-view"
+                    <a
+                        actions="export"
+                        filter-selector="#collection-view"
+                        pass_id="collection-view"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/file-download.svg"></i
@@ -199,7 +202,7 @@
                 <li class="margin-right:15px">
                     <a
                         actions="print"
-                        print-selector="tbody[template_id='collection-view']"
+                        print-selector="[template_id='#collection-view']"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/print.svg"></i
@@ -224,27 +227,26 @@
                             <input
                                 type="text"
                                 class="floating-label"
-                                template_id="collection-view"
+                                filter-selector="#collection-view"
                                 filter-search
                                 placeholder="Search" />
                         </floating-label>
                     </td>
                 </tr>
                 <tbody
-                    template_id=""
-                    fetch-collection=""
-                    fetch-document
+                    id="collection-view"
+                    render-selector="[template='collection-view']"
+                    collection=""
                     filter-limit="5"
                     pass-refresh
                     pass_id="collection-view">
                     <tr
-                        template="collection-view"
+                        template
                         class="background:whitesmoke:hover border-bottom:1px_solid_darkgray"
                         document_id="{{document._id}}"
                         toggle="selected"
                         hover="visibility:visible!important"
-                        hover-selector=".tools{{document._id}}"
-                        id="testtemplate1">
+                        hover-selector=".tools{{document._id}}">
                         <td
                             class="padding:5px min-width:300px align-items:center">
                             <div
@@ -253,7 +255,7 @@
                                     class="visibility:hidden tools{{document._id}}">
                                     <a
                                         class="float:right margin-right:15px"
-                                        actions="deleteDocument"
+                                        actions="deletedocument="
                                         collection="{{document.collection}}"
                                         document_id=""
                                         ><i
@@ -264,8 +266,8 @@
                             </div>
                             <div
                                 class="template display:flex"
-                                render="document"
-                                render-key="one"
+                                render="document="
+                                render-as="one"
                                 render-exclude="db, database, collection"
                                 hover="visibility:visible!important"
                                 hover-selector=".tools{{document._id}}{{one.key}}">
@@ -319,7 +321,7 @@
                 </tbody>
             </table>
             <div
-                template_id="collection-view"
+                filter-selector="#collection-view"
                 filter-on="scroll"
                 class="opacity:0 height:30px"></div>
 
@@ -361,7 +363,7 @@
                 <div
                     render="document.$parents"
                     render-exclude="db, database, collection"
-                    render-key="$auto"
+                    render-as="$auto"
                     class="template margin-top:20px">
                     <div
                         class="display:flex padding-top:10px"
@@ -431,7 +433,7 @@
                         class="floating-label"
                         name="collection"
                         filter-name="name"
-                        template_id="collections" />
+                        filter-selector="#collections" />
                 </floating-label>
                 <span
                     class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">
@@ -448,13 +450,15 @@
                 <ul
                     class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_90px) bottom:10px margin-right:5px">
                     <div
-                        fetch-collection
+                        id="collections"
+                        collection
                         filter-sort-name="name"
                         filter-sort-direction="asc"
-                        template_id="collections">
+                        render-selector="[template='collections']"
+                        filter>
                         <!-- Template -->
                         <li
-                            template="collections"
+                            template
                             class="line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover"
                             hover="active">
                             <a
@@ -484,13 +488,13 @@
 
         <div class="position:fixed!important bottom:15px right:15px">
             <div
-                template="notification"
+                template
                 class="card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
                 <span class="{{type}}">{{message}}</span
                 ><a actions="remove" remove-closest="[templateid]"> X</a>
             </div>
         </div>
 
-        <script src="https://cdn.cocreate.app/1.57.17/CoCreate.min.js"></script>
+        <script src="../../../CoCreateJS/dist/CoCreate.js"></script>
     </body>
 </html>

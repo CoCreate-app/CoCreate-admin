@@ -169,22 +169,21 @@
 
             <div id="board" class="display:flex overflow:auto height:90vh">
                 <div
-                    fetch-collection="xsw2"
-                    fetch-document
+                    collection="xsw2"
+                    document
                     filter-name=""
                     filter-value=""
                     filter-operator="$eq"
                     filter-sort-name="position"
-                    template_id="column"
-                    render_id="column"
-                    class="display:flex flex-wrap:nowrap flex-direction:row"
                     sortable
                     dnd-group-name="column"
                     droppable="true"
-                    pass_id="column">
+                    pass_id="column"
+                    render-selector=":last-child"
+                    class="display:flex flex-wrap:nowrap flex-direction:row">
                     <!-- Column -->
                     <div
-                        template="column"
+                        template
                         document_id="{{column._id}}"
                         class="width:300px margin:10px background:whitesmoke">
                         <div class="margin:15px font-size:18px color-dark-gray">
@@ -197,7 +196,7 @@
                             </span>
                             <span class="float:right display:inline-block">
                                 <a
-                                    actions="deleteDocument"
+                                    actions="deletedocument="
                                     collection="{{column.collection}}"
                                     document_id="{{column._id}}"
                                     ><i
@@ -208,21 +207,21 @@
                         </div>
                         <div class="height:70vh padding:10px overflow:auto">
                             <div
-                                fetch-collection=""
+                                collection=""
                                 filter-name=""
                                 filter-value="{{column._id}}"
                                 filter-operator="$eq"
                                 filter-sort-name="position"
                                 filter-sort-direction="asc"
-                                template_id="{{column._id}}"
-                                class="display:flex flex-direction:column height:100%"
                                 sortable
                                 dnd-group-name="card"
-                                pass_id="card">
+                                pass_id="card"
+                                render-selector=":last-child"
+                                class="display:flex flex-direction:column height:100%">
                                 <!-- Card -->
                                 <div
                                     class="card margin-bottom:10px padding:10px background:white"
-                                    template="{{column._id}}"
+                                    template
                                     value="{{document._id}}"
                                     document_id="{{document._id}}">
                                     <div class="width:100%">

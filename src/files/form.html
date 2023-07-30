@@ -173,19 +173,20 @@
                             multiple>
                             <input
                                 placeholder="Search"
-                                template_id="domains"
+                                render-parent="[collection]"
+                                render-search
                                 tags="true" />
                             <cc-options
-                                fetch-collection="organizations"
-                                fetch-name="domains"
+                                collection="organizations"
+                                name="domains"
                                 filter-name="_id"
                                 filter-value="5ff747727005da1c272740ab"
                                 filter-operator="$eq"
-                                template_id="domains"
+                                render-selector="[template]"
                                 class="overflow:auto">
                                 <cc-option
                                     class="display:flex"
-                                    template="domains"
+                                    template
                                     value="{{domains}}">
                                     <h4>{{domains}}</h4>
                                 </cc-option>
@@ -226,21 +227,24 @@
                             sortable
                             class="floating-label"
                             multiple>
-                            <input placeholder="Search" template_id="tags" />
+                            <input
+                                placeholder="Search"
+                                filter-parent="collection"
+                                filter-search />
                             <div
-                                template_id="datatable"
+                                filter-next
                                 filter-name="type"
                                 filter-value="type"></div>
                             <cc-options
-                                fetch-collection="tags"
+                                collection="tags"
                                 filter-name="module_id"
                                 filter-value="5ff747727005da1c2727419a"
                                 pass_id="module_id"
-                                template_id="tags"
+                                render-selector="[template]"
                                 class="overflow:auto">
                                 <cc-option
                                     class="display:flex"
-                                    template="tags"
+                                    template
                                     value="{{document._id}}">
                                     <h4>{{document.name}}</h4>
                                 </cc-option>
@@ -282,15 +286,14 @@
                             multiple>
                             <input
                                 placeholder="Search"
-                                template_id="module_id" />
+                                render-parent="[collection]"
+                                render-search />
                             <cc-options
-                                fetch-collection="modules"
+                                collection="modules"
                                 filter-sort-name="name"
-                                template_id="module_id"
+                                render-selector="[template]"
                                 class="overflow:auto">
-                                <cc-option
-                                    template="module_id"
-                                    value="{{document._id}}">
+                                <cc-option template value="{{document._id}}">
                                     <div class="display:flex padding:5px">
                                         <span class="width:25px"
                                             >{{document.icon}}</span
@@ -312,17 +315,16 @@
                             class="floating-label">
                             <input
                                 placeholder="Search"
-                                template_id="website_id" />
+                                render-parent="[collection]"
+                                render-search />
                             <cc-options
-                                fetch-collection="module_activities"
+                                collection="module_activities"
                                 filter-name="module_id"
                                 filter-value="5ff747727005da1c27274185"
                                 filter-sort-name="name"
-                                template_id="website_id"
+                                render-selector="[template]"
                                 class="overflow:auto">
-                                <cc-option
-                                    template="website_id"
-                                    value="{{document._id}}">
+                                <cc-option template value="{{document._id}}">
                                     <div class="display:flex padding:5px">
                                         <span class="width:25px"
                                             >{{document.icon}}</span
@@ -342,13 +344,13 @@
                         <input
                             type="file"
                             directory
-                            template_id="file-preview"
+                            render-closest="#uploader; [template]"
                             collection="files" />
 
                         <button actions="upload">upload</button>
                     </form>
 
-                    <div template="file-preview">
+                    <div template>
                         <input file="name" value="{{name}}" />
                         <input file="directory" value="{{directory}}" />
                         <input file="content-type" value="{{content-type}}" />

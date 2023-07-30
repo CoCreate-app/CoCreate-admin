@@ -172,20 +172,20 @@
                                 placeholder="Type">
                                 <input
                                     placeholder="Search"
-                                    template_id="type" />
+                                    filter-parent="[collection]" />
                                 <div
-                                    template_id="type"
+                                    filter-parent="[collection]"
                                     filter-name="type"
                                     filter-value="60edaf79b979b4001744c6fe"></div>
                                 <cc-options
-                                    fetch-collection="tags"
+                                    collection="tags"
                                     pass_id="module_id"
                                     filter-name="module_id"
                                     filter-value=""
-                                    template_id="type"
+                                    render-selector=":last-child"
                                     class="overflow:auto">
                                     <cc-option
-                                        template="type"
+                                        template
                                         value="{{document._id}}">
                                         <h4>{{document.name}}</h4>
                                     </cc-option>
@@ -202,20 +202,20 @@
                                 placeholder="Status">
                                 <input
                                     placeholder="Search"
-                                    template_id="status" />
+                                    filter-parent="[collection]" />
                                 <div
-                                    template_id="status"
+                                    filter-next
                                     filter-name="type"
                                     filter-value="5ff747727005da1c272740ab"></div>
                                 <cc-options
-                                    fetch-collection="tags"
+                                    collection="tags"
                                     pass_id="module_id"
                                     filter-name="module_id"
                                     filter-value=""
-                                    template_id="status"
+                                    render-selector="[template]"
                                     class="overflow:auto">
                                     <cc-option
-                                        template="status"
+                                        template
                                         value="{{document._id}}">
                                         <h4>{{document.name}}</h4>
                                     </cc-option>

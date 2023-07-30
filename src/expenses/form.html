@@ -203,16 +203,20 @@
                     sortable
                     class="floating-label"
                     multiple>
-                    <input placeholder="Search" template_id="contact" />
+                    <input
+                        placeholder="Search"
+                        filter-parent="collection"
+                        filter-search />
                     <!-- Fetches and displays results using template -->
                     <cc-options
-                        fetch-collection="users"
-                        template_id="contact"
+                        collection=".*"
+                        render-selector="[template]"
                         class="overflow:auto">
                         <!-- template -->
                         <cc-option
-                            class="option template"
-                            template_id="contact">
+                            class="option"
+                            render-selector="[template]"
+                            template>
                             <h3
                                 collection="users"
                                 document_id="{{document._id}}"
@@ -234,16 +238,17 @@
                     sortable
                     class="floating-label"
                     multiple>
-                    <input placeholder="Search" template_id="company" />
+                    <input
+                        placeholder="Search"
+                        filter-parent="collection"
+                        filter-search />
                     <!-- Fetches and displays results using template -->
                     <cc-options
-                        fetch-collection="users"
-                        template_id="company"
+                        collection=".*"
+                        render-selector="[template]"
                         class="overflow:auto">
                         <!-- template -->
-                        <cc-option
-                            class="option template"
-                            template_id="company">
+                        <cc-option class="option" render-selector="[template]">
                             <h3
                                 collection="users"
                                 document_id="{{document._id}}"
@@ -265,16 +270,17 @@
                     sortable
                     class="floating-label"
                     multiple>
-                    <input placeholder="Search" template_id="related_to" />
+                    <input
+                        placeholder="Search"
+                        filter-parent="collection"
+                        filter-search />
                     <!-- Fetches and displays results using template -->
                     <cc-options
-                        fetch-collection="users"
-                        template_id="related_to"
+                        collection=".*"
+                        render-selector="[template]"
                         class="overflow:auto">
                         <!-- template -->
-                        <cc-option
-                            class="option template"
-                            template_id="related_to">
+                        <cc-option class="option" render-selector="[template]">
                             <h3
                                 collection="users"
                                 document_id="{{document._id}}"

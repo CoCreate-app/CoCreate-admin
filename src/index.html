@@ -126,16 +126,16 @@
 
                 <div
                     class="display:inline-flex"
-                    fetch-collection="modules"
-                    fetch-document
+                    collection="modules"
+                    document
                     filter-sort-name="navbar-menu-position"
                     filter-sort-direction="asc"
                     filter-name="navbar-menu-position"
                     filter-value="0"
                     filter-value-type="number"
                     filter-operator="$ne"
-                    template_id="navbar-menu">
-                    <li class="margin-right:15px" template="navbar-menu">
+                    render-selector="[template]">
+                    <li class="margin-right:15px" template>
                         <a
                             actions="pass, openModal"
                             modal-src="{{document.navbar-menu-primary.parentDirectory}}/{{document.navbar-menu-primary.name}}"
@@ -249,21 +249,18 @@
                 name="current_org"
                 collection="users"
                 document_id="{{userId}}">
-                <input
-                    placeholder="Search"
-                    filter-search
-                    template_id="connected_orgs" />
+                <input placeholder="Search" filter-search filter-next />
                 <cc-options
                     class="options overflow:auto"
-                    fetch-collection="users"
-                    fetch-name="connected_orgs"
+                    collection="users"
+                    name="connected_orgs"
                     filter-name="_id"
                     filter-value="{{userId}}"
                     filter-operator="$eq"
-                    template_id="connected_orgs">
+                    render-selector="[template]">
                     <cc-option
                         class="display:flex height:50px margin:0!important padding:4px_12px!important"
-                        template="connected_orgs"
+                        template
                         value="{{connected_orgs}}">
                         <span class="logo-icon"
                             ><img
@@ -324,18 +321,18 @@
                 <ul
                     class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_165px) bottom:10px margin-right:5px">
                     <div
-                        fetch-collection="modules"
+                        collection="modules"
                         filter-sort-name="main-menu-position"
                         filter-sort-direction="asc"
                         filter-name="main-menu-position"
                         filter-value="0"
                         filter-value-type="number"
                         filter-operator="$ne"
-                        template_id="main-menu">
+                        render-selector="[template]">
                         <!-- Template -->
                         <li
                             class="line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover"
-                            template="main-menu">
+                            template>
                             <a
                                 actions="pass, openModal"
                                 modal-src="{{document.main-menu-primary.parentDirectory}}/{{document.main-menu-primary.name}}"
@@ -444,7 +441,7 @@
                             src="/assets/svg/project-diagram.svg"></i>
                         <div
                             pass-template="$uid"
-                            pass-fetch-collection="modules"
+                            pass-collection="modules"
                             pass_to="datatable"></div>
                         <div
                             pass-collection="files"
@@ -475,7 +472,7 @@
                             src="/assets/svg/shapes.svg"></i>
                         <div
                             pass-template="$uid"
-                            pass-fetch-collection="files"
+                            pass-collection="files"
                             pass_to="datatable"></div>
                         <div
                             pass-collection="files"
@@ -506,7 +503,7 @@
                             src="/assets/svg/folder.svg"></i>
                         <div
                             pass-template="$uid"
-                            pass-fetch-collection="files"
+                            pass-collection="files"
                             pass_to="datatable"></div>
                         <div
                             pass-collection="files"
@@ -543,7 +540,7 @@
             <button actions="install" type="button" hidden>Install</button>
 
             <div
-                template="notification"
+                template
                 class="card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
                 <span class="{{type}}">{{message}}</span
                 ><a actions="remove" remove-closest="[templateid]"> X</a>

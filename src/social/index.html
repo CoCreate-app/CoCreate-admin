@@ -200,23 +200,21 @@
                 </form>
             </div>
 
-            <!--<input type="hidden" template_id="main-menu" filter-name="menu-position" filter-value="3,4" filter-value-type="number" filter-operator="nin">-->
-            <!--<div template_id="main-menu" filter-name="menu-position" filter-value="0" filter-value-type="number" filter-operator="ne"></div>-->
             <div class="padding-right:5px padding-bottom:5px">
                 <ul
                     class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
                     <div
-                        fetch-collection="modules"
+                        collection="modules"
                         filter-sort-name="main-menu-position"
                         filter-sort-direction="asc"
                         filter-name="main-menu-position"
                         filter-value="0"
                         filter-value-type="number"
                         filter-operator="$ne"
-                        template_id="main-menu">
+                        render-selector="[template]">
                         <li
                             class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover"
-                            template="main-menu">
+                            template>
                             <a
                                 actions="pass, openModal"
                                 pass-collection="files"
@@ -342,15 +340,15 @@
         <main content_id="content" class="height:100vh">
             <div
                 class="display:flex flex-wrap:wrap padding:20px"
-                fetch-collection="module_activities"
+                collection="module_activities"
                 filter-limit="12"
                 filter-sort-name="name"
                 filter-sort-direction="asc"
-                template_id="filter_test"
-                operator="or">
+                operator="or"
+                render-selector="[template]">
                 <div
                     class="card position:relative flex-grow:1 margin:10px background:#ffffff height:470px width:250px max-width:350px"
-                    template="filter_test">
+                    template>
                     <div class="height:400px overflow:hidden">
                         <div
                             class="position:absolute top:0px right:0px width:30px height:30px background:#3b5998 color:#ffffff font-weight:700 text-align:center opacity:0.7">

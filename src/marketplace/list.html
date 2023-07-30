@@ -173,15 +173,15 @@
             <!-- Fetch and Render Product list -->
             <div
                 class="display:flex flex-wrap:wrap"
-                fetch-collection="blocks"
+                collection="blocks"
                 filter-limit="12"
                 filter-sort-name="name"
                 filter-sort-direction="asc"
-                template_id="filter_test">
+                render-selector="[template]">
                 <!-- Product Template -->
                 <div
                     class="card template margin:10px flex-grow:1 width:250px"
-                    template_id="filter_test">
+                    template>
                     <!-- Product Image  -->
                     <div class="position:relative">
                         <img
@@ -262,7 +262,7 @@
                 </div>
 
                 <div
-                    template_id="filter_test"
+                    filter-parent
                     filter-on="scroll"
                     class="opacity:0 height:30px"></div>
             </div>

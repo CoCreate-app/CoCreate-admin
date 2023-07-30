@@ -197,18 +197,21 @@
                     class="floating-label"
                     name="home"
                     placeholder="Home Page">
-                    <input placeholder="Search" template_id="home" />
+                    <input
+                        placeholder="Search"
+                        filter-parent="collection"
+                        filter-search />
                     <cc-options
-                        fetch-collection=""
-                        fetch-document
+                        collection=""
+                        document
                         filter-name=""
                         filter-value=""
                         filter-sort-name="name"
                         filter-sort-direction="asc"
-                        template_id="home"
+                        render-selector="[template]"
                         pass_id="website_id"
                         class="overflow:auto">
-                        <cc-option template="home" value="{{document._id}}">
+                        <cc-option template>
                             <h3
                                 collection="{{document.collection}}"
                                 document_id="{{document._id}}"
@@ -240,22 +243,22 @@
                             src="/assets/svg/plus-square.svg"></i
                     ></a>
                 </div>
-                <!--<input type="hidden" filter-name="module-view" filter-value="module-view" template_id="module-views">-->
+                <!--<input type="hidden" filter-name="module-view" filter-value="module-view" render-next>-->
                 <div
-                    fetch-collection=""
-                    fetch-document
+                    collection=""
+                    document
                     filter-name=""
                     filter-value=""
                     filter-operator="$eq"
                     filter-sort-name="name"
                     filter-sort-direction="asc"
-                    template_id="website-pages"
+                    render-selector="[template]"
                     pass_id="website_id"
                     sortable
                     class="background:whitesmoke padding:10px"
                     dnd-group-name="website-pages">
                     <div
-                        template="website-pages"
+                        template
                         class="card padding:10px_5px background:white collapsed margin-bottom:10px"
                         document_id="{{document._id}}"
                         id="module-view{{document._id}}">
@@ -289,7 +292,7 @@
                             </a>
 
                             <a
-                                actions="deleteDocument"
+                                actions="deletedocument="
                                 collection="{{document.collection}}"
                                 document_id="{{document._id}}"
                                 class="float:right padding:5px">
@@ -332,22 +335,22 @@
             <!-- Website Page templates -->
             <div hidden id="page-templates">
                 <div
-                    template_id="module-templates"
                     filter-name="tags"
                     filter-value="template"
-                    filter-operator="$eq"></div>
+                    filter-operator="$eq"
+                    filter-next></div>
                 <div
                     class="display:flex flex-wrap:wrap"
-                    fetch-collection=""
-                    fetch-document
+                    collection=""
+                    document
                     pass-refresh="true"
                     filter-sort-name="name"
                     filter-sort-direction="asc"
-                    template_id="module-templates"
+                    render-selector="[template]"
                     pass_id="page-templates">
                     <div
-                        class="card template min-width:250px flex-grow:1 margin:10px box-shadow-hover"
-                        template_id="module-templates">
+                        class="card min-width:250px flex-grow:1 margin:10px box-shadow-hover"
+                        template>
                         <div class="position:relative">
                             <img
                                 collection="{{document.collection}}"

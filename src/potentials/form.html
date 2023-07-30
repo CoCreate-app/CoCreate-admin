@@ -165,21 +165,22 @@
                             document_id=""
                             multiple
                             placeholder="Stage">
-                            <input placeholder="Search" template_id="stage" />
+                            <input
+                                placeholder="Search"
+                                filter-parent="collection"
+                                filter-search />
                             <div
-                                template_id="stage"
                                 filter-name="stage"
-                                filter-value="5ff747727005da1c272740ab"></div>
+                                filter-value="5ff747727005da1c272740ab"
+                                filter-next></div>
                             <cc-options
-                                fetch-collection="tags"
+                                collection="tags"
                                 pass_id="module_id"
                                 filter-name="module_id"
                                 filter-value=""
-                                template_id="stage"
+                                render-selector="[template]"
                                 class="overflow:auto">
-                                <cc-option
-                                    template="stage"
-                                    value="{{document._id}}">
+                                <cc-option template value="{{document._id}}">
                                     <h4>{{document.name}}</h4>
                                 </cc-option>
                             </cc-options>
@@ -192,21 +193,22 @@
                             name="status"
                             document_id="status"
                             placeholder="Status">
-                            <input placeholder="Search" template_id="status" />
+                            <input
+                                placeholder="Search"
+                                filter-parent="collection"
+                                filter-search />
                             <div
-                                template_id="status"
+                                filter-next
                                 filter-name="type"
                                 filter-value="5ff747727005da1c272740ab"></div>
                             <cc-options
-                                fetch-collection="tags"
+                                collection="tags"
                                 pass_id="module_id"
                                 filter-name="module_id"
                                 filter-value=""
-                                template_id="status"
+                                render-selector="[template]"
                                 class="overflow:auto">
-                                <cc-option
-                                    template="status"
-                                    value="{{document._id}}">
+                                <cc-option template value="{{document._id}}">
                                     <h4>{{document.name}}</h4>
                                 </cc-option>
                             </cc-options>

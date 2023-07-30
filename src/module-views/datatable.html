@@ -144,11 +144,7 @@
 
                 <!-- Datatable Controls -->
                 <li class="margin-right:15px">
-                    <a
-                        actions="deleteDocuments"
-                        collection="files"
-                        template_id=""
-                        pass_id="datatable"
+                    <a actions="deleteDocuments" collection="files"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/trash-alt.svg"></i
@@ -164,8 +160,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="export"
+                        export-selector=""
                         export-type="csv"
-                        template_id=""
                         pass_id="datatable"
                         ><i
                             class="height:18px fill:#505050"
@@ -173,7 +169,7 @@
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a actions="export" template_id="" pass_id="datatable"
+                    <a actions="export" export-selector="" pass_id="datatable"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/file-download.svg"></i
@@ -194,9 +190,7 @@
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a
-                        actions="print"
-                        print-selector="tbody[template_id='datatable']"
+                    <a actions="print" print-closest="nav; parent; tbody"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/print.svg"></i
@@ -222,7 +216,7 @@
                                 type="text"
                                 class="floating-label"
                                 filter-name="_id"
-                                template_id=""
+                                filter-selector=""
                                 pass_id="datatable"
                                 placeholder="View Name" />
                         </floating-label>
@@ -233,7 +227,7 @@
                                 filter-sort-direction="asc"
                                 click-value="desc, asc"
                                 click-attribute="filter-sort-direction"
-                                template_id=""
+                                filter-selector=""
                                 pass_id="datatable">
                                 <i
                                     toggle-attribute="src"
@@ -250,7 +244,7 @@
                                 type="text"
                                 class="floating-label"
                                 filter-name="_id"
-                                template_id="datatable"
+                                filter-closest="table; [collection]"
                                 placeholder="Document Id" />
                         </floating-label>
                         <span
@@ -260,7 +254,7 @@
                                 filter-sort-direction="asc"
                                 click-value="desc, asc"
                                 click-attribute="filter-sort-direction"
-                                template_id=""
+                                filter-selector=""
                                 pass_id="datatable">
                                 <i
                                     toggle-attribute="src"
@@ -273,17 +267,17 @@
                 </tr>
 
                 <div
-                    template_id="datatable"
+                    filter-next
                     filter-name="tags"
                     filter-value="60ec69d7b979b4001744bbc8"></div>
                 <tbody
-                    template_id="datatable"
-                    fetch-collection="files"
+                    render-selector="[template]"
+                    collection="files"
                     filter-sort-name="name"
                     filter-sort-direction="asc">
                     <tr
                         class="background:gainsboro:hover border-bottom:1px_solid_darkgray"
-                        template=""
+                        template
                         pass_id="datatable"
                         document_id="{{document._id}}"
                         toggle="selected">

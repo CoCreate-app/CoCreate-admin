@@ -138,11 +138,7 @@
 
                 <!-- Datatable Controls -->
                 <li class="margin-right:15px">
-                    <a
-                        actions="deleteDocuments"
-                        collection=""
-                        pass_id="datatable"
-                        template_id=""
+                    <a actions="deleteDocuments" collection=""
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/trash-alt.svg"></i
@@ -158,8 +154,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="export"
+                        export-selector=""
                         export-type="csv"
-                        template_id=""
                         pass_id="datatable"
                         ><i
                             class="height:18px fill:#505050"
@@ -167,7 +163,7 @@
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a actions="export" template_id="" pass_id="datatable"
+                    <a actions="export" export-selector="" pass_id="datatable"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/file-download.svg"></i
@@ -188,9 +184,7 @@
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a
-                        actions="print"
-                        print-selector="tbody[template_id='datatable']"
+                    <a actions="print" print-closest="nav; parent; tbody"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/print.svg"></i
@@ -209,16 +203,16 @@
         <main content_id="content" class="padding:15px">
             <div
                 class="display:grid gap:15px grid-template-columns:repeat(auto-fill,minmax(290px,1fr))"
-                template_id=""
-                fetch-collection="apps"
-                fetch-document
+                collection="apps"
+                document
                 filter-name="module_id"
                 filter-value=""
                 filter-sort-name="name"
                 filter-sort-direction="asc"
-                pass_id="datatable">
+                pass_id="datatable"
+                render-selector="[template]">
                 <div
-                    template_id=""
+                    template
                     pass_id="datatable"
                     class="card template align-items:center grid-column-end:span_1 box-shadow-hover"
                     document_id="{{document._id}}"
@@ -274,7 +268,7 @@
                                     pass-document_id="{{document.module_id}}"
                                     pass_to="module-form"></div>
                                 <div
-                                    pass-fetch-collection="files"
+                                    pass-collection="files"
                                     pass-filter-name="website_id"
                                     pass-filter-value="{{document._id}}"
                                     pass_to="website_id"></div>

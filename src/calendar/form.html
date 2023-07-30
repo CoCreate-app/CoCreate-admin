@@ -157,20 +157,20 @@
                                 placeholder="Stage">
                                 <input
                                     placeholder="Search"
-                                    template_id="stage" />
+                                    filter-parent="[collection]" />
                                 <div
-                                    template_id="stage"
+                                    filter-next
                                     filter-name="stage"
                                     filter-value="5ff747727005da1c272740ab"></div>
                                 <cc-options
-                                    fetch-collection="tags"
+                                    collection="tags"
                                     pass_id="module_id"
                                     filter-name="module_id"
                                     filter-value=""
-                                    template_id="stage"
+                                    render-selector=":last-child"
                                     class="overflow:auto">
                                     <cc-option
-                                        template="stage"
+                                        template
                                         value="{{document._id}}">
                                         <h4>{{document.name}}</h4>
                                     </cc-option>
@@ -188,20 +188,20 @@
                                 placeholder="Status">
                                 <input
                                     placeholder="Search"
-                                    template_id="status" />
+                                    filter-parent="[collection]" />
                                 <div
-                                    template_id="status"
+                                    filter-parent="[collection]"
                                     filter-name="type"
                                     filter-value="5ff747727005da1c272740ab"></div>
                                 <cc-options
-                                    fetch-collection="tags"
+                                    collection="tags"
                                     pass_id="module_id"
                                     filter-name="module_id"
                                     filter-value=""
-                                    template_id="status"
+                                    render-selector=":last-child"
                                     class="overflow:auto">
                                     <cc-option
-                                        template="status"
+                                        template
                                         value="{{document._id}}">
                                         <h4>{{document.name}}</h4>
                                     </cc-option>
@@ -290,14 +290,14 @@
                         document_id=""
                         multiple
                         placeholder="Related To:">
-                        <input placeholder="Search" template_id="related_to" />
+                        <input placeholder="Search" filter-next filter-search />
                         <cc-options
-                            fetch-collection="module_activities"
-                            template_id="related_to"
+                            collection="module_activities"
+                            render-selector=":last-child"
                             class="overflow:auto">
                             <cc-option
                                 class="display:flex padding:5px"
-                                template="related_to"
+                                template
                                 value="{{document._id}}">
                                 <div
                                     class="display:flex justify-content:center width:25px">
@@ -322,14 +322,14 @@
                         document_id=""
                         multiple
                         placeholder="Team">
-                        <input placeholder="Search" template_id="team" />
+                        <input placeholder="Search" filter-next filter-search />
                         <cc-options
-                            fetch-collection="users"
-                            template_id="team"
+                            collection="users"
+                            render-selector=":last-child"
                             class="overflow:auto">
                             <cc-option
                                 class="display:flex padding:5px"
-                                template="team"
+                                template
                                 value="{{document._id}}">
                                 <div
                                     class="display:flex justify-content:center">

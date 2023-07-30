@@ -162,14 +162,15 @@
                                     placeholder="Industry">
                                     <input
                                         placeholder="Search"
-                                        template_id="template1" />
+                                        filter-search
+                                        filter-next />
                                     <ul
-                                        fetch-collection="industries"
-                                        template_id="template1"
+                                        collection="industries"
                                         pass_to="me1234"
+                                        render-selector="[template]"
                                         class="options overflow:auto">
                                         <li
-                                            template="templa1"
+                                            template
                                             class="option"
                                             pass_id="me1234">
                                             <h5

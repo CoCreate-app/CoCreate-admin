@@ -61,9 +61,9 @@
 
     <body>
         <div
-            template_id="card"
-            class="card template resize padding:20px align-items:center grid-column-end:span_3 grid-row-end:span_2"
-            eid="card">
+            template
+            eid="card"
+            class="card resize padding:20px align-items:center grid-column-end:span_3 grid-row-end:span_2">
             <canvas
                 chart="chartjs"
                 chart-type="bar"
@@ -71,17 +71,14 @@
                 chart-labels="January, February, March, April, May, June, July"
                 chart-title="Combine Charts">
                 <div chart-dataset-type="line" chart-dataset-label="um Chart">
-                    <div
-                        fetch-collection="chart"
-                        fetch-name="Jan"
-                        chart-operator="sum">
+                    <div collection="chart" name="Jan" chart-operator="sum">
                         <div
                             filter-name="Jan"
                             filter-value="0, 10"
                             filter-value-type="number"
                             filter-operator="$range"></div>
                     </div>
-                    <div fetch-collection="chart" fetch-name="Feb">
+                    <div collection="chart" name="Feb">
                         <div
                             filter-name="permission"
                             filter-value="read"
@@ -91,79 +88,79 @@
                             filter-value="leader"
                             filter-operator="$in"></div>
                     </div>
-                    <div fetch-collection="chart" fetch-name="Mar">
+                    <div collection="chart" name="Mar">
                         <div
                             filter-name="Mar"
                             filter-value="-7"
                             filter-operator="$eq"
                             filter-value-type="number"></div>
                     </div>
-                    <div fetch-collection="chart" fetch-name="Apr"></div>
-                    <div fetch-collection="chart" fetch-name="May"></div>
-                    <div fetch-collection="chart" fetch-name="Jun"></div>
-                    <div fetch-collection="chart" fetch-name="Jul"></div>
+                    <div collection="chart" name="Apr"></div>
+                    <div collection="chart" name="May"></div>
+                    <div collection="chart" name="Jun"></div>
+                    <div collection="chart" name="Jul"></div>
                 </div>
                 <div
                     chart-dataset-label="Average Chart"
                     chart-dataset-type="line">
                     <div
-                        fetch-collection="chart"
-                        fetch-name="Jan"
+                        collection="chart"
+                        name="Jan"
                         chart-operator="average"></div>
                     <div
-                        fetch-collection="chart"
-                        fetch-name="Feb"
+                        collection="chart"
+                        name="Feb"
                         chart-operator="average"></div>
                     <div
-                        fetch-collection="chart"
-                        fetch-name="Mar"
+                        collection="chart"
+                        name="Mar"
                         chart-operator="average"></div>
                     <div
-                        fetch-collection="chart"
-                        fetch-name="Apr"
+                        collection="chart"
+                        name="Apr"
                         chart-operator="average"></div>
                     <div
-                        fetch-collection="chart"
-                        fetch-name="May"
+                        collection="chart"
+                        name="May"
                         chart-operator="average"></div>
                     <div
-                        fetch-collection="chart"
-                        fetch-name="Jun"
+                        collection="chart"
+                        name="Jun"
                         chart-operator="average"></div>
                     <div
-                        fetch-collection="chart"
-                        fetch-name="Jul"
+                        collection="chart"
+                        name="Jul"
                         chart-operator="average"></div>
                 </div>
 
                 <div chart-dataset-label="Data Count" chart-dataset-type="">
                     <div
-                        fetch-collection="chart"
-                        fetch-name="Jan"
+                        collection="chart"
+                        name="Jan"
                         chart-operator="count"></div>
                     <div
-                        fetch-collection="chart"
-                        fetch-name="Feb"
+                        collection="chart"
+                        name="Feb"
                         chart-operator="count"></div>
                     <div
-                        fetch-collection="chart"
-                        fetch-name="Mar"
+                        collection="chart"
+                        name="Mar"
                         chart-operator="count"></div>
                     <div
-                        fetch-collection="chart"
-                        fetch-name="Apr"
+                        collection="chart"
+                        name="Apr"
                         chart-operator="count"></div>
                     <div
-                        fetch-collection="chart"
-                        fetch-name="May"
+                        collection="chart"
+                        name="May"
                         chart-operator="count"></div>
                     <div
-                        fetch-collection="chart"
-                        fetch-name="Jun"
+                        collection="chart"
+                        name="Jun"
                         chart-operator="count"></div>
                     <div
-                        fetch-collection="chart"
-                        fetch-name="Jul"
+                        collection="chart"
+                        name="Jul"
                         chart-operator="count"></div>
                 </div>
             </canvas>

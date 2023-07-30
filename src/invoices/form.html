@@ -243,17 +243,17 @@
             <div
                 sortable
                 class="margin:0px_20px padding:20px_0px border-bottom:1px_solid_lightgrey"
-                fetch-collection="items-ordered"
+                collection="items-ordered"
                 filter-name="invoice_id"
                 filter-value=""
                 pass_id="form-fields"
                 filter-operator="$eq"
-                template_id="item-row"
+                render-selector="[template]"
                 dnd-group-name="item-row">
                 <div
                     id="item-row"
                     class="border-color:medium-gray margin-bottom:10px"
-                    template="item-row"
+                    template
                     document_id="{{document._id}}">
                     <form
                         class="display:flex"
@@ -273,14 +273,15 @@
                                         placeholder="Item">
                                         <input
                                             placeholder="Search"
-                                            template_id="items" />
+                                            filter-next
+                                            filter-search />
                                         <ul
                                             class="options overflow:auto"
-                                            fetch-collection="items"
-                                            template_id="items">
+                                            collection="items"
+                                            render-selector="[template]">
                                             <li
-                                                class="option template"
-                                                template_id="items"
+                                                class="option"
+                                                template
                                                 value="{{document._id}}"
                                                 document_id="{{document._id}}"
                                                 render="data">
