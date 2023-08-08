@@ -22,9 +22,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -109,8 +109,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -129,9 +129,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -146,9 +146,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -157,8 +157,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection=""
-                        document_id=""
+                        array=""
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -171,25 +171,25 @@
         <main class="padding:10px" content_id="content">
             <form
                 pass_id="form-fields"
-                collection="files"
-                document_id=""
+                array="files"
+                object=""
                 class="margin-bottom:75px">
-                <input type="hidden" name="tags" value="template" />
+                <input type="hidden" key="tags" value="template" />
                 <input
                     type="text"
-                    name="name"
+                    key="name"
                     id="name"
                     placeholder="Name"
                     class="floating-label" />
                 <input
                     type="text"
-                    name="description"
+                    key="description"
                     id="description"
                     placeholder="Description"
                     class="floating-label" />
                 <input
                     type="text"
-                    name="image"
+                    key="image"
                     id="image"
                     placeholder="Image"
                     class="floating-label" />
@@ -221,39 +221,39 @@
                 </div>
                 <textarea
                     id="html"
-                    name="src"
+                    key="src"
                     class="code-editor active"></textarea>
-                <textarea id="css" name="css" class="code-editor"></textarea>
-                <textarea id="js" name="js" class="code-editor"></textarea>
+                <textarea id="css" key="css" class="code-editor"></textarea>
+                <textarea id="js" key="js" class="code-editor"></textarea>
 
                 <cocreate-select
-                    name="module_id"
+                    key="module_id"
                     placeholder="Module"
                     sortable
                     class="floating-label">
                     <input
                         placeholder="Search"
-                        filter-parent="collection"
+                        filter-parent="array"
                         filter-search />
                     <cc-options
-                        collection=".*"
+                        array=".*"
                         render-selector="[template]"
                         class="overflow:auto">
-                        <cc-option template value="{{document._id}}">
+                        <cc-option template value="{{object._id}}">
                             <div class="display:flex padding:5px">
                                 <span
                                     class="width:25px"
-                                    collection="{{document.collection}}"
-                                    document_id="{{document._id}}"
-                                    name="icon"></span>
-                                <h4>{{document.name}}</h4>
+                                    array="{{object.array}}"
+                                    object="{{object._id}}"
+                                    key="icon"></span>
+                                <h4>{{object.name}}</h4>
                             </div>
                         </cc-option>
                     </cc-options>
                 </cocreate-select>
                 <input
                     type="hidden"
-                    name="module_id"
+                    key="module_id"
                     pass_id="module_id"
                     value />
                 <button

@@ -13,9 +13,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -82,8 +82,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -102,9 +102,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -119,9 +119,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -130,8 +130,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection="module_activities"
-                        document_id=""
+                        array="module_activities"
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -143,36 +143,33 @@
 
         <!-- Main Content -->
         <main class="padding:10px" content_id="content">
-            <form
-                collection="module_activities"
-                document_id=""
-                pass_id="form-fields">
+            <form array="module_activities" object="" pass_id="form-fields">
                 <input
                     type="hidden"
-                    name="module_id"
+                    key="module_id"
                     pass_id="module_id"
                     value />
 
                 <input
                     type="text"
-                    name="name"
+                    key="name"
                     placeholder="Name"
                     class="floating-label" />
 
                 <input
                     type="text"
-                    name="description"
+                    key="description"
                     placeholder="Description"
                     class="floating-label" />
 
                 <input
                     type="number"
-                    name="amount"
+                    key="amount"
                     placeholder="Amount"
                     class="floating-label" />
 
                 <select
-                    name="status"
+                    key="status"
                     placeholder="Status"
                     class="floating-label">
                     <option label="Succesful" value="succesful">
@@ -184,11 +181,11 @@
 
                 <input
                     type="text"
-                    name="description"
+                    key="description"
                     placeholder="Description"
                     class="floating-label" />
 
-                <select name="contact_id" class="floating-label">
+                <select key="contact_id" class="floating-label">
                     <option label="Option1" value="option-1">Option1</option>
                     <option label="Option2" value="option-2">Option2</option>
                     <option label="Option3" value="option-3">Option3</option>
@@ -201,24 +198,24 @@
 
                 <input
                     type="number"
-                    name="app_fee"
+                    key="app_fee"
                     placeholder="App Fee"
                     class="floating-label" />
 
                 <input
                     type="text"
-                    name="destination"
+                    key="destination"
                     placeholder="Destination"
                     class="floating-label" />
 
                 <input
                     type="text"
-                    name="charge_id"
+                    key="charge_id"
                     placeholder="Charge Id"
                     class="floating-label" />
 
                 <select
-                    name="vendor_id"
+                    key="vendor_id"
                     placeholder="Vendor"
                     class="floating-label">
                     <option label="Option 1" value="option-1">Option 1</option>
@@ -228,7 +225,7 @@
                 </select>
 
                 <select
-                    name="related_to"
+                    key="related_to"
                     placeholder="Related To"
                     class="floating-label">
                     <option label="Option 1" value="option-1">Option 1</option>

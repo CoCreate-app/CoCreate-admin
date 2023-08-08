@@ -17,9 +17,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8ff91249e639db315e7"
-            name="src"
+            array="files"
+            object="637bc8ff91249e639db315e7"
+            key="src"
             type="text/css" />
 
         <!-- Call Center -->
@@ -101,8 +101,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -121,9 +121,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -138,9 +138,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -149,8 +149,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection=""
-                        document_id=""
+                        array=""
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -175,9 +175,9 @@
                     class="font-size:22px color:#333333 font-weight:600 padding-bottom:10px">
                     <div
                         class="display:flex border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px"
-                        collection="call-log"
-                        document_id="5fd7b6080bb983ccd559157a"
-                        name="name">
+                        array="call-log"
+                        object="5fd7b6080bb983ccd559157a"
+                        key="name">
                         <span>Active Calls</span>
                         <span
                             ><button class="height:40px">Enqueque</button></span
@@ -189,13 +189,13 @@
                 <input
                     type="hidden"
                     filter-next
-                    filter-name="status"
+                    filter-key="status"
                     value="no-answer"
                     filter-operator="$ne" />
                 <div
                     class="margin-top:10px"
-                    collection="testtwillio"
-                    filter-name="status"
+                    array="testtwillio"
+                    filter-key="status"
                     filter-value="completed"
                     filter-operator="$ne"
                     filter-limit="10"
@@ -204,24 +204,24 @@
                     <div
                         class="card call padding:20px_10px margin-bottom:15px background:white margin-right:10px"
                         template
-                        collection="{{document.collection}}"
-                        document_id="{{document._id}}"
-                        name="status"
+                        array="{{object.array}}"
+                        object="{{object._id}}"
+                        key="status"
                         value="">
                         <!-- Call Header -->
                         <div
                             class="display:flex border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px margin-bottom:10px font-size:22px color:#333333 font-weight:600">
                             <div
                                 class="status margin-right:5px"
-                                collection="{{document.collection}}"
-                                document_id="{{document._id}}"
-                                name="status"
+                                array="{{object.array}}"
+                                object="{{object._id}}"
+                                key="status"
                                 value=""></div>
                             <span
                                 class="loader height:24px width:100px"
-                                collection="{{document.collection}}"
-                                document_id="{{document._id}}"
-                                name="status"
+                                array="{{object.array}}"
+                                object="{{object._id}}"
+                                key="status"
                                 value=""></span>
                             <div class="width:100%">
                                 <span
@@ -240,21 +240,21 @@
                                     class="avatar round"
                                     actions="pass, openModal"
                                     modal-src="./user-profile/user-profile.html"
-                                    pass-collection="modules"
-                                    pass-document_id="5dd010bccbc25f0cdb1a4d9f"
+                                    pass-array="modules"
+                                    pass-object="5dd010bccbc25f0cdb1a4d9f"
                                     pass_to="render"
                                     modal-width="300px"
                                     modal-height="375px"
                                     modal-color="#229954">
                                     <span
-                                        collection="users"
-                                        document_id=""
-                                        name="name"
+                                        array="users"
+                                        object=""
+                                        key="name"
                                         class="first-letter avatar-name"></span>
                                     <span
-                                        collection="users"
-                                        document_id=""
-                                        name="profile_image"
+                                        array="users"
+                                        object=""
+                                        key="profile_image"
                                         class="avatar-image">
                                         <img
                                             src="images/Velazquez.jpg"
@@ -263,15 +263,15 @@
                                 </a>
                                 <div
                                     class="avatar-status"
-                                    collection="users"
-                                    document_id="{{userId}}"
+                                    array="users"
+                                    object="{{userId}}"
                                     user-status="{'name':'status'}"></div>
                             </div>
 
                             <!-- Call Details -->
                             <div class="margin-right:10px">
                                 <span class="font-size:17px font-weight:600"
-                                    >{{document.name}}</span
+                                    >{{object.name}}</span
                                 >
                                 <div class="font-size:15px">
                                     Dyanmic Contact Phone
@@ -285,10 +285,10 @@
                             <form class="display:flex margin-top:10px">
                                 <!-- Answer and end call -->
                                 <div
-                                    class="callbtns display:flex {{document.direction}}"
-                                    collection="{{document.collection}}"
-                                    document_id="{{document._id}}"
-                                    name="status"
+                                    class="callbtns display:flex {{object.direction}}"
+                                    array="{{object.array}}"
+                                    object="{{object._id}}"
+                                    key="status"
                                     value="">
                                     <button
                                         class="answer"
@@ -316,11 +316,11 @@
                                     <input
                                         type="hidden"
                                         twilio="dialConference.friendlyName"
-                                        value="{{document._id}}" />
+                                        value="{{object._id}}" />
                                     <input
                                         type="hidden"
                                         twilio="dialConference.CallSid"
-                                        value="{{document.CallSid}}" />
+                                        value="{{object.CallSid}}" />
                                     <input
                                         type="hidden"
                                         twilio="dialConference.holdUrl"
@@ -330,31 +330,31 @@
                                 <!-- Conference -->
                                 <div
                                     class="conference display:flex"
-                                    collection="{{document.collection}}"
-                                    document_id="{{document._id}}"
-                                    name="status"
+                                    array="{{object.array}}"
+                                    object="{{object._id}}"
+                                    key="status"
                                     value="">
-                                    <!--<input type="hidden" twilio="joinConference.friendlyName" value="{{document.From}}">-->
+                                    <!--<input type="hidden" twilio="joinConference.friendlyName" value="{{object.From}}">-->
                                     <div
                                         type="hidden"
                                         twilio="endConference.CallSid"
-                                        collection="{{document.collection}}"
-                                        document_id="{{document._id}}"
-                                        name="ConferenceSid"
+                                        array="{{object.array}}"
+                                        object="{{object._id}}"
+                                        key="ConferenceSid"
                                         value=""></div>
                                     <div
                                         type="hidden"
                                         twilio="holdConference.CallSid"
-                                        collection="{{document.collection}}"
-                                        document_id="{{document._id}}"
-                                        name="ConferenceSid"
+                                        array="{{object.array}}"
+                                        object="{{object._id}}"
+                                        key="ConferenceSid"
                                         value=""></div>
                                     <div
                                         type="hidden"
                                         twilio="unholdConference.CallSid"
-                                        collection="{{document.collection}}"
-                                        document_id="{{document._id}}"
-                                        name="ConferenceSid"
+                                        array="{{object.array}}"
+                                        object="{{object._id}}"
+                                        key="ConferenceSid"
                                         value=""></div>
 
                                     <button
@@ -362,7 +362,7 @@
                                         hidden
                                         actions="joinConference"
                                         title="Resume Call"
-                                        data-friendlyname="{{document._id}}">
+                                        data-friendlykey="{{object._id}}">
                                         <i class="fas fa-pause"></i>
                                     </button>
                                     <button
@@ -406,11 +406,11 @@
                                 <div hidden>
                                     <input
                                         twilio="dialEnqueue.nameEnqueue"
-                                        data-old="{{document.From}}"
+                                        data-old="{{object.From}}"
                                         value="cocreateEnqueue" />
                                     <input
                                         twilio="dialEnqueue.CallSid"
-                                        value="{{document.CallSid}}" />
+                                        value="{{object.CallSid}}" />
                                     <input
                                         twilio="dialEnqueue.waitUrl"
                                         value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic" />
@@ -420,12 +420,12 @@
                                     </button>
                                 </div>
                             </form>
-                            <!--<div template_id="getParticipantsConferences_{{document.idconference}}">-->
+                            <!--<div template_id="getParticipantsConferences_{{object.idconference}}">-->
                             <!--    <form>-->
-                            <!--        <input type="hidden"  twilio="getParticipantsConference.CallSid" value="{{document.idconference}}">-->
+                            <!--        <input type="hidden"  twilio="getParticipantsConference.CallSid" value="{{object.idconference}}">-->
                             <!--            <button actions="getParticipantsConference" -->
-                            <!--                data-friendlyname="{{document.friendlyName}}"-->
-                            <!--                data-idconference="{{document.idconference}}"-->
+                            <!--                data-friendlykey="{{object.friendlyName}}"-->
+                            <!--                data-idconference="{{object.idconference}}"-->
                             <!--            >GetPart</button>-->
                             <!--    </form>-->
                             <!--    <div class="template margin:10px;" value="{{participant.id}}" render="participant">-->
@@ -543,7 +543,7 @@
                                 <input
                                     type="text"
                                     class="floating-label"
-                                    filter-name="status"
+                                    filter-key="status"
                                     filter-closest="table; tbody"
                                     placeholder="Status" />
                             </floating-label>
@@ -553,7 +553,7 @@
                                 <!-- need a solution to update toggle value="desc|asc" and define and upadte icons... show hide works great but to much html and orderby only has 2 values -->
                                 <a
                                     filter-closest="table; tbody"
-                                    filter-sort-name="name"
+                                    filter-sort-key="name"
                                     filter-sort-toggle>
                                     <i></i>
                                 </a>
@@ -561,10 +561,10 @@
                         </td>
                         <!--<td class="position:sticky top:0 background:white padding:0px_10px_10px">-->
                         <!--	<input type="text" class="floating-label"-->
-                        <!--		filter-name="participants" -->
+                        <!--		filter-key="participants" -->
                         <!--		placeholder="Participants"/>-->
                         <!--		<span class="position:absolute bottom:20px right:20px float:right z-index:6" >-->
-                        <!--			<a filter-sort-name="_id" value="" filter-sort-direction="asc" click-value="desc, asc" click-attribute="filter-sort-direction" template_id="datatable">-->
+                        <!--			<a filter-sort-key="_id" value="" filter-sort-direction="asc" click-value="desc, asc" click-attribute="filter-sort-direction" template_id="datatable">-->
                         <!--			</a>-->
                         <!--		</span>-->
                         <!--</td>-->
@@ -574,14 +574,14 @@
                                 <input
                                     type="text"
                                     class="floating-label"
-                                    filter-name="duration"
+                                    filter-key="duration"
                                     filter-closest="table; tbody"
                                     placeholder="duration" />
                             </floating-label>
                             <span
                                 class="position:absolute bottom:20px right:20px float:right z-index:6">
                                 <a
-                                    filter-sort-name="_id"
+                                    filter-sort-key="_id"
                                     value=""
                                     filter-sort-direction="asc"
                                     click-value="desc, asc"
@@ -593,9 +593,9 @@
 
                     <!-- Datatable Fetch and Render Rows -->
                     <tbody
-                        collection="testtwillio"
+                        array="testtwillio"
                         filter-limit="15"
-                        filter-sort-name=""
+                        filter-sort-key=""
                         filter-sort-direction="asc"
                         render-selector=":last-child">
                         <!-- Datatable Row Template -->
@@ -603,7 +603,7 @@
                             class="background:whitesmoke:hover border-bottom:1px_solid_darkgray"
                             template
                             pass_id="datatable"
-                            document_id="{{document._id}}"
+                            object="{{object._id}}"
                             toggle="selected">
                             <td class="padding:10px">
                                 <div class="display:flex min-width:200px">
@@ -614,67 +614,67 @@
                                             <a
                                                 class="avatar round"
                                                 actions="pass, openModal"
-                                                pass-collection="modules"
-                                                pass-document_id="5dd010bccbc25f0cdb1a4d9f"
+                                                pass-array="modules"
+                                                pass-object="5dd010bccbc25f0cdb1a4d9f"
                                                 pass_to="render"
                                                 modal-width="300px"
                                                 modal-height="375px"
                                                 modal-color="#229954">
                                                 <span
-                                                    collection="users"
-                                                    document_id=""
-                                                    name="name"
+                                                    array="users"
+                                                    object=""
+                                                    key="name"
                                                     class="first-letter avatar-name"></span>
                                                 <span
-                                                    collection="users"
-                                                    document_id=""
-                                                    name="profile_image"
+                                                    array="users"
+                                                    object=""
+                                                    key="profile_image"
                                                     class="avatar-image">
                                                     <img
                                                         src="images/Velazquez.jpg"
                                                         onerror="this.style.display='none'" />
                                                 </span>
                                             </a>
-                                            <!--<div class="avatar-status " collection="users" document_id="{{userId}}" user-status="{'name':'status'}"></div>-->
+                                            <!--<div class="avatar-status " array="users" object="{{userId}}" user-status="{'name':'status'}"></div>-->
                                         </div>
                                     </div>
                                     <div class="margin-left:10px">
                                         <a
                                             actions="pass, openModal"
                                             modal-src="./src/modules/module-views/form.html"
-                                            pass-collection="modules"
-                                            pass-document_id="{{document._id}}"
-                                            pass-name="src"
+                                            pass-array="modules"
+                                            pass-object="{{object._id}}"
+                                            pass-key="src"
                                             pass_to="render"
                                             modal-width="320px"
                                             modal-color="#229954">
                                             <div
-                                                class="display:none to-{{document.direction}}">
+                                                class="display:none to-{{object.direction}}">
                                                 <h4>
                                                     <span
-                                                        collection="{{document.collection}}"
-                                                        document_id="{{document._id}}"
-                                                        name="To"
+                                                        array="{{object.array}}"
+                                                        object="{{object._id}}"
+                                                        key="To"
                                                         >To</span
                                                     >
                                                 </h4>
                                             </div>
                                             <div
-                                                class="display:none from-{{document.direction}}">
+                                                class="display:none from-{{object.direction}}">
                                                 <h4>
                                                     <span
-                                                        collection="{{document.collection}}"
-                                                        document_id="{{document._id}}"
-                                                        name="From"
+                                                        array="{{object.array}}"
+                                                        object="{{object._id}}"
+                                                        key="From"
                                                         >From</span
                                                     >
                                                 </h4>
                                             </div>
                                             <span
-                                                class="icon-{{document.direction}}"
-                                                collection="{{document.collection}}"
-                                                document_id="{{document._id}}"
-                                                name="status"
+                                                class="icon-{{object.direction}}"
+                                                array="{{object.array}}"
+                                                object="{{object._id}}"
+                                                key="status"
                                                 value=""></span>
                                         </a>
                                     </div>
@@ -684,47 +684,47 @@
                             <!-- Avatar -->
                             <!--                      <div class="avatar-wrapper">-->
                             <!--                          <a class="avatar round" actions="pass, openModal" -->
-                            <!--                              pass-collection="modules" -->
-                            <!--                              pass-document_id="5dd010bccbc25f0cdb1a4d9f" -->
+                            <!--                              pass-array="modules" -->
+                            <!--                              pass-object="5dd010bccbc25f0cdb1a4d9f" -->
                             <!--                              pass_to="render" -->
                             <!--                              modal-width="300px" -->
                             <!--                              modal-height="375px" -->
                             <!--                              modal-color="#229954"-->
                             <!--                             >-->
-                            <!--                              <span collection="users" document_id="" name="name" class="first-letter avatar-name"></span>-->
-                            <!--                              <span collection="users" document_id="" name="profile_image" class="avatar-image">-->
+                            <!--                              <span array="users" object="" key="name" class="first-letter avatar-name"></span>-->
+                            <!--                              <span array="users" object="" key="profile_image" class="avatar-image">-->
                             <!--                                  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"/>-->
                             <!--                              </span>-->
                             <!--                          </a>-->
-                            <!--                          <div class="avatar-status" collection="users" document_id="{{userId}}" user-status="{'name':'status'}"></div>-->
+                            <!--                          <div class="avatar-status" array="users" object="{{userId}}" user-status="{'name':'status'}"></div>-->
                             <!--                      </div>			-->
                             <!--</td>-->
                             <td class="padding:10px">
                                 <a
                                     actions="pass, openModal"
                                     modal-src="./src/modules/module-views/form.html"
-                                    pass-document_id="{{document._id}}"
-                                    pass-collection="modules"
-                                    pass-name="src"
+                                    pass-object="{{object._id}}"
+                                    pass-array="modules"
+                                    pass-key="src"
                                     pass_to="render"
                                     modal-width="320px"
                                     modal-color="#229954">
                                     <b
-                                        collection="{{document.collection}}"
-                                        document_id="{{document._id}}"
-                                        name="duration"
+                                        array="{{object.array}}"
+                                        object="{{object._id}}"
+                                        key="duration"
                                         >Duration</b
                                     >
                                     <div
-                                        pass-collection="modules"
-                                        pass-document_id="{{document._id}}"
+                                        pass-array="modules"
+                                        pass-object="{{object._id}}"
                                         pass_to="form-fields"></div>
                                 </a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <div filter-parent="[collection]" filter-on="total"></div>
+                <div filter-parent="[array]" filter-on="total"></div>
             </div>
         </main>
 
@@ -745,9 +745,9 @@
                             <cocreate-select
                                 class="floating-label"
                                 sortable
-                                collection="test"
-                                document_id="5e9531b3a762440eed55c2ed"
-                                name="selectField0"
+                                array="test"
+                                object="5e9531b3a762440eed55c2ed"
+                                key="selectField0"
                                 placeholder="Call as">
                                 <input
                                     type="hidden"
@@ -756,22 +756,22 @@
                                 <input filter-next filter-search />
 
                                 <ul
-                                    collection="use"
+                                    array="use"
                                     render-selector=":last-child"
                                     class="options overflow:auto height:300px">
                                     <li
                                         class="option display:flex padding:5px"
                                         template
                                         value="+13472189814"
-                                        document_id="{{document._id}}"
-                                        render="document">
+                                        object="{{object._id}}"
+                                        render="object">
                                         <div>
                                             <h3
-                                                name="name"
-                                                value="{{document.name}}">
+                                                key="name"
+                                                value="{{object.name}}">
                                                 +13472189814
                                             </h3>
-                                            <h5>{{document._id}}</h5>
+                                            <h5>{{object._id}}</h5>
                                         </div>
                                     </li>
                                 </ul>
@@ -793,15 +793,15 @@
                                         value="+19703735168" />
 
                                     <ul
-                                        collection="users"
+                                        array="users"
                                         render-selector=":last-child"
                                         class="options overflow:auto">
                                         <li
                                             class="option display:flex padding:5px"
                                             template
-                                            value="{{document._id}}"
-                                            document_id="{{document._id}}"
-                                            render="document">
+                                            value="{{object._id}}"
+                                            object="{{object._id}}"
+                                            render="object">
                                             <!-- Avatar -->
                                             <div
                                                 class="avatar-wrapper margin:5px_0px margin-right:10px">
@@ -809,21 +809,21 @@
                                                     class="avatar round"
                                                     actions="pass, openModal"
                                                     modal-src="./user-profile/user-profile.html"
-                                                    pass-collection="modules"
-                                                    pass-document_id="5dd010bccbc25f0cdb1a4d9f"
+                                                    pass-array="modules"
+                                                    pass-object="5dd010bccbc25f0cdb1a4d9f"
                                                     pass_to="render"
                                                     modal-width="300px"
                                                     modal-height="375px"
                                                     modal-color="#229954">
                                                     <span
-                                                        collection="users"
-                                                        document_id="{{userId}}"
-                                                        name="name"
+                                                        array="users"
+                                                        object="{{userId}}"
+                                                        key="name"
                                                         class="first-letter avatar-name"></span>
                                                     <span
-                                                        collection="users"
-                                                        document_id="{{userId}}"
-                                                        name="profile_image"
+                                                        array="users"
+                                                        object="{{userId}}"
+                                                        key="profile_image"
                                                         class="avatar-image">
                                                         <img
                                                             src="images/Velazquez.jpg"
@@ -832,17 +832,17 @@
                                                 </a>
                                                 <div
                                                     class="avatar-status"
-                                                    collection="users"
-                                                    document_id="{{userId}}"
+                                                    array="users"
+                                                    object="{{userId}}"
                                                     user-status="{'name':'status'}"></div>
                                             </div>
                                             <div>
                                                 <h3
-                                                    name="name"
-                                                    value="{{document.name}}">
+                                                    key="name"
+                                                    value="{{object.name}}">
                                                     No Name
                                                 </h3>
-                                                <h5>{{document._id}}</h5>
+                                                <h5>{{object._id}}</h5>
                                             </div>
                                         </li>
                                     </ul>
@@ -865,57 +865,57 @@
                         <!-- Dial Pad -->
                         <div
                             class="digits overflow:hidden width:250px margin:auto margin-top:20px">
-                            <div class="dig pound number-dig" name="1">1</div>
-                            <div class="dig number-dig" name="2">
+                            <div class="dig pound number-dig" key="1">1</div>
+                            <div class="dig number-dig" key="2">
                                 2
                                 <div
                                     class="font-size:8px font-weight:300 position:relative top:-2px">
                                     ABC
                                 </div>
                             </div>
-                            <div class="dig number-dig" name="3">
+                            <div class="dig number-dig" key="3">
                                 3
                                 <div
                                     class="font-size:8px font-weight:300 position:relative top:-2px">
                                     DEF
                                 </div>
                             </div>
-                            <div class="dig number-dig" name="4">
+                            <div class="dig number-dig" key="4">
                                 4
                                 <div
                                     class="font-size:8px font-weight:300 position:relative top:-2px">
                                     GHI
                                 </div>
                             </div>
-                            <div class="dig number-dig" name="5">
+                            <div class="dig number-dig" key="5">
                                 5
                                 <div
                                     class="font-size:8px font-weight:300 position:relative top:-2px">
                                     JKL
                                 </div>
                             </div>
-                            <div class="dig number-dig" name="6">
+                            <div class="dig number-dig" key="6">
                                 6
                                 <div
                                     class="font-size:8px font-weight:300 position:relative top:-2px">
                                     MNO
                                 </div>
                             </div>
-                            <div class="dig number-dig" name="7">
+                            <div class="dig number-dig" key="7">
                                 7
                                 <div
                                     class="font-size:8px font-weight:300 position:relative top:-2px">
                                     PQRS
                                 </div>
                             </div>
-                            <div class="dig number-dig" name="8">
+                            <div class="dig number-dig" key="8">
                                 8
                                 <div
                                     class="font-size:8px font-weight:300 position:relative top:-2px">
                                     TUV
                                 </div>
                             </div>
-                            <div class="dig number-dig" name="9">
+                            <div class="dig number-dig" key="9">
                                 9
                                 <div
                                     class="font-size:8px font-weight:300 position:relative top:-2px">
@@ -924,17 +924,17 @@
                             </div>
                             <div
                                 class="dig number-dig padding-top:17px height:58px"
-                                name="*">
+                                key="*">
                                 *
                             </div>
                             <div
                                 class="dig number-dig padding-top:10px height:58px"
-                                name="0">
+                                key="0">
                                 0
                             </div>
                             <div
                                 class="dig number-dig padding-top:10px height:58px"
-                                name="#">
+                                key="#">
                                 #
                             </div>
                         </div>
@@ -965,23 +965,23 @@
                                     <input
                                         type="hidden"
                                         twilio="joinConference.friendlyName"
-                                        value="{{document.friendlyName}}" />
+                                        value="{{object.friendlyName}}" />
                                     <input
                                         type="hidden"
                                         twilio="endConference.CallSid"
-                                        value="{{document.idconference}}" />
+                                        value="{{object.idconference}}" />
                                     <input
                                         type="hidden"
                                         twilio="holdConference.CallSid"
-                                        value="{{document.idconference}}" />
+                                        value="{{object.idconference}}" />
                                     <input
                                         type="hidden"
                                         twilio="unholdConference.CallSid"
-                                        value="{{document.idconference}}" />
+                                        value="{{object.idconference}}" />
                                     <button
                                         hidden
                                         actions="joinConference"
-                                        data-friendlyname="{{document.friendlyName}}"
+                                        data-friendlykey="{{object.friendlyName}}"
                                         title="Resume Call">
                                         <i class="fas fa-pause"></i>
                                     </button>
@@ -1015,7 +1015,7 @@
                                 <input
                                     type="hidden"
                                     twilio="endConference.CallSid"
-                                    value="{{document.idconference}}" />
+                                    value="{{object.idconference}}" />
                                 <button hidden actions="endConference">
                                     <i class="fas fa-phone-slash"></i>
                                 </button>
@@ -1075,10 +1075,10 @@
         <script src="https://cdn.cocreate.app/1.57.17/CoCreate.min.js"></script>
 
         <script>
-            document.querySelectorAll(".number-dig").forEach((number) => {
+            object.querySelectorAll(".number-dig").forEach((number) => {
                 number.addEventListener("click", (e) => {
                     var valueToAppend = number.getAttribute("name");
-                    let draw_digits = document.querySelector(".draw_digits");
+                    let draw_digits = object.querySelector(".draw_digits");
                     let currentValue = draw_digits.value;
                     draw_digits.value = currentValue + valueToAppend;
                 });

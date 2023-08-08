@@ -22,9 +22,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -91,8 +91,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -111,9 +111,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -128,9 +128,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -139,8 +139,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteOrg"
-                        collection="organizations"
-                        document_id=""
+                        array="organizations"
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -152,32 +152,29 @@
 
         <!-- Main Content -->
         <main class="padding:10px" content_id="content">
-            <form
-                collection="organizations"
-                document_id=""
-                pass_id="form-fields">
+            <form array="organizations" object="" pass_id="form-fields">
                 <input
                     type="text"
-                    name="logo"
+                    key="logo"
                     placeholder="Logo"
                     class="floating-label" />
 
                 <input
                     type="text"
-                    name="name"
+                    key="name"
                     id="name"
                     placeholder="Organization Name"
                     class="floating-label" />
 
                 <input
                     type="text"
-                    name="description"
+                    key="description"
                     placeholder="Description"
                     class="floating-label" />
 
                 <input
                     type="text"
-                    name="_id"
+                    key="_id"
                     id="orgid"
                     placeholder="Organization Id"
                     class="floating-label"
@@ -186,7 +183,7 @@
 
                 <input
                     type="text"
-                    name="key"
+                    key="key"
                     id="key"
                     placeholder="API Key"
                     class="floating-label"
@@ -195,14 +192,14 @@
 
                 <input
                     type="text"
-                    name="organization_id"
+                    key="organization_id"
                     id="organization_id"
                     placeholder="Platform Id"
                     class="floating-label"
                     crdt="false"
                     readonly />
 
-                <!--<input type="text" name="admin_id" id="admin_id" placeholder="admin Id" class="floating-label" readonly/>-->
+                <!--<input type="text" key="admin_id" id="admin_id" placeholder="admin Id" class="floating-label" readonly/>-->
 
                 <button
                     actions="save"

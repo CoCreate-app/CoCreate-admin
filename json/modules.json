@@ -2,7 +2,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "60e74055b979b40017448c60",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Activities",
@@ -19,7 +19,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "6195533ccbf74500119d4115",
         "description": "",
         "icon": "key",
@@ -71,7 +71,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c2727418e",
         "icon": "credit-card",
         "main-menu-position": 0,
@@ -87,7 +87,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274194",
         "description": "",
         "icon": "cubes",
@@ -116,7 +116,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "60e7416eb979b40017448c76",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Blog",
@@ -141,7 +141,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274193",
         "icon": "palette",
         "main-menu-position": 0,
@@ -171,7 +171,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274197",
         "icon": "calendar-alt",
         "main-menu-position": 0,
@@ -191,7 +191,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274199",
         "icon": "phone",
         "main-menu-position": 0,
@@ -215,7 +215,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274191",
         "icon": "code",
         "main-menu-position": 0,
@@ -228,7 +228,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274183",
         "icon": "city",
         "main-menu-position": 2,
@@ -252,7 +252,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c2727419d",
         "description": "",
         "icon": "address-book",
@@ -278,7 +278,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c2727418a",
         "icon": "tachometer-alt",
         "main-menu-position": 1,
@@ -301,7 +301,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "62c4e1c7de9a46c8744523a0",
         "name": "Database",
         "navbar-modal-primary-color": "#000000",
@@ -327,7 +327,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c2727418d",
         "icon": "book",
         "main-menu-position": 0,
@@ -339,7 +339,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c2727418b",
         "icon": "globe",
         "main-menu-position": 0,
@@ -356,7 +356,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274186",
         "icon": "envelope",
         "main-menu-position": 0,
@@ -382,7 +382,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274184",
         "icon": "file-invoice",
         "main-menu-position": 5,
@@ -407,7 +407,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "60e7435ab979b40017448c90",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Expenses",
@@ -429,7 +429,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c2727419a",
         "icon": "folder",
         "main-menu-position": 0,
@@ -456,7 +456,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "60e7444eb979b40017448ca8",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Fleet Tracking",
@@ -473,7 +473,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "61302bae8ed7b000136531d0",
         "name": "Image-editor",
         "description": "",
@@ -516,7 +516,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "611d97fdc0e9580010eb9028",
         "settings-menu-secondary": {
             "_id": "61186f46c0e9580010ea640b",
@@ -541,7 +541,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "60e7452eb979b40017448cd2",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Invoices",
@@ -564,7 +564,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "60e74739b979b40017448d03",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Items",
@@ -587,7 +587,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "60e7483fb979b40017448d13",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Marketplace",
@@ -609,7 +609,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274192",
         "icon": "clone",
         "main-menu-position": 0,
@@ -636,7 +636,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274187",
         "icon": "shapes",
         "main-menu-position": 0,
@@ -657,7 +657,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274190",
         "icon": "project-diagram",
         "main-menu-position": 0,
@@ -684,7 +684,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274182",
         "icon": "user",
         "main-menu-position": 0,
@@ -703,7 +703,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c2727418c",
         "icon": "building",
         "main-menu-position": 0,
@@ -723,7 +723,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274189",
         "icon": "money-bill-wave",
         "main-menu-position": 7,
@@ -754,7 +754,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c2727419b",
         "description": "",
         "icon": "balance-scale",
@@ -776,7 +776,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "60e73c8eb979b40017448c1b",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Projects",
@@ -797,7 +797,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c2727418f",
         "icon": "cogs",
         "main-menu-position": 0,
@@ -811,7 +811,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274185",
         "icon": "desktop",
         "main-menu-position": 144,
@@ -837,7 +837,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "60e73d29b979b40017448c2b",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Social Dashboard",
@@ -853,7 +853,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274198",
         "icon": "hat-wizard",
         "main-menu-position": 0,
@@ -869,7 +869,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "60eb8361b979b4001744b339",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Tags",
@@ -891,7 +891,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "60e73eefb979b40017448c4c",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Tasklists",
@@ -914,7 +914,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c27274188",
         "icon": "history",
         "main-menu-position": 0,
@@ -930,7 +930,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "61c69ddea8b6b4001aaf847c",
         "description": "",
         "icon": "graduation-cap",
@@ -980,7 +980,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "5ff747727005da1c2727419e",
         "icon": "users",
         "main-menu-position": 0,
@@ -1003,7 +1003,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "modules",
+        "array": "modules",
         "_id": "60e74833b979b40017448d12",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Wallet",

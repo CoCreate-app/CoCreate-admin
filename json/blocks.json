@@ -2,7 +2,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870038",
         "name": "Address",
         "organization_id": "5ff747727005da1c272740ab",
@@ -17,7 +17,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870039",
         "name": "Article",
         "organization_id": "5ff747727005da1c272740ab",
@@ -31,7 +31,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887003a",
         "name": "Audio",
         "organization_id": "5ff747727005da1c272740ab",
@@ -45,7 +45,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887003b",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -59,7 +59,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887003d",
         "name": "Button",
         "organization_id": "5ff747727005da1c272740ab",
@@ -73,7 +73,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887003e",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -87,7 +87,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887003f",
         "organization_id": "5ff747727005da1c272740ab",
         "position": 0,
@@ -101,7 +101,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870040",
         "name": "Checkbox",
         "organization_id": "5ff747727005da1c272740ab",
@@ -115,7 +115,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870041",
         "name": "Code",
         "organization_id": "5ff747727005da1c272740ab",
@@ -129,7 +129,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870042",
         "name": "Code Editor",
         "organization_id": "5ff747727005da1c272740ab",
@@ -143,7 +143,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870043",
         "name": "Code Mirror",
         "organization_id": "5ff747727005da1c272740ab",
@@ -157,7 +157,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870044",
         "name": "Columns ",
         "organization_id": "5ff747727005da1c272740ab",
@@ -171,7 +171,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870045",
         "organization_id": "5ff747727005da1c272740ab",
         "icon": "<svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"crop\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\" class=\"width:40px\"><path fill=\"currentColor\" d=\"M488 352h-40V109.25l59.31-59.31c6.25-6.25 6.25-16.38 0-22.63L484.69 4.69c-6.25-6.25-16.38-6.25-22.63 0L402.75 64H192v96h114.75L160 306.75V24c0-13.26-10.75-24-24-24H88C74.75 0 64 10.74 64 24v40H24C10.75 64 0 74.74 0 88v48c0 13.25 10.75 24 24 24h40v264c0 13.25 10.75 24 24 24h232v-96H205.25L352 205.25V488c0 13.25 10.75 24 24 24h48c13.25 0 24-10.75 24-24v-40h40c13.25 0 24-10.75 24-24v-48c0-13.26-10.75-24-24-24z\" class=\"\"></path></svg>",
@@ -185,7 +185,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870046",
         "name": "Div",
         "organization_id": "5ff747727005da1c272740ab",
@@ -199,7 +199,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870047",
         "name": "Domain",
         "organization_id": "5ff747727005da1c272740ab",
@@ -213,7 +213,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870048",
         "name": "Facebook",
         "organization_id": "5ff747727005da1c272740ab",
@@ -227,7 +227,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870049",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -241,7 +241,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887004a",
         "name": "Footer",
         "organization_id": "5ff747727005da1c272740ab",
@@ -255,7 +255,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887004b",
         "name": "Form",
         "organization_id": "5ff747727005da1c272740ab",
@@ -263,13 +263,13 @@
         "icon": "<svg class=\"width:40px\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"> <path d=\"M22,5.5 C22,5.2 21.5,5 20.75,5 L3.25,5 C2.5,5 2,5.2 2,5.5 L2,8.5 C2,8.8 2.5,9 3.25,9 L20.75,9 C21.5,9 22,8.8 22,8.5 L22,5.5 Z M21,8 L3,8 L3,6 L21,6 L21,8 Z\" fill-rule=\"nonzero\"></path>\n                                            <path d=\"M22,10.5 C22,10.2 21.5,10 20.75,10 L3.25,10 C2.5,10 2,10.2 2,10.5 L2,13.5 C2,13.8 2.5,14 3.25,14 L20.75,14 C21.5,14 22,13.8 22,13.5 L22,10.5 Z M21,13 L3,13 L3,11 L21,11 L21,13 Z\" fill-rule=\"nonzero\"></path>\n                                            <rect x=\"2\" y=\"15\" width=\"10\" height=\"3\" rx=\"0.5\"></rect>\n                                        </svg>    ",
         "category": "6115b5f5442fe32fc88700a8",
         "position": 2,
-        "html": "\t\t\t<form data-collection=\"\" data-document_id=\"\">\n\t\t\t\t<input type=\"hidden\" name=\"module_id\" data-pass_id=\"module_id\">\n\t\t\t\t<input type=\"text\" name=\"name\" class=\"floating-label\" placeholder=\"Name\">\n\t\t\t\t<textarea name=\"Description\" class=\"floating-label\" placeholder=\"Description\"></textarea>\n\t\t\t\t<button class=\"submitBtn padding:15px background:dodgerblue grow-hover border-radius:50%\">\n\t\t\t\t\t<i class=\"far fa-save\"></i> \n\t\t\t\t</button>\n\t\t\t</form>\n",
+        "html": "\t\t\t<form array=\"\" object=\"\">\n\t\t\t\t<input type=\"hidden\" name=\"module_id\" data-pass_id=\"module_id\">\n\t\t\t\t<input type=\"text\" name=\"name\" class=\"floating-label\" placeholder=\"Name\">\n\t\t\t\t<textarea name=\"Description\" class=\"floating-label\" placeholder=\"Description\"></textarea>\n\t\t\t\t<button class=\"submitBtn padding:15px background:dodgerblue grow-hover border-radius:50%\">\n\t\t\t\t\t<i class=\"far fa-save\"></i> \n\t\t\t\t</button>\n\t\t\t</form>\n",
         "type": "6115b5f5442fe32fc88700a8"
     },
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887004d",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Google Auth",
@@ -283,7 +283,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887004e",
         "name": "Grid",
         "organization_id": "5ff747727005da1c272740ab",
@@ -297,7 +297,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887004f",
         "name": "H1",
         "organization_id": "5ff747727005da1c272740ab",
@@ -311,7 +311,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870052",
         "name": "H1",
         "organization_id": "5ff747727005da1c272740ab",
@@ -325,7 +325,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870050",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -339,7 +339,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870051",
         "name": "H3",
         "organization_id": "5ff747727005da1c272740ab",
@@ -353,7 +353,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870053",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -366,7 +366,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887004c",
         "name": "Iframe",
         "organization_id": "5ff747727005da1c272740ab",
@@ -380,7 +380,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870054",
         "name": "Image",
         "organization_id": "5ff747727005da1c272740ab",
@@ -394,7 +394,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870056",
         "name": "Input",
         "organization_id": "5ff747727005da1c272740ab",
@@ -408,7 +408,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870057",
         "name": "Instagram",
         "organization_id": "5ff747727005da1c272740ab",
@@ -422,7 +422,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870058",
         "name": "Label",
         "organization_id": "5ff747727005da1c272740ab",
@@ -436,7 +436,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870059",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -450,7 +450,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887005a",
         "name": "Link",
         "organization_id": "5ff747727005da1c272740ab",
@@ -464,7 +464,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887005b",
         "name": "Link",
         "organization_id": "5ff747727005da1c272740ab",
@@ -477,7 +477,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887005c",
         "name": "LinkedIn",
         "organization_id": "5ff747727005da1c272740ab",
@@ -491,7 +491,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887005e",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -505,7 +505,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887005f",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -519,7 +519,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870060",
         "name": "Main",
         "organization_id": "5ff747727005da1c272740ab",
@@ -533,7 +533,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870061",
         "name": "Maps",
         "organization_id": "5ff747727005da1c272740ab",
@@ -547,7 +547,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870062",
         "name": "Nav",
         "organization_id": "5ff747727005da1c272740ab",
@@ -561,7 +561,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870063",
         "name": "Paragraph",
         "organization_id": "5ff747727005da1c272740ab",
@@ -575,7 +575,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870064",
         "name": "Pinterest",
         "organization_id": "5ff747727005da1c272740ab",
@@ -589,7 +589,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870065",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -603,7 +603,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870066",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -617,7 +617,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870067",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -631,7 +631,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887006a",
         "name": "Radio",
         "organization_id": "5ff747727005da1c272740ab",
@@ -645,7 +645,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887006b",
         "name": "Section",
         "organization_id": "5ff747727005da1c272740ab",
@@ -659,7 +659,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887006c",
         "name": "Select",
         "organization_id": "5ff747727005da1c272740ab",
@@ -673,7 +673,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887006d",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -686,7 +686,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887006e",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -700,7 +700,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887006f",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -714,7 +714,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870070",
         "name": "Span",
         "organization_id": "5ff747727005da1c272740ab",
@@ -728,7 +728,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870071",
         "name": "Stripe",
         "organization_id": "5ff747727005da1c272740ab",
@@ -742,7 +742,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870073",
         "organization_id": "5ff747727005da1c272740ab",
         "position": 1,
@@ -756,7 +756,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870074",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -770,7 +770,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870075",
         "name": "Text Editor",
         "organization_id": "5ff747727005da1c272740ab",
@@ -784,7 +784,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870076",
         "name": "Textarea",
         "icon": "<svg class=\"width:40px\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">\r\n                                            <path d=\"M22,7.5 C22,6.6 21.5,6 20.75,6 L3.25,6 C2.5,6 2,6.6 2,7.5 L2,16.5 C2,17.4 2.5,18 3.25,18 L20.75,18 C21.5,18 22,17.4 22,16.5 L22,7.5 Z M21,17 L3,17 L3,7 L21,7 L21,17 Z\"></path>\r\n                                            <polygon points=\"4 8 5 8 5 12 4 12\"></polygon>\r\n                                            <polygon points=\"19 7 20 7 20 17 19 17\"></polygon>\r\n                                            <polygon points=\"20 8 21 8 21 9 20 9\"></polygon>\r\n                                            <polygon points=\"20 15 21 15 21 16 20 16\"></polygon>\r\n                                        </svg></svg>",
@@ -798,7 +798,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870072",
         "organization_id": "5ff747727005da1c272740ab",
         "module_id": "",
@@ -812,7 +812,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870077",
         "organization_id": "5ff747727005da1c272740ab",
         "name": "Thead",
@@ -826,7 +826,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870078",
         "name": "Twilio",
         "organization_id": "5ff747727005da1c272740ab",
@@ -840,7 +840,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc8870079",
         "name": "Twitter",
         "organization_id": "5ff747727005da1c272740ab",
@@ -854,7 +854,7 @@
     {
         "storage": "indexeddb",
         "database": "5ff747727005da1c272740ab",
-        "collection": "blocks",
+        "array": "blocks",
         "_id": "6115b0fe442fe32fc887007a",
         "organization_id": "5ff747727005da1c272740ab",
         "position": 0,

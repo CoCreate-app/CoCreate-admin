@@ -22,9 +22,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -91,8 +91,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -111,9 +111,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -128,9 +128,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -139,8 +139,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection=""
-                        document_id=""
+                        array=""
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -156,27 +156,27 @@
                 <span>run</span>
                 <div
                     pass_to="column"
-                    pass-collection="tags"
-                    pass-filter-name="type"
+                    pass-array="tags"
+                    pass-filter-key="type"
                     pass-filter-value="60edaf79b979b4001744c6fe"
                     pass-refresh></div>
                 <div
                     pass_to="card"
-                    pass-collection="module_activities"
-                    pass-filter-name="type"
+                    pass-array="module_activities"
+                    pass-filter-key="type"
                     pass-refresh></div>
             </a>
 
             <div id="board" class="display:flex overflow:auto height:90vh">
                 <div
-                    collection="xsw2"
-                    document
-                    filter-name=""
+                    array="xsw2"
+                    object
+                    filter-key=""
                     filter-value=""
                     filter-operator="$eq"
-                    filter-sort-name="position"
+                    filter-sort-key="position"
                     sortable
-                    dnd-group-name="column"
+                    dnd-group-key="column"
                     droppable="true"
                     pass_id="column"
                     render-selector=":last-child"
@@ -184,21 +184,21 @@
                     <!-- Column -->
                     <div
                         template
-                        document_id="{{column._id}}"
+                        object="{{column._id}}"
                         class="width:300px margin:10px background:whitesmoke">
                         <div class="margin:15px font-size:18px color-dark-gray">
                             <span class="display:inline-block">
                                 <input
-                                    collection="{{column.collection}}"
-                                    document_id="{{column._id}}"
-                                    name="name"
+                                    array="{{column.array}}"
+                                    object="{{column._id}}"
+                                    key="name"
                                     placeholder="Name" />
                             </span>
                             <span class="float:right display:inline-block">
                                 <a
-                                    actions="deletedocument="
-                                    collection="{{column.collection}}"
-                                    document_id="{{column._id}}"
+                                    actions="deleteObject"
+                                    array="{{column.array}}"
+                                    object="{{column._id}}"
                                     ><i
                                         class="height:18px fill:#505050"
                                         src="/assets/svg/times.svg"></i
@@ -207,14 +207,14 @@
                         </div>
                         <div class="height:70vh padding:10px overflow:auto">
                             <div
-                                collection=""
-                                filter-name=""
+                                array=""
+                                filter-key=""
                                 filter-value="{{column._id}}"
                                 filter-operator="$eq"
-                                filter-sort-name="position"
+                                filter-sort-key="position"
                                 filter-sort-direction="asc"
                                 sortable
-                                dnd-group-name="card"
+                                dnd-group-key="card"
                                 pass_id="card"
                                 render-selector=":last-child"
                                 class="display:flex flex-direction:column height:100%">
@@ -222,13 +222,13 @@
                                 <div
                                     class="card margin-bottom:10px padding:10px background:white"
                                     template
-                                    value="{{document._id}}"
-                                    document_id="{{document._id}}">
+                                    value="{{object._id}}"
+                                    object="{{object._id}}">
                                     <div class="width:100%">
                                         <img
-                                            collection="{{document.collection}}"
-                                            document_id="{{document._id}}"
-                                            name="image"
+                                            array="{{object.array}}"
+                                            object="{{object._id}}"
+                                            key="image"
                                             src="https://via.placeholder.com/150"
                                             width="100%" />
                                     </div>
@@ -242,9 +242,9 @@
                                                 class="cocreate-badge round margin-right:10px font-size:10px padding:0px_20px"></span>
                                         </div>
                                         <p
-                                            collection="{{document.collection}}"
-                                            document_id="{{document._id}}"
-                                            name="name">
+                                            array="{{object.array}}"
+                                            object="{{object._id}}"
+                                            key="name">
                                             Card Name
                                         </p>
                                         <div
@@ -276,23 +276,23 @@
                                                     modal-height="375px"
                                                     modal-color="#229954">
                                                     <span
-                                                        collection="users"
-                                                        document_id=""
-                                                        name="name"
+                                                        array="users"
+                                                        object=""
+                                                        key="name"
                                                         class="avatar-name"></span>
                                                     <span class="avatar-image">
                                                         <img
-                                                            collection="users"
-                                                            document_id=""
-                                                            name="avatar"
+                                                            array="users"
+                                                            object=""
+                                                            key="avatar"
                                                             onerror="this.style.display='none'"
                                                             width="40px" />
                                                     </span>
                                                 </a>
                                                 <div
                                                     class="avatar-status"
-                                                    collection="users"
-                                                    document_id=""
+                                                    array="users"
+                                                    object=""
                                                     user-status="{'name':'status'}"></div>
                                             </div>
                                         </div>
@@ -322,11 +322,11 @@
                             </div>
                         </div>
                         <div class="margin:0px_15px padding:15px_0px">
-                            <form collection="{{document.collection}}">
+                            <form array="{{object.array}}">
                                 <input
                                     type="hidden"
-                                    document_id=""
-                                    name="column"
+                                    object=""
+                                    key="column"
                                     value="{{column._id}}" />
                                 <a actions="save, reset"
                                     ><i
@@ -344,9 +344,9 @@
                 <input
                     type="hidden"
                     pass_id="module_id"
-                    collection=""
-                    document_id=""
-                    name="module_id" />
+                    array=""
+                    object=""
+                    key="module_id" />
                 <button
                     actions="save, reset"
                     class="position:absolute bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">

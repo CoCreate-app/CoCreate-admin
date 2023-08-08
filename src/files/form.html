@@ -22,9 +22,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -91,8 +91,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -111,9 +111,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -128,9 +128,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -139,8 +139,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection="files"
-                        document_id=""
+                        array="files"
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -151,35 +151,35 @@
         </nav>
 
         <main class="padding:10px" content_id="content">
-            <form pass_id="form-fields" collection="files" document_id="">
+            <form pass_id="form-fields" array="files" object="">
                 <div class="form-fields">
                     <input
                         type="hidden"
-                        name="module_id"
+                        key="module_id"
                         value=""
                         pass_id="module_id" />
                     <floating-label>
                         <input
                             type="text"
-                            name="name"
+                            key="name"
                             class="floating-label"
                             placeholder="File Name" />
                     </floating-label>
                     <floating-label>
                         <cocreate-select
-                            name="domains"
+                            key="domains"
                             class="floating-label"
                             placeholder="domains"
                             multiple>
                             <input
                                 placeholder="Search"
-                                render-parent="[collection]"
+                                render-parent="[array]"
                                 render-search
                                 tags="true" />
                             <cc-options
-                                collection="organizations"
-                                name="domains"
-                                filter-name="_id"
+                                array="organizations"
+                                key="domains"
+                                filter-key="_id"
                                 filter-value="5ff747727005da1c272740ab"
                                 filter-operator="$eq"
                                 render-selector="[template]"
@@ -196,48 +196,48 @@
                     <floating-label>
                         <input
                             type="text"
-                            name="path"
+                            key="path"
                             placeholder="path"
                             class="floating-label" />
                     </floating-label>
                     <floating-label>
                         <input
                             type="text"
-                            name="directory"
+                            key="directory"
                             placeholder="directory"
                             class="floating-label" />
                     </floating-label>
                     <floating-label>
                         <textarea
-                            name="src"
+                            key="src"
                             placeholder="src"
                             class="floating-label"></textarea>
                     </floating-label>
                     <floating-label>
                         <input
                             type="text"
-                            name="content-type"
+                            key="content-type"
                             placeholder="content-type"
                             class="floating-label" />
                     </floating-label>
                     <floating-label>
                         <cocreate-select
-                            name="tags"
+                            key="tags"
                             placeholder="Tags"
                             sortable
                             class="floating-label"
                             multiple>
                             <input
                                 placeholder="Search"
-                                filter-parent="collection"
+                                filter-parent="array"
                                 filter-search />
                             <div
                                 filter-next
-                                filter-name="type"
+                                filter-key="type"
                                 filter-value="type"></div>
                             <cc-options
-                                collection="tags"
-                                filter-name="module_id"
+                                array="tags"
+                                filter-key="module_id"
                                 filter-value="5ff747727005da1c2727419a"
                                 pass_id="module_id"
                                 render-selector="[template]"
@@ -245,62 +245,61 @@
                                 <cc-option
                                     class="display:flex"
                                     template
-                                    value="{{document._id}}">
-                                    <h4>{{document.name}}</h4>
+                                    value="{{object._id}}">
+                                    <h4>{{object.name}}</h4>
                                 </cc-option>
                             </cc-options>
                         </cocreate-select>
                     </floating-label>
                     <input
                         type="checkbox"
-                        name="public"
+                        key="public"
                         value="true"
                         class="margin-top:10px" /><label> Public</label>
                     <floating-label>
                         <input
                             type="text"
-                            name="collection"
+                            key="array"
                             class="floating-label"
-                            placeholder="collection" />
+                            placeholder="array" />
                     </floating-label>
                     <floating-label>
                         <input
                             type="text"
-                            name="module_id"
+                            key="module_id"
                             class="floating-label"
-                            placeholder="document_id" />
+                            placeholder="object" />
                     </floating-label>
                     <floating-label>
                         <input
                             type="text"
-                            name="name"
+                            key="name"
                             class="floating-label"
                             placeholder="name" />
                     </floating-label>
                     <floating-label>
                         <cocreate-select
-                            name="module_id"
+                            key="module_id"
                             placeholder="Modules"
                             sortable
                             class="floating-label"
                             multiple>
                             <input
                                 placeholder="Search"
-                                render-parent="[collection]"
+                                render-parent="[array]"
                                 render-search />
                             <cc-options
-                                collection="modules"
-                                filter-sort-name="name"
+                                array="modules"
+                                filter-sort-key="name"
                                 render-selector="[template]"
                                 class="overflow:auto">
-                                <cc-option template value="{{document._id}}">
+                                <cc-option template value="{{object._id}}">
                                     <div class="display:flex padding:5px">
                                         <span class="width:25px"
-                                            >{{document.icon}}</span
+                                            >{{object.icon}}</span
                                         >
-                                        <h4
-                                            collection="{{document.collection}}">
-                                            {{document.name}}
+                                        <h4 array="{{object.array}}">
+                                            {{object.name}}
                                         </h4>
                                     </div>
                                 </cc-option>
@@ -309,29 +308,28 @@
                     </floating-label>
                     <floating-label>
                         <cocreate-select
-                            name="website_id"
+                            key="website_id"
                             placeholder="Website"
                             sortable
                             class="floating-label">
                             <input
                                 placeholder="Search"
-                                render-parent="[collection]"
+                                render-parent="[array]"
                                 render-search />
                             <cc-options
-                                collection="module_activities"
-                                filter-name="module_id"
+                                array="module_activities"
+                                filter-key="module_id"
                                 filter-value="5ff747727005da1c27274185"
-                                filter-sort-name="name"
+                                filter-sort-key="name"
                                 render-selector="[template]"
                                 class="overflow:auto">
-                                <cc-option template value="{{document._id}}">
+                                <cc-option template value="{{object._id}}">
                                     <div class="display:flex padding:5px">
                                         <span class="width:25px"
-                                            >{{document.icon}}</span
+                                            >{{object.icon}}</span
                                         >
-                                        <h4
-                                            collection="{{document.collection}}">
-                                            {{document.name}}
+                                        <h4 array="{{object.array}}">
+                                            {{object.name}}
                                         </h4>
                                     </div>
                                 </cc-option>
@@ -345,7 +343,7 @@
                             type="file"
                             directory
                             render-closest="#uploader; [template]"
-                            collection="files" />
+                            array="files" />
 
                         <button actions="upload">upload</button>
                     </form>

@@ -17,9 +17,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -96,8 +96,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id="60e7483fb979b40017448d13"
+                            pass-array="modules"
+                            pass-object="60e7483fb979b40017448d13"
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -116,9 +116,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection="files"
-                            pass-document_id="60de0fb414b5ab0c2dd2febf"
-                            pass-name="src"
+                            pass-array="files"
+                            pass-object="60de0fb414b5ab0c2dd2febf"
+                            pass-key="src"
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -133,9 +133,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection="files"
-                            pass-document_id="60de0fb414b5ab0c2dd2febf"
-                            pass-name="src"
+                            pass-array="files"
+                            pass-object="60de0fb414b5ab0c2dd2febf"
+                            pass-key="src"
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -152,7 +152,7 @@
                             src="/assets/svg/plus.svg"></i>
                         <div
                             pass_id="datatable"
-                            pass-collection=""
+                            pass-array=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -173,9 +173,9 @@
             <!-- Fetch and Render Product list -->
             <div
                 class="display:flex flex-wrap:wrap"
-                collection="blocks"
+                array="blocks"
                 filter-limit="12"
-                filter-sort-name="name"
+                filter-sort-key="name"
                 filter-sort-direction="asc"
                 render-selector="[template]">
                 <!-- Product Template -->
@@ -186,8 +186,8 @@
                     <div class="position:relative">
                         <img
                             class="cursor:pointer"
-                            name="name"
-                            document_id=""
+                            key="name"
+                            object=""
                             src="http://via.placeholder.com/250x250/BF00FF/ffffff/"
                             width="100%"
                             alt="..." />
@@ -210,7 +210,7 @@
                         </div>
                     </div>
                     <div class="padding:15px">
-                        <h5>{{document.name}}</h5>
+                        <h5>{{object.name}}</h5>
                         <!-- ratings-container Start -->
                         <div class="margin:4px_0">
                             <span class="color:#555"
@@ -241,16 +241,16 @@
                         </div>
                         <p
                             class="margin:4px_0"
-                            collection="{{document.collection}}"
-                            document_id="{{document._id}}"
-                            name="color">
+                            array="{{object.array}}"
+                            object="{{object._id}}"
+                            key="color">
                             blue
                         </p>
-                        <p class="" value="{{document.price}}">$59</p>
+                        <p class="" value="{{object.price}}">$59</p>
                         <p
                             class=""
-                            document_id="_id"
-                            name="description"
+                            object="_id"
+                            key="description"
                             value="description"></p>
 
                         <a
@@ -295,9 +295,9 @@
                     <a
                         actions="pass, openModal"
                         pass_to="render"
-                        collection="website-pages"
-                        document_id=""
-                        pass-name="src"
+                        array="website-pages"
+                        object=""
+                        pass-key="src"
                         modal-width="900px"
                         modal-color="#229954">
                         <i

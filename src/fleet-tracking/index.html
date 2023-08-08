@@ -13,9 +13,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8ff91249e639db31600"
-            name="src"
+            array="files"
+            object="637bc8ff91249e639db31600"
+            key="src"
             type="text/css" />
 
         <link rel="manifest" href="/manifest.webmanifest" />
@@ -133,8 +133,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -153,9 +153,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -170,9 +170,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -211,21 +211,21 @@
                                 class="avatar round"
                                 actions="pass, openModal"
                                 modal-src="./user-profile/user-profile.html"
-                                pass-collection="modules"
-                                pass-document_id="5dd010bccbc25f0cdb1a4d9f"
+                                pass-array="modules"
+                                pass-object="5dd010bccbc25f0cdb1a4d9f"
                                 pass_to="render"
                                 modal-width="300px"
                                 modal-height="375px"
                                 modal-color="#229954">
                                 <span
-                                    collection="users"
-                                    document_id="{{userId}}"
-                                    name="name"
+                                    array="users"
+                                    object="{{userId}}"
+                                    key="name"
                                     class="first-letter avatar-name"></span>
                                 <span
-                                    collection="users"
-                                    document_id="{{userId}}"
-                                    name="profile_image"
+                                    array="users"
+                                    object="{{userId}}"
+                                    key="profile_image"
                                     class="avatar-image">
                                     <img
                                         src="images/Velazquez.jpg"
@@ -234,8 +234,8 @@
                             </a>
                             <div
                                 class="avatar-status"
-                                collection="users"
-                                document_id="{{userId}}"
+                                array="users"
+                                object="{{userId}}"
                                 user-status="{'name':'status'}"></div>
                         </div>
 
@@ -320,7 +320,7 @@
                                 placeholder="Latitude"
                                 data-place_id="0" />
                         </div>
-                        <div sortable class="waypoints" dnd-group-name="Sort">
+                        <div sortable class="waypoints" dnd-group-key="Sort">
                             <div id="waypoint" class="template Sort">
                                 <div
                                     style="
@@ -372,7 +372,7 @@
                             style="display: block"
                             >Add waypoint</a
                         >
-                        <!--<div sortable class="waypoints" dnd-group-name="Sort">-->
+                        <!--<div sortable class="waypoints" dnd-group-key="Sort">-->
                         <!--    <div id="waypoint1" class="template Sort">-->
                         <!--        <div style="display:inline-block;width: calc(100% - 20px);">-->
                         <!--            <div>-->
@@ -425,7 +425,7 @@
                             <div class="margin-right:10px">
                                 <input
                                     type="radio"
-                                    name="travel_mode"
+                                    key="travel_mode"
                                     data-map_id="0"
                                     data-direction="travelMode"
                                     value="DRIVING"
@@ -435,7 +435,7 @@
                             <div class="margin-right:10px">
                                 <input
                                     type="radio"
-                                    name="travel_mode"
+                                    key="travel_mode"
                                     data-map_id="0"
                                     data-direction="travelMode"
                                     value="BICYCLING" />
@@ -444,7 +444,7 @@
                             <div class="margin-right:10px">
                                 <input
                                     type="radio"
-                                    name="travel_mode"
+                                    key="travel_mode"
                                     data-map_id="0"
                                     data-direction="travelMode"
                                     value="TRANSIT" />
@@ -453,7 +453,7 @@
                             <div class="margin-right:10px">
                                 <input
                                     type="radio"
-                                    name="travel_mode"
+                                    key="travel_mode"
                                     data-map_id="0"
                                     data-direction="travelMode"
                                     value="WALKING" />
@@ -485,7 +485,7 @@
                                 <div class="margin-right:10px">
                                     <input
                                         type="checkbox"
-                                        name="transit_modes"
+                                        key="transit_modes"
                                         data-map_id="0"
                                         data-direction="transit_modes"
                                         value="BUS" />
@@ -494,7 +494,7 @@
                                 <div class="margin-right:10px">
                                     <input
                                         type="checkbox"
-                                        name="transit_modes"
+                                        key="transit_modes"
                                         data-map_id="0"
                                         data-direction="transit_modes"
                                         value="RAIL" />
@@ -503,7 +503,7 @@
                                 <div class="margin-right:10px">
                                     <input
                                         type="checkbox"
-                                        name="transit_modes"
+                                        key="transit_modes"
                                         data-map_id="0"
                                         data-direction="transit_modes"
                                         value="SUBWAY" />
@@ -512,7 +512,7 @@
                                 <div class="margin-right:10px">
                                     <input
                                         type="checkbox"
-                                        name="transit_modes"
+                                        key="transit_modes"
                                         data-map_id="0"
                                         data-direction="transit_modes"
                                         value="TRAIN" />
@@ -521,7 +521,7 @@
                                 <div class="margin-right:10px">
                                     <input
                                         type="checkbox"
-                                        name="transit_modes"
+                                        key="transit_modes"
                                         data-map_id="0"
                                         data-direction="transit_modes"
                                         value="TRAM" />
@@ -535,7 +535,7 @@
                                 <div class="margin-right:10px">
                                     <input
                                         type="radio"
-                                        name="routingPreference"
+                                        key="routingPreference"
                                         data-map_id="0"
                                         data-direction="routingPreference"
                                         value="FEWER_TRANSFERS" />
@@ -544,7 +544,7 @@
                                 <div class="margin-right:10px">
                                     <input
                                         type="radio"
-                                        name="routingPreference"
+                                        key="routingPreference"
                                         data-map_id="0"
                                         data-direction="routingPreference"
                                         value="LESS_WALKING" />
@@ -569,21 +569,21 @@
                             <br />
                             <input
                                 type="radio"
-                                name="trafficModel"
+                                key="trafficModel"
                                 data-map_id="0"
                                 data-direction="trafficModel"
                                 value="bestguess" />
                             <label>bestguess</label>
                             <input
                                 type="radio"
-                                name="trafficModel"
+                                key="trafficModel"
                                 data-map_id="0"
                                 data-direction="trafficModel"
                                 value="pessimistic" />
                             <label>pessimistic</label>
                             <input
                                 type="radio"
-                                name="trafficModel"
+                                key="trafficModel"
                                 data-map_id="0"
                                 data-direction="trafficModel"
                                 value="optimistic" />
@@ -593,14 +593,14 @@
                         <br />
                         <input
                             type="radio"
-                            name="unit_system"
+                            key="unit_system"
                             data-map_id="0"
                             data-direction="unitSystem"
                             value="METRIC" />
                         <label>METRIC</label>
                         <input
                             type="radio"
-                            name="unit_system"
+                            key="unit_system"
                             data-map_id="0"
                             data-direction="unitSystem"
                             value="IMPERIAL" />

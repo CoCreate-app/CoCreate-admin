@@ -22,9 +22,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -91,8 +91,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -111,9 +111,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -128,9 +128,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -139,8 +139,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection=""
-                        document_id=""
+                        array=""
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -156,13 +156,13 @@
                 <div
                     class="display:flex flex-wrap:nowrap flex-direction:row"
                     sortable
-                    dnd-group-name="stage"
-                    collection=""
-                    document
-                    filter-name="module_id"
+                    dnd-group-key="stage"
+                    array=""
+                    object
+                    filter-key="module_id"
                     filter-value=""
                     filter-operator="$eq"
-                    filter-sort-name="stage_position"
+                    filter-sort-key="stage_position"
                     filter-sort-direction="asc"
                     render-selector="[template]"
                     render_id="stage"
@@ -173,14 +173,14 @@
                         class="margin:10px background:whitesmoke max-width:300px"
                         template
                         eid="{{stage._id}}"
-                        document_id="{{stage._id}}">
+                        object="{{stage._id}}">
                         <div class="margin:15px font-size:18px color-dark-gray">
                             <span class="display:inline-block">
                                 <input
                                     class="input_field"
-                                    collection="{{document.collection}}"
-                                    document_id="{{stage._id}}"
-                                    name="name"
+                                    array="{{object.array}}"
+                                    object="{{stage._id}}"
+                                    key="name"
                                     id="stage-name"
                                     placeholder="Stage" />
                             </span>
@@ -189,8 +189,8 @@
                                     clone_id="stage"
                                     <a
                                     actions="deleteDocument, closeModal"
-                                    collection="{{document.collection}}"
-                                    document_id="{{stage._id}}"
+                                    array="{{object.array}}"
+                                    object="{{stage._id}}"
                                     ><i
                                         class="height:18px fill:#505050"
                                         src="/assets/svg/times.svg"></i
@@ -201,26 +201,26 @@
                             <div
                                 class="display:flex flex-direction:column height:100%"
                                 sortable
-                                dnd-group-name="card"
-                                collection="{{document.collection}}"
-                                filter-name="stage"
+                                dnd-group-key="card"
+                                array="{{object.array}}"
+                                filter-key="stage"
                                 filter-value="{{stage._id}}"
                                 filter-operator="$eq"
                                 filter-limit=""
-                                filter-sort-name="stage-index_position"
+                                filter-sort-key="stage-index_position"
                                 filter-sort-direction="asc"
                                 render-selector="[template]">
                                 <!-- Card -->
                                 <div
                                     class="card margin-bottom:10px padding:10px background:white"
                                     template
-                                    value="{{document._id}}"
-                                    document_id="{{document._id}}">
+                                    value="{{object._id}}"
+                                    object="{{object._id}}">
                                     <div class="width:100%">
                                         <img
-                                            collection="{{document.collection}}"
-                                            document_id="{{document._id}}"
-                                            name="image"
+                                            array="{{object.array}}"
+                                            object="{{object._id}}"
+                                            key="image"
                                             src="https://via.placeholder.com/150"
                                             width="100%" />
                                     </div>
@@ -234,9 +234,9 @@
                                                 class="cocreate-badge round margin-right:10px font-size:10px padding:0px_20px"></span>
                                         </div>
                                         <p
-                                            collection="{{document.collection}}"
-                                            document_id="{{document._id}}"
-                                            name="name">
+                                            array="{{object.array}}"
+                                            object="{{object._id}}"
+                                            key="name">
                                             Card Name
                                         </p>
                                         <div
@@ -268,23 +268,23 @@
                                                     modal-height="375px"
                                                     modal-color="#229954">
                                                     <span
-                                                        collection="users"
-                                                        document_id=""
-                                                        name="name"
+                                                        array="users"
+                                                        object=""
+                                                        key="name"
                                                         class="avatar-name"></span>
                                                     <span class="avatar-image">
                                                         <img
-                                                            collection="users"
-                                                            document_id=""
-                                                            name="avatar"
+                                                            array="users"
+                                                            object=""
+                                                            key="avatar"
                                                             onerror="this.style.display='none'"
                                                             width="40px" />
                                                     </span>
                                                 </a>
                                                 <div
                                                     class="avatar-status"
-                                                    collection="users"
-                                                    document_id=""
+                                                    array="users"
+                                                    object=""
                                                     user-status="{'name':'status'}"></div>
                                             </div>
                                         </div>
@@ -314,11 +314,11 @@
                             </div>
                         </div>
                         <div class="margin:0px_15px padding:15px_0px">
-                            <form collection="{{document.collection}}">
+                            <form array="{{object.array}}">
                                 <input
                                     type="hidden"
-                                    document_id=""
-                                    name="stage"
+                                    object=""
+                                    key="stage"
                                     value="{{stage._id}}" />
                                 <a actions="save, reset"
                                     ><i
@@ -336,9 +336,9 @@
                 <input
                     type="hidden"
                     pass_id="module_id"
-                    collection=""
-                    document_id=""
-                    name="module_id" />
+                    array=""
+                    object=""
+                    key="module_id" />
                 <button
                     actions="save, reset"
                     class="position:absolute bottom:15px right:15px background:dodgerblue border-radius:50% grow-hover">

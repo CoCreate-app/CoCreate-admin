@@ -13,9 +13,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -94,8 +94,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -114,9 +114,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -131,16 +131,16 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
 
                 <!-- Datatable Controls -->
                 <li class="margin-right:15px">
-                    <a actions="deleteDocuments" collection=""
+                    <a actions="deleteDocuments" array=""
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/trash-alt.svg"></i
@@ -172,7 +172,7 @@
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a actions="import" collection="" pass_id="datatable"
+                    <a actions="import" array="" pass_id="datatable"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/file-upload.svg"></i
@@ -205,14 +205,14 @@
         <div content_id="content" class="padding:5px">
             <div
                 class="domEditor main-height"
-                name="tasklists1"
-                collection="test"
-                document_id="5f075add24d24a175fca54e4"
+                key="tasklists1"
+                array="test"
+                object="5f075add24d24a175fca54e4"
                 pass_id="me1234">
-                <!--<div class="domEditor main-height" name="tasklists" collection="test" pass_id="me1234" >-->
-                <!--<div sortable class="display:flex align-items:flex-start" dnd-group-name="tasklist" -->
+                <!--<div class="domEditor main-height" key="tasklists" array="test" pass_id="me1234" >-->
+                <!--<div sortable class="display:flex align-items:flex-start" dnd-group-key="tasklist" -->
                 <div
-                    dnd-group-name="tasklist"
+                    dnd-group-key="tasklist"
                     droppable="true"
                     eid="tasklist_container">
                     <!-- sortable card -->
@@ -223,10 +223,10 @@
                         <div class="margin:15px font-size:18px color-dark-gray">
                             <span class="display:inline-block">
                                 <input
-                                    collection="module_activities"
+                                    array="module_activities"
                                     pass_id="form-fields"
-                                    document_id=""
-                                    name="clone-name"
+                                    object=""
+                                    key="clone-name"
                                     id="stage-name"
                                     class="input_field"
                                     placeholder="Tasklist" />
@@ -253,9 +253,9 @@
                                 </div>
                             </div>
                             <form
-                                collection="module_activities"
+                                array="module_activities"
                                 sortable
-                                dnd-group-name="task-items"
+                                dnd-group-key="task-items"
                                 id="testForm">
                                 <!-- sortable task item -->
                                 <div
@@ -264,14 +264,14 @@
                                     <label class="checkbox">
                                         <input
                                             type="checkbox"
-                                            name="taskcheck" /><span
+                                            key="taskcheck" /><span
                                             class="mark display:inline-block"></span>
                                     </label>
                                     <div class="flex-grow:1">
                                         <input
                                             class="floating-label"
-                                            document_id="5d8c79e7e4be424681b5e48d"
-                                            name="taskname"
+                                            object="5d8c79e7e4be424681b5e48d"
+                                            key="taskname"
                                             placeholder="Task Name" />
                                     </div>
                                     <a

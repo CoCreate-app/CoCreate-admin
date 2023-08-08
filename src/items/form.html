@@ -17,9 +17,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -86,8 +86,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -106,9 +106,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -123,9 +123,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -134,8 +134,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection="module_activities"
-                        document_id=""
+                        array="module_activities"
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -147,23 +147,20 @@
 
         <!-- Main Content -->
         <main class="padding:10px" content_id="content">
-            <form
-                pass_id="form-fields"
-                collection="module_activities"
-                document_id="">
+            <form pass_id="form-fields" array="module_activities" object="">
                 <input
                     type="hidden"
-                    name="module_id"
+                    key="module_id"
                     pass_id="module_id"
                     value />
                 <input
                     type="text"
-                    name="type"
+                    key="type"
                     placeholder="Choice Type"
                     class="floating-label" />
 
                 <select
-                    name="Digital goods types"
+                    key="Digital goods types"
                     placeholder="Digital goods types"
                     class="floating-label">
                     <option
@@ -177,7 +174,7 @@
                 </select>
 
                 <select
-                    name="Category"
+                    key="Category"
                     placeholder="Category"
                     class="floating-label">
                     <option label="Example" value="Example">Example</option>
@@ -187,7 +184,7 @@
                 </select>
 
                 <select
-                    name="Groups"
+                    key="Groups"
                     placeholder="Groups"
                     class="floating-label">
                     <option label="Example" value="Example">Example</option>
@@ -198,86 +195,86 @@
 
                 <!-- CoCreate Select field multiple documents -->
                 <cocreate-select
-                    name="related_items"
+                    key="related_items"
                     placeholder="Related Items:"
                     sortable
                     class="floating-label"
                     multiple>
                     <input
                         placeholder="Search"
-                        filter-parent="collection"
+                        filter-parent="array"
                         filter-search />
                     <!-- Fetches and displays results using template -->
                     <ul
-                        collection=".*"
+                        array=".*"
                         render-selector="[template]"
                         class="options overflow:auto">
                         <!-- template -->
                         <li class="option template" id="option1">
                             <h3
-                                collection="users"
-                                document_id="{{document._id}}"
-                                name="name">
+                                array="users"
+                                object="{{object._id}}"
+                                key="name">
                                 user name
                             </h3>
                             <h5
-                                collection="users"
-                                document_id="data._id"
-                                name="email"></h5>
+                                array="users"
+                                object="data._id"
+                                key="email"></h5>
                         </li>
                     </ul>
                 </cocreate-select>
 
                 <input
                     type="text"
-                    name="name"
+                    key="name"
                     placeholder="Name"
                     class="floating-label" />
 
                 <textarea
-                    name="short_description"
+                    key="short_description"
                     placeholder="Short Description"
                     class="floating-label"></textarea>
 
                 <input
                     type="text"
-                    name="SKU"
+                    key="SKU"
                     placeholder="SKU"
                     class="floating-label" />
 
                 <input
                     type="text"
-                    name="Status"
+                    key="Status"
                     placeholder="Status"
                     class="floating-label" />
 
                 <input
                     type="text"
-                    name="Weight"
+                    key="Weight"
                     placeholder="Weight"
                     class="floating-label" />
 
                 <input
                     type="text"
-                    name="Unit Price"
+                    key="Unit Price"
                     placeholder="Unit Price"
                     class="floating-label" />
 
                 <input
                     type="text"
-                    name="Sales Price"
+                    key="Sales Price"
                     placeholder="Sales Price"
                     class="floating-label" />
 
                 <input
                     type="text"
-                    name="Tax"
+                    key="Tax"
                     placeholder="0%"
                     class="floating-label" />
 
                 <div class="Groups">
                     <select
-                        name="Usage Unit"
+                        key="Usage Unit"
                         placeholder="Usage Unit"
                         class="floating-label">
                         <option label="Example" value="Example">Example</option>
@@ -294,37 +291,37 @@
                 </div>
 
                 <textarea
-                    name="short_description"
+                    key="short_description"
                     placeholder="Full Description..."
                     class="floating-label"></textarea>
 
-                <input type="file" name="upload[]" placeholder="File Upload" />
+                <input type="file" key="upload[]" placeholder="File Upload" />
 
                 <input
                     type="text"
-                    name="Video Url"
+                    key="Video Url"
                     placeholder="Video Url"
                     class="floating-label" />
 
                 <input
                     type="text"
-                    name="Product Tag"
+                    key="Product Tag"
                     placeholder="Product Tag(comma seprated)"
                     class="floating-label" />
 
                 <input
                     type="text"
-                    name="Meta Title"
+                    key="Meta Title"
                     placeholder="Meta Title"
                     class="floating-label" />
 
                 <textarea
-                    name="Meta_description"
+                    key="Meta_description"
                     placeholder="Meta Description"
                     class="floating-label"></textarea>
 
                 <textarea
-                    name="Meta_keywords"
+                    key="Meta_keywords"
                     placeholder="Meta keywords"
                     class="floating-label"></textarea>
 

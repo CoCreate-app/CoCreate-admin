@@ -17,27 +17,27 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
 
     <body class="padding:20px">
-        <form pass_id="form-fields" collection="permissions" document_id="">
-            <input class="floating-label" name="key" placeholder="key" />
-            <input class="floating-label" name="type" placeholder="type" />
+        <form pass_id="form-fields" array="permissions" object="">
+            <input class="floating-label" key="key" placeholder="key" />
+            <input class="floating-label" key="type" placeholder="type" />
             <div
                 class="floating-label padding:10px active"
                 placeholder="Super Admin"
                 active>
-                <input type="radio" name="admin" value="true" />
+                <input type="radio" key="admin" value="true" />
             </div>
             <select
                 class="floating-label"
                 placeholder="Contact"
-                name="collections.contact"
+                key="arrays.contact"
                 multiple>
                 <option value="create">Create</option>
                 <option value="read">Read</option>
@@ -46,25 +46,19 @@
             </select>
 
             <lable>Test Collection</lable> <br />
-            <input
-                type="checkbox"
-                name="collections.test"
-                value="create" />Create <br />
-            <input type="checkbox" name="collections.test" value="read" />Read
+            <input type="checkbox" key="arrays.test" value="create" />Create
             <br />
-            <input
-                type="checkbox"
-                name="collections.test"
-                value="update" />Update <br />
-            <input
-                type="checkbox"
-                name="collections.test"
-                value="delete" />Delete <br />
+            <input type="checkbox" key="arrays.test" value="read" />Read
+            <br />
+            <input type="checkbox" key="arrays.test" value="update" />Update
+            <br />
+            <input type="checkbox" key="arrays.test" value="delete" />Delete
+            <br />
 
             <select
                 class="floating-label"
                 placeholder="Stripe"
-                name="plugins.stripe"
+                key="plugins.stripe"
                 multiple>
                 <option value="getBalance">getBalance</option>
                 <option value="getCustomer">getCustomers</option>

@@ -13,9 +13,9 @@
         <link
             rel="stylesheet"
             href="./index.css"
-            collection="files"
-            document_id="60972231624235187e4d6979"
-            name="src"
+            array="files"
+            object="60972231624235187e4d6979"
+            key="src"
             type="text/css"
             save="true"
             parse="true" />
@@ -71,9 +71,9 @@
                             <p id="ava1">
                                 Hey,
                                 <span
-                                    document_id="{{userId}}"
-                                    name="name"
-                                    collection="users"
+                                    object="{{userId}}"
+                                    key="name"
+                                    array="users"
                                     >First Name</span
                                 >! Enter your new organization's name. Don't
                                 worry if you are not sure, you can allways
@@ -82,9 +82,9 @@
                             <p id="ava2" hidden>
                                 Great,
                                 <span
-                                    document_id="{{userId}}"
-                                    name="name"
-                                    collection="users"
+                                    object="{{userId}}"
+                                    key="name"
+                                    array="users"
                                     >First Name</span
                                 >! Let’s choose an industry so I can begin to
                                 understand what we will be doing.
@@ -120,9 +120,9 @@
                                 <input
                                     type="text"
                                     id="org-name"
-                                    collection="organizations"
-                                    document_id=""
-                                    name="name"
+                                    array="organizations"
+                                    object=""
+                                    key="name"
                                     placeholder="Organization Name"
                                     class="floating-label" />
 
@@ -156,16 +156,16 @@
                                 <cocreate-select
                                     sortable
                                     class="floating-label"
-                                    collection="organizations"
-                                    document_id=""
-                                    name="industry"
+                                    array="organizations"
+                                    object=""
+                                    key="industry"
                                     placeholder="Industry">
                                     <input
                                         placeholder="Search"
                                         filter-search
                                         filter-next />
                                     <ul
-                                        collection="industries"
+                                        array="industries"
                                         pass_to="me1234"
                                         render-selector="[template]"
                                         class="options overflow:auto">
@@ -174,9 +174,9 @@
                                             class="option"
                                             pass_id="me1234">
                                             <h5
-                                                collection="industries"
-                                                document_id=""
-                                                name="industry_name"
+                                                array="industries"
+                                                object=""
+                                                key="industry_name"
                                                 pass_id="me1234">
                                                 industry name
                                             </h5>
@@ -221,9 +221,9 @@
                                 <input
                                     type="hidden"
                                     id="key"
-                                    collection="organizations"
-                                    document_id=""
-                                    name="key"
+                                    array="organizations"
+                                    object=""
+                                    key="key"
                                     placeholder="API Key"
                                     uuid="32"
                                     readonly />
@@ -259,7 +259,7 @@
         <script>
             var getCurrentOrgForDashboardLink = false;
 
-            let dashboardLink = document.querySelector(".dashboardLink");
+            let dashboardLink = object.querySelector(".dashboardLink");
 
             dashboardLink.addEventListener("click", function (e) {
                 e.preventDefault();
@@ -273,7 +273,7 @@
                         if (getCurrentOrgForDashboardLink) {
                             let href = dashboardLink.getAttribute("href");
 
-                            document.location.href = href;
+                            object.location.href = href;
 
                             clearInterval(timer);
                         }

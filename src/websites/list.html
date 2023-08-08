@@ -17,9 +17,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -92,8 +92,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -112,9 +112,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -129,16 +129,16 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
 
                 <!-- Datatable Controls -->
                 <li class="margin-right:15px">
-                    <a actions="deleteDocuments" collection=""
+                    <a actions="deleteDocuments" array=""
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/trash-alt.svg"></i
@@ -170,7 +170,7 @@
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a actions="import" collection="" pass_id="datatable"
+                    <a actions="import" array="" pass_id="datatable"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/file-upload.svg"></i
@@ -203,11 +203,11 @@
         <main content_id="content" class="padding:15px">
             <div
                 class="display:grid gap:15px grid-template-columns:repeat(auto-fill,minmax(290px,1fr))"
-                collection="apps"
-                document
-                filter-name="module_id"
+                array="apps"
+                object
+                filter-key="module_id"
                 filter-value=""
-                filter-sort-name="name"
+                filter-sort-key="name"
                 filter-sort-direction="asc"
                 pass_id="datatable"
                 render-selector="[template]">
@@ -215,14 +215,14 @@
                     template
                     pass_id="datatable"
                     class="card template align-items:center grid-column-end:span_1 box-shadow-hover"
-                    document_id="{{document._id}}"
+                    object="{{object._id}}"
                     toggle="selected">
                     <div class="position:relative">
                         <img
                             src="/assets/website-preview.png"
-                            collection="{{document.collection}}"
-                            document_id="{{document._id}}"
-                            name="image"
+                            array="{{object.array}}"
+                            object="{{object._id}}"
+                            key="image"
                             width="100%" />
 
                         <button
@@ -234,9 +234,9 @@
                                     class="display:flex height:18px fill:#505050"
                                     src="/assets/svg/palette.svg"></i>
                                 <div
-                                    pass-collection="files"
-                                    pass-document_id="{{document.home}}"
-                                    pass-name="src"
+                                    pass-array="files"
+                                    pass-object="{{object.home}}"
+                                    pass-key="src"
                                     pass_to="builder"></div>
                             </a>
                         </button>
@@ -247,36 +247,34 @@
                                 modal-src="./websites/form.html"
                                 modal-width="320px"
                                 modal-color="#229954">
-                                <span class="color:white"
-                                    >{{document.name}}</span
-                                >
+                                <span class="color:white">{{object.name}}</span>
                                 <div
-                                    pass-collection="{{document.collection}}"
-                                    pass-document_id="{{document._id}}"
+                                    pass-array="{{object.array}}"
+                                    pass-object="{{object._id}}"
                                     pass_to="form-fields"></div>
                                 <div
                                     pass_id="form"
-                                    pass-collection=""
-                                    pass-document_id=""
-                                    pass-name=""
+                                    pass-array=""
+                                    pass-object=""
+                                    pass-key=""
                                     pass_to="render"></div>
                                 <div
-                                    pass-value="{{document.module_id}}"
-                                    pass-filter-value="{{document.module_id}}"
+                                    pass-value="{{object.module_id}}"
+                                    pass-filter-value="{{object.module_id}}"
                                     pass_to="module_id"></div>
                                 <div
-                                    pass-document_id="{{document.module_id}}"
+                                    pass-object="{{object.module_id}}"
                                     pass_to="module-form"></div>
                                 <div
-                                    pass-collection="files"
-                                    pass-filter-name="website_id"
-                                    pass-filter-value="{{document._id}}"
+                                    pass-array="files"
+                                    pass-filter-key="website_id"
+                                    pass-filter-value="{{object._id}}"
                                     pass_to="website_id"></div>
                             </a>
                         </div>
                     </div>
                     <div class="padding:10px">
-                        <p>{{document.description}}</p>
+                        <p>{{object.description}}</p>
                     </div>
                 </div>
             </div>
@@ -292,12 +290,12 @@
                 <i
                     class="height:20px fill:#505050"
                     src="/assets/svg/plus.svg"></i>
-                <div pass_to="form-fields" pass-document_id=""></div>
+                <div pass_to="form-fields" pass-object=""></div>
                 <div
                     pass_id="form"
-                    pass-collection=""
-                    pass-document_id=""
-                    pass-name=""
+                    pass-array=""
+                    pass-object=""
+                    pass-key=""
                     pass_to="render"></div>
                 <div
                     pass_id="module_id"
@@ -306,7 +304,7 @@
                     pass_to="module_id"></div>
                 <div
                     pass_id="module-form"
-                    pass-document_id=""
+                    pass-object=""
                     pass_to="module-form"></div>
             </a>
         </button>

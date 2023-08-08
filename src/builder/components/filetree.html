@@ -2,77 +2,66 @@
 <div
     class="margin-left:10px"
     sortable
-    collection="files"
-    filter-name="directory"
+    array="files"
+    filter-key="directory"
     filter-value="parent"
     filter-operator="$eq"
-    filter-sort-name="directory"
+    filter-sort-key="directory"
     order_type="asc"
     render_id="$auto"
     render-selector=":last-child">
-    <div
-        filter-name="content-type"
-        filter-value="directory"
-        filter-parent></div>
+    <div filter-key="content-type" filter-value="directory" filter-parent></div>
     <!--Folder Template -->
-    <div
-        class="padding:5px"
-        template
-        render="document"
-        document_id="{{document._id}}">
+    <div class="padding:5px" template render="object" object="{{object._id}}">
         <span
             class=""
-            show="#directory{{document._id}}"
-            hide="#directory{{document._id}}"
+            show="#directory{{object._id}}"
+            hide="#directory{{object._id}}"
             toggle="fa-caret-down, fa-caret-right"
-            toggle-selector="#icon{{document._id}}">
-            <i id="icon{{document._id}}" class="fa fa-caret-right"></i>
+            toggle-selector="#icon{{object._id}}">
+            <i id="icon{{object._id}}" class="fa fa-caret-right"></i>
         </span>
         <span
             class="margin-left:5px"
-            collection="files"
-            document_id="{{document._id}}"
-            name="name"
+            array="files"
+            object="{{object._id}}"
+            key="name"
             >Folder name</span
         >
         <div
-            id="directory{{document._id}}"
+            id="directory{{object._id}}"
             class="domEditor margin-left:10px"
             hidden
-            collection="files"
-            document_id="611ab5d9251afa96bd20f6cc"
-            name="src"
-            filter-value="{{document.path}}"></div>
+            array="files"
+            object="611ab5d9251afa96bd20f6cc"
+            key="src"
+            filter-value="{{object.path}}"></div>
     </div>
 </div>
 <div
     class="margin-left:10px"
     sortable
-    collection="files"
-    filter-name="directory"
+    array="files"
+    filter-key="directory"
     filter-value="parent"
     filter-operator="$eq"
-    filter-sort-name="directory"
+    filter-sort-key="directory"
     render-selector="[template]">
     <div
         filter-parent
-        filter-name="content-type"
+        filter-key="content-type"
         filter-value="text/directory"
         filter-operator="$ne"></div>
 
     <!--File Template -->
-    <div
-        class="padding:5px"
-        template
-        render="document"
-        document_id="{{document._id}}">
+    <div class="padding:5px" template render="object" object="{{object._id}}">
         <span class=""
             ><i class="height:20px fill:#505050" src="/assets/svg/html5.svg"></i
         ></span>
         <span
             class="margin-left:5px"
-            collection="files"
-            document_id="{{document._id}}"
-            name="name"></span>
+            array="files"
+            object="{{object._id}}"
+            key="name"></span>
     </div>
 </div>

@@ -22,9 +22,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -91,8 +91,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -111,9 +111,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -128,9 +128,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -139,8 +139,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection="module_activities"
-                        document_id=""
+                        array="module_activities"
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -152,36 +152,33 @@
 
         <!-- Main Content -->
         <div class="padding:10px" content_id="content">
-            <form
-                pass_id="form-fields"
-                collection="module_activities"
-                document_id="">
+            <form pass_id="form-fields" array="module_activities" object="">
                 <div class="display:flex height:50px">
                     <div class="width:50% padding-right:5px z-index:7">
                         <cocreate-select
                             sortable
                             class="floating-label"
-                            name="stage"
-                            document_id=""
+                            key="stage"
+                            object=""
                             multiple
                             placeholder="Stage">
                             <input
                                 placeholder="Search"
-                                filter-parent="collection"
+                                filter-parent="array"
                                 filter-search />
                             <div
-                                filter-name="stage"
+                                filter-key="stage"
                                 filter-value="5ff747727005da1c272740ab"
                                 filter-next></div>
                             <cc-options
-                                collection="tags"
+                                array="tags"
                                 pass_id="module_id"
-                                filter-name="module_id"
+                                filter-key="module_id"
                                 filter-value=""
                                 render-selector="[template]"
                                 class="overflow:auto">
-                                <cc-option template value="{{document._id}}">
-                                    <h4>{{document.name}}</h4>
+                                <cc-option template value="{{object._id}}">
+                                    <h4>{{object.name}}</h4>
                                 </cc-option>
                             </cc-options>
                         </cocreate-select>
@@ -190,26 +187,26 @@
                         <cocreate-select
                             sortable
                             class="floating-label z-index:7"
-                            name="status"
-                            document_id="status"
+                            key="status"
+                            object="status"
                             placeholder="Status">
                             <input
                                 placeholder="Search"
-                                filter-parent="collection"
+                                filter-parent="array"
                                 filter-search />
                             <div
                                 filter-next
-                                filter-name="type"
+                                filter-key="type"
                                 filter-value="5ff747727005da1c272740ab"></div>
                             <cc-options
-                                collection="tags"
+                                array="tags"
                                 pass_id="module_id"
-                                filter-name="module_id"
+                                filter-key="module_id"
                                 filter-value=""
                                 render-selector="[template]"
                                 class="overflow:auto">
-                                <cc-option template value="{{document._id}}">
-                                    <h4>{{document.name}}</h4>
+                                <cc-option template value="{{object._id}}">
+                                    <h4>{{object.name}}</h4>
                                 </cc-option>
                             </cc-options>
                         </cocreate-select>
@@ -218,32 +215,32 @@
 
                 <input
                     type="hidden"
-                    name="module_id"
+                    key="module_id"
                     pass_id="module_id"
                     value />
 
                 <input
                     type="text"
-                    name="name"
+                    key="name"
                     id="name"
                     class="floating-label"
                     placeholder="Potential Name" />
 
                 <input
                     type="text"
-                    name="description"
+                    key="description"
                     class="floating-label"
                     placeholder="Description" />
 
                 <input
                     type="datetime-local"
-                    name="start_date"
+                    key="start_date"
                     class="floating-label"
                     placeholder="Start Date" />
 
                 <input
                     type="datetime-local"
-                    name="end_date"
+                    key="end_date"
                     class="floating-label"
                     placeholder="End Date" />
 

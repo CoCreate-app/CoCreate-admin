@@ -13,9 +13,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -82,8 +82,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -102,9 +102,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -119,9 +119,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -130,8 +130,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection="users"
-                        document_id=""
+                        array="users"
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -145,59 +145,59 @@
         <main class="padding:10px" content_id="content">
             <form
                 pass_id="form-fields"
-                collection="users"
-                document_id=""
+                array="users"
+                object=""
                 autocomplete="off">
                 <input
                     type="text"
-                    name="name"
+                    key="name"
                     id="name"
                     placeholder="Name"
                     class="floating-label" />
                 <input
                     type="text"
-                    name="email"
+                    key="email"
                     id="email"
                     placeholder="Email"
                     class="floating-label"
                     autocomplete="new-password" />
                 <input
                     type="password"
-                    name="password"
+                    key="password"
                     placeholder="password"
                     class="floating-label"
                     autocomplete="new-password" />
                 <input
                     type="text"
-                    name="description"
+                    key="description"
                     placeholder="Description"
                     class="floating-label" />
                 <input
                     type="text"
-                    name="profile_image"
+                    key="profile_image"
                     placeholder="Profile Image"
                     class="floating-label" />
 
                 <cocreate-select
-                    name="connected_orgs"
+                    key="connected_orgs"
                     placeholder="Connected Org"
                     sortable
                     class="floating-label"
                     multiple>
                     <input
                         placeholder="Search"
-                        filter-parent="collection"
+                        filter-parent="array"
                         filter-search />
                     <ul
-                        collection=".*"
+                        array=".*"
                         render-selector="[template]"
                         class="options overflow:auto">
-                        <li class="option" collection="organizations" template>
+                        <li class="option" array="organizations" template>
                             <span class="logo-icon"
                                 ><img
-                                    collection="organizations"
-                                    document_id="{{document._id}}"
-                                    name="logo"
+                                    array="organizations"
+                                    object="{{object._id}}"
+                                    key="logo"
                                     height="40px"
                                     alt="..."
                             /></span>
@@ -205,35 +205,35 @@
                                 class="display:block line-height:1 padding:5px_0px"
                                 style="width: calc(100% - 15px)">
                                 <h3
-                                    collection="organizations"
-                                    document_id="{{document._id}}"
-                                    name="name">
+                                    array="organizations"
+                                    object="{{object._id}}"
+                                    key="name">
                                     Organization Name
                                 </h3>
-                                <h5>{{document._id}}</h5>
+                                <h5>{{object._id}}</h5>
                             </div>
                         </li>
                     </ul>
                 </cocreate-select>
 
                 <cocreate-select
-                    name="current_org"
+                    key="current_org"
                     placeholder="Current Org"
                     sortable
                     class="floating-label">
                     <input placeholder="Search" filter-next filter-search />
                     <ul
-                        collection="users"
-                        document=""
-                        name="connected_orgs"
+                        array="users"
+                        object=""
+                        key="connected_orgs"
                         render-selector="[template]"
                         class="options overflow:auto">
-                        <li class="option" collection="organizations" template>
+                        <li class="option" array="organizations" template>
                             <span class="logo-icon"
                                 ><img
-                                    collection="organizations"
-                                    document_id="{{document._id}}"
-                                    name="logo"
+                                    array="organizations"
+                                    object="{{object._id}}"
+                                    key="logo"
                                     height="40px"
                                     alt="..."
                             /></span>
@@ -241,12 +241,12 @@
                                 class="display:block line-height:1 padding:5px_0px"
                                 style="width: calc(100% - 15px)">
                                 <h3
-                                    collection="organizations"
-                                    document_id="{{document._id}}"
-                                    name="name">
+                                    array="organizations"
+                                    object="{{object._id}}"
+                                    key="name">
                                     Organization Name
                                 </h3>
-                                <h5>{{document._id}}</h5>
+                                <h5>{{object._id}}</h5>
                             </div>
                         </li>
                     </ul>

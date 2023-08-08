@@ -13,9 +13,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
 
         <link rel="manifest" href="/manifest.webmanifest" />
@@ -83,8 +83,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -103,9 +103,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -120,9 +120,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -131,8 +131,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection="module_activities"
-                        document_id=""
+                        array="module_activities"
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -144,36 +144,33 @@
 
         <!-- Main Content -->
         <main class="padding:10px" content_id="content">
-            <form
-                pass_id="form-fields"
-                collection="module_activities"
-                document_id="">
+            <form pass_id="form-fields" array="module_activities" object="">
                 <input
                     type="hidden"
-                    name="module_id"
+                    key="module_id"
                     pass_id="module_id"
                     value />
 
                 <input
                     type="text"
-                    name="name"
+                    key="name"
                     placeholder="Name"
                     class="floating-label" />
 
                 <textarea
-                    name="description"
+                    key="description"
                     placeholder="Description"
                     class="floating-label"></textarea>
 
                 <input
                     type="date"
-                    name="due_by"
+                    key="due_by"
                     placeholder="Due by"
                     class="floating-label" />
 
                 <div class="display:flex justify-content:space-between">
                     <select
-                        name="status"
+                        key="status"
                         placeholder="Status"
                         class="floating-label flex-grow:1">
                         <option label="Draft" value="draft">Draft</option>
@@ -184,7 +181,7 @@
                     </select>
 
                     <select
-                        name="type"
+                        key="type"
                         placeholder="Type"
                         class="floating-label flex-grow:1">
                         <option label="Deductable" value="deductable">
@@ -198,18 +195,18 @@
 
                 <!-- CoCreate Select field multiple documents -->
                 <cocreate-select
-                    name="contact"
+                    key="contact"
                     placeholder="Contact"
                     sortable
                     class="floating-label"
                     multiple>
                     <input
                         placeholder="Search"
-                        filter-parent="collection"
+                        filter-parent="array"
                         filter-search />
                     <!-- Fetches and displays results using template -->
                     <cc-options
-                        collection=".*"
+                        array=".*"
                         render-selector="[template]"
                         class="overflow:auto">
                         <!-- template -->
@@ -218,79 +215,79 @@
                             render-selector="[template]"
                             template>
                             <h3
-                                collection="users"
-                                document_id="{{document._id}}"
-                                name="name">
+                                array="users"
+                                object="{{object._id}}"
+                                key="name">
                                 user name
                             </h3>
                             <h5
-                                collection="users"
-                                document_id="{{document._id}}"
-                                name="email"></h5>
+                                array="users"
+                                object="{{object._id}}"
+                                key="email"></h5>
                         </cc-option>
                     </cc-options>
                 </cocreate-select>
 
                 <!-- CoCreate Select field multiple documents -->
                 <cocreate-select
-                    name="company"
+                    key="company"
                     placeholder="Company"
                     sortable
                     class="floating-label"
                     multiple>
                     <input
                         placeholder="Search"
-                        filter-parent="collection"
+                        filter-parent="array"
                         filter-search />
                     <!-- Fetches and displays results using template -->
                     <cc-options
-                        collection=".*"
+                        array=".*"
                         render-selector="[template]"
                         class="overflow:auto">
                         <!-- template -->
                         <cc-option class="option" render-selector="[template]">
                             <h3
-                                collection="users"
-                                document_id="{{document._id}}"
-                                name="name">
+                                array="users"
+                                object="{{object._id}}"
+                                key="name">
                                 user name
                             </h3>
                             <h5
-                                collection="users"
-                                document_id="{{document._id}}"
-                                name="email"></h5>
+                                array="users"
+                                object="{{object._id}}"
+                                key="email"></h5>
                         </cc-option>
                     </cc-options>
                 </cocreate-select>
 
                 <!-- CoCreate Select field multiple documents -->
                 <cocreate-select
-                    name="related_to"
+                    key="related_to"
                     placeholder="Related To"
                     sortable
                     class="floating-label"
                     multiple>
                     <input
                         placeholder="Search"
-                        filter-parent="collection"
+                        filter-parent="array"
                         filter-search />
                     <!-- Fetches and displays results using template -->
                     <cc-options
-                        collection=".*"
+                        array=".*"
                         render-selector="[template]"
                         class="overflow:auto">
                         <!-- template -->
                         <cc-option class="option" render-selector="[template]">
                             <h3
-                                collection="users"
-                                document_id="{{document._id}}"
-                                name="name">
+                                array="users"
+                                object="{{object._id}}"
+                                key="name">
                                 user name
                             </h3>
                             <h5
-                                collection="users"
-                                document_id="{{document._id}}"
-                                name="email"></h5>
+                                array="users"
+                                object="{{object._id}}"
+                                key="email"></h5>
                         </cc-option>
                     </cc-options>
                 </cocreate-select>

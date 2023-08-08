@@ -8,8 +8,8 @@ module.exports = {
             "exclude": [
                 "demos"
             ],
-            "collection": "files",
-            "document": {
+            "array": "files",
+            "object": {
                 "name": "{{name}}",
                 "path": "{{path}}",
                 "src": "{{source}}",
@@ -21,7 +21,7 @@ module.exports = {
                 "directory": "/admin{{directory}}",
                 "content-type": "{{content-type}}",
                 "public": "true",
-                "website_id": "644d4b878036fb9d1d1fd69b" // {{document_id}}
+                "website_id": "644d4b878036fb9d1d1fd69b" // {{object}}
             }
         }
     ]

@@ -17,9 +17,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -101,8 +101,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -121,9 +121,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -138,9 +138,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -149,9 +149,9 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocuments"
-                        collection=""
-                        pass_id="collection-view"
-                        filter-selector="#collection-view"
+                        array=""
+                        pass_id="array-view"
+                        filter-selector="#array-view"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/trash-alt.svg"></i
@@ -168,8 +168,8 @@
                     <a
                         actions="export"
                         export-type="csv"
-                        filter-selector="#collection-view"
-                        pass_id="collection-view"
+                        filter-selector="#array-view"
+                        pass_id="array-view"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/file-csv.svg"></i
@@ -178,15 +178,15 @@
                 <li class="margin-right:15px">
                     <a
                         actions="export"
-                        filter-selector="#collection-view"
-                        pass_id="collection-view"
+                        filter-selector="#array-view"
+                        pass_id="array-view"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/file-download.svg"></i
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a actions="import" collection="" pass_id="collection-view"
+                    <a actions="import" array="" pass_id="array-view"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/file-upload.svg"></i
@@ -202,7 +202,7 @@
                 <li class="margin-right:15px">
                     <a
                         actions="print"
-                        print-selector="[template_id='#collection-view']"
+                        print-selector="[template_id='#array-view']"
                         ><i
                             class="height:18px fill:#505050"
                             src="/assets/svg/print.svg"></i
@@ -227,37 +227,37 @@
                             <input
                                 type="text"
                                 class="floating-label"
-                                filter-selector="#collection-view"
+                                filter-selector="#array-view"
                                 filter-search
                                 placeholder="Search" />
                         </floating-label>
                     </td>
                 </tr>
                 <tbody
-                    id="collection-view"
-                    render-selector="[template='collection-view']"
-                    collection=""
+                    id="array-view"
+                    render-selector="[template='array-view']"
+                    array=""
                     filter-limit="5"
                     pass-refresh
-                    pass_id="collection-view">
+                    pass_id="array-view">
                     <tr
                         template
                         class="background:whitesmoke:hover border-bottom:1px_solid_darkgray"
-                        document_id="{{document._id}}"
+                        object="{{object._id}}"
                         toggle="selected"
                         hover="visibility:visible!important"
-                        hover-selector=".tools{{document._id}}">
+                        hover-selector=".tools{{object._id}}">
                         <td
                             class="padding:5px min-width:300px align-items:center">
                             <div
                                 class="display:flex justify-content:flex-end transition:0.3s padding-left:10px">
                                 <div
-                                    class="visibility:hidden tools{{document._id}}">
+                                    class="visibility:hidden tools{{object._id}}">
                                     <a
                                         class="float:right margin-right:15px"
-                                        actions="deletedocument="
-                                        collection="{{document.collection}}"
-                                        document_id=""
+                                        actions="deleteObject"
+                                        array="{{object.array}}"
+                                        object=""
                                         ><i
                                             class="height:18px fill:#505050"
                                             src="/assets/svg/trash.svg"></i
@@ -266,21 +266,21 @@
                             </div>
                             <div
                                 class="template display:flex"
-                                render="document="
+                                render="object"
                                 render-as="one"
-                                render-exclude="db, database, collection"
+                                render-exclude="db, database, array"
                                 hover="visibility:visible!important"
-                                hover-selector=".tools{{document._id}}{{one.key}}">
+                                hover-selector=".tools{{object._id}}{{one.key}}">
                                 <span
-                                    class="visibility:hidden tools{{document._id}}{{one.key}}">
+                                    class="visibility:hidden tools{{object._id}}{{one.key}}">
                                     <form
                                         realtime="false"
                                         class="margin-top:10px">
                                         <input
                                             type="hidden"
-                                            collection="{{document.collection}}"
-                                            document_id="{{document._id}}"
-                                            name="{{one.key}}.untitled"
+                                            array="{{object.array}}"
+                                            object="{{object._id}}"
+                                            key="{{one.key}}.untitled"
                                             value="untitiled" />
                                         <a actions="save, reset"
                                             ><i
@@ -293,9 +293,9 @@
                                         class="margin-top:10px">
                                         <a
                                             actions="deleteName"
-                                            collection="{{document.collection}}"
-                                            document_id="{{document._id}}"
-                                            deletename="{{one.key}}"
+                                            array="{{object.array}}"
+                                            object="{{object._id}}"
+                                            deletekey="{{one.key}}"
                                             ><i
                                                 class="height:18px fill:#505050"
                                                 src="/assets/svg/trash.svg"></i
@@ -304,9 +304,9 @@
                                 </span>
                                 <span class="padding:10px"
                                     ><span
-                                        collection="{{document.collection}}"
-                                        document_id="{{document._id}}"
-                                        updatename="{{one.key}}"
+                                        array="{{object.array}}"
+                                        object="{{object._id}}"
+                                        updatekey="{{one.key}}"
                                         contenteditable
                                         >{{one.key}}</span
                                     >:
@@ -321,17 +321,17 @@
                 </tbody>
             </table>
             <div
-                filter-selector="#collection-view"
+                filter-selector="#array-view"
                 filter-on="scroll"
                 class="opacity:0 height:30px"></div>
 
             <button
                 class="position:absolute bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
-                <form collection="" document_id="" pass_id="collection-view">
+                <form array="" object="" pass_id="array-view">
                     <input
                         type="hidden"
-                        document_id=""
-                        name="name"
+                        object=""
+                        key="name"
                         value="untitled"
                         pass_id="module_id" />
                     <a actions="save, reset"
@@ -349,9 +349,9 @@
                 <floating-label render>
                     <textarea
                         rows="1"
-                        collection="{{document.collection}}"
-                        document_id="{{document._id}}"
-                        name="$parents"
+                        array="{{object.array}}"
+                        object="{{object._id}}"
+                        key="$parents"
                         class="floating-label"></textarea>
                 </floating-label>
             </template>
@@ -361,8 +361,8 @@
                 observe-selector=".object, .array"
                 observe-attribute="value">
                 <div
-                    render="document.$parents"
-                    render-exclude="db, database, collection"
+                    render="object.$parents"
+                    render-exclude="db, database, array"
                     render-as="$auto"
                     class="template margin-top:20px">
                     <div
@@ -376,9 +376,9 @@
                             <form realtime="false" class="margin-top:10px">
                                 <input
                                     type="hidden"
-                                    collection="{{document.collection}}"
-                                    document_id="{{document._id}}"
-                                    name="$parents.untitled"
+                                    array="{{object.array}}"
+                                    object="{{object._id}}"
+                                    key="$parents.untitled"
                                     value="untitiled" />
                                 <a actions="save, reset"
                                     ><i
@@ -389,9 +389,9 @@
                             <form realtime="false" class="margin-top:10px">
                                 <a
                                     actions="deleteName"
-                                    collection="{{document.collection}}"
-                                    document_id="{{document._id}}"
-                                    deletename="$parents.{{$auto.key}}"
+                                    array="{{object.array}}"
+                                    object="{{object._id}}"
+                                    deletekey="$parents.{{$auto.key}}"
                                     ><i
                                         class="height:18px fill:#505050"
                                         src="/assets/svg/trash.svg"></i
@@ -400,10 +400,10 @@
                         </span>
                         <span class="padding:10px"
                             ><span
-                                collection="{{document.collection}}"
-                                document_id="{{document._id}}"
+                                array="{{object.array}}"
+                                object="{{object._id}}"
                                 value-prefix="$parents."
-                                updatename="$parents.{{$auto.key}}"
+                                updatekey="$parents.{{$auto.key}}"
                                 contenteditable
                                 >{{$auto.key}}</span
                             >:
@@ -431,9 +431,9 @@
                     <input
                         type="text"
                         class="floating-label"
-                        name="collection"
-                        filter-name="name"
-                        filter-selector="#collections" />
+                        key="array"
+                        filter-key="name"
+                        filter-selector="#arrays" />
                 </floating-label>
                 <span
                     class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">
@@ -450,11 +450,11 @@
                 <ul
                     class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_90px) bottom:10px margin-right:5px">
                     <div
-                        id="collections"
-                        collection
-                        filter-sort-name="name"
+                        id="arrays"
+                        array
+                        filter-sort-key="name"
                         filter-sort-direction="asc"
-                        render-selector="[template='collections']"
+                        render-selector="[template='arrays']"
                         filter>
                         <!-- Template -->
                         <li
@@ -463,16 +463,16 @@
                             hover="active">
                             <a
                                 actions="pass"
-                                pass-collection="{{collection.name}}"
-                                pass_to="collection-view"
+                                pass-array="{{array.name}}"
+                                pass_to="array-view"
                                 class="display:inline-block padding-left:15px">
-                                <span>{{collection.name}}</span>
+                                <span>{{array.name}}</span>
                             </a>
                             <div
                                 class="float:right width:50px text-align:center">
                                 <a
                                     actions="deleteCollection"
-                                    collection="{{collection.name}}"
+                                    array="{{array.name}}"
                                     class="display:none">
                                     <i
                                         class="height:18px fill:#505050"

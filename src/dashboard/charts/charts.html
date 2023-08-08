@@ -17,9 +17,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -121,8 +121,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -141,9 +141,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -158,9 +158,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -169,8 +169,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection=""
-                        document_id=""
+                        array=""
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -184,13 +184,13 @@
         <main class="padding:10px" content_id="content">
             <div
                 class="domEditor main-height"
-                name="cards1"
-                collection="test"
+                key="cards1"
+                array="test"
                 pass_id="me1234">
                 <div
                     class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))"
-                    dnd-group-name="dashboard"
-                    collection="module_activities"
+                    dnd-group-key="dashboard"
+                    array="module_activities"
                     filter-limit="20"
                     render-selector="[template]"
                     droppable="true">
@@ -208,67 +208,67 @@
                                 chart-dataset-type="line"
                                 chart-dataset-label="um Chart">
                                 <div
-                                    collection="chart"
-                                    name="Jan"
+                                    array="chart"
+                                    key="Jan"
                                     chart-operator="sum">
                                     <div
-                                        filter-name="Jan"
+                                        filter-key="Jan"
                                         filter-value="0, 10"
                                         filter-value-type="number"
                                         filter-operator="$range"></div>
                                 </div>
-                                <div collection="chart" name="Feb">
+                                <div array="chart" key="Feb">
                                     <div
-                                        filter-name="permission"
+                                        filter-key="permission"
                                         filter-value="read"
                                         filter-operator="$nin"></div>
                                     <div
-                                        filter-name="type"
+                                        filter-key="type"
                                         filter-value="leader"
                                         filter-operator="$in"></div>
                                 </div>
-                                <div collection="chart" name="Mar">
+                                <div array="chart" key="Mar">
                                     <div
-                                        filter-name="Mar"
+                                        filter-key="Mar"
                                         filter-value="-7"
                                         filter-operator="$eq"
                                         filter-value-type="number"></div>
                                 </div>
-                                <div collection="chart" name="Apr"></div>
-                                <div collection="chart" name="May"></div>
-                                <div collection="chart" name="Jun"></div>
-                                <div collection="chart" name="Jul"></div>
+                                <div array="chart" key="Apr"></div>
+                                <div array="chart" key="May"></div>
+                                <div array="chart" key="Jun"></div>
+                                <div array="chart" key="Jul"></div>
                             </div>
                             <div
                                 chart-dataset-label="Average Chart"
                                 chart-dataset-type="line">
                                 <div
-                                    collection="chart"
-                                    name="Jan"
+                                    array="chart"
+                                    key="Jan"
                                     chart-operator="average"></div>
                                 <div
-                                    collection="chart"
-                                    name="Feb"
+                                    array="chart"
+                                    key="Feb"
                                     chart-operator="average"></div>
                                 <div
-                                    collection="chart"
-                                    name="Mar"
+                                    array="chart"
+                                    key="Mar"
                                     chart-operator="average"></div>
                                 <div
-                                    collection="chart"
-                                    name="Apr"
+                                    array="chart"
+                                    key="Apr"
                                     chart-operator="average"></div>
                                 <div
-                                    collection="chart"
-                                    name="May"
+                                    array="chart"
+                                    key="May"
                                     chart-operator="average"></div>
                                 <div
-                                    collection="chart"
-                                    name="Jun"
+                                    array="chart"
+                                    key="Jun"
                                     chart-operator="average"></div>
                                 <div
-                                    collection="chart"
-                                    name="Jul"
+                                    array="chart"
+                                    key="Jul"
                                     chart-operator="average"></div>
                             </div>
 
@@ -276,32 +276,32 @@
                                 chart-dataset-label="Data Count"
                                 chart-dataset-type="">
                                 <div
-                                    collection="chart"
-                                    name="Jan"
+                                    array="chart"
+                                    key="Jan"
                                     chart-operator="count"></div>
                                 <div
-                                    collection="chart"
-                                    name="Feb"
+                                    array="chart"
+                                    key="Feb"
                                     chart-operator="count"></div>
                                 <div
-                                    collection="chart"
-                                    name="Mar"
+                                    array="chart"
+                                    key="Mar"
                                     chart-operator="count"></div>
                                 <div
-                                    collection="chart"
-                                    name="Apr"
+                                    array="chart"
+                                    key="Apr"
                                     chart-operator="count"></div>
                                 <div
-                                    collection="chart"
-                                    name="May"
+                                    array="chart"
+                                    key="May"
                                     chart-operator="count"></div>
                                 <div
-                                    collection="chart"
-                                    name="Jun"
+                                    array="chart"
+                                    key="Jun"
                                     chart-operator="count"></div>
                                 <div
-                                    collection="chart"
-                                    name="Jul"
+                                    array="chart"
+                                    key="Jul"
                                     chart-operator="count"></div>
                             </div>
                         </canvas>

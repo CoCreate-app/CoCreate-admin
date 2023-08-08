@@ -17,9 +17,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -126,8 +126,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id="5ff747727005da1c27274190"
+                            pass-array="modules"
+                            pass-object="5ff747727005da1c27274190"
                             pass_to="form-fields"></div>
                         <div
                             pass_id="datatable"
@@ -146,9 +146,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -163,9 +163,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -174,8 +174,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection="modules"
-                        document_id=""
+                        array="modules"
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -187,14 +187,10 @@
 
         <!-- Main Content -->
         <main class="padding:10px" content_id="content">
-            <form
-                pass_id="form-fields"
-                collection="modules"
-                document_id=""
-                id="form">
+            <form pass_id="form-fields" array="modules" object="" id="form">
                 <input
                     type="text"
-                    name="name"
+                    key="name"
                     input-selector=".name"
                     input-attribute="value"
                     input-events="input, onload"
@@ -202,22 +198,22 @@
                     class="floating-label" />
                 <input
                     type="hidden"
-                    name="_id"
+                    key="_id"
                     input-selector=".module_id"
                     input-key="module_id" />
                 <input
                     type="text"
-                    name="description"
+                    key="description"
                     id="description"
                     placeholder="Description"
                     class="floating-label" />
                 <input
                     type="text"
-                    name="icon"
+                    key="icon"
                     id="icon"
                     placeholder="Icon"
                     class="floating-label" />
-                <!--<input type="text" name="directory" id="directory" placeholder="Directory" class="floating-label" />-->
+                <!--<input type="text" key="directory" id="directory" placeholder="Directory" class="floating-label" />-->
 
                 <!-- menu items -->
                 <div class="card padding:10px_5px margin-top:10px collapsed">
@@ -228,7 +224,7 @@
                             toggle-closest=".card"
                             show="#menu-up, #menu-down"
                             hide="#menu-down, #menu-up"
-                            pass-collection="files"
+                            pass-array="files"
                             pass_to="module_id">
                             <i
                                 id="menu-down"
@@ -276,7 +272,7 @@
                                     id="navbar-menu-primary"
                                     class="menu-item-type overflow:hidden height:0px active">
                                     <cocreate-select
-                                        name="navbar-menu-primary"
+                                        key="navbar-menu-primary"
                                         placeholder="Primary View"
                                         class="floating-label"
                                         sortable
@@ -288,42 +284,42 @@
 
                                         <div
                                             filter-parent="[render-selector]"
-                                            filter-name="module_id"
+                                            filter-key="module_id"
                                             filter-value=""
                                             filter-operator="$ne"></div>
                                         <cc-options
                                             pass_id="module_id"
-                                            collection=""
-                                            document
-                                            filter-name="module_id"
+                                            array=""
+                                            object
+                                            filter-key="module_id"
                                             filter-value="{{module_id}}"
                                             filter-operator="$eq"
                                             render-selector="[template]"
                                             class="overflow:auto module_id">
                                             <cc-option
                                                 template
-                                                value="{'_id':'{{document._id}}','name':'{{document.name}}','path':'{{document.path}}','parentDirectory':'{{document.parentDirectory}}'}"
-                                                document_id="{{document._id}}">
-                                                <span>{{document.path}}</span>
+                                                value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
+                                                object="{{object._id}}">
+                                                <span>{{object.path}}</span>
                                             </cc-option>
                                         </cc-options>
                                     </cocreate-select>
-                                    <!-- <input type="hidden" collection="files" document_id="{{document.navbar-menu-primary}}" name="path" input-selector="#navbar-menu-primary">
-									<input id="navbar-menu-primary" type="text" pass_id="form-fields" collection document_id name="navbar-menu-primary-path"/> -->
+                                    <!-- <input type="hidden" array="files" object="{{object.navbar-menu-primary}}" key="path" input-selector="#navbar-menu-primary">
+									<input id="navbar-menu-primary" type="text" pass_id="form-fields" array object key="navbar-menu-primary-path"/> -->
 
                                     <div
                                         class="display:flex justify-content:space-between">
                                         <div class="width:48%">
                                             <input
                                                 type="number"
-                                                name="navbar-menu-position"
+                                                key="navbar-menu-position"
                                                 placeholder="Menu Position"
                                                 class="floating-label" />
                                         </div>
                                         <div class="width:48%">
                                             <input
                                                 type="color"
-                                                name="navbar-modal-primary-color"
+                                                key="navbar-modal-primary-color"
                                                 placeholder="Modal Color"
                                                 class="floating-label" />
                                         </div>
@@ -333,14 +329,14 @@
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="navbar-modal-primary-width"
+                                                key="navbar-modal-primary-width"
                                                 placeholder="Modal Width"
                                                 class="floating-label" />
                                         </div>
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="navbar-modal-primary-height"
+                                                key="navbar-modal-primary-height"
                                                 placeholder="Modal Height"
                                                 class="floating-label" />
                                         </div>
@@ -350,14 +346,14 @@
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="navbar-modal-primary-x"
+                                                key="navbar-modal-primary-x"
                                                 placeholder="Modal x"
                                                 class="floating-label" />
                                         </div>
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="navbar-modal-primary-y"
+                                                key="navbar-modal-primary-y"
                                                 placeholder="Modal y"
                                                 class="floating-label" />
                                         </div>
@@ -391,31 +387,31 @@
                                         class="floating-label"
                                         sortable
                                         placeholder="Primary View"
-                                        name="main-menu-primary"
+                                        key="main-menu-primary"
                                         value-type="object">
                                         <input
                                             placeholder="Search"
                                             filter-parent="[render-selector]"
                                             filter-search />
                                         <div
-                                            filter-name="module_id"
+                                            filter-key="module_id"
                                             filter-value=""
                                             filter-operator="$ne"
                                             filter-parent="[render-selector]"></div>
                                         <cc-options
                                             pass_id="module_id"
-                                            collection=""
-                                            document
-                                            filter-name="module_id"
+                                            array=""
+                                            object
+                                            filter-key="module_id"
                                             filter-value="{{module_id}}"
                                             filter-operator="$eq"
                                             render-selector="[template]"
                                             class="overflow:auto module_id">
                                             <cc-option
                                                 template
-                                                value="{'_id':'{{document._id}}','name':'{{document.name}}','path':'{{document.path}}','parentDirectory':'{{document.parentDirectory}}'}"
-                                                document_id="{{document._id}}">
-                                                <span>{{document.path}}</span>
+                                                value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
+                                                object="{{object._id}}">
+                                                <span>{{object.path}}</span>
                                             </cc-option>
                                         </cc-options>
                                     </cocreate-select>
@@ -424,14 +420,14 @@
                                         <div class="width:48%">
                                             <input
                                                 type="number"
-                                                name="main-menu-position"
+                                                key="main-menu-position"
                                                 placeholder="Menu Position"
                                                 class="floating-label" />
                                         </div>
                                         <div class="width:48%">
                                             <input
                                                 type="color"
-                                                name="main-modal-primary-color"
+                                                key="main-modal-primary-color"
                                                 placeholder="Modal Color"
                                                 class="floating-label" />
                                         </div>
@@ -441,14 +437,14 @@
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="main-modal-primary-width"
+                                                key="main-modal-primary-width"
                                                 placeholder="Modal Width"
                                                 class="floating-label" />
                                         </div>
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="main-modal-primary-height"
+                                                key="main-modal-primary-height"
                                                 placeholder="Modal Height"
                                                 class="floating-label" />
                                         </div>
@@ -458,14 +454,14 @@
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="main-modal-primary-x"
+                                                key="main-modal-primary-x"
                                                 placeholder="Modal x"
                                                 class="floating-label" />
                                         </div>
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="main-modal-primary-y"
+                                                key="main-modal-primary-y"
                                                 placeholder="Modal y"
                                                 class="floating-label" />
                                         </div>
@@ -478,7 +474,7 @@
                                         class="floating-label"
                                         sortable
                                         placeholder="Secondary View"
-                                        name="main-menu-secondary"
+                                        key="main-menu-secondary"
                                         value-type="object">
                                         <input
                                             placeholder="Search"
@@ -486,30 +482,30 @@
                                             filter-search
                                             tags="true" />
                                         <div
-                                            filter-name="module_id"
+                                            filter-key="module_id"
                                             filter-value=""
                                             filter-operator="$ne"
                                             filter-parent="[render-selector]"></div>
                                         <cc-options
                                             pass_id="module_id"
-                                            collection=""
-                                            document
-                                            filter-name="module_id"
+                                            array=""
+                                            object
+                                            filter-key="module_id"
                                             filter-value="{{module_id}}"
                                             filter-operator="$eq"
                                             render-selector="[template]"
                                             class="overflow:auto module_id">
                                             <cc-option
                                                 template
-                                                value="{'_id':'{{document._id}}','name':'{{document.name}}','path':'{{document.path}}','parentDirectory':'{{document.parentDirectory}}'}"
-                                                document_id="{{document._id}}">
-                                                <span>{{document.path}}</span>
+                                                value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
+                                                object="{{object._id}}">
+                                                <span>{{object.path}}</span>
                                             </cc-option>
                                         </cc-options>
                                     </cocreate-select>
                                     <input
                                         type="color"
-                                        name="main-modal-secondary-color"
+                                        key="main-modal-secondary-color"
                                         placeholder="Modal Color"
                                         class="floating-label" />
                                     <div
@@ -517,14 +513,14 @@
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="main-modal-secondary-width"
+                                                key="main-modal-secondary-width"
                                                 placeholder="Modal Width"
                                                 class="floating-label" />
                                         </div>
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="main-modal-secondary-height"
+                                                key="main-modal-secondary-height"
                                                 placeholder="Modal Height"
                                                 class="floating-label" />
                                         </div>
@@ -534,14 +530,14 @@
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="main-modal-secondary-x"
+                                                key="main-modal-secondary-x"
                                                 placeholder="Modal x"
                                                 class="floating-label" />
                                         </div>
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="main-modal-secondary-y"
+                                                key="main-modal-secondary-y"
                                                 placeholder="Modal y"
                                                 class="floating-label" />
                                         </div>
@@ -575,31 +571,31 @@
                                         class="floating-label"
                                         sortable
                                         placeholder="Primary View"
-                                        name="settings-menu-primary"
+                                        key="settings-menu-primary"
                                         value-type="object">
                                         <input
                                             placeholder="Search"
                                             filter-parent="[render-selector]"
                                             filter-search />
                                         <div
-                                            filter-name="module_id"
+                                            filter-key="module_id"
                                             filter-value=""
                                             filter-operator="$ne"
                                             filter-parent="[render-selector]"></div>
                                         <cc-options
                                             pass_id="module_id"
-                                            collection=""
-                                            document
-                                            filter-name="module_id"
+                                            array=""
+                                            object
+                                            filter-key="module_id"
                                             filter-value="{{module_id}}"
                                             filter-operator="$eq"
                                             render-selector="[template]"
                                             class="overflow:auto module_id">
                                             <cc-option
                                                 template
-                                                value="{'_id':'{{document._id}}','name':'{{document.name}}','path':'{{document.path}}','parentDirectory':'{{document.parentDirectory}}'}"
-                                                document_id="{{document._id}}">
-                                                <span>{{document.path}}</span>
+                                                value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
+                                                object="{{object._id}}">
+                                                <span>{{object.path}}</span>
                                             </cc-option>
                                         </cc-options>
                                     </cocreate-select>
@@ -608,14 +604,14 @@
                                         <div class="width:48%">
                                             <input
                                                 type="number"
-                                                name="settings-menu-position"
+                                                key="settings-menu-position"
                                                 placeholder="Menu Position"
                                                 class="floating-label" />
                                         </div>
                                         <div class="width:48%">
                                             <input
                                                 type="color"
-                                                name="settings-modal-primary-color"
+                                                key="settings-modal-primary-color"
                                                 placeholder="Modal Color"
                                                 class="floating-label" />
                                         </div>
@@ -625,14 +621,14 @@
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="settings-modal-primary-width"
+                                                key="settings-modal-primary-width"
                                                 placeholder="Modal Width"
                                                 class="floating-label" />
                                         </div>
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="settings-modal-primary-height"
+                                                key="settings-modal-primary-height"
                                                 placeholder="Modal Height"
                                                 class="floating-label" />
                                         </div>
@@ -642,14 +638,14 @@
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="settings-modal-primary-x"
+                                                key="settings-modal-primary-x"
                                                 placeholder="Modal x"
                                                 class="floating-label" />
                                         </div>
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="settings-modal-primary-y"
+                                                key="settings-modal-primary-y"
                                                 placeholder="Modal y"
                                                 class="floating-label" />
                                         </div>
@@ -662,7 +658,7 @@
                                         class="floating-label"
                                         sortable
                                         placeholder="Secondary View"
-                                        name="settings-menu-secondary"
+                                        key="settings-menu-secondary"
                                         value-type="object">
                                         <input
                                             placeholder="Search"
@@ -670,30 +666,30 @@
                                             filter-search
                                             tags="true" />
                                         <div
-                                            filter-name="module_id"
+                                            filter-key="module_id"
                                             filter-value=""
                                             filter-operator="$ne"
                                             filter-parent="[render-selector]"></div>
                                         <cc-options
                                             pass_id="module_id"
-                                            collection=""
-                                            document
-                                            filter-name="module_id"
+                                            array=""
+                                            object
+                                            filter-key="module_id"
                                             filter-value="{{module_id}}"
                                             filter-operator="$eq"
                                             render-selector="[template]"
                                             class="overflow:auto module_id">
                                             <cc-option
                                                 template
-                                                value="{'_id':'{{document._id}}','name':'{{document.name}}','path':'{{document.path}}','parentDirectory':'{{document.parentDirectory}}'}"
-                                                document_id="{{document._id}}">
-                                                <span>{{document.path}}</span>
+                                                value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
+                                                object="{{object._id}}">
+                                                <span>{{object.path}}</span>
                                             </cc-option>
                                         </cc-options>
                                     </cocreate-select>
                                     <input
                                         type="color"
-                                        name="settings-modal-secondary-color"
+                                        key="settings-modal-secondary-color"
                                         placeholder="Modal Color"
                                         class="floating-label" />
                                     <div
@@ -701,14 +697,14 @@
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="settings-modal-secondary-width"
+                                                key="settings-modal-secondary-width"
                                                 placeholder="Modal Width"
                                                 class="floating-label" />
                                         </div>
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="settings-modal-secondary-height"
+                                                key="settings-modal-secondary-height"
                                                 placeholder="Modal Height"
                                                 class="floating-label" />
                                         </div>
@@ -718,14 +714,14 @@
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="settings-modal-secondary-x"
+                                                key="settings-modal-secondary-x"
                                                 placeholder="Modal x"
                                                 class="floating-label" />
                                         </div>
                                         <div class="width:48%">
                                             <input
                                                 type="text"
-                                                name="settings-modal-secondary-y"
+                                                key="settings-modal-secondary-y"
                                                 placeholder="Modal y"
                                                 class="floating-label" />
                                         </div>
@@ -752,7 +748,7 @@
                     <a
                         show="#module-templates"
                         hide="#form, #module-views"
-                        pass-collection="files"
+                        pass-array="files"
                         pass_to="module-templates"
                         ><i
                             class="height:16px fill:#505050"
@@ -762,62 +758,62 @@
 
                 <input
                     type="hidden"
-                    filter-name="module_id"
+                    filter-key="module_id"
                     filter-value=""
                     filter-operator="$ne"
                     filter-next />
                 <div
-                    collection="files"
-                    filter-name="module_id"
+                    array="files"
+                    filter-key="module_id"
                     filter-value="{{module_id}}"
                     filter-operator="$eq"
-                    filter-sort-name="name"
+                    filter-sort-key="name"
                     filter-sort-direction="asc"
                     render-selector="[template]"
                     pass_id="module_id"
                     sortable
                     class="background:whitesmoke padding:10px module_id"
-                    dnd-group-name="files">
+                    dnd-group-key="files">
                     <div
                         template
                         class="card padding:10px_5px background:white collapsed margin-bottom:10px"
-                        document_id="{{document._id}}"
-                        id="module-view{{document._id}}">
+                        object="{{object._id}}"
+                        id="module-view{{object._id}}">
                         <div class="display:flex padding-left:10px">
                             <a
                                 actions="pass, openModal"
                                 modal-src="./files/form.html"
                                 modal-width="320px"
                                 class="flex-grow:1 font-size:16px padding:5px_0">
-                                <p>{{document.name}}</p>
+                                <p>{{object.name}}</p>
                                 <div
-                                    pass-collection="{{document.collection}}"
-                                    pass-document_id="{{document._id}}"
+                                    pass-array="{{object.array}}"
+                                    pass-object="{{object._id}}"
                                     pass_to="form-fields"></div>
                                 <div
                                     pass_id="form"
-                                    pass-collection=""
-                                    pass-document_id=""
-                                    pass-name=""
+                                    pass-array=""
+                                    pass-object=""
+                                    pass-key=""
                                     pass_to="render"></div>
                                 <div
-                                    pass-value="{{document.module_id}}"
-                                    pass-filter-value="{{document.module_id}}"
+                                    pass-value="{{object.module_id}}"
+                                    pass-filter-value="{{object.module_id}}"
                                     pass_to="module_id"></div>
                                 <div
-                                    pass-document_id="{{document.module_id}}"
+                                    pass-object="{{object.module_id}}"
                                     pass_to="module-form"></div>
-                                <!--<div pass-collection="{{document.collection}}" pass-document_id="{{document._id}}" pass-name="src" pass_to="form-fields"></div>-->
+                                <!--<div pass-array="{{object.array}}" pass-object="{{object._id}}" pass-key="src" pass_to="form-fields"></div>-->
                             </a>
                             <input
                                 type="hidden"
-                                collection="{{document.collection}}"
-                                document_id="{{document._id}}"
-                                name="module_id" />
+                                array="{{object.array}}"
+                                object="{{object._id}}"
+                                key="module_id" />
                             <a
-                                actions="deletedocument="
-                                collection="{{document.collection}}"
-                                document_id="{{document._id}}"
+                                actions="deleteObject"
+                                array="{{object.array}}"
+                                object="{{object._id}}"
                                 class="float:right padding:5px">
                                 <i
                                     class="height:18px fill:#505050"
@@ -831,9 +827,9 @@
                                     class="display:flex height:18px fill:#505050"
                                     src="/assets/svg/palette.svg"></i>
                                 <div
-                                    pass-collection="{{document.collection}}"
-                                    pass-document_id="{{document._id}}"
-                                    pass-name="src"
+                                    pass-array="{{object.array}}"
+                                    pass-object="{{object._id}}"
+                                    pass-key="src"
                                     pass_to="builder"></div>
                             </a>
                             <a
@@ -844,9 +840,9 @@
                                     class="display:flex height:18px fill:#505050"
                                     src="/assets/svg/code.svg"></i>
                                 <div
-                                    pass-collection="{{document.collection}}"
-                                    pass-document_id="{{document._id}}"
-                                    pass-name="src"
+                                    pass-array="{{object.array}}"
+                                    pass-object="{{object._id}}"
+                                    pass-key="src"
                                     pass_to="code-editor"></div>
                             </a>
                         </div>
@@ -863,16 +859,16 @@
                         hide="#module-templates"></i>
                 </div>
                 <div
-                    filter-name="tags"
+                    filter-key="tags"
                     filter-value="template"
                     filter-operator="$eq"
                     filter-next></div>
                 <div
                     class="display:flex flex-wrap:wrap"
-                    collection=""
-                    document
+                    array=""
+                    object
                     pass-refresh="true"
-                    filter-sort-name="name"
+                    filter-sort-key="name"
                     filter-sort-direction="asc"
                     render-selector="[template]"
                     pass_id="module-templates">
@@ -881,37 +877,34 @@
                         template>
                         <div class="position:relative">
                             <img
-                                collection="{{document.collection}}"
-                                document_id="{{document._id}}"
-                                name="image"
+                                array="{{object.array}}"
+                                object="{{object._id}}"
+                                key="image"
                                 src="https://via.placeholder.com/150"
                                 width="100%" />
-                            <form
-                                realtime="false"
-                                collection="files"
-                                document_id="">
+                            <form realtime="false" array="files" object="">
                                 <input
                                     type="hidden"
-                                    name="module_id"
+                                    key="module_id"
                                     class="module_id"
                                     value="{{module_id}}" />
                                 <input
                                     type="hidden"
-                                    name="website_id"
+                                    key="website_id"
                                     value="5ffa235ff11d2d00103c4520" />
                                 <input
                                     type="hidden"
-                                    name="name"
-                                    value="{{document.name}}" />
+                                    key="name"
+                                    value="{{object.name}}" />
                                 <input
                                     type="checkbox"
-                                    name="domains"
+                                    key="domains"
                                     value="general.cocreate.app"
                                     hidden
                                     checked />
                                 <input
                                     type="checkbox"
-                                    name="domains"
+                                    key="domains"
                                     value="cocreate.app"
                                     hidden
                                     checked />
@@ -921,31 +914,31 @@
                                     render-key="name" />
                                 <input
                                     type="hidden"
-                                    name="directory"
+                                    key="directory"
                                     value="/admin/{{render-key.name}}" />
                                 <input
                                     type="hidden"
-                                    name="path"
-                                    value="/admin/{{render-key.name}}/{{document.name}}" />
+                                    key="path"
+                                    value="/admin/{{render-key.name}}/{{object.name}}" />
                                 <input
                                     type="hidden"
-                                    name="content-type"
+                                    key="content-type"
                                     value="text/html" />
                                 <input
                                     type="hidden"
-                                    name="public"
+                                    key="public"
                                     value="true" />
                                 <textarea
                                     hidden
-                                    name="src"
-                                    value="{{document.src}}"></textarea>
-                                <!--<textarea hidden name="css" collection="files" document_id="{{document.css}}" name="src"></textarea>-->
-                                <!--<textarea hidden name="js" collection="files" document_id="{{document.js}}" name="src"></textarea>-->
+                                    key="src"
+                                    value="{{object.src}}"></textarea>
+                                <!--<textarea hidden key="css" array="files" object="{{object.css}}" key="src"></textarea>-->
+                                <!--<textarea hidden key="js" array="files" object="{{object.js}}" key="src"></textarea>-->
                                 <button
                                     actions="renderKey, save, reset"
                                     show="#form, #module-views"
                                     hide="#module-templates"
-                                    pass-collection="files"
+                                    pass-array="files"
                                     pass_to="module_id"
                                     class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover">
                                     <i
@@ -955,12 +948,12 @@
                             </form>
                             <div
                                 class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">
-                                <span>{{document.name}}</span>
+                                <span>{{object.name}}</span>
                             </div>
                         </div>
 
                         <div class="padding:10px">
-                            <p>{{document.description}}</p>
+                            <p>{{object.description}}</p>
                         </div>
                     </div>
                 </div>

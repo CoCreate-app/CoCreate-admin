@@ -13,9 +13,9 @@
         <link
             rel="stylesheet"
             href="./index.css"
-            collection="files"
-            document_id="610cb468c0e9580010e5ba50"
-            name="src"
+            array="files"
+            object="610cb468c0e9580010e5ba50"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -82,8 +82,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -102,9 +102,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -119,9 +119,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -130,8 +130,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection=""
-                        document_id=""
+                        array=""
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -143,37 +143,37 @@
 
         <main class="padding:10px" content_id="content">
             <form
-                collection="modules"
-                document_id="5f94ff945412e75f9b414a3e"
+                array="modules"
+                object="5f94ff945412e75f9b414a3e"
                 autocomplete="off">
-                <input type="hidden" name="module_id" pass_id="module_id" />
+                <input type="hidden" key="module_id" pass_id="module_id" />
 
                 <input
                     type="text"
-                    document_id=""
-                    name="name"
+                    object=""
+                    key="name"
                     class="floating-label"
                     placeholder="Name"
                     pass_id="form-fields"
-                    collection="module_activities" />
+                    array="module_activities" />
 
                 <cocreate-select
                     sortable
                     class="floating-label"
-                    name="units"
-                    collection="modules"
-                    document_id="5f94ff945412e75f9b414a3e"
+                    key="units"
+                    array="modules"
+                    object="5f94ff945412e75f9b414a3e"
                     placeholder=""
                     multiple="">
                     <input placeholder="Search" search-next=".option" />
 
                     <ul
                         class="options overflow:auto"
-                        collection="modules"
+                        array="modules"
                         filter-value="5f94ff945412e75f9b414a3e"
-                        filter-name="_id"
+                        filter-key="_id"
                         filter-operator="$eq"
-                        name="units"
+                        key="units"
                         render-selector=":last-child">
                         <li class="option" template value="{{units.--}}">
                             <h3 value="{{units.--}}">Unit Name</h3>

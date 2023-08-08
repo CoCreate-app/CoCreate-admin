@@ -17,9 +17,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <style type="text/css">
             .collapsed > .menu-items {
@@ -100,8 +100,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -120,9 +120,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -137,9 +137,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -148,8 +148,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection="module_activities"
-                        document_id=""
+                        array="module_activities"
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -161,61 +161,61 @@
         <main class="padding:10px" content_id="content">
             <form
                 pass_id="form-fields"
-                collection="module_activities"
-                document_id=""
+                array="module_activities"
+                object=""
                 id="form">
                 <input
                     type="text"
-                    name="name"
+                    key="name"
                     id="name"
                     placeholder="Website Name"
                     class="floating-label" />
                 <input
                     type="hidden"
-                    name="module_id"
+                    key="module_id"
                     pass_id="module_id"
                     value />
                 <input
                     type="hidden"
-                    name="_id"
+                    key="_id"
                     input-selector=".website_id"
                     input-attribute="value"
                     input-events="input, onload" />
                 <input
                     type="text"
-                    name="description"
+                    key="description"
                     id="description"
                     placeholder="Description"
                     class="floating-label" />
                 <input
                     type="text"
-                    name="image"
+                    key="image"
                     placeholder="Preview"
                     class="floating-label" />
                 <cocreate-select
                     sortable
                     class="floating-label"
-                    name="home"
+                    key="home"
                     placeholder="Home Page">
                     <input
                         placeholder="Search"
-                        filter-parent="collection"
+                        filter-parent="array"
                         filter-search />
                     <cc-options
-                        collection=""
-                        document
-                        filter-name=""
+                        array=""
+                        object
+                        filter-key=""
                         filter-value=""
-                        filter-sort-name="name"
+                        filter-sort-key="name"
                         filter-sort-direction="asc"
                         render-selector="[template]"
                         pass_id="website_id"
                         class="overflow:auto">
                         <cc-option template>
                             <h3
-                                collection="{{document.collection}}"
-                                document_id="{{document._id}}"
-                                name="path"></h3>
+                                array="{{object.array}}"
+                                object="{{object._id}}"
+                                key="path"></h3>
                         </cc-option>
                     </cc-options>
                 </cocreate-select>
@@ -236,32 +236,32 @@
                     <a
                         show="#page-templates"
                         hide="#form, #website-pages"
-                        pass-collection="files"
+                        pass-array="files"
                         pass_to="page-templates"
                         ><i
                             class="height:16px fill:#505050"
                             src="/assets/svg/plus-square.svg"></i
                     ></a>
                 </div>
-                <!--<input type="hidden" filter-name="module-view" filter-value="module-view" render-next>-->
+                <!--<input type="hidden" filter-key="module-view" filter-value="module-view" render-next>-->
                 <div
-                    collection=""
-                    document
-                    filter-name=""
+                    array=""
+                    object
+                    filter-key=""
                     filter-value=""
                     filter-operator="$eq"
-                    filter-sort-name="name"
+                    filter-sort-key="name"
                     filter-sort-direction="asc"
                     render-selector="[template]"
                     pass_id="website_id"
                     sortable
                     class="background:whitesmoke padding:10px"
-                    dnd-group-name="website-pages">
+                    dnd-group-key="website-pages">
                     <div
                         template
                         class="card padding:10px_5px background:white collapsed margin-bottom:10px"
-                        document_id="{{document._id}}"
-                        id="module-view{{document._id}}">
+                        object="{{object._id}}"
+                        id="module-view{{object._id}}">
                         <div class="display:flex padding-left:10px">
                             <a
                                 actions="pass, openModal"
@@ -269,32 +269,32 @@
                                 modal-width="320px"
                                 class="flex-grow:1 font-size:16px padding:5px_0">
                                 <p
-                                    collection="{{document.collection}}"
-                                    document_id="{{document._id}}"
-                                    name="path"></p>
+                                    array="{{object.array}}"
+                                    object="{{object._id}}"
+                                    key="path"></p>
                                 <div
-                                    pass-collection="{{document.collection}}"
-                                    pass-document_id="{{document._id}}"
+                                    pass-array="{{object.array}}"
+                                    pass-object="{{object._id}}"
                                     pass_to="form-fields"></div>
                                 <div
                                     pass_id="form"
-                                    pass-collection=""
-                                    pass-document_id=""
-                                    pass-name=""
+                                    pass-array=""
+                                    pass-object=""
+                                    pass-key=""
                                     pass_to="render"></div>
                                 <div
-                                    pass-value="{{document.module_id}}"
-                                    pass-filter-value="{{document.module_id}}"
+                                    pass-value="{{object.module_id}}"
+                                    pass-filter-value="{{object.module_id}}"
                                     pass_to="module_id"></div>
                                 <div
-                                    pass-document_id="{{document.module_id}}"
+                                    pass-object="{{object.module_id}}"
                                     pass_to="module-form"></div>
                             </a>
 
                             <a
-                                actions="deletedocument="
-                                collection="{{document.collection}}"
-                                document_id="{{document._id}}"
+                                actions="deleteObject"
+                                array="{{object.array}}"
+                                object="{{object._id}}"
                                 class="float:right padding:5px">
                                 <i
                                     class="height:18px fill:#505050"
@@ -308,9 +308,9 @@
                                     class="display:flex height:18px fill:#505050"
                                     src="/assets/svg/palette.svg"></i>
                                 <div
-                                    pass-collection="{{document.collection}}"
-                                    pass-document_id="{{document._id}}"
-                                    pass-name="src"
+                                    pass-array="{{object.array}}"
+                                    pass-object="{{object._id}}"
+                                    pass-key="src"
                                     pass_to="builder"></div>
                             </a>
                             <!-- Render Code Editor -->
@@ -323,9 +323,9 @@
                                     src="/assets/svg/code.svg"></i>
                                 <div
                                     pass_id="render"
-                                    pass-collection="{{document.collection}}"
-                                    pass-document_id="{{document._id}}"
-                                    pass-name="src"
+                                    pass-array="{{object.array}}"
+                                    pass-object="{{object._id}}"
+                                    pass-key="src"
                                     pass_to="code-editor"></div>
                             </a>
                         </div>
@@ -335,16 +335,16 @@
             <!-- Website Page templates -->
             <div hidden id="page-templates">
                 <div
-                    filter-name="tags"
+                    filter-key="tags"
                     filter-value="template"
                     filter-operator="$eq"
                     filter-next></div>
                 <div
                     class="display:flex flex-wrap:wrap"
-                    collection=""
-                    document
+                    array=""
+                    object
                     pass-refresh="true"
-                    filter-sort-name="name"
+                    filter-sort-key="name"
                     filter-sort-direction="asc"
                     render-selector="[template]"
                     pass_id="page-templates">
@@ -353,42 +353,39 @@
                         template>
                         <div class="position:relative">
                             <img
-                                collection="{{document.collection}}"
-                                document_id="{{document._id}}"
-                                name="image"
+                                array="{{object.array}}"
+                                object="{{object._id}}"
+                                key="image"
                                 src="https://via.placeholder.com/150"
                                 width="100%" />
-                            <form
-                                realtime="false"
-                                collection="files"
-                                document_id="">
+                            <form realtime="false" array="files" object="">
                                 <input
                                     type="hidden"
-                                    name="name"
+                                    key="name"
                                     placeholder="View Name"
-                                    value="{{document.name}}" />
+                                    value="{{object.name}}" />
                                 <input
                                     type="hidden"
-                                    name="website_id"
+                                    key="website_id"
                                     class="website_id" />
                                 <textarea
                                     hidden
-                                    name="html"
-                                    value="{{document.html}}"></textarea>
+                                    key="html"
+                                    value="{{object.html}}"></textarea>
                                 <textarea
                                     hidden
-                                    name="css"
-                                    value="{{document.css}}"></textarea>
+                                    key="css"
+                                    value="{{object.css}}"></textarea>
                                 <textarea
                                     hidden
-                                    name="js"
-                                    value="{{document.js}}"></textarea>
+                                    key="js"
+                                    value="{{object.js}}"></textarea>
                                 <button
                                     class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover"
                                     actions="save, reset"
                                     show="#form, #website-pages"
                                     hide="#page-templates"
-                                    pass-collection="files"
+                                    pass-array="files"
                                     pass_to="website_id">
                                     <i
                                         class="height:20px fill:#505050"
@@ -397,11 +394,11 @@
                             </form>
                             <div
                                 class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">
-                                <span>{{document.name}}</span>
+                                <span>{{object.name}}</span>
                             </div>
                         </div>
                         <div class="padding:10px">
-                            <p>{{document.description}}</p>
+                            <p>{{object.description}}</p>
                         </div>
                     </div>
                 </div>

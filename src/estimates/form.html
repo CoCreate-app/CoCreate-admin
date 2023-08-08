@@ -22,9 +22,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -96,8 +96,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -116,9 +116,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -133,9 +133,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -144,8 +144,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection="module_activities"
-                        document_id=""
+                        array="module_activities"
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -159,12 +159,12 @@
         <main content_id="content">
             <form
                 pass_id="form-fields"
-                collection="module_activities"
-                document_id=""
+                array="module_activities"
+                object=""
                 class="padding:20px padding:10px@xs">
                 <input
                     type="hidden"
-                    name="module_id"
+                    key="module_id"
                     pass_id="module_id"
                     value />
                 <div
@@ -173,9 +173,9 @@
                         class="flex-grow:1 max-width:370px margin-right:20px@sm@md@lg@xl">
                         <input
                             type="text"
-                            name="_id"
+                            key="_id"
                             placeholder="Estimate#"
-                            input-selector="[name='estimate_id']"
+                            input-selector="[key='estimate_id']"
                             input-attribute="value"
                             input-events="input, onload"
                             crdt="false"
@@ -186,14 +186,14 @@
                         <div class="flex-grow:1 width:185px">
                             <input
                                 type="date"
-                                name="date-issue"
+                                key="date-issue"
                                 placeholder="Date Issue"
                                 class="floating-label" />
                         </div>
                         <div class="flex-grow:1 width:185px">
                             <input
                                 type="date"
-                                name="date-due"
+                                key="date-due"
                                 placeholder="Date Due"
                                 class="floating-label" />
                         </div>
@@ -203,7 +203,7 @@
                     class="max-width:370px padding:20px_0px border-bottom:1px_solid_lightgrey">
                     <input
                         type="text"
-                        name="name"
+                        key="name"
                         placeholder="Estimate Name"
                         class="floating-label" />
                 </div>
@@ -213,27 +213,27 @@
                     <div class="padding-bottom:10px">
                         <input
                             type="text"
-                            name="house-no"
+                            key="house-no"
                             placeholder="House No."
                             class="floating-label" />
                     </div>
                     <div class="padding-bottom:10px">
                         <textarea
-                            name="street"
+                            key="street"
                             placeholder="Landmark/Street"
                             class="floating-label"></textarea>
                     </div>
                     <div class="padding-bottom:10px">
                         <input
                             type="text"
-                            name="city"
+                            key="city"
                             placeholder="City"
                             class="floating-label" />
                     </div>
                     <div>
                         <input
                             type="text"
-                            name="pincode"
+                            key="pincode"
                             placeholder="Pincode"
                             class="floating-label" />
                     </div>
@@ -243,54 +243,54 @@
             <div
                 sortable
                 class="margin:0px_20px padding:20px_0px border-bottom:1px_solid_lightgrey"
-                collection="items-ordered"
-                filter-name="estimate_id"
+                array="items-ordered"
+                filter-key="estimate_id"
                 filter-value=""
                 filter-operator="$eq"
                 pass_id="form-fields"
                 render-selector="[template]"
-                dnd-group-name="item-row">
+                dnd-group-key="item-row">
                 <div
                     id="item-row"
                     class="border-color:medium-gray margin-bottom:10px"
                     template
-                    document_id="{{document._id}}">
+                    object="{{object._id}}">
                     <form
                         class="display:flex"
-                        collection="{{document.collection}}"
-                        document_id="{{document._id}}">
+                        array="{{object.array}}"
+                        object="{{object._id}}">
                         <div
                             class="display:flex flex-wrap:wrap flex-grow:1 align-items:center justify-content:space-around padding-bottom:10px border-right:1px_solid_lightgrey">
                             <div class="display:flex flex-grow:1">
                                 <input
                                     class="floating-label max-width:70px"
-                                    name="Item-n"
+                                    key="Item-n"
                                     placeholder="Item#" />
                                 <div class="flex-grow:1 height:40px">
                                     <cocreate-select
                                         class="floating-label"
-                                        name="Item"
+                                        key="Item"
                                         placeholder="Item">
                                         <input
                                             placeholder="Search"
                                             filter-next
                                             filter-search />
                                         <ul
-                                            collection="items"
+                                            array="items"
                                             render-selector="[template]"
                                             class="options overflow:auto">
                                             <li
                                                 class="option"
                                                 template
-                                                value="{{document._id}}"
-                                                document_id="{{document._id}}"
-                                                render="document">
+                                                value="{{object._id}}"
+                                                object="{{object._id}}"
+                                                render="object">
                                                 <h3
-                                                    name="name"
-                                                    value="{{document.name}}">
+                                                    key="name"
+                                                    value="{{object.name}}">
                                                     Item Name
                                                 </h3>
-                                                <h5>{{document._id}}</h5>
+                                                <h5>{{object._id}}</h5>
                                             </li>
                                         </ul>
                                     </cocreate-select>
@@ -298,25 +298,25 @@
                             </div>
                             <div class="display:flex">
                                 <input
-                                    id="qty-{{document._id}}"
+                                    id="qty-{{object._id}}"
                                     class="floating-label max-width:70px"
-                                    name="qty"
+                                    key="qty"
                                     placeholder="Qty" />
                                 <input
-                                    id="price-{{document._id}}"
+                                    id="price-{{object._id}}"
                                     class="floating-label max-width:100px"
-                                    name="price"
+                                    key="price"
                                     placeholder="Price" />
                                 <input
-                                    id="total-{{document._id}}"
+                                    id="total-{{object._id}}"
                                     realtime="false"
                                     class="floating-label max-width:130px item-total"
-                                    name="total"
+                                    key="total"
                                     placeholder="Total"
-                                    calculate="{#price-{{document._id}}} * {#qty-{{document._id}}}" />
+                                    calculate="{#price-{{object._id}}} * {#qty-{{object._id}}}" />
                             </div>
                             <div>
-                                <!--<input class="item-description floating-label" document_id="" name="description"  placeholder="Description"/>-->
+                                <!--<input class="item-description floating-label" object="" key="description"  placeholder="Description"/>-->
                             </div>
                         </div>
 
@@ -324,8 +324,8 @@
                             class="padding:10px display:flex justify-content:space-between flex-direction:column">
                             <a
                                 actions="deleteDocument, closeModal"
-                                collection="{{document.collection}}"
-                                document_id="{{document._id}}"
+                                array="{{object.array}}"
+                                object="{{object._id}}"
                                 class="text-align-center"
                                 ><i
                                     class="height:18px fill:#505050"
@@ -341,11 +341,8 @@
                 </div>
 
                 <div class="noDrag padding-top:10px">
-                    <form
-                        realtime="false"
-                        collection="items-ordered"
-                        document_id="">
-                        <input type="hidden" name="estimate_id" />
+                    <form realtime="false" array="items-ordered" object="">
+                        <input type="hidden" key="estimate_id" />
                         <a
                             actions="save, reset"
                             class="noDrag padding:10px background:gainsboro"
@@ -358,24 +355,21 @@
                 </div>
             </div>
 
-            <form
-                pass_id="form-fields"
-                collection="module_activities"
-                document_id="">
+            <form pass_id="form-fields" array="module_activities" object="">
                 <div
                     class="padding:20px display:flex flex-wrap:wrap justify-content:space-between">
                     <div class="min-width:300px max-width:550px flex-grow:1">
                         <div class="padding-bottom:10px">
                             <input
                                 type="text"
-                                name="payment-terms"
+                                key="payment-terms"
                                 placeholder="Add Payment Terms"
                                 class="floating-label" />
                         </div>
                         <div class="padding-bottom:10px">
                             <input
                                 type="text"
-                                name="clite-note"
+                                key="clite-note"
                                 placeholder="Add client Note"
                                 class="floating-label" />
                         </div>
@@ -393,12 +387,12 @@
                             <div
                                 class="display:flex justify-content:space-between">
                                 <label class="color-dark-gray">Discount</label>
-                                <input id="discount" name="discount" />
+                                <input id="discount" key="discount" />
                             </div>
                             <div
                                 class="display:flex justify-content:space-between">
                                 <label class="color-dark-gray">Tax</label>
-                                <input id="tax-precent" name="tax-rate" />
+                                <input id="tax-precent" key="tax-rate" />
                                 <input
                                     type="hidden"
                                     id="tax"
@@ -414,7 +408,7 @@
                                 <span
                                     id="total"
                                     calculate="{#subtotal} - {#discount} + {#tax}"
-                                    name="total"
+                                    key="total"
                                     read="false"
                                     >$00.00</span
                                 >
@@ -424,7 +418,7 @@
                                 <label class="color-dark-gray"
                                     >Paid to date</label
                                 >
-                                <span id="paid" name="paid">0</span>
+                                <span id="paid" key="paid">0</span>
                             </div>
                             <div
                                 class="display:flex justify-content:space-between">
@@ -433,7 +427,7 @@
                                 >
                                 <span
                                     calculate="{#total} - {#paid}"
-                                    name="balance"
+                                    key="balance"
                                     read="false"></span>
                             </div>
                         </div>

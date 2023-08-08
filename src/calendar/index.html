@@ -12,9 +12,9 @@
         <link
             rel="stylesheet"
             href="./index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315e4"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315e4"
+            key="src"
             type="text/css" />
 
         <!-- Full Calendar -->
@@ -112,8 +112,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module-form"
-                            pass-collection="modules"
-                            pass-document_id=""
+                            pass-array="modules"
+                            pass-object=""
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -132,9 +132,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -149,9 +149,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -160,8 +160,8 @@
                 <li class="margin-right:15px">
                     <a
                         actions="deleteDocument, closeModal"
-                        collection=""
-                        document_id=""
+                        array=""
+                        object=""
                         pass_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
@@ -205,7 +205,7 @@
         <!-- Define filter-name to define field to filter results for calendar -->
         <div
             calendar_id="calendar"
-            filter-name="start_date"
+            filter-key="start_date"
             filter-value="0"
             filter-operator="$gt"></div>
 
@@ -214,10 +214,10 @@
                 <div
                     id="calendar"
                     class="cal-container"
-                    collection=""
-                    event-name="name"
+                    array=""
+                    event-key="name"
                     calendar_id="calendar"
-                    filter-name=""
+                    filter-key=""
                     filter-value=""
                     filter-operator="$eq"
                     pass_id="datatable">
@@ -226,8 +226,8 @@
                         actions="pass, openModal"
                         modal-src="./calendar/form.html"
                         pass_id="datatable"
-                        pass-collection=""
-                        pass-document_id=""
+                        pass-array=""
+                        pass-object=""
                         pass_to="form-fields"
                         modal-width="320px"
                         modal-color="#21618C">

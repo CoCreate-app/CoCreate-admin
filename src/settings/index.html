@@ -17,9 +17,9 @@
         <link
             rel="stylesheet"
             href="../index.css"
-            collection="files"
-            document_id="637bc8fe91249e639db315d9"
-            name="src"
+            array="files"
+            object="637bc8fe91249e639db315d9"
+            key="src"
             type="text/css" />
         <link rel="manifest" href="/manifest.webmanifest" />
     </head>
@@ -86,8 +86,8 @@
                             src="/assets/svg/cog.svg"></i>
                         <div
                             pass_id="module_id"
-                            pass-collection="modules"
-                            pass-document_id="5ff747727005da1c2727418f"
+                            pass-array="modules"
+                            pass-object="5ff747727005da1c2727418f"
                             pass_to="form-fields"></div>
                         <div
                             pass_id="module_id"
@@ -106,9 +106,9 @@
                             src="/assets/svg/code.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="code-editor"></div>
                     </a>
                 </li>
@@ -123,9 +123,9 @@
                             src="/assets/svg/palette.svg"></i>
                         <div
                             pass_id="render"
-                            pass-collection=""
-                            pass-document_id=""
-                            pass-name=""
+                            pass-array=""
+                            pass-object=""
+                            pass-key=""
                             pass_to="builder"></div>
                     </a>
                 </li>
@@ -137,10 +137,10 @@
             <ul
                 class="display:flex flex-direction:column overflow:auto width:100% bottom:10px margin-top:20px">
                 <div
-                    collection="modules"
-                    filter-sort-name="settings-menu-position"
+                    array="modules"
+                    filter-sort-key="settings-menu-position"
                     filter-sort-direction="asc"
-                    filter-name="settings-menu-position"
+                    filter-key="settings-menu-position"
                     filter-value="0"
                     filter-value-type="number"
                     filter-operator="$ne"
@@ -148,67 +148,65 @@
                     <li
                         class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover"
                         template
-                        document_id="{{document._id}}">
+                        object="{{object._id}}">
                         <a
                             actions="pass, openModal"
-                            modal-src="{{document.settings-menu-primary.parentDirectory}}/{{document.settings-menu-primary.name}}"
-                            modal-width="{{document.settings-modal-primary-width}}"
-                            modal-color="{{document.settings-modal-primary-color}}"
+                            modal-src="{{object.settings-menu-primary.parentDirectory}}/{{object.settings-menu-primary.name}}"
+                            modal-width="{{object.settings-modal-primary-width}}"
+                            modal-color="{{object.settings-modal-primary-color}}"
                             class="display:inline-block">
                             <span
                                 class="display:inline-block width:50px text-align:center">
                                 <i
                                     class="height:20px fill:#505050"
-                                    src="/assets/svg/{{document.icon}}.svg"></i>
+                                    src="/assets/svg/{{object.icon}}.svg"></i>
                             </span>
-                            <span>{{document.name}}</span>
+                            <span>{{object.name}}</span>
                             <div
                                 pass-template="$uid"
-                                pass-filter-name="module_id"
-                                pass-filter-value="{{document._id}}"
+                                pass-filter-key="module_id"
+                                pass-filter-value="{{object._id}}"
                                 pass_to="datatable"></div>
                             <div
-                                pass-value="{{document._id}}"
-                                pass-filter-value="{{document._id}}"
+                                pass-value="{{object._id}}"
+                                pass-filter-value="{{object._id}}"
                                 pass_to="module_id"></div>
                             <div
-                                pass-collection="files"
-                                pass-document_id="{{document.settings-menu-secondary._id}}"
+                                pass-array="files"
+                                pass-object="{{object.settings-menu-secondary._id}}"
                                 pass_to="form"></div>
                             <div
-                                pass-document_id="{{document.organization_id}}"
+                                pass-object="{{object.organization_id}}"
                                 pass_to="form-fields"
-                                class="session{{document.name}}_Id"></div>
+                                class="session{{object.name}}_Id"></div>
                             <div
-                                pass-collection="files"
-                                pass-document_id="{{document.settings-menu-primary._id}}"
-                                pass-name="src"
+                                pass-array="files"
+                                pass-object="{{object.settings-menu-primary._id}}"
+                                pass-key="src"
                                 pass_to="render"></div>
                         </a>
                         <div
-                            class="float:right width:50px text-align:center {{document.settings-menu-secondary}}">
+                            class="float:right width:50px text-align:center {{object.settings-menu-secondary}}">
                             <a
                                 actions="pass, openModal"
-                                modal-src="{{document.settings-menu-secondary.parentDirectory}}/{{document.settings-menu-secondary.name}}"
-                                modal-width="{{document.settings-modal-secondary-width}}"
-                                modal-color="{{document.settings-modal-secondary-color}}">
+                                modal-src="{{object.settings-menu-secondary.parentDirectory}}/{{object.settings-menu-secondary.name}}"
+                                modal-width="{{object.settings-modal-secondary-width}}"
+                                modal-color="{{object.settings-modal-secondary-color}}">
                                 <i
                                     class="height:16px fill:#505050"
                                     src="/assets/svg/plus.svg"></i>
                                 <div
-                                    pass-collection="files"
-                                    pass-document_id="{{document.main-menu-secondary._id}}"
-                                    pass-name="src"
+                                    pass-array="files"
+                                    pass-object="{{object.main-menu-secondary._id}}"
+                                    pass-key="src"
                                     pass_to="render"></div>
                                 <div
-                                    pass-document_id="{{document._id}}"
+                                    pass-object="{{object._id}}"
                                     pass_to="module-form"></div>
+                                <div pass-object="" pass_to="form-fields"></div>
                                 <div
-                                    pass-document_id=""
-                                    pass_to="form-fields"></div>
-                                <div
-                                    pass-value="{{document._id}}"
-                                    pass-filter-value="{{document._id}}"
+                                    pass-value="{{object._id}}"
+                                    pass-filter-value="{{object._id}}"
                                     pass_to="module_id"></div>
                             </a>
                         </div>
