@@ -11,17 +11,16 @@ module.exports = {
             "array": "files",
             "object": {
                 "name": "{{name}}",
-                "path": "{{path}}",
+                "path": "/admin/{{path}}",
+                "pathname": "{{pathname}}",
+                "directory": "admin",
+                "content-type": "{{content-type}}",
                 "src": "{{source}}",
                 "host": [
                     "*",
                     "general.cocreate.app"
                 ],
-                "parentDirectory": "{{parentDirectory}}",
-                "directory": "/admin{{directory}}",
-                "content-type": "{{content-type}}",
-                "public": "true",
-                "website_id": "644d4b878036fb9d1d1fd69b" // {{object}}
+                "public": "true"
             }
         }
     ]
