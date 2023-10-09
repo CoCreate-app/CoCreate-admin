@@ -1,3 +1,20 @@
+# [1.33.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.32.16...v1.33.0) (2023-10-09)
+
+
+### Bug Fixes
+
+* Refactor file upload components and simplify CSS styles ([52f2671](https://github.com/CoCreate-app/CoCreate-admin/commit/52f2671526ca5d419edafccbf86009965f9bd96e))
+* Refactored *-target to *-selector ([e38dbae](https://github.com/CoCreate-app/CoCreate-admin/commit/e38dbaef1e1230d7d97ce2f135af64b30e5015a7))
+* render-array and render-object attributes renamed to render ([cb72c02](https://github.com/CoCreate-app/CoCreate-admin/commit/cb72c02eaf5869790fe9b71c54d5882743f44c32))
+* replace cdn with "https://CoCreate.app/dist/CoCreate.js" ([a2d1970](https://github.com/CoCreate-app/CoCreate-admin/commit/a2d19706aadde8e7fc1e6087374a1553f436059f))
+* updated serviceWorker path to /service-worker.js ([cbc457f](https://github.com/CoCreate-app/CoCreate-admin/commit/cbc457f10de7c2e67406c2fd1ce116cf09b247e8))
+
+
+### Features
+
+* removed apikey.js as it is handled dynamically ([ce3e3b7](https://github.com/CoCreate-app/CoCreate-admin/commit/ce3e3b7aeeedf09676ba3fcc87ee3b774bd8669a))
+* renamed CRUD attributes and params ([64089e5](https://github.com/CoCreate-app/CoCreate-admin/commit/64089e51a4ecc0b24f3d4f0fcfec078cdfa076a3))
+
 ## [1.32.16](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.32.15...v1.32.16) (2023-06-14)
 
 
