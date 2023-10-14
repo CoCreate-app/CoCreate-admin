@@ -1,3 +1,10 @@
+## [1.33.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.33.0...v1.33.1) (2023-10-14)
+
+
+### Bug Fixes
+
+* update pass-refresh to pass-overwrite ([5b08fe6](https://github.com/CoCreate-app/CoCreate-admin/commit/5b08fe6369c40c4216b3e4086d22f0dbe53a01c9))
+
 # [1.33.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.32.16...v1.33.0) (2023-10-09)
 
 
