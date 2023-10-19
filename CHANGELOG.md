@@ -1,3 +1,10 @@
+## [1.33.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.33.1...v1.33.2) (2023-10-19)
+
+
+### Bug Fixes
+
+* deleteDocuments renamed to delete ([0f557c8](https://github.com/CoCreate-app/CoCreate-admin/commit/0f557c86ba8cec55d7d648cd8f030721732f48ba))
+
 ## [1.33.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.33.0...v1.33.1) (2023-10-14)
 
 
