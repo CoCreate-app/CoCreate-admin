@@ -1,0 +1,88 @@
+{
+    "short_name": "CoCreate",
+    "name": "CoCreate",
+    "description": "Build your business in miutes",
+    "protocol_handlers": [
+        {
+          "protocol": "web+jngl",
+          "url": "/lookup?type=%s"
+        }
+    ],
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "./assets/icons/icon-72x72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "./assets/icons/icon-96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "./assets/icons/icon-128x128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "./assets/icons/icon-144x144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "./assets/icons/icon-152x152.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "./assets/icons/icon-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "./assets/icons/icon-384x384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "./assets/icons/icon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "maskable"
+        }
+    ],
+    "start_url": "/",
+    "id": "/",
+    "background_color": "whitesmoke",
+    "display": "fullscreen",
+    "theme_color": "#c7c7c7",
+    "screenshots": [
+        {
+            "src": "./assets/screenshot-1.png",
+            "type": "image/png",
+            "sizes": "1903x950"
+        }
+    ],
+    "categories": "productivity",
+    "file_handlers": [
+        {
+            "action": "/open-file",
+            "accept": {
+                "text/*": [
+                    ".txt"
+                ]
+            }
+        }
+    ],
+    "share_target": {
+        "action": "/",
+        "method": "GET",
+        "enctype": "application/x-www-form-urlencoded",
+        "params": {
+            "title": "title",
+            "text": "text",
+            "url": "url"
+        }
+    }
+}
