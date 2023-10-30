@@ -129,7 +129,7 @@ self.addEventListener('push', (event) => {
     // Handle WebSocket events
     socket.addEventListener('open', () => {
         // The WebSocket connection is open, send the message to the server
-        socket.send(JSON.stringify({ method: 'read.object', array: 'files', object: { _id }, uid: '' }));
+        socket.send(JSON.stringify({ method: 'object.read', array: 'files', object: { _id }, uid: '' }));
     });
 
     socket.addEventListener('message', (event) => {
