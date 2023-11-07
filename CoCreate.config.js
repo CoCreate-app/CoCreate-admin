@@ -17,8 +17,7 @@ module.exports = {
                 "content-type": "{{content-type}}",
                 "src": "{{source}}",
                 "host": [
-                    "*",
-                    "general.cocreate.app"
+                    "*"
                 ],
                 "public": "true"
             }
