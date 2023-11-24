@@ -1,3 +1,23 @@
+# [1.34.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.33.2...v1.34.0) (2023-11-24)
+
+
+### Bug Fixes
+
+* added assests ([26bdfa5](https://github.com/CoCreate-app/CoCreate-admin/commit/26bdfa5c8e591b22247dd828bcca0f225694d1ed))
+* favicon.ico path ([d7fb4ff](https://github.com/CoCreate-app/CoCreate-admin/commit/d7fb4fff01a905f585d474b5fae187aeee5355a4))
+* filter-name renamed to filter-key ([9b03b31](https://github.com/CoCreate-app/CoCreate-admin/commit/9b03b313ca1465ec0541ef40a97e9e25800d7724))
+* height 1em ([df08e96](https://github.com/CoCreate-app/CoCreate-admin/commit/df08e96b6e398f2198fe9c934176302d85b45a90))
+* height 1em ([a2ccdc5](https://github.com/CoCreate-app/CoCreate-admin/commit/a2ccdc538d7cd9a9f04bd8bc52949aa1dcf78bd6))
+* removed apikey.js ([78f3b9a](https://github.com/CoCreate-app/CoCreate-admin/commit/78f3b9a09cd2710b4a87c999a54f1dea924dcebf))
+* update host ([fd10131](https://github.com/CoCreate-app/CoCreate-admin/commit/fd10131aa68d6153bb5478727c2bb4666f3f0fd4))
+* update method to use object.update etc ([af004b5](https://github.com/CoCreate-app/CoCreate-admin/commit/af004b5701250c0fa9ac232db8c74e6b5a2ac7a1))
+* update to relative path ([0c6cdd5](https://github.com/CoCreate-app/CoCreate-admin/commit/0c6cdd535ebb3a9c3b25b974f3ebba06313ad26e))
+
+
+### Features
+
+* Installable and  offline support ([0090aa5](https://github.com/CoCreate-app/CoCreate-admin/commit/0090aa50ce3a02183c7b64d0fd4e197d745ea0ed))
+
 ## [1.33.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.33.1...v1.33.2) (2023-10-19)
 
 
