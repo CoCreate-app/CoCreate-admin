@@ -83,55 +83,55 @@
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./modules/form.html"
                         modal-width="320px">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/cog.svg"></i>
                         <div
-                            pass_id="module-form"
-                            pass-array="modules"
-                            pass-object=""
-                            pass_to="form-fields"></div>
+                            state_id="module-form"
+                            state-array="modules"
+                            state-object=""
+                            state_to="form-fields"></div>
                         <div
-                            pass_id="module_id"
-                            pass-filter-value=""
-                            pass_to="module_id"></div>
+                            state_id="module_id"
+                            state-filter-value=""
+                            state_to="module_id"></div>
                     </a>
                 </li>
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./code-editor/index.html">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/code.svg"></i>
                         <div
-                            pass_id="render"
-                            pass-array=""
-                            pass-object=""
-                            pass-key=""
-                            pass_to="code-editor"></div>
+                            state_id="render"
+                            state-array=""
+                            state-object=""
+                            state-key=""
+                            state_to="code-editor"></div>
                     </a>
                 </li>
 
                 <!-- Render Builder -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./builder/index.html">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/palette.svg"></i>
                         <div
-                            pass_id="render"
-                            pass-array=""
-                            pass-object=""
-                            pass-key=""
-                            pass_to="builder"></div>
+                            state_id="render"
+                            state-array=""
+                            state-object=""
+                            state-key=""
+                            state_to="builder"></div>
                     </a>
                 </li>
 
@@ -141,7 +141,7 @@
                         actions="deleteDocument, closeModal"
                         array=""
                         object=""
-                        pass_id="form-fields">
+                        state_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
                             src="./assets/svg/trash-alt.svg"></i>
@@ -152,19 +152,19 @@
 
         <!-- Main Content -->
         <main class="padding:10px" content_id="content">
-            <a actions="pass">
+            <a actions="state">
                 <span>run</span>
                 <div
-                    pass_to="column"
-                    pass-array="tags"
-                    pass-filter-key="type"
-                    pass-filter-value="60edaf79b979b4001744c6fe"
-                    pass-overwrite></div>
+                    state_to="column"
+                    state-array="tags"
+                    state-filter-key="type"
+                    state-filter-value="60edaf79b979b4001744c6fe"
+                    state-overwrite></div>
                 <div
-                    pass_to="card"
-                    pass-array="module_activities"
-                    pass-filter-key="type"
-                    pass-overwrite></div>
+                    state_to="card"
+                    state-array="module_activities"
+                    state-filter-key="type"
+                    state-overwrite></div>
             </a>
 
             <div id="board" class="display:flex overflow:auto height:90vh">
@@ -178,7 +178,7 @@
                     sortable
                     dnd-group-key="column"
                     droppable="true"
-                    pass_id="column"
+                    state_id="column"
                     render-selector=":last-child"
                     class="display:flex flex-wrap:nowrap flex-direction:row">
                     <!-- Column -->
@@ -215,7 +215,7 @@
                                 filter-sort-direction="asc"
                                 sortable
                                 dnd-group-key="card"
-                                pass_id="card"
+                                state_id="card"
                                 render-selector=":last-child"
                                 class="display:flex flex-direction:column height:100%">
                                 <!-- Card -->
@@ -270,7 +270,7 @@
                                                 class="avatar-wrapper margin:5px">
                                                 <a
                                                     class="avatar round"
-                                                    actions="pass, openModal"
+                                                    actions="state, openModal"
                                                     modal-src="./users/profile.html"
                                                     modal-width="300px"
                                                     modal-height="375px"
@@ -343,7 +343,7 @@
             <form>
                 <input
                     type="hidden"
-                    pass_id="module_id"
+                    state_id="module_id"
                     array=""
                     object=""
                     key="module_id" />

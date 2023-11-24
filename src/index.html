@@ -75,52 +75,52 @@
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./modules/form.html"
                         modal-width="320px">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/cog.svg"></i>
                         <div
-                            pass-array="modules"
-                            pass-object="5ff747727005da1c2727419c"
-                            pass_to="form-fields"></div>
+                            state-array="modules"
+                            state-object="5ff747727005da1c2727419c"
+                            state_to="form-fields"></div>
                         <div
-                            pass-filter-value="5ff747727005da1c2727419c"
-                            pass_to="module_id"></div>
+                            state-filter-value="5ff747727005da1c2727419c"
+                            state_to="module_id"></div>
                     </a>
                 </li>
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./code-editor/index.html">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/code.svg"></i>
                         <div
-                            pass-array="files"
-                            pass-object="637bc8fe91249e639db315d8"
-                            pass-key="src"
-                            pass_to="code-editor"></div>
+                            state-array="files"
+                            state-object="637bc8fe91249e639db315d8"
+                            state-key="src"
+                            state_to="code-editor"></div>
                     </a>
                 </li>
 
                 <!-- Render Builder -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./builder/index.html"
                         class="sessionBuilderUI_Id">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/palette.svg"></i>
                         <div
-                            pass-array="files"
-                            pass-object="637bc8fe91249e639db315d8"
-                            pass-key="src"
-                            pass_to="builder"></div>
+                            state-array="files"
+                            state-object="637bc8fe91249e639db315d8"
+                            state-key="src"
+                            state_to="builder"></div>
                     </a>
                 </li>
 
@@ -137,7 +137,7 @@
                     render-selector="[template]">
                     <li class="margin-right:15px" template>
                         <a
-                            actions="pass, openModal"
+                            actions="state, openModal"
                             modal-src="{{object.navbar-menu-primary.parentDirectory}}/{{object.navbar-menu-primary.name}}"
                             modal-width="{{object.navbar-modal-primary-width}}"
                             modal-height="{{object.navbar-modal-primary-height}}"
@@ -148,27 +148,27 @@
                                     src="./assets/svg/{{object.icon}}.svg"></i>
                             </span>
                             <div
-                                pass-array="module_activities"
-                                pass-filter-key="module_id"
-                                pass-filter-value="{{object._id}}"
-                                pass_to="datatable"></div>
+                                state-array="module_activities"
+                                state-filter-key="module_id"
+                                state-filter-value="{{object._id}}"
+                                state_to="datatable"></div>
                             <div
-                                pass-array="files"
-                                pass-object="{{object.main-menu-secondary}}"
-                                pass-key="src"
-                                pass_to="form"></div>
+                                state-array="files"
+                                state-object="{{object.main-menu-secondary}}"
+                                state-key="src"
+                                state_to="form"></div>
                             <div
-                                pass-array="files"
-                                pass-object="{{object.navbar-menu-primary._id}}"
-                                pass-key="src"
-                                pass_to="render"></div>
+                                state-array="files"
+                                state-object="{{object.navbar-menu-primary._id}}"
+                                state-key="src"
+                                state_to="render"></div>
                             <div
-                                pass-value="{{object._id}}"
-                                pass-filter-value="{{object._id}}"
-                                pass_to="module_id"></div>
+                                state-value="{{object._id}}"
+                                state-filter-value="{{object._id}}"
+                                state_to="module_id"></div>
                             <div
-                                pass-object="{{object._id}}"
-                                pass_to="module-form"></div>
+                                state-object="{{object._id}}"
+                                state_to="module-form"></div>
                         </a>
                     </li>
                 </div>
@@ -182,7 +182,7 @@
             <div class="avatar-wrapper margin:5px">
                 <a
                     class="avatar round"
-                    actions="pass, openModal"
+                    actions="state, openModal"
                     modal-src="./users/profile.html"
                     modal-width="300px"
                     modal-height="375px"
@@ -201,22 +201,22 @@
                             width="40px" />
                     </span>
                     <div
-                        pass-array="modules"
+                        state-array="modules"
                         object="5ff747727005da1c27274182"
-                        pass_to="module_id"></div>
+                        state_to="module_id"></div>
                     <div
-                        pass-array="files"
-                        pass-object="60ddfdc114b5ab0c2dd2fe1c"
-                        pass_to="form"></div>
+                        state-array="files"
+                        state-object="60ddfdc114b5ab0c2dd2fe1c"
+                        state_to="form"></div>
                     <div
-                        pass-array="users"
-                        pass-object="{{userId}}"
-                        pass_to="form-fields"></div>
+                        state-array="users"
+                        state-object="{{userId}}"
+                        state_to="form-fields"></div>
                     <div
-                        pass-array="files"
-                        pass-object="60ddfdc114b5ab0c2dd2fe1d"
-                        pass-key="src"
-                        pass_to="render"></div>
+                        state-array="files"
+                        state-object="60ddfdc114b5ab0c2dd2fe1d"
+                        state-key="src"
+                        state_to="render"></div>
                 </a>
                 <div
                     class="avatar-status"
@@ -297,16 +297,16 @@
                     <input
                         type="text"
                         class="floating-label"
-                        pass_to="results" />
+                        state_to="results" />
                 </floating-label>
                 <span
-                    class="passValueBtn position:relative bottom:29px right:11px float:right font-size:18px">
+                    class="position:relative bottom:29px right:11px float:right font-size:18px">
                     <a
-                        actions="pass, openModal"
-                        pass_to="render"
+                        actions="state, openModal"
+                        state_to="render"
                         array="website-pages"
                         object=""
-                        pass-key="src"
+                        state-key="src"
                         modal-width="900px"
                         modal-color="#229954">
                         <i
@@ -334,7 +334,7 @@
                             class="line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover"
                             template>
                             <a
-                                actions="pass, openModal"
+                                actions="state, openModal"
                                 modal-src="{{object.main-menu-primary.parentDirectory}}/{{object.main-menu-primary.name}}"
                                 modal-width="{{object.main-modal-primary-width}}"
                                 modal-color="{{object.main-modal-color}}"
@@ -347,33 +347,33 @@
                                 </span>
                                 <span>{{object.name}}</span>
                                 <div
-                                    pass-array="module_activities"
-                                    pass-template="$uid"
-                                    pass-filter-key="module_id"
-                                    pass-filter-value="{{object._id}}"
-                                    pass_to="datatable"></div>
+                                    state-array="module_activities"
+                                    state-template="$uid"
+                                    state-filter-key="module_id"
+                                    state-filter-value="{{object._id}}"
+                                    state_to="datatable"></div>
                                 <div
-                                    pass-array="files"
-                                    pass-object="{{object.main-menu-secondary._id}}"
-                                    pass-key="src"
-                                    pass_to="form"></div>
+                                    state-array="files"
+                                    state-object="{{object.main-menu-secondary._id}}"
+                                    state-key="src"
+                                    state_to="form"></div>
                                 <div
-                                    pass-array="files"
-                                    pass-object="{{object.main-menu-primary._id}}"
-                                    pass-key="src"
-                                    pass_to="render"></div>
+                                    state-array="files"
+                                    state-object="{{object.main-menu-primary._id}}"
+                                    state-key="src"
+                                    state_to="render"></div>
                                 <div
-                                    pass-value="{{object._id}}"
-                                    pass-filter-value="{{object._id}}"
-                                    pass_to="module_id"></div>
+                                    state-value="{{object._id}}"
+                                    state-filter-value="{{object._id}}"
+                                    state_to="module_id"></div>
                                 <div
-                                    pass-object="{{object._id}}"
-                                    pass_to="module-form"></div>
+                                    state-object="{{object._id}}"
+                                    state_to="module-form"></div>
                             </a>
                             <div
                                 class="float:right width:50px text-align:center">
                                 <a
-                                    actions="pass, openModal"
+                                    actions="state, openModal"
                                     modal-src="{{object.main-menu-secondary.parentDirectory}}/{{object.main-menu-secondary.name}}"
                                     modal-width="{{object.main-modal-secondary-width}}"
                                     modal-color="{{object.main-modal-secondary-color}}"
@@ -382,21 +382,21 @@
                                         class="display:flex height:18px fill:#505050"
                                         src="./assets/svg/plus.svg"></i>
                                     <div
-                                        pass-array="file"
-                                        pass-object="{{object.main-menu-secondary._id}}"
-                                        pass-key="src"
-                                        pass_to="render"></div>
+                                        state-array="file"
+                                        state-object="{{object.main-menu-secondary._id}}"
+                                        state-key="src"
+                                        state_to="render"></div>
                                     <div
-                                        pass-object=""
-                                        pass_to="form-fields"></div>
+                                        state-object=""
+                                        state_to="form-fields"></div>
                                     <div
-                                        pass-value="{{object._id}}"
-                                        pass-filter-value="{{object._id}}"
-                                        pass-template="$uid"
-                                        pass_to="module_id"></div>
+                                        state-value="{{object._id}}"
+                                        state-filter-value="{{object._id}}"
+                                        state-template="$uid"
+                                        state_to="module_id"></div>
                                     <div
-                                        pass-object="{{docusment._id}}"
-                                        pass_to="module-form"></div>
+                                        state-object="{{docusment._id}}"
+                                        state_to="module-form"></div>
                                 </a>
                             </div>
                         </li>
@@ -407,7 +407,7 @@
                 <div
                     class="display:flex flex-wrap:nowrap justify-content:space-between position:absolute bottom:0px background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./settings/index.html"
                         modal-width="275px"
                         modal-color="#229954"
@@ -418,20 +418,20 @@
                             class="display:flex height:16px fill:#505050"
                             src="./assets/svg/cogs.svg"></i>
                         <div
-                            pass-array="files"
-                            pass-object="60ddfdc014b5ab0c2dd2fe18"
-                            pass-key="src"
-                            pass_to="render"></div>
+                            state-array="files"
+                            state-object="60ddfdc014b5ab0c2dd2fe18"
+                            state-key="src"
+                            state_to="render"></div>
                         <div
-                            pass-value="5ff747727005da1c2727418f"
-                            pass-filter-value="5ff747727005da1c2727418f"
-                            pass_to="module_id"></div>
+                            state-value="5ff747727005da1c2727418f"
+                            state-filter-value="5ff747727005da1c2727418f"
+                            state_to="module_id"></div>
                         <div
-                            pass-object="5ff747727005da1c2727418f"
-                            pass_to="module-form"></div>
+                            state-object="5ff747727005da1c2727418f"
+                            state_to="module-form"></div>
                     </a>
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./modules/datatable.html"
                         modal-width="640px"
                         modal-color="#229954"
@@ -440,29 +440,29 @@
                             class="display:flex height:16px fill:#505050"
                             src="./assets/svg/project-diagram.svg"></i>
                         <div
-                            pass-template="$uid"
-                            pass-array="modules"
-                            pass_to="datatable"></div>
+                            state-template="$uid"
+                            state-array="modules"
+                            state_to="datatable"></div>
                         <div
-                            pass-array="files"
-                            pass-object="60ddfdbf14b5ab0c2dd2fe09"
-                            pass-key="src"
-                            pass_to="form"></div>
+                            state-array="files"
+                            state-object="60ddfdbf14b5ab0c2dd2fe09"
+                            state-key="src"
+                            state_to="form"></div>
                         <div
-                            pass-array="files"
-                            pass-object="60ddfdbf14b5ab0c2dd2fe08"
-                            pass-key="src"
-                            pass_to="render"></div>
+                            state-array="files"
+                            state-object="60ddfdbf14b5ab0c2dd2fe08"
+                            state-key="src"
+                            state_to="render"></div>
                         <div
-                            pass-value="5ff747727005da1c27274190"
-                            pass-filter-value="5ff747727005da1c27274190"
-                            pass_to="module_id"></div>
+                            state-value="5ff747727005da1c27274190"
+                            state-filter-value="5ff747727005da1c27274190"
+                            state_to="module_id"></div>
                         <div
-                            pass-object="5ff747727005da1c27274190"
-                            pass_to="module-form"></div>
+                            state-object="5ff747727005da1c27274190"
+                            state_to="module-form"></div>
                     </a>
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./module-views/datatable.html"
                         modal-width="640px"
                         modal-color="#229954"
@@ -471,29 +471,29 @@
                             class="display:flex height:16px fill:#505050"
                             src="./assets/svg/shapes.svg"></i>
                         <div
-                            pass-template="$uid"
-                            pass-array="files"
-                            pass_to="datatable"></div>
+                            state-template="$uid"
+                            state-array="files"
+                            state_to="datatable"></div>
                         <div
-                            pass-array="files"
-                            pass-object="60ddfdc014b5ab0c2dd2fe0a"
-                            pass-key="src"
-                            pass_to="form"></div>
+                            state-array="files"
+                            state-object="60ddfdc014b5ab0c2dd2fe0a"
+                            state-key="src"
+                            state_to="form"></div>
                         <div
-                            pass-array="files"
-                            pass-object="60ddfdc014b5ab0c2dd2fe0b"
-                            pass-key="src"
-                            pass_to="render"></div>
+                            state-array="files"
+                            state-object="60ddfdc014b5ab0c2dd2fe0b"
+                            state-key="src"
+                            state_to="render"></div>
                         <div
-                            pass-value="5ff747727005da1c27274187"
-                            pass-filter-value="5ff747727005da1c27274187"
-                            pass_to="module_id"></div>
+                            state-value="5ff747727005da1c27274187"
+                            state-filter-value="5ff747727005da1c27274187"
+                            state_to="module_id"></div>
                         <div
-                            pass-object="5ff747727005da1c27274187"
-                            pass_to="module-form"></div>
+                            state-object="5ff747727005da1c27274187"
+                            state_to="module-form"></div>
                     </a>
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./files/datatable.html"
                         modal-width="640px"
                         modal-color="#229954"
@@ -502,26 +502,26 @@
                             class="display:flex height:16px fill:#505050"
                             src="./assets/svg/folder.svg"></i>
                         <div
-                            pass-template="$uid"
-                            pass-array="files"
-                            pass_to="datatable"></div>
+                            state-template="$uid"
+                            state-array="files"
+                            state_to="datatable"></div>
                         <div
-                            pass-array="files"
-                            pass-object="60ddfdc014b5ab0c2dd2fe16"
-                            pass-key="src"
-                            pass_to="form"></div>
+                            state-array="files"
+                            state-object="60ddfdc014b5ab0c2dd2fe16"
+                            state-key="src"
+                            state_to="form"></div>
                         <div
-                            pass-array="files"
-                            pass-object="60ddfdc014b5ab0c2dd2fe15"
-                            pass-key="src"
-                            pass_to="render"></div>
+                            state-array="files"
+                            state-object="60ddfdc014b5ab0c2dd2fe15"
+                            state-key="src"
+                            state_to="render"></div>
                         <div
-                            pass-value="5ff747727005da1c2727419a"
-                            pass-filter-value="5ff747727005da1c2727419a"
-                            pass_to="module_id"></div>
+                            state-value="5ff747727005da1c2727419a"
+                            state-filter-value="5ff747727005da1c2727419a"
+                            state_to="module_id"></div>
                         <div
-                            pass-object="5ff747727005da1c2727419a"
-                            pass_to="module-form"></div>
+                            state-object="5ff747727005da1c2727419a"
+                            state_to="module-form"></div>
                     </a>
                     <a
                         actions="signOut"

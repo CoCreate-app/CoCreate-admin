@@ -85,7 +85,7 @@
                 <button
                     class="position:absolute top:13px padding:5px background:gainsboro color:#505050 grow-hover border-radius:50%">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./marketplace/list.html"
                         modal-width="840px">
                         <i
@@ -153,11 +153,11 @@
                                 id="editblock{{object._id}}"
                                 class="position:absolute top:8px right:8px font-size:11px display:none">
                                 <a
-                                    actions="pass, openModal"
+                                    actions="state, openModal"
                                     modal-src="./blocks/form.html"
-                                    pass-array="{{object.array}}"
-                                    pass-object="{{object._id}}"
-                                    pass_to="form-fields"
+                                    state-array="{{object.array}}"
+                                    state-object="{{object._id}}"
+                                    state_to="form-fields"
                                     modal-width="320px">
                                     <i
                                         class="height:20px fill:#505050"
@@ -227,11 +227,11 @@
                                 id="editcomponents{{object._id}}"
                                 class="position:absolute top:8px right:8px font-size:11px display:none">
                                 <a
-                                    actions="pass, openModal"
+                                    actions="state, openModal"
                                     modal-src="./blocks/form.html"
-                                    pass-array="{{object.array}}"
-                                    pass-object="{{object._id}}"
-                                    pass_to="form-fields"
+                                    state-array="{{object.array}}"
+                                    state-object="{{object._id}}"
+                                    state_to="form-fields"
                                     modal-width="320px">
                                     <i
                                         class="height:20px fill:#505050"
@@ -285,15 +285,15 @@
         <div id="files" class="left-panel display:none">
             <!-- Search Files -->
             <form class="padding:0px_5px_20px_5px">
-                <input type="text" class="floating-label" pass_to="results" />
+                <input type="text" class="floating-label" state_to="results" />
                 <span
-                    class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
+                    class="position:relative bottom:28px right:14px float:right font-size:18px">
                     <a
-                        actions="pass, openModal"
-                        pass_to="render"
+                        actions="state, openModal"
+                        state_to="render"
                         array="website-pages"
                         object=""
-                        pass-key="src"
+                        state-key="src"
                         modal-width="900px"
                         modal-color="#229954">
                         <i
@@ -406,15 +406,15 @@
         <div id="assets" class="left-panel display:none">
             <!-- Search Assets-->
             <form class="padding:0px_5px_20px_5px">
-                <input type="text" class="floating-label" pass_to="results" />
+                <input type="text" class="floating-label" state_to="results" />
                 <span
-                    class="passValueBtn position:relative bottom:28px right:14px float:right font-size:18px">
+                    class="position:relative bottom:28px right:14px float:right font-size:18px">
                     <a
-                        actions="pass, openModal"
-                        pass_to="render"
+                        actions="state, openModal"
+                        state_to="render"
                         array="website-pages"
                         object=""
-                        pass-key="src"
+                        state-key="src"
                         modal-width="900px"
                         modal-color="#229954">
                         <i
@@ -454,11 +454,11 @@
                         id="editassets{{object._id}}"
                         class="position:absolute top:8px right:8px font-size:11px display:none">
                         <a
-                            actions="pass, openModal"
+                            actions="state, openModal"
                             modal-src="https://server.cocreate.app/CoCreate-plugins/CoCreate-tui-image-editor/demo/index.html"
-                            pass-array="files"
-                            pass-object="{{object._id}}"
-                            pass_to="form-fields"
+                            state-array="files"
+                            state-object="{{object._id}}"
+                            state_to="form-fields"
                             modal-width="900px">
                             <i
                                 class="height:20px fill:#505050"

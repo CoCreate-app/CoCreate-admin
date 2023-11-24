@@ -92,55 +92,55 @@
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./modules/form.html"
                         modal-width="320px">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/cog.svg"></i>
                         <div
-                            pass_id="module-form"
-                            pass-array="modules"
-                            pass-object=""
-                            pass_to="form-fields"></div>
+                            state_id="module-form"
+                            state-array="modules"
+                            state-object=""
+                            state_to="form-fields"></div>
                         <div
-                            pass_id="module_id"
-                            pass-filter-value=""
-                            pass_to="module_id"></div>
+                            state_id="module_id"
+                            state-filter-value=""
+                            state_to="module_id"></div>
                     </a>
                 </li>
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./code-editor/index.html">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/code.svg"></i>
                         <div
-                            pass_id="render"
-                            pass-array=""
-                            pass-object=""
-                            pass-key=""
-                            pass_to="code-editor"></div>
+                            state_id="render"
+                            state-array=""
+                            state-object=""
+                            state-key=""
+                            state_to="code-editor"></div>
                     </a>
                 </li>
 
                 <!-- Render Builder -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./builder/index.html">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/palette.svg"></i>
                         <div
-                            pass_id="render"
-                            pass-array=""
-                            pass-object=""
-                            pass-key=""
-                            pass_to="builder"></div>
+                            state_id="render"
+                            state-array=""
+                            state-object=""
+                            state-key=""
+                            state_to="builder"></div>
                     </a>
                 </li>
 
@@ -150,7 +150,7 @@
                         actions="deleteDocument, closeModal"
                         array="module_activities"
                         object=""
-                        pass_id="form-fields">
+                        state_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
                             src="./assets/svg/trash-alt.svg"></i>
@@ -160,7 +160,7 @@
         </nav>
         <main class="padding:10px" content_id="content">
             <form
-                pass_id="form-fields"
+                state_id="form-fields"
                 array="module_activities"
                 object=""
                 id="form">
@@ -173,7 +173,7 @@
                 <input
                     type="hidden"
                     key="module_id"
-                    pass_id="module_id"
+                    state_id="module_id"
                     value />
                 <input
                     type="hidden"
@@ -209,7 +209,7 @@
                         filter-sort-key="name"
                         filter-sort-direction="asc"
                         render-selector="[template]"
-                        pass_id="website_id"
+                        state_id="website_id"
                         class="overflow:auto">
                         <cc-option template>
                             <h3
@@ -236,8 +236,8 @@
                     <a
                         show="#page-templates"
                         hide="#form, #website-pages"
-                        pass-array="files"
-                        pass_to="page-templates"
+                        state-array="files"
+                        state_to="page-templates"
                         ><i
                             class="height:16px fill:#505050"
                             src="./assets/svg/plus-square.svg"></i
@@ -253,7 +253,7 @@
                     filter-sort-key="name"
                     filter-sort-direction="asc"
                     render-selector="[template]"
-                    pass_id="website_id"
+                    state_id="website_id"
                     sortable
                     class="background:whitesmoke padding:10px"
                     dnd-group-key="website-pages">
@@ -264,7 +264,7 @@
                         id="module-view{{object._id}}">
                         <div class="display:flex padding-left:10px">
                             <a
-                                actions="pass, openModal"
+                                actions="state, openModal"
                                 modal-src="./files/form.html"
                                 modal-width="320px"
                                 class="flex-grow:1 font-size:16px padding:5px_0">
@@ -273,22 +273,22 @@
                                     object="{{object._id}}"
                                     key="path"></p>
                                 <div
-                                    pass-array="{{object.array}}"
-                                    pass-object="{{object._id}}"
-                                    pass_to="form-fields"></div>
+                                    state-array="{{object.array}}"
+                                    state-object="{{object._id}}"
+                                    state_to="form-fields"></div>
                                 <div
-                                    pass_id="form"
-                                    pass-array=""
-                                    pass-object=""
-                                    pass-key=""
-                                    pass_to="render"></div>
+                                    state_id="form"
+                                    state-array=""
+                                    state-object=""
+                                    state-key=""
+                                    state_to="render"></div>
                                 <div
-                                    pass-value="{{object.module_id}}"
-                                    pass-filter-value="{{object.module_id}}"
-                                    pass_to="module_id"></div>
+                                    state-value="{{object.module_id}}"
+                                    state-filter-value="{{object.module_id}}"
+                                    state_to="module_id"></div>
                                 <div
-                                    pass-object="{{object.module_id}}"
-                                    pass_to="module-form"></div>
+                                    state-object="{{object.module_id}}"
+                                    state_to="module-form"></div>
                             </a>
 
                             <a
@@ -301,32 +301,32 @@
                                     src="./assets/svg/trash.svg"></i>
                             </a>
                             <a
-                                actions="pass, openModal"
+                                actions="state, openModal"
                                 modal-src="./builder/index.html"
                                 class="float:right padding:5px">
                                 <i
                                     class="display:flex height:18px fill:#505050"
                                     src="./assets/svg/palette.svg"></i>
                                 <div
-                                    pass-array="{{object.array}}"
-                                    pass-object="{{object._id}}"
-                                    pass-key="src"
-                                    pass_to="builder"></div>
+                                    state-array="{{object.array}}"
+                                    state-object="{{object._id}}"
+                                    state-key="src"
+                                    state_to="builder"></div>
                             </a>
                             <!-- Render Code Editor -->
                             <a
-                                actions="pass, openModal"
+                                actions="state, openModal"
                                 modal-src="./code-editor/index.html"
                                 class="float:right padding:5px">
                                 <i
                                     class="display:flex height:18px fill:#505050"
                                     src="./assets/svg/code.svg"></i>
                                 <div
-                                    pass_id="render"
-                                    pass-array="{{object.array}}"
-                                    pass-object="{{object._id}}"
-                                    pass-key="src"
-                                    pass_to="code-editor"></div>
+                                    state_id="render"
+                                    state-array="{{object.array}}"
+                                    state-object="{{object._id}}"
+                                    state-key="src"
+                                    state_to="code-editor"></div>
                             </a>
                         </div>
                     </div>
@@ -343,11 +343,11 @@
                     class="display:flex flex-wrap:wrap"
                     array=""
                     object
-                    pass-overwrite="true"
+                    state-overwrite="true"
                     filter-sort-key="name"
                     filter-sort-direction="asc"
                     render-selector="[template]"
-                    pass_id="page-templates">
+                    state_id="page-templates">
                     <div
                         class="card min-width:250px flex-grow:1 margin:10px box-shadow-hover"
                         template>
@@ -385,8 +385,8 @@
                                     actions="save, reset"
                                     show="#form, #website-pages"
                                     hide="#page-templates"
-                                    pass-array="files"
-                                    pass_to="website_id">
+                                    state-array="files"
+                                    state_to="website_id">
                                     <i
                                         class="height:20px fill:#505050"
                                         src="./assets/svg/plus.svg"></i>

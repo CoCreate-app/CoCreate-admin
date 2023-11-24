@@ -90,55 +90,55 @@
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./modules/form.html"
                         modal-width="320px">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/cog.svg"></i>
                         <div
-                            pass_id="module_id"
-                            pass-array="modules"
-                            pass-object="5ff747727005da1c27274187"
-                            pass_to="form-fields"></div>
+                            state_id="module_id"
+                            state-array="modules"
+                            state-object="5ff747727005da1c27274187"
+                            state_to="form-fields"></div>
                         <div
-                            pass_id="module_id"
-                            pass-filter-value="5ff747727005da1c27274187"
-                            pass_to="module_id"></div>
+                            state_id="module_id"
+                            state-filter-value="5ff747727005da1c27274187"
+                            state_to="module_id"></div>
                     </a>
                 </li>
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./code-editor/index.html">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/code.svg"></i>
                         <div
-                            pass_id="render"
-                            pass-array=""
-                            pass-object=""
-                            pass-key=""
-                            pass_to="code-editor"></div>
+                            state_id="render"
+                            state-array=""
+                            state-object=""
+                            state-key=""
+                            state_to="code-editor"></div>
                     </a>
                 </li>
 
                 <!-- Render Builder -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./builder/index.html">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/palette.svg"></i>
                         <div
-                            pass_id="render"
-                            pass-array=""
-                            pass-object=""
-                            pass-key=""
-                            pass_to="builder"></div>
+                            state_id="render"
+                            state-array=""
+                            state-object=""
+                            state-key=""
+                            state_to="builder"></div>
                     </a>
                 </li>
 
@@ -162,21 +162,21 @@
                         actions="export"
                         export-selector=""
                         export-type="csv"
-                        pass_id="datatable"
+                        state_id="datatable"
                         ><i
                             class="height:18px fill:#505050"
                             src="./assets/svg/file-csv.svg"></i
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a actions="export" export-selector="" pass_id="datatable"
+                    <a actions="export" export-selector="" state_id="datatable"
                         ><i
                             class="height:18px fill:#505050"
                             src="./assets/svg/file-download.svg"></i
                     ></a>
                 </li>
                 <li class="margin-right:15px">
-                    <a actions="import" array="" pass_id="datatable"
+                    <a actions="import" array="" state_id="datatable"
                         ><i
                             class="height:18px fill:#505050"
                             src="./assets/svg/file-upload.svg"></i
@@ -217,7 +217,7 @@
                                 class="floating-label"
                                 filter-key="_id"
                                 filter-selector=""
-                                pass_id="datatable"
+                                state_id="datatable"
                                 placeholder="View Name" />
                         </floating-label>
                         <span
@@ -228,7 +228,7 @@
                                 click-value="desc, asc"
                                 click-attribute="filter-sort-direction"
                                 filter-selector=""
-                                pass_id="datatable">
+                                state_id="datatable">
                                 <i
                                     toggle-attribute="src"
                                     toggle-value="./assets/svg/sort-down.svg, /assets/svg/sort-up.svg"
@@ -255,7 +255,7 @@
                                 click-value="desc, asc"
                                 click-attribute="filter-sort-direction"
                                 filter-selector=""
-                                pass_id="datatable">
+                                state_id="datatable">
                                 <i
                                     toggle-attribute="src"
                                     toggle-value="./assets/svg/sort-down.svg, /assets/svg/sort-up.svg"
@@ -278,7 +278,7 @@
                     <tr
                         class="background:gainsboro:hover border-bottom:1px_solid_darkgray"
                         template
-                        pass_id="datatable"
+                        state_id="datatable"
                         object="{{object._id}}"
                         toggle="selected">
                         <td class="padding:10px">
@@ -293,23 +293,23 @@
                                 <div
                                     class="display:flex align-items:center margin-left:10px">
                                     <a
-                                        actions="pass, openModal"
+                                        actions="state, openModal"
                                         modal-src="./module-views/form.html"
-                                        pass-array="modules"
-                                        pass-object="{{object._id}}"
-                                        pass-key="src"
-                                        pass_id="render"
-                                        pass_to="render"
+                                        state-array="modules"
+                                        state-object="{{object._id}}"
+                                        state-key="src"
+                                        state_id="render"
+                                        state_to="render"
                                         modal-width="320px"
                                         modal-color="#229954">
                                         <h4>{{object.name}}</h4>
                                         <div
-                                            pass-array="{{object.array}}"
-                                            pass-object="{{object._id}}"
-                                            pass_to="form-fields"></div>
+                                            state-array="{{object.array}}"
+                                            state-object="{{object._id}}"
+                                            state_to="form-fields"></div>
                                     </a>
                                     <a
-                                        actions="pass, openModal"
+                                        actions="state, openModal"
                                         modal-src="./modules/form.html"
                                         modal-width="320px"
                                         modal-color="#229954"
@@ -321,9 +321,9 @@
                                             >Module Name</span
                                         >
                                         <div
-                                            pass-array="{{object.array}}"
-                                            pass-object="{{object._id}}"
-                                            pass_to="form-fields"></div>
+                                            state-array="{{object.array}}"
+                                            state-object="{{object._id}}"
+                                            state_to="form-fields"></div>
                                     </a>
                                 </div>
                             </div>
@@ -331,7 +331,7 @@
                         <td class="padding:10px">
                             <div class="min-width:200px">
                                 <a
-                                    actions="pass, openModal"
+                                    actions="state, openModal"
                                     modal-src="./module-views/form.html"
                                     modal-width="320px"
                                     modal-color="#229954">
@@ -342,9 +342,9 @@
                                         object
                                     </h4>
                                     <div
-                                        pass-array="{{object.array}}"
-                                        pass-object="{{object._id}}"
-                                        pass_to="form-fields"></div>
+                                        state-array="{{object.array}}"
+                                        state-object="{{object._id}}"
+                                        state_to="form-fields"></div>
                                 </a>
                             </div>
                         </td>
@@ -356,29 +356,29 @@
         <button
             class="position:absolute bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
             <a
-                actions="pass, openModal"
+                actions="state, openModal"
                 modal-src="./module-views/form.html"
                 modal-width="320px"
                 modal-color="#229954">
                 <i
                     class="height:20px fill:#505050"
                     src="./assets/svg/plus.svg"></i>
-                <div pass_to="form-fields" pass-object=""></div>
+                <div state_to="form-fields" state-object=""></div>
                 <div
-                    pass_id="form"
-                    pass-array=""
-                    pass-object=""
-                    pass-key=""
-                    pass_to="render"></div>
+                    state_id="form"
+                    state-array=""
+                    state-object=""
+                    state-key=""
+                    state_to="render"></div>
                 <div
-                    pass_id="module_id"
-                    pass-value=""
-                    pass-filter-value=""
-                    pass_to="module_id"></div>
+                    state_id="module_id"
+                    state-value=""
+                    state-filter-value=""
+                    state_to="module_id"></div>
                 <div
-                    pass_id="module-form"
-                    pass-object=""
-                    pass_to="module-form"></div>
+                    state_id="module-form"
+                    state-object=""
+                    state_to="module-form"></div>
             </a>
         </button>
 

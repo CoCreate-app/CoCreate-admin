@@ -72,55 +72,55 @@
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./modules/form.html"
                         modal-width="320px">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/cog.svg"></i>
                         <div
-                            pass_id="module-form"
-                            pass-array="modules"
-                            pass-object=""
-                            pass_to="form-fields"></div>
+                            state_id="module-form"
+                            state-array="modules"
+                            state-object=""
+                            state_to="form-fields"></div>
                         <div
-                            pass_id="module_id"
-                            pass-filter-value=""
-                            pass_to="module_id"></div>
+                            state_id="module_id"
+                            state-filter-value=""
+                            state_to="module_id"></div>
                     </a>
                 </li>
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./code-editor/index.html">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/code.svg"></i>
                         <div
-                            pass_id="render"
-                            pass-array=""
-                            pass-object=""
-                            pass-key=""
-                            pass_to="code-editor"></div>
+                            state_id="render"
+                            state-array=""
+                            state-object=""
+                            state-key=""
+                            state_to="code-editor"></div>
                     </a>
                 </li>
 
                 <!-- Render Builder -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./builder/index.html">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/palette.svg"></i>
                         <div
-                            pass_id="render"
-                            pass-array=""
-                            pass-object=""
-                            pass-key=""
-                            pass_to="builder"></div>
+                            state_id="render"
+                            state-array=""
+                            state-object=""
+                            state-key=""
+                            state_to="builder"></div>
                     </a>
                 </li>
 
@@ -130,7 +130,7 @@
                         actions="deleteDocument, closeModal"
                         array=""
                         object=""
-                        pass_id="form-fields">
+                        state_id="form-fields">
                         <i
                             class="height:18px fill:#505050"
                             src="./assets/svg/trash-alt.svg"></i>
@@ -144,7 +144,7 @@
                 array=""
                 class="margin-bottom:75px"
                 object=""
-                pass_id="form-fields">
+                state_id="form-fields">
                 <div class="display:flex height:50px">
                     <div class="width:50% padding-right:5px z-index:7">
                         <floating-label>
@@ -164,7 +164,7 @@
                                     filter-value="5ff747727005da1c272740ab"></div>
                                 <cc-options
                                     array="tags"
-                                    pass_id="module_id"
+                                    state_id="module_id"
                                     filter-key="module_id"
                                     filter-value=""
                                     render-selector=":last-child"
@@ -193,7 +193,7 @@
                                     filter-value="5ff747727005da1c272740ab"></div>
                                 <cc-options
                                     array="tags"
-                                    pass_id="module_id"
+                                    state_id="module_id"
                                     filter-key="module_id"
                                     filter-value=""
                                     render-selector=":last-child"
@@ -211,7 +211,7 @@
                     type="hidden"
                     key="module_id"
                     object=""
-                    pass_id="module_id"
+                    state_id="module_id"
                     value />
                 <floating-label>
                     <input
@@ -219,7 +219,7 @@
                         key="name"
                         id="name"
                         placeholder="Title"
-                        pass_id="form-fields"
+                        state_id="form-fields"
                         class="floating-label" />
                 </floating-label>
                 <floating-label>
@@ -237,7 +237,7 @@
                         placeholder="Start Date"
                         key="start_date"
                         id="start_date"
-                        pass_id="start_date" />
+                        state_id="start_date" />
                 </floating-label>
                 <floating-label>
                     <input
@@ -246,7 +246,7 @@
                         placeholder="Start Time"
                         key="start_time"
                         id="start_time"
-                        pass_id="form-fields" />
+                        state_id="form-fields" />
                 </floating-label>
                 <floating-label>
                     <input
@@ -255,7 +255,7 @@
                         placeholder="End Date"
                         key="end_date"
                         id="end_date"
-                        pass_id="end_date" />
+                        state_id="end_date" />
                 </floating-label>
                 <floating-label>
                     <input
@@ -264,7 +264,7 @@
                         placeholder="End Time"
                         key="end_time"
                         id="end_time"
-                        pass_id="end_time" />
+                        state_id="end_time" />
                 </floating-label>
                 <floating-label>
                     <div class="padding-top:10px">
@@ -332,7 +332,7 @@
                                     <div class="avatar-wrapper margin:5px">
                                         <a
                                             class="avatar round"
-                                            actions="pass, openModal"
+                                            actions="state, openModal"
                                             modal-src="./users/profile.html"
                                             modal-width="300px"
                                             modal-height="375px"

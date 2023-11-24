@@ -120,7 +120,7 @@
                 <li class="margin-right:15px">
                     <a
                         actions="saveDomText"
-                        pass_id="builder"
+                        state_id="builder"
                         array=""
                         object=""
                         key="src"
@@ -134,7 +134,7 @@
                 <li class="margin-right:15px">
                     <a
                         actions="redo"
-                        pass_id="builder"
+                        state_id="builder"
                         array=""
                         object=""
                         key="src"
@@ -147,7 +147,7 @@
                 <li class="margin-right:15px">
                     <a
                         actions="undo"
-                        pass_id="builder"
+                        state_id="builder"
                         array=""
                         object=""
                         key="src"
@@ -225,7 +225,7 @@
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./code-editor/index.html"
                         modal-width="900px"
                         modal-color="#229954">
@@ -233,11 +233,11 @@
                             class="height:20px fill:#505050"
                             src="./assets/svg/code.svg"></i>
                         <div
-                            pass_id="builder"
-                            pass-array=""
-                            pass-object=""
+                            state_id="builder"
+                            state-array=""
+                            state-object=""
                             key=""
-                            pass_to="code-editor"></div>
+                            state_to="code-editor"></div>
                     </a>
                 </li>
                 <li class="margin-right:15px">
@@ -292,7 +292,7 @@
                     contenteditable
                     sortable
                     id="canvas"
-                    pass_id="builder"
+                    state_id="builder"
                     array=""
                     object=""
                     key="src"

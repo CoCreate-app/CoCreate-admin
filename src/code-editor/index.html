@@ -77,7 +77,7 @@
                 <li class="margin-right:15px">
                     <a
                         actions="saveDomText"
-                        pass_id="code-editor"
+                        state_id="code-editor"
                         array=""
                         object=""
                         key="src"
@@ -90,53 +90,53 @@
                 <!-- Render Module Form -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./modules/form.html"
                         modal-width="320px">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/cog.svg"></i>
                         <div
-                            pass-array="modules"
-                            pass-object="5ff747727005da1c27274191"
-                            pass_to="form-fields"></div>
+                            state-array="modules"
+                            state-object="5ff747727005da1c27274191"
+                            state_to="form-fields"></div>
                         <div
-                            pass-filter-value="5ff747727005da1c27274191"
-                            pass_to="module_id"></div>
+                            state-filter-value="5ff747727005da1c27274191"
+                            state_to="module_id"></div>
                     </a>
                 </li>
 
                 <!-- Render Code Editor -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./code-editor/index.html">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/code.svg"></i>
                         <div
-                            pass_id="render"
-                            pass-array="files"
-                            pass-object="60ddfdbe14b5ab0c2dd2fdf5"
-                            pass-key="src"
-                            pass_to="code-editor"></div>
+                            state_id="render"
+                            state-array="files"
+                            state-object="60ddfdbe14b5ab0c2dd2fdf5"
+                            state-key="src"
+                            state_to="code-editor"></div>
                     </a>
                 </li>
 
                 <!-- Render Builder -->
                 <li class="margin-right:15px">
                     <a
-                        actions="pass, openModal"
+                        actions="state, openModal"
                         modal-src="./builder/index.html">
                         <i
                             class="display:flex height:18px fill:#505050"
                             src="./assets/svg/palette.svg"></i>
                         <div
-                            pass_id="render"
-                            pass-array=""
-                            pass-object=""
-                            pass-key=""
-                            pass_to="builder"></div>
+                            state_id="render"
+                            state-array=""
+                            state-object=""
+                            state-key=""
+                            state_to="builder"></div>
                     </a>
                 </li>
             </ul>
@@ -170,7 +170,7 @@
                 </div>
             </div>
             <!-- Code Editors -->
-            <form pass_id="code-editor" array="" object="">
+            <form state_id="code-editor" array="" object="">
                 <textarea
                     type="code"
                     lang="html"
