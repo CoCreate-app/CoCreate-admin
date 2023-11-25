@@ -1,3 +1,15 @@
+# [1.35.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.34.0...v1.35.0) (2023-11-25)
+
+
+### Bug Fixes
+
+* update pass to state ([5b29081](https://github.com/CoCreate-app/CoCreate-admin/commit/5b290814467ba44a265465950d215f672d56267c))
+
+
+### Features
+
+* upgrade dependencies for latest features and fixes ([791730a](https://github.com/CoCreate-app/CoCreate-admin/commit/791730a6ff1e2ac3b2010c4b705a3af447dfc277))
+
 # [1.34.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.33.2...v1.34.0) (2023-11-24)
 
 
