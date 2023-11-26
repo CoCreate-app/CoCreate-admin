@@ -1,3 +1,10 @@
+## [1.35.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.35.0...v1.35.1) (2023-11-26)
+
+
+### Bug Fixes
+
+* renamed calculation to calculate ([a0c9bf3](https://github.com/CoCreate-app/CoCreate-admin/commit/a0c9bf334d7adb3112fc37d2cdca396ea5455d21))
+
 # [1.35.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.34.0...v1.35.0) (2023-11-25)
 
 
