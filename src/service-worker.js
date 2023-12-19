@@ -63,11 +63,11 @@ self.addEventListener("fetch", async (e) => {
                     if (storageHeader)
                         storage = storageHeader
 
-                    if (cacheType && cacheType !== 'false') {
+                    if (cacheType && cacheType !== 'false' && networkResponse.status === 200) {
                         console.log('caching')
 
                         caches.open(cacheName).then((cache) => {
-                            if (networkResponse.status !== 206 && networkResponse.status !== 502) {
+                            if (networkResponse.status !== 206) {
                                 const networkModified = networkResponse.headers.get('last-modified');
                                 // if (!networkModified) {
                                 //     networkResponse.headers.set('Last-Modified', new Date().toISOString());
