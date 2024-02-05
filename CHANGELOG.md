@@ -1,3 +1,12 @@
+## [1.35.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.35.1...v1.35.2) (2024-02-05)
+
+
+### Bug Fixes
+
+* networkResponse conditions ([611b72b](https://github.com/CoCreate-app/CoCreate-admin/commit/611b72bf0fb640af0e1315cd4378308b7061b9a4))
+* Removed https://cdn.cocreate.app/latest/CoCreate.min.css ([6bd69b7](https://github.com/CoCreate-app/CoCreate-admin/commit/6bd69b73535b15ed7ccaccebe959064b49bf60ce))
+* typo ([8eee772](https://github.com/CoCreate-app/CoCreate-admin/commit/8eee772f44f88254293ce3cdc67effa11fed6142))
+
 ## [1.35.1](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.35.0...v1.35.1) (2023-11-26)
 
 
