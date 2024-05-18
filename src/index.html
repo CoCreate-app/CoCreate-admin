@@ -172,10 +172,6 @@
             </ul>
 
             <!-- Avatar -->
-            <div
-                localstorage-get="user_id"
-                localstorage-key="userId"
-                localstorage-selector="cocreate-select, .avatar-wrapper"></div>
             <div class="avatar-wrapper margin:5px">
                 <a
                     class="avatar round"
@@ -186,13 +182,13 @@
                     modal-color="#229954">
                     <span
                         array="users"
-                        object="{{userId}}"
+                        object="$user_id"
                         key="name"
                         class="avatar-name"></span>
                     <span class="avatar-image">
                         <img
                             array="users"
-                            object="{{userId}}"
+                            object="$user_id"
                             key="avatar"
                             onerror="this.style.display='none'"
                             width="40px" />
@@ -207,7 +203,7 @@
                         state_to="form"></div>
                     <div
                         state-array="users"
-                        state-object="{{userId}}"
+                        state-object="$user_id"
                         state_to="form-fields"></div>
                     <div
                         state-array="files"
@@ -218,7 +214,7 @@
                 <div
                     class="avatar-status"
                     array="users"
-                    object="{{userId}}"
+                    object="$user_id"
                     user-status="{'name':'status'}"></div>
             </div>
         </nav>
@@ -245,14 +241,14 @@
                 class="org-changer remove-none border:none padding:0"
                 key="current_org"
                 array="users"
-                object="{{userId}}">
+                object="$user_id">
                 <input placeholder="Search" filter-search filter-next />
                 <cc-options
                     class="options overflow:auto"
                     array="users"
                     key="connected_orgs"
                     filter-key="_id"
-                    filter-value="{{userId}}"
+                    filter-value="$user_id"
                     filter-operator="$eq"
                     render-selector="[template]">
                     <cc-option
