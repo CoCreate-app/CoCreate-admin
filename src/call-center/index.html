@@ -1,1079 +1,1077 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon.ico" />
-        <title>Call Center | CoCreate</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon.ico" />
+		<title>Call Center | CoCreate</title>
 
-        <link
-            rel="stylesheet"
-            href="../index.css"
-            array="files"
-            object="637bc8ff91249e639db315e7"
-            key="src"
-            type="text/css" />
+		<link
+			rel="stylesheet"
+			href="../index.css"
+			array="files"
+			object="637bc8ff91249e639db315e7"
+			key="src"
+			type="text/css" />
 
-        <!-- Call Center -->
-        <link rel="stylesheet" href="./index.css" type="text/css" />
-        <link rel="manifest" href="./manifest.webmanifest" />
-    </head>
+		<!-- Call Center -->
+		<link rel="stylesheet" href="./index.css" type="text/css" />
+		<link rel="manifest" href="./manifest.webmanifest" />
+	</head>
 
-    <body>
-        <div id="modal-viewport" hidden></div>
+	<body>
+		<div id="modal-viewport" hidden></div>
 
-        <!-- Navbar -->
-        <div
-            class="nav display:flex align-items:center background:whitesmoke"
-            content_id="content"
-            scroll="sticky-nav, hide-nav"
-            scroll-up="5"
-            scroll-down="5">
-            <!-- Menu Icon Animations -->
-            <a
-                class="menu_icon--Vdots"
-                click="active"
-                toggle="width:310px,"
-                toggle-selector="#menuL"
-                toggle-attribute="style">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </a>
+		<!-- Navbar -->
+		<div
+			class="nav display:flex align-items:center background:whitesmoke"
+			content_id="content"
+			scroll="sticky-nav, hide-nav"
+			scroll-up="5"
+			scroll-down="5">
+			<!-- Menu Icon Animations -->
+			<a
+				class="menu_icon--Vdots"
+				click="active"
+				toggle="width:310px,"
+				toggle-selector="#menuL"
+				toggle-attribute="style">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+			</a>
 
-            <ul
-                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-                <!-- Modal Controls -->
-                <li class="margin-right:15px">
-                    <a actions="closeModal"
-                        ><i class="height:18px" src="./assets/svg/times.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="minMaxModal">
-                        <i
-                            toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
-                            toggle-attribute="src"
-                            class="height:18px"
-                            src="./assets/svg/window-maximize.svg"></i>
-                    </a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="parkModal"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/window-minimize.svg"></i
-                    ></a>
-                </li>
+			<ul
+				class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				<!-- Modal Controls -->
+				<li class="margin-right:15px">
+					<a actions="closeModal"
+						><i class="height:18px" src="./assets/svg/times.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i
+							toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+							toggle-attribute="src"
+							class="height:18px"
+							src="./assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="parkModal"
+						><i
+							class="height:18px"
+							src="./assets/svg/window-minimize.svg"></i
+					></a>
+				</li>
 
-                <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i
+							class="height:18px"
+							src="./assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="./assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Module Form -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/form.html"
-                        modal-width="320px">
-                        <i class="height:18px" src="./assets/svg/cog.svg"></i>
-                        <div
-                            state_id="module-form"
-                            state-array="modules"
-                            state-object=""
-                            state_to="form-fields"></div>
-                        <div
-                            state_id="module_id"
-                            state-filter-value=""
-                            state_to="module_id"></div>
-                    </a>
-                </li>
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./modules/form.html"
+						modal-width="320px">
+						<i class="height:18px" src="./assets/svg/cog.svg"></i>
+						<div
+							state_id="module-form"
+							state-array="modules"
+							state-object=""
+							state_to="form-fields"></div>
+						<div
+							state_id="module_id"
+							state-filter-query-value=""
+							state_to="module_id"></div>
+					</a>
+				</li>
 
-                <!-- Render Code Editor -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./code-editor/index.html">
-                        <i class="height:18px" src="./assets/svg/code.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="code-editor"></div>
-                    </a>
-                </li>
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./code-editor/index.html">
+						<i class="height:18px" src="./assets/svg/code.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="code-editor"></div>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./builder/index.html">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/palette.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="builder"></div>
-                    </a>
-                </li>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./builder/index.html">
+						<i
+							class="height:18px"
+							src="./assets/svg/palette.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="builder"></div>
+					</a>
+				</li>
 
-                <!-- deleteDocument-->
-                <li class="margin-right:15px">
-                    <a
-                        actions="deleteDocument, closeModal"
-                        array=""
-                        object=""
-                        state_id="form-fields">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/trash-alt.svg"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+				<!-- deleteDocument-->
+				<li class="margin-right:15px">
+					<a
+						actions="deleteDocument, closeModal"
+						array=""
+						object=""
+						state_id="form-fields">
+						<i
+							class="height:18px"
+							src="./assets/svg/trash-alt.svg"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
 
-        <!-- SidNav Left -->
-        <sidenav
-            id="menuL"
-            class="position:absolute top:0px left:0px overflow:hidden background:white height:100vh width:310px width:310px:hover width:0px@xs"
-            resizable
-            resize-selector="[content_id='content']"
-            resize-property="margin-left"
-            resize-value="width">
-            <div
-                class="height:100vh min-width:300px padding:5px overflow:auto margin:5px">
-                <!-- SideNav Header -->
-                <div
-                    class="font-size:22px color:#333333 font-weight:600 padding-bottom:10px">
-                    <div
-                        class="display:flex border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px"
-                        array="call-log"
-                        object="5fd7b6080bb983ccd559157a"
-                        key="name">
-                        <span>Active Calls</span>
-                        <span
-                            ><button class="height:40px">Enqueque</button></span
-                        >
-                    </div>
-                </div>
+		<!-- SidNav Left -->
+		<sidenav
+			id="menuL"
+			class="position:absolute top:0px left:0px overflow:hidden background:white height:100vh width:310px width:310px:hover width:0px@xs"
+			resizable
+			resize-selector="[content_id='content']"
+			resize-property="margin-left"
+			resize-value="width">
+			<div
+				class="height:100vh min-width:300px padding:5px overflow:auto margin:5px">
+				<!-- SideNav Header -->
+				<div
+					class="font-size:22px color:#333333 font-weight:600 padding-bottom:10px">
+					<div
+						class="display:flex border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px"
+						array="call-log"
+						object="5fd7b6080bb983ccd559157a"
+						key="name">
+						<span>Active Calls</span>
+						<span
+							><button class="height:40px">Enqueque</button></span
+						>
+					</div>
+				</div>
 
-                <!-- Fetch, Render and Filter -->
-                <input
-                    type="hidden"
-                    filter-next
-                    filter-key="status"
-                    value="no-answer"
-                    filter-operator="$ne" />
-                <div
-                    class="margin-top:10px"
-                    array="testtwillio"
-                    filter-key="status"
-                    filter-value="completed"
-                    filter-operator="$ne"
-                    filter-limit="10"
-                    render-selector=":last-child">
-                    <!-- Call Template -->
-                    <div
-                        class="card call padding:20px_10px margin-bottom:15px background:white margin-right:10px"
-                        template
-                        array="{{object.array}}"
-                        object="{{object._id}}"
-                        key="status"
-                        value="">
-                        <!-- Call Header -->
-                        <div
-                            class="display:flex border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px margin-bottom:10px font-size:22px color:#333333 font-weight:600">
-                            <div
-                                class="status margin-right:5px"
-                                array="{{object.array}}"
-                                object="{{object._id}}"
-                                key="status"
-                                value=""></div>
-                            <span
-                                class="loader height:24px width:100px"
-                                array="{{object.array}}"
-                                object="{{object._id}}"
-                                key="status"
-                                value=""></span>
-                            <div class="width:100%">
-                                <span
-                                    class="font-size:16px margin-top:5px float:right"
-                                    >0:00</span
-                                >
-                            </div>
-                        </div>
+				<!-- Fetch, Render and Filter -->
+				<input
+					type="hidden"
+					filter-next
+					filter-query-key="status.$ne"
+					value="no-answer" />
+				<div
+					class="margin-top:10px"
+					array="testtwillio"
+					filter-query-key="status"
+					filter-query-value="completed"
+					filter-limit="10"
+					render-selector=":last-child">
+					<!-- Call Template -->
+					<div
+						class="card call padding:20px_10px margin-bottom:15px background:white margin-right:10px"
+						template
+						array="{{object.array}}"
+						object="{{object._id}}"
+						key="status"
+						value="">
+						<!-- Call Header -->
+						<div
+							class="display:flex border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px margin-bottom:10px font-size:22px color:#333333 font-weight:600">
+							<div
+								class="status margin-right:5px"
+								array="{{object.array}}"
+								object="{{object._id}}"
+								key="status"
+								value=""></div>
+							<span
+								class="loader height:24px width:100px"
+								array="{{object.array}}"
+								object="{{object._id}}"
+								key="status"
+								value=""></span>
+							<div class="width:100%">
+								<span
+									class="font-size:16px margin-top:5px float:right"
+									>0:00</span
+								>
+							</div>
+						</div>
 
-                        <!-- Call Body -->
-                        <div class="display:flex flex-wrap:wrap">
-                            <!-- Avatar -->
-                            <div
-                                class="avatar-wrapper margin:5px_0px margin-right:10px">
-                                <a
-                                    class="avatar round"
-                                    actions="state, openModal"
-                                    modal-src="./user-profile/user-profile.html"
-                                    state-array="modules"
-                                    state-object="5dd010bccbc25f0cdb1a4d9f"
-                                    state_to="render"
-                                    modal-width="300px"
-                                    modal-height="375px"
-                                    modal-color="#229954">
-                                    <span
-                                        array="users"
-                                        object=""
-                                        key="name"
-                                        class="first-letter avatar-name"></span>
-                                    <span
-                                        array="users"
-                                        object=""
-                                        key="profile_image"
-                                        class="avatar-image">
-                                        <img
-                                            src="images/Velazquez.jpg"
-                                            onerror="this.style.display='none'" />
-                                    </span>
-                                </a>
-                                <div
-                                    class="avatar-status"
-                                    array="users"
-                                    object="$user_id"
-                                    user-status="{'name':'status'}"></div>
-                            </div>
+						<!-- Call Body -->
+						<div class="display:flex flex-wrap:wrap">
+							<!-- Avatar -->
+							<div
+								class="avatar-wrapper margin:5px_0px margin-right:10px">
+								<a
+									class="avatar round"
+									actions="state, openModal"
+									modal-src="./user-profile/user-profile.html"
+									state-array="modules"
+									state-object="5dd010bccbc25f0cdb1a4d9f"
+									state_to="render"
+									modal-width="300px"
+									modal-height="375px"
+									modal-color="#229954">
+									<span
+										array="users"
+										object=""
+										key="name"
+										class="first-letter avatar-name"></span>
+									<span
+										array="users"
+										object=""
+										key="profile_image"
+										class="avatar-image">
+										<img
+											src="images/Velazquez.jpg"
+											onerror="this.style.display='none'" />
+									</span>
+								</a>
+								<div
+									class="avatar-status"
+									array="users"
+									object="$user_id"
+									user-status="{'name':'status'}"></div>
+							</div>
 
-                            <!-- Call Details -->
-                            <div class="margin-right:10px">
-                                <span class="font-size:17px font-weight:600"
-                                    >{{object.name}}</span
-                                >
-                                <div class="font-size:15px">
-                                    Dyanmic Contact Phone
-                                </div>
-                                <div class="font-size:12px color:#0ba3e1">
-                                    Dynamic Contact Job Title
-                                </div>
-                            </div>
+							<!-- Call Details -->
+							<div class="margin-right:10px">
+								<span class="font-size:17px font-weight:600"
+									>{{object.name}}</span
+								>
+								<div class="font-size:15px">
+									Dyanmic Contact Phone
+								</div>
+								<div class="font-size:12px color:#0ba3e1">
+									Dynamic Contact Job Title
+								</div>
+							</div>
 
-                            <!-- Call Buttons -->
-                            <form class="display:flex margin-top:10px">
-                                <!-- Answer and end call -->
-                                <div
-                                    class="callbtns display:flex {{object.direction}}"
-                                    array="{{object.array}}"
-                                    object="{{object._id}}"
-                                    key="status"
-                                    value="">
-                                    <button
-                                        class="answer"
-                                        hidden
-                                        actions="answerCall"
-                                        title="Accept Call">
-                                        <i class="fas fa-phone"></i>
-                                    </button>
-                                    <button
-                                        class="hold"
-                                        hidden
-                                        actions="dialConference"
-                                        title="Hold">
-                                        <i class="fas fa-pause"></i>
-                                    </button>
-                                    <button
-                                        class="hangup"
-                                        hidden
-                                        actions="hangupCall"
-                                        title="End Call">
-                                        <i class="fas fa-phone-slash"></i>
-                                    </button>
-                                    <!--<button class="voicemail" hidden title="Send to Voicemail"><i class="mdi mdi-48 mdi-voicemail"></i></button>-->
+							<!-- Call Buttons -->
+							<form class="display:flex margin-top:10px">
+								<!-- Answer and end call -->
+								<div
+									class="callbtns display:flex {{object.direction}}"
+									array="{{object.array}}"
+									object="{{object._id}}"
+									key="status"
+									value="">
+									<button
+										class="answer"
+										hidden
+										actions="answerCall"
+										title="Accept Call">
+										<i class="fas fa-phone"></i>
+									</button>
+									<button
+										class="hold"
+										hidden
+										actions="dialConference"
+										title="Hold">
+										<i class="fas fa-pause"></i>
+									</button>
+									<button
+										class="hangup"
+										hidden
+										actions="hangupCall"
+										title="End Call">
+										<i class="fas fa-phone-slash"></i>
+									</button>
+									<!--<button class="voicemail" hidden title="Send to Voicemail"><i class="mdi mdi-48 mdi-voicemail"></i></button>-->
 
-                                    <input
-                                        type="hidden"
-                                        twilio="dialConference.friendlyName"
-                                        value="{{object._id}}" />
-                                    <input
-                                        type="hidden"
-                                        twilio="dialConference.CallSid"
-                                        value="{{object.CallSid}}" />
-                                    <input
-                                        type="hidden"
-                                        twilio="dialConference.holdUrl"
-                                        value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic" />
-                                </div>
+									<input
+										type="hidden"
+										twilio="dialConference.friendlyName"
+										value="{{object._id}}" />
+									<input
+										type="hidden"
+										twilio="dialConference.CallSid"
+										value="{{object.CallSid}}" />
+									<input
+										type="hidden"
+										twilio="dialConference.holdUrl"
+										value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic" />
+								</div>
 
-                                <!-- Conference -->
-                                <div
-                                    class="conference display:flex"
-                                    array="{{object.array}}"
-                                    object="{{object._id}}"
-                                    key="status"
-                                    value="">
-                                    <!--<input type="hidden" twilio="joinConference.friendlyName" value="{{object.From}}">-->
-                                    <div
-                                        type="hidden"
-                                        twilio="endConference.CallSid"
-                                        array="{{object.array}}"
-                                        object="{{object._id}}"
-                                        key="ConferenceSid"
-                                        value=""></div>
-                                    <div
-                                        type="hidden"
-                                        twilio="holdConference.CallSid"
-                                        array="{{object.array}}"
-                                        object="{{object._id}}"
-                                        key="ConferenceSid"
-                                        value=""></div>
-                                    <div
-                                        type="hidden"
-                                        twilio="unholdConference.CallSid"
-                                        array="{{object.array}}"
-                                        object="{{object._id}}"
-                                        key="ConferenceSid"
-                                        value=""></div>
+								<!-- Conference -->
+								<div
+									class="conference display:flex"
+									array="{{object.array}}"
+									object="{{object._id}}"
+									key="status"
+									value="">
+									<!--<input type="hidden" twilio="joinConference.friendlyName" value="{{object.From}}">-->
+									<div
+										type="hidden"
+										twilio="endConference.CallSid"
+										array="{{object.array}}"
+										object="{{object._id}}"
+										key="ConferenceSid"
+										value=""></div>
+									<div
+										type="hidden"
+										twilio="holdConference.CallSid"
+										array="{{object.array}}"
+										object="{{object._id}}"
+										key="ConferenceSid"
+										value=""></div>
+									<div
+										type="hidden"
+										twilio="unholdConference.CallSid"
+										array="{{object.array}}"
+										object="{{object._id}}"
+										key="ConferenceSid"
+										value=""></div>
 
-                                    <button
-                                        class="join"
-                                        hidden
-                                        actions="joinConference"
-                                        title="Resume Call"
-                                        data-friendlykey="{{object._id}}">
-                                        <i class="fas fa-pause"></i>
-                                    </button>
-                                    <button
-                                        class="hold-conference"
-                                        hidden
-                                        actions="holdConference"
-                                        title="Put Call on Hold">
-                                        <i class="fas fa-pause"></i>
-                                    </button>
-                                    <button
-                                        class="unhold"
-                                        hidden
-                                        actions="unholdConference"
-                                        title="Resume Call">
-                                        <i class="fas fa-pause"></i>
-                                    </button>
-                                    <button
-                                        class="end decline"
-                                        hidden
-                                        actions="endConference"
-                                        title="End Call con">
-                                        <i class="fas fa-phone-slash"></i>
-                                    </button>
-                                </div>
+									<button
+										class="join"
+										hidden
+										actions="joinConference"
+										title="Resume Call"
+										data-friendlykey="{{object._id}}">
+										<i class="fas fa-pause"></i>
+									</button>
+									<button
+										class="hold-conference"
+										hidden
+										actions="holdConference"
+										title="Put Call on Hold">
+										<i class="fas fa-pause"></i>
+									</button>
+									<button
+										class="unhold"
+										hidden
+										actions="unholdConference"
+										title="Resume Call">
+										<i class="fas fa-pause"></i>
+									</button>
+									<button
+										class="end decline"
+										hidden
+										actions="endConference"
+										title="End Call con">
+										<i class="fas fa-phone-slash"></i>
+									</button>
+								</div>
 
-                                <!-- Transfer -->
-                                <input
-                                    type="hidden"
-                                    twilio="dialTransfer.CallSid"
-                                    value="{{render2.parameters.CallSid}}" />
-                                <button
-                                    class="transfer"
-                                    actions="dialTransfer"
-                                    title="Transfer Call">
-                                    <img
-                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABlUlEQVRIiZ3VMWsUQRjG8V8ukSCiELGxsjFFimgpGEELLQUJWoj5DoFU+QpW2likMm2wyAeIomghYqEEoqSQiGCjKZKYIrmol2LnzLju7Mz5wMLx3vN/n9l3hh3+1iieYRWTBtMonuJzG7uIXni+DRiSZa/id2QaJORGjfuHHcaHBlMPXzPNO/iYY+8lDD08zARMl7CvE4ZV1ea1KcuOt6xgOtP8Qgk7mzC8UM23TfMl7FL0x3WMqTY91kQiYLmAtRYMe9Lz3sGdhvp6AWsrmNZThmiVCzgW1bcLWAfB9CbRtP68xFkM4WeC/aNOCICRtlU0qD+aLLsRzBuZZk0j+lTAeh5MBzU4VmqTV3JsB+/D7xFcTARcwpOG+rscO4xT0erGcRk3cQ5vQ30zEXwcdzOsk6rNqp+WXy1vFAfslrCPG0w9vJI/XY9K2MmQ+j+f6/PoJtgHsXEhYeriTCbkfoLdiU2n8b1m2MetTHM4obrsY/YHrtSNtx3dy93C5n1dczSqXdUd36g5fFEdt0E1o/ouTfULh60e2n2ht7rUAAAAAElFTkSuQmCC"
-                                        height="24px" />
-                                </button>
+								<!-- Transfer -->
+								<input
+									type="hidden"
+									twilio="dialTransfer.CallSid"
+									value="{{render2.parameters.CallSid}}" />
+								<button
+									class="transfer"
+									actions="dialTransfer"
+									title="Transfer Call">
+									<img
+										src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABlUlEQVRIiZ3VMWsUQRjG8V8ukSCiELGxsjFFimgpGEELLQUJWoj5DoFU+QpW2likMm2wyAeIomghYqEEoqSQiGCjKZKYIrmol2LnzLju7Mz5wMLx3vN/n9l3hh3+1iieYRWTBtMonuJzG7uIXni+DRiSZa/id2QaJORGjfuHHcaHBlMPXzPNO/iYY+8lDD08zARMl7CvE4ZV1ea1KcuOt6xgOtP8Qgk7mzC8UM23TfMl7FL0x3WMqTY91kQiYLmAtRYMe9Lz3sGdhvp6AWsrmNZThmiVCzgW1bcLWAfB9CbRtP68xFkM4WeC/aNOCICRtlU0qD+aLLsRzBuZZk0j+lTAeh5MBzU4VmqTV3JsB+/D7xFcTARcwpOG+rscO4xT0erGcRk3cQ5vQ30zEXwcdzOsk6rNqp+WXy1vFAfslrCPG0w9vJI/XY9K2MmQ+j+f6/PoJtgHsXEhYeriTCbkfoLdiU2n8b1m2MetTHM4obrsY/YHrtSNtx3dy93C5n1dczSqXdUd36g5fFEdt0E1o/ouTfULh60e2n2ht7rUAAAAAElFTkSuQmCC"
+										height="24px" />
+								</button>
 
-                                <!-- Enqueue -->
-                                <div hidden>
-                                    <input
-                                        twilio="dialEnqueue.nameEnqueue"
-                                        data-old="{{object.From}}"
-                                        value="cocreateEnqueue" />
-                                    <input
-                                        twilio="dialEnqueue.CallSid"
-                                        value="{{object.CallSid}}" />
-                                    <input
-                                        twilio="dialEnqueue.waitUrl"
-                                        value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic" />
-                                    <button
-                                        actions="dialEnqueue, getListQueues">
-                                        dialEnqueue
-                                    </button>
-                                </div>
-                            </form>
-                            <!--<div template_id="getParticipantsConferences_{{object.idconference}}">-->
-                            <!--    <form>-->
-                            <!--        <input type="hidden"  twilio="getParticipantsConference.CallSid" value="{{object.idconference}}">-->
-                            <!--            <button actions="getParticipantsConference" -->
-                            <!--                data-friendlykey="{{object.friendlyName}}"-->
-                            <!--                data-idconference="{{object.idconference}}"-->
-                            <!--            >GetPart</button>-->
-                            <!--    </form>-->
-                            <!--    <div class="template margin:10px;" value="{{participant.id}}" render="participant">-->
-                            <!--        <form class="padding:5px">-->
+								<!-- Enqueue -->
+								<div hidden>
+									<input
+										twilio="dialEnqueue.nameEnqueue"
+										data-old="{{object.From}}"
+										value="cocreateEnqueue" />
+									<input
+										twilio="dialEnqueue.CallSid"
+										value="{{object.CallSid}}" />
+									<input
+										twilio="dialEnqueue.waitUrl"
+										value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic" />
+									<button
+										actions="dialEnqueue, getListQueues">
+										dialEnqueue
+									</button>
+								</div>
+							</form>
+							<!--<div template_id="getParticipantsConferences_{{object.idconference}}">-->
+							<!--    <form>-->
+							<!--        <input type="hidden"  twilio="getParticipantsConference.CallSid" value="{{object.idconference}}">-->
+							<!--            <button actions="getParticipantsConference" -->
+							<!--                data-friendlykey="{{object.friendlyName}}"-->
+							<!--                data-idconference="{{object.idconference}}"-->
+							<!--            >GetPart</button>-->
+							<!--    </form>-->
+							<!--    <div class="template margin:10px;" value="{{participant.id}}" render="participant">-->
+							<!--        <form class="padding:5px">-->
 
-                            <!--            <input type="hidden" twilio="delParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
-                            <!--            <input type="hidden" twilio="delParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
+							<!--            <input type="hidden" twilio="delParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
+							<!--            <input type="hidden" twilio="delParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
 
-                            <!--            <input type="hidden" twilio="muteParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
-                            <!--            <input type="hidden" twilio="muteParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
+							<!--            <input type="hidden" twilio="muteParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
+							<!--            <input type="hidden" twilio="muteParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
 
-                            <!--            <input type="hidden" twilio="unmuteParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
-                            <!--            <input type="hidden" twilio="unmuteParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
+							<!--            <input type="hidden" twilio="unmuteParticipantsConference.idconference" value="{{participant.conferenceSid}}">-->
+							<!--            <input type="hidden" twilio="unmuteParticipantsConference.idparticipant" value="{{participant.callSid}}">-->
 
-                            <!--            <input type="hidden" twilio="holdParticipantConference.idconference" value="{{participant.conferenceSid}}">-->
-                            <!--            <input type="hidden" twilio="holdParticipantConference.idparticipant" value="{{participant.callSid}}">-->
+							<!--            <input type="hidden" twilio="holdParticipantConference.idconference" value="{{participant.conferenceSid}}">-->
+							<!--            <input type="hidden" twilio="holdParticipantConference.idparticipant" value="{{participant.callSid}}">-->
 
-                            <!--            <input type="hidden" twilio="unholdParticipantConference.idconference" value="{{participant.conferenceSid}}">-->
-                            <!--            <input type="hidden" twilio="unholdParticipantConference.idparticipant" value="{{participant.callSid}}">-->
+							<!--            <input type="hidden" twilio="unholdParticipantConference.idconference" value="{{participant.conferenceSid}}">-->
+							<!--            <input type="hidden" twilio="unholdParticipantConference.idparticipant" value="{{participant.callSid}}">-->
 
-                            <!--            <li> <span value="{{participant.call.sid}}"></span>  - TO: <span value="{{participant.call.to}}"></span> - from :<span value="{{participant.call.from}}"></span></span></li>-->
-                            <!--            <button -->
-                            <!--                    actions="muteParticipantsConference" -->
-                            <!--                    data-idparticipant="{{participant.callSid}}" -->
-                            <!--            >Mute</button>-->
-                            <!--            <button style="display:none"-->
-                            <!--                    actions="unmuteParticipantsConference" -->
-                            <!--                    data-idparticipant="{{participant.callSid}}"-->
-                            <!--            >UnMute</button>-->
-                            <!--            <button -->
-                            <!--                    actions="holdParticipantConference" -->
-                            <!--                    data-idparticipant="{{participant.callSid}}" -->
-                            <!--            >HoldParticipante</button>-->
-                            <!--            <button style="display:none"-->
-                            <!--                    actions="unholdParticipantConference" -->
-                            <!--                    data-idparticipant="{{participant.callSid}}"-->
-                            <!--            >UnHoldParticipante</button>-->
-                            <!--            <button -->
-                            <!--                    actions="delParticipantsConference"-->
-                            <!--            >DElete</button>-->
-                            <!--        </form>-->
-                            <!--    </div>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div
-                resize="right"
-                class="background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
-        </sidenav>
+							<!--            <li> <span value="{{participant.call.sid}}"></span>  - TO: <span value="{{participant.call.to}}"></span> - from :<span value="{{participant.call.from}}"></span></span></li>-->
+							<!--            <button -->
+							<!--                    actions="muteParticipantsConference" -->
+							<!--                    data-idparticipant="{{participant.callSid}}" -->
+							<!--            >Mute</button>-->
+							<!--            <button style="display:none"-->
+							<!--                    actions="unmuteParticipantsConference" -->
+							<!--                    data-idparticipant="{{participant.callSid}}"-->
+							<!--            >UnMute</button>-->
+							<!--            <button -->
+							<!--                    actions="holdParticipantConference" -->
+							<!--                    data-idparticipant="{{participant.callSid}}" -->
+							<!--            >HoldParticipante</button>-->
+							<!--            <button style="display:none"-->
+							<!--                    actions="unholdParticipantConference" -->
+							<!--                    data-idparticipant="{{participant.callSid}}"-->
+							<!--            >UnHoldParticipante</button>-->
+							<!--            <button -->
+							<!--                    actions="delParticipantsConference"-->
+							<!--            >DElete</button>-->
+							<!--        </form>-->
+							<!--    </div>-->
+							<!--</div>-->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div
+				resize="right"
+				class="background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
+		</sidenav>
 
-        <!-- Main Content -->
-        <main content_id="content" class="padding:5px height:100vh">
-            <!-- Datatable Navigation Tabs -->
-            <ul
-                class="overflow:auto display:inline-flex align-items:center list-style-type:none width:100% line-height:40px"
-                role="tablist">
-                <li
-                    class="flex-grow:1 text-align:center line-height:40px min-width:140px">
-                    <a
-                        class="height:40px padding:.5rem_1rem tab active"
-                        href="#history"
-                        role="tab"
-                        toggle="tab"
-                        aria-selected="true"
-                        ><i class="mdi mdi-history"></i> History</a
-                    >
-                </li>
+		<!-- Main Content -->
+		<main content_id="content" class="padding:5px height:100vh">
+			<!-- Datatable Navigation Tabs -->
+			<ul
+				class="overflow:auto display:inline-flex align-items:center list-style-type:none width:100% line-height:40px"
+				role="tablist">
+				<li
+					class="flex-grow:1 text-align:center line-height:40px min-width:140px">
+					<a
+						class="height:40px padding:.5rem_1rem tab active"
+						href="#history"
+						role="tab"
+						toggle="tab"
+						aria-selected="true"
+						><i class="mdi mdi-history"></i> History</a
+					>
+				</li>
 
-                <li
-                    class="flex-grow:1 text-align:center line-height:40px min-width:140px">
-                    <a
-                        class="height:40px padding:.5rem_1rem"
-                        href="#missed"
-                        role="tab"
-                        toggle="tab"
-                        aria-selected="false"
-                        ><i class="mdi mdi-call-missed"></i> Missed Calls</a
-                    >
-                </li>
+				<li
+					class="flex-grow:1 text-align:center line-height:40px min-width:140px">
+					<a
+						class="height:40px padding:.5rem_1rem"
+						href="#missed"
+						role="tab"
+						toggle="tab"
+						aria-selected="false"
+						><i class="mdi mdi-call-missed"></i> Missed Calls</a
+					>
+				</li>
 
-                <li
-                    class="flex-grow:1 text-align:center line-height:40px min-width:140px">
-                    <a
-                        class="height:40px padding:.5rem_1rem"
-                        href="#voicemail"
-                        role="tab"
-                        toggle="tab"
-                        aria-selected="false"
-                        ><i class="mdi mdi-voicemail"></i> Voicemail</a
-                    >
-                </li>
+				<li
+					class="flex-grow:1 text-align:center line-height:40px min-width:140px">
+					<a
+						class="height:40px padding:.5rem_1rem"
+						href="#voicemail"
+						role="tab"
+						toggle="tab"
+						aria-selected="false"
+						><i class="mdi mdi-voicemail"></i> Voicemail</a
+					>
+				</li>
 
-                <li
-                    class="flex-grow:1 text-align:center line-height:40px min-width:140px">
-                    <a
-                        class="height:40px padding:.5rem_1rem"
-                        href="#incoming"
-                        role="tab"
-                        toggle="tab"
-                        aria-selected="false"
-                        ><i class="mdi mdi-phone-incoming"></i> Recordings</a
-                    >
-                </li>
-            </ul>
+				<li
+					class="flex-grow:1 text-align:center line-height:40px min-width:140px">
+					<a
+						class="height:40px padding:.5rem_1rem"
+						href="#incoming"
+						role="tab"
+						toggle="tab"
+						aria-selected="false"
+						><i class="mdi mdi-phone-incoming"></i> Recordings</a
+					>
+				</li>
+			</ul>
 
-            <!-- Datatable -->
-            <div class="overflow:auto">
-                <table class="width:100% border-collapse:collapse">
-                    <tr class="border-bottom:1px_solid_darkgray">
-                        <td
-                            class="position:sticky top:0 background:white padding:0px_10px_10px">
-                            <floating-label>
-                                <input
-                                    type="text"
-                                    class="floating-label"
-                                    filter-key="status"
-                                    filter-closest="table; tbody"
-                                    placeholder="Status" />
-                            </floating-label>
+			<!-- Datatable -->
+			<div class="overflow:auto">
+				<table class="width:100% border-collapse:collapse">
+					<tr class="border-bottom:1px_solid_darkgray">
+						<td
+							class="position:sticky top:0 background:white padding:0px_10px_10px">
+							<floating-label>
+								<input
+									type="text"
+									class="floating-label"
+									filter-query-key="status"
+									filter-closest="table; tbody"
+									placeholder="Status" />
+							</floating-label>
 
-                            <span
-                                class="position:absolute bottom:22px right:20px float:right z-index:6">
-                                <!-- need a solution to update toggle value="desc|asc" and define and upadte icons... show hide works great but to much html and orderby only has 2 values -->
-                                <a
-                                    filter-closest="table; tbody"
-                                    filter-sort-key="name"
-                                    filter-sort-toggle>
-                                    <i></i>
-                                </a>
-                            </span>
-                        </td>
-                        <!--<td class="position:sticky top:0 background:white padding:0px_10px_10px">-->
-                        <!--	<input type="text" class="floating-label"-->
-                        <!--		filter-key="participants" -->
-                        <!--		placeholder="Participants"./>-->
-                        <!--		<span class="position:absolute bottom:20px right:20px float:right z-index:6" >-->
-                        <!--			<a filter-sort-key="_id" value="" filter-sort-direction="asc" click-value="desc, asc" click-attribute="filter-sort-direction" template_id="datatable">-->
-                        <!--			</a>-->
-                        <!--		</span>-->
-                        <!--</td>-->
-                        <td
-                            class="position:sticky top:0 background:white padding:0px_10px_10px">
-                            <floating-label>
-                                <input
-                                    type="text"
-                                    class="floating-label"
-                                    filter-key="duration"
-                                    filter-closest="table; tbody"
-                                    placeholder="duration" />
-                            </floating-label>
-                            <span
-                                class="position:absolute bottom:22px right:20px float:right z-index:6">
-                                <a
-                                    filter-sort-key="_id"
-                                    value=""
-                                    filter-sort-direction="asc"
-                                    click-value="desc, asc"
-                                    click-attribute="filter-sort-direction"
-                                    filter-closest="table; tbody"></a>
-                            </span>
-                        </td>
-                    </tr>
+							<span
+								class="position:absolute bottom:22px right:20px float:right z-index:6">
+								<!-- need a solution to update toggle value="desc|asc" and define and upadte icons... show hide works great but to much html and orderby only has 2 values -->
+								<a
+									filter-closest="table; tbody"
+									filter-sort-key="name"
+									filter-sort-toggle>
+									<i></i>
+								</a>
+							</span>
+						</td>
+						<!--<td class="position:sticky top:0 background:white padding:0px_10px_10px">-->
+						<!--	<input type="text" class="floating-label"-->
+						<!--		filter-query-key="participants" -->
+						<!--		placeholder="Participants"./>-->
+						<!--		<span class="position:absolute bottom:20px right:20px float:right z-index:6" >-->
+						<!--			<a filter-sort-key="_id" value="" filter-sort-direction="asc" click-value="desc, asc" click-attribute="filter-sort-direction" template_id="datatable">-->
+						<!--			</a>-->
+						<!--		</span>-->
+						<!--</td>-->
+						<td
+							class="position:sticky top:0 background:white padding:0px_10px_10px">
+							<floating-label>
+								<input
+									type="text"
+									class="floating-label"
+									filter-query-key="duration"
+									filter-closest="table; tbody"
+									placeholder="duration" />
+							</floating-label>
+							<span
+								class="position:absolute bottom:22px right:20px float:right z-index:6">
+								<a
+									filter-sort-key="_id"
+									value=""
+									filter-sort-direction="asc"
+									click-value="desc, asc"
+									click-attribute="filter-sort-direction"
+									filter-closest="table; tbody"></a>
+							</span>
+						</td>
+					</tr>
 
-                    <!-- Datatable Fetch and Render Rows -->
-                    <tbody
-                        array="testtwillio"
-                        filter-limit="15"
-                        filter-sort-key=""
-                        filter-sort-direction="asc"
-                        render-selector=":last-child">
-                        <!-- Datatable Row Template -->
-                        <tr
-                            class="background:whitesmoke:hover border-bottom:1px_solid_darkgray"
-                            template
-                            state_id="datatable"
-                            object="{{object._id}}"
-                            toggle="selected">
-                            <td class="padding:10px">
-                                <div class="display:flex min-width:200px">
-                                    <div
-                                        class="display:flex justify-content:center width:40px">
-                                        <!-- Avatar -->
-                                        <div class="avatar-wrapper">
-                                            <a
-                                                class="avatar round"
-                                                actions="state, openModal"
-                                                state-array="modules"
-                                                state-object="5dd010bccbc25f0cdb1a4d9f"
-                                                state_to="render"
-                                                modal-width="300px"
-                                                modal-height="375px"
-                                                modal-color="#229954">
-                                                <span
-                                                    array="users"
-                                                    object=""
-                                                    key="name"
-                                                    class="first-letter avatar-name"></span>
-                                                <span
-                                                    array="users"
-                                                    object=""
-                                                    key="profile_image"
-                                                    class="avatar-image">
-                                                    <img
-                                                        src="images/Velazquez.jpg"
-                                                        onerror="this.style.display='none'" />
-                                                </span>
-                                            </a>
-                                            <!--<div class="avatar-status " array="users" object="$user_id" user-status="{'name':'status'}"></div>-->
-                                        </div>
-                                    </div>
-                                    <div class="margin-left:10px">
-                                        <a
-                                            actions="state, openModal"
-                                            modal-src="./src/modules/module-views/form.html"
-                                            state-array="modules"
-                                            state-object="{{object._id}}"
-                                            state-key="src"
-                                            state_to="render"
-                                            modal-width="320px"
-                                            modal-color="#229954">
-                                            <div
-                                                class="display:none to-{{object.direction}}">
-                                                <h4>
-                                                    <span
-                                                        array="{{object.array}}"
-                                                        object="{{object._id}}"
-                                                        key="To"
-                                                        >To</span
-                                                    >
-                                                </h4>
-                                            </div>
-                                            <div
-                                                class="display:none from-{{object.direction}}">
-                                                <h4>
-                                                    <span
-                                                        array="{{object.array}}"
-                                                        object="{{object._id}}"
-                                                        key="From"
-                                                        >From</span
-                                                    >
-                                                </h4>
-                                            </div>
-                                            <span
-                                                class="icon-{{object.direction}}"
-                                                array="{{object.array}}"
-                                                object="{{object._id}}"
-                                                key="status"
-                                                value=""></span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </td>
-                            <!--<td class="padding:10px display:flex">-->
-                            <!-- Avatar -->
-                            <!--                      <div class="avatar-wrapper">-->
-                            <!--                          <a class="avatar round" actions="state, openModal" -->
-                            <!--                              state-array="modules" -->
-                            <!--                              state-object="5dd010bccbc25f0cdb1a4d9f" -->
-                            <!--                              state_to="render" -->
-                            <!--                              modal-width="300px" -->
-                            <!--                              modal-height="375px" -->
-                            <!--                              modal-color="#229954"-->
-                            <!--                             >-->
-                            <!--                              <span array="users" object="" key="name" class="first-letter avatar-name"></span>-->
-                            <!--                              <span array="users" object="" key="profile_image" class="avatar-image">-->
-                            <!--                                  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"./>-->
-                            <!--                              </span>-->
-                            <!--                          </a>-->
-                            <!--                          <div class="avatar-status" array="users" object="$user_id" user-status="{'name':'status'}"></div>-->
-                            <!--                      </div>			-->
-                            <!--</td>-->
-                            <td class="padding:10px">
-                                <a
-                                    actions="state, openModal"
-                                    modal-src="./src/modules/module-views/form.html"
-                                    state-object="{{object._id}}"
-                                    state-array="modules"
-                                    state-key="src"
-                                    state_to="render"
-                                    modal-width="320px"
-                                    modal-color="#229954">
-                                    <b
-                                        array="{{object.array}}"
-                                        object="{{object._id}}"
-                                        key="duration"
-                                        >Duration</b
-                                    >
-                                    <div
-                                        state-array="modules"
-                                        state-object="{{object._id}}"
-                                        state_to="form-fields"></div>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div filter-parent="[array]" filter-on="total"></div>
-            </div>
-        </main>
+					<!-- Datatable Fetch and Render Rows -->
+					<tbody
+						array="testtwillio"
+						filter-limit="15"
+						filter-sort-key=""
+						filter-sort-direction="asc"
+						render-selector=":last-child">
+						<!-- Datatable Row Template -->
+						<tr
+							class="background:whitesmoke:hover border-bottom:1px_solid_darkgray"
+							template
+							state_id="datatable"
+							object="{{object._id}}"
+							toggle="selected">
+							<td class="padding:10px">
+								<div class="display:flex min-width:200px">
+									<div
+										class="display:flex justify-content:center width:40px">
+										<!-- Avatar -->
+										<div class="avatar-wrapper">
+											<a
+												class="avatar round"
+												actions="state, openModal"
+												state-array="modules"
+												state-object="5dd010bccbc25f0cdb1a4d9f"
+												state_to="render"
+												modal-width="300px"
+												modal-height="375px"
+												modal-color="#229954">
+												<span
+													array="users"
+													object=""
+													key="name"
+													class="first-letter avatar-name"></span>
+												<span
+													array="users"
+													object=""
+													key="profile_image"
+													class="avatar-image">
+													<img
+														src="images/Velazquez.jpg"
+														onerror="this.style.display='none'" />
+												</span>
+											</a>
+											<!--<div class="avatar-status " array="users" object="$user_id" user-status="{'name':'status'}"></div>-->
+										</div>
+									</div>
+									<div class="margin-left:10px">
+										<a
+											actions="state, openModal"
+											modal-src="./src/modules/module-views/form.html"
+											state-array="modules"
+											state-object="{{object._id}}"
+											state-key="src"
+											state_to="render"
+											modal-width="320px"
+											modal-color="#229954">
+											<div
+												class="display:none to-{{object.direction}}">
+												<h4>
+													<span
+														array="{{object.array}}"
+														object="{{object._id}}"
+														key="To"
+														>To</span
+													>
+												</h4>
+											</div>
+											<div
+												class="display:none from-{{object.direction}}">
+												<h4>
+													<span
+														array="{{object.array}}"
+														object="{{object._id}}"
+														key="From"
+														>From</span
+													>
+												</h4>
+											</div>
+											<span
+												class="icon-{{object.direction}}"
+												array="{{object.array}}"
+												object="{{object._id}}"
+												key="status"
+												value=""></span>
+										</a>
+									</div>
+								</div>
+							</td>
+							<!--<td class="padding:10px display:flex">-->
+							<!-- Avatar -->
+							<!--                      <div class="avatar-wrapper">-->
+							<!--                          <a class="avatar round" actions="state, openModal" -->
+							<!--                              state-array="modules" -->
+							<!--                              state-object="5dd010bccbc25f0cdb1a4d9f" -->
+							<!--                              state_to="render" -->
+							<!--                              modal-width="300px" -->
+							<!--                              modal-height="375px" -->
+							<!--                              modal-color="#229954"-->
+							<!--                             >-->
+							<!--                              <span array="users" object="" key="name" class="first-letter avatar-name"></span>-->
+							<!--                              <span array="users" object="" key="profile_image" class="avatar-image">-->
+							<!--                                  <img src="images/Velazquez.jpg" onerror="this.style.display='none'"./>-->
+							<!--                              </span>-->
+							<!--                          </a>-->
+							<!--                          <div class="avatar-status" array="users" object="$user_id" user-status="{'name':'status'}"></div>-->
+							<!--                      </div>			-->
+							<!--</td>-->
+							<td class="padding:10px">
+								<a
+									actions="state, openModal"
+									modal-src="./src/modules/module-views/form.html"
+									state-object="{{object._id}}"
+									state-array="modules"
+									state-key="src"
+									state_to="render"
+									modal-width="320px"
+									modal-color="#229954">
+									<b
+										array="{{object.array}}"
+										object="{{object._id}}"
+										key="duration"
+										>Duration</b
+									>
+									<div
+										state-array="modules"
+										state-object="{{object._id}}"
+										state_to="form-fields"></div>
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div filter-parent="[array]" filter-on="total"></div>
+			</div>
+		</main>
 
-        <!-- SideNav Right -->
-        <sidenav
-            id="menuR"
-            class="position:absolute top:0px right:0px overflow:hidden direction:rtl background:white height:100vh width:300px width:300px:hover width:0px@xs"
-            resizable
-            resize-selector="[content_id='content']"
-            resize-property="margin-right"
-            resize-value="width">
-            <div
-                class="min-width:290px background-color:#ffffff margin:5px direction:ltr">
-                <div class="padding:5px">
-                    <form template_id="createCall" render_id="render2">
-                        <!-- From Fontact or Number-->
-                        <floating-label>
-                            <cocreate-select
-                                class="floating-label"
-                                sortable
-                                array="test"
-                                object="5e9531b3a762440eed55c2ed"
-                                key="selectField0"
-                                placeholder="Call as">
-                                <input
-                                    type="hidden"
-                                    twilio="dial.From"
-                                    value="+16027372368" />
-                                <input filter-next filter-search />
+		<!-- SideNav Right -->
+		<sidenav
+			id="menuR"
+			class="position:absolute top:0px right:0px overflow:hidden direction:rtl background:white height:100vh width:300px width:300px:hover width:0px@xs"
+			resizable
+			resize-selector="[content_id='content']"
+			resize-property="margin-right"
+			resize-value="width">
+			<div
+				class="min-width:290px background-color:#ffffff margin:5px direction:ltr">
+				<div class="padding:5px">
+					<form template_id="createCall" render_id="render2">
+						<!-- From Fontact or Number-->
+						<floating-label>
+							<cocreate-select
+								class="floating-label"
+								sortable
+								array="test"
+								object="5e9531b3a762440eed55c2ed"
+								key="selectField0"
+								placeholder="Call as">
+								<input
+									type="hidden"
+									twilio="dial.From"
+									value="+16027372368" />
+								<input filter-next filter-search />
 
-                                <ul
-                                    array="use"
-                                    render-selector=":last-child"
-                                    class="options overflow:auto height:300px">
-                                    <li
-                                        class="option display:flex padding:5px"
-                                        template
-                                        value="+13472189814"
-                                        object="{{object._id}}"
-                                        render="object">
-                                        <div>
-                                            <h3
-                                                key="name"
-                                                value="{{object.name}}">
-                                                +13472189814
-                                            </h3>
-                                            <h5>{{object._id}}</h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </cocreate-select>
-                        </floating-label>
+								<ul
+									array="use"
+									render-selector=":last-child"
+									class="options overflow:auto height:300px">
+									<li
+										class="option display:flex padding:5px"
+										template
+										value="+13472189814"
+										object="{{object._id}}"
+										render="object">
+										<div>
+											<h3
+												key="name"
+												value="{{object.name}}">
+												+13472189814
+											</h3>
+											<h5>{{object._id}}</h5>
+										</div>
+									</li>
+								</ul>
+							</cocreate-select>
+						</floating-label>
 
-                        <!-- TO Contact or Number-->
-                        <div class="position:relative">
-                            <floating-label>
-                                <cocreate-select
-                                    class="floating-label"
-                                    sortable
-                                    placeholder="Enter a name or number">
-                                    <input
-                                        twilio="dial.To"
-                                        class="draw_digits"
-                                        filter-next
-                                        filter-search
-                                        value="+19703735168" />
+						<!-- TO Contact or Number-->
+						<div class="position:relative">
+							<floating-label>
+								<cocreate-select
+									class="floating-label"
+									sortable
+									placeholder="Enter a name or number">
+									<input
+										twilio="dial.To"
+										class="draw_digits"
+										filter-next
+										filter-search
+										value="+19703735168" />
 
-                                    <ul
-                                        array="users"
-                                        render-selector=":last-child"
-                                        class="options overflow:auto">
-                                        <li
-                                            class="option display:flex padding:5px"
-                                            template
-                                            value="{{object._id}}"
-                                            object="{{object._id}}"
-                                            render="object">
-                                            <!-- Avatar -->
-                                            <div
-                                                class="avatar-wrapper margin:5px_0px margin-right:10px">
-                                                <a
-                                                    class="avatar round"
-                                                    actions="state, openModal"
-                                                    modal-src="./user-profile/user-profile.html"
-                                                    state-array="modules"
-                                                    state-object="5dd010bccbc25f0cdb1a4d9f"
-                                                    state_to="render"
-                                                    modal-width="300px"
-                                                    modal-height="375px"
-                                                    modal-color="#229954">
-                                                    <span
-                                                        array="users"
-                                                        object="$user_id"
-                                                        key="name"
-                                                        class="first-letter avatar-name"></span>
-                                                    <span
-                                                        array="users"
-                                                        object="$user_id"
-                                                        key="profile_image"
-                                                        class="avatar-image">
-                                                        <img
-                                                            src="images/Velazquez.jpg"
-                                                            onerror="this.style.display='none'" />
-                                                    </span>
-                                                </a>
-                                                <div
-                                                    class="avatar-status"
-                                                    array="users"
-                                                    object="$user_id"
-                                                    user-status="{'name':'status'}"></div>
-                                            </div>
-                                            <div>
-                                                <h3
-                                                    key="name"
-                                                    value="{{object.name}}">
-                                                    No Name
-                                                </h3>
-                                                <h5>{{object._id}}</h5>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </cocreate-select>
-                            </floating-label>
+									<ul
+										array="users"
+										render-selector=":last-child"
+										class="options overflow:auto">
+										<li
+											class="option display:flex padding:5px"
+											template
+											value="{{object._id}}"
+											object="{{object._id}}"
+											render="object">
+											<!-- Avatar -->
+											<div
+												class="avatar-wrapper margin:5px_0px margin-right:10px">
+												<a
+													class="avatar round"
+													actions="state, openModal"
+													modal-src="./user-profile/user-profile.html"
+													state-array="modules"
+													state-object="5dd010bccbc25f0cdb1a4d9f"
+													state_to="render"
+													modal-width="300px"
+													modal-height="375px"
+													modal-color="#229954">
+													<span
+														array="users"
+														object="$user_id"
+														key="name"
+														class="first-letter avatar-name"></span>
+													<span
+														array="users"
+														object="$user_id"
+														key="profile_image"
+														class="avatar-image">
+														<img
+															src="images/Velazquez.jpg"
+															onerror="this.style.display='none'" />
+													</span>
+												</a>
+												<div
+													class="avatar-status"
+													array="users"
+													object="$user_id"
+													user-status="{'name':'status'}"></div>
+											</div>
+											<div>
+												<h3
+													key="name"
+													value="{{object.name}}">
+													No Name
+												</h3>
+												<h5>{{object._id}}</h5>
+											</div>
+										</li>
+									</ul>
+								</cocreate-select>
+							</floating-label>
 
-                            <a
-                                actions="createCall"
-                                class="position:absolute top:12px right:12px float:right z-index:5 font-size:20px"
-                                ><i
-                                    class="height:16px"
-                                    src="./assets/svg/plus-square.svg"></i
-                            ></a>
-                        </div>
+							<a
+								actions="createCall"
+								class="position:absolute top:12px right:12px float:right z-index:5 font-size:20px"
+								><i
+									class="height:16px"
+									src="./assets/svg/plus-square.svg"></i
+							></a>
+						</div>
 
-                        <!--<div class="phoneString width:100% height:80px background-color:#ffffff">-->
-                        <!--    <input type="text" class="background-color:transparent margin:0px_25px height:80px width:250px border:none outline:none:focus font-size:30px font-weight:700 letter-spacing:2px text-align:center" >-->
-                        <!--</div>-->
+						<!--<div class="phoneString width:100% height:80px background-color:#ffffff">-->
+						<!--    <input type="text" class="background-color:transparent margin:0px_25px height:80px width:250px border:none outline:none:focus font-size:30px font-weight:700 letter-spacing:2px text-align:center" >-->
+						<!--</div>-->
 
-                        <!-- Dial Pad -->
-                        <div
-                            class="digits overflow:hidden width:250px margin:auto margin-top:20px">
-                            <div class="dig pound number-dig" key="1">1</div>
-                            <div class="dig number-dig" key="2">
-                                2
-                                <div
-                                    class="font-size:8px font-weight:300 position:relative top:-2px">
-                                    ABC
-                                </div>
-                            </div>
-                            <div class="dig number-dig" key="3">
-                                3
-                                <div
-                                    class="font-size:8px font-weight:300 position:relative top:-2px">
-                                    DEF
-                                </div>
-                            </div>
-                            <div class="dig number-dig" key="4">
-                                4
-                                <div
-                                    class="font-size:8px font-weight:300 position:relative top:-2px">
-                                    GHI
-                                </div>
-                            </div>
-                            <div class="dig number-dig" key="5">
-                                5
-                                <div
-                                    class="font-size:8px font-weight:300 position:relative top:-2px">
-                                    JKL
-                                </div>
-                            </div>
-                            <div class="dig number-dig" key="6">
-                                6
-                                <div
-                                    class="font-size:8px font-weight:300 position:relative top:-2px">
-                                    MNO
-                                </div>
-                            </div>
-                            <div class="dig number-dig" key="7">
-                                7
-                                <div
-                                    class="font-size:8px font-weight:300 position:relative top:-2px">
-                                    PQRS
-                                </div>
-                            </div>
-                            <div class="dig number-dig" key="8">
-                                8
-                                <div
-                                    class="font-size:8px font-weight:300 position:relative top:-2px">
-                                    TUV
-                                </div>
-                            </div>
-                            <div class="dig number-dig" key="9">
-                                9
-                                <div
-                                    class="font-size:8px font-weight:300 position:relative top:-2px">
-                                    WXYZ
-                                </div>
-                            </div>
-                            <div
-                                class="dig number-dig padding-top:17px height:58px"
-                                key="*">
-                                *
-                            </div>
-                            <div
-                                class="dig number-dig padding-top:10px height:58px"
-                                key="0">
-                                0
-                            </div>
-                            <div
-                                class="dig number-dig padding-top:10px height:58px"
-                                key="#">
-                                #
-                            </div>
-                        </div>
-                        <div class="display:flex margin-top:10px">
-                            <div
-                                class="display:flex justify-content:center width:33%">
-                                <input
-                                    type="hidden"
-                                    twilio="dialConference.friendlyName"
-                                    value="{{render2.parameters.To}}" />
-                                <input
-                                    type="hidden"
-                                    twilio="dialConference.CallSid"
-                                    value="{{render2.parameters.CallSid}}" />
-                                <input
-                                    type="hidden"
-                                    twilio="dialConference.holdUrl"
-                                    value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic" />
-                                <button
-                                    actions="dialConference"
-                                    data-id="dialConference"
-                                    class="hold"
-                                    title="Put Call on Hold">
-                                    <i class="fas fa-pause"></i>
-                                </button>
-                                <!-- Conference -->
-                                <div>
-                                    <input
-                                        type="hidden"
-                                        twilio="joinConference.friendlyName"
-                                        value="{{object.friendlyName}}" />
-                                    <input
-                                        type="hidden"
-                                        twilio="endConference.CallSid"
-                                        value="{{object.idconference}}" />
-                                    <input
-                                        type="hidden"
-                                        twilio="holdConference.CallSid"
-                                        value="{{object.idconference}}" />
-                                    <input
-                                        type="hidden"
-                                        twilio="unholdConference.CallSid"
-                                        value="{{object.idconference}}" />
-                                    <button
-                                        hidden
-                                        actions="joinConference"
-                                        data-friendlykey="{{object.friendlyName}}"
-                                        title="Resume Call">
-                                        <i class="fas fa-pause"></i>
-                                    </button>
-                                    <button hidden actions="holdConference">
-                                        <i class="fas fa-pause"></i>
-                                    </button>
-                                    <button hidden actions="unholdConference">
-                                        <i class="fas fa-pause"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div
-                                class="display:flex justify-content:center width:33%">
-                                <button
-                                    actions="createCall"
-                                    class="answer is-animating"
-                                    title="Answer Call"
-                                    show="#end-call"
-                                    hide="">
-                                    <i class="fas fa-phone"></i>
-                                </button>
-                                <button
-                                    id="#end-call"
-                                    class="decline"
-                                    hidden
-                                    actions="hangupCall"
-                                    title="End Call">
-                                    <i class="fas fa-phone-slash"></i>
-                                </button>
-                                <!-- End Conference -->
-                                <input
-                                    type="hidden"
-                                    twilio="endConference.CallSid"
-                                    value="{{object.idconference}}" />
-                                <button hidden actions="endConference">
-                                    <i class="fas fa-phone-slash"></i>
-                                </button>
-                            </div>
-                            <div
-                                class="display:flex justify-content:center width:33%">
-                                <button
-                                    class="transfer"
-                                    actions="dialTransfer"
-                                    title="Transfer Call">
-                                    <img
-                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABlUlEQVRIiZ3VMWsUQRjG8V8ukSCiELGxsjFFimgpGEELLQUJWoj5DoFU+QpW2likMm2wyAeIomghYqEEoqSQiGCjKZKYIrmol2LnzLju7Mz5wMLx3vN/n9l3hh3+1iieYRWTBtMonuJzG7uIXni+DRiSZa/id2QaJORGjfuHHcaHBlMPXzPNO/iYY+8lDD08zARMl7CvE4ZV1ea1KcuOt6xgOtP8Qgk7mzC8UM23TfMl7FL0x3WMqTY91kQiYLmAtRYMe9Lz3sGdhvp6AWsrmNZThmiVCzgW1bcLWAfB9CbRtP68xFkM4WeC/aNOCICRtlU0qD+aLLsRzBuZZk0j+lTAeh5MBzU4VmqTV3JsB+/D7xFcTARcwpOG+rscO4xT0erGcRk3cQ5vQ30zEXwcdzOsk6rNqp+WXy1vFAfslrCPG0w9vJI/XY9K2MmQ+j+f6/PoJtgHsXEhYeriTCbkfoLdiU2n8b1m2MetTHM4obrsY/YHrtSNtx3dy93C5n1dczSqXdUd36g5fFEdt0E1o/ouTfULh60e2n2ht7rUAAAAAElFTkSuQmCC"
-                                        height="24px" />
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div
-                resize="left"
-                class="background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
-        </sidenav>
+						<!-- Dial Pad -->
+						<div
+							class="digits overflow:hidden width:250px margin:auto margin-top:20px">
+							<div class="dig pound number-dig" key="1">1</div>
+							<div class="dig number-dig" key="2">
+								2
+								<div
+									class="font-size:8px font-weight:300 position:relative top:-2px">
+									ABC
+								</div>
+							</div>
+							<div class="dig number-dig" key="3">
+								3
+								<div
+									class="font-size:8px font-weight:300 position:relative top:-2px">
+									DEF
+								</div>
+							</div>
+							<div class="dig number-dig" key="4">
+								4
+								<div
+									class="font-size:8px font-weight:300 position:relative top:-2px">
+									GHI
+								</div>
+							</div>
+							<div class="dig number-dig" key="5">
+								5
+								<div
+									class="font-size:8px font-weight:300 position:relative top:-2px">
+									JKL
+								</div>
+							</div>
+							<div class="dig number-dig" key="6">
+								6
+								<div
+									class="font-size:8px font-weight:300 position:relative top:-2px">
+									MNO
+								</div>
+							</div>
+							<div class="dig number-dig" key="7">
+								7
+								<div
+									class="font-size:8px font-weight:300 position:relative top:-2px">
+									PQRS
+								</div>
+							</div>
+							<div class="dig number-dig" key="8">
+								8
+								<div
+									class="font-size:8px font-weight:300 position:relative top:-2px">
+									TUV
+								</div>
+							</div>
+							<div class="dig number-dig" key="9">
+								9
+								<div
+									class="font-size:8px font-weight:300 position:relative top:-2px">
+									WXYZ
+								</div>
+							</div>
+							<div
+								class="dig number-dig padding-top:17px height:58px"
+								key="*">
+								*
+							</div>
+							<div
+								class="dig number-dig padding-top:10px height:58px"
+								key="0">
+								0
+							</div>
+							<div
+								class="dig number-dig padding-top:10px height:58px"
+								key="#">
+								#
+							</div>
+						</div>
+						<div class="display:flex margin-top:10px">
+							<div
+								class="display:flex justify-content:center width:33%">
+								<input
+									type="hidden"
+									twilio="dialConference.friendlyName"
+									value="{{render2.parameters.To}}" />
+								<input
+									type="hidden"
+									twilio="dialConference.CallSid"
+									value="{{render2.parameters.CallSid}}" />
+								<input
+									type="hidden"
+									twilio="dialConference.holdUrl"
+									value="https://server.cocreate.app:8088/twilio/actions_twiml?opt=holdmusic" />
+								<button
+									actions="dialConference"
+									data-id="dialConference"
+									class="hold"
+									title="Put Call on Hold">
+									<i class="fas fa-pause"></i>
+								</button>
+								<!-- Conference -->
+								<div>
+									<input
+										type="hidden"
+										twilio="joinConference.friendlyName"
+										value="{{object.friendlyName}}" />
+									<input
+										type="hidden"
+										twilio="endConference.CallSid"
+										value="{{object.idconference}}" />
+									<input
+										type="hidden"
+										twilio="holdConference.CallSid"
+										value="{{object.idconference}}" />
+									<input
+										type="hidden"
+										twilio="unholdConference.CallSid"
+										value="{{object.idconference}}" />
+									<button
+										hidden
+										actions="joinConference"
+										data-friendlykey="{{object.friendlyName}}"
+										title="Resume Call">
+										<i class="fas fa-pause"></i>
+									</button>
+									<button hidden actions="holdConference">
+										<i class="fas fa-pause"></i>
+									</button>
+									<button hidden actions="unholdConference">
+										<i class="fas fa-pause"></i>
+									</button>
+								</div>
+							</div>
+							<div
+								class="display:flex justify-content:center width:33%">
+								<button
+									actions="createCall"
+									class="answer is-animating"
+									title="Answer Call"
+									show="#end-call"
+									hide="">
+									<i class="fas fa-phone"></i>
+								</button>
+								<button
+									id="#end-call"
+									class="decline"
+									hidden
+									actions="hangupCall"
+									title="End Call">
+									<i class="fas fa-phone-slash"></i>
+								</button>
+								<!-- End Conference -->
+								<input
+									type="hidden"
+									twilio="endConference.CallSid"
+									value="{{object.idconference}}" />
+								<button hidden actions="endConference">
+									<i class="fas fa-phone-slash"></i>
+								</button>
+							</div>
+							<div
+								class="display:flex justify-content:center width:33%">
+								<button
+									class="transfer"
+									actions="dialTransfer"
+									title="Transfer Call">
+									<img
+										src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABlUlEQVRIiZ3VMWsUQRjG8V8ukSCiELGxsjFFimgpGEELLQUJWoj5DoFU+QpW2likMm2wyAeIomghYqEEoqSQiGCjKZKYIrmol2LnzLju7Mz5wMLx3vN/n9l3hh3+1iieYRWTBtMonuJzG7uIXni+DRiSZa/id2QaJORGjfuHHcaHBlMPXzPNO/iYY+8lDD08zARMl7CvE4ZV1ea1KcuOt6xgOtP8Qgk7mzC8UM23TfMl7FL0x3WMqTY91kQiYLmAtRYMe9Lz3sGdhvp6AWsrmNZThmiVCzgW1bcLWAfB9CbRtP68xFkM4WeC/aNOCICRtlU0qD+aLLsRzBuZZk0j+lTAeh5MBzU4VmqTV3JsB+/D7xFcTARcwpOG+rscO4xT0erGcRk3cQ5vQ30zEXwcdzOsk6rNqp+WXy1vFAfslrCPG0w9vJI/XY9K2MmQ+j+f6/PoJtgHsXEhYeriTCbkfoLdiU2n8b1m2MetTHM4obrsY/YHrtSNtx3dy93C5n1dczSqXdUd36g5fFEdt0E1o/ouTfULh60e2n2ht7rUAAAAAElFTkSuQmCC"
+										height="24px" />
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div
+				resize="left"
+				class="background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
+		</sidenav>
 
-        <!-- SidNav RIght Key pad Button -->
-        <button
-            toggle-sidenav="menuR"
-            class="position:absolute bottom:15px right:15px padding:15px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4) z-index:15">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                focusable="false"
-                width="1em"
-                height="1em"
-                style="
-                    -ms-transform: rotate(360deg);
-                    -webkit-transform: rotate(360deg);
-                    transform: rotate(360deg);
-                "
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24">
-                <path
-                    d="M12 19a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M6 1a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m12-8a2 2 0 0 0 2-2a2 2 0 0 0-2-2a2 2 0 0 0-2 2a2 2 0 0 0 2 2m-6 8a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m6 0a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0-6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-6 0a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0-6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2z"
-                    fill="#626262" />
-            </svg>
-        </button>
+		<!-- SidNav RIght Key pad Button -->
+		<button
+			toggle-sidenav="menuR"
+			class="position:absolute bottom:15px right:15px padding:15px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4) z-index:15">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink"
+				aria-hidden="true"
+				focusable="false"
+				width="1em"
+				height="1em"
+				style="
+					-ms-transform: rotate(360deg);
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				"
+				preserveAspectRatio="xMidYMid meet"
+				viewBox="0 0 24 24">
+				<path
+					d="M12 19a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2M6 1a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m12-8a2 2 0 0 0 2-2a2 2 0 0 0-2-2a2 2 0 0 0-2 2a2 2 0 0 0 2 2m-6 8a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m6 0a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0-6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m-6 0a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0-6a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2z"
+					fill="#626262" />
+			</svg>
+		</button>
 
-        <!-- Comming Soon-->
-        <div
-            class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
-            <h2>
-                Coming Soon <a actions="remove" remove-closest=".card"> X</a>
-            </h2>
-        </div>
+		<!-- Comming Soon-->
+		<div
+			class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
+			<h2>
+				Coming Soon <a actions="remove" remove-closest=".card"> X</a>
+			</h2>
+		</div>
 
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
 
-        <script>
-            object.querySelectorAll(".number-dig").forEach((number) => {
-                number.addEventListener("click", (e) => {
-                    var valueToAppend = number.getAttribute("name");
-                    let draw_digits = object.querySelector(".draw_digits");
-                    let currentValue = draw_digits.value;
-                    draw_digits.value = currentValue + valueToAppend;
-                });
-            });
-        </script>
-    </body>
+		<script>
+			object.querySelectorAll(".number-dig").forEach((number) => {
+				number.addEventListener("click", (e) => {
+					var valueToAppend = number.getAttribute("name");
+					let draw_digits = object.querySelector(".draw_digits");
+					let currentValue = draw_digits.value;
+					draw_digits.value = currentValue + valueToAppend;
+				});
+			});
+		</script>
+	</body>
 </html>

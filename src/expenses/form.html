@@ -1,299 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon.ico" />
-        <title>Expense Form | CoCreate</title>
-        <link
-            rel="stylesheet"
-            href="../index.css"
-            array="files"
-            object="637bc8fe91249e639db315d9"
-            key="src"
-            type="text/css" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon.ico" />
+		<title>Expense Form | CoCreate</title>
+		<link
+			rel="stylesheet"
+			href="../index.css"
+			array="files"
+			object="637bc8fe91249e639db315d9"
+			key="src"
+			type="text/css" />
 
-        <link rel="manifest" href="./manifest.webmanifest" />
-    </head>
+		<link rel="manifest" href="./manifest.webmanifest" />
+	</head>
 
-    <body>
-        <!-- Modal Viewport -->
-        <div id="modal-viewport" hidden></div>
+	<body>
+		<!-- Modal Viewport -->
+		<div id="modal-viewport" hidden></div>
 
-        <!-- Navbar -->
-        <nav
-            class="nav display:flex align-items:center background:whitesmoke"
-            content_id="content"
-            scroll="sticky-nav, hide-nav"
-            scroll-up="5"
-            scroll-down="5">
-            <!-- Horizontal Scroll Nav/Tabs -->
-            <ul
-                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-                <!-- Modal Controls -->
-                <li class="margin-right:15px">
-                    <a actions="closeModal"
-                        ><i class="height:18px" src="./assets/svg/times.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="minMaxModal">
-                        <i
-                            toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
-                            toggle-attribute="src"
-                            class="height:18px"
-                            src="./assets/svg/window-maximize.svg"></i>
-                    </a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="parkModal"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/window-minimize.svg"></i
-                    ></a>
-                </li>
+		<!-- Navbar -->
+		<nav
+			class="nav display:flex align-items:center background:whitesmoke"
+			content_id="content"
+			scroll="sticky-nav, hide-nav"
+			scroll-up="5"
+			scroll-down="5">
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul
+				class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				<!-- Modal Controls -->
+				<li class="margin-right:15px">
+					<a actions="closeModal"
+						><i class="height:18px" src="./assets/svg/times.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i
+							toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+							toggle-attribute="src"
+							class="height:18px"
+							src="./assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="parkModal"
+						><i
+							class="height:18px"
+							src="./assets/svg/window-minimize.svg"></i
+					></a>
+				</li>
 
-                <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i
+							class="height:18px"
+							src="./assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="./assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Module Form -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/form.html"
-                        modal-width="320px">
-                        <i class="height:18px" src="./assets/svg/cog.svg"></i>
-                        <div
-                            state_id="module-form"
-                            state-array="modules"
-                            state-object=""
-                            state_to="form-fields"></div>
-                        <div
-                            state_id="module_id"
-                            state-filter-value=""
-                            state_to="module_id"></div>
-                    </a>
-                </li>
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./modules/form.html"
+						modal-width="320px">
+						<i class="height:18px" src="./assets/svg/cog.svg"></i>
+						<div
+							state_id="module-form"
+							state-array="modules"
+							state-object=""
+							state_to="form-fields"></div>
+						<div
+							state_id="module_id"
+							state-filter-query-value=""
+							state_to="module_id"></div>
+					</a>
+				</li>
 
-                <!-- Render Code Editor -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./code-editor/index.html">
-                        <i class="height:18px" src="./assets/svg/code.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="code-editor"></div>
-                    </a>
-                </li>
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./code-editor/index.html">
+						<i class="height:18px" src="./assets/svg/code.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="code-editor"></div>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./builder/index.html">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/palette.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="builder"></div>
-                    </a>
-                </li>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./builder/index.html">
+						<i
+							class="height:18px"
+							src="./assets/svg/palette.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="builder"></div>
+					</a>
+				</li>
 
-                <!-- deleteDocument-->
-                <li class="margin-right:15px">
-                    <a
-                        actions="deleteDocument, closeModal"
-                        array="module_activities"
-                        object=""
-                        state_id="form-fields">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/trash-alt.svg"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+				<!-- deleteDocument-->
+				<li class="margin-right:15px">
+					<a
+						actions="deleteDocument, closeModal"
+						array="module_activities"
+						object=""
+						state_id="form-fields">
+						<i
+							class="height:18px"
+							src="./assets/svg/trash-alt.svg"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
 
-        <!-- Main Content -->
-        <main class="padding:10px" content_id="content">
-            <form state_id="form-fields" array="module_activities" object="">
-                <input
-                    type="hidden"
-                    key="module_id"
-                    state_id="module_id"
-                    value />
+		<!-- Main Content -->
+		<main class="padding:10px" content_id="content">
+			<form state_id="form-fields" array="module_activities" object="">
+				<input
+					type="hidden"
+					key="module_id"
+					state_id="module_id"
+					value />
 
-                <input
-                    type="text"
-                    key="name"
-                    placeholder="Name"
-                    class="floating-label" />
+				<input
+					type="text"
+					key="name"
+					placeholder="Name"
+					class="floating-label" />
 
-                <textarea
-                    key="description"
-                    placeholder="Description"
-                    class="floating-label"></textarea>
+				<textarea
+					key="description"
+					placeholder="Description"
+					class="floating-label"></textarea>
 
-                <input
-                    type="date"
-                    key="due_by"
-                    placeholder="Due by"
-                    class="floating-label" />
+				<input
+					type="date"
+					key="due_by"
+					placeholder="Due by"
+					class="floating-label" />
 
-                <div class="display:flex justify-content:space-between">
-                    <select
-                        key="status"
-                        placeholder="Status"
-                        class="floating-label flex-grow:1">
-                        <option label="Draft" value="draft">Draft</option>
-                        <option label="Open" value="open">Open</option>
-                        <option label="Approved" value="approved">
-                            Approved
-                        </option>
-                    </select>
+				<div class="display:flex justify-content:space-between">
+					<select
+						key="status"
+						placeholder="Status"
+						class="floating-label flex-grow:1">
+						<option label="Draft" value="draft">Draft</option>
+						<option label="Open" value="open">Open</option>
+						<option label="Approved" value="approved">
+							Approved
+						</option>
+					</select>
 
-                    <select
-                        key="type"
-                        placeholder="Type"
-                        class="floating-label flex-grow:1">
-                        <option label="Deductable" value="deductable">
-                            Deductable
-                        </option>
-                        <option label="Non Deductable" value="non-deductable">
-                            Non Deductable
-                        </option>
-                    </select>
-                </div>
+					<select
+						key="type"
+						placeholder="Type"
+						class="floating-label flex-grow:1">
+						<option label="Deductable" value="deductable">
+							Deductable
+						</option>
+						<option label="Non Deductable" value="non-deductable">
+							Non Deductable
+						</option>
+					</select>
+				</div>
 
-                <!-- CoCreate Select field multiple documents -->
-                <cocreate-select
-                    key="contact"
-                    placeholder="Contact"
-                    sortable
-                    class="floating-label"
-                    multiple>
-                    <input
-                        placeholder="Search"
-                        filter-parent="array"
-                        filter-search />
-                    <!-- Fetches and displays results using template -->
-                    <cc-options
-                        array=".*"
-                        render-selector="[template]"
-                        class="overflow:auto">
-                        <!-- template -->
-                        <cc-option
-                            class="option"
-                            render-selector="[template]"
-                            template>
-                            <h3
-                                array="users"
-                                object="{{object._id}}"
-                                key="name">
-                                user name
-                            </h3>
-                            <h5
-                                array="users"
-                                object="{{object._id}}"
-                                key="email"></h5>
-                        </cc-option>
-                    </cc-options>
-                </cocreate-select>
+				<!-- CoCreate Select field multiple documents -->
+				<cocreate-select
+					key="contact"
+					placeholder="Contact"
+					sortable
+					class="floating-label"
+					multiple>
+					<input
+						placeholder="Search"
+						filter-parent="array"
+						filter-search />
+					<!-- Fetches and displays results using template -->
+					<cc-options
+						array=".*"
+						render-selector="[template]"
+						class="overflow:auto">
+						<!-- template -->
+						<cc-option
+							class="option"
+							render-selector="[template]"
+							template>
+							<h3
+								array="users"
+								object="{{object._id}}"
+								key="name">
+								user name
+							</h3>
+							<h5
+								array="users"
+								object="{{object._id}}"
+								key="email"></h5>
+						</cc-option>
+					</cc-options>
+				</cocreate-select>
 
-                <!-- CoCreate Select field multiple documents -->
-                <cocreate-select
-                    key="company"
-                    placeholder="Company"
-                    sortable
-                    class="floating-label"
-                    multiple>
-                    <input
-                        placeholder="Search"
-                        filter-parent="array"
-                        filter-search />
-                    <!-- Fetches and displays results using template -->
-                    <cc-options
-                        array=".*"
-                        render-selector="[template]"
-                        class="overflow:auto">
-                        <!-- template -->
-                        <cc-option class="option" render-selector="[template]">
-                            <h3
-                                array="users"
-                                object="{{object._id}}"
-                                key="name">
-                                user name
-                            </h3>
-                            <h5
-                                array="users"
-                                object="{{object._id}}"
-                                key="email"></h5>
-                        </cc-option>
-                    </cc-options>
-                </cocreate-select>
+				<!-- CoCreate Select field multiple documents -->
+				<cocreate-select
+					key="company"
+					placeholder="Company"
+					sortable
+					class="floating-label"
+					multiple>
+					<input
+						placeholder="Search"
+						filter-parent="array"
+						filter-search />
+					<!-- Fetches and displays results using template -->
+					<cc-options
+						array=".*"
+						render-selector="[template]"
+						class="overflow:auto">
+						<!-- template -->
+						<cc-option class="option" render-selector="[template]">
+							<h3
+								array="users"
+								object="{{object._id}}"
+								key="name">
+								user name
+							</h3>
+							<h5
+								array="users"
+								object="{{object._id}}"
+								key="email"></h5>
+						</cc-option>
+					</cc-options>
+				</cocreate-select>
 
-                <!-- CoCreate Select field multiple documents -->
-                <cocreate-select
-                    key="related_to"
-                    placeholder="Related To"
-                    sortable
-                    class="floating-label"
-                    multiple>
-                    <input
-                        placeholder="Search"
-                        filter-parent="array"
-                        filter-search />
-                    <!-- Fetches and displays results using template -->
-                    <cc-options
-                        array=".*"
-                        render-selector="[template]"
-                        class="overflow:auto">
-                        <!-- template -->
-                        <cc-option class="option" render-selector="[template]">
-                            <h3
-                                array="users"
-                                object="{{object._id}}"
-                                key="name">
-                                user name
-                            </h3>
-                            <h5
-                                array="users"
-                                object="{{object._id}}"
-                                key="email"></h5>
-                        </cc-option>
-                    </cc-options>
-                </cocreate-select>
+				<!-- CoCreate Select field multiple documents -->
+				<cocreate-select
+					key="related_to"
+					placeholder="Related To"
+					sortable
+					class="floating-label"
+					multiple>
+					<input
+						placeholder="Search"
+						filter-parent="array"
+						filter-search />
+					<!-- Fetches and displays results using template -->
+					<cc-options
+						array=".*"
+						render-selector="[template]"
+						class="overflow:auto">
+						<!-- template -->
+						<cc-option class="option" render-selector="[template]">
+							<h3
+								array="users"
+								object="{{object._id}}"
+								key="name">
+								user name
+							</h3>
+							<h5
+								array="users"
+								object="{{object._id}}"
+								key="email"></h5>
+						</cc-option>
+					</cc-options>
+				</cocreate-select>
 
-                <button
-                    actions="save"
-                    class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
-                    <i src="./assets/svg/save.svg"></i>
-                </button>
-            </form>
-        </main>
+				<button
+					actions="save"
+					class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
+					<i src="./assets/svg/save.svg"></i>
+				</button>
+			</form>
+		</main>
 
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
-    </body>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
+	</body>
 </html>

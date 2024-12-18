@@ -1,486 +1,482 @@
 <!DOCTYPE html>
 <div class="padding:5px min-width:260px">
-    <div class="display:flex margin-bottom:5px font-size:16px tabs">
-        <div
-            classkey="builder-tab-round"
-            class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover"
-            selected-value="active"
-            selected-selector="#vdom"
-            selected-group="left-panels"
-            toggle="#canvas"
-            toggle-selector="#vdom"
-            toggle-attribute="vdom-selector">
-            <i src="./assets/svg/stream.svg"></i>
-        </div>
-        <div
-            class="builder-tab-round"
-            selected-value="active"
-            selected-selector="#assets"
-            selected-group="left-panels"
-            toggle="files"
-            toggle-selector="#fetch-assets"
-            toggle-attribute="array">
-            <i class="height:16px" src="./assets/svg/photo-video.svg"></i>
-        </div>
-        <div
-            class="builder-tab-round"
-            selected-value="active"
-            selected-selector="#files"
-            selected-group="left-panels"
-            toggle="files"
-            toggle-selector=".fetch-files"
-            toggle-attribute="array">
-            <i class="height:16px" src="./assets/svg/folder.svg"></i>
-        </div>
-        <div
-            class="builder-tab-round"
-            selected-value="active"
-            selected-selector="#uploader"
-            selected-group="left-panels">
-            <i class="height:16px" src="./assets/svg/cloud-upload-alt.svg"></i>
-        </div>
-        <div
-            class="builder-tab-round"
-            selected-value="active"
-            selected-selector="#blocks"
-            selected-group="left-panels"
-            selected>
-            <i class="height:16px" src="./assets/svg/th-large.svg"></i>
-        </div>
-    </div>
+	<div class="display:flex margin-bottom:5px font-size:16px tabs">
+		<div
+			classkey="builder-tab-round"
+			class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover"
+			selected-value="active"
+			selected-selector="#vdom"
+			selected-group="left-panels"
+			toggle="#canvas"
+			toggle-selector="#vdom"
+			toggle-attribute="vdom-selector">
+			<i src="./assets/svg/stream.svg"></i>
+		</div>
+		<div
+			class="builder-tab-round"
+			selected-value="active"
+			selected-selector="#assets"
+			selected-group="left-panels"
+			toggle="files"
+			toggle-selector="#fetch-assets"
+			toggle-attribute="array">
+			<i class="height:16px" src="./assets/svg/photo-video.svg"></i>
+		</div>
+		<div
+			class="builder-tab-round"
+			selected-value="active"
+			selected-selector="#files"
+			selected-group="left-panels"
+			toggle="files"
+			toggle-selector=".fetch-files"
+			toggle-attribute="array">
+			<i class="height:16px" src="./assets/svg/folder.svg"></i>
+		</div>
+		<div
+			class="builder-tab-round"
+			selected-value="active"
+			selected-selector="#uploader"
+			selected-group="left-panels">
+			<i class="height:16px" src="./assets/svg/cloud-upload-alt.svg"></i>
+		</div>
+		<div
+			class="builder-tab-round"
+			selected-value="active"
+			selected-selector="#blocks"
+			selected-group="left-panels"
+			selected>
+			<i class="height:16px" src="./assets/svg/th-large.svg"></i>
+		</div>
+	</div>
 
-    <div class="overflow:auto height:90vh">
-        <!-- Blocks -->
-        <div
-            id="blocks"
-            class="left-panel display:none position:relative active">
-            <div
-                class="display:flex justify-content:center position:relative margin-bottom:30px">
-                <div
-                    class="card background:gainsboro width:50% text-align:center padding:5px"
-                    selected-value="active"
-                    selected-selector="#elements"
-                    selected-group="components"
-                    selected>
-                    Elements
-                </div>
-                <div
-                    class="card background:gainsboro width:50% text-align:center padding:5px"
-                    selected-value="active"
-                    selected-selector="#components"
-                    selected-group="components"
-                    selected>
-                    Components
-                </div>
-                <button
-                    class="position:absolute top:13px padding:5px background:gainsboro color:#505050 grow-hover border-radius:50%">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./marketplace/list.html"
-                        modal-width="840px">
-                        <i class="height:16px" src="./assets/svg/plus.svg"></i>
-                    </a>
-                </button>
-            </div>
+	<div class="overflow:auto height:90vh">
+		<!-- Blocks -->
+		<div
+			id="blocks"
+			class="left-panel display:none position:relative active">
+			<div
+				class="display:flex justify-content:center position:relative margin-bottom:30px">
+				<div
+					class="card background:gainsboro width:50% text-align:center padding:5px"
+					selected-value="active"
+					selected-selector="#elements"
+					selected-group="components"
+					selected>
+					Elements
+				</div>
+				<div
+					class="card background:gainsboro width:50% text-align:center padding:5px"
+					selected-value="active"
+					selected-selector="#components"
+					selected-group="components"
+					selected>
+					Components
+				</div>
+				<button
+					class="position:absolute top:13px padding:5px background:gainsboro color:#505050 grow-hover border-radius:50%">
+					<a
+						actions="state, openModal"
+						modal-src="./marketplace/list.html"
+						modal-width="840px">
+						<i class="height:16px" src="./assets/svg/plus.svg"></i>
+					</a>
+				</button>
+			</div>
 
-            <!-- Block Categories -->
-            <!--<div filter-parent="[array]" filter-key="type" filter-value="611829a9c0e9580010ea589d"></div>-->
-            <div
-                filter-next
-                filter-key="tags"
-                filter-value="6200378ea8b6b4001ae57821"
-                filter-operator="$ne"></div>
-            <div
-                id="elements"
-                class="components display:none active"
-                array="tags"
-                filter-key="module_id"
-                filter-value="5ff747727005da1c27274194"
-                filter-sort-key="position"
-                filter-sort-direction="asc"
-                render-selector=":last-child">
-                <!-- Block Categories Template -->
-                <div
-                    template
-                    render="object"
-                    render-as="tag"
-                    object="{{tag._id}}">
-                    <div
-                        class="padding:5px background:gainsboro"
-                        show=".category{{tag._id}}"
-                        hide=".category{{tag._id}}">
-                        <span class="category{{tag._id}}" hidden
-                            ><i
-                                class="height:16px"
-                                src="./assets/svg/plus.svg"></i
-                        ></span>
-                        <span class="category{{tag._id}}"
-                            ><i
-                                class="height:16px"
-                                src="./assets/svg/minus.svg"></i
-                        ></span>
-                        <span>{{tag.name}}</span>
-                    </div>
-                    <!-- Blocks  -->
-                    <div
-                        class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px"
-                        array="blocks"
-                        filter-key="category"
-                        filter-value="{{tag._id}}"
-                        filter-sort-key="position"
-                        filter-sort-direction="asc"
-                        render-selector=":last-child">
-                        <!-- Blocks Template -->
-                        <div
-                            template
-                            class="card position:relative flex-grow:1 width:70px height:75px margin:5px padding:5px"
-                            hover="display:block!important"
-                            hover-selector="#editblock{{object._id}}"
-                            object="{{object._id}}">
-                            <div
-                                id="editblock{{object._id}}"
-                                class="position:absolute top:8px right:8px font-size:11px display:none">
-                                <a
-                                    actions="state, openModal"
-                                    modal-src="./blocks/form.html"
-                                    state-array="{{object.array}}"
-                                    state-object="{{object._id}}"
-                                    state_to="form-fields"
-                                    modal-width="320px">
-                                    <i src="./assets/svg/pencil-alt.svg"></i>
-                                </a>
-                            </div>
-                            <div
-                                cloneable="true"
-                                class="height:65px padding:5px">
-                                <cloneable-html>{{object.html}}</cloneable-html>
-                                <i>{{object.icon}}</i>
-                                <p class="font-size:11px">{{object.name}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<!-- Block Categories -->
+			<!--<div filter-parent="[array]" filter-query-key="type" filter-query-value="611829a9c0e9580010ea589d"></div>-->
+			<div
+				filter-next
+				filter-query-key="tags.$ne"
+				filter-query-value="6200378ea8b6b4001ae57821"></div>
+			<div
+				id="elements"
+				class="components display:none active"
+				array="tags"
+				filter-query-key="module_id"
+				filter-query-value="5ff747727005da1c27274194"
+				filter-sort-key="position"
+				filter-sort-direction="asc"
+				render-selector=":last-child">
+				<!-- Block Categories Template -->
+				<div
+					template
+					render="object"
+					render-as="tag"
+					object="{{tag._id}}">
+					<div
+						class="padding:5px background:gainsboro"
+						show=".category{{tag._id}}"
+						hide=".category{{tag._id}}">
+						<span class="category{{tag._id}}" hidden
+							><i
+								class="height:16px"
+								src="./assets/svg/plus.svg"></i
+						></span>
+						<span class="category{{tag._id}}"
+							><i
+								class="height:16px"
+								src="./assets/svg/minus.svg"></i
+						></span>
+						<span>{{tag.name}}</span>
+					</div>
+					<!-- Blocks  -->
+					<div
+						class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px"
+						array="blocks"
+						filter-query-key="category"
+						filter-query-value="{{tag._id}}"
+						filter-sort-key="position"
+						filter-sort-direction="asc"
+						render-selector=":last-child">
+						<!-- Blocks Template -->
+						<div
+							template
+							class="card position:relative flex-grow:1 width:70px height:75px margin:5px padding:5px"
+							hover="display:block!important"
+							hover-selector="#editblock{{object._id}}"
+							object="{{object._id}}">
+							<div
+								id="editblock{{object._id}}"
+								class="position:absolute top:8px right:8px font-size:11px display:none">
+								<a
+									actions="state, openModal"
+									modal-src="./blocks/form.html"
+									state-array="{{object.array}}"
+									state-object="{{object._id}}"
+									state_to="form-fields"
+									modal-width="320px">
+									<i src="./assets/svg/pencil-alt.svg"></i>
+								</a>
+							</div>
+							<div
+								cloneable="true"
+								class="height:65px padding:5px">
+								<cloneable-html>{{object.html}}</cloneable-html>
+								<i>{{object.icon}}</i>
+								<p class="font-size:11px">{{object.name}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <!-- Component Categories -->
-            <div
-                filter-next
-                filter-key="tags"
-                filter-value="6200378ea8b6b4001ae57821"></div>
-            <div
-                id="components"
-                class="components display:none"
-                array="tags"
-                filter-key="module_id"
-                filter-value="5ff747727005da1c27274194"
-                filter-sort-key="position"
-                filter-sort-direction="asc"
-                render-selector=":lastchild">
-                <!-- Components Categories Template -->
-                <div template render-as="tag" object="{{tag._id}}">
-                    <div
-                        class="padding:5px background:gainsboro"
-                        show=".category{{tag._id}}"
-                        hide=".category{{tag._id}}">
-                        <span class="category{{tag._id}}" hidden
-                            ><i
-                                class="height:16px"
-                                src="./assets/svg/plus.svg"></i
-                        ></span>
-                        <span class="category{{tag._id}}"
-                            ><i
-                                class="height:16px"
-                                src="./assets/svg/minus.svg"></i
-                        ></span>
-                        <span>{{tag.name}}</span>
-                    </div>
-                    <!-- Components -->
-                    <div
-                        class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px"
-                        array="blocks"
-                        filter-key="category"
-                        filter-value="{{tag._id}}"
-                        filter-sort-key="position"
-                        filter-sort-direction="asc"
-                        render-selector=":last-child">
-                        <!-- Components Template -->
-                        <div
-                            template
-                            class="card position:relative flex-grow:1 width:70px height:125px margin:5px padding:5px"
-                            hover="display:block!important"
-                            hover-selector="#editcomponents{{object._id}}">
-                            <div
-                                id="editcomponents{{object._id}}"
-                                class="position:absolute top:8px right:8px font-size:11px display:none">
-                                <a
-                                    actions="state, openModal"
-                                    modal-src="./blocks/form.html"
-                                    state-array="{{object.array}}"
-                                    state-object="{{object._id}}"
-                                    state_to="form-fields"
-                                    modal-width="320px">
-                                    <i src="./assets/svg/pencil-alt.svg"></i>
-                                </a>
-                            </div>
-                            <div
-                                cloneable="true"
-                                cloneable-html="{{object.html}}"
-                                class="height:115px padding:5px">
-                                <i>{{object.icon}}</i>
-                                <p class="font-size:11px">{{object.name}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+			<!-- Component Categories -->
+			<div
+				filter-next
+				filter-query-key="tags"
+				filter-query-value="6200378ea8b6b4001ae57821"></div>
+			<div
+				id="components"
+				class="components display:none"
+				array="tags"
+				filter-query-key="module_id"
+				filter-query-value="5ff747727005da1c27274194"
+				filter-sort-key="position"
+				filter-sort-direction="asc"
+				render-selector=":lastchild">
+				<!-- Components Categories Template -->
+				<div template render-as="tag" object="{{tag._id}}">
+					<div
+						class="padding:5px background:gainsboro"
+						show=".category{{tag._id}}"
+						hide=".category{{tag._id}}">
+						<span class="category{{tag._id}}" hidden
+							><i
+								class="height:16px"
+								src="./assets/svg/plus.svg"></i
+						></span>
+						<span class="category{{tag._id}}"
+							><i
+								class="height:16px"
+								src="./assets/svg/minus.svg"></i
+						></span>
+						<span>{{tag.name}}</span>
+					</div>
+					<!-- Components -->
+					<div
+						class="category{{tag._id}} display:flex flex-wrap:wrap justify-content:center text-align:center padding-bottom:20px"
+						array="blocks"
+						filter-query-key="category"
+						filter-query-value="{{tag._id}}"
+						filter-sort-key="position"
+						filter-sort-direction="asc"
+						render-selector=":last-child">
+						<!-- Components Template -->
+						<div
+							template
+							class="card position:relative flex-grow:1 width:70px height:125px margin:5px padding:5px"
+							hover="display:block!important"
+							hover-selector="#editcomponents{{object._id}}">
+							<div
+								id="editcomponents{{object._id}}"
+								class="position:absolute top:8px right:8px font-size:11px display:none">
+								<a
+									actions="state, openModal"
+									modal-src="./blocks/form.html"
+									state-array="{{object.array}}"
+									state-object="{{object._id}}"
+									state_to="form-fields"
+									modal-width="320px">
+									<i src="./assets/svg/pencil-alt.svg"></i>
+								</a>
+							</div>
+							<div
+								cloneable="true"
+								cloneable-html="{{object.html}}"
+								class="height:115px padding:5px">
+								<i>{{object.icon}}</i>
+								<p class="font-size:11px">{{object.name}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <!-- Vdom -->
-        <div
-            id="vdom"
-            vdom-selector=""
-            dnd-group-key="vdom"
-            class="left-panel display:none">
-            vdom
-        </div>
+		<!-- Vdom -->
+		<div
+			id="vdom"
+			vdom-selector=""
+			dnd-group-key="vdom"
+			class="left-panel display:none">
+			vdom
+		</div>
 
-        <!-- uploader -->
-        <div id="uploader" class="left-panel display:none">
-            <form>
-                <input
-                    type="file"
-                    directory
-                    array="files"
-                    render-closest="#uploader, [template]" />
+		<!-- uploader -->
+		<div id="uploader" class="left-panel display:none">
+			<form>
+				<input
+					type="file"
+					directory
+					array="files"
+					render-closest="#uploader, [template]" />
 
-                <button actions="upload">upload</button>
-            </form>
+				<button actions="upload">upload</button>
+			</form>
 
-            <div template>
-                <input file="name" value="{{name}}" />
-                <input file="directory" value="{{directory}}" />
-                <input file="content-type" value="{{content-type}}" />
+			<div template>
+				<input file="name" value="{{name}}" />
+				<input file="directory" value="{{directory}}" />
+				<input file="content-type" value="{{content-type}}" />
 
-                <textarea file="src" value-type="string">{{src}}</textarea>
-            </div>
-        </div>
+				<textarea file="src" value-type="string">{{src}}</textarea>
+			</div>
+		</div>
 
-        <!-- Files -->
-        <div id="files" class="left-panel display:none">
-            <!-- Search Files -->
-            <form class="padding:0px_5px_20px_5px">
-                <input type="text" class="floating-label" state_to="results" />
-                <span
-                    class="position:relative bottom:28px right:14px float:right font-size:18px">
-                    <a
-                        actions="state, openModal"
-                        state_to="render"
-                        array="website-pages"
-                        object=""
-                        state-key="src"
-                        modal-width="900px"
-                        modal-color="#229954">
-                        <i src="./assets/svg/search.svg"></i>
-                    </a>
-                </span>
-            </form>
-            <!-- File Tree -->
-            <div class="padding:5px">
-                <span class=""
-                    ><i
-                        class="fa fa-caret-down"
-                        toggle="fa-caret-right, fa-caret-down"></i
-                ></span>
-                <span
-                    class="margin-left:5px"
-                    array="websites"
-                    object=""
-                    key="name"
-                    >Project name</span
-                >
-                <div
-                    id="fetch-files"
-                    class="fetch-files margin-left:10px"
-                    sortable
-                    array
-                    object
-                    filter-key="directory"
-                    filter-value="./"
-                    filter-operator="$eq"
-                    filter-sort-key="name"
-                    filter-sort-direction="asc"
-                    render-selector=":lastchild">
-                    <div
-                        filter-parent
-                        filter-key="content-type"
-                        filter-value="text/directory"></div>
-                    <!--Folder Template -->
-                    <div
-                        class="padding:5px"
-                        template
-                        render-as="$auto"
-                        object="{{$auto._id}}">
-                        <span
-                            class=""
-                            show="#directory{{$auto._id}}"
-                            hide="#directory{{$auto._id}}"
-                            toggle="fa-caret-down, fa-caret-right"
-                            toggle-selector="#icon{{$auto._id}}">
-                            <i
-                                id="icon{{$auto._id}}"
-                                class="fa fa-caret-right"></i>
-                        </span>
-                        <span
-                            class="margin-left:5px"
-                            array="files"
-                            object="{{$auto._id}}"
-                            key="name"></span>
+		<!-- Files -->
+		<div id="files" class="left-panel display:none">
+			<!-- Search Files -->
+			<form class="padding:0px_5px_20px_5px">
+				<input type="text" class="floating-label" state_to="results" />
+				<span
+					class="position:relative bottom:28px right:14px float:right font-size:18px">
+					<a
+						actions="state, openModal"
+						state_to="render"
+						array="website-pages"
+						object=""
+						state-key="src"
+						modal-width="900px"
+						modal-color="#229954">
+						<i src="./assets/svg/search.svg"></i>
+					</a>
+				</span>
+			</form>
+			<!-- File Tree -->
+			<div class="padding:5px">
+				<span class=""
+					><i
+						class="fa fa-caret-down"
+						toggle="fa-caret-right, fa-caret-down"></i
+				></span>
+				<span
+					class="margin-left:5px"
+					array="websites"
+					object=""
+					key="name"
+					>Project name</span
+				>
+				<div
+					id="fetch-files"
+					class="fetch-files margin-left:10px"
+					sortable
+					array
+					object
+					filter-query-key="directory.$eq"
+					filter-query-value="./"
+					filter-sort-key="name"
+					filter-sort-direction="asc"
+					render-selector=":lastchild">
+					<div
+						filter-parent
+						filter-query-key="content-type"
+						filter-query-value="text/directory"></div>
+					<!--Folder Template -->
+					<div
+						class="padding:5px"
+						template
+						render-as="$auto"
+						object="{{$auto._id}}">
+						<span
+							class=""
+							show="#directory{{$auto._id}}"
+							hide="#directory{{$auto._id}}"
+							toggle="fa-caret-down, fa-caret-right"
+							toggle-selector="#icon{{$auto._id}}">
+							<i
+								id="icon{{$auto._id}}"
+								class="fa fa-caret-right"></i>
+						</span>
+						<span
+							class="margin-left:5px"
+							array="files"
+							object="{{$auto._id}}"
+							key="name"></span>
 
-                        <!-- fetches folder and file template. This loops until tree ends -->
-                        <div
-                            id="directory{{$auto._id}}"
-                            class="domEditor margin-left:10px"
-                            hidden
-                            array="files"
-                            object="611ab5d9251afa96bd20f6cc"
-                            key="src"
-                            filter-value="{{$auto.path}}"></div>
-                    </div>
-                </div>
-                <div
-                    class="fetch-files margin-left:10px"
-                    sortable
-                    array
-                    object
-                    filter-key="directory"
-                    filter-value="./"
-                    filter-operator="$eq"
-                    filter-sort-key="name">
-                    <div
-                        filter-parent
-                        filter-key="content-type"
-                        filter-value="text/directory"
-                        filter-operator="$ne"></div>
+						<!-- fetches folder and file template. This loops until tree ends -->
+						<div
+							id="directory{{$auto._id}}"
+							class="domEditor margin-left:10px"
+							hidden
+							array="files"
+							object="611ab5d9251afa96bd20f6cc"
+							key="src"
+							filter-query-value="{{$auto.path}}"></div>
+					</div>
+				</div>
+				<div
+					class="fetch-files margin-left:10px"
+					sortable
+					array
+					object
+					filter-query-key="directory"
+					filter-query-value="./"
+					filter-sort-key="name">
+					<div
+						filter-parent
+						filter-query-key="content-type.$ne"
+						filter-query-value="text/directory"></div>
 
-                    <!-- File Template -->
-                    <div
-                        class="padding:5px"
-                        template
-                        render="object"
-                        render-as="$auto"
-                        object="{{$auto._id}}">
-                        <span class="{{$auto.content-type}}"
-                            ><i src="./assets/svg/html5.svg"></i
-                        ></span>
-                        <span
-                            class="margin-left:5px"
-                            array="files"
-                            object="{{$auto._id}}"
-                            key="name"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
+					<!-- File Template -->
+					<div
+						class="padding:5px"
+						template
+						render="object"
+						render-as="$auto"
+						object="{{$auto._id}}">
+						<span class="{{$auto.content-type}}"
+							><i src="./assets/svg/html5.svg"></i
+						></span>
+						<span
+							class="margin-left:5px"
+							array="files"
+							object="{{$auto._id}}"
+							key="name"></span>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <!-- Assets -->
-        <div id="assets" class="left-panel display:none">
-            <!-- Search Assets-->
-            <form class="padding:0px_5px_20px_5px">
-                <input type="text" class="floating-label" state_to="results" />
-                <span
-                    class="position:relative bottom:28px right:14px float:right font-size:18px">
-                    <a
-                        actions="state, openModal"
-                        state_to="render"
-                        array="website-pages"
-                        object=""
-                        state-key="src"
-                        modal-width="900px"
-                        modal-color="#229954">
-                        <i src="./assets/svg/search.svg"></i>
-                    </a>
-                </span>
-            </form>
-            <!-- Assets -->
-            <div
-                id="fetch-assets"
-                class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px"
-                array
-                object
-                filter-key="content-type"
-                filter-value="image, video"
-                filter-sort-key="path"
-                filter-sort-direction="asc"
-                render-selector=":last-child">
-                <style>
-                    [image-type*="image"] {
-                        display: block !important;
-                    }
+		<!-- Assets -->
+		<div id="assets" class="left-panel display:none">
+			<!-- Search Assets-->
+			<form class="padding:0px_5px_20px_5px">
+				<input type="text" class="floating-label" state_to="results" />
+				<span
+					class="position:relative bottom:28px right:14px float:right font-size:18px">
+					<a
+						actions="state, openModal"
+						state_to="render"
+						array="website-pages"
+						object=""
+						state-key="src"
+						modal-width="900px"
+						modal-color="#229954">
+						<i src="./assets/svg/search.svg"></i>
+					</a>
+				</span>
+			</form>
+			<!-- Assets -->
+			<div
+				id="fetch-assets"
+				class="display:flex flex-wrap:wrap justify-content:center width:100% text-align:center padding-bottom:20px"
+				array
+				object
+				filter-query-key="content-type"
+				filter-query-value="image, video"
+				filter-sort-key="path"
+				filter-sort-direction="asc"
+				render-selector=":last-child">
+				<style>
+					[image-type*="image"] {
+						display: block !important;
+					}
 
-                    [video-type*="video"] {
-                        display: block !important;
-                    }
-                </style>
-                <!-- Asset Template -->
-                <div
-                    template
-                    render="object"
-                    class="card position:relative flex-grow:1 width:105px height:90px margin:5px padding:5px"
-                    hover="display:block!important"
-                    hover-selector="#editasstes{{object._id}}">
-                    <div
-                        id="editassets{{object._id}}"
-                        class="position:absolute top:8px right:8px font-size:11px display:none">
-                        <a
-                            actions="state, openModal"
-                            modal-src="https://server.cocreate.app/CoCreate-plugins/CoCreate-tui-image-editor/demo/index.html"
-                            state-array="files"
-                            state-object="{{object._id}}"
-                            state_to="form-fields"
-                            modal-width="900px">
-                            <i src="./assets/svg/pencil-alt.svg"></i>
-                        </a>
-                    </div>
-                    <a
-                        actions="attributes"
-                        attribute="src"
-                        value="{{object.path}}"
-                        attribute-selector="iframe;">
-                        <!-- image -->
-                        <div
-                            cloneable="true"
-                            cloneable-html="<img src='{{object.path}}'>"
-                            class="padding:5px display:none"
-                            image-type="{{object.content-type}}">
-                            <img
-                                width="auto"
-                                height="auto"
-                                array="files"
-                                object="{{object._id}}"
-                                key="path"
-                                class="max-height:65px max-width:100%" />
-                        </div>
-                        <!-- Video -->
-                        <div
-                            cloneable="true"
-                            cloneable-html="<video><source src='{{object.path}}'></video>"
-                            class="padding:5px display:none"
-                            video-type="{{object.content-type}}">
-                            <video
-                                width="auto"
-                                height="auto"
-                                class="max-height:65px max-width:100%">
-                                <source
-                                    array="files"
-                                    object="{{object._id}}"
-                                    key="path"
-                                    src="{{object.path}}"
-                                    type="{{object.content-type}}" />
-                            </video>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+					[video-type*="video"] {
+						display: block !important;
+					}
+				</style>
+				<!-- Asset Template -->
+				<div
+					template
+					render="object"
+					class="card position:relative flex-grow:1 width:105px height:90px margin:5px padding:5px"
+					hover="display:block!important"
+					hover-selector="#editasstes{{object._id}}">
+					<div
+						id="editassets{{object._id}}"
+						class="position:absolute top:8px right:8px font-size:11px display:none">
+						<a
+							actions="state, openModal"
+							modal-src="https://server.cocreate.app/CoCreate-plugins/CoCreate-tui-image-editor/demo/index.html"
+							state-array="files"
+							state-object="{{object._id}}"
+							state_to="form-fields"
+							modal-width="900px">
+							<i src="./assets/svg/pencil-alt.svg"></i>
+						</a>
+					</div>
+					<a
+						actions="attributes"
+						attribute="src"
+						value="{{object.path}}"
+						attribute-selector="iframe;">
+						<!-- image -->
+						<div
+							cloneable="true"
+							cloneable-html="<img src='{{object.path}}'>"
+							class="padding:5px display:none"
+							image-type="{{object.content-type}}">
+							<img
+								width="auto"
+								height="auto"
+								array="files"
+								object="{{object._id}}"
+								key="path"
+								class="max-height:65px max-width:100%" />
+						</div>
+						<!-- Video -->
+						<div
+							cloneable="true"
+							cloneable-html="<video><source src='{{object.path}}'></video>"
+							class="padding:5px display:none"
+							video-type="{{object.content-type}}">
+							<video
+								width="auto"
+								height="auto"
+								class="max-height:65px max-width:100%">
+								<source
+									array="files"
+									object="{{object._id}}"
+									key="path"
+									src="{{object.path}}"
+									type="{{object.content-type}}" />
+							</video>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

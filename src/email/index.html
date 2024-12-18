@@ -1,437 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon.ico" />
-        <title>Email | CoCreate</title>
-        <link
-            rel="stylesheet"
-            href="../index.css"
-            array="files"
-            object="637bc8fe91249e639db315d9"
-            key="src"
-            type="text/css" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon.ico" />
+		<title>Email | CoCreate</title>
+		<link
+			rel="stylesheet"
+			href="../index.css"
+			array="files"
+			object="637bc8fe91249e639db315d9"
+			key="src"
+			type="text/css" />
 
-        <link rel="manifest" href="./manifest.webmanifest" />
-    </head>
+		<link rel="manifest" href="./manifest.webmanifest" />
+	</head>
 
-    <style type="text/css">
-        .email-toolbar i {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
+	<style type="text/css">
+		.email-toolbar i {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
 
-        .hide-nav + .cocreate-sidenav,
-        .hide-nav + .sidenav-right {
-            margin-top: 0px;
-            max-height: -moz-available;
-            max-height: -webkit-fill-available;
-            max-height: fill-available;
-        }
+		.hide-nav + .cocreate-sidenav,
+		.hide-nav + .sidenav-right {
+			margin-top: 0px;
+			max-height: -moz-available;
+			max-height: -webkit-fill-available;
+			max-height: fill-available;
+		}
 
-        .avatar-selected {
-            background-color: #43a047 !important;
-            overflow: hidden;
-            border-radius: 50px;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+		.avatar-selected {
+			background-color: #43a047 !important;
+			overflow: hidden;
+			border-radius: 50px;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
-        .avatar-selected i {
-            color: white;
-            font-size: 24px;
-            transition: 0.3s;
-            transition-delay: 0s;
-        }
-    </style>
+		.avatar-selected i {
+			color: white;
+			font-size: 24px;
+			transition: 0.3s;
+			transition-delay: 0s;
+		}
+	</style>
 
-    <body>
-        <!-- Modal Viewport -->
-        <div id="modal-viewport" hidden></div>
+	<body>
+		<!-- Modal Viewport -->
+		<div id="modal-viewport" hidden></div>
 
-        <!-- Navbar -->
-        <nav
-            class="nav display:flex align-items:center background:whitesmoke"
-            content_id="content"
-            scroll="sticky-nav, hide-nav"
-            scroll-up="5"
-            scroll-down="5">
-            <!-- Horizontal Scroll Nav/Tabs -->
-            <ul
-                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-                <!-- Modal Controls -->
-                <li class="margin-right:15px">
-                    <a actions="closeModal"
-                        ><i class="height:18px" src="./assets/svg/times.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="minMaxModal">
-                        <i
-                            toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
-                            toggle-attribute="src"
-                            class="height:18px"
-                            src="./assets/svg/window-maximize.svg"></i>
-                    </a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="parkModal"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/window-minimize.svg"></i
-                    ></a>
-                </li>
+		<!-- Navbar -->
+		<nav
+			class="nav display:flex align-items:center background:whitesmoke"
+			content_id="content"
+			scroll="sticky-nav, hide-nav"
+			scroll-up="5"
+			scroll-down="5">
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul
+				class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				<!-- Modal Controls -->
+				<li class="margin-right:15px">
+					<a actions="closeModal"
+						><i class="height:18px" src="./assets/svg/times.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i
+							toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+							toggle-attribute="src"
+							class="height:18px"
+							src="./assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="parkModal"
+						><i
+							class="height:18px"
+							src="./assets/svg/window-minimize.svg"></i
+					></a>
+				</li>
 
-                <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i
+							class="height:18px"
+							src="./assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="./assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Module Form -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/form.html"
-                        modal-width="320px">
-                        <i class="height:18px" src="./assets/svg/cog.svg"></i>
-                        <div
-                            state_id="module-form"
-                            state-array="modules"
-                            state-object=""
-                            state_to="form-fields"></div>
-                        <div
-                            state_id="module_id"
-                            state-filter-value=""
-                            state_to="module_id"></div>
-                    </a>
-                </li>
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./modules/form.html"
+						modal-width="320px">
+						<i class="height:18px" src="./assets/svg/cog.svg"></i>
+						<div
+							state_id="module-form"
+							state-array="modules"
+							state-object=""
+							state_to="form-fields"></div>
+						<div
+							state_id="module_id"
+							state-filter-query-value=""
+							state_to="module_id"></div>
+					</a>
+				</li>
 
-                <!-- Render Code Editor -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./code-editor/index.html">
-                        <i class="height:18px" src="./assets/svg/code.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="code-editor"></div>
-                    </a>
-                </li>
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./code-editor/index.html">
+						<i class="height:18px" src="./assets/svg/code.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="code-editor"></div>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./builder/index.html">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/palette.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="builder"></div>
-                    </a>
-                </li>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./builder/index.html">
+						<i
+							class="height:18px"
+							src="./assets/svg/palette.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="builder"></div>
+					</a>
+				</li>
 
-                <!-- deleteDocument-->
-                <li class="margin-right:15px">
-                    <a
-                        actions="deleteDocument, closeModal"
-                        array=""
-                        object=""
-                        state_id="form-fields">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/trash-alt.svg"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+				<!-- deleteDocument-->
+				<li class="margin-right:15px">
+					<a
+						actions="deleteDocument, closeModal"
+						array=""
+						object=""
+						state_id="form-fields">
+						<i
+							class="height:18px"
+							src="./assets/svg/trash-alt.svg"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
 
-        <sidenav
-            id="menuL"
-            class="position:absolute top:0px left:0px overflow:hidden background:white height:100vh width:275px width:275px:hover width:50px@sm width:0px@xs"
-            resizable
-            resize-selector="[content_id='content']"
-            resize-property="margin-left"
-            resize-value="width">
-            <ul class="border-bottom:1px_solid_lightgray">
-                <li
-                    class="line-height:40px height:40px overflow:hidden font-size:20px">
-                    <a actions="state, openModal" modal-src="compose.html">
-                        <span
-                            class="display:inline-block width:50px text-align:center"
-                            ><i
-                                class="height:16px"
-                                src="./assets/svg/plus.svg"></i
-                        ></span>
-                        <span>Compose</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="overflow:auto vh-120 bottom:10 color:gray">
-                <li class="line-height:40px height:40px overflow:hidden">
-                    <a actions="state, openModal" modal-src="settings.html">
-                        <span
-                            class="display:inline-block width:50px text-align:center"
-                            ><i class="fas fa-inbox"></i
-                        ></span>
-                        <span>Inbox</span>
-                        <span class="cocreate-badge badge-danger line-height:1"
-                            >4</span
-                        >
-                    </a>
-                </li>
-                <li class="line-height:40px height:40px overflow:hidden">
-                    <a href="signin.html">
-                        <span
-                            class="display:inline-block width:50px text-align:center"
-                            ><i class="fas fa-paper-plane"></i
-                        ></span>
-                        <span>Sent</span>
-                    </a>
-                </li>
-            </ul>
-            <div resize="right"></div>
-        </sidenav>
+		<sidenav
+			id="menuL"
+			class="position:absolute top:0px left:0px overflow:hidden background:white height:100vh width:275px width:275px:hover width:50px@sm width:0px@xs"
+			resizable
+			resize-selector="[content_id='content']"
+			resize-property="margin-left"
+			resize-value="width">
+			<ul class="border-bottom:1px_solid_lightgray">
+				<li
+					class="line-height:40px height:40px overflow:hidden font-size:20px">
+					<a actions="state, openModal" modal-src="compose.html">
+						<span
+							class="display:inline-block width:50px text-align:center"
+							><i
+								class="height:16px"
+								src="./assets/svg/plus.svg"></i
+						></span>
+						<span>Compose</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="overflow:auto vh-120 bottom:10 color:gray">
+				<li class="line-height:40px height:40px overflow:hidden">
+					<a actions="state, openModal" modal-src="settings.html">
+						<span
+							class="display:inline-block width:50px text-align:center"
+							><i class="fas fa-inbox"></i
+						></span>
+						<span>Inbox</span>
+						<span class="cocreate-badge badge-danger line-height:1"
+							>4</span
+						>
+					</a>
+				</li>
+				<li class="line-height:40px height:40px overflow:hidden">
+					<a href="signin.html">
+						<span
+							class="display:inline-block width:50px text-align:center"
+							><i class="fas fa-paper-plane"></i
+						></span>
+						<span>Sent</span>
+					</a>
+				</li>
+			</ul>
+			<div resize="right"></div>
+		</sidenav>
 
-        <!-- container -->
-        <main
-            class="border-left:1px_solid_lightgray border-right:1px_solid_lightgray color-dark-gray height:100vh"
-            content_id="content">
-            <div
-                class="display:flex align-items:center height:70px font-size:20px border-bottom:1px_solid_lightgray">
-                <label class="checkbox padding-right:10px margin-left:20px">
-                    <input type="checkbox" /><span class="mark"></span>
-                </label>
-                <div
-                    class="display:flex overflow:auto align-items:center direction:ltr">
-                    <a class="padding:0px_10px"
-                        ><i class="fas fa-download"></i
-                    ></a>
-                    <a class="padding:0px_10px"
-                        ><i class="fas fa-info-circle"></i
-                    ></a>
-                    <a class="padding:0px_10px"
-                        ><i class="height:18px" src="./assets/svg/trash.svg"></i
-                    ></a>
-                    <span class="padding:0px_10px"></span>
-                    <a class="padding:0px_10px"
-                        ><i class="fas fa-envelope-open-text"></i
-                    ></a>
-                    <a class="padding:0px_10px"><i class="fas fa-clock"></i></a>
-                    <span class="padding:0px_10px"></span>
-                    <a class="padding:0px_10px"
-                        ><i class="fas fa-arrow-alt-circle-right"></i
-                    ></a>
-                    <a class="padding:0px_10px"
-                        ><i class="fas fa-bookmark"></i
-                    ></a>
-                </div>
-            </div>
+		<!-- container -->
+		<main
+			class="border-left:1px_solid_lightgray border-right:1px_solid_lightgray color-dark-gray height:100vh"
+			content_id="content">
+			<div
+				class="display:flex align-items:center height:70px font-size:20px border-bottom:1px_solid_lightgray">
+				<label class="checkbox padding-right:10px margin-left:20px">
+					<input type="checkbox" /><span class="mark"></span>
+				</label>
+				<div
+					class="display:flex overflow:auto align-items:center direction:ltr">
+					<a class="padding:0px_10px"
+						><i class="fas fa-download"></i
+					></a>
+					<a class="padding:0px_10px"
+						><i class="fas fa-info-circle"></i
+					></a>
+					<a class="padding:0px_10px"
+						><i class="height:18px" src="./assets/svg/trash.svg"></i
+					></a>
+					<span class="padding:0px_10px"></span>
+					<a class="padding:0px_10px"
+						><i class="fas fa-envelope-open-text"></i
+					></a>
+					<a class="padding:0px_10px"><i class="fas fa-clock"></i></a>
+					<span class="padding:0px_10px"></span>
+					<a class="padding:0px_10px"
+						><i class="fas fa-arrow-alt-circle-right"></i
+					></a>
+					<a class="padding:0px_10px"
+						><i class="fas fa-bookmark"></i
+					></a>
+				</div>
+			</div>
 
-            <div
-                class="menu-content overflow:auto height:100vh min-width:300px">
-                <div
-                    class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
-                    <!-- avatar with flip container for selecting avatar -->
-                    <div class="avatar-wrapper">
-                        <div class="flip-container">
-                            <div class="flip-item avatar-selected">
-                                <i class="fas fa-check"></i>
-                            </div>
-                            <a
-                                class="flip-item avatar round"
-                                actions="state, openModal"
-                                modal-src="render.html"
-                                state-array="modules">
-                                <span
-                                    array="users"
-                                    object="$user_id"
-                                    key="name"
-                                    class="first-letter avatar-name"
-                                    >B</span
-                                >
-                                <span
-                                    array="users"
-                                    object="$user_id"
-                                    key="profile_image"
-                                    class="avatar-image">
-                                    <img
-                                        src="./_static/Velazquez.jpg"
-                                        onerror="this.style.display='none'" />
-                                </span>
-                            </a>
-                        </div>
-                    </div>
+			<div
+				class="menu-content overflow:auto height:100vh min-width:300px">
+				<div
+					class="display:flex align-items:flex-start cursor:pointer padding:10px border-bottom:1px_solid_lightgray">
+					<!-- avatar with flip container for selecting avatar -->
+					<div class="avatar-wrapper">
+						<div class="flip-container">
+							<div class="flip-item avatar-selected">
+								<i class="fas fa-check"></i>
+							</div>
+							<a
+								class="flip-item avatar round"
+								actions="state, openModal"
+								modal-src="render.html"
+								state-array="modules">
+								<span
+									array="users"
+									object="$user_id"
+									key="name"
+									class="first-letter avatar-name"
+									>B</span
+								>
+								<span
+									array="users"
+									object="$user_id"
+									key="profile_image"
+									class="avatar-image">
+									<img
+										src="./_static/Velazquez.jpg"
+										onerror="this.style.display='none'" />
+								</span>
+							</a>
+						</div>
+					</div>
 
-                    <div class="flex-grow:1 padding-left:10px">
-                        <div class="display:flex justify-content:space-between">
-                            <div class="text-overflow:ellipsis font-weight:600">
-                                Brenda Elisa G. via Freelancer
-                            </div>
-                            <p
-                                class="width:70px margin:0px font-size:12px text-align:right">
-                                09:24 AM
-                            </p>
-                        </div>
-                        <div class="email-subject text-overflow:ellipsis">
-                            Freelancer test Test Test Test Test Test Test
-                        </div>
-                        <span class="cocreate-badge badge-danger">4</span>
-                    </div>
-                </div>
-            </div>
-        </main>
+					<div class="flex-grow:1 padding-left:10px">
+						<div class="display:flex justify-content:space-between">
+							<div class="text-overflow:ellipsis font-weight:600">
+								Brenda Elisa G. via Freelancer
+							</div>
+							<p
+								class="width:70px margin:0px font-size:12px text-align:right">
+								09:24 AM
+							</p>
+						</div>
+						<div class="email-subject text-overflow:ellipsis">
+							Freelancer test Test Test Test Test Test Test
+						</div>
+						<span class="cocreate-badge badge-danger">4</span>
+					</div>
+				</div>
+			</div>
+		</main>
 
-        <sidenav
-            id="menuR"
-            class="position:absolute top:0px right:0px overflow:hidden background:white height:100vh width:375px width:375px:hover width:0px@xs"
-            resizable
-            resize-selector="[content_id='content']"
-            resize-property="margin-right"
-            resize-value="width">
-            <div class="min-width:300px">
-                <div
-                    class="display:flex align-items:center height:70px justify-content:flex-end padding-15_0px font-size:14px border-bottom:1px_solid_lightgray">
-                    <a class="padding:0px_10px"
-                        ><i class="fas fa-arrows-alt-v"></i
-                    ></a>
-                    <a class="padding:0px_10px"
-                        ><i class="height:18px" src="./assets/svg/print.svg"></i
-                    ></a>
-                    <a class="padding:0px_10px"
-                        ><i
-                            class="height:16px"
-                            src="./assets/svg/sign-out-alt.svg"></i
-                    ></a>
+		<sidenav
+			id="menuR"
+			class="position:absolute top:0px right:0px overflow:hidden background:white height:100vh width:375px width:375px:hover width:0px@xs"
+			resizable
+			resize-selector="[content_id='content']"
+			resize-property="margin-right"
+			resize-value="width">
+			<div class="min-width:300px">
+				<div
+					class="display:flex align-items:center height:70px justify-content:flex-end padding-15_0px font-size:14px border-bottom:1px_solid_lightgray">
+					<a class="padding:0px_10px"
+						><i class="fas fa-arrows-alt-v"></i
+					></a>
+					<a class="padding:0px_10px"
+						><i class="height:18px" src="./assets/svg/print.svg"></i
+					></a>
+					<a class="padding:0px_10px"
+						><i
+							class="height:16px"
+							src="./assets/svg/sign-out-alt.svg"></i
+					></a>
 
-                    <div>1 of 189</div>
-                    <a class="padding:0px_10px"
-                        ><i class="fas fa-chevron-left"></i
-                    ></a>
-                    <a class="padding:0px_10px"
-                        ><i
-                            class="height:16px"
-                            src="./assets/svg/chevron-right.svg"></i
-                    ></a>
-                    <a class="padding:0px_10px"
-                        ><i class="height:18px" src="./assets/svg/cog.svg"></i
-                    ></a>
-                </div>
-                <div class="padding:0px_15px">
-                    <div
-                        class="display:flex align-items:center justify-content:space-between padding:15px_0px border-bottom:1px_solid_lightgray">
-                        <h2 class="margin:0px_0px">
-                            New messagees from Brenda Elisa G.
-                            <div
-                                class="cocreate-badge badge-danger font-size:12px">
-                                Inbox<i
-                                    class="fas fa-times padding-left:10px"></i>
-                            </div>
-                        </h2>
-                    </div>
-                    <div class="display:flex padding:15px_0px">
-                        <div
-                            localstorage-get="user_id"
-                            localstorage-key="userId"
-                            localstorage-selector=".avatar-wrapper"></div>
-                        <div class="avatar-wrapper">
-                            <a
-                                class="avatar round"
-                                actions="state, openModal"
-                                modal-src="render.html"
-                                state-array="modules"
-                                state-object="5dd010bccbc25f0cdb1a4d9f"
-                                state_to="render"
-                                modal-width="300px"
-                                modal-height="375px"
-                                modal-color="#229954">
-                                <span
-                                    array="users"
-                                    object="$user_id"
-                                    key="name"
-                                    class="first-letter avatar-name"
-                                    >B</span
-                                >
-                                <span
-                                    array="users"
-                                    object="$user_id"
-                                    key="profile_image"
-                                    class="avatar-image">
-                                    <img
-                                        src="./_static/Velazquez.jpg"
-                                        onerror="this.style.display='none'" />
-                                </span>
-                            </a>
-                        </div>
-                        <div
-                            class="display:flex justify-content:space-between flex-grow:1 padding-left:10px">
-                            <div class="">
-                                <div class="font-bold">
-                                    Brenda Elisa G. via Freelancer
-                                    <span class="font-noBold font-size:12px"
-                                        >messages@xxx.freelancer.com</span
-                                    >
-                                </div>
-                                <div class="font-size:12px">
-                                    to Frank 9:11 AM (3 hours age)
-                                </div>
-                            </div>
-                            <div
-                                class="font-size:14px display:flex flex-wrap:wrap-wrap-reverse height:50px">
-                                <a
-                                    ><i class="far fa-star padding:0px_10px"></i
-                                ></a>
-                                <a
-                                    ><i
-                                        class="fas fa-reply padding:0px_10px"></i
-                                ></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="padding-50px-left">Main Information</div>
-                </div>
-            </div>
+					<div>1 of 189</div>
+					<a class="padding:0px_10px"
+						><i class="fas fa-chevron-left"></i
+					></a>
+					<a class="padding:0px_10px"
+						><i
+							class="height:16px"
+							src="./assets/svg/chevron-right.svg"></i
+					></a>
+					<a class="padding:0px_10px"
+						><i class="height:18px" src="./assets/svg/cog.svg"></i
+					></a>
+				</div>
+				<div class="padding:0px_15px">
+					<div
+						class="display:flex align-items:center justify-content:space-between padding:15px_0px border-bottom:1px_solid_lightgray">
+						<h2 class="margin:0px_0px">
+							New messagees from Brenda Elisa G.
+							<div
+								class="cocreate-badge badge-danger font-size:12px">
+								Inbox<i
+									class="fas fa-times padding-left:10px"></i>
+							</div>
+						</h2>
+					</div>
+					<div class="display:flex padding:15px_0px">
+						<div
+							localstorage-get="user_id"
+							localstorage-key="userId"
+							localstorage-selector=".avatar-wrapper"></div>
+						<div class="avatar-wrapper">
+							<a
+								class="avatar round"
+								actions="state, openModal"
+								modal-src="render.html"
+								state-array="modules"
+								state-object="5dd010bccbc25f0cdb1a4d9f"
+								state_to="render"
+								modal-width="300px"
+								modal-height="375px"
+								modal-color="#229954">
+								<span
+									array="users"
+									object="$user_id"
+									key="name"
+									class="first-letter avatar-name"
+									>B</span
+								>
+								<span
+									array="users"
+									object="$user_id"
+									key="profile_image"
+									class="avatar-image">
+									<img
+										src="./_static/Velazquez.jpg"
+										onerror="this.style.display='none'" />
+								</span>
+							</a>
+						</div>
+						<div
+							class="display:flex justify-content:space-between flex-grow:1 padding-left:10px">
+							<div class="">
+								<div class="font-bold">
+									Brenda Elisa G. via Freelancer
+									<span class="font-noBold font-size:12px"
+										>messages@xxx.freelancer.com</span
+									>
+								</div>
+								<div class="font-size:12px">
+									to Frank 9:11 AM (3 hours age)
+								</div>
+							</div>
+							<div
+								class="font-size:14px display:flex flex-wrap:wrap-wrap-reverse height:50px">
+								<a
+									><i class="far fa-star padding:0px_10px"></i
+								></a>
+								<a
+									><i
+										class="fas fa-reply padding:0px_10px"></i
+								></a>
+							</div>
+						</div>
+					</div>
+					<div class="padding-50px-left">Main Information</div>
+				</div>
+			</div>
 
-            <div resize="left"></div>
-        </sidenav>
+			<div resize="left"></div>
+		</sidenav>
 
-        <button
-            actions="save"
-            class="position:absolute bottom:15px right:15px background:#2196f3 grow-hover border-radius:50% z-index:10">
-            <i class="height:16px" src="./assets/svg/plus.svg"></i>
-        </button>
+		<button
+			actions="save"
+			class="position:absolute bottom:15px right:15px background:#2196f3 grow-hover border-radius:50% z-index:10">
+			<i class="height:16px" src="./assets/svg/plus.svg"></i>
+		</button>
 
-        <!-- Comming Soon-->
-        <div
-            class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
-            <h2>
-                Coming Soon <a actions="remove" remove-closest=".card"> X</a>
-            </h2>
-        </div>
+		<!-- Comming Soon-->
+		<div
+			class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
+			<h2>
+				Coming Soon <a actions="remove" remove-closest=".card"> X</a>
+			</h2>
+		</div>
 
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
-    </body>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
+	</body>
 </html>

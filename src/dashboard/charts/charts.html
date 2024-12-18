@@ -1,311 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon.ico" />
-        <title>chart | CoCreate</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon.ico" />
+		<title>chart | CoCreate</title>
 
-        <link
-            rel="stylesheet"
-            href="../index.css"
-            array="files"
-            object="637bc8fe91249e639db315d9"
-            key="src"
-            type="text/css" />
-        <link rel="manifest" href="./manifest.webmanifest" />
-    </head>
-    <style>
-        .progressbar {
-            flex-grow: 1;
-            height: 4px;
-            border: none;
-            position: relative;
-            background-color: rgb(194, 240, 253);
-            overflow: hidden;
-        }
+		<link
+			rel="stylesheet"
+			href="../index.css"
+			array="files"
+			object="637bc8fe91249e639db315d9"
+			key="src"
+			type="text/css" />
+		<link rel="manifest" href="./manifest.webmanifest" />
+	</head>
+	<style>
+		.progressbar {
+			flex-grow: 1;
+			height: 4px;
+			border: none;
+			position: relative;
+			background-color: rgb(194, 240, 253);
+			overflow: hidden;
+		}
 
-        .progressbar > div {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            bottom: 0;
-            transform-origin: left;
-            transition: transform 0.4s linear;
-            background-color: #61dafb;
-        }
+		.progressbar > div {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			bottom: 0;
+			transform-origin: left;
+			transition: transform 0.4s linear;
+			background-color: #61dafb;
+		}
 
-        .floating-label {
-            margin-top: 0px !important;
-            margin-bottom: 0px !important;
-        }
+		.floating-label {
+			margin-top: 0px !important;
+			margin-bottom: 0px !important;
+		}
 
-        .main-height {
-            height: calc(100vh - 30px);
-        }
+		.main-height {
+			height: calc(100vh - 30px);
+		}
 
-        .progressbar-text {
-            color: #121212;
-            font-weight: bolder;
-        }
-    </style>
+		.progressbar-text {
+			color: #121212;
+			font-weight: bolder;
+		}
+	</style>
 
-    <body>
-        <!-- Modal Viewport -->
-        <div id="modal-viewport" hidden></div>
+	<body>
+		<!-- Modal Viewport -->
+		<div id="modal-viewport" hidden></div>
 
-        <!-- Navbar -->
-        <nav
-            class="nav display:flex align-items:center background:whitesmoke"
-            content_id="content"
-            scroll="sticky-nav, hide-nav"
-            scroll-up="5"
-            scroll-down="5">
-            <!-- Horizontal Scroll Nav/Tabs -->
-            <ul
-                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-                <!-- Modal Controls -->
-                <li class="margin-right:15px">
-                    <a actions="closeModal"
-                        ><i class="height:18px" src="./assets/svg/times.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="minMaxModal">
-                        <i
-                            toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
-                            toggle-attribute="src"
-                            class="height:18px"
-                            src="./assets/svg/window-maximize.svg"></i>
-                    </a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="parkModal"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/window-minimize.svg"></i
-                    ></a>
-                </li>
+		<!-- Navbar -->
+		<nav
+			class="nav display:flex align-items:center background:whitesmoke"
+			content_id="content"
+			scroll="sticky-nav, hide-nav"
+			scroll-up="5"
+			scroll-down="5">
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul
+				class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				<!-- Modal Controls -->
+				<li class="margin-right:15px">
+					<a actions="closeModal"
+						><i class="height:18px" src="./assets/svg/times.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i
+							toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+							toggle-attribute="src"
+							class="height:18px"
+							src="./assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="parkModal"
+						><i
+							class="height:18px"
+							src="./assets/svg/window-minimize.svg"></i
+					></a>
+				</li>
 
-                <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i
+							class="height:18px"
+							src="./assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="./assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Module Form -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/form.html"
-                        modal-width="320px">
-                        <i class="height:18px" src="./assets/svg/cog.svg"></i>
-                        <div
-                            state_id="module-form"
-                            state-array="modules"
-                            state-object=""
-                            state_to="form-fields"></div>
-                        <div
-                            state_id="module_id"
-                            state-filter-value=""
-                            state_to="module_id"></div>
-                    </a>
-                </li>
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./modules/form.html"
+						modal-width="320px">
+						<i class="height:18px" src="./assets/svg/cog.svg"></i>
+						<div
+							state_id="module-form"
+							state-array="modules"
+							state-object=""
+							state_to="form-fields"></div>
+						<div
+							state_id="module_id"
+							state-filter-query-value=""
+							state_to="module_id"></div>
+					</a>
+				</li>
 
-                <!-- Render Code Editor -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./code-editor/index.html">
-                        <i class="height:18px" src="./assets/svg/code.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="code-editor"></div>
-                    </a>
-                </li>
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./code-editor/index.html">
+						<i class="height:18px" src="./assets/svg/code.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="code-editor"></div>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./builder/index.html">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/palette.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="builder"></div>
-                    </a>
-                </li>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./builder/index.html">
+						<i
+							class="height:18px"
+							src="./assets/svg/palette.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="builder"></div>
+					</a>
+				</li>
 
-                <!-- deleteDocument-->
-                <li class="margin-right:15px">
-                    <a
-                        actions="deleteDocument, closeModal"
-                        array=""
-                        object=""
-                        state_id="form-fields">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/trash-alt.svg"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+				<!-- deleteDocument-->
+				<li class="margin-right:15px">
+					<a
+						actions="deleteDocument, closeModal"
+						array=""
+						object=""
+						state_id="form-fields">
+						<i
+							class="height:18px"
+							src="./assets/svg/trash-alt.svg"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
 
-        <!-- Main Content -->
-        <main class="padding:10px" content_id="content">
-            <div
-                class="domEditor main-height"
-                key="cards1"
-                array="test"
-                state_id="me1234">
-                <div
-                    class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))"
-                    dnd-group-key="dashboard"
-                    array="module_activities"
-                    filter-limit="20"
-                    render-selector="[template]"
-                    droppable="true">
-                    <div
-                        template
-                        class="card resize padding:20px align-items:center grid-column-end:span_3 grid-row-end:span_2"
-                        eid="card">
-                        <canvas
-                            chart="chartjs"
-                            chart-type="bar"
-                            chart-options=""
-                            chart-labels="January, February, March, April, May, June, July"
-                            chart-title="Combine Charts">
-                            <div
-                                chart-dataset-type="line"
-                                chart-dataset-label="um Chart">
-                                <div
-                                    array="chart"
-                                    key="Jan"
-                                    chart-operator="sum">
-                                    <div
-                                        filter-key="Jan"
-                                        filter-value="0, 10"
-                                        filter-value-type="number"
-                                        filter-operator="$range"></div>
-                                </div>
-                                <div array="chart" key="Feb">
-                                    <div
-                                        filter-key="permission"
-                                        filter-value="read"
-                                        filter-operator="$nin"></div>
-                                    <div
-                                        filter-key="type"
-                                        filter-value="leader"
-                                        filter-operator="$in"></div>
-                                </div>
-                                <div array="chart" key="Mar">
-                                    <div
-                                        filter-key="Mar"
-                                        filter-value="-7"
-                                        filter-operator="$eq"
-                                        filter-value-type="number"></div>
-                                </div>
-                                <div array="chart" key="Apr"></div>
-                                <div array="chart" key="May"></div>
-                                <div array="chart" key="Jun"></div>
-                                <div array="chart" key="Jul"></div>
-                            </div>
-                            <div
-                                chart-dataset-label="Average Chart"
-                                chart-dataset-type="line">
-                                <div
-                                    array="chart"
-                                    key="Jan"
-                                    chart-operator="average"></div>
-                                <div
-                                    array="chart"
-                                    key="Feb"
-                                    chart-operator="average"></div>
-                                <div
-                                    array="chart"
-                                    key="Mar"
-                                    chart-operator="average"></div>
-                                <div
-                                    array="chart"
-                                    key="Apr"
-                                    chart-operator="average"></div>
-                                <div
-                                    array="chart"
-                                    key="May"
-                                    chart-operator="average"></div>
-                                <div
-                                    array="chart"
-                                    key="Jun"
-                                    chart-operator="average"></div>
-                                <div
-                                    array="chart"
-                                    key="Jul"
-                                    chart-operator="average"></div>
-                            </div>
+		<!-- Main Content -->
+		<main class="padding:10px" content_id="content">
+			<div
+				class="domEditor main-height"
+				key="cards1"
+				array="test"
+				state_id="me1234">
+				<div
+					class="display:grid grid-auto-rows:150px gap:10px grid-template-columns:repeat(auto-fill,minmax(150px,1fr))"
+					dnd-group-key="dashboard"
+					array="module_activities"
+					filter-limit="20"
+					render-selector="[template]"
+					droppable="true">
+					<div
+						template
+						class="card resize padding:20px align-items:center grid-column-end:span_3 grid-row-end:span_2"
+						eid="card">
+						<canvas
+							chart="chartjs"
+							chart-type="bar"
+							chart-options=""
+							chart-labels="January, February, March, April, May, June, July"
+							chart-title="Combine Charts">
+							<div
+								chart-dataset-type="line"
+								chart-dataset-label="um Chart">
+								<div
+									array="chart"
+									key="Jan"
+									chart-operator="sum">
+									<div
+										filter-query-key="Jan.$range"
+										filter-query-value="0, 10"
+										filter-value-type="number"></div>
+								</div>
+								<div array="chart" key="Feb">
+									<div
+										filter-query-key="permission.$nin"
+										filter-query-value="read"></div>
+									<div
+										filter-query-key="type.$in"
+										filter-query-value="leader"></div>
+								</div>
+								<div array="chart" key="Mar">
+									<div
+										filter-query-key="Mar.$eq"
+										filter-query-value="-7"
+										filter-value-type="number"></div>
+								</div>
+								<div array="chart" key="Apr"></div>
+								<div array="chart" key="May"></div>
+								<div array="chart" key="Jun"></div>
+								<div array="chart" key="Jul"></div>
+							</div>
+							<div
+								chart-dataset-label="Average Chart"
+								chart-dataset-type="line">
+								<div
+									array="chart"
+									key="Jan"
+									chart-operator="average"></div>
+								<div
+									array="chart"
+									key="Feb"
+									chart-operator="average"></div>
+								<div
+									array="chart"
+									key="Mar"
+									chart-operator="average"></div>
+								<div
+									array="chart"
+									key="Apr"
+									chart-operator="average"></div>
+								<div
+									array="chart"
+									key="May"
+									chart-operator="average"></div>
+								<div
+									array="chart"
+									key="Jun"
+									chart-operator="average"></div>
+								<div
+									array="chart"
+									key="Jul"
+									chart-operator="average"></div>
+							</div>
 
-                            <div
-                                chart-dataset-label="Data Count"
-                                chart-dataset-type="">
-                                <div
-                                    array="chart"
-                                    key="Jan"
-                                    chart-operator="count"></div>
-                                <div
-                                    array="chart"
-                                    key="Feb"
-                                    chart-operator="count"></div>
-                                <div
-                                    array="chart"
-                                    key="Mar"
-                                    chart-operator="count"></div>
-                                <div
-                                    array="chart"
-                                    key="Apr"
-                                    chart-operator="count"></div>
-                                <div
-                                    array="chart"
-                                    key="May"
-                                    chart-operator="count"></div>
-                                <div
-                                    array="chart"
-                                    key="Jun"
-                                    chart-operator="count"></div>
-                                <div
-                                    array="chart"
-                                    key="Jul"
-                                    chart-operator="count"></div>
-                            </div>
-                        </canvas>
-                        <div resize="left"></div>
-                        <div resize="right"></div>
-                        <div resize="top"></div>
-                        <div resize="bottom"></div>
-                    </div>
-                </div>
-                <!-- Sortable card -->
-            </div>
-        </main>
+							<div
+								chart-dataset-label="Data Count"
+								chart-dataset-type="">
+								<div
+									array="chart"
+									key="Jan"
+									chart-operator="count"></div>
+								<div
+									array="chart"
+									key="Feb"
+									chart-operator="count"></div>
+								<div
+									array="chart"
+									key="Mar"
+									chart-operator="count"></div>
+								<div
+									array="chart"
+									key="Apr"
+									chart-operator="count"></div>
+								<div
+									array="chart"
+									key="May"
+									chart-operator="count"></div>
+								<div
+									array="chart"
+									key="Jun"
+									chart-operator="count"></div>
+								<div
+									array="chart"
+									key="Jul"
+									chart-operator="count"></div>
+							</div>
+						</canvas>
+						<div resize="left"></div>
+						<div resize="right"></div>
+						<div resize="top"></div>
+						<div resize="bottom"></div>
+					</div>
+				</div>
+				<!-- Sortable card -->
+			</div>
+		</main>
 
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
-    </body>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
+	</body>
 </html>

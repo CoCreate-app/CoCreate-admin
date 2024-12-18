@@ -1,350 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Module Datatable | CoCreate</title>
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon.ico" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Module Datatable | CoCreate</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon.ico" />
 
-        <link
-            rel="stylesheet"
-            href="../index.css"
-            array="files"
-            object="637bc8fe91249e639db315d9"
-            key="src"
-            type="text/css" />
-        <link rel="manifest" href="./manifest.webmanifest" />
-    </head>
+		<link
+			rel="stylesheet"
+			href="../index.css"
+			array="files"
+			object="637bc8fe91249e639db315d9"
+			key="src"
+			type="text/css" />
+		<link rel="manifest" href="./manifest.webmanifest" />
+	</head>
 
-    <style>
-        .selected {
-            background: gainsboro;
-        }
-    </style>
+	<style>
+		.selected {
+			background: gainsboro;
+		}
+	</style>
 
-    <body>
-        <!-- Navbar -->
-        <nav
-            class="nav display:flex align-items:center background:whitesmoke position:sticky"
-            content_id="content"
-            scroll="sticky-nav, hide-nav"
-            scroll-up="5"
-            scroll-down="5">
-            <!-- Menu Icon Animations -->
-            <a class="menu_icon--Vdots" toggle="active" toggle-sidenav="menuL">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </a>
+	<body>
+		<!-- Navbar -->
+		<nav
+			class="nav display:flex align-items:center background:whitesmoke position:sticky"
+			content_id="content"
+			scroll="sticky-nav, hide-nav"
+			scroll-up="5"
+			scroll-down="5">
+			<!-- Menu Icon Animations -->
+			<a class="menu_icon--Vdots" toggle="active" toggle-sidenav="menuL">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+			</a>
 
-            <!-- Horizontal Scroll Nav/Tabs -->
-            <ul
-                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-                <!-- Modal Controls -->
-                <li class="margin-right:15px">
-                    <a actions="closeModal"
-                        ><i class="height:18px" src="./assets/svg/times.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="minMaxModal">
-                        <i
-                            toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
-                            toggle-attribute="src"
-                            class="height:18px"
-                            src="./assets/svg/window-maximize.svg"></i>
-                    </a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="parkModal"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/window-minimize.svg"></i
-                    ></a>
-                </li>
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul
+				class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				<!-- Modal Controls -->
+				<li class="margin-right:15px">
+					<a actions="closeModal"
+						><i class="height:18px" src="./assets/svg/times.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i
+							toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+							toggle-attribute="src"
+							class="height:18px"
+							src="./assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="parkModal"
+						><i
+							class="height:18px"
+							src="./assets/svg/window-minimize.svg"></i
+					></a>
+				</li>
 
-                <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i
+							class="height:18px"
+							src="./assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="./assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Module Form -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/form.html"
-                        modal-width="320px">
-                        <i class="height:18px" src="./assets/svg/cog.svg"></i>
-                        <div
-                            state_id="module-form"
-                            state-array="modules"
-                            state-object="5ff747727005da1c27274190"
-                            state_to="form-fields"></div>
-                        <div
-                            state_id="datatable"
-                            state-filter-value="5ff747727005da1c27274190"
-                            state_to="module_id"></div>
-                    </a>
-                </li>
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./modules/form.html"
+						modal-width="320px">
+						<i class="height:18px" src="./assets/svg/cog.svg"></i>
+						<div
+							state_id="module-form"
+							state-array="modules"
+							state-object="5ff747727005da1c27274190"
+							state_to="form-fields"></div>
+						<div
+							state_id="datatable"
+							state-filter-value="5ff747727005da1c27274190"
+							state_to="module_id"></div>
+					</a>
+				</li>
 
-                <!-- Render Code Editor -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./code-editor/index.html">
-                        <i class="height:18px" src="./assets/svg/code.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="code-editor"></div>
-                    </a>
-                </li>
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./code-editor/index.html">
+						<i class="height:18px" src="./assets/svg/code.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="code-editor"></div>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./builder/index.html">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/palette.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="builder"></div>
-                    </a>
-                </li>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./builder/index.html">
+						<i
+							class="height:18px"
+							src="./assets/svg/palette.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="builder"></div>
+					</a>
+				</li>
 
-                <!-- Datatable Controls -->
-                <li class="margin-right:15px">
-                    <a actions="delete" array=".*" render-selector="[template]"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/trash-alt.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a toggle="hidden" toogle-selector="#column-visibility"
-                        ><i class="height:18px" src="./assets/svg/eye.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a
-                        actions="export"
-                        export-selector=""
-                        export-type="csv"
-                        state_id="datatable"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/file-csv.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="export" export-selector="" state_id="datatable"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/file-download.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="import" array="" state_id="datatable"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/file-upload.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="copy" copy-selector="tbody"
-                        ><i class="height:18px" src="./assets/svg/copy.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="print" print-closest="nav; parent; tbody"
-                        ><i class="height:18px" src="./assets/svg/print.svg"></i
-                    ></a>
-                </li>
-            </ul>
-        </nav>
+				<!-- Datatable Controls -->
+				<li class="margin-right:15px">
+					<a actions="delete" array=".*" render-selector="[template]"
+						><i
+							class="height:18px"
+							src="./assets/svg/trash-alt.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a toggle="hidden" toogle-selector="#column-visibility"
+						><i class="height:18px" src="./assets/svg/eye.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a
+						actions="export"
+						export-selector=""
+						export-type="csv"
+						state_id="datatable"
+						><i
+							class="height:18px"
+							src="./assets/svg/file-csv.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="export" export-selector="" state_id="datatable"
+						><i
+							class="height:18px"
+							src="./assets/svg/file-download.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="import" array="" state_id="datatable"
+						><i
+							class="height:18px"
+							src="./assets/svg/file-upload.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="copy" copy-selector="tbody"
+						><i class="height:18px" src="./assets/svg/copy.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="print" print-closest="nav; parent; tbody"
+						><i class="height:18px" src="./assets/svg/print.svg"></i
+					></a>
+				</li>
+			</ul>
+		</nav>
 
-        <!-- Modal Viewport -->
-        <div
-            class="position:fixed margin-top:50px"
-            content_id="content"
-            id="modal-viewport"></div>
+		<!-- Modal Viewport -->
+		<div
+			class="position:fixed margin-top:50px"
+			content_id="content"
+			id="modal-viewport"></div>
 
-        <!-- Main Content -->
-        <main content_id="content" class="padding:5px overflow:auto">
-            <table class="width:100% border-collapse:collapse">
-                <tr class="border-bottom:1px_solid_darkgray">
-                    <td
-                        class="position:sticky top:0 background:white padding:0px_10px_10px">
-                        <floating-label>
-                            <input
-                                type="text"
-                                class="floating-label"
-                                filter-key="name"
-                                filter-selector=""
-                                state_id="datatable"
-                                placeholder="Name" />
-                        </floating-label>
-                        <span
-                            class="position:absolute bottom:22px right:20px float:right z-index:6">
-                            <a
-                                filter-sort-key="name"
-                                filter-sort-direction="asc"
-                                click-value="desc, asc"
-                                click-attribute="filter-sort-direction"
-                                filter-selector=""
-                                state_id="datatable">
-                                <i
-                                    toggle-attribute="src"
-                                    toggle-value="./assets/svg/sort-down.svg, /assets/svg/sort-up.svg"
-                                    class="height:18px"
-                                    src="./assets/svg/sort.svg"></i>
-                            </a>
-                        </span>
-                    </td>
-                    <td
-                        class="position:sticky top:0 background:white padding:0px_10px_10px">
-                        <floating-label>
-                            <input
-                                type="text"
-                                class="floating-label"
-                                filter-key="_id"
-                                filter-selector=""
-                                state_id="datatable"
-                                placeholder="Document_id" />
-                        </floating-label>
-                        <span
-                            class="position:absolute bottom:22px right:20px float:right z-index:6">
-                            <a
-                                filter-sort-key="_id"
-                                filter-sort-direction=""
-                                click-value="desc, asc"
-                                click-attribute="filter-sort-direction"
-                                filter-selector=""
-                                state_id="datatable">
-                                <i
-                                    toggle-attribute="src"
-                                    toggle-value="./assets/svg/sort-down.svg, /assets/svg/sort-up.svg"
-                                    class="height:18px"
-                                    src="./assets/svg/sort.svg"></i>
-                            </a>
-                        </span>
-                    </td>
-                </tr>
+		<!-- Main Content -->
+		<main content_id="content" class="padding:5px overflow:auto">
+			<table class="width:100% border-collapse:collapse">
+				<tr class="border-bottom:1px_solid_darkgray">
+					<td
+						class="position:sticky top:0 background:white padding:0px_10px_10px">
+						<floating-label>
+							<input
+								type="text"
+								class="floating-label"
+								filter-query-key="name"
+								filter-selector=""
+								state_id="datatable"
+								placeholder="Name" />
+						</floating-label>
+						<span
+							class="position:absolute bottom:22px right:20px float:right z-index:6">
+							<a
+								filter-sort-key="name"
+								filter-sort-direction="asc"
+								click-value="desc, asc"
+								click-attribute="filter-sort-direction"
+								filter-selector=""
+								state_id="datatable">
+								<i
+									toggle-attribute="src"
+									toggle-value="./assets/svg/sort-down.svg, /assets/svg/sort-up.svg"
+									class="height:18px"
+									src="./assets/svg/sort.svg"></i>
+							</a>
+						</span>
+					</td>
+					<td
+						class="position:sticky top:0 background:white padding:0px_10px_10px">
+						<floating-label>
+							<input
+								type="text"
+								class="floating-label"
+								filter-query-key="_id"
+								filter-selector=""
+								state_id="datatable"
+								placeholder="Document_id" />
+						</floating-label>
+						<span
+							class="position:absolute bottom:22px right:20px float:right z-index:6">
+							<a
+								filter-sort-key="_id"
+								filter-sort-direction=""
+								click-value="desc, asc"
+								click-attribute="filter-sort-direction"
+								filter-selector=""
+								state_id="datatable">
+								<i
+									toggle-attribute="src"
+									toggle-value="./assets/svg/sort-down.svg, /assets/svg/sort-up.svg"
+									class="height:18px"
+									src="./assets/svg/sort.svg"></i>
+							</a>
+						</span>
+					</td>
+				</tr>
 
-                <tbody
-                    render-selector=""
-                    array=""
-                    filter-sort-key="name"
-                    filter-sort-direction="asc"
-                    state_id="datatable">
-                    <tr
-                        class="background:whitesmoke:hover border-bottom:1px_solid_darkgray"
-                        template
-                        state_id="datatable"
-                        object="{{object._id}}"
-                        toggle="selected">
-                        <td class="padding:10px">
-                            <div class="display:flex min-width:200px">
-                                <div
-                                    class="display:flex justify-content:center width:25px">
-                                    <span>{{object.icon}}</span>
-                                </div>
-                                <div class="margin-left:10px">
-                                    <a
-                                        actions="state, openModal"
-                                        modal-src="./modules/form.html"
-                                        modal-width="320px"
-                                        modal-color="#229954">
-                                        <h4>{{object.name}}</h4>
-                                        <div
-                                            state-array="modules"
-                                            state-object="{{object._id}}"
-                                            state_to="form-fields"></div>
-                                        <div
-                                            state-array="files"
-                                            state-filter-key="module_id"
-                                            state-filter-value="{{object._id}}"
-                                            state_to="module_id"></div>
-                                        <div
-                                            state-array="files"
-                                            state-object="{{object._id}}"
-                                            state-key="src"
-                                            state_to="render"></div>
-                                    </a>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="padding:10px">
-                            <a
-                                actions="state, openModal"
-                                modal-src="./modules/form.html"
-                                modal-width="320px"
-                                modal-color="#229954">
-                                <b value="">{{object._id}}</b>
-                                <div
-                                    state-array="modules"
-                                    state-object="{{object._id}}"
-                                    state_to="form-fields"></div>
-                                <div
-                                    state-array="files"
-                                    state-object="{{object._id}}"
-                                    state-key="src"
-                                    state_to="render"></div>
-                            </a>
-                        </td>
-                    </tr>
-                    <div filter-parent filter-on="total"></div>
-                </tbody>
-            </table>
-        </main>
+				<tbody
+					render-selector=""
+					array=""
+					filter-sort-key="name"
+					filter-sort-direction="asc"
+					state_id="datatable">
+					<tr
+						class="background:whitesmoke:hover border-bottom:1px_solid_darkgray"
+						template
+						state_id="datatable"
+						object="{{object._id}}"
+						toggle="selected">
+						<td class="padding:10px">
+							<div class="display:flex min-width:200px">
+								<div
+									class="display:flex justify-content:center width:25px">
+									<span>{{object.icon}}</span>
+								</div>
+								<div class="margin-left:10px">
+									<a
+										actions="state, openModal"
+										modal-src="./modules/form.html"
+										modal-width="320px"
+										modal-color="#229954">
+										<h4>{{object.name}}</h4>
+										<div
+											state-array="modules"
+											state-object="{{object._id}}"
+											state_to="form-fields"></div>
+										<div
+											state-array="files"
+											state-filter-query-key="module_id"
+											state-filter-value="{{object._id}}"
+											state_to="module_id"></div>
+										<div
+											state-array="files"
+											state-object="{{object._id}}"
+											state-key="src"
+											state_to="render"></div>
+									</a>
+								</div>
+							</div>
+						</td>
+						<td class="padding:10px">
+							<a
+								actions="state, openModal"
+								modal-src="./modules/form.html"
+								modal-width="320px"
+								modal-color="#229954">
+								<b value="">{{object._id}}</b>
+								<div
+									state-array="modules"
+									state-object="{{object._id}}"
+									state_to="form-fields"></div>
+								<div
+									state-array="files"
+									state-object="{{object._id}}"
+									state-key="src"
+									state_to="render"></div>
+							</a>
+						</td>
+					</tr>
+					<div filter-parent filter-on="total"></div>
+				</tbody>
+			</table>
+		</main>
 
-        <button
-            class="position:absolute bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
-            <a
-                actions="state, openModal"
-                modal-src="./modules/form.html"
-                modal-width="320px"
-                modal-color="#229954">
-                <i src="./assets/svg/plus.svg"></i>
-                <div state_to="form-fields" state-object=""></div>
-                <div
-                    state_id="form"
-                    state-array=""
-                    state-object=""
-                    state-key=""
-                    state_to="render"></div>
-                <div
-                    state-value=""
-                    state-filter-value=""
-                    state_to="module_id"></div>
-                <div
-                    state_id="module-form"
-                    state-object=""
-                    state_to="module-form"></div>
-            </a>
-        </button>
+		<button
+			class="position:absolute bottom:15px right:15px line-height:50px width:50px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4)">
+			<a
+				actions="state, openModal"
+				modal-src="./modules/form.html"
+				modal-width="320px"
+				modal-color="#229954">
+				<i src="./assets/svg/plus.svg"></i>
+				<div state_to="form-fields" state-object=""></div>
+				<div
+					state_id="form"
+					state-array=""
+					state-object=""
+					state-key=""
+					state_to="render"></div>
+				<div
+					state-value=""
+					state-filter-query-value=""
+					state_to="module_id"></div>
+				<div
+					state_id="module-form"
+					state-object=""
+					state_to="module-form"></div>
+			</a>
+		</button>
 
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
-    </body>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
+	</body>
 </html>

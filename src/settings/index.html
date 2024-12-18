@@ -1,211 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon.ico" />
-        <title>Settings | CoCreate</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon.ico" />
+		<title>Settings | CoCreate</title>
 
-        <link
-            rel="stylesheet"
-            href="../index.css"
-            array="files"
-            object="637bc8fe91249e639db315d9"
-            key="src"
-            type="text/css" />
-        <link rel="manifest" href="./manifest.webmanifest" />
-    </head>
+		<link
+			rel="stylesheet"
+			href="../index.css"
+			array="files"
+			object="637bc8fe91249e639db315d9"
+			key="src"
+			type="text/css" />
+		<link rel="manifest" href="./manifest.webmanifest" />
+	</head>
 
-    <body>
-        <!-- Modal Viewport -->
-        <div id="modal-viewport" hidden></div>
+	<body>
+		<!-- Modal Viewport -->
+		<div id="modal-viewport" hidden></div>
 
-        <!-- Navbar -->
-        <nav
-            class="nav display:flex align-items:center background:whitesmoke width:100%"
-            content_id="content"
-            scroll="sticky-nav, hide-nav"
-            scroll-up="5"
-            scroll-down="5">
-            <!-- Horizontal Scroll Nav/Tabs -->
-            <ul
-                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-                <!-- Modal Controls -->
-                <li class="margin-right:15px">
-                    <a actions="closeModal"
-                        ><i class="height:18px" src="./assets/svg/times.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="minMaxModal">
-                        <i
-                            toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
-                            toggle-attribute="src"
-                            class="height:18px"
-                            src="./assets/svg/window-maximize.svg"></i>
-                    </a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="parkModal"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/window-minimize.svg"></i
-                    ></a>
-                </li>
+		<!-- Navbar -->
+		<nav
+			class="nav display:flex align-items:center background:whitesmoke width:100%"
+			content_id="content"
+			scroll="sticky-nav, hide-nav"
+			scroll-up="5"
+			scroll-down="5">
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul
+				class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				<!-- Modal Controls -->
+				<li class="margin-right:15px">
+					<a actions="closeModal"
+						><i class="height:18px" src="./assets/svg/times.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i
+							toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+							toggle-attribute="src"
+							class="height:18px"
+							src="./assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="parkModal"
+						><i
+							class="height:18px"
+							src="./assets/svg/window-minimize.svg"></i
+					></a>
+				</li>
 
-                <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i
+							class="height:18px"
+							src="./assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="./assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Module Form -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/form.html"
-                        modal-width="320px">
-                        <i class="height:18px" src="./assets/svg/cog.svg"></i>
-                        <div
-                            state_id="module_id"
-                            state-array="modules"
-                            state-object="5ff747727005da1c2727418f"
-                            state_to="form-fields"></div>
-                        <div
-                            state_id="module_id"
-                            state-filter-value="5ff747727005da1c2727418f"
-                            state_to="module_id"></div>
-                    </a>
-                </li>
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./modules/form.html"
+						modal-width="320px">
+						<i class="height:18px" src="./assets/svg/cog.svg"></i>
+						<div
+							state_id="module_id"
+							state-array="modules"
+							state-object="5ff747727005da1c2727418f"
+							state_to="form-fields"></div>
+						<div
+							state_id="module_id"
+							state-filter-value="5ff747727005da1c2727418f"
+							state_to="module_id"></div>
+					</a>
+				</li>
 
-                <!-- Render Code Editor -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./code-editor/index.html">
-                        <i class="height:18px" src="./assets/svg/code.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="code-editor"></div>
-                    </a>
-                </li>
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./code-editor/index.html">
+						<i class="height:18px" src="./assets/svg/code.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="code-editor"></div>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./builder/index.html">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/palette.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="builder"></div>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./builder/index.html">
+						<i
+							class="height:18px"
+							src="./assets/svg/palette.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="builder"></div>
+					</a>
+				</li>
+			</ul>
+		</nav>
 
-        <!-- Main Content -->
-        <main class="padding:5px" content_id="content">
-            <ul
-                class="display:flex flex-direction:column overflow:auto width:100% bottom:10px margin-top:20px">
-                <div
-                    array="modules"
-                    filter-sort-key="settings-menu-position"
-                    filter-sort-direction="asc"
-                    filter-key="settings-menu-position"
-                    filter-value="0"
-                    filter-value-type="number"
-                    filter-operator="$ne"
-                    render-selector="[template]">
-                    <li
-                        class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover"
-                        template
-                        object="{{object._id}}">
-                        <a
-                            actions="state, openModal"
-                            modal-src="{{object.settings-menu-primary.parentDirectory}}/{{object.settings-menu-primary.name}}"
-                            modal-width="{{object.settings-modal-primary-width}}"
-                            modal-color="{{object.settings-modal-primary-color}}"
-                            class="display:inline-block">
-                            <span
-                                class="display:inline-block width:50px text-align:center">
-                                <i src="./assets/svg/{{object.icon}}.svg"></i>
-                            </span>
-                            <span>{{object.name}}</span>
-                            <div
-                                state-template="$uid"
-                                state-filter-key="module_id"
-                                state-filter-value="{{object._id}}"
-                                state_to="datatable"></div>
-                            <div
-                                state-value="{{object._id}}"
-                                state-filter-value="{{object._id}}"
-                                state_to="module_id"></div>
-                            <div
-                                state-array="files"
-                                state-object="{{object.settings-menu-secondary._id}}"
-                                state_to="form"></div>
-                            <div
-                                state-object="{{object.organization_id}}"
-                                state_to="form-fields"
-                                class="session{{object.name}}_Id"></div>
-                            <div
-                                state-array="files"
-                                state-object="{{object.settings-menu-primary._id}}"
-                                state-key="src"
-                                state_to="render"></div>
-                        </a>
-                        <div
-                            class="float:right width:50px text-align:center {{object.settings-menu-secondary}}">
-                            <a
-                                actions="state, openModal"
-                                modal-src="{{object.settings-menu-secondary.parentDirectory}}/{{object.settings-menu-secondary.name}}"
-                                modal-width="{{object.settings-modal-secondary-width}}"
-                                modal-color="{{object.settings-modal-secondary-color}}">
-                                <i
-                                    class="height:16px"
-                                    src="./assets/svg/plus.svg"></i>
-                                <div
-                                    state-array="files"
-                                    state-object="{{object.main-menu-secondary._id}}"
-                                    state-key="src"
-                                    state_to="render"></div>
-                                <div
-                                    state-object="{{object._id}}"
-                                    state_to="module-form"></div>
-                                <div
-                                    state-object=""
-                                    state_to="form-fields"></div>
-                                <div
-                                    state-value="{{object._id}}"
-                                    state-filter-value="{{object._id}}"
-                                    state_to="module_id"></div>
-                            </a>
-                        </div>
-                    </li>
-                </div>
-            </ul>
-        </main>
+		<!-- Main Content -->
+		<main class="padding:5px" content_id="content">
+			<ul
+				class="display:flex flex-direction:column overflow:auto width:100% bottom:10px margin-top:20px">
+				<div
+					array="modules"
+					filter-sort-key="settings-menu-position"
+					filter-sort-direction="asc"
+					filter-query-key="settings-menu-position.$ne"
+					filter-query-value="0"
+					filter-value-type="number"
+					render-selector="[template]">
+					<li
+						class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover"
+						template
+						object="{{object._id}}">
+						<a
+							actions="state, openModal"
+							modal-src="{{object.settings-menu-primary.parentDirectory}}/{{object.settings-menu-primary.name}}"
+							modal-width="{{object.settings-modal-primary-width}}"
+							modal-color="{{object.settings-modal-primary-color}}"
+							class="display:inline-block">
+							<span
+								class="display:inline-block width:50px text-align:center">
+								<i src="./assets/svg/{{object.icon}}.svg"></i>
+							</span>
+							<span>{{object.name}}</span>
+							<div
+								state-template="$uid"
+								state-filter-query-key="module_id"
+								state-filter-value="{{object._id}}"
+								state_to="datatable"></div>
+							<div
+								state-value="{{object._id}}"
+								state-filter-value="{{object._id}}"
+								state_to="module_id"></div>
+							<div
+								state-array="files"
+								state-object="{{object.settings-menu-secondary._id}}"
+								state_to="form"></div>
+							<div
+								state-object="{{object.organization_id}}"
+								state_to="form-fields"
+								class="session{{object.name}}_Id"></div>
+							<div
+								state-array="files"
+								state-object="{{object.settings-menu-primary._id}}"
+								state-key="src"
+								state_to="render"></div>
+						</a>
+						<div
+							class="float:right width:50px text-align:center {{object.settings-menu-secondary}}">
+							<a
+								actions="state, openModal"
+								modal-src="{{object.settings-menu-secondary.parentDirectory}}/{{object.settings-menu-secondary.name}}"
+								modal-width="{{object.settings-modal-secondary-width}}"
+								modal-color="{{object.settings-modal-secondary-color}}">
+								<i
+									class="height:16px"
+									src="./assets/svg/plus.svg"></i>
+								<div
+									state-array="files"
+									state-object="{{object.main-menu-secondary._id}}"
+									state-key="src"
+									state_to="render"></div>
+								<div
+									state-object="{{object._id}}"
+									state_to="module-form"></div>
+								<div
+									state-object=""
+									state_to="form-fields"></div>
+								<div
+									state-value="{{object._id}}"
+									state-filter-value="{{object._id}}"
+									state_to="module_id"></div>
+							</a>
+						</div>
+					</li>
+				</div>
+			</ul>
+		</main>
 
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
-    </body>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
+	</body>
 </html>

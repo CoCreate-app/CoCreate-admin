@@ -1,303 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon.ico" />
-        <title>Tasklist | CoCreate</title>
-        <link
-            rel="stylesheet"
-            href="../index.css"
-            array="files"
-            object="637bc8fe91249e639db315d9"
-            key="src"
-            type="text/css" />
-        <link rel="manifest" href="./manifest.webmanifest" />
-    </head>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon.ico" />
+		<title>Tasklist | CoCreate</title>
+		<link
+			rel="stylesheet"
+			href="../index.css"
+			array="files"
+			object="637bc8fe91249e639db315d9"
+			key="src"
+			type="text/css" />
+		<link rel="manifest" href="./manifest.webmanifest" />
+	</head>
 
-    <style>
-        .selected {
-            background: gainsboro;
-        }
-    </style>
+	<style>
+		.selected {
+			background: gainsboro;
+		}
+	</style>
 
-    <body>
-        <!-- Navbar -->
-        <nav
-            class="nav display:flex align-items:center background:whitesmoke position:sticky"
-            content_id="content"
-            scroll="sticky-nav, hide-nav"
-            scroll-up="5"
-            scroll-down="5">
-            <!-- Menu Icon Animations -->
-            <a class="menu_icon--Vdots" toggle="active" toggle-sidenav="menuL">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </a>
+	<body>
+		<!-- Navbar -->
+		<nav
+			class="nav display:flex align-items:center background:whitesmoke position:sticky"
+			content_id="content"
+			scroll="sticky-nav, hide-nav"
+			scroll-up="5"
+			scroll-down="5">
+			<!-- Menu Icon Animations -->
+			<a class="menu_icon--Vdots" toggle="active" toggle-sidenav="menuL">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+			</a>
 
-            <!-- Horizontal Scroll Nav/Tabs -->
-            <ul
-                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-                <!-- Modal Controls -->
-                <li class="margin-right:15px">
-                    <a actions="closeModal"
-                        ><i class="height:18px" src="./assets/svg/times.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="minMaxModal">
-                        <i
-                            toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
-                            toggle-attribute="src"
-                            class="height:18px"
-                            src="./assets/svg/window-maximize.svg"></i>
-                    </a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="parkModal"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/window-minimize.svg"></i
-                    ></a>
-                </li>
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul
+				class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				<!-- Modal Controls -->
+				<li class="margin-right:15px">
+					<a actions="closeModal"
+						><i class="height:18px" src="./assets/svg/times.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i
+							toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+							toggle-attribute="src"
+							class="height:18px"
+							src="./assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="parkModal"
+						><i
+							class="height:18px"
+							src="./assets/svg/window-minimize.svg"></i
+					></a>
+				</li>
 
-                <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i
+							class="height:18px"
+							src="./assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="./assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Module Form -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/form.html"
-                        modal-width="320px">
-                        <i class="height:18px" src="./assets/svg/cog.svg"></i>
-                        <div
-                            state_id="module-form"
-                            state-array="modules"
-                            state-object=""
-                            state_to="form-fields"></div>
-                        <div
-                            state_id="module_id"
-                            state-filter-value=""
-                            state_to="module_id"></div>
-                    </a>
-                </li>
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./modules/form.html"
+						modal-width="320px">
+						<i class="height:18px" src="./assets/svg/cog.svg"></i>
+						<div
+							state_id="module-form"
+							state-array="modules"
+							state-object=""
+							state_to="form-fields"></div>
+						<div
+							state_id="module_id"
+							state-filter-query-value=""
+							state_to="module_id"></div>
+					</a>
+				</li>
 
-                <!-- Render Code Editor -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./code-editor/index.html">
-                        <i class="height:18px" src="./assets/svg/code.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="code-editor"></div>
-                    </a>
-                </li>
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./code-editor/index.html">
+						<i class="height:18px" src="./assets/svg/code.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="code-editor"></div>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./builder/index.html">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/palette.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="builder"></div>
-                    </a>
-                </li>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./builder/index.html">
+						<i
+							class="height:18px"
+							src="./assets/svg/palette.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="builder"></div>
+					</a>
+				</li>
 
-                <!-- Datatable Controls -->
-                <li class="margin-right:15px">
-                    <a actions="delete" array=""
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/trash-alt.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a toggle="hidden" toogle-selector="#column-visibility"
-                        ><i class="height:18px" src="./assets/svg/eye.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a
-                        actions="export"
-                        export-selector=""
-                        export-type="csv"
-                        state_id="datatable"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/file-csv.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="export" export-selector="" state_id="datatable"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/file-download.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="import" array="" state_id="datatable"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/file-upload.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="copy" copy-selector="tbody"
-                        ><i class="height:18px" src="./assets/svg/copy.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="print" print-closest="nav; parent; tbody"
-                        ><i class="height:18px" src="./assets/svg/print.svg"></i
-                    ></a>
-                </li>
-            </ul>
-        </nav>
+				<!-- Datatable Controls -->
+				<li class="margin-right:15px">
+					<a actions="delete" array=""
+						><i
+							class="height:18px"
+							src="./assets/svg/trash-alt.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a toggle="hidden" toogle-selector="#column-visibility"
+						><i class="height:18px" src="./assets/svg/eye.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a
+						actions="export"
+						export-selector=""
+						export-type="csv"
+						state_id="datatable"
+						><i
+							class="height:18px"
+							src="./assets/svg/file-csv.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="export" export-selector="" state_id="datatable"
+						><i
+							class="height:18px"
+							src="./assets/svg/file-download.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="import" array="" state_id="datatable"
+						><i
+							class="height:18px"
+							src="./assets/svg/file-upload.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="copy" copy-selector="tbody"
+						><i class="height:18px" src="./assets/svg/copy.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="print" print-closest="nav; parent; tbody"
+						><i class="height:18px" src="./assets/svg/print.svg"></i
+					></a>
+				</li>
+			</ul>
+		</nav>
 
-        <!-- Modal Viewport -->
-        <div
-            class="position:fixed margin-top:50px"
-            content_id="content"
-            id="modal-viewport"></div>
+		<!-- Modal Viewport -->
+		<div
+			class="position:fixed margin-top:50px"
+			content_id="content"
+			id="modal-viewport"></div>
 
-        <!-- Main Content -->
-        <div content_id="content" class="padding:5px">
-            <div
-                class="domEditor main-height"
-                key="tasklists1"
-                array="test"
-                object="5f075add24d24a175fca54e4"
-                state_id="me1234">
-                <!--<div class="domEditor main-height" key="tasklists" array="test" state_id="me1234" >-->
-                <!--<div sortable class="display:flex align-items:flex-start" dnd-group-key="tasklist" -->
-                <div
-                    dnd-group-key="tasklist"
-                    droppable="true"
-                    eid="tasklist_container">
-                    <!-- sortable card -->
-                    <div
-                        id="tasklist"
-                        class="card template margin:5px border-radius:2px width:48%@xs width:48%@sm width:24%@md"
-                        draggable="true">
-                        <div class="margin:15px font-size:18px color-dark-gray">
-                            <span class="display:inline-block">
-                                <input
-                                    array="module_activities"
-                                    state_id="form-fields"
-                                    object=""
-                                    key="clone-name"
-                                    id="stage-name"
-                                    class="input_field"
-                                    placeholder="Tasklist" />
-                            </span>
-                            <span class="float:right display:inline-block"
-                                ><a
-                                    clone_id="tasklist"
-                                    class="deleteBtn reset-layout"
-                                    ><i
-                                        class="height:18px"
-                                        src="./assets/svg/times.svg"></i></a
-                            ></span>
-                        </div>
-                        <div
-                            class="border-top:1px_solid_lightgray border-bottom:1px_solid_lightgray padding:10px">
-                            <div
-                                class="display:flex align-items:center margin:0px_15px">
-                                <div class="padding-right:15px">2 / 3</div>
-                                <div class="progressbar">
-                                    <div
-                                        style="
-                                            transform: translateX(-30%);
-                                        "></div>
-                                </div>
-                            </div>
-                            <form
-                                array="module_activities"
-                                sortable
-                                dnd-group-key="task-items"
-                                id="testForm">
-                                <!-- sortable task item -->
-                                <div
-                                    id="task-item"
-                                    class="display:flex flex-wrap-nowrap align-items:center margin:0px_15px padding:10px_0px template">
-                                    <label class="checkbox">
-                                        <input
-                                            type="checkbox"
-                                            key="taskcheck" /><span
-                                            class="mark display:inline-block"></span>
-                                    </label>
-                                    <div class="flex-grow:1">
-                                        <input
-                                            class="floating-label"
-                                            object="5d8c79e7e4be424681b5e48d"
-                                            key="taskname"
-                                            placeholder="Task Name" />
-                                    </div>
-                                    <a
-                                        clone_id="task-item"
-                                        class="margin-left:15px font-size:20px deleteBtn"
-                                        ><i
-                                            class="height:18px"
-                                            src="./assets/svg/trash-alt.svg"></i
-                                    ></a>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="margin:15px">
-                            <a
-                                clone_id="task-item"
-                                actions="clone"
-                                class="noDrag reset-layout padding:10px"
-                                style="display: block"
-                                ><i
-                                    class="height:16px"
-                                    src="./assets/svg/plus.svg"></i>
-                                Add Task</a
-                            >
-                        </div>
-                    </div>
-                </div>
-                <!-- Sortable Tasklist -->
+		<!-- Main Content -->
+		<div content_id="content" class="padding:5px">
+			<div
+				class="domEditor main-height"
+				key="tasklists1"
+				array="test"
+				object="5f075add24d24a175fca54e4"
+				state_id="me1234">
+				<!--<div class="domEditor main-height" key="tasklists" array="test" state_id="me1234" >-->
+				<!--<div sortable class="display:flex align-items:flex-start" dnd-group-key="tasklist" -->
+				<div
+					dnd-group-key="tasklist"
+					droppable="true"
+					eid="tasklist_container">
+					<!-- sortable card -->
+					<div
+						id="tasklist"
+						class="card template margin:5px border-radius:2px width:48%@xs width:48%@sm width:24%@md"
+						draggable="true">
+						<div class="margin:15px font-size:18px color-dark-gray">
+							<span class="display:inline-block">
+								<input
+									array="module_activities"
+									state_id="form-fields"
+									object=""
+									key="clone-name"
+									id="stage-name"
+									class="input_field"
+									placeholder="Tasklist" />
+							</span>
+							<span class="float:right display:inline-block"
+								><a
+									clone_id="tasklist"
+									class="deleteBtn reset-layout"
+									><i
+										class="height:18px"
+										src="./assets/svg/times.svg"></i></a
+							></span>
+						</div>
+						<div
+							class="border-top:1px_solid_lightgray border-bottom:1px_solid_lightgray padding:10px">
+							<div
+								class="display:flex align-items:center margin:0px_15px">
+								<div class="padding-right:15px">2 / 3</div>
+								<div class="progressbar">
+									<div
+										style="
+											transform: translateX(-30%);
+										"></div>
+								</div>
+							</div>
+							<form
+								array="module_activities"
+								sortable
+								dnd-group-key="task-items"
+								id="testForm">
+								<!-- sortable task item -->
+								<div
+									id="task-item"
+									class="display:flex flex-wrap-nowrap align-items:center margin:0px_15px padding:10px_0px template">
+									<label class="checkbox">
+										<input
+											type="checkbox"
+											key="taskcheck" /><span
+											class="mark display:inline-block"></span>
+									</label>
+									<div class="flex-grow:1">
+										<input
+											class="floating-label"
+											object="5d8c79e7e4be424681b5e48d"
+											key="taskname"
+											placeholder="Task Name" />
+									</div>
+									<a
+										clone_id="task-item"
+										class="margin-left:15px font-size:20px deleteBtn"
+										><i
+											class="height:18px"
+											src="./assets/svg/trash-alt.svg"></i
+									></a>
+								</div>
+							</form>
+						</div>
+						<div class="margin:15px">
+							<a
+								clone_id="task-item"
+								actions="clone"
+								class="noDrag reset-layout padding:10px"
+								style="display: block"
+								><i
+									class="height:16px"
+									src="./assets/svg/plus.svg"></i>
+								Add Task</a
+							>
+						</div>
+					</div>
+				</div>
+				<!-- Sortable Tasklist -->
 
-                <a
-                    clone_id="tasklist"
-                    class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover round cloneBtn padding:20px"
-                    id="addTasklistBtn"
-                    ><i class="height:16px" src="./assets/svg/plus.svg"></i
-                ></a>
-            </div>
-            <!-- saveFetch -->
-        </div>
+				<a
+					clone_id="tasklist"
+					class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover round cloneBtn padding:20px"
+					id="addTasklistBtn"
+					><i class="height:16px" src="./assets/svg/plus.svg"></i
+				></a>
+			</div>
+			<!-- saveFetch -->
+		</div>
 
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
-    </body>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
+	</body>
 </html>

@@ -1,371 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon.ico" />
-        <title>Files Form | CoCreate</title>
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="assets/favicon.ico" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon.ico" />
+		<title>Files Form | CoCreate</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="assets/favicon.ico" />
 
-        <link
-            rel="stylesheet"
-            href="../index.css"
-            array="files"
-            object="637bc8fe91249e639db315d9"
-            key="src"
-            type="text/css" />
-        <link rel="manifest" href="./manifest.webmanifest" />
-    </head>
+		<link
+			rel="stylesheet"
+			href="../index.css"
+			array="files"
+			object="637bc8fe91249e639db315d9"
+			key="src"
+			type="text/css" />
+		<link rel="manifest" href="./manifest.webmanifest" />
+	</head>
 
-    <body>
-        <!-- Modal Viewport -->
-        <div id="modal-viewport" hidden></div>
+	<body>
+		<!-- Modal Viewport -->
+		<div id="modal-viewport" hidden></div>
 
-        <!-- Navbar -->
-        <nav
-            class="nav display:flex align-items:center background:whitesmoke"
-            content_id="content"
-            scroll="sticky-nav, hide-nav"
-            scroll-up="5"
-            scroll-down="5">
-            <!-- Horizontal Scroll Nav/Tabs -->
-            <ul
-                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-                <!-- Modal Controls -->
-                <li class="margin-right:15px">
-                    <a actions="closeModal"
-                        ><i class="height:18px" src="./assets/svg/times.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="minMaxModal">
-                        <i
-                            toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
-                            toggle-attribute="src"
-                            class="height:18px"
-                            src="./assets/svg/window-maximize.svg"></i>
-                    </a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="parkModal"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/window-minimize.svg"></i
-                    ></a>
-                </li>
+		<!-- Navbar -->
+		<nav
+			class="nav display:flex align-items:center background:whitesmoke"
+			content_id="content"
+			scroll="sticky-nav, hide-nav"
+			scroll-up="5"
+			scroll-down="5">
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul
+				class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				<!-- Modal Controls -->
+				<li class="margin-right:15px">
+					<a actions="closeModal"
+						><i class="height:18px" src="./assets/svg/times.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i
+							toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+							toggle-attribute="src"
+							class="height:18px"
+							src="./assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="parkModal"
+						><i
+							class="height:18px"
+							src="./assets/svg/window-minimize.svg"></i
+					></a>
+				</li>
 
-                <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i
+							class="height:18px"
+							src="./assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="./assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Module Form -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/form.html"
-                        modal-width="320px">
-                        <i class="height:18px" src="./assets/svg/cog.svg"></i>
-                        <div
-                            state_id="module-form"
-                            state-array="modules"
-                            state-object=""
-                            state_to="form-fields"></div>
-                        <div
-                            state_id="module_id"
-                            state-filter-value=""
-                            state_to="module_id"></div>
-                    </a>
-                </li>
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./modules/form.html"
+						modal-width="320px">
+						<i class="height:18px" src="./assets/svg/cog.svg"></i>
+						<div
+							state_id="module-form"
+							state-array="modules"
+							state-object=""
+							state_to="form-fields"></div>
+						<div
+							state_id="module_id"
+							state-filter-query-value=""
+							state_to="module_id"></div>
+					</a>
+				</li>
 
-                <!-- Render Code Editor -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./code-editor/index.html">
-                        <i class="height:18px" src="./assets/svg/code.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="code-editor"></div>
-                    </a>
-                </li>
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./code-editor/index.html">
+						<i class="height:18px" src="./assets/svg/code.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="code-editor"></div>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./builder/index.html">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/palette.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="builder"></div>
-                    </a>
-                </li>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./builder/index.html">
+						<i
+							class="height:18px"
+							src="./assets/svg/palette.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="builder"></div>
+					</a>
+				</li>
 
-                <!-- deleteDocument-->
-                <li class="margin-right:15px">
-                    <a
-                        actions="deleteDocument, closeModal"
-                        array="files"
-                        object=""
-                        state_id="form-fields">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/trash-alt.svg"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+				<!-- deleteDocument-->
+				<li class="margin-right:15px">
+					<a
+						actions="deleteDocument, closeModal"
+						array="files"
+						object=""
+						state_id="form-fields">
+						<i
+							class="height:18px"
+							src="./assets/svg/trash-alt.svg"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
 
-        <main class="padding:10px" content_id="content">
-            <form state_id="form-fields" array="files" object="">
-                <div class="form-fields">
-                    <input
-                        type="hidden"
-                        key="module_id"
-                        value=""
-                        state_id="module_id" />
-                    <floating-label>
-                        <input
-                            type="text"
-                            key="name"
-                            class="floating-label"
-                            placeholder="File Name" />
-                    </floating-label>
-                    <floating-label>
-                        <cocreate-select
-                            key="domains"
-                            class="floating-label"
-                            placeholder="domains"
-                            multiple>
-                            <input
-                                placeholder="Search"
-                                render-parent="[array]"
-                                render-search
-                                tags="true" />
-                            <cc-options
-                                array="organizations"
-                                key="domains"
-                                filter-key="_id"
-                                filter-value="5ff747727005da1c272740ab"
-                                filter-operator="$eq"
-                                render-selector="[template]"
-                                class="overflow:auto">
-                                <cc-option
-                                    class="display:flex"
-                                    template
-                                    value="{{domains}}">
-                                    <h4>{{domains}}</h4>
-                                </cc-option>
-                            </cc-options>
-                        </cocreate-select>
-                    </floating-label>
-                    <floating-label>
-                        <input
-                            type="text"
-                            key="path"
-                            placeholder="path"
-                            class="floating-label" />
-                    </floating-label>
-                    <floating-label>
-                        <input
-                            type="text"
-                            key="directory"
-                            placeholder="directory"
-                            class="floating-label" />
-                    </floating-label>
-                    <floating-label>
-                        <textarea
-                            key="src"
-                            placeholder="src"
-                            class="floating-label"></textarea>
-                    </floating-label>
-                    <floating-label>
-                        <input
-                            type="text"
-                            key="content-type"
-                            placeholder="content-type"
-                            class="floating-label" />
-                    </floating-label>
-                    <floating-label>
-                        <cocreate-select
-                            key="tags"
-                            placeholder="Tags"
-                            sortable
-                            class="floating-label"
-                            multiple>
-                            <input
-                                placeholder="Search"
-                                filter-parent="array"
-                                filter-search />
-                            <div
-                                filter-next
-                                filter-key="type"
-                                filter-value="type"></div>
-                            <cc-options
-                                array="tags"
-                                filter-key="module_id"
-                                filter-value="5ff747727005da1c2727419a"
-                                state_id="module_id"
-                                render-selector="[template]"
-                                class="overflow:auto">
-                                <cc-option
-                                    class="display:flex"
-                                    template
-                                    value="{{object._id}}">
-                                    <h4>{{object.name}}</h4>
-                                </cc-option>
-                            </cc-options>
-                        </cocreate-select>
-                    </floating-label>
-                    <input
-                        type="checkbox"
-                        key="public"
-                        value="true"
-                        class="margin-top:10px" /><label> Public</label>
-                    <floating-label>
-                        <input
-                            type="text"
-                            key="array"
-                            class="floating-label"
-                            placeholder="array" />
-                    </floating-label>
-                    <floating-label>
-                        <input
-                            type="text"
-                            key="module_id"
-                            class="floating-label"
-                            placeholder="object" />
-                    </floating-label>
-                    <floating-label>
-                        <input
-                            type="text"
-                            key="name"
-                            class="floating-label"
-                            placeholder="name" />
-                    </floating-label>
-                    <floating-label>
-                        <cocreate-select
-                            key="module_id"
-                            placeholder="Modules"
-                            sortable
-                            class="floating-label"
-                            multiple>
-                            <input
-                                placeholder="Search"
-                                render-parent="[array]"
-                                render-search />
-                            <cc-options
-                                array="modules"
-                                filter-sort-key="name"
-                                render-selector="[template]"
-                                class="overflow:auto">
-                                <cc-option template value="{{object._id}}">
-                                    <div class="display:flex padding:5px">
-                                        <span class="width:25px"
-                                            >{{object.icon}}</span
-                                        >
-                                        <h4 array="{{object.array}}">
-                                            {{object.name}}
-                                        </h4>
-                                    </div>
-                                </cc-option>
-                            </cc-options>
-                        </cocreate-select>
-                    </floating-label>
-                    <floating-label>
-                        <cocreate-select
-                            key="website_id"
-                            placeholder="Website"
-                            sortable
-                            class="floating-label">
-                            <input
-                                placeholder="Search"
-                                render-parent="[array]"
-                                render-search />
-                            <cc-options
-                                array="module_activities"
-                                filter-key="module_id"
-                                filter-value="5ff747727005da1c27274185"
-                                filter-sort-key="name"
-                                render-selector="[template]"
-                                class="overflow:auto">
-                                <cc-option template value="{{object._id}}">
-                                    <div class="display:flex padding:5px">
-                                        <span class="width:25px"
-                                            >{{object.icon}}</span
-                                        >
-                                        <h4 array="{{object.array}}">
-                                            {{object.name}}
-                                        </h4>
-                                    </div>
-                                </cc-option>
-                            </cc-options>
-                        </cocreate-select>
-                    </floating-label>
-                </div>
-                <div id="uploader" class="uploader" hidden>
-                    <form>
-                        <input
-                            type="file"
-                            directory
-                            render-closest="#uploader; [template]"
-                            array="files" />
+		<main class="padding:10px" content_id="content">
+			<form state_id="form-fields" array="files" object="">
+				<div class="form-fields">
+					<input
+						type="hidden"
+						key="module_id"
+						value=""
+						state_id="module_id" />
+					<floating-label>
+						<input
+							type="text"
+							key="name"
+							class="floating-label"
+							placeholder="File Name" />
+					</floating-label>
+					<floating-label>
+						<cocreate-select
+							key="domains"
+							class="floating-label"
+							placeholder="domains"
+							multiple>
+							<input
+								placeholder="Search"
+								render-parent="[array]"
+								render-search
+								tags="true" />
+							<cc-options
+								array="organizations"
+								key="domains"
+								filter-query-key="_id.$eq"
+								filter-query-value="5ff747727005da1c272740ab"
+								render-selector="[template]"
+								class="overflow:auto">
+								<cc-option
+									class="display:flex"
+									template
+									value="{{domains}}">
+									<h4>{{domains}}</h4>
+								</cc-option>
+							</cc-options>
+						</cocreate-select>
+					</floating-label>
+					<floating-label>
+						<input
+							type="text"
+							key="path"
+							placeholder="path"
+							class="floating-label" />
+					</floating-label>
+					<floating-label>
+						<input
+							type="text"
+							key="directory"
+							placeholder="directory"
+							class="floating-label" />
+					</floating-label>
+					<floating-label>
+						<textarea
+							key="src"
+							placeholder="src"
+							class="floating-label"></textarea>
+					</floating-label>
+					<floating-label>
+						<input
+							type="text"
+							key="content-type"
+							placeholder="content-type"
+							class="floating-label" />
+					</floating-label>
+					<floating-label>
+						<cocreate-select
+							key="tags"
+							placeholder="Tags"
+							sortable
+							class="floating-label"
+							multiple>
+							<input
+								placeholder="Search"
+								filter-parent="array"
+								filter-search />
+							<div
+								filter-next
+								filter-query-key="type"
+								filter-query-value="type"></div>
+							<cc-options
+								array="tags"
+								filter-query-key="module_id"
+								filter-query-value="5ff747727005da1c2727419a"
+								state_id="module_id"
+								render-selector="[template]"
+								class="overflow:auto">
+								<cc-option
+									class="display:flex"
+									template
+									value="{{object._id}}">
+									<h4>{{object.name}}</h4>
+								</cc-option>
+							</cc-options>
+						</cocreate-select>
+					</floating-label>
+					<input
+						type="checkbox"
+						key="public"
+						value="true"
+						class="margin-top:10px" /><label> Public</label>
+					<floating-label>
+						<input
+							type="text"
+							key="array"
+							class="floating-label"
+							placeholder="array" />
+					</floating-label>
+					<floating-label>
+						<input
+							type="text"
+							key="module_id"
+							class="floating-label"
+							placeholder="object" />
+					</floating-label>
+					<floating-label>
+						<input
+							type="text"
+							key="name"
+							class="floating-label"
+							placeholder="name" />
+					</floating-label>
+					<floating-label>
+						<cocreate-select
+							key="module_id"
+							placeholder="Modules"
+							sortable
+							class="floating-label"
+							multiple>
+							<input
+								placeholder="Search"
+								render-parent="[array]"
+								render-search />
+							<cc-options
+								array="modules"
+								filter-sort-key="name"
+								render-selector="[template]"
+								class="overflow:auto">
+								<cc-option template value="{{object._id}}">
+									<div class="display:flex padding:5px">
+										<span class="width:25px"
+											>{{object.icon}}</span
+										>
+										<h4 array="{{object.array}}">
+											{{object.name}}
+										</h4>
+									</div>
+								</cc-option>
+							</cc-options>
+						</cocreate-select>
+					</floating-label>
+					<floating-label>
+						<cocreate-select
+							key="website_id"
+							placeholder="Website"
+							sortable
+							class="floating-label">
+							<input
+								placeholder="Search"
+								render-parent="[array]"
+								render-search />
+							<cc-options
+								array="module_activities"
+								filter-query-key="module_id"
+								filter-query-value="5ff747727005da1c27274185"
+								filter-sort-key="name"
+								render-selector="[template]"
+								class="overflow:auto">
+								<cc-option template value="{{object._id}}">
+									<div class="display:flex padding:5px">
+										<span class="width:25px"
+											>{{object.icon}}</span
+										>
+										<h4 array="{{object.array}}">
+											{{object.name}}
+										</h4>
+									</div>
+								</cc-option>
+							</cc-options>
+						</cocreate-select>
+					</floating-label>
+				</div>
+				<div id="uploader" class="uploader" hidden>
+					<form>
+						<input
+							type="file"
+							directory
+							render-closest="#uploader; [template]"
+							array="files" />
 
-                        <button actions="upload">upload</button>
-                    </form>
+						<button actions="upload">upload</button>
+					</form>
 
-                    <div template>
-                        <input file="name" value="{{name}}" />
-                        <input file="directory" value="{{directory}}" />
-                        <input file="content-type" value="{{content-type}}" />
+					<div template>
+						<input file="name" value="{{name}}" />
+						<input file="directory" value="{{directory}}" />
+						<input file="content-type" value="{{content-type}}" />
 
-                        <textarea file="src" value-type="string">
+						<textarea file="src" value-type="string">
                             {{src}}
                         </textarea>
-                    </div>
-                </div>
-                <button
-                    show=".uploader, .form-fields"
-                    hide=".form-fields, .uploader"
-                    class="position:absolute bottom:15px left:15px width:54px height:54px background:dodgerblue grow-hover border-radius:50% padding:15px">
-                    <i
-                        class="form-fields"
-                        src="./assets/svg/cloud-upload-alt.svg"></i>
-                    <i class="uploader hidden" src="./assets/svg/times.svg"></i>
-                </button>
-                <button
-                    actions="save"
-                    class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
-                    <i src="./assets/svg/save.svg"></i>
-                </button>
-            </form>
-        </main>
+					</div>
+				</div>
+				<button
+					show=".uploader, .form-fields"
+					hide=".form-fields, .uploader"
+					class="position:absolute bottom:15px left:15px width:54px height:54px background:dodgerblue grow-hover border-radius:50% padding:15px">
+					<i
+						class="form-fields"
+						src="./assets/svg/cloud-upload-alt.svg"></i>
+					<i class="uploader hidden" src="./assets/svg/times.svg"></i>
+				</button>
+				<button
+					actions="save"
+					class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
+					<i src="./assets/svg/save.svg"></i>
+				</button>
+			</form>
+		</main>
 
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
-    </body>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
+	</body>
 </html>

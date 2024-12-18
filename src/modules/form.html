@@ -1,952 +1,939 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Module Form | CoCreate</title>
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon.ico" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Module Form | CoCreate</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon.ico" />
 
-        <link
-            rel="stylesheet"
-            href="../index.css"
-            array="files"
-            object="637bc8fe91249e639db315d9"
-            key="src"
-            type="text/css" />
-        <link rel="manifest" href="./manifest.webmanifest" />
-    </head>
-    <style type="text/css">
-        .collapsed > .menu-items {
-            height: 0px;
-            overflow: hidden;
-        }
+		<link
+			rel="stylesheet"
+			href="../index.css"
+			array="files"
+			object="637bc8fe91249e639db315d9"
+			key="src"
+			type="text/css" />
+		<link rel="manifest" href="./manifest.webmanifest" />
+	</head>
+	<style type="text/css">
+		.collapsed > .menu-items {
+			height: 0px;
+			overflow: hidden;
+		}
 
-        .menu-item.active {
-            height: 100%;
-        }
+		.menu-item.active {
+			height: 100%;
+		}
 
-        .collapsed > .menu-item-types {
-            height: 0px;
-            overflow: hidden;
-        }
+		.collapsed > .menu-item-types {
+			height: 0px;
+			overflow: hidden;
+		}
 
-        .menu-item-type.active {
-            height: 100%;
-        }
+		.menu-item-type.active {
+			height: 100%;
+		}
 
-        .tab-type[selected] {
-            background: #3790ff;
-        }
+		.tab-type[selected] {
+			background: #3790ff;
+		}
 
-        .tab[selected] {
-            background: whitesmoke;
-        }
+		.tab[selected] {
+			background: whitesmoke;
+		}
 
-        .collapsed > .code-editor {
-            height: 0px;
-            overflow: hidden;
-        }
+		.collapsed > .code-editor {
+			height: 0px;
+			overflow: hidden;
+		}
 
-        .codemirror.active {
-            height: 100%;
-        }
+		.codemirror.active {
+			height: 100%;
+		}
 
-        .CodeMirror {
-            height: calc(100vh - 115px);
-        }
-    </style>
+		.CodeMirror {
+			height: calc(100vh - 115px);
+		}
+	</style>
 
-    <body>
-        <!-- Modal Viewport -->
-        <div id="modal-viewport" hidden></div>
+	<body>
+		<!-- Modal Viewport -->
+		<div id="modal-viewport" hidden></div>
 
-        <!-- Navbar -->
-        <nav
-            class="nav display:flex align-items:center background:whitesmoke"
-            content_id="content"
-            scroll="sticky-nav, hide-nav"
-            scroll-up="5"
-            scroll-down="5">
-            <!-- Horizontal Scroll Nav/Tabs -->
-            <ul
-                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-                <!-- Modal Controls -->
-                <li class="margin-right:15px">
-                    <a actions="closeModal"
-                        ><i class="height:18px" src="./assets/svg/times.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="minMaxModal">
-                        <i
-                            toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
-                            toggle-attribute="src"
-                            class="height:18px"
-                            src="./assets/svg/window-maximize.svg"></i>
-                    </a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="parkModal"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/window-minimize.svg"></i
-                    ></a>
-                </li>
+		<!-- Navbar -->
+		<nav
+			class="nav display:flex align-items:center background:whitesmoke"
+			content_id="content"
+			scroll="sticky-nav, hide-nav"
+			scroll-up="5"
+			scroll-down="5">
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul
+				class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				<!-- Modal Controls -->
+				<li class="margin-right:15px">
+					<a actions="closeModal"
+						><i class="height:18px" src="./assets/svg/times.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i
+							toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+							toggle-attribute="src"
+							class="height:18px"
+							src="./assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="parkModal"
+						><i
+							class="height:18px"
+							src="./assets/svg/window-minimize.svg"></i
+					></a>
+				</li>
 
-                <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i
+							class="height:18px"
+							src="./assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="./assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Module Form -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/form.html"
-                        modal-width="320px">
-                        <i class="height:18px" src="./assets/svg/cog.svg"></i>
-                        <div
-                            state_id="module-form"
-                            state-array="modules"
-                            state-object="5ff747727005da1c27274190"
-                            state_to="form-fields"></div>
-                        <div
-                            state_id="datatable"
-                            state-filter-value="5ff747727005da1c27274190"
-                            state_to="module_id"></div>
-                    </a>
-                </li>
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./modules/form.html"
+						modal-width="320px">
+						<i class="height:18px" src="./assets/svg/cog.svg"></i>
+						<div
+							state_id="module-form"
+							state-array="modules"
+							state-object="5ff747727005da1c27274190"
+							state_to="form-fields"></div>
+						<div
+							state_id="datatable"
+							state-filter-value="5ff747727005da1c27274190"
+							state_to="module_id"></div>
+					</a>
+				</li>
 
-                <!-- Render Code Editor -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./code-editor/index.html">
-                        <i class="height:18px" src="./assets/svg/code.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="code-editor"></div>
-                    </a>
-                </li>
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./code-editor/index.html">
+						<i class="height:18px" src="./assets/svg/code.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="code-editor"></div>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./builder/index.html">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/palette.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="builder"></div>
-                    </a>
-                </li>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./builder/index.html">
+						<i
+							class="height:18px"
+							src="./assets/svg/palette.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="builder"></div>
+					</a>
+				</li>
 
-                <!-- deleteDocument-->
-                <li class="margin-right:15px">
-                    <a
-                        actions="deleteDocument, closeModal"
-                        array="modules"
-                        object=""
-                        state_id="form-fields">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/trash-alt.svg"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+				<!-- deleteDocument-->
+				<li class="margin-right:15px">
+					<a
+						actions="deleteDocument, closeModal"
+						array="modules"
+						object=""
+						state_id="form-fields">
+						<i
+							class="height:18px"
+							src="./assets/svg/trash-alt.svg"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
 
-        <!-- Main Content -->
-        <main class="padding:10px" content_id="content">
-            <form state_id="form-fields" array="modules" object="" id="form">
-                <input
-                    type="text"
-                    key="name"
-                    input-selector=".name"
-                    input-attribute="value"
-                    input-events="input, onload"
-                    placeholder="Module Name"
-                    class="floating-label" />
-                <input
-                    type="hidden"
-                    key="_id"
-                    input-selector=".module_id"
-                    input-key="module_id" />
-                <input
-                    type="text"
-                    key="description"
-                    id="description"
-                    placeholder="Description"
-                    class="floating-label" />
-                <input
-                    type="text"
-                    key="icon"
-                    id="icon"
-                    placeholder="Icon"
-                    class="floating-label" />
-                <!--<input type="text" key="directory" id="directory" placeholder="Directory" class="floating-label" />-->
+		<!-- Main Content -->
+		<main class="padding:10px" content_id="content">
+			<form state_id="form-fields" array="modules" object="" id="form">
+				<input
+					type="text"
+					key="name"
+					input-selector=".name"
+					input-attribute="value"
+					input-events="input, onload"
+					placeholder="Module Name"
+					class="floating-label" />
+				<input
+					type="hidden"
+					key="_id"
+					input-selector=".module_id"
+					input-key="module_id" />
+				<input
+					type="text"
+					key="description"
+					id="description"
+					placeholder="Description"
+					class="floating-label" />
+				<input
+					type="text"
+					key="icon"
+					id="icon"
+					placeholder="Icon"
+					class="floating-label" />
+				<!--<input type="text" key="directory" id="directory" placeholder="Directory" class="floating-label" />-->
 
-                <!-- menu items -->
-                <div class="card padding:10px_5px margin-top:10px collapsed">
-                    <div class="display:flex padding:0_10px font-size:18px">
-                        <span class="flex-grow:1">Menu Items</span>
-                        <a
-                            toggle="collapsed"
-                            toggle-closest=".card"
-                            show="#menu-up, #menu-down"
-                            hide="#menu-down, #menu-up"
-                            state-array="files"
-                            state_to="module_id">
-                            <i
-                                id="menu-down"
-                                class="height:18px"
-                                src="./assets/svg/angle-down.svg"></i>
-                            <i
-                                id="menu-up"
-                                class="height:18px"
-                                src="./assets/svg/angle-up.svg"
-                                hidden></i>
-                        </a>
-                    </div>
+				<!-- menu items -->
+				<div class="card padding:10px_5px margin-top:10px collapsed">
+					<div class="display:flex padding:0_10px font-size:18px">
+						<span class="flex-grow:1">Menu Items</span>
+						<a
+							toggle="collapsed"
+							toggle-closest=".card"
+							show="#menu-up, #menu-down"
+							hide="#menu-down, #menu-up"
+							state-array="files"
+							state_to="module_id">
+							<i
+								id="menu-down"
+								class="height:18px"
+								src="./assets/svg/angle-down.svg"></i>
+							<i
+								id="menu-up"
+								class="height:18px"
+								src="./assets/svg/angle-up.svg"
+								hidden></i>
+						</a>
+					</div>
 
-                    <div class="menu-items">
-                        <div
-                            class="margin-top:10px display:flex tabs border-bottom:5px_solid_whitesmoke">
-                            <div
-                                class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab"
-                                selected-value="active"
-                                selected-selector="#navbar-menu"
-                                selected-group="menu-items"
-                                selected>
-                                Navbar
-                            </div>
-                            <div
-                                class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab"
-                                selected-value="active"
-                                selected-selector="#main-menu"
-                                selected-group="menu-items">
-                                Menu
-                            </div>
-                            <div
-                                class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab"
-                                selected-value="active"
-                                selected-selector="#settings-menu"
-                                selected-group="menu-items">
-                                Settings
-                            </div>
-                        </div>
-                        <div class="padding:5px background:whitesmoke">
-                            <div
-                                id="navbar-menu"
-                                class="menu-item overflow:hidden height:0px active">
-                                <div
-                                    id="navbar-menu-primary"
-                                    class="menu-item-type overflow:hidden height:0px active">
-                                    <cocreate-select
-                                        key="navbar-menu-primary"
-                                        placeholder="Primary View"
-                                        class="floating-label"
-                                        sortable
-                                        value-type="object">
-                                        <input
-                                            placeholder="Search"
-                                            filter-parent="[render-selector]"
-                                            filter-search />
+					<div class="menu-items">
+						<div
+							class="margin-top:10px display:flex tabs border-bottom:5px_solid_whitesmoke">
+							<div
+								class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab"
+								selected-value="active"
+								selected-selector="#navbar-menu"
+								selected-group="menu-items"
+								selected>
+								Navbar
+							</div>
+							<div
+								class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab"
+								selected-value="active"
+								selected-selector="#main-menu"
+								selected-group="menu-items">
+								Menu
+							</div>
+							<div
+								class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab"
+								selected-value="active"
+								selected-selector="#settings-menu"
+								selected-group="menu-items">
+								Settings
+							</div>
+						</div>
+						<div class="padding:5px background:whitesmoke">
+							<div
+								id="navbar-menu"
+								class="menu-item overflow:hidden height:0px active">
+								<div
+									id="navbar-menu-primary"
+									class="menu-item-type overflow:hidden height:0px active">
+									<cocreate-select
+										key="navbar-menu-primary"
+										placeholder="Primary View"
+										class="floating-label"
+										sortable
+										value-type="object">
+										<input
+											placeholder="Search"
+											filter-parent="[render-selector]"
+											filter-search />
 
-                                        <div
-                                            filter-parent="[render-selector]"
-                                            filter-key="module_id"
-                                            filter-value=""
-                                            filter-operator="$ne"></div>
-                                        <cc-options
-                                            state_id="module_id"
-                                            array=""
-                                            object
-                                            filter-key="module_id"
-                                            filter-value="{{module_id}}"
-                                            filter-operator="$eq"
-                                            render-selector="[template]"
-                                            class="overflow:auto module_id">
-                                            <cc-option
-                                                template
-                                                value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
-                                                object="{{object._id}}">
-                                                <span>{{object.path}}</span>
-                                            </cc-option>
-                                        </cc-options>
-                                    </cocreate-select>
-                                    <!-- <input type="hidden" array="files" object="{{object.navbar-menu-primary}}" key="path" input-selector="#navbar-menu-primary">
+										<div
+											filter-parent="[render-selector]"
+											filter-query-key="module_id.$ne"
+											filter-query-value=""></div>
+										<cc-options
+											state_id="module_id"
+											array=""
+											object
+											filter-query-key="module_id.$eq"
+											filter-query-value="{{module_id}}"
+											render-selector="[template]"
+											class="overflow:auto module_id">
+											<cc-option
+												template
+												value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
+												object="{{object._id}}">
+												<span>{{object.path}}</span>
+											</cc-option>
+										</cc-options>
+									</cocreate-select>
+									<!-- <input type="hidden" array="files" object="{{object.navbar-menu-primary}}" key="path" input-selector="#navbar-menu-primary">
 									<input id="navbar-menu-primary" type="text" state_id="form-fields" array object key="navbar-menu-primary-path"./> -->
 
-                                    <div
-                                        class="display:flex justify-content:space-between">
-                                        <div class="width:48%">
-                                            <input
-                                                type="number"
-                                                key="navbar-menu-position"
-                                                placeholder="Menu Position"
-                                                class="floating-label" />
-                                        </div>
-                                        <div class="width:48%">
-                                            <input
-                                                type="color"
-                                                key="navbar-modal-primary-color"
-                                                placeholder="Modal Color"
-                                                class="floating-label" />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="display:flex justify-content:space-between">
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="navbar-modal-primary-width"
-                                                placeholder="Modal Width"
-                                                class="floating-label" />
-                                        </div>
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="navbar-modal-primary-height"
-                                                placeholder="Modal Height"
-                                                class="floating-label" />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="display:flex justify-content:space-between">
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="navbar-modal-primary-x"
-                                                placeholder="Modal x"
-                                                class="floating-label" />
-                                        </div>
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="navbar-modal-primary-y"
-                                                placeholder="Modal y"
-                                                class="floating-label" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                id="main-menu"
-                                class="menu-item overflow:hidden height:0px">
-                                <div class="margin-top:10px display:flex tabs">
-                                    <div
-                                        class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type"
-                                        selected-value="active"
-                                        selected-selector="#main-menu-primary"
-                                        selected-group="main-menu-item"
-                                        selected>
-                                        Primary
-                                    </div>
-                                    <div
-                                        class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type"
-                                        selected-value="active"
-                                        selected-selector="#main-menu-secondary"
-                                        selected-group="main-menu-item">
-                                        Secondary
-                                    </div>
-                                </div>
-                                <div
-                                    id="main-menu-primary"
-                                    class="menu-item-type overflow:hidden height:0px active">
-                                    <cocreate-select
-                                        class="floating-label"
-                                        sortable
-                                        placeholder="Primary View"
-                                        key="main-menu-primary"
-                                        value-type="object">
-                                        <input
-                                            placeholder="Search"
-                                            filter-parent="[render-selector]"
-                                            filter-search />
-                                        <div
-                                            filter-key="module_id"
-                                            filter-value=""
-                                            filter-operator="$ne"
-                                            filter-parent="[render-selector]"></div>
-                                        <cc-options
-                                            state_id="module_id"
-                                            array=""
-                                            object
-                                            filter-key="module_id"
-                                            filter-value="{{module_id}}"
-                                            filter-operator="$eq"
-                                            render-selector="[template]"
-                                            class="overflow:auto module_id">
-                                            <cc-option
-                                                template
-                                                value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
-                                                object="{{object._id}}">
-                                                <span>{{object.path}}</span>
-                                            </cc-option>
-                                        </cc-options>
-                                    </cocreate-select>
-                                    <div
-                                        class="display:flex justify-content:space-between">
-                                        <div class="width:48%">
-                                            <input
-                                                type="number"
-                                                key="main-menu-position"
-                                                placeholder="Menu Position"
-                                                class="floating-label" />
-                                        </div>
-                                        <div class="width:48%">
-                                            <input
-                                                type="color"
-                                                key="main-modal-primary-color"
-                                                placeholder="Modal Color"
-                                                class="floating-label" />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="display:flex justify-content:space-between">
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="main-modal-primary-width"
-                                                placeholder="Modal Width"
-                                                class="floating-label" />
-                                        </div>
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="main-modal-primary-height"
-                                                placeholder="Modal Height"
-                                                class="floating-label" />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="display:flex justify-content:space-between">
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="main-modal-primary-x"
-                                                placeholder="Modal x"
-                                                class="floating-label" />
-                                        </div>
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="main-modal-primary-y"
-                                                placeholder="Modal y"
-                                                class="floating-label" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    id="main-menu-secondary"
-                                    class="menu-item-type overflow:hidden height:0px">
-                                    <cocreate-select
-                                        class="floating-label"
-                                        sortable
-                                        placeholder="Secondary View"
-                                        key="main-menu-secondary"
-                                        value-type="object">
-                                        <input
-                                            placeholder="Search"
-                                            filter-parent="[render-selector]"
-                                            filter-search
-                                            tags="true" />
-                                        <div
-                                            filter-key="module_id"
-                                            filter-value=""
-                                            filter-operator="$ne"
-                                            filter-parent="[render-selector]"></div>
-                                        <cc-options
-                                            state_id="module_id"
-                                            array=""
-                                            object
-                                            filter-key="module_id"
-                                            filter-value="{{module_id}}"
-                                            filter-operator="$eq"
-                                            render-selector="[template]"
-                                            class="overflow:auto module_id">
-                                            <cc-option
-                                                template
-                                                value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
-                                                object="{{object._id}}">
-                                                <span>{{object.path}}</span>
-                                            </cc-option>
-                                        </cc-options>
-                                    </cocreate-select>
-                                    <input
-                                        type="color"
-                                        key="main-modal-secondary-color"
-                                        placeholder="Modal Color"
-                                        class="floating-label" />
-                                    <div
-                                        class="display:flex justify-content:space-between">
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="main-modal-secondary-width"
-                                                placeholder="Modal Width"
-                                                class="floating-label" />
-                                        </div>
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="main-modal-secondary-height"
-                                                placeholder="Modal Height"
-                                                class="floating-label" />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="display:flex justify-content:space-between">
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="main-modal-secondary-x"
-                                                placeholder="Modal x"
-                                                class="floating-label" />
-                                        </div>
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="main-modal-secondary-y"
-                                                placeholder="Modal y"
-                                                class="floating-label" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                id="settings-menu"
-                                class="menu-item overflow:hidden height:0px">
-                                <div class="margin-top:10px display:flex tabs">
-                                    <div
-                                        class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type"
-                                        selected-value="active"
-                                        selected-selector="#settings-menu-primary"
-                                        selected-group="settings-menu-item"
-                                        selected>
-                                        Primary
-                                    </div>
-                                    <div
-                                        class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type"
-                                        selected-value="active"
-                                        selected-selector="#settings-menu-secondary"
-                                        selected-group="settings-menu-item">
-                                        Secondary
-                                    </div>
-                                </div>
-                                <div
-                                    id="settings-menu-primary"
-                                    class="menu-item-type overflow:hidden height:0px active">
-                                    <cocreate-select
-                                        class="floating-label"
-                                        sortable
-                                        placeholder="Primary View"
-                                        key="settings-menu-primary"
-                                        value-type="object">
-                                        <input
-                                            placeholder="Search"
-                                            filter-parent="[render-selector]"
-                                            filter-search />
-                                        <div
-                                            filter-key="module_id"
-                                            filter-value=""
-                                            filter-operator="$ne"
-                                            filter-parent="[render-selector]"></div>
-                                        <cc-options
-                                            state_id="module_id"
-                                            array=""
-                                            object
-                                            filter-key="module_id"
-                                            filter-value="{{module_id}}"
-                                            filter-operator="$eq"
-                                            render-selector="[template]"
-                                            class="overflow:auto module_id">
-                                            <cc-option
-                                                template
-                                                value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
-                                                object="{{object._id}}">
-                                                <span>{{object.path}}</span>
-                                            </cc-option>
-                                        </cc-options>
-                                    </cocreate-select>
-                                    <div
-                                        class="display:flex justify-content:space-between">
-                                        <div class="width:48%">
-                                            <input
-                                                type="number"
-                                                key="settings-menu-position"
-                                                placeholder="Menu Position"
-                                                class="floating-label" />
-                                        </div>
-                                        <div class="width:48%">
-                                            <input
-                                                type="color"
-                                                key="settings-modal-primary-color"
-                                                placeholder="Modal Color"
-                                                class="floating-label" />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="display:flex justify-content:space-between">
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="settings-modal-primary-width"
-                                                placeholder="Modal Width"
-                                                class="floating-label" />
-                                        </div>
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="settings-modal-primary-height"
-                                                placeholder="Modal Height"
-                                                class="floating-label" />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="display:flex justify-content:space-between">
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="settings-modal-primary-x"
-                                                placeholder="Modal x"
-                                                class="floating-label" />
-                                        </div>
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="settings-modal-primary-y"
-                                                placeholder="Modal y"
-                                                class="floating-label" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    id="settings-menu-secondary"
-                                    class="menu-item-type overflow:hidden height:0px">
-                                    <cocreate-select
-                                        class="floating-label"
-                                        sortable
-                                        placeholder="Secondary View"
-                                        key="settings-menu-secondary"
-                                        value-type="object">
-                                        <input
-                                            placeholder="Search"
-                                            filter-parent="[render-selector]"
-                                            filter-search
-                                            tags="true" />
-                                        <div
-                                            filter-key="module_id"
-                                            filter-value=""
-                                            filter-operator="$ne"
-                                            filter-parent="[render-selector]"></div>
-                                        <cc-options
-                                            state_id="module_id"
-                                            array=""
-                                            object
-                                            filter-key="module_id"
-                                            filter-value="{{module_id}}"
-                                            filter-operator="$eq"
-                                            render-selector="[template]"
-                                            class="overflow:auto module_id">
-                                            <cc-option
-                                                template
-                                                value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
-                                                object="{{object._id}}">
-                                                <span>{{object.path}}</span>
-                                            </cc-option>
-                                        </cc-options>
-                                    </cocreate-select>
-                                    <input
-                                        type="color"
-                                        key="settings-modal-secondary-color"
-                                        placeholder="Modal Color"
-                                        class="floating-label" />
-                                    <div
-                                        class="display:flex justify-content:space-between">
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="settings-modal-secondary-width"
-                                                placeholder="Modal Width"
-                                                class="floating-label" />
-                                        </div>
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="settings-modal-secondary-height"
-                                                placeholder="Modal Height"
-                                                class="floating-label" />
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="display:flex justify-content:space-between">
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="settings-modal-secondary-x"
-                                                placeholder="Modal x"
-                                                class="floating-label" />
-                                        </div>
-                                        <div class="width:48%">
-                                            <input
-                                                type="text"
-                                                key="settings-modal-secondary-y"
-                                                placeholder="Modal y"
-                                                class="floating-label" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button
-                    actions="save"
-                    class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
-                    <i src="./assets/svg/save.svg"></i>
-                </button>
-            </form>
+									<div
+										class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input
+												type="number"
+												key="navbar-menu-position"
+												placeholder="Menu Position"
+												class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input
+												type="color"
+												key="navbar-modal-primary-color"
+												placeholder="Modal Color"
+												class="floating-label" />
+										</div>
+									</div>
+									<div
+										class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input
+												type="text"
+												key="navbar-modal-primary-width"
+												placeholder="Modal Width"
+												class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input
+												type="text"
+												key="navbar-modal-primary-height"
+												placeholder="Modal Height"
+												class="floating-label" />
+										</div>
+									</div>
+									<div
+										class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input
+												type="text"
+												key="navbar-modal-primary-x"
+												placeholder="Modal x"
+												class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input
+												type="text"
+												key="navbar-modal-primary-y"
+												placeholder="Modal y"
+												class="floating-label" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div
+								id="main-menu"
+								class="menu-item overflow:hidden height:0px">
+								<div class="margin-top:10px display:flex tabs">
+									<div
+										class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type"
+										selected-value="active"
+										selected-selector="#main-menu-primary"
+										selected-group="main-menu-item"
+										selected>
+										Primary
+									</div>
+									<div
+										class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type"
+										selected-value="active"
+										selected-selector="#main-menu-secondary"
+										selected-group="main-menu-item">
+										Secondary
+									</div>
+								</div>
+								<div
+									id="main-menu-primary"
+									class="menu-item-type overflow:hidden height:0px active">
+									<cocreate-select
+										class="floating-label"
+										sortable
+										placeholder="Primary View"
+										key="main-menu-primary"
+										value-type="object">
+										<input
+											placeholder="Search"
+											filter-parent="[render-selector]"
+											filter-search />
+										<div
+											filter-query-key="module_id.$ne"
+											filter-query-value=""
+											filter-parent="[render-selector]"></div>
+										<cc-options
+											state_id="module_id"
+											array=""
+											object
+											filter-query-key="module_id.$eq"
+											filter-query-value="{{module_id}}"
+											render-selector="[template]"
+											class="overflow:auto module_id">
+											<cc-option
+												template
+												value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
+												object="{{object._id}}">
+												<span>{{object.path}}</span>
+											</cc-option>
+										</cc-options>
+									</cocreate-select>
+									<div
+										class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input
+												type="number"
+												key="main-menu-position"
+												placeholder="Menu Position"
+												class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input
+												type="color"
+												key="main-modal-primary-color"
+												placeholder="Modal Color"
+												class="floating-label" />
+										</div>
+									</div>
+									<div
+										class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input
+												type="text"
+												key="main-modal-primary-width"
+												placeholder="Modal Width"
+												class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input
+												type="text"
+												key="main-modal-primary-height"
+												placeholder="Modal Height"
+												class="floating-label" />
+										</div>
+									</div>
+									<div
+										class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input
+												type="text"
+												key="main-modal-primary-x"
+												placeholder="Modal x"
+												class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input
+												type="text"
+												key="main-modal-primary-y"
+												placeholder="Modal y"
+												class="floating-label" />
+										</div>
+									</div>
+								</div>
+								<div
+									id="main-menu-secondary"
+									class="menu-item-type overflow:hidden height:0px">
+									<cocreate-select
+										class="floating-label"
+										sortable
+										placeholder="Secondary View"
+										key="main-menu-secondary"
+										value-type="object">
+										<input
+											placeholder="Search"
+											filter-parent="[render-selector]"
+											filter-search
+											tags="true" />
+										<div
+											filter-query-key="module_id.$ne"
+											filter-query-value=""
+											filter-parent="[render-selector]"></div>
+										<cc-options
+											state_id="module_id"
+											array=""
+											object
+											filter-query-key="module_id.$eq"
+											filter-query-value="{{module_id}}"
+											render-selector="[template]"
+											class="overflow:auto module_id">
+											<cc-option
+												template
+												value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
+												object="{{object._id}}">
+												<span>{{object.path}}</span>
+											</cc-option>
+										</cc-options>
+									</cocreate-select>
+									<input
+										type="color"
+										key="main-modal-secondary-color"
+										placeholder="Modal Color"
+										class="floating-label" />
+									<div
+										class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input
+												type="text"
+												key="main-modal-secondary-width"
+												placeholder="Modal Width"
+												class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input
+												type="text"
+												key="main-modal-secondary-height"
+												placeholder="Modal Height"
+												class="floating-label" />
+										</div>
+									</div>
+									<div
+										class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input
+												type="text"
+												key="main-modal-secondary-x"
+												placeholder="Modal x"
+												class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input
+												type="text"
+												key="main-modal-secondary-y"
+												placeholder="Modal y"
+												class="floating-label" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div
+								id="settings-menu"
+								class="menu-item overflow:hidden height:0px">
+								<div class="margin-top:10px display:flex tabs">
+									<div
+										class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type"
+										selected-value="active"
+										selected-selector="#settings-menu-primary"
+										selected-group="settings-menu-item"
+										selected>
+										Primary
+									</div>
+									<div
+										class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type"
+										selected-value="active"
+										selected-selector="#settings-menu-secondary"
+										selected-group="settings-menu-item">
+										Secondary
+									</div>
+								</div>
+								<div
+									id="settings-menu-primary"
+									class="menu-item-type overflow:hidden height:0px active">
+									<cocreate-select
+										class="floating-label"
+										sortable
+										placeholder="Primary View"
+										key="settings-menu-primary"
+										value-type="object">
+										<input
+											placeholder="Search"
+											filter-parent="[render-selector]"
+											filter-search />
+										<div
+											filter-query-key="module_id.$ne"
+											filter-query-value=""
+											filter-parent="[render-selector]"></div>
+										<cc-options
+											state_id="module_id"
+											array=""
+											object
+											filter-query-key="module_id.$eq"
+											filter-query-value="{{module_id}}"
+											render-selector="[template]"
+											class="overflow:auto module_id">
+											<cc-option
+												template
+												value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
+												object="{{object._id}}">
+												<span>{{object.path}}</span>
+											</cc-option>
+										</cc-options>
+									</cocreate-select>
+									<div
+										class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input
+												type="number"
+												key="settings-menu-position"
+												placeholder="Menu Position"
+												class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input
+												type="color"
+												key="settings-modal-primary-color"
+												placeholder="Modal Color"
+												class="floating-label" />
+										</div>
+									</div>
+									<div
+										class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input
+												type="text"
+												key="settings-modal-primary-width"
+												placeholder="Modal Width"
+												class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input
+												type="text"
+												key="settings-modal-primary-height"
+												placeholder="Modal Height"
+												class="floating-label" />
+										</div>
+									</div>
+									<div
+										class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input
+												type="text"
+												key="settings-modal-primary-x"
+												placeholder="Modal x"
+												class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input
+												type="text"
+												key="settings-modal-primary-y"
+												placeholder="Modal y"
+												class="floating-label" />
+										</div>
+									</div>
+								</div>
+								<div
+									id="settings-menu-secondary"
+									class="menu-item-type overflow:hidden height:0px">
+									<cocreate-select
+										class="floating-label"
+										sortable
+										placeholder="Secondary View"
+										key="settings-menu-secondary"
+										value-type="object">
+										<input
+											placeholder="Search"
+											filter-parent="[render-selector]"
+											filter-search
+											tags="true" />
+										<div
+											filter-query-key="module_id.$ne"
+											filter-query-value=""
+											filter-parent="[render-selector]"></div>
+										<cc-options
+											state_id="module_id"
+											array=""
+											object
+											filter-query-key="module_id.$eq"
+											filter-query-value="{{module_id}}"
+											render-selector="[template]"
+											class="overflow:auto module_id">
+											<cc-option
+												template
+												value="{'_id':'{{object._id}}','name':'{{object.name}}','path':'{{object.path}}','parentDirectory':'{{object.parentDirectory}}'}"
+												object="{{object._id}}">
+												<span>{{object.path}}</span>
+											</cc-option>
+										</cc-options>
+									</cocreate-select>
+									<input
+										type="color"
+										key="settings-modal-secondary-color"
+										placeholder="Modal Color"
+										class="floating-label" />
+									<div
+										class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input
+												type="text"
+												key="settings-modal-secondary-width"
+												placeholder="Modal Width"
+												class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input
+												type="text"
+												key="settings-modal-secondary-height"
+												placeholder="Modal Height"
+												class="floating-label" />
+										</div>
+									</div>
+									<div
+										class="display:flex justify-content:space-between">
+										<div class="width:48%">
+											<input
+												type="text"
+												key="settings-modal-secondary-x"
+												placeholder="Modal x"
+												class="floating-label" />
+										</div>
+										<div class="width:48%">
+											<input
+												type="text"
+												key="settings-modal-secondary-y"
+												placeholder="Modal y"
+												class="floating-label" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button
+					actions="save"
+					class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
+					<i src="./assets/svg/save.svg"></i>
+				</button>
+			</form>
 
-            <section id="module-views" class="margin-bottom:75px">
-                <!-- module views -->
-                <div
-                    class="card display:flex padding:10px_15px margin-top:10px font-size:18px">
-                    <span class="flex-grow:1">Module Views</span>
-                    <a
-                        show="#module-templates"
-                        hide="#form, #module-views"
-                        state-array="files"
-                        state_to="module-templates"
-                        ><i
-                            class="height:16px"
-                            src="./assets/svg/plus-square.svg"></i
-                    ></a>
-                </div>
+			<section id="module-views" class="margin-bottom:75px">
+				<!-- module views -->
+				<div
+					class="card display:flex padding:10px_15px margin-top:10px font-size:18px">
+					<span class="flex-grow:1">Module Views</span>
+					<a
+						show="#module-templates"
+						hide="#form, #module-views"
+						state-array="files"
+						state_to="module-templates"
+						><i
+							class="height:16px"
+							src="./assets/svg/plus-square.svg"></i
+					></a>
+				</div>
 
-                <input
-                    type="hidden"
-                    filter-key="module_id"
-                    filter-value=""
-                    filter-operator="$ne"
-                    filter-next />
-                <div
-                    array="files"
-                    filter-key="module_id"
-                    filter-value="{{module_id}}"
-                    filter-operator="$eq"
-                    filter-sort-key="name"
-                    filter-sort-direction="asc"
-                    render-selector="[template]"
-                    state_id="module_id"
-                    sortable
-                    class="background:whitesmoke padding:10px module_id"
-                    dnd-group-key="files">
-                    <div
-                        template
-                        class="card padding:10px_5px background:white collapsed margin-bottom:10px"
-                        object="{{object._id}}"
-                        id="module-view{{object._id}}">
-                        <div class="display:flex padding-left:10px">
-                            <a
-                                actions="state, openModal"
-                                modal-src="./files/form.html"
-                                modal-width="320px"
-                                class="flex-grow:1 font-size:16px padding:5px_0">
-                                <p>{{object.name}}</p>
-                                <div
-                                    state-array="{{object.array}}"
-                                    state-object="{{object._id}}"
-                                    state_to="form-fields"></div>
-                                <div
-                                    state_id="form"
-                                    state-array=""
-                                    state-object=""
-                                    state-key=""
-                                    state_to="render"></div>
-                                <div
-                                    state-value="{{object.module_id}}"
-                                    state-filter-value="{{object.module_id}}"
-                                    state_to="module_id"></div>
-                                <div
-                                    state-object="{{object.module_id}}"
-                                    state_to="module-form"></div>
-                                <!--<div state-array="{{object.array}}" state-object="{{object._id}}" state-key="src" state_to="form-fields"></div>-->
-                            </a>
-                            <input
-                                type="hidden"
-                                array="{{object.array}}"
-                                object="{{object._id}}"
-                                key="module_id" />
-                            <a
-                                actions="deleteObject"
-                                array="{{object.array}}"
-                                object="{{object._id}}"
-                                class="float:right padding:5px">
-                                <i
-                                    class="height:18px"
-                                    src="./assets/svg/trash.svg"></i>
-                            </a>
-                            <a
-                                actions="state, openModal"
-                                modal-src="./builder/index.html"
-                                class="float:right padding:5px">
-                                <i
-                                    class="height:18px"
-                                    src="./assets/svg/palette.svg"></i>
-                                <div
-                                    state-array="{{object.array}}"
-                                    state-object="{{object._id}}"
-                                    state-key="src"
-                                    state_to="builder"></div>
-                            </a>
-                            <a
-                                actions="state, openModal"
-                                modal-src="./code-editor/index.html"
-                                class="float:right padding:5px">
-                                <i
-                                    class="height:18px"
-                                    src="./assets/svg/code.svg"></i>
-                                <div
-                                    state-array="{{object.array}}"
-                                    state-object="{{object._id}}"
-                                    state-key="src"
-                                    state_to="code-editor"></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section hidden id="module-templates" template_id="render-key">
-                <!-- Module form templates to state value and create clone -->
-                <div class="height:20px padding:0_10px font-size:18px">
-                    <i
-                        class="float:right"
-                        src="./assets/svg/times.svg"
-                        show="#form, #module-views"
-                        hide="#module-templates"></i>
-                </div>
-                <div
-                    filter-key="tags"
-                    filter-value="template"
-                    filter-operator="$eq"
-                    filter-next></div>
-                <div
-                    class="display:flex flex-wrap:wrap"
-                    array=""
-                    object
-                    state-overwrite="true"
-                    filter-sort-key="name"
-                    filter-sort-direction="asc"
-                    render-selector="[template]"
-                    state_id="module-templates">
-                    <div
-                        class="card min-width:250px flex-grow:1 margin:10px box-shadow-hover"
-                        template>
-                        <div class="position:relative">
-                            <img
-                                array="{{object.array}}"
-                                object="{{object._id}}"
-                                key="image"
-                                src="https://via.placeholder.com/150"
-                                width="100%" />
-                            <form realtime="false" array="files" object="">
-                                <input
-                                    type="hidden"
-                                    key="module_id"
-                                    class="module_id"
-                                    value="{{module_id}}" />
-                                <input
-                                    type="hidden"
-                                    key="website_id"
-                                    value="5ffa235ff11d2d00103c4520" />
-                                <input
-                                    type="hidden"
-                                    key="name"
-                                    value="{{object.name}}" />
-                                <input
-                                    type="checkbox"
-                                    key="domains"
-                                    value="general.cocreate.app"
-                                    hidden
-                                    checked />
-                                <input
-                                    type="checkbox"
-                                    key="domains"
-                                    value="cocreate.app"
-                                    hidden
-                                    checked />
-                                <input
-                                    type="hidden"
-                                    class="name"
-                                    render-key="name" />
-                                <input
-                                    type="hidden"
-                                    key="directory"
-                                    value="./admin/{{render-key.name}}" />
-                                <input
-                                    type="hidden"
-                                    key="path"
-                                    value="./admin/{{render-key.name}}/{{object.name}}" />
-                                <input
-                                    type="hidden"
-                                    key="content-type"
-                                    value="text/html" />
-                                <input
-                                    type="hidden"
-                                    key="public"
-                                    value="true" />
-                                <textarea
-                                    hidden
-                                    key="src"
-                                    value="{{object.src}}"></textarea>
-                                <!--<textarea hidden key="css" array="files" object="{{object.css}}" key="src"></textarea>-->
-                                <!--<textarea hidden key="js" array="files" object="{{object.js}}" key="src"></textarea>-->
-                                <button
-                                    actions="renderKey, save, reset"
-                                    show="#form, #module-views"
-                                    hide="#module-templates"
-                                    state-array="files"
-                                    state_to="module_id"
-                                    class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover">
-                                    <i src="./assets/svg/plus.svg"></i>
-                                </button>
-                            </form>
-                            <div
-                                class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">
-                                <span>{{object.name}}</span>
-                            </div>
-                        </div>
+				<input
+					type="hidden"
+					filter-query-key="module_id.$ne"
+					filter-query-value=""
+					filter-next />
+				<div
+					array="files"
+					filter-query-key="module_id.$eq"
+					filter-query-value="{{module_id}}"
+					filter-sort-key="name"
+					filter-sort-direction="asc"
+					render-selector="[template]"
+					state_id="module_id"
+					sortable
+					class="background:whitesmoke padding:10px module_id"
+					dnd-group-key="files">
+					<div
+						template
+						class="card padding:10px_5px background:white collapsed margin-bottom:10px"
+						object="{{object._id}}"
+						id="module-view{{object._id}}">
+						<div class="display:flex padding-left:10px">
+							<a
+								actions="state, openModal"
+								modal-src="./files/form.html"
+								modal-width="320px"
+								class="flex-grow:1 font-size:16px padding:5px_0">
+								<p>{{object.name}}</p>
+								<div
+									state-array="{{object.array}}"
+									state-object="{{object._id}}"
+									state_to="form-fields"></div>
+								<div
+									state_id="form"
+									state-array=""
+									state-object=""
+									state-key=""
+									state_to="render"></div>
+								<div
+									state-value="{{object.module_id}}"
+									state-filter-value="{{object.module_id}}"
+									state_to="module_id"></div>
+								<div
+									state-object="{{object.module_id}}"
+									state_to="module-form"></div>
+								<!--<div state-array="{{object.array}}" state-object="{{object._id}}" state-key="src" state_to="form-fields"></div>-->
+							</a>
+							<input
+								type="hidden"
+								array="{{object.array}}"
+								object="{{object._id}}"
+								key="module_id" />
+							<a
+								actions="deleteObject"
+								array="{{object.array}}"
+								object="{{object._id}}"
+								class="float:right padding:5px">
+								<i
+									class="height:18px"
+									src="./assets/svg/trash.svg"></i>
+							</a>
+							<a
+								actions="state, openModal"
+								modal-src="./builder/index.html"
+								class="float:right padding:5px">
+								<i
+									class="height:18px"
+									src="./assets/svg/palette.svg"></i>
+								<div
+									state-array="{{object.array}}"
+									state-object="{{object._id}}"
+									state-key="src"
+									state_to="builder"></div>
+							</a>
+							<a
+								actions="state, openModal"
+								modal-src="./code-editor/index.html"
+								class="float:right padding:5px">
+								<i
+									class="height:18px"
+									src="./assets/svg/code.svg"></i>
+								<div
+									state-array="{{object.array}}"
+									state-object="{{object._id}}"
+									state-key="src"
+									state_to="code-editor"></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section hidden id="module-templates" template_id="render-key">
+				<!-- Module form templates to state value and create clone -->
+				<div class="height:20px padding:0_10px font-size:18px">
+					<i
+						class="float:right"
+						src="./assets/svg/times.svg"
+						show="#form, #module-views"
+						hide="#module-templates"></i>
+				</div>
+				<div
+					filter-query-key="tags.$eq"
+					filter-query-value="template"
+					filter-next></div>
+				<div
+					class="display:flex flex-wrap:wrap"
+					array=""
+					object
+					state-overwrite="true"
+					filter-sort-key="name"
+					filter-sort-direction="asc"
+					render-selector="[template]"
+					state_id="module-templates">
+					<div
+						class="card min-width:250px flex-grow:1 margin:10px box-shadow-hover"
+						template>
+						<div class="position:relative">
+							<img
+								array="{{object.array}}"
+								object="{{object._id}}"
+								key="image"
+								src="https://via.placeholder.com/150"
+								width="100%" />
+							<form realtime="false" array="files" object="">
+								<input
+									type="hidden"
+									key="module_id"
+									class="module_id"
+									value="{{module_id}}" />
+								<input
+									type="hidden"
+									key="website_id"
+									value="5ffa235ff11d2d00103c4520" />
+								<input
+									type="hidden"
+									key="name"
+									value="{{object.name}}" />
+								<input
+									type="checkbox"
+									key="domains"
+									value="general.cocreate.app"
+									hidden
+									checked />
+								<input
+									type="checkbox"
+									key="domains"
+									value="cocreate.app"
+									hidden
+									checked />
+								<input
+									type="hidden"
+									class="name"
+									render-key="name" />
+								<input
+									type="hidden"
+									key="directory"
+									value="./admin/{{render-key.name}}" />
+								<input
+									type="hidden"
+									key="path"
+									value="./admin/{{render-key.name}}/{{object.name}}" />
+								<input
+									type="hidden"
+									key="content-type"
+									value="text/html" />
+								<input
+									type="hidden"
+									key="public"
+									value="true" />
+								<textarea
+									hidden
+									key="src"
+									value="{{object.src}}"></textarea>
+								<!--<textarea hidden key="css" array="files" object="{{object.css}}" key="src"></textarea>-->
+								<!--<textarea hidden key="js" array="files" object="{{object.js}}" key="src"></textarea>-->
+								<button
+									actions="renderKey, save, reset"
+									show="#form, #module-views"
+									hide="#module-templates"
+									state-array="files"
+									state_to="module_id"
+									class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover">
+									<i src="./assets/svg/plus.svg"></i>
+								</button>
+							</form>
+							<div
+								class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">
+								<span>{{object.name}}</span>
+							</div>
+						</div>
 
-                        <div class="padding:10px">
-                            <p>{{object.description}}</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+						<div class="padding:10px">
+							<p>{{object.description}}</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
-    </body>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
+	</body>
 </html>

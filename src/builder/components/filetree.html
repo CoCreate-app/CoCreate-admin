@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <div
-    class="margin-left:10px"
-    sortable
-    array="files"
-    filter-key="directory"
-    filter-value="parent"
-    filter-operator="$eq"
-    filter-sort-key="directory"
-    order_type="asc"
-    render_id="$auto"
-    render-selector=":last-child">
-    <div filter-key="content-type" filter-value="directory" filter-parent></div>
-    <!--Folder Template -->
-    <div class="padding:5px" template render="object" object="{{object._id}}">
-        <span
-            class=""
-            show="#directory{{object._id}}"
-            hide="#directory{{object._id}}"
-            toggle="fa-caret-down, fa-caret-right"
-            toggle-selector="#icon{{object._id}}">
-            <i id="icon{{object._id}}" class="fa fa-caret-right"></i>
-        </span>
-        <span
-            class="margin-left:5px"
-            array="files"
-            object="{{object._id}}"
-            key="name"
-            >Folder name</span
-        >
-        <div
-            id="directory{{object._id}}"
-            class="domEditor margin-left:10px"
-            hidden
-            array="files"
-            object="611ab5d9251afa96bd20f6cc"
-            key="src"
-            filter-value="{{object.path}}"></div>
-    </div>
+	class="margin-left:10px"
+	sortable
+	array="files"
+	filter-query-key="directory.$eq"
+	filter-query-value="parent"
+	filter-sort-key="directory"
+	order_type="asc"
+	render_id="$auto"
+	render-selector=":last-child">
+	<div
+		filter-query-key="content-type"
+		filter-query-value="directory"
+		filter-parent></div>
+	<!--Folder Template -->
+	<div class="padding:5px" template render="object" object="{{object._id}}">
+		<span
+			class=""
+			show="#directory{{object._id}}"
+			hide="#directory{{object._id}}"
+			toggle="fa-caret-down, fa-caret-right"
+			toggle-selector="#icon{{object._id}}">
+			<i id="icon{{object._id}}" class="fa fa-caret-right"></i>
+		</span>
+		<span
+			class="margin-left:5px"
+			array="files"
+			object="{{object._id}}"
+			key="name"
+			>Folder name</span
+		>
+		<div
+			id="directory{{object._id}}"
+			class="domEditor margin-left:10px"
+			hidden
+			array="files"
+			object="611ab5d9251afa96bd20f6cc"
+			key="src"
+			filter-query-value="{{object.path}}"></div>
+	</div>
 </div>
 <div
-    class="margin-left:10px"
-    sortable
-    array="files"
-    filter-key="directory"
-    filter-value="parent"
-    filter-operator="$eq"
-    filter-sort-key="directory"
-    render-selector="[template]">
-    <div
-        filter-parent
-        filter-key="content-type"
-        filter-value="text/directory"
-        filter-operator="$ne"></div>
+	class="margin-left:10px"
+	sortable
+	array="files"
+	filter-query-key="directory.$eq"
+	filter-query-value="parent"
+	filter-sort-key="directory"
+	render-selector="[template]">
+	<div
+		filter-parent
+		filter-query-key="content-type"
+		filter-query-value="text/directory.$ne"></div>
 
-    <!--File Template -->
-    <div class="padding:5px" template render="object" object="{{object._id}}">
-        <span class=""><i src="./assets/svg/html5.svg"></i></span>
-        <span
-            class="margin-left:5px"
-            array="files"
-            object="{{object._id}}"
-            key="name"></span>
-    </div>
+	<!--File Template -->
+	<div class="padding:5px" template render="object" object="{{object._id}}">
+		<span class=""><i src="./assets/svg/html5.svg"></i></span>
+		<span
+			class="margin-left:5px"
+			array="files"
+			object="{{object._id}}"
+			key="name"></span>
+	</div>
 </div>

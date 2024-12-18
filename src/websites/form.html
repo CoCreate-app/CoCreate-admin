@@ -1,397 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon.ico" />
-        <title>Website Form | CoCreate</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon.ico" />
+		<title>Website Form | CoCreate</title>
 
-        <link
-            rel="stylesheet"
-            href="../index.css"
-            array="files"
-            object="637bc8fe91249e639db315d9"
-            key="src"
-            type="text/css" />
-        <style type="text/css">
-            .collapsed > .menu-items {
-                height: 0px;
-                overflow: hidden;
-            }
+		<link
+			rel="stylesheet"
+			href="../index.css"
+			array="files"
+			object="637bc8fe91249e639db315d9"
+			key="src"
+			type="text/css" />
+		<style type="text/css">
+			.collapsed > .menu-items {
+				height: 0px;
+				overflow: hidden;
+			}
 
-            .menu-item.active {
-                height: 100%;
-            }
+			.menu-item.active {
+				height: 100%;
+			}
 
-            .tab[selected] {
-                background: whitesmoke;
-            }
-        </style>
-        <link rel="manifest" href="./manifest.webmanifest" />
-    </head>
+			.tab[selected] {
+				background: whitesmoke;
+			}
+		</style>
+		<link rel="manifest" href="./manifest.webmanifest" />
+	</head>
 
-    <body>
-        <!-- Modal Viewport -->
-        <div id="modal-viewport" hidden></div>
+	<body>
+		<!-- Modal Viewport -->
+		<div id="modal-viewport" hidden></div>
 
-        <!-- Navbar -->
-        <nav
-            class="nav display:flex align-items:center background:whitesmoke"
-            content_id="content"
-            scroll="sticky-nav, hide-nav"
-            scroll-up="5"
-            scroll-down="5">
-            <!-- Horizontal Scroll Nav/Tabs -->
-            <ul
-                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-                <!-- Modal Controls -->
-                <li class="margin-right:15px">
-                    <a actions="closeModal"
-                        ><i class="height:18px" src="./assets/svg/times.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="minMaxModal">
-                        <i
-                            toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
-                            toggle-attribute="src"
-                            class="height:18px"
-                            src="./assets/svg/window-maximize.svg"></i>
-                    </a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="parkModal"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/window-minimize.svg"></i
-                    ></a>
-                </li>
+		<!-- Navbar -->
+		<nav
+			class="nav display:flex align-items:center background:whitesmoke"
+			content_id="content"
+			scroll="sticky-nav, hide-nav"
+			scroll-up="5"
+			scroll-down="5">
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul
+				class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				<!-- Modal Controls -->
+				<li class="margin-right:15px">
+					<a actions="closeModal"
+						><i class="height:18px" src="./assets/svg/times.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i
+							toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+							toggle-attribute="src"
+							class="height:18px"
+							src="./assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="parkModal"
+						><i
+							class="height:18px"
+							src="./assets/svg/window-minimize.svg"></i
+					></a>
+				</li>
 
-                <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i
+							class="height:18px"
+							src="./assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="./assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Module Form -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/form.html"
-                        modal-width="320px">
-                        <i class="height:18px" src="./assets/svg/cog.svg"></i>
-                        <div
-                            state_id="module-form"
-                            state-array="modules"
-                            state-object=""
-                            state_to="form-fields"></div>
-                        <div
-                            state_id="module_id"
-                            state-filter-value=""
-                            state_to="module_id"></div>
-                    </a>
-                </li>
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./modules/form.html"
+						modal-width="320px">
+						<i class="height:18px" src="./assets/svg/cog.svg"></i>
+						<div
+							state_id="module-form"
+							state-array="modules"
+							state-object=""
+							state_to="form-fields"></div>
+						<div
+							state_id="module_id"
+							state-filter-query-value=""
+							state_to="module_id"></div>
+					</a>
+				</li>
 
-                <!-- Render Code Editor -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./code-editor/index.html">
-                        <i class="height:18px" src="./assets/svg/code.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="code-editor"></div>
-                    </a>
-                </li>
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./code-editor/index.html">
+						<i class="height:18px" src="./assets/svg/code.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="code-editor"></div>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./builder/index.html">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/palette.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="builder"></div>
-                    </a>
-                </li>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./builder/index.html">
+						<i
+							class="height:18px"
+							src="./assets/svg/palette.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="builder"></div>
+					</a>
+				</li>
 
-                <!-- deleteDocument-->
-                <li class="margin-right:15px">
-                    <a
-                        actions="deleteDocument, closeModal"
-                        array="module_activities"
-                        object=""
-                        state_id="form-fields">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/trash-alt.svg"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <main class="padding:10px" content_id="content">
-            <form
-                state_id="form-fields"
-                array="module_activities"
-                object=""
-                id="form">
-                <input
-                    type="text"
-                    key="name"
-                    id="name"
-                    placeholder="Website Name"
-                    class="floating-label" />
-                <input
-                    type="hidden"
-                    key="module_id"
-                    state_id="module_id"
-                    value />
-                <input
-                    type="hidden"
-                    key="_id"
-                    input-selector=".website_id"
-                    input-attribute="value"
-                    input-events="input, onload" />
-                <input
-                    type="text"
-                    key="description"
-                    id="description"
-                    placeholder="Description"
-                    class="floating-label" />
-                <input
-                    type="text"
-                    key="image"
-                    placeholder="Preview"
-                    class="floating-label" />
-                <cocreate-select
-                    sortable
-                    class="floating-label"
-                    key="home"
-                    placeholder="Home Page">
-                    <input
-                        placeholder="Search"
-                        filter-parent="array"
-                        filter-search />
-                    <cc-options
-                        array=""
-                        object
-                        filter-key=""
-                        filter-value=""
-                        filter-sort-key="name"
-                        filter-sort-direction="asc"
-                        render-selector="[template]"
-                        state_id="website_id"
-                        class="overflow:auto">
-                        <cc-option template>
-                            <h3
-                                array="{{object.array}}"
-                                object="{{object._id}}"
-                                key="path"></h3>
-                        </cc-option>
-                    </cc-options>
-                </cocreate-select>
-                <button
-                    actions="save"
-                    class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
-                    <i src="./assets/svg/save.svg"></i>
-                </button>
-            </form>
+				<!-- deleteDocument-->
+				<li class="margin-right:15px">
+					<a
+						actions="deleteDocument, closeModal"
+						array="module_activities"
+						object=""
+						state_id="form-fields">
+						<i
+							class="height:18px"
+							src="./assets/svg/trash-alt.svg"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<main class="padding:10px" content_id="content">
+			<form
+				state_id="form-fields"
+				array="module_activities"
+				object=""
+				id="form">
+				<input
+					type="text"
+					key="name"
+					id="name"
+					placeholder="Website Name"
+					class="floating-label" />
+				<input
+					type="hidden"
+					key="module_id"
+					state_id="module_id"
+					value />
+				<input
+					type="hidden"
+					key="_id"
+					input-selector=".website_id"
+					input-attribute="value"
+					input-events="input, onload" />
+				<input
+					type="text"
+					key="description"
+					id="description"
+					placeholder="Description"
+					class="floating-label" />
+				<input
+					type="text"
+					key="image"
+					placeholder="Preview"
+					class="floating-label" />
+				<cocreate-select
+					sortable
+					class="floating-label"
+					key="home"
+					placeholder="Home Page">
+					<input
+						placeholder="Search"
+						filter-parent="array"
+						filter-search />
+					<cc-options
+						array=""
+						object
+						filter-query-key=""
+						filter-query-value=""
+						filter-sort-key="name"
+						filter-sort-direction="asc"
+						render-selector="[template]"
+						state_id="website_id"
+						class="overflow:auto">
+						<cc-option template>
+							<h3
+								array="{{object.array}}"
+								object="{{object._id}}"
+								key="path"></h3>
+						</cc-option>
+					</cc-options>
+				</cocreate-select>
+				<button
+					actions="save"
+					class="position:absolute bottom:15px right:15px background:dodgerblue grow-hover border-radius:50% padding:15px">
+					<i src="./assets/svg/save.svg"></i>
+				</button>
+			</form>
 
-            <section id="website-pages">
-                <!-- Website Pages -->
-                <div
-                    class="card display:flex padding:10px_15px margin-top:10px font-size:18px">
-                    <span class="flex-grow:1">Website Pages</span>
-                    <a
-                        show="#page-templates"
-                        hide="#form, #website-pages"
-                        state-array="files"
-                        state_to="page-templates"
-                        ><i
-                            class="height:16px"
-                            src="./assets/svg/plus-square.svg"></i
-                    ></a>
-                </div>
-                <!--<input type="hidden" filter-key="module-view" filter-value="module-view" render-next>-->
-                <div
-                    array=""
-                    object
-                    filter-key=""
-                    filter-value=""
-                    filter-operator="$eq"
-                    filter-sort-key="name"
-                    filter-sort-direction="asc"
-                    render-selector="[template]"
-                    state_id="website_id"
-                    sortable
-                    class="background:whitesmoke padding:10px"
-                    dnd-group-key="website-pages">
-                    <div
-                        template
-                        class="card padding:10px_5px background:white collapsed margin-bottom:10px"
-                        object="{{object._id}}"
-                        id="module-view{{object._id}}">
-                        <div class="display:flex padding-left:10px">
-                            <a
-                                actions="state, openModal"
-                                modal-src="./files/form.html"
-                                modal-width="320px"
-                                class="flex-grow:1 font-size:16px padding:5px_0">
-                                <p
-                                    array="{{object.array}}"
-                                    object="{{object._id}}"
-                                    key="path"></p>
-                                <div
-                                    state-array="{{object.array}}"
-                                    state-object="{{object._id}}"
-                                    state_to="form-fields"></div>
-                                <div
-                                    state_id="form"
-                                    state-array=""
-                                    state-object=""
-                                    state-key=""
-                                    state_to="render"></div>
-                                <div
-                                    state-value="{{object.module_id}}"
-                                    state-filter-value="{{object.module_id}}"
-                                    state_to="module_id"></div>
-                                <div
-                                    state-object="{{object.module_id}}"
-                                    state_to="module-form"></div>
-                            </a>
+			<section id="website-pages">
+				<!-- Website Pages -->
+				<div
+					class="card display:flex padding:10px_15px margin-top:10px font-size:18px">
+					<span class="flex-grow:1">Website Pages</span>
+					<a
+						show="#page-templates"
+						hide="#form, #website-pages"
+						state-array="files"
+						state_to="page-templates"
+						><i
+							class="height:16px"
+							src="./assets/svg/plus-square.svg"></i
+					></a>
+				</div>
+				<!--<input type="hidden" filter-query-key="module-view" filter-query-value="module-view" render-next>-->
+				<div
+					array=""
+					object
+					filter-query-key=".$eq"
+					filter-query-value=""
+					filter-sort-key="name"
+					filter-sort-direction="asc"
+					render-selector="[template]"
+					state_id="website_id"
+					sortable
+					class="background:whitesmoke padding:10px"
+					dnd-group-key="website-pages">
+					<div
+						template
+						class="card padding:10px_5px background:white collapsed margin-bottom:10px"
+						object="{{object._id}}"
+						id="module-view{{object._id}}">
+						<div class="display:flex padding-left:10px">
+							<a
+								actions="state, openModal"
+								modal-src="./files/form.html"
+								modal-width="320px"
+								class="flex-grow:1 font-size:16px padding:5px_0">
+								<p
+									array="{{object.array}}"
+									object="{{object._id}}"
+									key="path"></p>
+								<div
+									state-array="{{object.array}}"
+									state-object="{{object._id}}"
+									state_to="form-fields"></div>
+								<div
+									state_id="form"
+									state-array=""
+									state-object=""
+									state-key=""
+									state_to="render"></div>
+								<div
+									state-value="{{object.module_id}}"
+									state-filter-value="{{object.module_id}}"
+									state_to="module_id"></div>
+								<div
+									state-object="{{object.module_id}}"
+									state_to="module-form"></div>
+							</a>
 
-                            <a
-                                actions="deleteObject"
-                                array="{{object.array}}"
-                                object="{{object._id}}"
-                                class="float:right padding:5px">
-                                <i
-                                    class="height:18px"
-                                    src="./assets/svg/trash.svg"></i>
-                            </a>
-                            <a
-                                actions="state, openModal"
-                                modal-src="./builder/index.html"
-                                class="float:right padding:5px">
-                                <i
-                                    class="height:18px"
-                                    src="./assets/svg/palette.svg"></i>
-                                <div
-                                    state-array="{{object.array}}"
-                                    state-object="{{object._id}}"
-                                    state-key="src"
-                                    state_to="builder"></div>
-                            </a>
-                            <!-- Render Code Editor -->
-                            <a
-                                actions="state, openModal"
-                                modal-src="./code-editor/index.html"
-                                class="float:right padding:5px">
-                                <i
-                                    class="height:18px"
-                                    src="./assets/svg/code.svg"></i>
-                                <div
-                                    state_id="render"
-                                    state-array="{{object.array}}"
-                                    state-object="{{object._id}}"
-                                    state-key="src"
-                                    state_to="code-editor"></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Website Page templates -->
-            <div hidden id="page-templates">
-                <div
-                    filter-key="tags"
-                    filter-value="template"
-                    filter-operator="$eq"
-                    filter-next></div>
-                <div
-                    class="display:flex flex-wrap:wrap"
-                    array=""
-                    object
-                    state-overwrite="true"
-                    filter-sort-key="name"
-                    filter-sort-direction="asc"
-                    render-selector="[template]"
-                    state_id="page-templates">
-                    <div
-                        class="card min-width:250px flex-grow:1 margin:10px box-shadow-hover"
-                        template>
-                        <div class="position:relative">
-                            <img
-                                array="{{object.array}}"
-                                object="{{object._id}}"
-                                key="image"
-                                src="https://via.placeholder.com/150"
-                                width="100%" />
-                            <form realtime="false" array="files" object="">
-                                <input
-                                    type="hidden"
-                                    key="name"
-                                    placeholder="View Name"
-                                    value="{{object.name}}" />
-                                <input
-                                    type="hidden"
-                                    key="website_id"
-                                    class="website_id" />
-                                <textarea
-                                    hidden
-                                    key="html"
-                                    value="{{object.html}}"></textarea>
-                                <textarea
-                                    hidden
-                                    key="css"
-                                    value="{{object.css}}"></textarea>
-                                <textarea
-                                    hidden
-                                    key="js"
-                                    value="{{object.js}}"></textarea>
-                                <button
-                                    class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover"
-                                    actions="save, reset"
-                                    show="#form, #website-pages"
-                                    hide="#page-templates"
-                                    state-array="files"
-                                    state_to="website_id">
-                                    <i src="./assets/svg/plus.svg"></i>
-                                </button>
-                            </form>
-                            <div
-                                class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">
-                                <span>{{object.name}}</span>
-                            </div>
-                        </div>
-                        <div class="padding:10px">
-                            <p>{{object.description}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+							<a
+								actions="deleteObject"
+								array="{{object.array}}"
+								object="{{object._id}}"
+								class="float:right padding:5px">
+								<i
+									class="height:18px"
+									src="./assets/svg/trash.svg"></i>
+							</a>
+							<a
+								actions="state, openModal"
+								modal-src="./builder/index.html"
+								class="float:right padding:5px">
+								<i
+									class="height:18px"
+									src="./assets/svg/palette.svg"></i>
+								<div
+									state-array="{{object.array}}"
+									state-object="{{object._id}}"
+									state-key="src"
+									state_to="builder"></div>
+							</a>
+							<!-- Render Code Editor -->
+							<a
+								actions="state, openModal"
+								modal-src="./code-editor/index.html"
+								class="float:right padding:5px">
+								<i
+									class="height:18px"
+									src="./assets/svg/code.svg"></i>
+								<div
+									state_id="render"
+									state-array="{{object.array}}"
+									state-object="{{object._id}}"
+									state-key="src"
+									state_to="code-editor"></div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Website Page templates -->
+			<div hidden id="page-templates">
+				<div
+					filter-query-key="tags.$eq"
+					filter-query-value="template"
+					filter-next></div>
+				<div
+					class="display:flex flex-wrap:wrap"
+					array=""
+					object
+					state-overwrite="true"
+					filter-sort-key="name"
+					filter-sort-direction="asc"
+					render-selector="[template]"
+					state_id="page-templates">
+					<div
+						class="card min-width:250px flex-grow:1 margin:10px box-shadow-hover"
+						template>
+						<div class="position:relative">
+							<img
+								array="{{object.array}}"
+								object="{{object._id}}"
+								key="image"
+								src="https://via.placeholder.com/150"
+								width="100%" />
+							<form realtime="false" array="files" object="">
+								<input
+									type="hidden"
+									key="name"
+									placeholder="View Name"
+									value="{{object.name}}" />
+								<input
+									type="hidden"
+									key="website_id"
+									class="website_id" />
+								<textarea
+									hidden
+									key="html"
+									value="{{object.html}}"></textarea>
+								<textarea
+									hidden
+									key="css"
+									value="{{object.css}}"></textarea>
+								<textarea
+									hidden
+									key="js"
+									value="{{object.js}}"></textarea>
+								<button
+									class="position:absolute background:dodgerblue float:right bottom:-18px right:10px border-radius:50% padding:10px font-size:20px grow-hover"
+									actions="save, reset"
+									show="#form, #website-pages"
+									hide="#page-templates"
+									state-array="files"
+									state_to="website_id">
+									<i src="./assets/svg/plus.svg"></i>
+								</button>
+							</form>
+							<div
+								class="position:absolute bottom:5px width:100% padding:0px_10px font-size:25px color:white background:black opacity:0.4">
+								<span>{{object.name}}</span>
+							</div>
+						</div>
+						<div class="padding:10px">
+							<p>{{object.description}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
-    </body>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
+	</body>
 </html>

@@ -1,537 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>admin | CoCreate</title>
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/favicon.ico" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>admin | CoCreate</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/favicon.ico" />
 
-        <link
-            rel="stylesheet"
-            href="./index.css"
-            array="files"
-            object="637bc8fe91249e639db315d9"
-            key="src"
-            type="text/css" />
-        <link rel="manifest" href="./manifest.webmanifest" />
-    </head>
+		<link
+			rel="stylesheet"
+			href="./index.css"
+			array="files"
+			object="637bc8fe91249e639db315d9"
+			key="src"
+			type="text/css" />
+		<link rel="manifest" href="./manifest.webmanifest" />
+	</head>
 
-    <style type="text/css">
-        ul::-webkit-scrollbar-thumb,
-        ul::-webkit-scrollbar-track {
-            background-color: rgba(0, 0, 0, 0.01);
-        }
+	<style type="text/css">
+		ul::-webkit-scrollbar-thumb,
+		ul::-webkit-scrollbar-track {
+			background-color: rgba(0, 0, 0, 0.01);
+		}
 
-        svg {
-            height: inherit;
-            fill: inherit;
-        }
-    </style>
+		svg {
+			height: inherit;
+			fill: inherit;
+		}
+	</style>
 
-    <body>
-        <a href="./signin.html" session="false" hidden></a>
-        <!-- Navbar  -->
-        <nav
-            class="nav display:flex align-items:center background:whitesmoke"
-            content_id="content"
-            scroll=", hide-nav"
-            scroll-up="5"
-            scroll-down="5">
-            <!-- Menu Icon -->
-            <a
-                class="menu_icon"
-                click="active"
-                toggle="width:275px,"
-                toggle-selector="#menuL"
-                toggle-attribute="style">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+	<body>
+		<a href="./signin.html" session="false" hidden></a>
+		<!-- Navbar  -->
+		<nav
+			class="nav display:flex align-items:center background:whitesmoke"
+			content_id="content"
+			scroll=", hide-nav"
+			scroll-up="5"
+			scroll-down="5">
+			<!-- Menu Icon -->
+			<a
+				class="menu_icon"
+				click="active"
+				toggle="width:275px,"
+				toggle-selector="#menuL"
+				toggle-attribute="style">
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
 
-            <!-- Horizontal Scroll Nav/Tabs -->
-            <ul
-                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-                <!-- Fullscreen toogle -->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul
+				class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				<!-- Fullscreen toogle -->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i
+							class="height:18px"
+							src="./assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="./assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Module Form -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/form.html"
-                        modal-width="320px">
-                        <i class="height:18px" src="./assets/svg/cog.svg"></i>
-                        <div
-                            state-array="modules"
-                            state-object="5ff747727005da1c2727419c"
-                            state_to="form-fields"></div>
-                        <div
-                            state-filter-value="5ff747727005da1c2727419c"
-                            state_to="module_id"></div>
-                    </a>
-                </li>
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./modules/form.html"
+						modal-width="320px">
+						<i class="height:18px" src="./assets/svg/cog.svg"></i>
+						<div
+							state-array="modules"
+							state-object="5ff747727005da1c2727419c"
+							state_to="form-fields"></div>
+						<div
+							state-filter-value="5ff747727005da1c2727419c"
+							state_to="module_id"></div>
+					</a>
+				</li>
 
-                <!-- Render Code Editor -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./code-editor/index.html">
-                        <i class="height:18px" src="./assets/svg/code.svg"></i>
-                        <div
-                            state-array="files"
-                            state-object="637bc8fe91249e639db315d8"
-                            state-key="src"
-                            state_to="code-editor"></div>
-                    </a>
-                </li>
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./code-editor/index.html">
+						<i class="height:18px" src="./assets/svg/code.svg"></i>
+						<div
+							state-array="files"
+							state-object="637bc8fe91249e639db315d8"
+							state-key="src"
+							state_to="code-editor"></div>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./builder/index.html"
-                        class="sessionBuilderUI_Id">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/palette.svg"></i>
-                        <div
-                            state-array="files"
-                            state-object="637bc8fe91249e639db315d8"
-                            state-key="src"
-                            state_to="builder"></div>
-                    </a>
-                </li>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./builder/index.html"
+						class="sessionBuilderUI_Id">
+						<i
+							class="height:18px"
+							src="./assets/svg/palette.svg"></i>
+						<div
+							state-array="files"
+							state-object="637bc8fe91249e639db315d8"
+							state-key="src"
+							state_to="builder"></div>
+					</a>
+				</li>
 
-                <div
-                    class="display:inline-flex"
-                    array="modules"
-                    object
-                    filter-sort-key="navbar-menu-position"
-                    filter-sort-direction="asc"
-                    filter-key="navbar-menu-position"
-                    filter-value="0"
-                    filter-value-type="number"
-                    filter-operator="$ne"
-                    render-selector="[template]">
-                    <li class="margin-right:15px" template>
-                        <a
-                            actions="state, openModal"
-                            modal-src="{{object.navbar-menu-primary.parentDirectory}}/{{object.navbar-menu-primary.name}}"
-                            modal-width="{{object.navbar-modal-primary-width}}"
-                            modal-height="{{object.navbar-modal-primary-height}}"
-                            modal-color="{{object.navbar-modal-primary-color}}">
-                            <span>
-                                <i
-                                    class="height:18px"
-                                    src="./assets/svg/{{object.icon}}.svg"></i>
-                            </span>
-                            <div
-                                state-array="module_activities"
-                                state-filter-key="module_id"
-                                state-filter-value="{{object._id}}"
-                                state_to="datatable"></div>
-                            <div
-                                state-array="files"
-                                state-object="{{object.main-menu-secondary}}"
-                                state-key="src"
-                                state_to="form"></div>
-                            <div
-                                state-array="files"
-                                state-object="{{object.navbar-menu-primary._id}}"
-                                state-key="src"
-                                state_to="render"></div>
-                            <div
-                                state-value="{{object._id}}"
-                                state-filter-value="{{object._id}}"
-                                state_to="module_id"></div>
-                            <div
-                                state-object="{{object._id}}"
-                                state_to="module-form"></div>
-                        </a>
-                    </li>
-                </div>
-            </ul>
+				<div
+					class="display:inline-flex"
+					array="modules"
+					object
+					filter-sort-key="navbar-menu-position"
+					filter-sort-direction="asc"
+					filter-query-key="navbar-menu-position.$ne"
+					filter-query-value="0"
+					filter-value-type="number"
+					render-selector="[template]">
+					<li class="margin-right:15px" template>
+						<a
+							actions="state, openModal"
+							modal-src="{{object.navbar-menu-primary.parentDirectory}}/{{object.navbar-menu-primary.name}}"
+							modal-width="{{object.navbar-modal-primary-width}}"
+							modal-height="{{object.navbar-modal-primary-height}}"
+							modal-color="{{object.navbar-modal-primary-color}}">
+							<span>
+								<i
+									class="height:18px"
+									src="./assets/svg/{{object.icon}}.svg"></i>
+							</span>
+							<div
+								state-array="module_activities"
+								state-filter-query-key="module_id"
+								state-filter-value="{{object._id}}"
+								state_to="datatable"></div>
+							<div
+								state-array="files"
+								state-object="{{object.main-menu-secondary}}"
+								state-key="src"
+								state_to="form"></div>
+							<div
+								state-array="files"
+								state-object="{{object.navbar-menu-primary._id}}"
+								state-key="src"
+								state_to="render"></div>
+							<div
+								state-value="{{object._id}}"
+								state-filter-value="{{object._id}}"
+								state_to="module_id"></div>
+							<div
+								state-object="{{object._id}}"
+								state_to="module-form"></div>
+						</a>
+					</li>
+				</div>
+			</ul>
 
-            <!-- Avatar -->
-            <div class="avatar-wrapper margin:5px">
-                <a
-                    class="avatar round"
-                    actions="state, openModal"
-                    modal-src="./users/profile.html"
-                    modal-width="300px"
-                    modal-height="375px"
-                    modal-color="#229954">
-                    <span
-                        array="users"
-                        object="$user_id"
-                        key="name"
-                        class="avatar-name"></span>
-                    <span class="avatar-image">
-                        <img
-                            array="users"
-                            object="$user_id"
-                            key="avatar"
-                            onerror="this.style.display='none'"
-                            width="40px" />
-                    </span>
-                    <div
-                        state-array="modules"
-                        object="5ff747727005da1c27274182"
-                        state_to="module_id"></div>
-                    <div
-                        state-array="files"
-                        state-object="60ddfdc114b5ab0c2dd2fe1c"
-                        state_to="form"></div>
-                    <div
-                        state-array="users"
-                        state-object="$user_id"
-                        state_to="form-fields"></div>
-                    <div
-                        state-array="files"
-                        state-object="60ddfdc114b5ab0c2dd2fe1d"
-                        state-key="src"
-                        state_to="render"></div>
-                </a>
-                <div
-                    class="avatar-status"
-                    array="users"
-                    object="$user_id"
-                    user-status="{'name':'status'}"></div>
-            </div>
-        </nav>
+			<!-- Avatar -->
+			<div class="avatar-wrapper margin:5px">
+				<a
+					class="avatar round"
+					actions="state, openModal"
+					modal-src="./users/profile.html"
+					modal-width="300px"
+					modal-height="375px"
+					modal-color="#229954">
+					<span
+						array="users"
+						object="$user_id"
+						key="name"
+						class="avatar-name"></span>
+					<span class="avatar-image">
+						<img
+							array="users"
+							object="$user_id"
+							key="avatar"
+							onerror="this.style.display='none'"
+							width="40px" />
+					</span>
+					<div
+						state-array="modules"
+						object="5ff747727005da1c27274182"
+						state_to="module_id"></div>
+					<div
+						state-array="files"
+						state-object="60ddfdc114b5ab0c2dd2fe1c"
+						state_to="form"></div>
+					<div
+						state-array="users"
+						state-object="$user_id"
+						state_to="form-fields"></div>
+					<div
+						state-array="files"
+						state-object="60ddfdc114b5ab0c2dd2fe1d"
+						state-key="src"
+						state_to="render"></div>
+				</a>
+				<div
+					class="avatar-status"
+					array="users"
+					object="$user_id"
+					user-status="{'name':'status'}"></div>
+			</div>
+		</nav>
 
-        <!-- Modal Viewport  -->
-        <div
-            class="position:fixed margin-top:50px"
-            content_id="content"
-            id="modal-viewport"></div>
+		<!-- Modal Viewport  -->
+		<div
+			class="position:fixed margin-top:50px"
+			content_id="content"
+			id="modal-viewport"></div>
 
-        <!-- Main container  -->
-        <main class="height:100vh margin-top:10px" content_id="content"></main>
+		<!-- Main container  -->
+		<main class="height:100vh margin-top:10px" content_id="content"></main>
 
-        <!-- SideNav  -->
-        <sidenav
-            id="menuL"
-            class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:50px width:275px:hover width:0px@xs"
-            resizable
-            resize-selector="[content_id='content']"
-            resize-property="margin-left"
-            resize-value="width">
-            <!-- Select to change organizations  -->
-            <cocreate-select
-                class="org-changer remove-none border:none padding:0"
-                key="current_org"
-                array="users"
-                object="$user_id">
-                <input placeholder="Search" filter-search filter-next />
-                <cc-options
-                    class="options overflow:auto"
-                    array="users"
-                    key="connected_orgs"
-                    filter-key="_id"
-                    filter-value="$user_id"
-                    filter-operator="$eq"
-                    render-selector="[template]">
-                    <cc-option
-                        class="display:flex height:50px margin:0!important padding:4px_12px!important"
-                        template
-                        value="{{connected_orgs}}">
-                        <span class="logo-icon"
-                            ><img
-                                array="organizations"
-                                object="{{connected_orgs}}"
-                                key="logo"
-                                src="./assets/icon.png"
-                                height="40px"
-                                alt="..."
-                                class="margin-top:3px"
-                        /></span>
-                        <span
-                            array="organizations"
-                            object="{{connected_orgs}}"
-                            key="name"
-                            class="margin-left:12px font-size:1.5em"></span>
-                    </cc-option>
-                    <div class="line-height:40px height:40px overflow:hidden">
-                        <a href="./organizations/creator.html">
-                            <span class="padding:13px"
-                                ><i
-                                    class="height:16px"
-                                    src="./assets/svg/plus.svg"></i
-                            ></span>
-                            <span>New Orginaztion</span>
-                        </a>
-                    </div>
-                </cc-options>
-            </cocreate-select>
+		<!-- SideNav  -->
+		<sidenav
+			id="menuL"
+			class="position:fixed top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:50px width:275px:hover width:0px@xs"
+			resizable
+			resize-selector="[content_id='content']"
+			resize-property="margin-left"
+			resize-value="width">
+			<!-- Select to change organizations  -->
+			<cocreate-select
+				class="org-changer remove-none border:none padding:0"
+				key="current_org"
+				array="users"
+				object="$user_id">
+				<input placeholder="Search" filter-search filter-next />
+				<cc-options
+					class="options overflow:auto"
+					array="users"
+					key="connected_orgs"
+					filter-query-key="_id.$eq"
+					filter-query-value="$user_id"
+					render-selector="[template]">
+					<cc-option
+						class="display:flex height:50px margin:0!important padding:4px_12px!important"
+						template
+						value="{{connected_orgs}}">
+						<span class="logo-icon"
+							><img
+								array="organizations"
+								object="{{connected_orgs}}"
+								key="logo"
+								src="./assets/icon.png"
+								height="40px"
+								alt="..."
+								class="margin-top:3px"
+						/></span>
+						<span
+							array="organizations"
+							object="{{connected_orgs}}"
+							key="name"
+							class="margin-left:12px font-size:1.5em"></span>
+					</cc-option>
+					<div class="line-height:40px height:40px overflow:hidden">
+						<a href="./organizations/creator.html">
+							<span class="padding:13px"
+								><i
+									class="height:16px"
+									src="./assets/svg/plus.svg"></i
+							></span>
+							<span>New Orginaztion</span>
+						</a>
+					</div>
+				</cc-options>
+			</cocreate-select>
 
-            <!-- Search -->
-            <form class="padding:5px">
-                <floating-label>
-                    <input
-                        type="text"
-                        class="floating-label"
-                        state_to="results" />
-                </floating-label>
-                <span
-                    class="position:relative bottom:29px right:11px float:right font-size:18px">
-                    <a
-                        actions="state, openModal"
-                        state_to="render"
-                        array="website-pages"
-                        object=""
-                        state-key="src"
-                        modal-width="900px"
-                        modal-color="#229954">
-                        <i src="./assets/svg/search.svg"></i>
-                    </a>
-                </span>
-            </form>
+			<!-- Search -->
+			<form class="padding:5px">
+				<floating-label>
+					<input
+						type="text"
+						class="floating-label"
+						state_to="results" />
+				</floating-label>
+				<span
+					class="position:relative bottom:29px right:11px float:right font-size:18px">
+					<a
+						actions="state, openModal"
+						state_to="render"
+						array="website-pages"
+						object=""
+						state-key="src"
+						modal-width="900px"
+						modal-color="#229954">
+						<i src="./assets/svg/search.svg"></i>
+					</a>
+				</span>
+			</form>
 
-            <div class="padding-right:5px padding-bottom:5px">
-                <!-- Fetch and Render-->
-                <ul
-                    class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_165px) bottom:10px margin-right:5px">
-                    <div
-                        array="modules"
-                        filter-sort-key="main-menu-position"
-                        filter-sort-direction="asc"
-                        filter-key="main-menu-position"
-                        filter-value="0"
-                        filter-value-type="number"
-                        filter-operator="$ne"
-                        render-selector="[template]">
-                        <!-- Template -->
-                        <li
-                            class="line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover"
-                            template>
-                            <a
-                                actions="state, openModal"
-                                modal-src="{{object.main-menu-primary.parentDirectory}}/{{object.main-menu-primary.name}}"
-                                modal-width="{{object.main-modal-primary-width}}"
-                                modal-color="{{object.main-modal-color}}"
-                                class="display:flex align-items:center">
-                                <span
-                                    class="display:flex justify-content:center min-width:50px">
-                                    <i
-                                        class="height:16px"
-                                        src="./assets/svg/{{object.icon}}.svg"></i>
-                                </span>
-                                <span>{{object.name}}</span>
-                                <div
-                                    state-array="module_activities"
-                                    state-template="$uid"
-                                    state-filter-key="module_id"
-                                    state-filter-value="{{object._id}}"
-                                    state_to="datatable"></div>
-                                <div
-                                    state-array="files"
-                                    state-object="{{object.main-menu-secondary._id}}"
-                                    state-key="src"
-                                    state_to="form"></div>
-                                <div
-                                    state-array="files"
-                                    state-object="{{object.main-menu-primary._id}}"
-                                    state-key="src"
-                                    state_to="render"></div>
-                                <div
-                                    state-value="{{object._id}}"
-                                    state-filter-value="{{object._id}}"
-                                    state_to="module_id"></div>
-                                <div
-                                    state-object="{{object._id}}"
-                                    state_to="module-form"></div>
-                            </a>
-                            <div
-                                class="float:right width:50px text-align:center">
-                                <a
-                                    actions="state, openModal"
-                                    modal-src="{{object.main-menu-secondary.parentDirectory}}/{{object.main-menu-secondary.name}}"
-                                    modal-width="{{object.main-modal-secondary-width}}"
-                                    modal-color="{{object.main-modal-secondary-color}}"
-                                    class="display:flex justify-content:center align-items:center height:40px">
-                                    <i
-                                        class="height:18px"
-                                        src="./assets/svg/plus.svg"></i>
-                                    <div
-                                        state-array="file"
-                                        state-object="{{object.main-menu-secondary._id}}"
-                                        state-key="src"
-                                        state_to="render"></div>
-                                    <div
-                                        state-object=""
-                                        state_to="form-fields"></div>
-                                    <div
-                                        state-value="{{object._id}}"
-                                        state-filter-value="{{object._id}}"
-                                        state-template="$uid"
-                                        state_to="module_id"></div>
-                                    <div
-                                        state-object="{{docusment._id}}"
-                                        state_to="module-form"></div>
-                                </a>
-                            </div>
-                        </li>
-                    </div>
-                </ul>
+			<div class="padding-right:5px padding-bottom:5px">
+				<!-- Fetch and Render-->
+				<ul
+					class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_165px) bottom:10px margin-right:5px">
+					<div
+						array="modules"
+						filter-sort-key="main-menu-position"
+						filter-sort-direction="asc"
+						filter-query-key="main-menu-position.$ne"
+						filter-query-value="0"
+						filter-value-type="number"
+						render-selector="[template]">
+						<!-- Template -->
+						<li
+							class="line-height:40px height:40px overflow:hidden white-space:nowrap background:dodgerblue:hover"
+							template>
+							<a
+								actions="state, openModal"
+								modal-src="{{object.main-menu-primary.parentDirectory}}/{{object.main-menu-primary.name}}"
+								modal-width="{{object.main-modal-primary-width}}"
+								modal-color="{{object.main-modal-color}}"
+								class="display:flex align-items:center">
+								<span
+									class="display:flex justify-content:center min-width:50px">
+									<i
+										class="height:16px"
+										src="./assets/svg/{{object.icon}}.svg"></i>
+								</span>
+								<span>{{object.name}}</span>
+								<div
+									state-array="module_activities"
+									state-template="$uid"
+									state-filter-query-key="module_id"
+									state-filter-value="{{object._id}}"
+									state_to="datatable"></div>
+								<div
+									state-array="files"
+									state-object="{{object.main-menu-secondary._id}}"
+									state-key="src"
+									state_to="form"></div>
+								<div
+									state-array="files"
+									state-object="{{object.main-menu-primary._id}}"
+									state-key="src"
+									state_to="render"></div>
+								<div
+									state-value="{{object._id}}"
+									state-filter-value="{{object._id}}"
+									state_to="module_id"></div>
+								<div
+									state-object="{{object._id}}"
+									state_to="module-form"></div>
+							</a>
+							<div
+								class="float:right width:50px text-align:center">
+								<a
+									actions="state, openModal"
+									modal-src="{{object.main-menu-secondary.parentDirectory}}/{{object.main-menu-secondary.name}}"
+									modal-width="{{object.main-modal-secondary-width}}"
+									modal-color="{{object.main-modal-secondary-color}}"
+									class="display:flex justify-content:center align-items:center height:40px">
+									<i
+										class="height:18px"
+										src="./assets/svg/plus.svg"></i>
+									<div
+										state-array="file"
+										state-object="{{object.main-menu-secondary._id}}"
+										state-key="src"
+										state_to="render"></div>
+									<div
+										state-object=""
+										state_to="form-fields"></div>
+									<div
+										state-value="{{object._id}}"
+										state-filter-value="{{object._id}}"
+										state-template="$uid"
+										state_to="module_id"></div>
+									<div
+										state-object="{{docusment._id}}"
+										state_to="module-form"></div>
+								</a>
+							</div>
+						</li>
+					</div>
+				</ul>
 
-                <!-- sidenav Footer -->
-                <div
-                    class="display:flex flex-wrap:nowrap justify-content:space-between position:absolute bottom:0px background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./settings/index.html"
-                        modal-width="275px"
-                        modal-color="#229954"
-                        modal-x="0"
-                        modal-y="0"
-                        class="min-width:50px display:flex justify-content:center align-items:center">
-                        <i class="height:16px" src="./assets/svg/cogs.svg"></i>
-                        <div
-                            state-array="files"
-                            state-object="60ddfdc014b5ab0c2dd2fe18"
-                            state-key="src"
-                            state_to="render"></div>
-                        <div
-                            state-value="5ff747727005da1c2727418f"
-                            state-filter-value="5ff747727005da1c2727418f"
-                            state_to="module_id"></div>
-                        <div
-                            state-object="5ff747727005da1c2727418f"
-                            state_to="module-form"></div>
-                    </a>
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/datatable.html"
-                        modal-width="640px"
-                        modal-color="#229954"
-                        class="min-width:50px display:flex justify-content:center align-items:center">
-                        <i
-                            class="height:16px"
-                            src="./assets/svg/project-diagram.svg"></i>
-                        <div
-                            state-template="$uid"
-                            state-array="modules"
-                            state_to="datatable"></div>
-                        <div
-                            state-array="files"
-                            state-object="60ddfdbf14b5ab0c2dd2fe09"
-                            state-key="src"
-                            state_to="form"></div>
-                        <div
-                            state-array="files"
-                            state-object="60ddfdbf14b5ab0c2dd2fe08"
-                            state-key="src"
-                            state_to="render"></div>
-                        <div
-                            state-value="5ff747727005da1c27274190"
-                            state-filter-value="5ff747727005da1c27274190"
-                            state_to="module_id"></div>
-                        <div
-                            state-object="5ff747727005da1c27274190"
-                            state_to="module-form"></div>
-                    </a>
-                    <a
-                        actions="state, openModal"
-                        modal-src="./module-views/datatable.html"
-                        modal-width="640px"
-                        modal-color="#229954"
-                        class="min-width:50px display:flex justify-content:center align-items:center">
-                        <i
-                            class="height:16px"
-                            src="./assets/svg/shapes.svg"></i>
-                        <div
-                            state-template="$uid"
-                            state-array="files"
-                            state_to="datatable"></div>
-                        <div
-                            state-array="files"
-                            state-object="60ddfdc014b5ab0c2dd2fe0a"
-                            state-key="src"
-                            state_to="form"></div>
-                        <div
-                            state-array="files"
-                            state-object="60ddfdc014b5ab0c2dd2fe0b"
-                            state-key="src"
-                            state_to="render"></div>
-                        <div
-                            state-value="5ff747727005da1c27274187"
-                            state-filter-value="5ff747727005da1c27274187"
-                            state_to="module_id"></div>
-                        <div
-                            state-object="5ff747727005da1c27274187"
-                            state_to="module-form"></div>
-                    </a>
-                    <a
-                        actions="state, openModal"
-                        modal-src="./files/datatable.html"
-                        modal-width="640px"
-                        modal-color="#229954"
-                        class="min-width:50px display:flex justify-content:center align-items:center">
-                        <i
-                            class="height:16px"
-                            src="./assets/svg/folder.svg"></i>
-                        <div
-                            state-template="$uid"
-                            state-array="files"
-                            state_to="datatable"></div>
-                        <div
-                            state-array="files"
-                            state-object="60ddfdc014b5ab0c2dd2fe16"
-                            state-key="src"
-                            state_to="form"></div>
-                        <div
-                            state-array="files"
-                            state-object="60ddfdc014b5ab0c2dd2fe15"
-                            state-key="src"
-                            state_to="render"></div>
-                        <div
-                            state-value="5ff747727005da1c2727419a"
-                            state-filter-value="5ff747727005da1c2727419a"
-                            state_to="module_id"></div>
-                        <div
-                            state-object="5ff747727005da1c2727419a"
-                            state_to="module-form"></div>
-                    </a>
-                    <a
-                        actions="signOut"
-                        href="./signin.html"
-                        class="min-width:50px display:flex justify-content:center align-items:center">
-                        <i
-                            class="height:16px"
-                            src="./assets/svg/sign-out-alt.svg"></i>
-                    </a>
-                </div>
-            </div>
-            <div resize="right"></div>
-        </sidenav>
+				<!-- sidenav Footer -->
+				<div
+					class="display:flex flex-wrap:nowrap justify-content:space-between position:absolute bottom:0px background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
+					<a
+						actions="state, openModal"
+						modal-src="./settings/index.html"
+						modal-width="275px"
+						modal-color="#229954"
+						modal-x="0"
+						modal-y="0"
+						class="min-width:50px display:flex justify-content:center align-items:center">
+						<i class="height:16px" src="./assets/svg/cogs.svg"></i>
+						<div
+							state-array="files"
+							state-object="60ddfdc014b5ab0c2dd2fe18"
+							state-key="src"
+							state_to="render"></div>
+						<div
+							state-value="5ff747727005da1c2727418f"
+							state-filter-value="5ff747727005da1c2727418f"
+							state_to="module_id"></div>
+						<div
+							state-object="5ff747727005da1c2727418f"
+							state_to="module-form"></div>
+					</a>
+					<a
+						actions="state, openModal"
+						modal-src="./modules/datatable.html"
+						modal-width="640px"
+						modal-color="#229954"
+						class="min-width:50px display:flex justify-content:center align-items:center">
+						<i
+							class="height:16px"
+							src="./assets/svg/project-diagram.svg"></i>
+						<div
+							state-template="$uid"
+							state-array="modules"
+							state_to="datatable"></div>
+						<div
+							state-array="files"
+							state-object="60ddfdbf14b5ab0c2dd2fe09"
+							state-key="src"
+							state_to="form"></div>
+						<div
+							state-array="files"
+							state-object="60ddfdbf14b5ab0c2dd2fe08"
+							state-key="src"
+							state_to="render"></div>
+						<div
+							state-value="5ff747727005da1c27274190"
+							state-filter-value="5ff747727005da1c27274190"
+							state_to="module_id"></div>
+						<div
+							state-object="5ff747727005da1c27274190"
+							state_to="module-form"></div>
+					</a>
+					<a
+						actions="state, openModal"
+						modal-src="./module-views/datatable.html"
+						modal-width="640px"
+						modal-color="#229954"
+						class="min-width:50px display:flex justify-content:center align-items:center">
+						<i
+							class="height:16px"
+							src="./assets/svg/shapes.svg"></i>
+						<div
+							state-template="$uid"
+							state-array="files"
+							state_to="datatable"></div>
+						<div
+							state-array="files"
+							state-object="60ddfdc014b5ab0c2dd2fe0a"
+							state-key="src"
+							state_to="form"></div>
+						<div
+							state-array="files"
+							state-object="60ddfdc014b5ab0c2dd2fe0b"
+							state-key="src"
+							state_to="render"></div>
+						<div
+							state-value="5ff747727005da1c27274187"
+							state-filter-value="5ff747727005da1c27274187"
+							state_to="module_id"></div>
+						<div
+							state-object="5ff747727005da1c27274187"
+							state_to="module-form"></div>
+					</a>
+					<a
+						actions="state, openModal"
+						modal-src="./files/datatable.html"
+						modal-width="640px"
+						modal-color="#229954"
+						class="min-width:50px display:flex justify-content:center align-items:center">
+						<i
+							class="height:16px"
+							src="./assets/svg/folder.svg"></i>
+						<div
+							state-template="$uid"
+							state-array="files"
+							state_to="datatable"></div>
+						<div
+							state-array="files"
+							state-object="60ddfdc014b5ab0c2dd2fe16"
+							state-key="src"
+							state_to="form"></div>
+						<div
+							state-array="files"
+							state-object="60ddfdc014b5ab0c2dd2fe15"
+							state-key="src"
+							state_to="render"></div>
+						<div
+							state-value="5ff747727005da1c2727419a"
+							state-filter-value="5ff747727005da1c2727419a"
+							state_to="module_id"></div>
+						<div
+							state-object="5ff747727005da1c2727419a"
+							state_to="module-form"></div>
+					</a>
+					<a
+						actions="signOut"
+						href="./signin.html"
+						class="min-width:50px display:flex justify-content:center align-items:center">
+						<i
+							class="height:16px"
+							src="./assets/svg/sign-out-alt.svg"></i>
+					</a>
+				</div>
+			</div>
+			<div resize="right"></div>
+		</sidenav>
 
-        <div class="position:fixed!important bottom:15px right:15px">
-            <button actions="install" type="button" hidden>Install</button>
+		<div class="position:fixed!important bottom:15px right:15px">
+			<button actions="install" type="button" hidden>Install</button>
 
-            <div
-                template
-                class="card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
-                <span class="{{type}}">{{message}}</span
-                ><a actions="remove" remove-closest="[templateid]"> X</a>
-            </div>
-        </div>
+			<div
+				template
+				class="card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
+				<span class="{{type}}">{{message}}</span
+				><a actions="remove" remove-closest="[templateid]"> X</a>
+			</div>
+		</div>
 
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
-    </body>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
+	</body>
 </html>

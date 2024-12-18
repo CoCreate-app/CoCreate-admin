@@ -1,434 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon.ico" />
-        <title>Social Dashboard | CoCreate</title>
-        <link
-            rel="stylesheet"
-            href="../index.css"
-            array="files"
-            object="637bc8fe91249e639db315d9"
-            key="src"
-            type="text/css" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon.ico" />
+		<title>Social Dashboard | CoCreate</title>
+		<link
+			rel="stylesheet"
+			href="../index.css"
+			array="files"
+			object="637bc8fe91249e639db315d9"
+			key="src"
+			type="text/css" />
 
-        <link rel="manifest" href="./manifest.webmanifest" />
-    </head>
-    <style type="text/css">
-        .collapsed > .menu-items {
-            height: 0px;
-            overflow: hidden;
-        }
+		<link rel="manifest" href="./manifest.webmanifest" />
+	</head>
+	<style type="text/css">
+		.collapsed > .menu-items {
+			height: 0px;
+			overflow: hidden;
+		}
 
-        .menu-item.active {
-            height: 100%;
-        }
+		.menu-item.active {
+			height: 100%;
+		}
 
-        .collapsed > .code-editor {
-            height: 0px;
-            overflow: hidden;
-        }
+		.collapsed > .code-editor {
+			height: 0px;
+			overflow: hidden;
+		}
 
-        .tab[selected] {
-            background: whitesmoke;
-        }
+		.tab[selected] {
+			background: whitesmoke;
+		}
 
-        .tab.active {
-            border-bottom: 3px solid #0da3e2;
-        }
+		.tab.active {
+			border-bottom: 3px solid #0da3e2;
+		}
 
-        ::-webkit-scrollbar:hover {
-            width: 10px;
-            overflow: overlay;
-        }
-    </style>
+		::-webkit-scrollbar:hover {
+			width: 10px;
+			overflow: overlay;
+		}
+	</style>
 
-    <body>
-        <!-- Modal Viewport -->
-        <div id="modal-viewport" hidden></div>
+	<body>
+		<!-- Modal Viewport -->
+		<div id="modal-viewport" hidden></div>
 
-        <!-- Navbar -->
-        <nav
-            class="nav display:flex align-items:center background:whitesmoke"
-            content_id="content"
-            scroll="sticky-nav, hide-nav"
-            scroll-up="5"
-            scroll-down="5">
-            <!-- Horizontal Scroll Nav/Tabs -->
-            <ul
-                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-                <!-- Modal Controls -->
-                <li class="margin-right:15px">
-                    <a actions="closeModal"
-                        ><i class="height:18px" src="./assets/svg/times.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="minMaxModal">
-                        <i
-                            toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
-                            toggle-attribute="src"
-                            class="height:18px"
-                            src="./assets/svg/window-maximize.svg"></i>
-                    </a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="parkModal"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/window-minimize.svg"></i
-                    ></a>
-                </li>
+		<!-- Navbar -->
+		<nav
+			class="nav display:flex align-items:center background:whitesmoke"
+			content_id="content"
+			scroll="sticky-nav, hide-nav"
+			scroll-up="5"
+			scroll-down="5">
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul
+				class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				<!-- Modal Controls -->
+				<li class="margin-right:15px">
+					<a actions="closeModal"
+						><i class="height:18px" src="./assets/svg/times.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i
+							toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+							toggle-attribute="src"
+							class="height:18px"
+							src="./assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="parkModal"
+						><i
+							class="height:18px"
+							src="./assets/svg/window-minimize.svg"></i
+					></a>
+				</li>
 
-                <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i
+							class="height:18px"
+							src="./assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="./assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Module Form -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/form.html"
-                        modal-width="320px">
-                        <i class="height:18px" src="./assets/svg/cog.svg"></i>
-                        <div
-                            state_id="module-form"
-                            state-array="modules"
-                            state-object=""
-                            state_to="form-fields"></div>
-                        <div
-                            state_id="module_id"
-                            state-filter-value=""
-                            state_to="module_id"></div>
-                    </a>
-                </li>
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./modules/form.html"
+						modal-width="320px">
+						<i class="height:18px" src="./assets/svg/cog.svg"></i>
+						<div
+							state_id="module-form"
+							state-array="modules"
+							state-object=""
+							state_to="form-fields"></div>
+						<div
+							state_id="module_id"
+							state-filter-query-value=""
+							state_to="module_id"></div>
+					</a>
+				</li>
 
-                <!-- Render Code Editor -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./code-editor/index.html">
-                        <i class="height:18px" src="./assets/svg/code.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="code-editor"></div>
-                    </a>
-                </li>
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./code-editor/index.html">
+						<i class="height:18px" src="./assets/svg/code.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="code-editor"></div>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./builder/index.html">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/palette.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="builder"></div>
-                    </a>
-                </li>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./builder/index.html">
+						<i
+							class="height:18px"
+							src="./assets/svg/palette.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="builder"></div>
+					</a>
+				</li>
 
-                <!-- deleteDocument-->
-                <li class="margin-right:15px">
-                    <a
-                        actions="deleteDocument, closeModal"
-                        array=""
-                        object=""
-                        state_id="form-fields">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/trash-alt.svg"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+				<!-- deleteDocument-->
+				<li class="margin-right:15px">
+					<a
+						actions="deleteDocument, closeModal"
+						array=""
+						object=""
+						state_id="form-fields">
+						<i
+							class="height:18px"
+							src="./assets/svg/trash-alt.svg"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
 
-        <sidenav
-            id="menuL"
-            class="position:absolute top:0px left:0px background:whitesmoke height:100vh width:50px width:300px:hover width:0px@xs"
-            resizable
-            resize-selector="[content_id='content']"
-            resize-property="margin-left"
-            resize-value="width">
-            <!-- Search field -->
-            <div class="cocreate-search padding:5px height:50px">
-                <form id="menu-search">
-                    <input
-                        type="text"
-                        class="searchInput floating-label browser-default"
-                        state_to="me1234" />
-                    <span
-                        class="position:relative bottom:28px right:10px float:right font-size:18px">
-                        <a
-                            actions="state, openModal"
-                            modal-src="template-engine.html"
-                            state_to="me1234"
-                            modal-width="900px"
-                            modal-color="#229954">
-                            <i src="./assets/svg/search.svg"></i>
-                        </a>
-                    </span>
-                </form>
-            </div>
+		<sidenav
+			id="menuL"
+			class="position:absolute top:0px left:0px background:whitesmoke height:100vh width:50px width:300px:hover width:0px@xs"
+			resizable
+			resize-selector="[content_id='content']"
+			resize-property="margin-left"
+			resize-value="width">
+			<!-- Search field -->
+			<div class="cocreate-search padding:5px height:50px">
+				<form id="menu-search">
+					<input
+						type="text"
+						class="searchInput floating-label browser-default"
+						state_to="me1234" />
+					<span
+						class="position:relative bottom:28px right:10px float:right font-size:18px">
+						<a
+							actions="state, openModal"
+							modal-src="template-engine.html"
+							state_to="me1234"
+							modal-width="900px"
+							modal-color="#229954">
+							<i src="./assets/svg/search.svg"></i>
+						</a>
+					</span>
+				</form>
+			</div>
 
-            <div class="padding-right:5px padding-bottom:5px">
-                <ul
-                    class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
-                    <div
-                        array="modules"
-                        filter-sort-key="main-menu-position"
-                        filter-sort-direction="asc"
-                        filter-key="main-menu-position"
-                        filter-value="0"
-                        filter-value-type="number"
-                        filter-operator="$ne"
-                        render-selector="[template]">
-                        <li
-                            class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover"
-                            template>
-                            <a
-                                actions="state, openModal"
-                                state-array="files"
-                                state-object="{{object.main-menu-primary}}"
-                                state_to="render"
-                                state-key="src"
-                                modal-width="600px"
-                                modal-color="{{object.main-modal-color}}"
-                                class="display:inline-block">
-                                <span
-                                    class="display:inline-block width:50px text-align:center"
-                                    object="{{object._id}}"
-                                    array="modules"
-                                    key="icon"></span>
-                                <span
-                                    array="modules"
-                                    object="{{object._id}}"
-                                    key="name"></span>
-                                <div
-                                    state-array="module_activities"
-                                    state-filter-key="module_id"
-                                    state-filter-value="{{object._id}}"
-                                    state_to="datatable"></div>
-                                <div
-                                    state-array="module_activities"
-                                    state-value="{{object._id}}"
-                                    state_to="module_id"></div>
-                                <div
-                                    state-array="files"
-                                    state-object="{{object.main-menu-secondary}}"
-                                    state-key="src"
-                                    state_to="form"></div>
-                            </a>
-                            <div
-                                class="float:right width:50px text-align:center">
-                                <a
-                                    actions="state, openModal"
-                                    state-array="files"
-                                    state-object="{{object.main-menu-secondary}}"
-                                    state-key="src"
-                                    state_to="render"
-                                    modal-width="320px"
-                                    modal-color="#229954">
-                                    <i
-                                        class="height:16px"
-                                        src="./assets/svg/plus.svg"></i>
-                                    <div
-                                        state-array="modules"
-                                        object="{{object._id}}"
-                                        state_to="module_id"></div>
-                                </a>
-                            </div>
-                        </li>
-                    </div>
-                </ul>
-                <div
-                    class="display:inline:block position:absolute bottom:0 background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
-                    <a
-                        actions="state, openModal"
-                        state-array="files"
-                        state-object="5fa849674b4c3e4dea76abe6"
-                        state-key="src"
-                        state_to="render"
-                        modal-width="275px"
-                        modal-color="#229954"
-                        modal-x="0"
-                        modal-y="0"
-                        class="width:50px text-align:center display:inline-block">
-                        <span class="padding:10px width:50px text-align:center"
-                            ><i
-                                class="height:16px"
-                                src="./assets/svg/cogs.svg"></i
-                        ></span>
-                    </a>
-                    <a
-                        actions="state, openModal"
-                        modal-src="modules/module-views/module_datatable.html"
-                        state-array="modules"
-                        state-object=""
-                        state_to="render"
-                        modal-width="640px"
-                        modal-color="#229954"
-                        modal-x="0"
-                        modal-y="0"
-                        class="width:50px text-align:center display:inline-block">
-                        <span class="padding:10px width:50px text-align:center"
-                            ><i
-                                class="height:16px"
-                                src="./assets/svg/project-diagram.svg"></i
-                        ></span>
-                    </a>
-                    <a
-                        actions="state, openModal"
-                        modal-src="modules/module-templates/module-template_datatable.html"
-                        state-array="modules"
-                        state-object=""
-                        state_to="render"
-                        modal-width="640px"
-                        modal-color="#229954"
-                        modal-x="0"
-                        modal-y="0"
-                        class="width:50px text-align:center display:inline-block">
-                        <span class="padding:10px width:50px text-align:center"
-                            ><i
-                                class="height:16px"
-                                src="./assets/svg/shapes.svg"></i
-                        ></span>
-                    </a>
-                    <a
-                        href="signin.html"
-                        class="logoutBtn width:50px text-align:center display:inline-block">
-                        <span class="padding:10px width:50px text-align:center"
-                            ><i
-                                class="height:16px"
-                                src="./assets/svg/sign-out-alt.svg"></i
-                        ></span>
-                    </a>
-                </div>
-            </div>
-            <div resize="right" class="background:rgba(0,0,0,0.06):hover"></div>
-        </sidenav>
+			<div class="padding-right:5px padding-bottom:5px">
+				<ul
+					class="overflow:auto display:flex flex-direction:column width:100% height:calc(100vh_-_160px) bottom:10px margin-right:5px">
+					<div
+						array="modules"
+						filter-sort-key="main-menu-position"
+						filter-sort-direction="asc"
+						filter-query-key="main-menu-position.$ne"
+						filter-query-value="0"
+						filter-value-type="number"
+						render-selector="[template]">
+						<li
+							class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover"
+							template>
+							<a
+								actions="state, openModal"
+								state-array="files"
+								state-object="{{object.main-menu-primary}}"
+								state_to="render"
+								state-key="src"
+								modal-width="600px"
+								modal-color="{{object.main-modal-color}}"
+								class="display:inline-block">
+								<span
+									class="display:inline-block width:50px text-align:center"
+									object="{{object._id}}"
+									array="modules"
+									key="icon"></span>
+								<span
+									array="modules"
+									object="{{object._id}}"
+									key="name"></span>
+								<div
+									state-array="module_activities"
+									state-filter-query-key="module_id"
+									state-filter-value="{{object._id}}"
+									state_to="datatable"></div>
+								<div
+									state-array="module_activities"
+									state-value="{{object._id}}"
+									state_to="module_id"></div>
+								<div
+									state-array="files"
+									state-object="{{object.main-menu-secondary}}"
+									state-key="src"
+									state_to="form"></div>
+							</a>
+							<div
+								class="float:right width:50px text-align:center">
+								<a
+									actions="state, openModal"
+									state-array="files"
+									state-object="{{object.main-menu-secondary}}"
+									state-key="src"
+									state_to="render"
+									modal-width="320px"
+									modal-color="#229954">
+									<i
+										class="height:16px"
+										src="./assets/svg/plus.svg"></i>
+									<div
+										state-array="modules"
+										object="{{object._id}}"
+										state_to="module_id"></div>
+								</a>
+							</div>
+						</li>
+					</div>
+				</ul>
+				<div
+					class="display:inline:block position:absolute bottom:0 background:gainsboro line-height:40px height:40px width:100% overflow:hidden">
+					<a
+						actions="state, openModal"
+						state-array="files"
+						state-object="5fa849674b4c3e4dea76abe6"
+						state-key="src"
+						state_to="render"
+						modal-width="275px"
+						modal-color="#229954"
+						modal-x="0"
+						modal-y="0"
+						class="width:50px text-align:center display:inline-block">
+						<span class="padding:10px width:50px text-align:center"
+							><i
+								class="height:16px"
+								src="./assets/svg/cogs.svg"></i
+						></span>
+					</a>
+					<a
+						actions="state, openModal"
+						modal-src="modules/module-views/module_datatable.html"
+						state-array="modules"
+						state-object=""
+						state_to="render"
+						modal-width="640px"
+						modal-color="#229954"
+						modal-x="0"
+						modal-y="0"
+						class="width:50px text-align:center display:inline-block">
+						<span class="padding:10px width:50px text-align:center"
+							><i
+								class="height:16px"
+								src="./assets/svg/project-diagram.svg"></i
+						></span>
+					</a>
+					<a
+						actions="state, openModal"
+						modal-src="modules/module-templates/module-template_datatable.html"
+						state-array="modules"
+						state-object=""
+						state_to="render"
+						modal-width="640px"
+						modal-color="#229954"
+						modal-x="0"
+						modal-y="0"
+						class="width:50px text-align:center display:inline-block">
+						<span class="padding:10px width:50px text-align:center"
+							><i
+								class="height:16px"
+								src="./assets/svg/shapes.svg"></i
+						></span>
+					</a>
+					<a
+						href="signin.html"
+						class="logoutBtn width:50px text-align:center display:inline-block">
+						<span class="padding:10px width:50px text-align:center"
+							><i
+								class="height:16px"
+								src="./assets/svg/sign-out-alt.svg"></i
+						></span>
+					</a>
+				</div>
+			</div>
+			<div resize="right" class="background:rgba(0,0,0,0.06):hover"></div>
+		</sidenav>
 
-        <main content_id="content" class="height:100vh">
-            <div
-                class="display:flex flex-wrap:wrap padding:20px"
-                array="module_activities"
-                filter-limit="12"
-                filter-sort-key="name"
-                filter-sort-direction="asc"
-                operator="or"
-                render-selector="[template]">
-                <div
-                    class="card position:relative flex-grow:1 margin:10px background:#ffffff height:470px width:250px max-width:350px"
-                    template>
-                    <div class="height:400px overflow:hidden">
-                        <div
-                            class="position:absolute top:0px right:0px width:30px height:30px background:#3b5998 color:#ffffff font-weight:700 text-align:center opacity:0.7">
-                            <div class="padding:5px font-size:18px">
-                                <i
-                                    class="height:16px"
-                                    src="./assets/svg/facebook-f.svg"></i>
-                            </div>
-                        </div>
-                        <!-- Image -->
-                        <img
-                            class="width:120%"
-                            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
-                        <!-- Post Content -->
-                        <div
-                            class="position:absolute bottom:0 background:#ffffff width:100% padding:30px">
-                            <div
-                                hover="height:100%"
-                                hover-selector=".description">
-                                <h1
-                                    class="font-size:18px margin:0 padding:0_0_10px color:#333333 font-weight:700">
-                                    City Lights in New York
-                                </h1>
-                                <h2
-                                    class="margin:0 padding:0_0_20px color:#e74c3c font-size:16px font-weight:400">
-                                    The city that never sleeps.
-                                </h2>
-                                <p
-                                    class="description height:50px color:#666666 font-size:14px line-height:1.8rem overflow:hidden">
-                                    New York, the largest city in the U.S., is
-                                    an architectural marvel with plenty of
-                                    historic monuments, magnificent buildings
-                                    and countless dazzling skyscrapers.
-                                </p>
-                            </div>
-                            <div class="margin:30px_0_0 color:#999999">
-                                <span class="margin:0_16px_0_0">
-                                    <i
-                                        class="height:16px"
-                                        src="./assets/svg/clock.svg"></i>
-                                    6 mins ago
-                                </span>
-                                <span class="">
-                                    <i
-                                        class="height:16px"
-                                        src="./assets/svg/comments.svg"></i
-                                    ><a
-                                        class="color:#999999 color:#999999:hover text-decoration:none:hover"
-                                        href="#">
-                                        39 comments</a
-                                    >
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+		<main content_id="content" class="height:100vh">
+			<div
+				class="display:flex flex-wrap:wrap padding:20px"
+				array="module_activities"
+				filter-limit="12"
+				filter-sort-key="name"
+				filter-sort-direction="asc"
+				operator="or"
+				render-selector="[template]">
+				<div
+					class="card position:relative flex-grow:1 margin:10px background:#ffffff height:470px width:250px max-width:350px"
+					template>
+					<div class="height:400px overflow:hidden">
+						<div
+							class="position:absolute top:0px right:0px width:30px height:30px background:#3b5998 color:#ffffff font-weight:700 text-align:center opacity:0.7">
+							<div class="padding:5px font-size:18px">
+								<i
+									class="height:16px"
+									src="./assets/svg/facebook-f.svg"></i>
+							</div>
+						</div>
+						<!-- Image -->
+						<img
+							class="width:120%"
+							src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" />
+						<!-- Post Content -->
+						<div
+							class="position:absolute bottom:0 background:#ffffff width:100% padding:30px">
+							<div
+								hover="height:100%"
+								hover-selector=".description">
+								<h1
+									class="font-size:18px margin:0 padding:0_0_10px color:#333333 font-weight:700">
+									City Lights in New York
+								</h1>
+								<h2
+									class="margin:0 padding:0_0_20px color:#e74c3c font-size:16px font-weight:400">
+									The city that never sleeps.
+								</h2>
+								<p
+									class="description height:50px color:#666666 font-size:14px line-height:1.8rem overflow:hidden">
+									New York, the largest city in the U.S., is
+									an architectural marvel with plenty of
+									historic monuments, magnificent buildings
+									and countless dazzling skyscrapers.
+								</p>
+							</div>
+							<div class="margin:30px_0_0 color:#999999">
+								<span class="margin:0_16px_0_0">
+									<i
+										class="height:16px"
+										src="./assets/svg/clock.svg"></i>
+									6 mins ago
+								</span>
+								<span class="">
+									<i
+										class="height:16px"
+										src="./assets/svg/comments.svg"></i
+									><a
+										class="color:#999999 color:#999999:hover text-decoration:none:hover"
+										href="#">
+										39 comments</a
+									>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 
-        <sidenav
-            id="menuR"
-            class="position:absolute top:0px right:0px direction:rtl overflow:hidden background:white height:100vh width:0px"
-            resizable
-            resize-selector="[content_id='content']"
-            resize-property="margin-right"
-            resize-value="width">
-            <div
-                class="min-width:290px background-color:#ffffff margin:5px direction:ltr">
-                <div class="padding:5px">
-                    <div
-                        class="resizeHandler background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
-                </div>
-                <button
-                    toggle-sidenav="menuR"
-                    class="position:absolute bottom:15px right:15px padding:15px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4) z-index:15">
-                    <i src="./assets/svg/directions.svg"></i>
-                </button>
-            </div>
-        </sidenav>
+		<sidenav
+			id="menuR"
+			class="position:absolute top:0px right:0px direction:rtl overflow:hidden background:white height:100vh width:0px"
+			resizable
+			resize-selector="[content_id='content']"
+			resize-property="margin-right"
+			resize-value="width">
+			<div
+				class="min-width:290px background-color:#ffffff margin:5px direction:ltr">
+				<div class="padding:5px">
+					<div
+						class="resizeHandler background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
+				</div>
+				<button
+					toggle-sidenav="menuR"
+					class="position:absolute bottom:15px right:15px padding:15px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4) z-index:15">
+					<i src="./assets/svg/directions.svg"></i>
+				</button>
+			</div>
+		</sidenav>
 
-        <!-- Comming Soon-->
-        <div
-            class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
-            <h2>
-                Coming Soon <a actions="remove" remove-closest=".card"> X</a>
-            </h2>
-        </div>
+		<!-- Comming Soon-->
+		<div
+			class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
+			<h2>
+				Coming Soon <a actions="remove" remove-closest=".card"> X</a>
+			</h2>
+		</div>
 
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
-    </body>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
+	</body>
 </html>

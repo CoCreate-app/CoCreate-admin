@@ -1,659 +1,659 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="../assets/favicon.ico" />
-        <title>Fleet Tracking | CoCreate</title>
-        <link
-            rel="stylesheet"
-            href="../index.css"
-            array="files"
-            object="637bc8ff91249e639db31600"
-            key="src"
-            type="text/css" />
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="../assets/favicon.ico" />
+		<title>Fleet Tracking | CoCreate</title>
+		<link
+			rel="stylesheet"
+			href="../index.css"
+			array="files"
+			object="637bc8ff91249e639db31600"
+			key="src"
+			type="text/css" />
 
-        <link rel="manifest" href="./manifest.webmanifest" />
-    </head>
-    <style type="text/css">
-        .collapsed > .menu-items {
-            height: 0px;
-            overflow: hidden;
-        }
+		<link rel="manifest" href="./manifest.webmanifest" />
+	</head>
+	<style type="text/css">
+		.collapsed > .menu-items {
+			height: 0px;
+			overflow: hidden;
+		}
 
-        .menu-item.active {
-            height: 100%;
-        }
+		.menu-item.active {
+			height: 100%;
+		}
 
-        .collapsed > .code-editor {
-            height: 0px;
-            overflow: hidden;
-        }
+		.collapsed > .code-editor {
+			height: 0px;
+			overflow: hidden;
+		}
 
-        .tab[selected] {
-            background: whitesmoke;
-        }
+		.tab[selected] {
+			background: whitesmoke;
+		}
 
-        .tab.active {
-            border-bottom: 3px solid #0da3e2;
-        }
+		.tab.active {
+			border-bottom: 3px solid #0da3e2;
+		}
 
-        ::-webkit-scrollbar:hover {
-            width: 10px;
-            overflow: overlay;
-        }
-    </style>
-    <style>
-        .google_map {
-            height: 100vh;
-        }
-    </style>
+		::-webkit-scrollbar:hover {
+			width: 10px;
+			overflow: overlay;
+		}
+	</style>
+	<style>
+		.google_map {
+			height: 100vh;
+		}
+	</style>
 
-    <body>
-        <!-- Current Location -->
-        <div data-location_request="true"></div>
+	<body>
+		<!-- Current Location -->
+		<div data-location_request="true"></div>
 
-        <!-- Modal Viewport -->
-        <div id="modal-viewport" hidden></div>
+		<!-- Modal Viewport -->
+		<div id="modal-viewport" hidden></div>
 
-        <!-- Navbar -->
-        <nav
-            class="nav display:flex align-items:center background:whitesmoke"
-            content_id="content"
-            scroll="sticky-nav, hide-nav"
-            scroll-up="5"
-            scroll-down="5">
-            <!-- Menu Icon Animations -->
-            <a
-                class="menu_icon--Vdots"
-                click="active"
-                toggle="width:310px,"
-                toggle-selector="#menuL"
-                toggle-attribute="style">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </a>
+		<!-- Navbar -->
+		<nav
+			class="nav display:flex align-items:center background:whitesmoke"
+			content_id="content"
+			scroll="sticky-nav, hide-nav"
+			scroll-up="5"
+			scroll-down="5">
+			<!-- Menu Icon Animations -->
+			<a
+				class="menu_icon--Vdots"
+				click="active"
+				toggle="width:310px,"
+				toggle-selector="#menuL"
+				toggle-attribute="style">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+			</a>
 
-            <!-- Horizontal Scroll Nav/Tabs -->
-            <ul
-                class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
-                <!-- Modal Controls -->
-                <li class="margin-right:15px">
-                    <a actions="closeModal"
-                        ><i class="height:18px" src="./assets/svg/times.svg"></i
-                    ></a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="minMaxModal">
-                        <i
-                            toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
-                            toggle-attribute="src"
-                            class="height:18px"
-                            src="./assets/svg/window-maximize.svg"></i>
-                    </a>
-                </li>
-                <li class="margin-right:15px">
-                    <a actions="parkModal"
-                        ><i
-                            class="height:18px"
-                            src="./assets/svg/window-minimize.svg"></i
-                    ></a>
-                </li>
+			<!-- Horizontal Scroll Nav/Tabs -->
+			<ul
+				class="display:inline-flex direction:rtl overflow:auto font-size:20px align-items:center list-style-type:none width:100% height:50px">
+				<!-- Modal Controls -->
+				<li class="margin-right:15px">
+					<a actions="closeModal"
+						><i class="height:18px" src="./assets/svg/times.svg"></i
+					></a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="minMaxModal">
+						<i
+							toggle="./assets/svg/window-restore.svg, /assets/svg/window-maximize.svg"
+							toggle-attribute="src"
+							class="height:18px"
+							src="./assets/svg/window-maximize.svg"></i>
+					</a>
+				</li>
+				<li class="margin-right:15px">
+					<a actions="parkModal"
+						><i
+							class="height:18px"
+							src="./assets/svg/window-minimize.svg"></i
+					></a>
+				</li>
 
-                <!-- fullscreen toogle and icon transform-->
-                <li class="margin-right:15px">
-                    <a fullscreen>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/expand.svg"></i>
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/compress.svg"></i>
-                    </a>
-                </li>
+				<!-- fullscreen toogle and icon transform-->
+				<li class="margin-right:15px">
+					<a fullscreen>
+						<i
+							class="height:18px"
+							src="./assets/svg/expand.svg"></i>
+						<i
+							class="height:18px"
+							src="./assets/svg/compress.svg"></i>
+					</a>
+				</li>
 
-                <!-- Render Module Form -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./modules/form.html"
-                        modal-width="320px">
-                        <i class="height:18px" src="./assets/svg/cog.svg"></i>
-                        <div
-                            state_id="module-form"
-                            state-array="modules"
-                            state-object=""
-                            state_to="form-fields"></div>
-                        <div
-                            state_id="module_id"
-                            state-filter-value=""
-                            state_to="module_id"></div>
-                    </a>
-                </li>
+				<!-- Render Module Form -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./modules/form.html"
+						modal-width="320px">
+						<i class="height:18px" src="./assets/svg/cog.svg"></i>
+						<div
+							state_id="module-form"
+							state-array="modules"
+							state-object=""
+							state_to="form-fields"></div>
+						<div
+							state_id="module_id"
+							state-filter-query-value=""
+							state_to="module_id"></div>
+					</a>
+				</li>
 
-                <!-- Render Code Editor -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./code-editor/index.html">
-                        <i class="height:18px" src="./assets/svg/code.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="code-editor"></div>
-                    </a>
-                </li>
+				<!-- Render Code Editor -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./code-editor/index.html">
+						<i class="height:18px" src="./assets/svg/code.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="code-editor"></div>
+					</a>
+				</li>
 
-                <!-- Render Builder -->
-                <li class="margin-right:15px">
-                    <a
-                        actions="state, openModal"
-                        modal-src="./builder/index.html">
-                        <i
-                            class="height:18px"
-                            src="./assets/svg/palette.svg"></i>
-                        <div
-                            state_id="render"
-                            state-array=""
-                            state-object=""
-                            state-key=""
-                            state_to="builder"></div>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+				<!-- Render Builder -->
+				<li class="margin-right:15px">
+					<a
+						actions="state, openModal"
+						modal-src="./builder/index.html">
+						<i
+							class="height:18px"
+							src="./assets/svg/palette.svg"></i>
+						<div
+							state_id="render"
+							state-array=""
+							state-object=""
+							state-key=""
+							state_to="builder"></div>
+					</a>
+				</li>
+			</ul>
+		</nav>
 
-        <sidenav
-            id="menuL"
-            class="position:absolute top:0px left:0px overflow:hidden background:white height:100vh width:310px width:310px:hover width:0px@xs"
-            resizable
-            resize-selector="[content_id='content']"
-            resize-property="margin-left"
-            resize-value="width">
-            <div
-                class="height:100vh min-width:300px padding:5px overflow:auto margin:5px">
-                <div class="font-size:22px color:#333333 font-weight:600">
-                    <div
-                        class="border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px margin-bottom:10px">
-                        Active Fleet
-                    </div>
-                </div>
+		<sidenav
+			id="menuL"
+			class="position:absolute top:0px left:0px overflow:hidden background:white height:100vh width:310px width:310px:hover width:0px@xs"
+			resizable
+			resize-selector="[content_id='content']"
+			resize-property="margin-left"
+			resize-value="width">
+			<div
+				class="height:100vh min-width:300px padding:5px overflow:auto margin:5px">
+				<div class="font-size:22px color:#333333 font-weight:600">
+					<div
+						class="border-bottom:_1px_solid_#ECEFF0 padding:_0_0_7px margin-bottom:10px">
+						Active Fleet
+					</div>
+				</div>
 
-                <!--Driver -->
-                <div
-                    class="card padding:20px_10px margin-bottom:15px background:white margin-right:10px">
-                    <div class="display:flex flex-wrap:wrap">
-                        <!-- Avatar -->
-                        <div
-                            localstorage-get="user_id"
-                            localstorage-key="userId"
-                            localstorage-selector=".avatar-wrapper"></div>
+				<!--Driver -->
+				<div
+					class="card padding:20px_10px margin-bottom:15px background:white margin-right:10px">
+					<div class="display:flex flex-wrap:wrap">
+						<!-- Avatar -->
+						<div
+							localstorage-get="user_id"
+							localstorage-key="userId"
+							localstorage-selector=".avatar-wrapper"></div>
 
-                        <div
-                            class="avatar-wrapper margin:5px_0px margin-right:10px">
-                            <a
-                                class="avatar round"
-                                actions="state, openModal"
-                                modal-src="./user-profile/user-profile.html"
-                                state-array="modules"
-                                state-object="5dd010bccbc25f0cdb1a4d9f"
-                                state_to="render"
-                                modal-width="300px"
-                                modal-height="375px"
-                                modal-color="#229954">
-                                <span
-                                    array="users"
-                                    object="$user_id"
-                                    key="name"
-                                    class="first-letter avatar-name"></span>
-                                <span
-                                    array="users"
-                                    object="$user_id"
-                                    key="profile_image"
-                                    class="avatar-image">
-                                    <img
-                                        src="images/Velazquez.jpg"
-                                        onerror="this.style.display='none'" />
-                                </span>
-                            </a>
-                            <div
-                                class="avatar-status"
-                                array="users"
-                                object="$user_id"
-                                user-status="{'name':'status'}"></div>
-                        </div>
+						<div
+							class="avatar-wrapper margin:5px_0px margin-right:10px">
+							<a
+								class="avatar round"
+								actions="state, openModal"
+								modal-src="./user-profile/user-profile.html"
+								state-array="modules"
+								state-object="5dd010bccbc25f0cdb1a4d9f"
+								state_to="render"
+								modal-width="300px"
+								modal-height="375px"
+								modal-color="#229954">
+								<span
+									array="users"
+									object="$user_id"
+									key="name"
+									class="first-letter avatar-name"></span>
+								<span
+									array="users"
+									object="$user_id"
+									key="profile_image"
+									class="avatar-image">
+									<img
+										src="images/Velazquez.jpg"
+										onerror="this.style.display='none'" />
+								</span>
+							</a>
+							<div
+								class="avatar-status"
+								array="users"
+								object="$user_id"
+								user-status="{'name':'status'}"></div>
+						</div>
 
-                        <div class="">
-                            <div class="font-size:17px font-weight:600">
-                                Driver Name
-                            </div>
-                            <div class="font-size:15px">Driver Phone</div>
-                            <div class="font-size:12px color:#0ba3e1">
-                                Dynamic Contact Job Title
-                            </div>
-                        </div>
-                        <!--<div class="display:flex margin-top:10px">-->
-                        <!--		  <button class="answer phone is-animating" title="Answer Call"><i class="mdi mdi-48 mdi-phone"></i></button>-->
-                        <!--		  <button class="voicemail" title="Send to Voicemail"><i class="mdi mdi-48 mdi-voicemail"></i></button>-->
-                        <!--</div>-->
-                    </div>
-                </div>
-                <!--End Incoming Call-->
-            </div>
-            <div
-                resize="right"
-                class="background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
-        </sidenav>
+						<div class="">
+							<div class="font-size:17px font-weight:600">
+								Driver Name
+							</div>
+							<div class="font-size:15px">Driver Phone</div>
+							<div class="font-size:12px color:#0ba3e1">
+								Dynamic Contact Job Title
+							</div>
+						</div>
+						<!--<div class="display:flex margin-top:10px">-->
+						<!--		  <button class="answer phone is-animating" title="Answer Call"><i class="mdi mdi-48 mdi-phone"></i></button>-->
+						<!--		  <button class="voicemail" title="Send to Voicemail"><i class="mdi mdi-48 mdi-voicemail"></i></button>-->
+						<!--</div>-->
+					</div>
+				</div>
+				<!--End Incoming Call-->
+			</div>
+			<div
+				resize="right"
+				class="background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
+		</sidenav>
 
-        <main content_id="content" class="height:100vh">
-            <!--  <ul class="overflow:auto display:inline-flex align-items:center list-style-type:none width:100% line-height:40px" role="tablist">-->
-            <!--<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> -->
-            <!--    <a class="height:40px padding:.5rem_1rem tab active" href="#history" role="tab" toggle="tab" aria-selected="true"><i class="mdi mdi-history"></i> Map</a> -->
-            <!--</li>-->
+		<main content_id="content" class="height:100vh">
+			<!--  <ul class="overflow:auto display:inline-flex align-items:center list-style-type:none width:100% line-height:40px" role="tablist">-->
+			<!--<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> -->
+			<!--    <a class="height:40px padding:.5rem_1rem tab active" href="#history" role="tab" toggle="tab" aria-selected="true"><i class="mdi mdi-history"></i> Map</a> -->
+			<!--</li>-->
 
-            <!--<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> -->
-            <!--    <a class="height:40px padding:.5rem_1rem" href="#missed" role="tab" toggle="tab" aria-selected="false"><i class="mdi mdi-call-missed"></i> Table</a> -->
-            <!--</li>-->
+			<!--<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> -->
+			<!--    <a class="height:40px padding:.5rem_1rem" href="#missed" role="tab" toggle="tab" aria-selected="false"><i class="mdi mdi-call-missed"></i> Table</a> -->
+			<!--</li>-->
 
-            <!--<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> -->
-            <!--    <a class="height:40px padding:.5rem_1rem" href="#voicemail" role="tab" toggle="tab" aria-selected="false"><i class="mdi mdi-voicemail"></i> History</a>-->
-            <!--</li>-->
+			<!--<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> -->
+			<!--    <a class="height:40px padding:.5rem_1rem" href="#voicemail" role="tab" toggle="tab" aria-selected="false"><i class="mdi mdi-voicemail"></i> History</a>-->
+			<!--</li>-->
 
-            <!--<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> -->
-            <!--    <a class="height:40px padding:.5rem_1rem" href="#incoming" role="tab" toggle="tab" aria-selected="false"><i class="mdi mdi-phone-incoming"></i> Recordings</a> -->
-            <!--</li>-->
-            <!--        </ul>-->
+			<!--<li class="flex-grow:1 text-align:center line-height:40px min-width:140px"> -->
+			<!--    <a class="height:40px padding:.5rem_1rem" href="#incoming" role="tab" toggle="tab" aria-selected="false"><i class="mdi mdi-phone-incoming"></i> Recordings</a> -->
+			<!--</li>-->
+			<!--        </ul>-->
 
-            <div class="google_map" data-map_id="0"></div>
-        </main>
+			<div class="google_map" data-map_id="0"></div>
+		</main>
 
-        <sidenav
-            id="menuR"
-            class="position:absolute top:0px right:0px overflow:hidden direction:rtl background:white height:100vh width:300px width:300px:hover width:0px@xs"
-            resizable
-            resize-selector="[content_id='content']"
-            resize-property="margin-right"
-            resize-value="width">
-            <div
-                class="min-width:290px background-color:#ffffff margin:5px direction:ltr">
-                <div class="padding:5px">
-                    <div>
-                        <div>
-                            <input
-                                type="text"
-                                data-map_autocomplete="true"
-                                data-direction="origin"
-                                data-map_id="0"
-                                data-place="address"
-                                placeholder="Origin"
-                                class="main-search floating-label"
-                                data-place_id="0"
-                                autocomplete="off" />
-                            <input
-                                type="hidden"
-                                data-direction="origin"
-                                data-map_id="0"
-                                data-place="longitude"
-                                placeholder="Longitude"
-                                data-place_id="0" />
-                            <input
-                                type="hidden"
-                                data-direction="origin"
-                                data-map_id="0"
-                                data-place="latitude"
-                                placeholder="Latitude"
-                                data-place_id="0" />
-                        </div>
-                        <div sortable class="waypoints" dnd-group-key="Sort">
-                            <div id="waypoint" class="template Sort">
-                                <div
-                                    style="
-                                        display: inline-block;
-                                        width: calc(100% - 20px);
-                                    ">
-                                    <div>
-                                        <input
-                                            type="text"
-                                            data-map_autocomplete="true"
-                                            data-direction="waypoint"
-                                            data-map_id="0"
-                                            data-place="address"
-                                            placeholder="Waypoint"
-                                            class="main-search floating-label"
-                                            data-place_id="4"
-                                            autocomplete="off" />
-                                        <input
-                                            type="hidden"
-                                            data-direction="waypoint"
-                                            data-map_id="0"
-                                            data-place="longitude"
-                                            placeholder="Longitude"
-                                            data-place_id="4" />
-                                        <input
-                                            type="hidden"
-                                            data-direction="waypoint"
-                                            data-map_id="0"
-                                            data-place="latitude"
-                                            placeholder="Latitude"
-                                            data-place_id="4" />
-                                    </div>
-                                </div>
-                                <span style="float: right"
-                                    ><a
-                                        clone_id="waypoint"
-                                        class="deleteBtn noDrag"
-                                        ><i
-                                            class="height:18px"
-                                            src="./assets/svg/times.svg"></i></a
-                                ></span>
-                                <!--  -->
-                            </div>
-                        </div>
-                        <a
-                            clone_id="waypoint"
-                            actions="clone"
-                            class="noDrag"
-                            style="display: block"
-                            >Add waypoint</a
-                        >
-                        <!--<div sortable class="waypoints" dnd-group-key="Sort">-->
-                        <!--    <div id="waypoint1" class="template Sort">-->
-                        <!--        <div style="display:inline-block;width: calc(100% - 20px);">-->
-                        <!--            <div>-->
-                        <!--                <input type="text" data-map_autocomplete="true" data-direction="waypoint" data-map_id="0" data-place="address" placeholder="Waypoint" class="main-search floating-label" data-place_id="5" autocomplete="off">-->
-                        <!--                <input type="hidden" data-direction="waypoint" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="5">-->
-                        <!--                <input type="hidden" data-direction="waypoint" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="5">-->
-                        <!--            </div>-->
-                        <!--        </div>-->
-                        <!--        <span style="float:right;"><a clone_id="waypoint" class="deleteBtn noDrag"><i class="height:18px" src="./assets/svg/times.svg"></i></a></span>-->
-                        <!--  -->
-                        <!--    </div>-->
-                        <!--</div>-->
-                        <!--<a clone_id="waypoint1" actions="clone" class="noDrag" style="display: block">Add waypoint</a>-->
-                        <div>
-                            <input
-                                type="text"
-                                data-map_autocomplete="true"
-                                data-direction="destination"
-                                data-map_id="0"
-                                data-place="address"
-                                placeholder="Destination"
-                                class="main-search floating-label"
-                                data-place_id="1"
-                                style="width: 100%"
-                                autocomplete="off" />
-                            <input
-                                type="hidden"
-                                data-direction="destination"
-                                data-map_id="0"
-                                data-place="longitude"
-                                placeholder="Longitude"
-                                data-place_id="1" />
-                            <input
-                                type="hidden"
-                                data-direction="destination"
-                                data-map_id="0"
-                                data-place="latitude"
-                                placeholder="Latitude"
-                                data-place_id="1" />
-                        </div>
-                    </div>
-                    <div
-                        class="direction_option"
-                        data-map_id="0"
-                        data-autodirection="true">
-                        <div
-                            class="floating-label flex-wrap:wrap"
-                            placeholder="Travel Mode"
-                            active>
-                            <div class="margin-right:10px">
-                                <input
-                                    type="radio"
-                                    key="travel_mode"
-                                    data-map_id="0"
-                                    data-direction="travelMode"
-                                    value="DRIVING"
-                                    checked />
-                                <label>DRIVING</label>
-                            </div>
-                            <div class="margin-right:10px">
-                                <input
-                                    type="radio"
-                                    key="travel_mode"
-                                    data-map_id="0"
-                                    data-direction="travelMode"
-                                    value="BICYCLING" />
-                                <label>BICYCLING</label>
-                            </div>
-                            <div class="margin-right:10px">
-                                <input
-                                    type="radio"
-                                    key="travel_mode"
-                                    data-map_id="0"
-                                    data-direction="travelMode"
-                                    value="TRANSIT" />
-                                <label>TRANSIT</label>
-                            </div>
-                            <div class="margin-right:10px">
-                                <input
-                                    type="radio"
-                                    key="travel_mode"
-                                    data-map_id="0"
-                                    data-direction="travelMode"
-                                    value="WALKING" />
-                                <label>WALKING</label>
-                            </div>
-                        </div>
-                        <br />
-                        <label>Transit Options</label>
-                        <br />
-                        <div data-map_id="0" data-direction="transit_option">
-                            <input
-                                type="datetime-local"
-                                data-map_id="0"
-                                data-direction="arrivalTime"
-                                placeholder="Arrival Time"
-                                value=""
-                                class="floating-label" />
-                            <input
-                                type="datetime-local"
-                                data-map_id="0"
-                                data-direction="t_departureTime"
-                                placeholder="Departure Time"
-                                value=""
-                                class="floating-label" />
-                            <div
-                                class="floating-label flex-wrap:wrap"
-                                placeholder="Transit Mode"
-                                active>
-                                <div class="margin-right:10px">
-                                    <input
-                                        type="checkbox"
-                                        key="transit_modes"
-                                        data-map_id="0"
-                                        data-direction="transit_modes"
-                                        value="BUS" />
-                                    <label>BUS</label>
-                                </div>
-                                <div class="margin-right:10px">
-                                    <input
-                                        type="checkbox"
-                                        key="transit_modes"
-                                        data-map_id="0"
-                                        data-direction="transit_modes"
-                                        value="RAIL" />
-                                    <label>RAIL</label>
-                                </div>
-                                <div class="margin-right:10px">
-                                    <input
-                                        type="checkbox"
-                                        key="transit_modes"
-                                        data-map_id="0"
-                                        data-direction="transit_modes"
-                                        value="SUBWAY" />
-                                    <label>SUBWAY</label>
-                                </div>
-                                <div class="margin-right:10px">
-                                    <input
-                                        type="checkbox"
-                                        key="transit_modes"
-                                        data-map_id="0"
-                                        data-direction="transit_modes"
-                                        value="TRAIN" />
-                                    <label>TRAIN</label>
-                                </div>
-                                <div class="margin-right:10px">
-                                    <input
-                                        type="checkbox"
-                                        key="transit_modes"
-                                        data-map_id="0"
-                                        data-direction="transit_modes"
-                                        value="TRAM" />
-                                    <label>TRAM</label>
-                                </div>
-                            </div>
-                            <div
-                                class="floating-label flex-wrap:wrap"
-                                placeholder="Routing Preference"
-                                active>
-                                <div class="margin-right:10px">
-                                    <input
-                                        type="radio"
-                                        key="routingPreference"
-                                        data-map_id="0"
-                                        data-direction="routingPreference"
-                                        value="FEWER_TRANSFERS" />
-                                    <label>FEWER_TRANSFERS</label>
-                                </div>
-                                <div class="margin-right:10px">
-                                    <input
-                                        type="radio"
-                                        key="routingPreference"
-                                        data-map_id="0"
-                                        data-direction="routingPreference"
-                                        value="LESS_WALKING" />
-                                    <label>LESS_WALKING</label>
-                                </div>
-                            </div>
-                        </div>
-                        <br />
-                        <label>DrivingOption</label>
-                        <br />
-                        <div data-direction="driving_option">
-                            <label>DepartureTime</label>
-                            <input
-                                type="datetime-local"
-                                data-map_id="0"
-                                data-direction="d_departureTime"
-                                placeholder="Date"
-                                value=""
-                                class="floating-label" />
-                            <br />
-                            <label>TrafficModel</label>
-                            <br />
-                            <input
-                                type="radio"
-                                key="trafficModel"
-                                data-map_id="0"
-                                data-direction="trafficModel"
-                                value="bestguess" />
-                            <label>bestguess</label>
-                            <input
-                                type="radio"
-                                key="trafficModel"
-                                data-map_id="0"
-                                data-direction="trafficModel"
-                                value="pessimistic" />
-                            <label>pessimistic</label>
-                            <input
-                                type="radio"
-                                key="trafficModel"
-                                data-map_id="0"
-                                data-direction="trafficModel"
-                                value="optimistic" />
-                            <label>optimistic</label>
-                        </div>
-                        <label>UnitSystem</label>
-                        <br />
-                        <input
-                            type="radio"
-                            key="unit_system"
-                            data-map_id="0"
-                            data-direction="unitSystem"
-                            value="METRIC" />
-                        <label>METRIC</label>
-                        <input
-                            type="radio"
-                            key="unit_system"
-                            data-map_id="0"
-                            data-direction="unitSystem"
-                            value="IMPERIAL" />
-                        <label>IMPERIAL</label>
-                        <br />
-                        <input
-                            type="checkbox"
-                            data-map_id="0"
-                            data-direction="provideRouteAlternatives" />
-                        <label>ProvideRouteAlternatives</label>
-                        <br />
-                        <input
-                            type="checkbox"
-                            data-map_id="0"
-                            data-direction="avoidFerries" />
-                        <label>AvoidFerries</label>
-                        <br />
-                        <input
-                            type="checkbox"
-                            data-map_id="0"
-                            data-direction="avoidHighways" />
-                        <label>AvoidHighways</label>
-                        <br />
-                        <input
-                            type="checkbox"
-                            data-map_id="0"
-                            data-direction="avoidTolls" />
-                        <label>AvoidTolls</label>
-                        <br />
-                        <input
-                            type="checkbox"
-                            data-map_id="0"
-                            data-direction="optimizeWaypoints" />
-                        <label>OptimizeWaypoint</label>
-                    </div>
-                </div>
-            </div>
-            <div
-                resize="left"
-                class="background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
-        </sidenav>
+		<sidenav
+			id="menuR"
+			class="position:absolute top:0px right:0px overflow:hidden direction:rtl background:white height:100vh width:300px width:300px:hover width:0px@xs"
+			resizable
+			resize-selector="[content_id='content']"
+			resize-property="margin-right"
+			resize-value="width">
+			<div
+				class="min-width:290px background-color:#ffffff margin:5px direction:ltr">
+				<div class="padding:5px">
+					<div>
+						<div>
+							<input
+								type="text"
+								data-map_autocomplete="true"
+								data-direction="origin"
+								data-map_id="0"
+								data-place="address"
+								placeholder="Origin"
+								class="main-search floating-label"
+								data-place_id="0"
+								autocomplete="off" />
+							<input
+								type="hidden"
+								data-direction="origin"
+								data-map_id="0"
+								data-place="longitude"
+								placeholder="Longitude"
+								data-place_id="0" />
+							<input
+								type="hidden"
+								data-direction="origin"
+								data-map_id="0"
+								data-place="latitude"
+								placeholder="Latitude"
+								data-place_id="0" />
+						</div>
+						<div sortable class="waypoints" dnd-group-key="Sort">
+							<div id="waypoint" class="template Sort">
+								<div
+									style="
+										display: inline-block;
+										width: calc(100% - 20px);
+									">
+									<div>
+										<input
+											type="text"
+											data-map_autocomplete="true"
+											data-direction="waypoint"
+											data-map_id="0"
+											data-place="address"
+											placeholder="Waypoint"
+											class="main-search floating-label"
+											data-place_id="4"
+											autocomplete="off" />
+										<input
+											type="hidden"
+											data-direction="waypoint"
+											data-map_id="0"
+											data-place="longitude"
+											placeholder="Longitude"
+											data-place_id="4" />
+										<input
+											type="hidden"
+											data-direction="waypoint"
+											data-map_id="0"
+											data-place="latitude"
+											placeholder="Latitude"
+											data-place_id="4" />
+									</div>
+								</div>
+								<span style="float: right"
+									><a
+										clone_id="waypoint"
+										class="deleteBtn noDrag"
+										><i
+											class="height:18px"
+											src="./assets/svg/times.svg"></i></a
+								></span>
+								<!--  -->
+							</div>
+						</div>
+						<a
+							clone_id="waypoint"
+							actions="clone"
+							class="noDrag"
+							style="display: block"
+							>Add waypoint</a
+						>
+						<!--<div sortable class="waypoints" dnd-group-key="Sort">-->
+						<!--    <div id="waypoint1" class="template Sort">-->
+						<!--        <div style="display:inline-block;width: calc(100% - 20px);">-->
+						<!--            <div>-->
+						<!--                <input type="text" data-map_autocomplete="true" data-direction="waypoint" data-map_id="0" data-place="address" placeholder="Waypoint" class="main-search floating-label" data-place_id="5" autocomplete="off">-->
+						<!--                <input type="hidden" data-direction="waypoint" data-map_id="0" data-place="longitude" placeholder="Longitude" data-place_id="5">-->
+						<!--                <input type="hidden" data-direction="waypoint" data-map_id="0" data-place="latitude" placeholder="Latitude" data-place_id="5">-->
+						<!--            </div>-->
+						<!--        </div>-->
+						<!--        <span style="float:right;"><a clone_id="waypoint" class="deleteBtn noDrag"><i class="height:18px" src="./assets/svg/times.svg"></i></a></span>-->
+						<!--  -->
+						<!--    </div>-->
+						<!--</div>-->
+						<!--<a clone_id="waypoint1" actions="clone" class="noDrag" style="display: block">Add waypoint</a>-->
+						<div>
+							<input
+								type="text"
+								data-map_autocomplete="true"
+								data-direction="destination"
+								data-map_id="0"
+								data-place="address"
+								placeholder="Destination"
+								class="main-search floating-label"
+								data-place_id="1"
+								style="width: 100%"
+								autocomplete="off" />
+							<input
+								type="hidden"
+								data-direction="destination"
+								data-map_id="0"
+								data-place="longitude"
+								placeholder="Longitude"
+								data-place_id="1" />
+							<input
+								type="hidden"
+								data-direction="destination"
+								data-map_id="0"
+								data-place="latitude"
+								placeholder="Latitude"
+								data-place_id="1" />
+						</div>
+					</div>
+					<div
+						class="direction_option"
+						data-map_id="0"
+						data-autodirection="true">
+						<div
+							class="floating-label flex-wrap:wrap"
+							placeholder="Travel Mode"
+							active>
+							<div class="margin-right:10px">
+								<input
+									type="radio"
+									key="travel_mode"
+									data-map_id="0"
+									data-direction="travelMode"
+									value="DRIVING"
+									checked />
+								<label>DRIVING</label>
+							</div>
+							<div class="margin-right:10px">
+								<input
+									type="radio"
+									key="travel_mode"
+									data-map_id="0"
+									data-direction="travelMode"
+									value="BICYCLING" />
+								<label>BICYCLING</label>
+							</div>
+							<div class="margin-right:10px">
+								<input
+									type="radio"
+									key="travel_mode"
+									data-map_id="0"
+									data-direction="travelMode"
+									value="TRANSIT" />
+								<label>TRANSIT</label>
+							</div>
+							<div class="margin-right:10px">
+								<input
+									type="radio"
+									key="travel_mode"
+									data-map_id="0"
+									data-direction="travelMode"
+									value="WALKING" />
+								<label>WALKING</label>
+							</div>
+						</div>
+						<br />
+						<label>Transit Options</label>
+						<br />
+						<div data-map_id="0" data-direction="transit_option">
+							<input
+								type="datetime-local"
+								data-map_id="0"
+								data-direction="arrivalTime"
+								placeholder="Arrival Time"
+								value=""
+								class="floating-label" />
+							<input
+								type="datetime-local"
+								data-map_id="0"
+								data-direction="t_departureTime"
+								placeholder="Departure Time"
+								value=""
+								class="floating-label" />
+							<div
+								class="floating-label flex-wrap:wrap"
+								placeholder="Transit Mode"
+								active>
+								<div class="margin-right:10px">
+									<input
+										type="checkbox"
+										key="transit_modes"
+										data-map_id="0"
+										data-direction="transit_modes"
+										value="BUS" />
+									<label>BUS</label>
+								</div>
+								<div class="margin-right:10px">
+									<input
+										type="checkbox"
+										key="transit_modes"
+										data-map_id="0"
+										data-direction="transit_modes"
+										value="RAIL" />
+									<label>RAIL</label>
+								</div>
+								<div class="margin-right:10px">
+									<input
+										type="checkbox"
+										key="transit_modes"
+										data-map_id="0"
+										data-direction="transit_modes"
+										value="SUBWAY" />
+									<label>SUBWAY</label>
+								</div>
+								<div class="margin-right:10px">
+									<input
+										type="checkbox"
+										key="transit_modes"
+										data-map_id="0"
+										data-direction="transit_modes"
+										value="TRAIN" />
+									<label>TRAIN</label>
+								</div>
+								<div class="margin-right:10px">
+									<input
+										type="checkbox"
+										key="transit_modes"
+										data-map_id="0"
+										data-direction="transit_modes"
+										value="TRAM" />
+									<label>TRAM</label>
+								</div>
+							</div>
+							<div
+								class="floating-label flex-wrap:wrap"
+								placeholder="Routing Preference"
+								active>
+								<div class="margin-right:10px">
+									<input
+										type="radio"
+										key="routingPreference"
+										data-map_id="0"
+										data-direction="routingPreference"
+										value="FEWER_TRANSFERS" />
+									<label>FEWER_TRANSFERS</label>
+								</div>
+								<div class="margin-right:10px">
+									<input
+										type="radio"
+										key="routingPreference"
+										data-map_id="0"
+										data-direction="routingPreference"
+										value="LESS_WALKING" />
+									<label>LESS_WALKING</label>
+								</div>
+							</div>
+						</div>
+						<br />
+						<label>DrivingOption</label>
+						<br />
+						<div data-direction="driving_option">
+							<label>DepartureTime</label>
+							<input
+								type="datetime-local"
+								data-map_id="0"
+								data-direction="d_departureTime"
+								placeholder="Date"
+								value=""
+								class="floating-label" />
+							<br />
+							<label>TrafficModel</label>
+							<br />
+							<input
+								type="radio"
+								key="trafficModel"
+								data-map_id="0"
+								data-direction="trafficModel"
+								value="bestguess" />
+							<label>bestguess</label>
+							<input
+								type="radio"
+								key="trafficModel"
+								data-map_id="0"
+								data-direction="trafficModel"
+								value="pessimistic" />
+							<label>pessimistic</label>
+							<input
+								type="radio"
+								key="trafficModel"
+								data-map_id="0"
+								data-direction="trafficModel"
+								value="optimistic" />
+							<label>optimistic</label>
+						</div>
+						<label>UnitSystem</label>
+						<br />
+						<input
+							type="radio"
+							key="unit_system"
+							data-map_id="0"
+							data-direction="unitSystem"
+							value="METRIC" />
+						<label>METRIC</label>
+						<input
+							type="radio"
+							key="unit_system"
+							data-map_id="0"
+							data-direction="unitSystem"
+							value="IMPERIAL" />
+						<label>IMPERIAL</label>
+						<br />
+						<input
+							type="checkbox"
+							data-map_id="0"
+							data-direction="provideRouteAlternatives" />
+						<label>ProvideRouteAlternatives</label>
+						<br />
+						<input
+							type="checkbox"
+							data-map_id="0"
+							data-direction="avoidFerries" />
+						<label>AvoidFerries</label>
+						<br />
+						<input
+							type="checkbox"
+							data-map_id="0"
+							data-direction="avoidHighways" />
+						<label>AvoidHighways</label>
+						<br />
+						<input
+							type="checkbox"
+							data-map_id="0"
+							data-direction="avoidTolls" />
+						<label>AvoidTolls</label>
+						<br />
+						<input
+							type="checkbox"
+							data-map_id="0"
+							data-direction="optimizeWaypoints" />
+						<label>OptimizeWaypoint</label>
+					</div>
+				</div>
+			</div>
+			<div
+				resize="left"
+				class="background:rgba(0,0,0,0.03) background:rgba(0,0,0,0.06):hover"></div>
+		</sidenav>
 
-        <button
-            toggle-sidenav="menuR"
-            class="position:absolute bottom:15px right:15px padding:15px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4) z-index:15">
-            <i src="./assets/svg/directions.svg"></i>
-        </button>
+		<button
+			toggle-sidenav="menuR"
+			class="position:absolute bottom:15px right:15px padding:15px background:dodgerblue color:#fff font-size:1.5rem grow-hover border-radius:50% border-width:0 box-shadow:0px_2px_10px_0px_rgba(0,_0,_0,_0.4) z-index:15">
+			<i src="./assets/svg/directions.svg"></i>
+		</button>
 
-        <!-- Comming Soon-->
-        <div
-            class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
-            <h2>
-                Coming Soon <a actions="remove" remove-closest=".card"> X</a>
-            </h2>
-        </div>
+		<!-- Comming Soon-->
+		<div
+			class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
+			<h2>
+				Coming Soon <a actions="remove" remove-closest=".card"> X</a>
+			</h2>
+		</div>
 
-        <script src="https://CoCreate.app/dist/CoCreate.js"></script>
+		<script src="https://CoCreate.app/dist/CoCreate.js"></script>
 
-        <script src="https://maps.googleapis.com/maps/api/js?key=xxx&libraries=places"></script>
-        <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-HXe_wfCizNwre28UifFdoAS0kJvBNnA&libraries=places&callback=initMapSettings" defer></script>-->
-    </body>
+		<script src="https://maps.googleapis.com/maps/api/js?key=xxx&libraries=places"></script>
+		<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-HXe_wfCizNwre28UifFdoAS0kJvBNnA&libraries=places&callback=initMapSettings" defer></script>-->
+	</body>
 </html>
