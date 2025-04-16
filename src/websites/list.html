@@ -136,14 +136,14 @@
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a toggle="hidden" toogle-selector="#column-visibility"
+					<a toggle="hidden" toogle-query="#column-visibility"
 						><i class="height:18px" src="./assets/svg/eye.svg"></i
 					></a>
 				</li>
 				<li class="margin-right:15px">
 					<a
 						actions="export"
-						export-selector=""
+						export-query=""
 						export-type="csv"
 						state_id="datatable"
 						><i
@@ -152,7 +152,7 @@
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="export" export-selector="" state_id="datatable"
+					<a actions="export" export-query="" state_id="datatable"
 						><i
 							class="height:18px"
 							src="./assets/svg/file-download.svg"></i
@@ -166,12 +166,12 @@
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="copy" copy-selector="tbody"
+					<a actions="copy" copy-query="tbody"
 						><i class="height:18px" src="./assets/svg/copy.svg"></i
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="print" print-closest="nav; parent; tbody"
+					<a actions="print" print-query="$closest nav; parent; tbody"
 						><i class="height:18px" src="./assets/svg/print.svg"></i
 					></a>
 				</li>
@@ -195,7 +195,7 @@
 				filter-sort-key="name"
 				filter-sort-direction="asc"
 				state_id="datatable"
-				render-selector="[template]">
+				render-query="[template]">
 				<div
 					template
 					state_id="datatable"

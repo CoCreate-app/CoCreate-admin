@@ -200,12 +200,12 @@
 					placeholder="Module">
 					<input
 						placeholder="Search"
-						filter-parent="array"
+						filter-query="$parent array"
 						filter-search />
 					<cc-options
 						array="modules"
 						filter-sort-key="name"
-						render-selector="[template]"
+						render-query="[template]"
 						class="overflow:auto">
 						<cc-option template value="{{object._id}}">
 							<div class="display:flex padding:5px">
@@ -224,7 +224,7 @@
 					<div
 						class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab"
 						selected-value="active"
-						selected-selector="#html"
+						selected-query="#html"
 						selected-group="code-editor"
 						selected>
 						HTML
@@ -232,14 +232,14 @@
 					<div
 						class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab"
 						selected-value="active"
-						selected-selector="#css"
+						selected-query="#css"
 						selected-group="code-editor">
 						CSS
 					</div>
 					<div
 						class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab"
 						selected-value="active"
-						selected-selector="#js"
+						selected-query="#js"
 						selected-group="code-editor">
 						JS
 					</div>

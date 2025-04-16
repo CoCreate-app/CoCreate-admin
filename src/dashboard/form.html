@@ -167,10 +167,10 @@
 							placeholder="Status">
 							<input
 								placeholder="Search"
-								filter-parent="array"
+								filter-query="$parent array"
 								filter-search />
 							<div
-								filter-next
+								filter-query="$next"
 								filter-query-key="type"
 								filter-query-value="5ff747727005da1c272740ab"></div>
 							<cc-options
@@ -178,7 +178,7 @@
 								state_id="module_id"
 								filter-query-key="module_id"
 								filter-query-value=""
-								render-selector="[template]"
+								render-query="[template]"
 								class="overflow:auto">
 								<cc-option template value="{{object._id}}">
 									<h4>{{object.name}}</h4>
@@ -196,10 +196,10 @@
 							placeholder="Stage">
 							<input
 								placeholder="Search"
-								filter-parent="array"
+								filter-query="$parent array"
 								filter-search />
 							<div
-								filter-next
+								filter-query="$next"
 								filter-query-key="type"
 								filter-query-value="5ff747727005da1c272740ab"></div>
 							<cc-options
@@ -207,7 +207,7 @@
 								filter-query-key="module_id"
 								state_id="module_id"
 								filter-query-value=""
-								render-selector="[template]"
+								render-query="[template]"
 								class="overflow:auto">
 								<cc-option template value="{{object._id}}">
 									<h4
@@ -231,11 +231,11 @@
 					placeholder="Related To:">
 					<input
 						placeholder="Search"
-						filter-parent="array"
+						filter-query="$parent array"
 						filter-search />
 					<cc-options
 						array=".*"
-						render-selector="[template]"
+						render-query="[template]"
 						class="overflow:auto">
 						<cc-option
 							class="display:flex padding:5px"
@@ -265,11 +265,11 @@
 					placeholder="Team">
 					<input
 						placeholder="Search"
-						filter-parent="array"
+						filter-query="$parent array"
 						filter-search />
 					<cc-options
 						array=".*"
-						render-selector="[template]"
+						render-query="[template]"
 						class="overflow:auto">
 						<cc-option
 							class="display:flex padding:5px"

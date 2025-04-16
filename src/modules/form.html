@@ -182,7 +182,7 @@
 				<input
 					type="text"
 					key="name"
-					input-selector=".name"
+					input-query=".name"
 					input-attribute="value"
 					input-events="input, onload"
 					placeholder="Module Name"
@@ -190,7 +190,7 @@
 				<input
 					type="hidden"
 					key="_id"
-					input-selector=".module_id"
+					input-query=".module_id"
 					input-key="module_id" />
 				<input
 					type="text"
@@ -212,7 +212,7 @@
 						<span class="flex-grow:1">Menu Items</span>
 						<a
 							toggle="collapsed"
-							toggle-closest=".card"
+							toggle-query="$closest .card"
 							show="#menu-up, #menu-down"
 							hide="#menu-down, #menu-up"
 							state-array="files"
@@ -235,7 +235,7 @@
 							<div
 								class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab"
 								selected-value="active"
-								selected-selector="#navbar-menu"
+								selected-query="#navbar-menu"
 								selected-group="menu-items"
 								selected>
 								Navbar
@@ -243,14 +243,14 @@
 							<div
 								class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab"
 								selected-value="active"
-								selected-selector="#main-menu"
+								selected-query="#main-menu"
 								selected-group="menu-items">
 								Menu
 							</div>
 							<div
 								class="padding:10px_21px border-radius:3px_3px_0_0 font-size:16px cursor:pointer background:gainsboro background:silver:hover tab"
 								selected-value="active"
-								selected-selector="#settings-menu"
+								selected-query="#settings-menu"
 								selected-group="menu-items">
 								Settings
 							</div>
@@ -270,11 +270,11 @@
 										value-type="object">
 										<input
 											placeholder="Search"
-											filter-parent="[render-selector]"
+											filter-query="$parent [render-query]"
 											filter-search />
 
 										<div
-											filter-parent="[render-selector]"
+											filter-query="$parent [render-query]"
 											filter-query-key="module_id.$ne"
 											filter-query-value=""></div>
 										<cc-options
@@ -283,7 +283,7 @@
 											object
 											filter-query-key="module_id.$eq"
 											filter-query-value="{{module_id}}"
-											render-selector="[template]"
+											render-query="[template]"
 											class="overflow:auto module_id">
 											<cc-option
 												template
@@ -293,7 +293,7 @@
 											</cc-option>
 										</cc-options>
 									</cocreate-select>
-									<!-- <input type="hidden" array="files" object="{{object.navbar-menu-primary}}" key="path" input-selector="#navbar-menu-primary">
+									<!-- <input type="hidden" array="files" object="{{object.navbar-menu-primary}}" key="path" input-query="#navbar-menu-primary">
 									<input id="navbar-menu-primary" type="text" state_id="form-fields" array object key="navbar-menu-primary-path"./> -->
 
 									<div
@@ -356,7 +356,7 @@
 									<div
 										class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type"
 										selected-value="active"
-										selected-selector="#main-menu-primary"
+										selected-query="#main-menu-primary"
 										selected-group="main-menu-item"
 										selected>
 										Primary
@@ -364,7 +364,7 @@
 									<div
 										class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type"
 										selected-value="active"
-										selected-selector="#main-menu-secondary"
+										selected-query="#main-menu-secondary"
 										selected-group="main-menu-item">
 										Secondary
 									</div>
@@ -380,19 +380,19 @@
 										value-type="object">
 										<input
 											placeholder="Search"
-											filter-parent="[render-selector]"
+											filter-query="$parent [render-query]"
 											filter-search />
 										<div
 											filter-query-key="module_id.$ne"
 											filter-query-value=""
-											filter-parent="[render-selector]"></div>
+											filter-query="$parent [render-query]"></div>
 										<cc-options
 											state_id="module_id"
 											array=""
 											object
 											filter-query-key="module_id.$eq"
 											filter-query-value="{{module_id}}"
-											render-selector="[template]"
+											render-query="[template]"
 											class="overflow:auto module_id">
 											<cc-option
 												template
@@ -465,20 +465,20 @@
 										value-type="object">
 										<input
 											placeholder="Search"
-											filter-parent="[render-selector]"
+											filter-query="$parent [render-query]"
 											filter-search
 											tags="true" />
 										<div
 											filter-query-key="module_id.$ne"
 											filter-query-value=""
-											filter-parent="[render-selector]"></div>
+											filter-query="$parent [render-query]"></div>
 										<cc-options
 											state_id="module_id"
 											array=""
 											object
 											filter-query-key="module_id.$eq"
 											filter-query-value="{{module_id}}"
-											render-selector="[template]"
+											render-query="[template]"
 											class="overflow:auto module_id">
 											<cc-option
 												template
@@ -536,7 +536,7 @@
 									<div
 										class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type"
 										selected-value="active"
-										selected-selector="#settings-menu-primary"
+										selected-query="#settings-menu-primary"
 										selected-group="settings-menu-item"
 										selected>
 										Primary
@@ -544,7 +544,7 @@
 									<div
 										class="padding:10px_21px font-size:16px cursor:pointer background:gainsboro grow-hover tab-type"
 										selected-value="active"
-										selected-selector="#settings-menu-secondary"
+										selected-query="#settings-menu-secondary"
 										selected-group="settings-menu-item">
 										Secondary
 									</div>
@@ -560,19 +560,19 @@
 										value-type="object">
 										<input
 											placeholder="Search"
-											filter-parent="[render-selector]"
+											filter-query="$parent [render-query]"
 											filter-search />
 										<div
 											filter-query-key="module_id.$ne"
 											filter-query-value=""
-											filter-parent="[render-selector]"></div>
+											filter-query="$parent [render-query]"></div>
 										<cc-options
 											state_id="module_id"
 											array=""
 											object
 											filter-query-key="module_id.$eq"
 											filter-query-value="{{module_id}}"
-											render-selector="[template]"
+											render-query="[template]"
 											class="overflow:auto module_id">
 											<cc-option
 												template
@@ -645,20 +645,20 @@
 										value-type="object">
 										<input
 											placeholder="Search"
-											filter-parent="[render-selector]"
+											filter-query="$parent [render-query]"
 											filter-search
 											tags="true" />
 										<div
 											filter-query-key="module_id.$ne"
 											filter-query-value=""
-											filter-parent="[render-selector]"></div>
+											filter-query="$parent [render-query]"></div>
 										<cc-options
 											state_id="module_id"
 											array=""
 											object
 											filter-query-key="module_id.$eq"
 											filter-query-value="{{module_id}}"
-											render-selector="[template]"
+											render-query="[template]"
 											class="overflow:auto module_id">
 											<cc-option
 												template
@@ -739,14 +739,14 @@
 					type="hidden"
 					filter-query-key="module_id.$ne"
 					filter-query-value=""
-					filter-next />
+					filter-query="$next" />
 				<div
 					array="files"
 					filter-query-key="module_id.$eq"
 					filter-query-value="{{module_id}}"
 					filter-sort-key="name"
 					filter-sort-direction="asc"
-					render-selector="[template]"
+					render-query="[template]"
 					state_id="module_id"
 					sortable
 					class="background:whitesmoke padding:10px module_id"
@@ -838,7 +838,7 @@
 				<div
 					filter-query-key="tags.$eq"
 					filter-query-value="template"
-					filter-next></div>
+					filter-query="$next"></div>
 				<div
 					class="display:flex flex-wrap:wrap"
 					array=""
@@ -846,7 +846,7 @@
 					state-overwrite="true"
 					filter-sort-key="name"
 					filter-sort-direction="asc"
-					render-selector="[template]"
+					render-query="[template]"
 					state_id="module-templates">
 					<div
 						class="card min-width:250px flex-grow:1 margin:10px box-shadow-hover"

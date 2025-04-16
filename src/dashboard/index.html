@@ -171,7 +171,7 @@
 		</nav>
 
 		<!-- SideNav  -->
-		<!--     <sidenav id="menuL" class="position:absolute top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:50px width:275px:hover width:0px@xs" resizable resize-selector="[content_id='content']" resize-property="margin-left" resize-value="width">-->
+		<!--     <sidenav id="menuL" class="position:absolute top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:50px width:275px:hover width:0px@xs" resizable resize-query="[content_id='content']" resize-property="margin-left" resize-value="width">-->
 
 		<!-- Search -->
 		<!--<form class="padding:5px">-->
@@ -198,7 +198,7 @@
 
 		<!-- Template -->
 		<!--                     <li class="template line-height:40px height:40px overflow:hidden background:dodgerblue:hover" template_id="main-menu" object="{{object._id}}">-->
-		<!--<input type="hidden" array="files" object="{{object.main-menu-primary}}" key="path" input-selector="#a{{object._id}}" set-value-key="primary-url">-->
+		<!--<input type="hidden" array="files" object="{{object.main-menu-primary}}" key="path" input-query="#a{{object._id}}" set-value-key="primary-url">-->
 		<!--<a actions="state, openModal" id="a{{object._id}}" href="..{{primary-url}}"-->
 		<!--                             modal-width="{{object.main-modal-primary-width}}"-->
 		<!--                             modal-color="{{object.main-modal-color}}"-->
@@ -261,7 +261,7 @@
 				class="display:grid grid-auto-rows:50px gap:10px grid-template-columns:repeat(auto-fill,minmax(50px,1fr))"
 				dnd-group-key="dashboard"
 				array="files"
-				render-selector="[template]"
+				render-query="[template]"
 				filter-limit="20"
 				droppable>
 				<div
@@ -306,7 +306,7 @@
 				</div>
 
 				<div
-					filter-parent
+					filter-query="$parent"
 					filter-on="scroll"
 					class="visibility:hidden height:30px"></div>
 			</div>
@@ -340,7 +340,8 @@
 		<div
 			class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
 			<h2>
-				Coming Soon <a actions="remove" remove-closest=".card"> X</a>
+				Coming Soon
+				<a actions="remove" remove-query="$closest .card"> X</a>
 			</h2>
 		</div>
 

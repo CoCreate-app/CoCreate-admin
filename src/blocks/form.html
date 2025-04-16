@@ -166,9 +166,11 @@
 						placeholder="Category"
 						sortable
 						class="floating-label">
-						<input placeholder="Search" filter-parent="[array]" />
+						<input
+							placeholder="Search"
+							filter-query="$parent [array]" />
 						<div
-							filter-parent="[array]"
+							filter-query="$parent [array]"
 							filter-query-key="type"
 							filter-query-value="611829a9c0e9580010ea589d"></div>
 						<cc-options
@@ -184,9 +186,9 @@
 				</floating-label>
 				<!--<floating-label>-->
 				<!--<cocreate-select sortable class="floating-label" key="type" placeholder="Type">-->
-				<!--	<input placeholder="Search" filter-parent="[array]">-->
-				<!--	<div filter-parent="[array]" filter-query-key="type" filter-query-value="60edaf79b979b4001744c6fe"></div>-->
-				<!--	<cc-options array="tags" filter-query-key="module_id" filter-query-value="5ff747727005da1c27274194" render-selector="[template]" class="overflow:auto">-->
+				<!--	<input placeholder="Search" filter-query="$parent [array]">-->
+				<!--	<div filter-query="$parent [array]" filter-query-key="type" filter-query-value="60edaf79b979b4001744c6fe"></div>-->
+				<!--	<cc-options array="tags" filter-query-key="module_id" filter-query-value="5ff747727005da1c27274194" render-query="[template]" class="overflow:auto">-->
 				<!--		<cc-option template value="{{object._id}}">-->
 				<!--			<h3>{{object.name}}</h3>-->
 				<!--		</cc-option>-->

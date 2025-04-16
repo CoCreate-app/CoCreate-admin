@@ -168,7 +168,7 @@
 			id="menuL"
 			class="position:absolute top:0px left:0px background:whitesmoke height:100vh width:50px width:300px:hover width:0px@xs"
 			resizable
-			resize-selector="[content_id='content']"
+			resize-query="[content_id='content']"
 			resize-property="margin-left"
 			resize-value="width">
 			<!-- Search field -->
@@ -202,7 +202,7 @@
 						filter-query-key="main-menu-position.$ne"
 						filter-query-value="0"
 						filter-value-type="number"
-						render-selector="[template]">
+						render-query="[template]">
 						<li
 							class="line-height:40px height:40px overflow:hidden background:dodgerblue:hover"
 							template>
@@ -336,7 +336,7 @@
 				filter-sort-key="name"
 				filter-sort-direction="asc"
 				operator="or"
-				render-selector="[template]">
+				render-query="[template]">
 				<div
 					class="card position:relative flex-grow:1 margin:10px background:#ffffff height:470px width:250px max-width:350px"
 					template>
@@ -356,9 +356,7 @@
 						<!-- Post Content -->
 						<div
 							class="position:absolute bottom:0 background:#ffffff width:100% padding:30px">
-							<div
-								hover="height:100%"
-								hover-selector=".description">
+							<div hover="height:100%" hover-query=".description">
 								<h1
 									class="font-size:18px margin:0 padding:0_0_10px color:#333333 font-weight:700">
 									City Lights in New York
@@ -403,7 +401,7 @@
 			id="menuR"
 			class="position:absolute top:0px right:0px direction:rtl overflow:hidden background:white height:100vh width:0px"
 			resizable
-			resize-selector="[content_id='content']"
+			resize-query="[content_id='content']"
 			resize-property="margin-right"
 			resize-value="width">
 			<div
@@ -424,7 +422,8 @@
 		<div
 			class="card position:fixed top:50% left:50% padding:15px background:white margin-top:-29px margin-left:-115px">
 			<h2>
-				Coming Soon <a actions="remove" remove-closest=".card"> X</a>
+				Coming Soon
+				<a actions="remove" remove-query="$closest .card"> X</a>
 			</h2>
 		</div>
 

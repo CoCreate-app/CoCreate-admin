@@ -193,12 +193,12 @@
 					multiple>
 					<input
 						placeholder="Search"
-						filter-parent="array"
+						filter-query="$parent array"
 						filter-search />
 					<!-- Fetches and displays results using template -->
 					<ul
 						array=".*"
-						render-selector="[template]"
+						render-query="[template]"
 						class="options overflow:auto">
 						<!-- template -->
 						<li class="option template" id="option1">

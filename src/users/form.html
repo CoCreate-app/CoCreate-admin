@@ -180,11 +180,11 @@
 					multiple>
 					<input
 						placeholder="Search"
-						filter-parent="array"
+						filter-query="$parent array"
 						filter-search />
 					<ul
 						array=".*"
-						render-selector="[template]"
+						render-query="[template]"
 						class="options overflow:auto">
 						<li class="option" array="organizations" template>
 							<span class="logo-icon"
@@ -215,12 +215,15 @@
 					placeholder="Current Org"
 					sortable
 					class="floating-label">
-					<input placeholder="Search" filter-next filter-search />
+					<input
+						placeholder="Search"
+						filter-query="$next"
+						filter-search />
 					<ul
 						array="users"
 						object=""
 						key="connected_orgs"
-						render-selector="[template]"
+						render-query="[template]"
 						class="options overflow:auto">
 						<li class="option" array="organizations" template>
 							<span class="logo-icon"

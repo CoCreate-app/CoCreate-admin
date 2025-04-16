@@ -8,11 +8,11 @@
 	filter-sort-key="directory"
 	order_type="asc"
 	render_id="$auto"
-	render-selector=":last-child">
+	render-query=":last-child">
 	<div
 		filter-query-key="content-type"
 		filter-query-value="directory"
-		filter-parent></div>
+		filter-query="$parent"></div>
 	<!--Folder Template -->
 	<div class="padding:5px" template render="object" object="{{object._id}}">
 		<span
@@ -20,7 +20,7 @@
 			show="#directory{{object._id}}"
 			hide="#directory{{object._id}}"
 			toggle="fa-caret-down, fa-caret-right"
-			toggle-selector="#icon{{object._id}}">
+			toggle-query="#icon{{object._id}}">
 			<i id="icon{{object._id}}" class="fa fa-caret-right"></i>
 		</span>
 		<span
@@ -47,9 +47,9 @@
 	filter-query-key="directory.$eq"
 	filter-query-value="parent"
 	filter-sort-key="directory"
-	render-selector="[template]">
+	render-query="[template]">
 	<div
-		filter-parent
+		filter-query="$parent"
 		filter-query-key="content-type"
 		filter-query-value="text/directory.$ne"></div>
 

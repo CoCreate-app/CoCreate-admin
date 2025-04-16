@@ -196,17 +196,17 @@
 					multiple>
 					<input
 						placeholder="Search"
-						filter-parent="array"
+						filter-query="$parent array"
 						filter-search />
 					<!-- Fetches and displays results using template -->
 					<cc-options
 						array=".*"
-						render-selector="[template]"
+						render-query="[template]"
 						class="overflow:auto">
 						<!-- template -->
 						<cc-option
 							class="option"
-							render-selector="[template]"
+							render-query="[template]"
 							template>
 							<h3
 								array="users"
@@ -231,15 +231,15 @@
 					multiple>
 					<input
 						placeholder="Search"
-						filter-parent="array"
+						filter-query="$parent array"
 						filter-search />
 					<!-- Fetches and displays results using template -->
 					<cc-options
 						array=".*"
-						render-selector="[template]"
+						render-query="[template]"
 						class="overflow:auto">
 						<!-- template -->
-						<cc-option class="option" render-selector="[template]">
+						<cc-option class="option" render-query="[template]">
 							<h3
 								array="users"
 								object="{{object._id}}"
@@ -263,15 +263,15 @@
 					multiple>
 					<input
 						placeholder="Search"
-						filter-parent="array"
+						filter-query="$parent array"
 						filter-search />
 					<!-- Fetches and displays results using template -->
 					<cc-options
 						array=".*"
-						render-selector="[template]"
+						render-query="[template]"
 						class="overflow:auto">
 						<!-- template -->
-						<cc-option class="option" render-selector="[template]">
+						<cc-option class="option" render-query="[template]">
 							<h3
 								array="users"
 								object="{{object._id}}"

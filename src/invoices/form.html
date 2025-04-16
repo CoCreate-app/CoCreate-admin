@@ -166,7 +166,7 @@
 							type="text"
 							key="_id"
 							placeholder="Invoice#"
-							input-selector="[key='invoice_id']"
+							input-query="[key='invoice_id']"
 							input-attribute="value"
 							input-events="input, onload"
 							class="floating-label"
@@ -238,7 +238,7 @@
 				filter-query-key="invoice_id.$eq"
 				filter-query-value=""
 				state_id="form-fields"
-				render-selector="[template]"
+				render-query="[template]"
 				dnd-group-key="item-row">
 				<div
 					id="item-row"
@@ -263,12 +263,12 @@
 										placeholder="Item">
 										<input
 											placeholder="Search"
-											filter-next
+											filter-query="$next"
 											filter-search />
 										<ul
 											class="options overflow:auto"
 											array="items"
-											render-selector="[template]">
+											render-query="[template]">
 											<li
 												class="option"
 												template

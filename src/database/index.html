@@ -142,14 +142,14 @@
 						actions="delete"
 						array=""
 						state_id="array-view"
-						filter-selector="#array-view"
+						filter-query="#array-view"
 						><i
 							class="height:18px"
 							src="./assets/svg/trash-alt.svg"></i
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a toggle="hidden" toogle-selector="#column-visibility"
+					<a toggle="hidden" toogle-query="#column-visibility"
 						><i class="height:18px" src="./assets/svg/eye.svg"></i
 					></a>
 				</li>
@@ -157,7 +157,7 @@
 					<a
 						actions="export"
 						export-type="csv"
-						filter-selector="#array-view"
+						filter-query="#array-view"
 						state_id="array-view"
 						><i
 							class="height:18px"
@@ -167,7 +167,7 @@
 				<li class="margin-right:15px">
 					<a
 						actions="export"
-						filter-selector="#array-view"
+						filter-query="#array-view"
 						state_id="array-view"
 						><i
 							class="height:18px"
@@ -182,14 +182,12 @@
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="copy" copy-selector="tbody"
+					<a actions="copy" copy-query="tbody"
 						><i class="height:18px" src="./assets/svg/copy.svg"></i
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a
-						actions="print"
-						print-selector="[template_id='#array-view']"
+					<a actions="print" print-query="[template_id='#array-view']"
 						><i class="height:18px" src="./assets/svg/print.svg"></i
 					></a>
 				</li>
@@ -212,7 +210,7 @@
 							<input
 								type="text"
 								class="floating-label"
-								filter-selector="#array-view"
+								filter-query="#array-view"
 								filter-search
 								placeholder="Search" />
 						</floating-label>
@@ -220,7 +218,7 @@
 				</tr>
 				<tbody
 					id="array-view"
-					render-selector="[template='array-view']"
+					render-query="[template='array-view']"
 					array=""
 					filter-limit="5"
 					state-overwrite
@@ -231,7 +229,7 @@
 						object="{{object._id}}"
 						toggle="selected"
 						hover="visibility:visible!important"
-						hover-selector=".tools{{object._id}}">
+						hover-query=".tools{{object._id}}">
 						<td
 							class="padding:5px min-width:300px align-items:center">
 							<div
@@ -255,7 +253,7 @@
 								render-as="one"
 								render-exclude="db, database, array"
 								hover="visibility:visible!important"
-								hover-selector=".tools{{object._id}}{{one.key}}">
+								hover-query=".tools{{object._id}}{{one.key}}">
 								<span
 									class="visibility:hidden tools{{object._id}}{{one.key}}">
 									<form
@@ -306,7 +304,7 @@
 				</tbody>
 			</table>
 			<div
-				filter-selector="#array-view"
+				filter-query="#array-view"
 				filter-on="scroll"
 				class="opacity:0 height:30px"></div>
 
@@ -325,10 +323,7 @@
 				</form>
 			</button>
 
-			<template
-				hidden
-				observe-selector=".string"
-				observe-attribute="value">
+			<template hidden observe-query=".string" observe-attribute="value">
 				<floating-label render>
 					<textarea
 						rows="1"
@@ -341,7 +336,7 @@
 
 			<template
 				hidden
-				observe-selector=".object, .array"
+				observe-query=".object, .array"
 				observe-attribute="value">
 				<div
 					render="object.$parents"
@@ -352,7 +347,7 @@
 						class="display:flex padding-top:10px"
 						id="testtemplate2"
 						hover="visibility:visible!important"
-						hover-selector="[tools='$parents{{$auto.key}}']">
+						hover-query="[tools='$parents{{$auto.key}}']">
 						<span
 							class="visibility:hidden tools$parents{{$auto.key}}"
 							tools="$parents{{$auto.key}}">
@@ -405,7 +400,7 @@
 			id="menuL"
 			class="position:absolute top:0px left:0px overflow:hidden background:whitesmoke height:100vh width:275px width:0px@xs"
 			resizable
-			resize-selector="[content_id='content']"
+			resize-query="[content_id='content']"
 			resize-property="margin-left"
 			resize-value="width">
 			<!-- Search -->
@@ -416,7 +411,7 @@
 						class="floating-label"
 						key="array"
 						filter-query-key="name"
-						filter-selector="#arrays" />
+						filter-query="#arrays" />
 				</floating-label>
 				<span
 					class="position:relative bottom:29px right:11px float:right font-size:18px">
@@ -435,7 +430,7 @@
 						array
 						filter-sort-key="name"
 						filter-sort-direction="asc"
-						render-selector="[template='arrays']"
+						render-query="[template='arrays']"
 						filter>
 						<!-- Template -->
 						<li
@@ -472,7 +467,7 @@
 				template
 				class="card position:fixed!important bottom:15px right:15px padding:10px {{status}}">
 				<span class="{{type}}">{{message}}</span
-				><a actions="remove" remove-closest="[templateid]"> X</a>
+				><a actions="remove" remove-query="$closest [templateid]"> X</a>
 			</div>
 		</div>
 

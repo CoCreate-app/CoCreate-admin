@@ -160,9 +160,9 @@
 								placeholder="Type">
 								<input
 									placeholder="Search"
-									filter-parent="[array]" />
+									filter-query="$parent [array]" />
 								<div
-									filter-parent="[array]"
+									filter-query="$parent [array]"
 									filter-query-key="type"
 									filter-query-value="60edaf79b979b4001744c6fe"></div>
 								<cc-options
@@ -170,7 +170,7 @@
 									state_id="module_id"
 									filter-query-key="module_id"
 									filter-query-value=""
-									render-selector=":last-child"
+									render-query=":last-child"
 									class="overflow:auto">
 									<cc-option template value="{{object._id}}">
 										<h4>{{object.name}}</h4>
@@ -188,9 +188,9 @@
 								placeholder="Status">
 								<input
 									placeholder="Search"
-									filter-parent="[array]" />
+									filter-query="$parent [array]" />
 								<div
-									filter-next
+									filter-query="$next"
 									filter-query-key="type"
 									filter-query-value="5ff747727005da1c272740ab"></div>
 								<cc-options
@@ -198,7 +198,7 @@
 									state_id="module_id"
 									filter-query-key="module_id"
 									filter-query-value=""
-									render-selector="[template]"
+									render-query="[template]"
 									class="overflow:auto">
 									<cc-option template value="{{object._id}}">
 										<h4>{{object.name}}</h4>

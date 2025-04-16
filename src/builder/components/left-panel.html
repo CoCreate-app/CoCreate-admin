@@ -5,44 +5,44 @@
 			classkey="builder-tab-round"
 			class="width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover"
 			selected-value="active"
-			selected-selector="#vdom"
+			selected-query="#vdom"
 			selected-group="left-panels"
 			toggle="#canvas"
-			toggle-selector="#vdom"
+			toggle-query="#vdom"
 			toggle-attribute="vdom-selector">
 			<i src="./assets/svg/stream.svg"></i>
 		</div>
 		<div
 			class="builder-tab-round"
 			selected-value="active"
-			selected-selector="#assets"
+			selected-query="#assets"
 			selected-group="left-panels"
 			toggle="files"
-			toggle-selector="#fetch-assets"
+			toggle-query="#fetch-assets"
 			toggle-attribute="array">
 			<i class="height:16px" src="./assets/svg/photo-video.svg"></i>
 		</div>
 		<div
 			class="builder-tab-round"
 			selected-value="active"
-			selected-selector="#files"
+			selected-query="#files"
 			selected-group="left-panels"
 			toggle="files"
-			toggle-selector=".fetch-files"
+			toggle-query=".fetch-files"
 			toggle-attribute="array">
 			<i class="height:16px" src="./assets/svg/folder.svg"></i>
 		</div>
 		<div
 			class="builder-tab-round"
 			selected-value="active"
-			selected-selector="#uploader"
+			selected-query="#uploader"
 			selected-group="left-panels">
 			<i class="height:16px" src="./assets/svg/cloud-upload-alt.svg"></i>
 		</div>
 		<div
 			class="builder-tab-round"
 			selected-value="active"
-			selected-selector="#blocks"
+			selected-query="#blocks"
 			selected-group="left-panels"
 			selected>
 			<i class="height:16px" src="./assets/svg/th-large.svg"></i>
@@ -59,7 +59,7 @@
 				<div
 					class="card background:gainsboro width:50% text-align:center padding:5px"
 					selected-value="active"
-					selected-selector="#elements"
+					selected-query="#elements"
 					selected-group="components"
 					selected>
 					Elements
@@ -67,7 +67,7 @@
 				<div
 					class="card background:gainsboro width:50% text-align:center padding:5px"
 					selected-value="active"
-					selected-selector="#components"
+					selected-query="#components"
 					selected-group="components"
 					selected>
 					Components
@@ -84,9 +84,9 @@
 			</div>
 
 			<!-- Block Categories -->
-			<!--<div filter-parent="[array]" filter-query-key="type" filter-query-value="611829a9c0e9580010ea589d"></div>-->
+			<!--<div filter-query="$parent [array]" filter-query-key="type" filter-query-value="611829a9c0e9580010ea589d"></div>-->
 			<div
-				filter-next
+				filter-query="$next"
 				filter-query-key="tags.$ne"
 				filter-query-value="6200378ea8b6b4001ae57821"></div>
 			<div
@@ -97,7 +97,7 @@
 				filter-query-value="5ff747727005da1c27274194"
 				filter-sort-key="position"
 				filter-sort-direction="asc"
-				render-selector=":last-child">
+				render-query=":last-child">
 				<!-- Block Categories Template -->
 				<div
 					template
@@ -128,13 +128,13 @@
 						filter-query-value="{{tag._id}}"
 						filter-sort-key="position"
 						filter-sort-direction="asc"
-						render-selector=":last-child">
+						render-query=":last-child">
 						<!-- Blocks Template -->
 						<div
 							template
 							class="card position:relative flex-grow:1 width:70px height:75px margin:5px padding:5px"
 							hover="display:block!important"
-							hover-selector="#editblock{{object._id}}"
+							hover-query="#editblock{{object._id}}"
 							object="{{object._id}}">
 							<div
 								id="editblock{{object._id}}"
@@ -163,7 +163,7 @@
 
 			<!-- Component Categories -->
 			<div
-				filter-next
+				filter-query="$next"
 				filter-query-key="tags"
 				filter-query-value="6200378ea8b6b4001ae57821"></div>
 			<div
@@ -174,7 +174,7 @@
 				filter-query-value="5ff747727005da1c27274194"
 				filter-sort-key="position"
 				filter-sort-direction="asc"
-				render-selector=":lastchild">
+				render-query=":lastchild">
 				<!-- Components Categories Template -->
 				<div template render-as="tag" object="{{tag._id}}">
 					<div
@@ -201,13 +201,13 @@
 						filter-query-value="{{tag._id}}"
 						filter-sort-key="position"
 						filter-sort-direction="asc"
-						render-selector=":last-child">
+						render-query=":last-child">
 						<!-- Components Template -->
 						<div
 							template
 							class="card position:relative flex-grow:1 width:70px height:125px margin:5px padding:5px"
 							hover="display:block!important"
-							hover-selector="#editcomponents{{object._id}}">
+							hover-query="#editcomponents{{object._id}}">
 							<div
 								id="editcomponents{{object._id}}"
 								class="position:absolute top:8px right:8px font-size:11px display:none">
@@ -237,7 +237,7 @@
 		<!-- Vdom -->
 		<div
 			id="vdom"
-			vdom-selector=""
+			vdom-query=""
 			dnd-group-key="vdom"
 			class="left-panel display:none">
 			vdom
@@ -250,7 +250,7 @@
 					type="file"
 					directory
 					array="files"
-					render-closest="#uploader, [template]" />
+					render-query="$closest #uploader, [template]" />
 
 				<button actions="upload">upload</button>
 			</form>
@@ -307,9 +307,9 @@
 					filter-query-value="./"
 					filter-sort-key="name"
 					filter-sort-direction="asc"
-					render-selector=":lastchild">
+					render-query=":lastchild">
 					<div
-						filter-parent
+						filter-query="$parent"
 						filter-query-key="content-type"
 						filter-query-value="text/directory"></div>
 					<!--Folder Template -->
@@ -323,7 +323,7 @@
 							show="#directory{{$auto._id}}"
 							hide="#directory{{$auto._id}}"
 							toggle="fa-caret-down, fa-caret-right"
-							toggle-selector="#icon{{$auto._id}}">
+							toggle-query="#icon{{$auto._id}}">
 							<i
 								id="icon{{$auto._id}}"
 								class="fa fa-caret-right"></i>
@@ -354,7 +354,7 @@
 					filter-query-value="./"
 					filter-sort-key="name">
 					<div
-						filter-parent
+						filter-query="$parent"
 						filter-query-key="content-type.$ne"
 						filter-query-value="text/directory"></div>
 
@@ -407,7 +407,7 @@
 				filter-query-value="image, video"
 				filter-sort-key="path"
 				filter-sort-direction="asc"
-				render-selector=":last-child">
+				render-query=":last-child">
 				<style>
 					[image-type*="image"] {
 						display: block !important;
@@ -423,7 +423,7 @@
 					render="object"
 					class="card position:relative flex-grow:1 width:105px height:90px margin:5px padding:5px"
 					hover="display:block!important"
-					hover-selector="#editasstes{{object._id}}">
+					hover-query="#editasstes{{object._id}}">
 					<div
 						id="editassets{{object._id}}"
 						class="position:absolute top:8px right:8px font-size:11px display:none">
@@ -441,7 +441,7 @@
 						actions="attributes"
 						attribute="src"
 						value="{{object.path}}"
-						attribute-selector="iframe;">
+						attribute-query="iframe;">
 						<!-- image -->
 						<div
 							cloneable="true"

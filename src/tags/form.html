@@ -166,11 +166,11 @@
 					class="floating-label">
 					<input
 						placeholder="Search"
-						filter-parent="array"
+						filter-query="$parent array"
 						filter-search />
 					<cc-options
 						array=".*"
-						render-selector="[template]"
+						render-query="[template]"
 						filter-query-key="module_id"
 						filter-query-value="60eb8361b979b4001744b339"
 						class="overflow:auto">
@@ -184,13 +184,16 @@
 					placeholder="Module"
 					sortable
 					class="floating-label"
-					input-selector="#tags"
+					input-query="#tags"
 					input-attribute="filter-value">
-					<input placeholder="Search" filter-next filter-search />
+					<input
+						placeholder="Search"
+						filter-query="$next"
+						filter-search />
 					<cc-options
 						array="modules"
 						filter-sort-key="name"
-						render-selector="[template]"
+						render-query="[template]"
 						class="overflow:auto">
 						<cc-option template value="{{object._id}}">
 							<div class="display:flex padding:5px">
@@ -212,12 +215,12 @@
 					multiple>
 					<input
 						placeholder="Search"
-						filter-parent="array"
+						filter-query="$parent array"
 						filter-search />
 					<cc-options
 						id="tags"
 						array=".*"
-						render-selector="[template]"
+						render-query="[template]"
 						filter-query-key="module_id"
 						filter-query-value=""
 						class="overflow:auto">

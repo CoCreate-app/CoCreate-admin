@@ -37,7 +37,7 @@
 				classkey="builder-tab-round"
 				class="builder-tab-round width:40px line-height:40px text-align:center margin:5px border-radius:50% cursor:pointer background:gainsboro background:silver:hover"
 				selected-value="active"
-				selected-selector="#styles"
+				selected-query="#styles"
 				selected-group="editor-panels"
 				selected>
 				<i src="./assets/svg/paint-brush.svg"></i>
@@ -45,35 +45,35 @@
 			<div
 				class="builder-tab-round"
 				selected-value="active"
-				selected-selector="#database"
+				selected-query="#database"
 				selected-group="editor-panels">
 				<i src="./assets/svg/database.svg"></i>
 			</div>
 			<div
 				class="builder-tab-round"
 				selected-value="active"
-				selected-selector="#broadcast"
+				selected-query="#broadcast"
 				selected-group="editor-panels">
 				<i src="./assets/svg/broadcast-tower.svg"></i>
 			</div>
 			<div
 				class="builder-tab-round"
 				selected-value="active"
-				selected-selector="#logic"
+				selected-query="#logic"
 				selected-group="editor-panels">
 				<i src="./assets/svg/brain.svg"></i>
 			</div>
 			<div
 				class="builder-tab-round"
 				selected-value="active"
-				selected-selector="#plugins"
+				selected-query="#plugins"
 				selected-group="editor-panels">
 				<i src="./assets/svg/plug.svg"></i>
 			</div>
 			<div
 				class="builder-tab-round"
 				selected-value="active"
-				selected-selector="#settings"
+				selected-query="#settings"
 				selected-group="editor-panels">
 				<i class="height:18px" src="./assets/svg/cog.svg"></i>
 			</div>
@@ -83,7 +83,7 @@
 				<!--Styles -->
 				<div id="styles" class="editor-panel display:none active">
 					<div class="padding:0px_5px_20px_5px">
-						<!--<cocreate-select class="floating-label " sortable multiple placeholder="Classes" attribute="class" state_id="builder" attribute-selector="iframe;" array="" object="" crud="false" save="false" read="false" active>-->
+						<!--<cocreate-select class="floating-label " sortable multiple placeholder="Classes" attribute="class" state_id="builder" attribute-query="iframe;" array="" object="" crud="false" save="false" read="false" active>-->
 						<!--  <input placeholder="Add a new class">-->
 						<!--</cocreate-select>-->
 					</div>
@@ -141,9 +141,9 @@
 									<input
 										type="radio"
 										class="display:none"
-										id="layout-fill-parent"
+										id="layout-fill-query="$parent""
 										value="inherit" />
-									<span class="" for="layout-fill-parent"
+									<span class="" for="layout-fill-query="$parent""
 										>Fill parent</span
 									>
 								</div>
@@ -264,7 +264,7 @@
 								attribute="classstyle"
 								attribute-property="order"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -300,7 +300,7 @@
 									attribute="classstyle"
 									attribute-property="margin-left"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -319,14 +319,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#margin-left">
+										attribute-query="#margin-left">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -347,7 +347,7 @@
 									attribute="classstyle"
 									attribute-property="margin-right"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -366,14 +366,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#margin-right">
+										attribute-query="#margin-right">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -396,7 +396,7 @@
 									attribute="classstyle"
 									attribute-property="margin-top"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -415,14 +415,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#margin-top">
+										attribute-query="#margin-top">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -443,7 +443,7 @@
 									attribute="classstyle"
 									attribute-property="margin-bottom"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -462,14 +462,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#margin-bottom">
+										attribute-query="#margin-bottom">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -492,7 +492,7 @@
 									attribute="classstyle"
 									attribute-property="padding-left"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -511,14 +511,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#padding-left">
+										attribute-query="#padding-left">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -539,7 +539,7 @@
 									attribute="classstyle"
 									attribute-property="padding-right"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -558,14 +558,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#padding-right">
+										attribute-query="#padding-right">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -588,7 +588,7 @@
 									attribute="classstyle"
 									attribute-property="padding-top"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -607,14 +607,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#padding-top">
+										attribute-query="#padding-top">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -635,7 +635,7 @@
 									attribute="classstyle"
 									attribute-property="padding-bottom"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -654,14 +654,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#padding-bottom">
+										attribute-query="#padding-bottom">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -703,7 +703,7 @@
 									attribute="classstyle"
 									attribute-property="width"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -722,14 +722,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#width">
+										attribute-query="#width">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -750,7 +750,7 @@
 									attribute="classstyle"
 									attribute-property="height"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -769,14 +769,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#height">
+										attribute-query="#height">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -799,7 +799,7 @@
 									attribute="classstyle"
 									attribute-property="min-width"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -812,14 +812,14 @@
 										id="min-width-unit"
 										class="styleunit remove-none border:none padding:0 min-height:18px!important background:#eee"
 										attribute="attribute-unit"
-										attribute-selector="#min-width">
+										attribute-query="#min-width">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -840,7 +840,7 @@
 									attribute="classstyle"
 									attribute-property="min-height"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -859,14 +859,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#min-height">
+										attribute-query="#min-height">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -889,7 +889,7 @@
 									attribute="classstyle"
 									attribute-property="max-width"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -908,14 +908,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#max-width">
+										attribute-query="#max-width">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -936,7 +936,7 @@
 									attribute="classstyle"
 									attribute-property="max-height"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -955,14 +955,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#max-height">
+										attribute-query="#max-height">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -1004,7 +1004,7 @@
 									attribute="classstyle"
 									attribute-property="top"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -1023,14 +1023,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#top">
+										attribute-query="#top">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -1051,7 +1051,7 @@
 									attribute="classstyle"
 									attribute-property="bottom"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -1070,14 +1070,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#bottom">
+										attribute-query="#bottom">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -1100,7 +1100,7 @@
 									attribute="classstyle"
 									attribute-property="left"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -1119,14 +1119,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#left">
+										attribute-query="#left">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -1147,7 +1147,7 @@
 									attribute="classstyle"
 									attribute-property="right"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -1166,14 +1166,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#right">
+										attribute-query="#right">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												template
 												value="{{units}}"
@@ -1213,7 +1213,7 @@
 								attribute="classstyle"
 								attribute-property="font-family"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -1222,7 +1222,7 @@
 								active>
 								<input
 									placeholder="Search"
-									search-selector=".option" />
+									search-query=".option" />
 								<ul class="options z-index:7">
 									<cc-option value="none"
 										><span>none</span></cc-option
@@ -1277,7 +1277,7 @@
 									attribute="classstyle"
 									attribute-property="font-size"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -1296,14 +1296,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#font-size">
+										attribute-query="#font-size">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -1326,7 +1326,7 @@
 									attribute="classstyle"
 									attribute-property="font-weight"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -1346,7 +1346,7 @@
 									attribute="classstyle"
 									attribute-property="color"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -1363,7 +1363,7 @@
 								attribute="classstyle"
 								attribute-property="text-align"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -1402,7 +1402,7 @@
 								attribute="classstyle"
 								attribute-property="text-decoration"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -1435,7 +1435,7 @@
 								attribute="classstyle"
 								attribute-property="font-style"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -1484,7 +1484,7 @@
 									attribute="classstyle"
 									attribute-property="border-width"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -1503,14 +1503,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="border-width">
+										attribute-query="border-width">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -1531,7 +1531,7 @@
 									attribute="classstyle"
 									attribute-property="border-style"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -1582,7 +1582,7 @@
 									attribute="classstyle"
 									attribute-property="border-color"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -1600,7 +1600,7 @@
 								attribute="classstyle"
 								attribute-property="border-radius"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -1619,14 +1619,14 @@
 									save="false"
 									read="false"
 									attribute="attribute-unit"
-									attribute-selector="border-radius">
+									attribute-query="border-radius">
 									<ul
 										class="options overflow:auto padding:0px z-index:7"
 										array="modules"
 										filter-query-value="5ff747727005da1c27274193"
 										filter-query-key="_id.$eq"
 										key="units"
-										render-selector=":last-child">
+										render-query=":last-child">
 										<cc-option
 											class="margin:0px padding:3px border-radius:4px"
 											template
@@ -1670,7 +1670,7 @@
 										attribut="classstyle"
 										attribute-property="offsetx"
 										state_id="builder"
-										attribute-selector="iframe;"
+										attribute-query="iframe;"
 										array=""
 										object=""
 										crud="false"
@@ -1688,14 +1688,14 @@
 											save="false"
 											read="false"
 											attribut="attribute-unit"
-											attribute-selector="border-width">
+											attribute-query="border-width">
 											<ul
 												class="options overflow:auto padding:0px z-index:7"
 												array="modules"
 												filter-query-value="5ff747727005da1c27274193"
 												filter-query-key="_id.$eq"
 												key="units"
-												render-selector=":last-child">
+												render-query=":last-child">
 												<cc-option
 													class="margin:0px padding:3px border-radius:4px"
 													template
@@ -1717,7 +1717,7 @@
 										attribut="classstyle"
 										attribute-property="offsetv"
 										state_id="builder"
-										attribute-selector="iframe;"
+										attribute-query="iframe;"
 										array=""
 										object=""
 										crud="false"
@@ -1735,14 +1735,14 @@
 											save="false"
 											read="false"
 											attribut="attribute-unit"
-											attribute-selector="border-width">
+											attribute-query="border-width">
 											<ul
 												class="options overflow:auto padding:0px z-index:7"
 												array="modules"
 												filter-query-value="5ff747727005da1c27274193"
 												filter-query-key="_id.$eq"
 												key="units"
-												render-selector=":last-child">
+												render-query=":last-child">
 												<cc-option
 													class="margin:0px padding:3px border-radius:4px"
 													template
@@ -1767,7 +1767,7 @@
 										attribute-property="blur"
 										attribute-unit="px"
 										state_id="builder"
-										attribute-selector="iframe;"
+										attribute-query="iframe;"
 										array=""
 										object=""
 										crud="false"
@@ -1785,14 +1785,14 @@
 											save="false"
 											read="false"
 											attribut="attribute-unit"
-											attribute-selector="border-width">
+											attribute-query="border-width">
 											<ul
 												class="options overflow:auto padding:0px z-index:7"
 												array="modules"
 												filter-query-value="5ff747727005da1c27274193"
 												filter-query-key="_id.$eq"
 												key="units"
-												render-selector=":last-child">
+												render-query=":last-child">
 												<cc-option
 													class="margin:0px padding:3px border-radius:4px"
 													template
@@ -1815,7 +1815,7 @@
 										attribute-property="spread"
 										attribute-unit="px"
 										state_id="builder"
-										attribute-selector="iframe;"
+										attribute-query="iframe;"
 										array=""
 										object=""
 										crud="false"
@@ -1833,14 +1833,14 @@
 											save="false"
 											read="false"
 											attribut="attribute-unit"
-											attribute-selector="border-width">
+											attribute-query="border-width">
 											<ul
 												class="options overflow:auto padding:0px z-index:7"
 												array="modules"
 												filter-query-value="5ff747727005da1c27274193"
 												filter-query-key="_id.$eq"
 												key="units"
-												render-selector=":last-child">
+												render-query=":last-child">
 												<cc-option
 													class="margin:0px padding:3px border-radius:4px"
 													template
@@ -1863,7 +1863,7 @@
 									attribut="classstyle"
 									attribute-property="fill-color"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -1901,7 +1901,7 @@
 								attribute="classstyle"
 								attribute-property="background-color"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -1917,7 +1917,7 @@
 							attribute="classstyle"
 							attribute-property="background-image"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -1931,7 +1931,7 @@
 							attribute="classstyle"
 							attribute-property="background-repeat"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -1963,7 +1963,7 @@
 							attribute="classstyle"
 							attribute-property="background-position"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -2010,7 +2010,7 @@
 							attribute="classstyle"
 							attribute-property="background-attachment"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -2039,7 +2039,7 @@
 							attribute="classstyle"
 							attribute-property="background-size"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -2088,7 +2088,7 @@
 								attribute="classstyle"
 								attribute-property="opacity"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -2104,7 +2104,7 @@
 								attribute="classstyle"
 								attribute-property="cursor"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -2226,7 +2226,7 @@
 									attribute="classstyle"
 									attribute-property="filter"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -2277,7 +2277,7 @@
 									attribut="classstyle"
 									attribute-property="strenth"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -2295,7 +2295,7 @@
 									attribute="classstyle"
 									attribute-property="transform"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -2355,7 +2355,7 @@
 									attribut="classstyle"
 									attribute-property="translate"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -2373,7 +2373,7 @@
 									attribute="classstyle"
 									attribute-property="transition-property"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -2430,7 +2430,7 @@
 										attribut="classstyle"
 										attribute-property="duration"
 										state_id="builder"
-										attribute-selector="iframe;"
+										attribute-query="iframe;"
 										array=""
 										object=""
 										crud="false"
@@ -2446,7 +2446,7 @@
 										attribut="classstyle"
 										attribute-property="easing"
 										state_id="builder"
-										attribute-selector="iframe;"
+										attribute-query="iframe;"
 										array=""
 										object=""
 										crud="false"
@@ -2512,7 +2512,7 @@
 									placeholder="realtime:"
 									attribute="realtime"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -2541,7 +2541,7 @@
 									placeholder="cursors:"
 									attribute="cursors"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -2570,19 +2570,19 @@
 								placeholder="array:"
 								attribute="array"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
 								save="false"
 								read="false"
 								change
-								change-selector="#object"
+								change-query="#object"
 								change-attribute="array"
 								active>
 								<ul
 									array
-									render-selector=":last-child"
+									render-query=":last-child"
 									class="options z-index:7 margin-top:5px">
 									<cc-option
 										class="option"
@@ -2600,7 +2600,7 @@
 								placeholder="object:"
 								attribute="object"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -2609,7 +2609,7 @@
 								active>
 								<ul
 									array=""
-									render-selector=":last-child"
+									render-query=":last-child"
 									class="options z-index:7 margin-top:5px">
 									<cc-option
 										class="option template"
@@ -2628,7 +2628,7 @@
 								placeholder="name"
 								id="name"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -2644,7 +2644,7 @@
 								placeholder="value"
 								id="value"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -2660,7 +2660,7 @@
 								placeholder="value-prefix"
 								id="value-prefix"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -2676,7 +2676,7 @@
 								placeholder="value-suffix"
 								id="value-suffix"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -2692,7 +2692,7 @@
 									placeholder="read:"
 									attribute="read"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -2720,7 +2720,7 @@
 									placeholder="save:"
 									attribute="save"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -2750,7 +2750,7 @@
 									placeholder="crud:"
 									attribute="crud"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -2778,7 +2778,7 @@
 									placeholder="crdt:"
 									attribute="crdt"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -2807,7 +2807,7 @@
 								placeholder="actions:"
 								attribute="actions"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -2852,7 +2852,7 @@
 							placeholder="filter-query-key"
 							id="filter-query-key"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -2866,7 +2866,7 @@
 							placeholder="filter-value"
 							id="filter-value"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -2880,7 +2880,7 @@
 							placeholder="filter-value-type"
 							id="filter-value-type"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -2894,7 +2894,7 @@
 							placeholder="filter-operator"
 							id="filter-operator"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -2908,7 +2908,7 @@
 							placeholder="filter-sort-name"
 							id="filter-sort-name"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -2922,7 +2922,7 @@
 							placeholder="filter-sort-direction"
 							id="filter-sort-direction"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -2936,7 +2936,7 @@
 							placeholder="template_id"
 							id="template_id"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -2971,7 +2971,7 @@
 							placeholder="broadcast"
 							attribute="state-array"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -2996,7 +2996,7 @@
 							placeholder="broadcast-sender"
 							attribute="state-object"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3022,7 +3022,7 @@
 							placeholder="namespace"
 							id="namespace"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3036,7 +3036,7 @@
 							placeholder="room"
 							id="room"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3069,7 +3069,7 @@
 							placeholder="messages"
 							id="message"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3103,7 +3103,7 @@
 							class="floating-label"
 							placeholder="state_to"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3116,7 +3116,7 @@
 							class="floating-label"
 							placeholder="state_id"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3128,7 +3128,7 @@
 							placeholder="state-array:"
 							attribute="state-array"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3152,7 +3152,7 @@
 							placeholder="state-object:"
 							attribute="state-object"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3180,7 +3180,7 @@
 									placeholder="state-prefix"
 									id="state-prefix"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -3196,7 +3196,7 @@
 									placeholder="state-name"
 									id="state-name"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -3213,7 +3213,7 @@
 							placeholder="state-value"
 							id="state-value"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3226,7 +3226,7 @@
 							placeholder="state-fetch_object:"
 							attribute="state-fetch_object"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3252,7 +3252,7 @@
 							placeholder="state-filter-query-key"
 							id="state-filter-query-key"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3266,7 +3266,7 @@
 							placeholder="state-filter-value"
 							id="state-filter-value"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3279,7 +3279,7 @@
 							placeholder="state-overwrite"
 							attribute="state-overwrite"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3323,7 +3323,7 @@
 							placeholder="show"
 							id="show"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3337,7 +3337,7 @@
 							placeholder="hide"
 							id="hide"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3369,7 +3369,7 @@
 							placeholder="selected-value"
 							id="selected-value"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3383,7 +3383,7 @@
 							placeholder="selected-attribute"
 							id="selected-attribute"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3391,27 +3391,13 @@
 							read="false"
 							active />
 						<input
-							attribute="selected-selector"
+							attribute="selected-query"
 							type="text"
 							class="floating-label"
-							placeholder="selected-selector"
-							id="selected-selector"
+							placeholder="selected-query"
+							id="selected-query"
 							state_id="builder"
-							attribute-selector="iframe;"
-							array=""
-							object=""
-							crud="false"
-							save="false"
-							read="false"
-							active />
-						<input
-							attribute="selected-closest"
-							type="text"
-							class="floating-label"
-							placeholder="selected-closest"
-							id="selected-closest"
-							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3425,7 +3411,7 @@
 							placeholder="selected-group"
 							id="selected-group"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3457,7 +3443,7 @@
 							placeholder="toggle"
 							id="toggle"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3471,7 +3457,7 @@
 							placeholder="toggle-attribute"
 							id="toggle-attribute"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3479,27 +3465,13 @@
 							read="false"
 							active />
 						<input
-							attribute="toggle-selector"
+							attribute="toggle-query"
 							type="text"
 							class="floating-label"
-							placeholder="toggle-selector"
-							id="toggle-selector"
+							placeholder="toggle-query"
+							id="toggle-query"
 							state_id="builder"
-							attribute-selector="iframe;"
-							array=""
-							object=""
-							crud="false"
-							save="false"
-							read="false"
-							active />
-						<input
-							attribute="toggle-closest"
-							type="text"
-							class="floating-label"
-							placeholder="toggle-closest"
-							id="toggle-closest"
-							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3531,7 +3503,7 @@
 							placeholder="hover"
 							id="hover"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3545,7 +3517,7 @@
 							placeholder="hover-attribute"
 							id="hover-attribute"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3554,26 +3526,12 @@
 							active />
 						<input
 							type="text"
-							attribute="hover-selector"
+							attribute="hover-query"
 							class="floating-label"
-							placeholder="hover-selector"
-							id="hover-selector"
+							placeholder="hover-query"
+							id="hover-query"
 							state_id="builder"
-							attribute-selector="iframe;"
-							array=""
-							object=""
-							crud="false"
-							save="false"
-							read="false"
-							active />
-						<input
-							type="text"
-							attribute="hover-closest"
-							class="floating-label"
-							placeholder="hover-closest"
-							id="hover-closest"
-							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3606,7 +3564,7 @@
 								placeholder="scroll"
 								id="scroll"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -3620,7 +3578,7 @@
 								placeholder="scroll-attribute"
 								id="scroll-attribute"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -3629,26 +3587,12 @@
 								active />
 							<input
 								type="text"
-								attribute="scroll-selector"
+								attribute="scroll-query"
 								class="floating-label"
-								placeholder="scroll-selector"
-								id="scroll-selector"
+								placeholder="scroll-query"
+								id="scroll-query"
 								state_id="builder"
-								attribute-selector="iframe;"
-								array=""
-								object=""
-								crud="false"
-								save="false"
-								read="false"
-								active />
-							<input
-								type="text"
-								attribute="scroll-closest"
-								class="floating-label"
-								placeholder="scroll-closest"
-								id="scroll-closest"
-								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -3664,7 +3608,7 @@
 									placeholder="scroll-up"
 									attribute="scroll-up"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -3683,14 +3627,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#scroll-up">
+										attribute-query="#scroll-up">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px border-radius:4px"
 												template
@@ -3710,7 +3654,7 @@
 									placeholder="scroll-down:"
 									attribute="scroll-down"
 									state_id="builder"
-									attribute-selector="iframe;"
+									attribute-query="iframe;"
 									array=""
 									object=""
 									crud="false"
@@ -3729,14 +3673,14 @@
 										save="false"
 										read="false"
 										attribute="attribute-unit"
-										attribute-selector="#scroll-down">
+										attribute-query="#scroll-down">
 										<ul
 											class="options overflow:auto padding:0px z-index:7"
 											array="modules"
 											filter-query-value="5ff747727005da1c27274193"
 											filter-query-key="_id.$eq"
 											key="units"
-											render-selector=":last-child">
+											render-query=":last-child">
 											<cc-option
 												class="margin:0px padding:3px border-radius:4px"
 												template
@@ -3757,7 +3701,7 @@
 								class="floating-label z-index:0"
 								placeholder="scroll-position:"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -3776,7 +3720,7 @@
 									save="false"
 									read="false"
 									attribute="attribute-unit"
-									attribute-selector="#scroll-position">
+									attribute-query="#scroll-position">
 									<ul class="options z-index:7">
 										<cc-option value="px"
 											><span class="margin:auto"
@@ -3800,7 +3744,7 @@
 								placeholder="scroll-top"
 								id="scroll-top"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -3814,7 +3758,7 @@
 								placeholder="scroll-bottom"
 								id="scroll-bottomn"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -3828,7 +3772,7 @@
 								placeholder="scrolling"
 								id="scrolling"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -3842,7 +3786,7 @@
 								placeholder="scroll-intersect"
 								id="scroll-intersect"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -3876,7 +3820,7 @@
 							placeholder="clone_id"
 							id="clone_id"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3909,7 +3853,7 @@
 							placeholder="calculate"
 							id="calculate"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3942,7 +3886,7 @@
 							placeholder="stripe"
 							attribute="stripe"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -3966,7 +3910,7 @@
 							placeholder="actions"
 							attribute="actions"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -4010,7 +3954,7 @@
 							placeholder="sendgrid"
 							attribute="sendgrid"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -4043,7 +3987,7 @@
 							placeholder="actions"
 							attribute="actions"
 							state_id="builder"
-							attribute-selector="iframe;"
+							attribute-query="iframe;"
 							array=""
 							object=""
 							crud="false"
@@ -4093,7 +4037,7 @@
 								placeholder="href"
 								id="href"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -4107,7 +4051,7 @@
 								placeholder="src"
 								id="src"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"
@@ -4120,7 +4064,7 @@
 								class="floating-label"
 								placeholder="placeholder"
 								state_id="builder"
-								attribute-selector="iframe;"
+								attribute-query="iframe;"
 								array=""
 								object=""
 								crud="false"

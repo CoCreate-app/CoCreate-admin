@@ -142,14 +142,14 @@
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a toggle="hidden" toogle-selector="#column-visibility"
+					<a toggle="hidden" toogle-query="#column-visibility"
 						><i class="height:18px" src="./assets/svg/eye.svg"></i
 					></a>
 				</li>
 				<li class="margin-right:15px">
 					<a
 						actions="export"
-						export-selector=""
+						export-query=""
 						export-type="csv"
 						state_id="datatable"
 						><i
@@ -158,7 +158,7 @@
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="export" export-selector="" state_id="datatable"
+					<a actions="export" export-query="" state_id="datatable"
 						><i
 							class="height:18px"
 							src="./assets/svg/file-download.svg"></i
@@ -172,12 +172,12 @@
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="copy" copy-selector="tbody"
+					<a actions="copy" copy-query="tbody"
 						><i class="height:18px" src="./assets/svg/copy.svg"></i
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="print" print-selector="tbody"
+					<a actions="print" print-query="tbody"
 						><i class="height:18px" src="./assets/svg/print.svg"></i
 					></a>
 				</li>
@@ -201,7 +201,7 @@
 								type="text"
 								class="floating-label"
 								filter-query-key="_id"
-								filter-closest="table; tbody"
+								filter-query="$closest table; tbody"
 								placeholder="Name" />
 						</floating-label>
 						<span
@@ -211,7 +211,7 @@
 								filter-sort-direction="asc"
 								click-value="desc, asc"
 								click-attribute="filter-sort-direction"
-								filter-closest="table; tbody">
+								filter-query="$closest table; tbody">
 								<i
 									toggle-attribute="src"
 									toggle-value="./assets/svg/sort-down.svg, /assets/svg/sort-up.svg"
@@ -227,7 +227,7 @@
 								type="text"
 								class="floating-label"
 								filter-query-key="_id"
-								filter-closest="table; tbody"
+								filter-query="$closest table; tbody"
 								placeholder="Document_id" />
 						</floating-label>
 						<span
@@ -237,7 +237,7 @@
 								filter-sort-direction=""
 								click-value="desc, asc"
 								click-attribute="filter-sort-direction"
-								filter-selector=""
+								filter-query=""
 								state_id="datatable">
 								<i
 									toggle-attribute="src"
@@ -257,7 +257,7 @@
 					filter-sort-key="name"
 					filter-sort-direction="asc"
 					state_id="datatable"
-					render-selector="template">
+					render-query="template">
 					<tr
 						template
 						object="{{object._id}}"

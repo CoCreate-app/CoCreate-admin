@@ -169,7 +169,7 @@
 				<input
 					type="hidden"
 					key="_id"
-					input-selector=".website_id"
+					input-query=".website_id"
 					input-attribute="value"
 					input-events="input, onload" />
 				<input
@@ -190,7 +190,7 @@
 					placeholder="Home Page">
 					<input
 						placeholder="Search"
-						filter-parent="array"
+						filter-query="$parent array"
 						filter-search />
 					<cc-options
 						array=""
@@ -199,7 +199,7 @@
 						filter-query-value=""
 						filter-sort-key="name"
 						filter-sort-direction="asc"
-						render-selector="[template]"
+						render-query="[template]"
 						state_id="website_id"
 						class="overflow:auto">
 						<cc-option template>
@@ -232,7 +232,7 @@
 							src="./assets/svg/plus-square.svg"></i
 					></a>
 				</div>
-				<!--<input type="hidden" filter-query-key="module-view" filter-query-value="module-view" render-next>-->
+				<!--<input type="hidden" filter-query-key="module-view" filter-query-value="module-view" render-query="$next">-->
 				<div
 					array=""
 					object
@@ -240,7 +240,7 @@
 					filter-query-value=""
 					filter-sort-key="name"
 					filter-sort-direction="asc"
-					render-selector="[template]"
+					render-query="[template]"
 					state_id="website_id"
 					sortable
 					class="background:whitesmoke padding:10px"
@@ -325,7 +325,7 @@
 				<div
 					filter-query-key="tags.$eq"
 					filter-query-value="template"
-					filter-next></div>
+					filter-query="$next"></div>
 				<div
 					class="display:flex flex-wrap:wrap"
 					array=""
@@ -333,7 +333,7 @@
 					state-overwrite="true"
 					filter-sort-key="name"
 					filter-sort-direction="asc"
-					render-selector="[template]"
+					render-query="[template]"
 					state_id="page-templates">
 					<div
 						class="card min-width:250px flex-grow:1 margin:10px box-shadow-hover"

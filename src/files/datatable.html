@@ -144,14 +144,14 @@
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a toggle="hidden" toogle-selector="#column-visibility"
+					<a toggle="hidden" toogle-query="#column-visibility"
 						><i class="height:18px" src="./assets/svg/eye.svg"></i
 					></a>
 				</li>
 				<li class="margin-right:15px">
 					<a
 						actions="export"
-						export-selector=""
+						export-query=""
 						export-type="csv"
 						state_id="datatable"
 						><i
@@ -160,7 +160,7 @@
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="export" export-selector="" state_id="datatable"
+					<a actions="export" export-query="" state_id="datatable"
 						><i
 							class="height:18px"
 							src="./assets/svg/file-download.svg"></i
@@ -174,12 +174,12 @@
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="copy" copy-selector="tbody"
+					<a actions="copy" copy-query="tbody"
 						><i class="height:18px" src="./assets/svg/copy.svg"></i
 					></a>
 				</li>
 				<li class="margin-right:15px">
-					<a actions="print" print-closest="nav; parent; tbody"
+					<a actions="print" print-query="$closest nav; parent; tbody"
 						><i class="height:18px" src="./assets/svg/print.svg"></i
 					></a>
 				</li>
@@ -203,7 +203,7 @@
 								type="text"
 								class="floating-label"
 								filter-query-key="path"
-								filter-selector=""
+								filter-query=""
 								state_id="datatable"
 								placeholder="Path" />
 						</floating-label>
@@ -212,7 +212,7 @@
 							<a
 								filter-sort-key="path"
 								filter-sort-toggle="asc"
-								filter-selector=""
+								filter-query=""
 								state_id="datatable"></a>
 						</span>
 					</td>
@@ -223,7 +223,7 @@
 								type="text"
 								class="floating-label"
 								filter-query-key="_id"
-								filter-selector=""
+								filter-query=""
 								state_id="datatable"
 								placeholder="Document_id" />
 						</floating-label>
@@ -234,7 +234,7 @@
 								filter-sort-direction=""
 								click-value="desc, asc"
 								click-attribute="filter-sort-direction"
-								filter-selector=""
+								filter-query=""
 								state_id="datatable">
 								<i
 									toggle-attribute="src"
@@ -247,7 +247,7 @@
 				</tr>
 
 				<tbody
-					render-selector=""
+					render-query=""
 					array=""
 					object
 					filter-sort-key="path"
@@ -323,24 +323,24 @@
 				</tbody>
 			</table>
 			<span
-				filter-parent="table"
+				filter-query="$parent table"
 				filter-on="fetched"
 				state_id="datatable"
 				class="height:30px"></span>
 			/
 			<span
-				filter-parent="table"
+				filter-query="$parent table"
 				filter-on="count"
 				state_id="datatable"
 				class="height:30px"></span>
 			<div
-				filter-parent="table"
+				filter-query="$parent table"
 				filter-on="loadmore"
 				state_id="datatable"
 				class="height:30px">
 				Load More
 			</div>
-			<!-- <div filter-parent="table" filter-on="scroll" state_id="datatable" class="opacity:0 height:30px"></div> -->
+			<!-- <div filter-query="$parent table" filter-on="scroll" state_id="datatable" class="opacity:0 height:30px"></div> -->
 		</main>
 
 		<button
