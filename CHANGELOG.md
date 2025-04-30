@@ -1,3 +1,34 @@
+# [1.36.0](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.35.2...v1.36.0) (2025-04-30)
+
+
+### Bug Fixes
+
+*  filter-query-key can now include query operators ([4f09d0b](https://github.com/CoCreate-app/CoCreate-admin/commit/4f09d0bbeb17927501c3be2d842081fdfd4f4cec))
+* add missing svg ([21b5b14](https://github.com/CoCreate-app/CoCreate-admin/commit/21b5b14a7f9d325a85ccf24438792472bd052e99))
+* add prettier config file ([fcd68ef](https://github.com/CoCreate-app/CoCreate-admin/commit/fcd68ef2fb4ff78e922f4a9ecb9fe2c9645c68f8))
+* added css-loader ([ab1484f](https://github.com/CoCreate-app/CoCreate-admin/commit/ab1484f7c4d61d507458c60ee0cfb971468e5160))
+* bumped cocreate dependencies ([9486788](https://github.com/CoCreate-app/CoCreate-admin/commit/94867883fcd9285f52d3101dbe9d8e3934b96b52))
+* code-editor path ([dc1ac1d](https://github.com/CoCreate-app/CoCreate-admin/commit/dc1ac1db119996611b242f4d578ba3f71e883a4b))
+* css and dark mode ([f01470b](https://github.com/CoCreate-app/CoCreate-admin/commit/f01470b27f7fed7afc10a6518c40629481b42c31))
+* form ([61ab808](https://github.com/CoCreate-app/CoCreate-admin/commit/61ab808bd144b03abad603ff721edb2df5cd1f6b))
+* formating ([709ca44](https://github.com/CoCreate-app/CoCreate-admin/commit/709ca448e3353cd7f5eee2ac91988890c3d1dad5))
+* html syntax error ([7085967](https://github.com/CoCreate-app/CoCreate-admin/commit/7085967018920b075c7fc04f77fad7bec645e3f1))
+* http://www.w3.org/2000/svg ([adf6aca](https://github.com/CoCreate-app/CoCreate-admin/commit/adf6aca1ba6f7cf2dfa1395a92d29cf55f053055))
+* remove unused keys ([86e75fe](https://github.com/CoCreate-app/CoCreate-admin/commit/86e75fe2dd56299caded3e30ddd8ca94e13005b9))
+* remove unused keys ([bd7a0a1](https://github.com/CoCreate-app/CoCreate-admin/commit/bd7a0a1bc6cf271ba439cd9e589302b11cc9925d))
+* removed localstorage-key iand replace with $user_id operator ([47e51a8](https://github.com/CoCreate-app/CoCreate-admin/commit/47e51a8d3e325cff260608a9a90d0c856d734773))
+* svg icon class ([daaef77](https://github.com/CoCreate-app/CoCreate-admin/commit/daaef772fdd2bb9debf027492f0610ee13916c83))
+* toolbar typos ([2314a07](https://github.com/CoCreate-app/CoCreate-admin/commit/2314a07709fffe0996f61e42a88f31f012e55542))
+* update datatabe ui ([60aad94](https://github.com/CoCreate-app/CoCreate-admin/commit/60aad94e463c6239fe48b70a4efc191b974d2a55))
+* update query selector attributes to *-query ([909416d](https://github.com/CoCreate-app/CoCreate-admin/commit/909416de74bf576f1baa53721b478964082c0a99))
+* webpack.config and devdependencies ([6e15522](https://github.com/CoCreate-app/CoCreate-admin/commit/6e155229b0b3ffcdbb6e71022fae22a70f7ad161))
+* width set to 1em ([5461e2e](https://github.com/CoCreate-app/CoCreate-admin/commit/5461e2e5977d827d6c86cb59263297e749f244a7))
+
+
+### Features
+
+* light and dark mode ([83395a7](https://github.com/CoCreate-app/CoCreate-admin/commit/83395a7ffb62f9d5c0e8215a9b75f38b37f96aff))
+
 ## [1.35.2](https://github.com/CoCreate-app/CoCreate-admin/compare/v1.35.1...v1.35.2) (2024-02-05)
 
 
