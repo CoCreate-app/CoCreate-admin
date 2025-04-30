@@ -44,6 +44,7 @@
     "postinstall": "node -e \"const { execSync } = require('child_process'); try { execSync('coc --version', { stdio: 'ignore' }); } catch (error) { try { execSync('npm install -g @cocreate/cli', { stdio: 'inherit' }); console.log('Installed \"@cocreate/cli\" globally.'); } catch (error) { console.error('Failed to install \"@cocreate/cli\" globally:', error); } }\""
   },
   "devDependencies": {
+    "css-loader": "^5.1.3",
     "esbuild": "^0.25.2",
     "esbuild-loader": "^4.3.0",
     "html-webpack-plugin": "^5.3.1",
