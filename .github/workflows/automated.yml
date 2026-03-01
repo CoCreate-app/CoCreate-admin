@@ -22,13 +22,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 22 # Required for the latest semantic-release plugins
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v3
+        uses: cycjimmy/semantic-release-action@v4 # Update to v4 for better Node 20+ support
         id: semantic
         with:
           extra_plugins: |
@@ -36,7 +36,7 @@ jobs:
             @semantic-release/git
             @semantic-release/github
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB }}"
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" # Use the built-in token if possible
           NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
     outputs:
       new_release_published: "${{ steps.semantic.outputs.new_release_published }}"
